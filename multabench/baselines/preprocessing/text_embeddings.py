@@ -14,7 +14,7 @@ import pandas as pd
 from pandas import DataFrame, Series
 import torch
 
-from multabench.e5.constants import E5_SMALL_V2, TF_IDF
+from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, TF_IDF
 from multabench.e5.e5_finetune import encode_texts_with_e5, get_vanilla_e5
 
 PCA_COMPONENTS = 30
@@ -97,6 +97,30 @@ def fit_text_encoders_vanilla(
         col_embeddings = encode_texts_with_e5(texts=texts, model=model, tokenizer=tokenizer, device=device, col_name=str(col))
         encoder = PCA(n_components=PCA_COMPONENTS, random_state=SEED)
         encoder.fit(col_embeddings)
+        text_encoders[str(col)] = E5ColumnEncoder(model=model, tokenizer=tokenizer, encoder=encoder, col_name=str(col))
+    return text_encoders
+
+
+def fit_text_encoders_transformed(
+    x: DataFrame,
+    text_features_list: list[str],
+    device: torch.device,
+    transform_name: str,
+) -> Dict[str, E5ColumnEncoder]:
+    """Frozen E5-small per column, with PCA(30) replaced by an SAE (or identity) transform fitted on train rows only."""
+    from multabench.sae.feature_transform import IdentityTransform, SAEFeatureTransform, load_sae_checkpoint
+
+    checkpoint, binary = E5_TRANSFORMS[transform_name]
+    text_encoders: Dict[str, E5ColumnEncoder] = {}
+    model, tokenizer = get_vanilla_e5(device, model_name=E5_SMALL_V2)
+    for col in text_features_list:
+        texts = x[col].astype(str).fillna("").tolist()
+        col_embeddings = encode_texts_with_e5(texts=texts, model=model, tokenizer=tokenizer, device=device, col_name=str(col))
+        if checkpoint is None:
+            encoder = IdentityTransform().fit(col_embeddings)
+        else:
+            encoder = SAEFeatureTransform(sae=load_sae_checkpoint(checkpoint), binary=binary).fit(col_embeddings)
+        print(f"Fitted {transform_name} for column {col}: {encoder.n_components} features from {len(texts)} texts")
         text_encoders[str(col)] = E5ColumnEncoder(model=model, tokenizer=tokenizer, encoder=encoder, col_name=str(col))
     return text_encoders
 
@@ -191,6 +215,14 @@ def fit_text_encoders(
         return fit_text_encoders_skrub(
             x=x,
             text_features_list=text_features_list,
+        )
+    if e5_model_name in E5_TRANSFORMS:
+        assert not tune_e5, "SAE/identity transforms are frozen-only"
+        return fit_text_encoders_transformed(
+            x=x,
+            text_features_list=text_features_list,
+            device=device,
+            transform_name=e5_model_name,
         )
     if tune_e5 and y is not None:
         return fit_text_encoders_tuned(
