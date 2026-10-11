@@ -9,6 +9,8 @@ Encoders (all frozen E5-small-v2; only the step after embedding differs):
     e5-small-sae       trained TopK SAE, continuous codes
     e5-small-sae-bin   trained TopK SAE, on/off codes
     e5-small-rsae-bin  control: untrained random TopK SAE, on/off codes (is any gain from learning?)
+    e5-small-fsae      small TopK SAE (30 latents, 4 active) trained on the fold's own text, continuous codes
+    e5-small-fsae-bin  same, on/off codes
     e5-small-tar       optional reference (LoRA fine-tuned, slow)
 
 Every run is written to <out_dir>/<model>_<dataset>_<encoder>_<fold>.json and skipped if it exists,

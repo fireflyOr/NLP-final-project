@@ -108,7 +108,7 @@ def _toy_dataset(n=1500, seed=0):
     return x, pd.Series(y, name="target")
 
 
-@pytest.mark.parametrize("encoder", ["e5-small", "e5-small-full", "e5-small-sae", "e5-small-sae-bin", "e5-small-rsae-bin"])
+@pytest.mark.parametrize("encoder", ["e5-small", "e5-small-full", "e5-small-sae", "e5-small-sae-bin", "e5-small-rsae-bin", "e5-small-fsae", "e5-small-fsae-bin"])
 def test_pipeline_runs_with_each_encoder(fake_e5, encoder):
     from multabench.baselines.lgbm import LightGBM
     from multabench.datasets.objects import SupervisedTask
@@ -120,7 +120,7 @@ def test_pipeline_runs_with_each_encoder(fake_e5, encoder):
     model.fit(x.iloc[:1000], y.iloc[:1000])
     assert "review" in model.text_transformers, "review should be detected as a text column"
     n_feats = model.text_transformers["review"].n_components
-    expected = {"e5-small": 30, "e5-small-full": 384}
+    expected = {"e5-small": 30, "e5-small-full": 384, "e5-small-fsae": 30, "e5-small-fsae-bin": 30}
     if encoder in expected:
         assert n_feats == expected[encoder]
     else:

@@ -51,6 +51,42 @@ class SAEFeatureTransform:
         return (codes > 0).astype(np.float32) if self.binary else codes
 
 
+SMALL_SAE_LATENTS = int(os.getenv("MULTABENCH_SMALL_SAE_LATENTS", "30"))
+SMALL_SAE_K = int(os.getenv("MULTABENCH_SMALL_SAE_K", "4"))
+
+
+class FoldSAETransform:
+    """A small TopK SAE (default 30 latents, 4 active) trained on this column's train-fold embeddings.
+
+    Unsupervised (never sees y), so it stays in the Joint Frozen regime, like the baseline's PCA, which
+    is also fitted per fold. Same column count as PCA-30; the difference is sparse, non-negative codes.
+    """
+
+    def __init__(self, binary: bool, n_latents: int = SMALL_SAE_LATENTS, k: int = SMALL_SAE_K, seed: int = 0):
+        self.binary = binary
+        self.n_latents = n_latents
+        self.k = k
+        self.seed = seed
+        self.sae: Optional[TopKSAE] = None
+        self.n_components = n_latents
+
+    def fit(self, embeddings: np.ndarray) -> "FoldSAETransform":
+        from multabench.sae.topk_sae import SAEConfig, train_sae
+        n = len(embeddings)
+        cfg = SAEConfig(d_in=embeddings.shape[1], n_latents=self.n_latents, k=min(self.k, self.n_latents),
+                        k_aux=self.n_latents, dead_after=max(n // 2, 1000))
+        steps_per_epoch = max(1, n // 256)
+        epochs = max(5, min(200, 3000 // steps_per_epoch))  # ~3k steps regardless of fold size
+        self.sae = train_sae(embeddings, cfg, device="cpu", epochs=epochs, batch_size=256, lr=1e-3,
+                             seed=self.seed, log_every=10**9)
+        return self
+
+    def transform(self, embeddings: np.ndarray) -> np.ndarray:
+        assert self.sae is not None, "call fit() first"
+        codes = encode_numpy(self.sae, embeddings)
+        return (codes > 0).astype(np.float32) if self.binary else codes
+
+
 class IdentityTransform:
     """Control: the full 384-d E5 embedding with no compression."""
 

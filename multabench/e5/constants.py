@@ -12,7 +12,12 @@ E5_SMALL_FULL = "e5-small-v2|full"          # control: all 384 dims, no PCA
 E5_SMALL_SAE = "e5-small-v2|sae"            # trained TopK SAE, continuous codes
 E5_SMALL_SAE_BIN = "e5-small-v2|sae-bin"    # trained TopK SAE, on/off codes
 E5_SMALL_RSAE_BIN = "e5-small-v2|rsae-bin"  # control: untrained (random) TopK SAE, on/off codes
+E5_SMALL_FSAE = "e5-small-v2|fsae"          # small TopK SAE (30 latents) trained per fold, continuous codes
+E5_SMALL_FSAE_BIN = "e5-small-v2|fsae-bin"  # same, on/off codes
+FOLD_SAE = "fold"                           # marker: train the SAE on the fold instead of loading a checkpoint
 E5_TRANSFORMS = {
+    E5_SMALL_FSAE: (FOLD_SAE, False),
+    E5_SMALL_FSAE_BIN: (FOLD_SAE, True),
     E5_SMALL_FULL: (None, False),
     E5_SMALL_SAE: ("e5-small-topk", False),
     E5_SMALL_SAE_BIN: ("e5-small-topk", True),
@@ -28,6 +33,8 @@ TEXT_ENCODERS = {
     "e5-small-sae": Encoder(encoder_name=E5_SMALL_SAE, tune_encoder=False),
     "e5-small-sae-bin": Encoder(encoder_name=E5_SMALL_SAE_BIN, tune_encoder=False),
     "e5-small-rsae-bin": Encoder(encoder_name=E5_SMALL_RSAE_BIN, tune_encoder=False),
+    "e5-small-fsae": Encoder(encoder_name=E5_SMALL_FSAE, tune_encoder=False),
+    "e5-small-fsae-bin": Encoder(encoder_name=E5_SMALL_FSAE_BIN, tune_encoder=False),
 }
 
 D_E5_SMALL = 384
