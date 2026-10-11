@@ -14,7 +14,7 @@ import pandas as pd
 from pandas import DataFrame, Series
 import torch
 
-from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, TF_IDF
+from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, STACK_ENCODERS, TF_IDF
 from multabench.e5.e5_finetune import encode_texts_with_e5, get_vanilla_e5
 
 PCA_COMPONENTS = 30
@@ -221,6 +221,15 @@ def fit_text_encoders(
             x=x,
             text_features_list=text_features_list,
         )
+    if e5_model_name in STACK_ENCODERS:
+        from multabench.stack.text_stack import STACK_KEY, StackEncoder
+        assert y is not None, "text stacking needs the target"
+        kind, n_splits = STACK_ENCODERS[e5_model_name]
+        text_encoders = fit_text_encoders_vanilla(x=x, text_features_list=text_features_list, device=device,
+                                                  e5_model_name=E5_SMALL_V2)
+        text_encoders[STACK_KEY] = StackEncoder(kind=kind, text_cols=text_features_list, is_cls=is_cls, device=device,
+                                                n_splits=n_splits, e5_train_kwargs=e5_train_kwargs).fit(x, y)
+        return text_encoders
     if e5_model_name in E5_TRANSFORMS:
         assert not tune_e5, "SAE/identity transforms are frozen-only"
         return fit_text_encoders_transformed(
@@ -253,7 +262,11 @@ def transform_text_features(
     text_encoders: Dict[str, E5ColumnEncoder],
     device: torch.device,
 ) -> DataFrame:
+    from multabench.stack.text_stack import STACK_KEY
+    stack_df = text_encoders[STACK_KEY].transform(x) if STACK_KEY in text_encoders else None
     for text_col, wrapper in text_encoders.items():
+        if text_col == STACK_KEY:
+            continue
         texts = x[text_col].astype(str).fillna("").tolist()
         embeddings = wrapper.encode_texts(texts, device)
         n_components = wrapper.n_components
@@ -264,4 +277,6 @@ def transform_text_features(
         x = x.drop(columns=[text_col])
         x = pd.concat([x, pca_df], axis=1)
         assert len(x.columns) == cols_before + n_components - 1
+    if stack_df is not None:
+        x = pd.concat([x, stack_df], axis=1)
     return x

@@ -127,3 +127,94 @@ def test_pipeline_runs_with_each_encoder(fake_e5, encoder):
         assert 1 <= n_feats <= 512
     pred = model.predict(x.iloc[1000:])
     assert pred.shape == (500,) and np.isfinite(pred).all()
+
+
+# ---------------- text stacking (out-of-fold text-model predictions) ----------------
+
+def _toy_task(task: str, n=1500, seed=0):
+    rng = np.random.default_rng(seed)
+    review = [" ".join(rng.choice(WORDS, rng.integers(4, 10))) + f" item{i}" for i in range(n)]
+    title = [" ".join(rng.choice(WORDS, 3)) for _ in range(n)]
+    price = rng.normal(size=n)
+    good = np.array(["great" in r for r in review], dtype=float)
+    fast = np.array(["fast" in t for t in title], dtype=float)
+    if task == "bin":
+        y = ((good + (price > 0)) >= 1).astype(int)
+    elif task == "mul":
+        y = (good + fast + (price > 0.5)).astype(int)  # 4 classes
+    else:
+        y = 2 * good + fast + 0.5 * price + rng.normal(scale=0.1, size=n)
+    x = pd.DataFrame({"price": price, "review": review, "title": title})
+    return x, pd.Series(y, name="target")
+
+
+@pytest.fixture()
+def fake_finetune(monkeypatch):
+    """Replace LoRA fine-tuning with a stub whose 'head' scores texts by keywords."""
+    from sklearn.preprocessing import LabelEncoder
+    import multabench.e5.e5_finetune as ef
+    import multabench.stack.text_stack as ts
+    import transformers
+
+    def finetune(**kw):
+        le = LabelEncoder().fit(np.asarray(kw["train_y"]).astype(str))
+        return len(le.classes_), None, le
+
+    def logits(model, tokenizer, texts, device, **kw):
+        n_cls = model
+        out = np.zeros((len(texts), n_cls), dtype=np.float32)
+        for i, t in enumerate(texts):
+            score = ("great" in t) + ("fast" in t)
+            out[i, min(score, n_cls - 1)] = 3.0
+        return out
+
+    monkeypatch.setattr(ef, "finetune_e5_with_lora", finetune)
+    monkeypatch.setattr(ts, "finetuned_logits", logits)
+    monkeypatch.setattr(transformers.AutoTokenizer, "from_pretrained", staticmethod(lambda *a, **k: None))
+
+
+@pytest.mark.parametrize("task", ["bin", "mul", "reg"])
+@pytest.mark.parametrize("encoder", ["e5-small-stack", "e5-small-tar-stack"])
+def test_stack_pipeline(fake_e5, fake_finetune, task, encoder):
+    from multabench.baselines.lgbm import LightGBM
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.e5.constants import TEXT_ENCODERS
+    from multabench.stack.text_stack import STACK_KEY
+    x, y = _toy_task(task)
+    problem = {"bin": SupervisedTask.BINARY, "mul": SupervisedTask.MULTICLASS, "reg": SupervisedTask.REGRESSION}[task]
+    enc = TEXT_ENCODERS[encoder]
+    model = LightGBM(problem_type=problem, device=torch.device("cpu"), verbose=False, tune_e5=True,
+                     e5_train_kwargs={}, e5_model_name=enc.encoder_name)
+    model.fit(x.iloc[:1000], y.iloc[:1000])
+    stack = model.text_transformers[STACK_KEY]
+    assert {"review", "title"} <= set(model.text_transformers)
+    expected_cols = {"bin": 1, "mul": 4, "reg": 1}[task]
+    assert stack.n_components == expected_cols
+    n_val = 1000 - len(stack.oof)  # LightGBM holds out a validation split before fitting the preprocessor
+    assert n_val > 0
+    # training rows used OOF features; only the validation rows went through the ensemble so far
+    assert stack.n_ensemble_rows == n_val
+    pred = model.predict(x.iloc[1000:])
+    assert stack.n_ensemble_rows == n_val + 500
+    assert np.isfinite(pred).all()
+    feats = stack.transform(x.iloc[1000:])
+    assert feats.shape == (500, expected_cols) and np.isfinite(feats.to_numpy()).all()
+    # the stacked feature should carry real signal on held-out rows
+    if task == "bin":
+        from sklearn.metrics import roc_auc_score
+        assert roc_auc_score(y.iloc[1000:], feats.iloc[:, 0]) > 0.6
+    elif task == "reg":
+        assert np.corrcoef(y.iloc[1000:], feats.iloc[:, 0])[0, 1] > 0.3
+
+
+def test_stack_oof_differs_from_in_sample(fake_e5):
+    """OOF predictions for training rows must differ from what a model trained on them would output."""
+    from multabench.stack.text_stack import StackEncoder
+    x, y = _toy_task("bin", n=600)
+    st = StackEncoder(kind="frozen", text_cols=["review", "title"], is_cls=True, device=torch.device("cpu"),
+                      n_splits=5).fit(x, y)
+    oof = st.transform(x).to_numpy()
+    assert st.n_ensemble_rows == 0
+    st.oof = {}  # force ensemble predictions for the same rows
+    ens = st.transform(x).to_numpy()
+    assert not np.allclose(oof, ens)

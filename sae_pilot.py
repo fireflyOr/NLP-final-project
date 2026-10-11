@@ -14,7 +14,9 @@ Encoders (all frozen E5-small-v2; only the step after embedding differs):
     e5-small-fsae50    small TopK SAE with 50 latents (4 active), continuous codes
     e5-small-fsae50-bin  same, on/off codes
     e5-small-pca50     PCA with 50 components: the fair comparison for the 50-latent SAE
-    e5-small-tar       optional reference (LoRA fine-tuned, slow)
+    e5-small-tar       Joint TAR baseline (LoRA fine-tuned, slow)
+    e5-small-stack     PCA-30 + out-of-fold prediction of an MLP on frozen E5 (uses y -> compare to e5-small-tar)
+    e5-small-tar-stack PCA-30 + out-of-fold prediction of a LoRA-fine-tuned E5 + head (3 fine-tunes per fold, slow)
 
 Every run is written to <out_dir>/<model>_<dataset>_<encoder>_<fold>.json and skipped if it exists,
 so the script can be re-run after a Colab disconnect. Frozen E5 embeddings are cached in memory and
@@ -100,6 +102,8 @@ def run(args):
 
     _install_embedding_cache()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    if device.type == "cuda":
+        os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")  # required by the LoRA fine-tuning code
     model_cls = _model_cls(args.model)
     os.makedirs(args.out_dir, exist_ok=True)
 
@@ -112,7 +116,7 @@ def run(args):
                 if os.path.exists(out_path):
                     continue
                 enc = TEXT_ENCODERS[enc_name]
-                e5_kwargs = vars(E5TrainArgs()) if enc.tune_encoder else None
+                e5_kwargs = dict(vars(E5TrainArgs()), batch_size=args.e5_batch_size) if enc.tune_encoder else None
                 t0 = time.time()
                 model = model_cls(problem_type=dataset.task_type, device=device, verbose=False,
                                   dataset=dataset.dataset_id, image_folder=dataset.image_folder,
@@ -124,7 +128,7 @@ def run(args):
                     "model": args.model, "dataset": ds_name, "encoder": enc_name, "fold": fold, "size": args.size,
                     **calculate_metric(y_true=y_true, y_pred=y_pred, d_output=model.d_output),
                     **course_metric(y_true, y_pred, model.is_cls),
-                    "n_text_cols": len(model.text_transformers),
+                    "n_text_cols": len([k for k in model.text_transformers if not k.startswith("__")]),
                     "n_text_features": int(sum(t.n_components for t in model.text_transformers.values())),
                     "n_train": len(split.y_train), "n_test": len(split.y_test),
                     "runtime_s": time.time() - t0,
@@ -189,10 +193,11 @@ def main():
     r.add_argument("--encoders", nargs="+", default=DEFAULT_ENCODERS)
     r.add_argument("--folds", nargs="+", type=int, default=list(range(6)))
     r.add_argument("--size", default="10k")
+    r.add_argument("--e5_batch_size", type=int, default=256, help="LoRA fine-tuning batch size (lower it on OOM)")
     r.add_argument("--out_dir", default="runs_sae_pilot")
     s = sub.add_parser("summarize")
     s.add_argument("--out_dir", default="runs_sae_pilot")
-    s.add_argument("--baselines", nargs="+", default=[BASELINE, "e5-small-pca50"])
+    s.add_argument("--baselines", nargs="+", default=[BASELINE, "e5-small-pca50", "e5-small-tar"])
     args = p.parse_args()
     run(args) if args.cmd == "run" else summarize(args)
 

@@ -237,7 +237,8 @@ def finetune_e5_with_lora(
     dataloader_num_workers: int = 4,
     max_length: int = 512,
     seed: int = SEED,
-) -> Tuple[Union[BertModel, nn.Module], AutoTokenizer]:
+    return_head: bool = False,
+):
     """
     Finetune an E5 model with LoRA using Hugging Face Trainer. Uses train/val for early stopping.
     Single GPU only. Returns the backbone (encoding outputs d_model dims).
@@ -311,4 +312,7 @@ def finetune_e5_with_lora(
         backbone = trainer.model.backbone
 
     backbone.eval()
+    if return_head:  # used by text stacking: keep the full model (backbone + head) and its label encoder
+        trainer.model.eval()
+        return trainer.model, tokenizer, label_encoder
     return backbone, tokenizer

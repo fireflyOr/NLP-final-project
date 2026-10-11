@@ -32,6 +32,11 @@ E5_TRANSFORMS = {
     E5_SMALL_RSAE_BIN: ("e5-small-random", True, None),
 }
 
+# Frozen PCA-30 columns + out-of-fold text-model predictions (uses y -> compare against Joint TAR)
+E5_SMALL_STACK = "e5-small-v2|stack"        # MLP on frozen E5 embeddings, 5-fold cross-fitted
+E5_SMALL_TAR_STACK = "e5-small-v2|tarstack" # LoRA-fine-tuned E5 + head (as in TAR), 3-fold cross-fitted
+STACK_ENCODERS = {E5_SMALL_STACK: ("frozen", 5), E5_SMALL_TAR_STACK: ("finetuned", 3)}
+
 TEXT_ENCODERS = {
     "tfidf": Encoder(encoder_name=TF_IDF, tune_encoder=False),
     "e5-small": Encoder(encoder_name=E5_SMALL_V2, tune_encoder=False),
@@ -46,6 +51,9 @@ TEXT_ENCODERS = {
     "e5-small-fsae50": Encoder(encoder_name=E5_SMALL_FSAE50, tune_encoder=False),
     "e5-small-fsae50-bin": Encoder(encoder_name=E5_SMALL_FSAE50_BIN, tune_encoder=False),
     "e5-small-pca50": Encoder(encoder_name=E5_SMALL_PCA50, tune_encoder=False),
+    # tune_encoder=True so the pipeline passes y (and the LoRA args) to the text encoder
+    "e5-small-stack": Encoder(encoder_name=E5_SMALL_STACK, tune_encoder=True),
+    "e5-small-tar-stack": Encoder(encoder_name=E5_SMALL_TAR_STACK, tune_encoder=True),
 }
 
 D_E5_SMALL = 384
