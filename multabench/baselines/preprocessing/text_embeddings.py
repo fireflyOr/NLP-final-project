@@ -108,10 +108,10 @@ def fit_text_encoders_transformed(
     transform_name: str,
 ) -> Dict[str, E5ColumnEncoder]:
     """Frozen E5-small per column, with PCA(30) replaced by an SAE (or identity) transform fitted on train rows only."""
-    from multabench.e5.constants import FOLD_SAE
+    from multabench.e5.constants import FOLD_SAE, PCA as PCA_MARKER
     from multabench.sae.feature_transform import FoldSAETransform, IdentityTransform, SAEFeatureTransform, load_sae_checkpoint
 
-    checkpoint, binary = E5_TRANSFORMS[transform_name]
+    checkpoint, binary, size = E5_TRANSFORMS[transform_name]
     text_encoders: Dict[str, E5ColumnEncoder] = {}
     model, tokenizer = get_vanilla_e5(device, model_name=E5_SMALL_V2)
     for col in text_features_list:
@@ -120,7 +120,9 @@ def fit_text_encoders_transformed(
         if checkpoint is None:
             encoder = IdentityTransform().fit(col_embeddings)
         elif checkpoint == FOLD_SAE:
-            encoder = FoldSAETransform(binary=binary).fit(col_embeddings)
+            encoder = FoldSAETransform(binary=binary, n_latents=size).fit(col_embeddings)
+        elif checkpoint == PCA_MARKER:
+            encoder = PCA(n_components=min(size, *col_embeddings.shape), random_state=SEED).fit(col_embeddings)
         else:
             encoder = SAEFeatureTransform(sae=load_sae_checkpoint(checkpoint), binary=binary).fit(col_embeddings)
         print(f"Fitted {transform_name} for column {col}: {encoder.n_components} features from {len(texts)} texts")

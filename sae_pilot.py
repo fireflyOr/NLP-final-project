@@ -11,6 +11,9 @@ Encoders (all frozen E5-small-v2; only the step after embedding differs):
     e5-small-rsae-bin  control: untrained random TopK SAE, on/off codes (is any gain from learning?)
     e5-small-fsae      small TopK SAE (30 latents, 4 active) trained on the fold's own text, continuous codes
     e5-small-fsae-bin  same, on/off codes
+    e5-small-fsae50    small TopK SAE with 50 latents (4 active), continuous codes
+    e5-small-fsae50-bin  same, on/off codes
+    e5-small-pca50     PCA with 50 components: the fair comparison for the 50-latent SAE
     e5-small-tar       optional reference (LoRA fine-tuned, slow)
 
 Every run is written to <out_dir>/<model>_<dataset>_<encoder>_<fold>.json and skipped if it exists,
@@ -146,28 +149,35 @@ def summarize(args):
         table = dm.pivot_table(index="dataset", columns="encoder", values="course_score", aggfunc="mean")
         print("mean course score (AUROC / R^2) per dataset:")
         print(table.round(4).to_string())
+        table.to_csv(os.path.join(args.out_dir, f"scores_{model}.csv"))
 
         wide = dm.pivot_table(index=["dataset", "fold"], columns="encoder", values="course_score")
-        if BASELINE not in wide:
-            continue
-        print(f"\npaired comparison vs {BASELINE} over (dataset, fold) pairs:")
-        out = []
-        for enc in wide.columns:
-            if enc == BASELINE:
+        for base in args.baselines:
+            if base not in wide:
                 continue
-            pair = wide[[BASELINE, enc]].dropna()
-            d = pair[enc] - pair[BASELINE]
-            p = wilcoxon(d).pvalue if len(d) >= 6 and (d != 0).any() else float("nan")
-            per_ds = d.groupby(level="dataset").mean()
-            out.append({"encoder": enc, "n_pairs": len(d), "mean_delta": d.mean(), "wins": int((d > 0).sum()),
-                        "losses": int((d < 0).sum()), "wilcoxon_p": p,
-                        "datasets_improved": f"{int((per_ds > 0).sum())}/{len(per_ds)}"})
-        summary = pd.DataFrame(out).set_index("encoder")
-        print(summary.round(4).to_string())
-        summary.to_csv(os.path.join(args.out_dir, f"summary_{model}.csv"))
-        table.to_csv(os.path.join(args.out_dir, f"scores_{model}.csv"))
+            _compare(wide, base, args.out_dir, model)
     print("\nNote: with few datasets the p-values are indicative only; 6 folds per dataset are not independent "
           "(2 repeats of 3-fold CV), so treat dataset-level wins as the primary signal.")
+
+
+def _compare(wide, base, out_dir, model):
+    import pandas as pd
+    from scipy.stats import wilcoxon
+    print(f"\npaired comparison vs {base} over (dataset, fold) pairs:")
+    out = []
+    for enc in wide.columns:
+        if enc == base:
+            continue
+        pair = wide[[base, enc]].dropna()
+        d = pair[enc] - pair[base]
+        p = wilcoxon(d).pvalue if len(d) >= 6 and (d != 0).any() else float("nan")
+        per_ds = d.groupby(level="dataset").mean()
+        out.append({"encoder": enc, "n_pairs": len(d), "mean_delta": d.mean(), "wins": int((d > 0).sum()),
+                    "losses": int((d < 0).sum()), "wilcoxon_p": p,
+                    "datasets_improved": f"{int((per_ds > 0).sum())}/{len(per_ds)}"})
+    summary = pd.DataFrame(out).set_index("encoder")
+    print(summary.round(4).to_string())
+    summary.to_csv(os.path.join(out_dir, f"summary_{model}_vs_{base}.csv"))
 
 
 def main():
@@ -182,6 +192,7 @@ def main():
     r.add_argument("--out_dir", default="runs_sae_pilot")
     s = sub.add_parser("summarize")
     s.add_argument("--out_dir", default="runs_sae_pilot")
+    s.add_argument("--baselines", nargs="+", default=[BASELINE, "e5-small-pca50"])
     args = p.parse_args()
     run(args) if args.cmd == "run" else summarize(args)
 

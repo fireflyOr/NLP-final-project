@@ -62,8 +62,9 @@ class FoldSAETransform:
     is also fitted per fold. Same column count as PCA-30; the difference is sparse, non-negative codes.
     """
 
-    def __init__(self, binary: bool, n_latents: int = SMALL_SAE_LATENTS, k: int = SMALL_SAE_K, seed: int = 0):
+    def __init__(self, binary: bool, n_latents: Optional[int] = None, k: int = SMALL_SAE_K, seed: int = 0):
         self.binary = binary
+        n_latents = n_latents or SMALL_SAE_LATENTS
         self.n_latents = n_latents
         self.k = k
         self.seed = seed
