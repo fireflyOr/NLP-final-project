@@ -20,6 +20,7 @@ from transformers import (
     Trainer,
     TrainingArguments,
     EarlyStoppingCallback,
+    DataCollatorWithPadding,
 )
 
 from multabench.constants import SEED
@@ -85,7 +86,9 @@ class TextLabelDataset(Dataset):
         label_encoder: Optional[LabelEncoder] = None,
         prefix: str = E5_PASSAGE_PREFIX,
         max_length: int = 512,
+        dynamic_padding: bool = False,
     ):
+        self.dynamic_padding = dynamic_padding
         self.texts = [str(t).strip() or " " for t in texts]
         self.tokenizer = tokenizer
         self.prefix = prefix
@@ -101,6 +104,9 @@ class TextLabelDataset(Dataset):
 
     def __getitem__(self, idx: int) -> Dict[str, torch.Tensor]:
         text = self.prefix + self.texts[idx]
+        if self.dynamic_padding:  # pad later, per batch, to the longest text in the batch (same result, masked)
+            out = self.tokenizer(text, truncation=True, max_length=self.max_length)
+            return {"input_ids": out["input_ids"], "attention_mask": out["attention_mask"], "labels": self.labels[idx]}
         out = self.tokenizer(
             text,
             padding="max_length",
@@ -195,6 +201,8 @@ def encode_texts_with_e5(
     model.to(device)
     model.eval()
     prefixed = [format_e5_passage(col_name, col_val=text) for text in texts]
+    if os.getenv("MULTABENCH_DYNAMIC_PADDING", "0") == "1":
+        return _encode_dynamic(prefixed, model, tokenizer, device, batch_size=128, max_length=max_length)
     embeddings_list: List[np.ndarray] = []
     for i in range(0, len(prefixed), batch_size):
         batch = prefixed[i : i + batch_size]
@@ -216,6 +224,23 @@ def encode_texts_with_e5(
             pooled = _mean_pool_l2(last_hidden, attention_mask)
         embeddings_list.append(pooled.cpu().numpy())
     return np.concatenate(embeddings_list, axis=0).astype(np.float32)
+
+
+def _encode_dynamic(prefixed: List[str], model, tokenizer, device, batch_size: int, max_length: int) -> np.ndarray:
+    """Same embeddings as padding="max_length" (padding is masked in attention and pooling), much faster on short texts."""
+    order = np.argsort([len(t) for t in prefixed])
+    out: Optional[np.ndarray] = None
+    for i in range(0, len(order), batch_size):
+        idx = order[i:i + batch_size]
+        enc = tokenizer([prefixed[j] for j in idx], padding=True, truncation=True, max_length=max_length, return_tensors="pt")
+        with torch.no_grad():
+            outputs = model(input_ids=enc["input_ids"].to(device), attention_mask=enc["attention_mask"].to(device))
+        last_hidden = outputs["last_hidden_state"] if isinstance(outputs, dict) else outputs.last_hidden_state
+        pooled = _mean_pool_l2(last_hidden, enc["attention_mask"].to(device)).cpu().numpy()
+        if out is None:
+            out = np.zeros((len(prefixed), pooled.shape[1]), dtype=np.float32)
+        out[idx] = pooled
+    return out if out is not None else np.zeros((0, 384), dtype=np.float32)
 
 
 def finetune_e5_with_lora(
@@ -260,8 +285,9 @@ def finetune_e5_with_lora(
     label_encoder = LabelEncoder()
     label_encoder.fit(train_y.ravel().astype(str))
     d_output_inferred = len(label_encoder.classes_)
-    train_ds = TextLabelDataset(train_texts, train_y, tokenizer, label_encoder, max_length=max_length)
-    val_ds = TextLabelDataset(val_texts, val_y, tokenizer, label_encoder, max_length=max_length)
+    dynamic = os.getenv("MULTABENCH_DYNAMIC_PADDING", "0") == "1"
+    train_ds = TextLabelDataset(train_texts, train_y, tokenizer, label_encoder, max_length=max_length, dynamic_padding=dynamic)
+    val_ds = TextLabelDataset(val_texts, val_y, tokenizer, label_encoder, max_length=max_length, dynamic_padding=dynamic)
 
     n_layers = min(max(1, text_layers), num_layers)
     print(f"🦜 Doing LoRA on last {n_layers} layers of {model_name} with rank {lora_rank}")
@@ -307,6 +333,7 @@ def finetune_e5_with_lora(
             eval_dataset=val_ds,
             compute_metrics=compute_metrics,
             callbacks=[EarlyStoppingCallback(early_stopping_patience=patience)],
+            **({"data_collator": DataCollatorWithPadding(tokenizer)} if dynamic else {}),
         )
         trainer.train()
         backbone = trainer.model.backbone

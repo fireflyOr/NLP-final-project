@@ -57,19 +57,65 @@ def _model_cls(short: str):
     raise ValueError(short)
 
 
-def _install_embedding_cache():
-    """Memoize frozen E5 embeddings (keyed by model object, column and texts) inside the text pipeline."""
+class _DiskEmbeddingCache:
+    """Per-text cache of FROZEN E5 embeddings on disk, keyed by (column name, text).
+
+    The frozen encoder's output depends only on the formatted input "passage: <col>: <text>", so entries are valid
+    across folds, datasets and sessions. One file per column name; fine-tuned (TAR) encoders are never cached here.
+    """
+
+    def __init__(self, cache_dir: str):
+        self.dir = cache_dir
+        os.makedirs(cache_dir, exist_ok=True)
+        self.mem: dict = {}
+
+    def _path(self, col: str) -> str:
+        return os.path.join(self.dir, hashlib.sha1(col.encode()).hexdigest()[:16] + ".pkl")
+
+    def _load(self, col: str) -> dict:
+        if col not in self.mem:
+            import pickle
+            p = self._path(col)
+            self.mem[col] = pickle.load(open(p, "rb")) if os.path.exists(p) else {}
+        return self.mem[col]
+
+    def get(self, texts, col, compute):
+        import pickle
+        store = self._load(col)
+        missing = list(dict.fromkeys(t for t in texts if t not in store))
+        if missing:
+            vecs = compute(missing)
+            store.update(zip(missing, vecs))
+            tmp = self._path(col) + ".tmp"
+            with open(tmp, "wb") as f:
+                pickle.dump(store, f, protocol=pickle.HIGHEST_PROTOCOL)
+            os.replace(tmp, self._path(col))
+        return np.stack([store[t] for t in texts]).astype(np.float32)
+
+
+def _install_embedding_cache(cache_dir: str = None):
+    """Memoize E5 embeddings inside the text pipeline: in memory for every model (keyed by model object, column and
+    texts), and on disk for the frozen model when cache_dir is given."""
     import multabench.baselines.preprocessing.text_embeddings as te
     if getattr(te, "_pilot_cache_installed", False):
         return
     original = te.encode_texts_with_e5
     cache: dict = {}
+    disk = _DiskEmbeddingCache(cache_dir) if cache_dir else None
+
+    def is_frozen(model, device):
+        from multabench.e5.constants import E5_SMALL_V2
+        return model is te.get_vanilla_e5(device, model_name=E5_SMALL_V2)[0]
 
     def cached(texts, col_name, model, tokenizer, device, **kw):
         h = hashlib.sha1("\x1f".join(texts).encode("utf-8", "replace")).hexdigest()
         key = (id(model), col_name, len(texts), h)
         if key not in cache:
-            cache[key] = original(texts=texts, col_name=col_name, model=model, tokenizer=tokenizer, device=device, **kw)
+            compute = lambda ts: original(texts=ts, col_name=col_name, model=model, tokenizer=tokenizer, device=device, **kw)
+            if disk is not None and is_frozen(model, device):
+                cache[key] = disk.get(list(texts), str(col_name), compute)
+            else:
+                cache[key] = compute(texts)
         return cache[key]
 
     te.encode_texts_with_e5 = cached
@@ -100,7 +146,8 @@ def run(args):
     from multabench.e5.constants import TEXT_ENCODERS
     from multabench.finetune.train_args import E5TrainArgs
 
-    _install_embedding_cache()
+    os.environ.setdefault("MULTABENCH_DYNAMIC_PADDING", "1")  # same results as max_length padding, much faster
+    _install_embedding_cache(args.emb_cache)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if device.type == "cuda":
         os.environ.setdefault("CUDA_VISIBLE_DEVICES", "0")  # required by the LoRA fine-tuning code
@@ -194,6 +241,7 @@ def main():
     r.add_argument("--folds", nargs="+", type=int, default=list(range(6)))
     r.add_argument("--size", default="10k")
     r.add_argument("--e5_batch_size", type=int, default=256, help="LoRA fine-tuning batch size (lower it on OOM)")
+    r.add_argument("--emb_cache", default=None, help="directory for cached frozen E5 embeddings (e.g. on Drive)")
     r.add_argument("--out_dir", default="runs_sae_pilot")
     s = sub.add_parser("summarize")
     s.add_argument("--out_dir", default="runs_sae_pilot")
