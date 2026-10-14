@@ -14,7 +14,7 @@ import pandas as pd
 from pandas import DataFrame, Series
 import torch
 
-from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, STACK_ENCODERS, TF_IDF
+from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, RELEVANCE_ENCODERS, STACK_ENCODERS, TF_IDF
 from multabench.e5.e5_finetune import encode_texts_with_e5, get_vanilla_e5
 
 PCA_COMPONENTS = 30
@@ -130,6 +130,40 @@ def fit_text_encoders_transformed(
     return text_encoders
 
 
+def fit_text_encoders_relevance(
+    x: DataFrame,
+    text_features_list: list[str],
+    device: torch.device,
+    y: Series,
+    is_cls: bool,
+    variant: str,
+) -> Dict[str, E5ColumnEncoder]:
+    """Frozen E5 per column; PCA(30) replaced by target-relevant concept filtering (or one of its controls)."""
+    from multabench.sae import relevance as rel
+    conditional = variant in ("sae_cond", "sae_cond_add", "sae_rand", "dim_cond")
+    R = rel.relevance_residual(x=x, y=y, text_cols=text_features_list, is_cls=is_cls, conditional=conditional)
+    T, _ = rel.target_matrix(y, is_cls)
+    model, tokenizer = get_vanilla_e5(device, model_name=E5_SMALL_V2)
+    text_encoders: Dict[str, E5ColumnEncoder] = {}
+    for col in text_features_list:
+        texts = x[col].astype(str).fillna("").tolist()
+        emb = encode_texts_with_e5(texts=texts, model=model, tokenizer=tokenizer, device=device, col_name=str(col))
+        if variant in ("sae_cond", "sae_uni"):
+            enc = rel.SAERelevanceTransform(R, kind="sae")
+        elif variant == "sae_cond_add":
+            enc = rel.SAERelevanceTransform(R, kind="sae", mode="add")
+        elif variant == "sae_rand":
+            enc = rel.SAERelevanceTransform(R, kind="random")
+        elif variant == "dim_cond":
+            enc = rel.DimRelevanceTransform(R)
+        else:
+            enc = rel.PLSTransform(T)
+        enc.fit(emb, texts=texts)
+        print(f"Fitted relevance[{variant}] for column {col}: {enc.n_components} features; {enc.diag.get('n_kept', '-')} kept")
+        text_encoders[str(col)] = E5ColumnEncoder(model=model, tokenizer=tokenizer, encoder=enc, col_name=str(col))
+    return text_encoders
+
+
 def fit_text_encoders_tuned(
     x: DataFrame,
     text_features_list: list[str],
@@ -221,6 +255,10 @@ def fit_text_encoders(
             x=x,
             text_features_list=text_features_list,
         )
+    if e5_model_name in RELEVANCE_ENCODERS:
+        assert y is not None, "relevance filtering needs the target"
+        return fit_text_encoders_relevance(x=x, text_features_list=text_features_list, device=device, y=y,
+                                           is_cls=is_cls, variant=RELEVANCE_ENCODERS[e5_model_name])
     if e5_model_name in STACK_ENCODERS:
         from multabench.stack.text_stack import STACK_KEY, StackEncoder
         assert y is not None, "text stacking needs the target"

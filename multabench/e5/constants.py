@@ -37,6 +37,16 @@ E5_SMALL_STACK = "e5-small-v2|stack"        # MLP on frozen E5 embeddings, 5-fol
 E5_SMALL_TAR_STACK = "e5-small-v2|tarstack" # LoRA-fine-tuned E5 + head (as in TAR), 3-fold cross-fitted
 STACK_ENCODERS = {E5_SMALL_STACK: ("frozen", 5), E5_SMALL_TAR_STACK: ("finetuned", 3)}
 
+# Target-relevant concept filtering before PCA (uses y -> compare against Joint TAR). Value: variant.
+E5_SMALL_RELSAE = "e5-small-v2|relsae"            # main: SAE latents selected by conditional relevance, subtractive, PCA-30
+E5_SMALL_RELSAE_ADD = "e5-small-v2|relsae-add"    # variant: additive map-back (kept concepts only)
+E5_SMALL_RELSAE_UNI = "e5-small-v2|relsae-uni"    # ablation: univariate relevance (ignores the table)
+E5_SMALL_RELSAE_RAND = "e5-small-v2|relsae-rand"  # control: random latents, same number as selected
+E5_SMALL_RELDIM = "e5-small-v2|reldim"            # control: same selection on raw E5 dimensions (supervised PCA)
+E5_SMALL_PLS = "e5-small-v2|pls"                  # control: PLS to 30 components
+RELEVANCE_ENCODERS = {E5_SMALL_RELSAE: "sae_cond", E5_SMALL_RELSAE_ADD: "sae_cond_add", E5_SMALL_RELSAE_UNI: "sae_uni", E5_SMALL_RELSAE_RAND: "sae_rand",
+                      E5_SMALL_RELDIM: "dim_cond", E5_SMALL_PLS: "pls"}
+
 TEXT_ENCODERS = {
     "tfidf": Encoder(encoder_name=TF_IDF, tune_encoder=False),
     "e5-small": Encoder(encoder_name=E5_SMALL_V2, tune_encoder=False),
@@ -54,6 +64,12 @@ TEXT_ENCODERS = {
     # tune_encoder=True so the pipeline passes y (and the LoRA args) to the text encoder
     "e5-small-stack": Encoder(encoder_name=E5_SMALL_STACK, tune_encoder=True),
     "e5-small-tar-stack": Encoder(encoder_name=E5_SMALL_TAR_STACK, tune_encoder=True),
+    "e5-small-relsae": Encoder(encoder_name=E5_SMALL_RELSAE, tune_encoder=True),
+    "e5-small-relsae-add": Encoder(encoder_name=E5_SMALL_RELSAE_ADD, tune_encoder=True),
+    "e5-small-relsae-uni": Encoder(encoder_name=E5_SMALL_RELSAE_UNI, tune_encoder=True),
+    "e5-small-relsae-rand": Encoder(encoder_name=E5_SMALL_RELSAE_RAND, tune_encoder=True),
+    "e5-small-reldim": Encoder(encoder_name=E5_SMALL_RELDIM, tune_encoder=True),
+    "e5-small-pls": Encoder(encoder_name=E5_SMALL_PLS, tune_encoder=True),
 }
 
 D_E5_SMALL = 384

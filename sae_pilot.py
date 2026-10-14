@@ -17,6 +17,9 @@ Encoders (all frozen E5-small-v2; only the step after embedding differs):
     e5-small-tar       Joint TAR baseline (LoRA fine-tuned, slow)
     e5-small-stack     PCA-30 + out-of-fold prediction of an MLP on frozen E5 (uses y -> compare to e5-small-tar)
     e5-small-tar-stack PCA-30 + out-of-fold prediction of a LoRA-fine-tuned E5 + head (3 fine-tunes per fold, slow)
+    e5-small-relsae    SAE latents selected by relevance to what the table does not explain; removed latents
+                       subtracted from the embedding; then PCA-30 (uses y -> compare to e5-small-tar)
+    e5-small-relsae-uni / -rand, e5-small-reldim, e5-small-pls   ablation and controls (see multabench/sae/relevance.py)
 
 Every run is written to <out_dir>/<model>_<dataset>_<encoder>_<fold>.json and skipped if it exists,
 so the script can be re-run after a Colab disconnect. Frozen E5 embeddings are cached in memory and
@@ -179,6 +182,8 @@ def run(args):
                     "n_text_features": int(sum(t.n_components for t in model.text_transformers.values())),
                     "n_train": len(split.y_train), "n_test": len(split.y_test),
                     "runtime_s": time.time() - t0,
+                    "diagnostics": {c: getattr(t.encoder, "diag", None) for c, t in model.text_transformers.items()
+                                    if getattr(getattr(t, "encoder", None), "diag", None)},
                 }
                 with open(out_path, "w") as f:
                     json.dump(res, f, indent=2)
@@ -207,8 +212,41 @@ def summarize(args):
             if base not in wide:
                 continue
             _compare(wide, base, args.out_dir, model)
+    _vs_official_tar(df, args.official)
     print("\nNote: with few datasets the p-values are indicative only; 6 folds per dataset are not independent "
           "(2 repeats of 3-fold CV), so treat dataset-level wins as the primary signal.")
+
+
+def _vs_official_tar(df, official_path):
+    """Gain over OUR Joint Frozen run (same splits) vs the paper's TAR gain over ITS Joint Frozen (LightGBM)."""
+    import pandas as pd
+    from scipy.stats import wilcoxon
+    if not official_path or not os.path.exists(official_path):
+        return
+    off = pd.read_csv(official_path).set_index("dataset")
+    d = df[df.model == "light"]
+    if d.empty or BASELINE not in set(d.encoder):
+        return
+    means = d.pivot_table(index="dataset", columns="encoder", values="course_score", aggfunc="mean")
+    print("\n=== gain vs official TAR gain (LightGBM; ours: same splits as our Frozen; TAR: paper's Frozen->TAR) ===")
+    rows = []
+    for enc in means.columns:
+        if enc == BASELINE:
+            continue
+        g = (means[enc] - means[BASELINE]).dropna()
+        g = g[g.index.isin(off.index)]
+        if g.empty:
+            continue
+        t = off.loc[g.index, "official_tar_gain"]
+        diff = g - t
+        p = wilcoxon(diff).pvalue if len(diff) >= 6 and (diff != 0).any() else float("nan")
+        rows.append({"encoder": enc, "n_datasets": len(g), "mean_gain": g.mean(), "mean_official_tar_gain": t.mean(),
+                     "beats_tar_on": f"{int((diff > 0).sum())}/{len(diff)}", "wilcoxon_p_vs_tar": p,
+                     "share_of_tar_gain": g.sum() / t.sum() if t.sum() > 0 else float("nan")})
+        for ds in g.index:
+            print(f"  {enc:22s} {ds:34s} gain {g[ds]:+.4f}   TAR gain {t[ds]:+.4f}")
+    if rows:
+        print(pd.DataFrame(rows).set_index("encoder").round(4).to_string())
 
 
 def _compare(wide, base, out_dir, model):
@@ -246,6 +284,7 @@ def main():
     s = sub.add_parser("summarize")
     s.add_argument("--out_dir", default="runs_sae_pilot")
     s.add_argument("--baselines", nargs="+", default=[BASELINE, "e5-small-pca50", "e5-small-tar"])
+    s.add_argument("--official", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "official_lightgbm_frozen_tar.csv"))
     args = p.parse_args()
     run(args) if args.cmd == "run" else summarize(args)
 

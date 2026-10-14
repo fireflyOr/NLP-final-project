@@ -218,3 +218,58 @@ def test_stack_oof_differs_from_in_sample(fake_e5):
     st.oof = {}  # force ensemble predictions for the same rows
     ens = st.transform(x).to_numpy()
     assert not np.allclose(oof, ens)
+
+
+# ---------------- target-relevant concept filtering ----------------
+
+def _atom_data(n=6000, d=256, n_atoms=400, seed=0):
+    """Sparse-dictionary embeddings: strong irrelevant atoms dominate the variance; y depends on one weak atom
+    (atom 0) or on a tabular feature. Atom 1 copies the tabular feature (relevant alone, redundant given the table)."""
+    rng = np.random.default_rng(seed)
+    atoms = rng.normal(size=(n_atoms, d)); atoms /= np.linalg.norm(atoms, axis=1, keepdims=True)
+    tab = rng.normal(size=n)
+    Z = np.zeros((n, n_atoms))
+    for i in range(n):
+        Z[i, rng.choice(np.arange(2, n_atoms), 4, replace=False)] = rng.uniform(2, 4, 4)   # strong, irrelevant
+    has0 = rng.random(n) < 0.3
+    Z[has0, 0] = rng.uniform(1.5, 2.5, has0.sum())                                       # weaker, relevant
+    has1 = tab > 0.5
+    Z[has1, 1] = rng.uniform(1.5, 2.5, has1.sum())                                       # weaker, copies the table
+    y = ((has0 | (tab > 1.2)) ^ (rng.random(n) < 0.05)).astype(int)
+    return (Z @ atoms).astype(np.float32), atoms, tab, pd.Series(y, name="y")
+
+
+def test_relevance_selects_weak_relevant_concept():
+    from multabench.sae import relevance as rel
+    emb, atoms, tab, y = _atom_data()
+    x = pd.DataFrame({"tab": tab, "txt": [f"t{i}" for i in range(len(y))]})
+    out = {}
+    for conditional in (False, True):
+        R = rel.relevance_residual(x=x, y=y, text_cols=["txt"], is_cls=True, conditional=conditional)
+        t = rel.SAERelevanceTransform(R, kind="sae").fit(emb)
+        D = t.W_dec[t.keep] / np.linalg.norm(t.W_dec[t.keep], axis=1, keepdims=True)
+        out[conditional] = (np.abs(D @ atoms[0]).max(), np.abs(D @ atoms[1]).max() if len(D) else 0, t)
+    # both variants find the weak relevant atom; only the univariate one also keeps the table-redundant atom
+    assert out[True][0] > 0.8 and out[False][0] > 0.8, {k: v[:2] for k, v in out.items()}
+    assert out[False][1] > 0.8 and out[True][1] < 0.8, {k: v[:2] for k, v in out.items()}
+    t = out[True][2]
+    assert {"var_share_kept", "var_share_sae_error", "n_kept", "threshold", "top"} <= set(t.diag)
+    assert 1 <= t.diag["n_kept"] <= 20  # a handful of concepts, not a large fraction of the 256
+
+
+@pytest.mark.parametrize("task", ["bin", "mul", "reg"])
+@pytest.mark.parametrize("encoder", ["e5-small-relsae", "e5-small-relsae-add", "e5-small-relsae-uni", "e5-small-relsae-rand",
+                                     "e5-small-reldim", "e5-small-pls"])
+def test_relevance_pipeline(fake_e5, task, encoder):
+    from multabench.baselines.lgbm import LightGBM
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.e5.constants import TEXT_ENCODERS
+    x, y = _toy_task(task)
+    problem = {"bin": SupervisedTask.BINARY, "mul": SupervisedTask.MULTICLASS, "reg": SupervisedTask.REGRESSION}[task]
+    model = LightGBM(problem_type=problem, device=torch.device("cpu"), verbose=False, tune_e5=True,
+                     e5_train_kwargs={}, e5_model_name=TEXT_ENCODERS[encoder].encoder_name)
+    model.fit(x.iloc[:1000], y.iloc[:1000])
+    for col in ("review", "title"):
+        assert 1 <= model.text_transformers[col].n_components <= 30
+    pred = model.predict(x.iloc[1000:])
+    assert np.isfinite(pred).all() and len(pred) == 500
