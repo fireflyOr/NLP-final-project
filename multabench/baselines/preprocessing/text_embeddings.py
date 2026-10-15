@@ -140,7 +140,7 @@ def fit_text_encoders_relevance(
 ) -> Dict[str, E5ColumnEncoder]:
     """Frozen E5 per column; PCA(30) replaced by target-relevant concept filtering (or one of its controls)."""
     from multabench.sae import relevance as rel
-    conditional = variant in ("sae_cond", "sae_cond_add", "sae_rand", "dim_cond")
+    conditional = variant in ("sae_cond", "sae_cond_add", "sae_rand", "dim_cond", "v2_cond", "v2_rand")
     R = rel.relevance_residual(x=x, y=y, text_cols=text_features_list, is_cls=is_cls, conditional=conditional)
     T, _ = rel.target_matrix(y, is_cls)
     model, tokenizer = get_vanilla_e5(device, model_name=E5_SMALL_V2)
@@ -148,7 +148,10 @@ def fit_text_encoders_relevance(
     for col in text_features_list:
         texts = x[col].astype(str).fillna("").tolist()
         emb = encode_texts_with_e5(texts=texts, model=model, tokenizer=tokenizer, device=device, col_name=str(col))
-        if variant in ("sae_cond", "sae_uni"):
+        if variant.startswith("v2_"):
+            enc = rel.SAERelevanceTransform(R, kind="random" if variant == "v2_rand" else "sae",
+                                            rule="drop_irrelevant", n_latents=512, k=32)
+        elif variant in ("sae_cond", "sae_uni"):
             enc = rel.SAERelevanceTransform(R, kind="sae")
         elif variant == "sae_cond_add":
             enc = rel.SAERelevanceTransform(R, kind="sae", mode="add")

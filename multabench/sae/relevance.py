@@ -109,9 +109,12 @@ def relevance_scores(feats: np.ndarray, R: np.ndarray, eligible: np.ndarray, n_p
     score[~eligible] = 0.0
     rng = np.random.default_rng(seed)
     null = np.empty(n_perm)
+    per_feat = np.zeros((n_perm, F.shape[1]))
     for b in range(n_perm):
-        s = np.abs(F[:, eligible].T @ Rr[rng.permutation(n)] / n).max(axis=1)
-        null[b] = s.max() if s.size else 0.0
+        s = np.abs(F.T @ Rr[rng.permutation(n)] / n).max(axis=1)
+        per_feat[b] = s
+        null[b] = s[eligible].max() if eligible.any() else 0.0
+    relevance_scores.null_median = np.median(per_feat, axis=0)   # per-feature median under "no relation"
     return score, float(np.quantile(null, PERM_Q))
 
 
@@ -130,25 +133,36 @@ class SAERelevanceTransform:
           'add' -> b_dec + sum_{i in S} z_i d_i   (kept concepts only)"""
 
     def __init__(self, R: np.ndarray, kind: str = "sae", mode: str = "sub", n_random: Optional[int] = None,
-                 seed: int = SEED):
+                 seed: int = SEED, rule: str = "keep_proven", n_latents: int = N_LATENTS, k: int = K_ACTIVE):
+        """rule: 'keep_proven'      keep only latents that pass the family-wise permutation test (v1, aggressive)
+                 'drop_irrelevant'  remove only eligible latents scoring below their own null median (v2, gentle);
+                                    everything uncertain, and rare latents, are kept"""
         self.R, self.kind, self.mode, self.n_random, self.seed = R, kind, mode, n_random, seed
+        self.rule, self.n_latents, self.k = rule, n_latents, k
         self.diag: Dict = {}
 
     def fit(self, emb: np.ndarray, texts: Optional[List[str]] = None) -> "SAERelevanceTransform":
-        cfg = SAEConfig(d_in=emb.shape[1], n_latents=N_LATENTS, k=K_ACTIVE, k_aux=N_LATENTS,
-                        dead_after=max(len(emb) // 2, 1000))
+        L = self.n_latents
+        cfg = SAEConfig(d_in=emb.shape[1], n_latents=L, k=self.k, k_aux=L, dead_after=max(len(emb) // 2, 1000))
         steps_per_epoch = max(1, len(emb) // 256)
         self.sae = train_sae(emb, cfg, device="cpu", epochs=max(5, min(200, 3000 // steps_per_epoch)),
                              batch_size=256, lr=1e-3, seed=self.seed, log_every=10**9)
         z = encode_numpy(self.sae, emb)
         eligible = (z > 0).sum(axis=0) >= MIN_ACTIVE
         score, thr = relevance_scores(z, self.R, eligible)
-        keep = select(score, thr, eligible)
-        if self.kind == "random":
-            pool = np.where(eligible)[0] if eligible.any() else np.arange(N_LATENTS)
-            keep = np.sort(np.random.default_rng(self.seed).choice(pool, min(self.n_random or len(keep), len(pool)), replace=False))
+        null_med = relevance_scores.null_median
+        if self.rule == "drop_irrelevant":
+            drop = np.where(eligible & (score < null_med))[0]
+            if self.kind == "random":
+                drop = np.sort(np.random.default_rng(self.seed).choice(np.where(eligible)[0], len(drop), replace=False))
+            keep = np.setdiff1d(np.arange(L), drop)
+        else:
+            keep = select(score, thr, eligible)
+            if self.kind == "random":
+                pool = np.where(eligible)[0] if eligible.any() else np.arange(L)
+                keep = np.sort(np.random.default_rng(self.seed).choice(pool, min(self.n_random or len(keep), len(pool)), replace=False))
         self.keep_idx = keep
-        self.drop = np.setdiff1d(np.arange(N_LATENTS), keep)
+        self.drop = np.setdiff1d(np.arange(L), keep)
         self.W_dec = self.sae.W_dec.detach().cpu().numpy()
         self.b_dec = self.sae.b_dec.detach().cpu().numpy()
         x_t = self._filter(emb, z)
@@ -159,7 +173,8 @@ class SAERelevanceTransform:
         self.pca = PCA(n_components=min(N_PCA, *x_t.shape), random_state=SEED).fit(x_t)
         self.n_components = self.pca.n_components_
         removed = np.linalg.norm(emb - x_t, axis=1).mean() / np.linalg.norm(emb - emb.mean(0), axis=1).mean()
-        self.diag = {"n_eligible": int(eligible.sum()), "n_kept": int(len(keep)), "threshold": round(thr, 4),
+        self.diag = {"rule": self.rule, "sae": f"{L}/k{self.k}", "n_eligible": int(eligible.sum()),
+                     "n_kept": int(len(keep)), "n_removed": int(len(self.drop)), "threshold": round(thr, 4),
                      "passed_test": int(((score > thr) & eligible).sum()), "removed_norm_ratio": round(float(removed), 4),
                      "var_share_kept": var_share(kept_part), "var_share_sae_error": var_share(resid), "mode": self.mode,
                      "top": self._top(keep, score, z, texts)}

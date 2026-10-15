@@ -44,7 +44,11 @@ E5_SMALL_RELSAE_UNI = "e5-small-v2|relsae-uni"    # ablation: univariate relevan
 E5_SMALL_RELSAE_RAND = "e5-small-v2|relsae-rand"  # control: random latents, same number as selected
 E5_SMALL_RELDIM = "e5-small-v2|reldim"            # control: same selection on raw E5 dimensions (supervised PCA)
 E5_SMALL_PLS = "e5-small-v2|pls"                  # control: PLS to 30 components
-RELEVANCE_ENCODERS = {E5_SMALL_RELSAE: "sae_cond", E5_SMALL_RELSAE_ADD: "sae_cond_add", E5_SMALL_RELSAE_UNI: "sae_uni", E5_SMALL_RELSAE_RAND: "sae_rand",
+# v2: remove only clearly irrelevant concepts (score below its own permutation median), larger SAE (512, k=32)
+E5_SMALL_RELSAE2 = "e5-small-v2|relsae2"
+E5_SMALL_RELSAE2_UNI = "e5-small-v2|relsae2-uni"
+E5_SMALL_RELSAE2_RAND = "e5-small-v2|relsae2-rand"
+RELEVANCE_ENCODERS = {E5_SMALL_RELSAE2: "v2_cond", E5_SMALL_RELSAE2_UNI: "v2_uni", E5_SMALL_RELSAE2_RAND: "v2_rand",E5_SMALL_RELSAE: "sae_cond", E5_SMALL_RELSAE_ADD: "sae_cond_add", E5_SMALL_RELSAE_UNI: "sae_uni", E5_SMALL_RELSAE_RAND: "sae_rand",
                       E5_SMALL_RELDIM: "dim_cond", E5_SMALL_PLS: "pls"}
 
 TEXT_ENCODERS = {
@@ -65,6 +69,9 @@ TEXT_ENCODERS = {
     "e5-small-stack": Encoder(encoder_name=E5_SMALL_STACK, tune_encoder=True),
     "e5-small-tar-stack": Encoder(encoder_name=E5_SMALL_TAR_STACK, tune_encoder=True),
     "e5-small-relsae": Encoder(encoder_name=E5_SMALL_RELSAE, tune_encoder=True),
+    "e5-small-relsae2": Encoder(encoder_name=E5_SMALL_RELSAE2, tune_encoder=True),
+    "e5-small-relsae2-uni": Encoder(encoder_name=E5_SMALL_RELSAE2_UNI, tune_encoder=True),
+    "e5-small-relsae2-rand": Encoder(encoder_name=E5_SMALL_RELSAE2_RAND, tune_encoder=True),
     "e5-small-relsae-add": Encoder(encoder_name=E5_SMALL_RELSAE_ADD, tune_encoder=True),
     "e5-small-relsae-uni": Encoder(encoder_name=E5_SMALL_RELSAE_UNI, tune_encoder=True),
     "e5-small-relsae-rand": Encoder(encoder_name=E5_SMALL_RELSAE_RAND, tune_encoder=True),

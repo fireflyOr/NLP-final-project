@@ -258,7 +258,7 @@ def test_relevance_selects_weak_relevant_concept():
 
 
 @pytest.mark.parametrize("task", ["bin", "mul", "reg"])
-@pytest.mark.parametrize("encoder", ["e5-small-relsae", "e5-small-relsae-add", "e5-small-relsae-uni", "e5-small-relsae-rand",
+@pytest.mark.parametrize("encoder", ["e5-small-relsae2", "e5-small-relsae2-rand", "e5-small-relsae", "e5-small-relsae-add", "e5-small-relsae-uni", "e5-small-relsae-rand",
                                      "e5-small-reldim", "e5-small-pls"])
 def test_relevance_pipeline(fake_e5, task, encoder):
     from multabench.baselines.lgbm import LightGBM
@@ -273,3 +273,14 @@ def test_relevance_pipeline(fake_e5, task, encoder):
         assert 1 <= model.text_transformers[col].n_components <= 30
     pred = model.predict(x.iloc[1000:])
     assert np.isfinite(pred).all() and len(pred) == 500
+
+
+def test_v2_removes_only_irrelevant():
+    from multabench.sae import relevance as rel
+    emb, atoms, tab, y = _atom_data()
+    x = pd.DataFrame({"tab": tab, "txt": ["t"] * len(y)})
+    R = rel.relevance_residual(x=x, y=y, text_cols=["txt"], is_cls=True, conditional=True)
+    t = rel.SAERelevanceTransform(R, rule="drop_irrelevant", n_latents=512, k=32).fit(emb)
+    D = t.W_dec[t.keep_idx] / np.linalg.norm(t.W_dec[t.keep_idx], axis=1, keepdims=True)
+    assert np.abs(D @ atoms[0]).max() > 0.8                       # the relevant concept survives
+    assert 0.2 * t.diag["n_eligible"] < t.diag["n_removed"] < 0.8 * t.diag["n_eligible"]  # gentle: roughly half
