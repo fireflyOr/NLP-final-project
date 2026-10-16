@@ -29,7 +29,7 @@ case "${1:-}" in
     python3 -m venv .venv && source .venv/bin/activate
     pip install -q --upgrade pip
     python -c "import torch" 2>/dev/null || pip install -q torch
-    pip install -q lightgbm scikit-learn pandas scipy transformers peft skrub kagglehub python-dotenv "autogluon.core" pytest
+    pip install -q lightgbm scikit-learn pandas scipy transformers peft skrub kagglehub python-dotenv "autogluon.core" pytest tabstar
     pip uninstall -y -q torchao 2>/dev/null || true   # old torchao versions break new peft; not needed
     python -c "import torch; print('CUDA available:', torch.cuda.is_available())"
     PYTHONPATH=. python -m pytest tests/test_sae.py -q -k "relevance_pipeline and relsae-bin" 2>&1 | tail -1

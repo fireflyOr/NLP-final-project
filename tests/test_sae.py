@@ -284,3 +284,75 @@ def test_v2_removes_only_irrelevant():
     D = t.W_dec[t.keep_idx] / np.linalg.norm(t.W_dec[t.keep_idx], axis=1, keepdims=True)
     assert np.abs(D @ atoms[0]).max() > 0.8                       # the relevant concept survives
     assert 0.2 * t.diag["n_eligible"] < t.diag["n_removed"] < 0.8 * t.diag["n_eligible"]  # gentle: roughly half
+
+
+# ---------------- TabSTAR + SAE pruning (phase 1 mocked: tiny random TabSTAR, no download) ----------------
+
+@pytest.fixture()
+def tiny_tabstar(monkeypatch, tmp_path):
+    import transformers
+    from transformers import BertConfig, BertModel, BertTokenizerFast
+    import tabstar.arch.arch as arch
+    from tabstar.tabstar_model import BaseTabSTAR
+    from peft import LoraConfig, get_peft_model
+    vocab = ["[PAD]", "[UNK]", "[CLS]", "[SEP]", "[MASK]", "predictive", "feature", "value", "target", ":",
+             "review", "title", "price", "y", "to", "quantile", "lower", "higher", "than", "unknown", "numerical"] + WORDS
+    (tmp_path / "vocab.txt").write_text("\n".join(vocab))
+    tok = BertTokenizerFast(vocab_file=str(tmp_path / "vocab.txt"))
+    cfg = BertConfig(vocab_size=len(vocab), hidden_size=384, num_hidden_layers=2, num_attention_heads=4, intermediate_size=128)
+    monkeypatch.setattr(arch.AutoModel, "from_pretrained", staticmethod(lambda *a, **k: BertModel(cfg)))
+    monkeypatch.setattr(arch.AutoTokenizer, "from_pretrained", staticmethod(lambda *a, **k: tok))
+
+    def fake_fit(self, X, y, x_val=None, y_val=None):
+        self._prepare_for_train(X, y, x_val, y_val)
+        torch.manual_seed(0)
+        m = arch.TabStarModel(arch.TabStarConfig())
+        self.model_ = get_peft_model(m, LoraConfig(r=4, target_modules=["linear1", "linear2"])).to(self.device)
+    monkeypatch.setattr(BaseTabSTAR, "fit", fake_fit)
+
+
+@pytest.mark.parametrize("task", ["bin", "mul", "reg"])
+def test_star_prune_fold_no_leakage(tiny_tabstar, monkeypatch, task):
+    import multabench.star.prune_star as ps
+    seen = {}
+    real_fit_pruners, real_resid = ps.fit_pruners, ps.rel.relevance_residual
+    monkeypatch.setattr(ps, "fit_pruners", lambda E, *a, **k: (seen.setdefault("sae_rows", len(E)), real_fit_pruners(E, *a, **k))[1])
+    monkeypatch.setattr(ps.rel, "relevance_residual", lambda x, *a, **k: (seen.setdefault("rel_rows", len(x)), real_resid(x, *a, **k))[1])
+    monkeypatch.setattr(ps, "P2_EPOCHS", 2)
+    x, y = _toy_task(task, n=800)
+    tr, te = slice(0, 600), slice(600, None)
+    preds, y_true, diag = ps.run_fold(x.iloc[tr], y.iloc[tr], x.iloc[te], y.iloc[te], is_cls=task != "reg",
+                                      pretrain=None, device=torch.device("cpu"))
+    # leakage invariants: SAE and relevance see only the fit rows (not val, not test)
+    assert seen["sae_rows"] == diag["n_fit"] == seen["rel_rows"]
+    assert diag["n_fit"] + diag["n_val"] == 600 and diag["n_test"] == 200
+    assert set(diag["free_text_columns"]) == {"review", "title"}
+    assert set(preds) == {"tabstar", "tabstar-p2", "tabstar-prune", "tabstar-rand"}
+    for v, p in preds.items():
+        assert len(p) == 200 and np.isfinite(p).all(), v
+    if task == "reg":
+        assert np.allclose(y_true, y.iloc[te].to_numpy())          # metric on the original target scale
+    for col, d in diag["pruning"].items():
+        assert 0 <= d["n_removed"] <= d["n_eligible"] <= 512
+
+
+def test_star_runner_writes_results(tiny_tabstar, monkeypatch, tmp_path):
+    import sys, types, json, glob
+    import multabench.star.prune_star as ps
+    import multabench.benchmark.load as L
+    from multabench.benchmark.splits import get_split
+    from multabench.datasets.objects import SupervisedTask
+    monkeypatch.setattr(ps, "P2_EPOCHS", 1)
+    x, y = _toy_task("bin", n=700)
+    ds = types.SimpleNamespace(x=x, y=y, is_cls=True, task_type=SupervisedTask.BINARY)
+    monkeypatch.setattr(L, "load_multabench_dataset", lambda d: ds)
+    monkeypatch.setattr(L, "split_dataset", lambda d, fold, size: (lambda tr, te: types.SimpleNamespace(
+        x_train=x.iloc[tr], y_train=y.iloc[tr], x_test=x.iloc[te], y_test=y.iloc[te]))(*get_split(y.to_numpy(), True, fold, size)))
+    sys.argv = ["x", "run", "--datasets", "BIN_TEXT_FAKE_JOB_POSTING", "--folds", "0", "--out_dir", str(tmp_path)]
+    import star_prune_pilot
+    star_prune_pilot.main()
+    files = sorted(glob.glob(str(tmp_path / "*.json")))
+    assert len(files) == 4
+    for f in files:
+        d = json.load(open(f))
+        assert d["course_metric"] == "auroc" and 0 <= d["course_score"] <= 1 and d["model"] == "star"
