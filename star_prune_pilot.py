@@ -26,6 +26,7 @@ def main():
     r.add_argument("--folds", nargs="+", type=int, default=[0, 1, 2])
     r.add_argument("--size", default="10k")
     r.add_argument("--out_dir", default="runs_star")
+    r.add_argument("--time_limit", type=int, default=None, help="TabSTAR fine-tuning budget in seconds (default: its own 10h)")
     args = p.parse_args()
 
     from multabench.baselines.tabstar_v1 import get_tabstar_paper_mapping
@@ -44,9 +45,11 @@ def main():
                 continue
             split = split_dataset(dataset, fold=fold, size=args.size)
             t0 = time.time()
+            ckpt = os.path.join(".tabstar_ckpt", f"{ds_name}_f{fold}_{os.getenv('SLURM_JOB_ID', 'local')}_{os.getpid()}")
             preds, y_true, diag = run_fold(split.x_train.copy(), split.y_train.copy(), split.x_test.copy(),
                                            split.y_test.copy(), is_cls=dataset.is_cls,
-                                           pretrain=get_tabstar_paper_mapping(ds_name), device=device)
+                                           pretrain=get_tabstar_paper_mapping(ds_name), device=device,
+                                           output_dir=ckpt, time_limit=args.time_limit)
             for v in VARIANTS:
                 yp = np.asarray(preds[v])
                 if dataset.is_cls and yp.ndim == 2 and yp.shape[1] == 2:

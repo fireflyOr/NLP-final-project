@@ -204,15 +204,18 @@ def apply_pruning(E: torch.Tensor, positions: Dict[str, int], pruners, which: st
 
 # ------------------------------------------------------------------ one outer fold, all four variants
 def run_fold(x_train: DataFrame, y_train: Series, x_test: DataFrame, y_test: Series, is_cls: bool,
-             pretrain: Optional[str], device: torch.device, seed: int = SEED) -> Tuple[Dict[str, np.ndarray], np.ndarray, Dict]:
+             pretrain: Optional[str], device: torch.device, seed: int = SEED, output_dir: Optional[str] = None,
+             time_limit: Optional[int] = None) -> Tuple[Dict[str, np.ndarray], np.ndarray, Dict]:
     from tabstar.preprocessing.splits import split_to_val
     from tabstar.preprocessing.texts import normalize_col_name
     from tabstar.tabstar_model import TabSTARClassifier, TabSTARRegressor
 
     x_fit, x_val, y_fit, y_val = split_to_val(x=x_train, y=y_train, is_cls=is_cls)
     cls = TabSTARClassifier if is_cls else TabSTARRegressor
+    # output_dir MUST be unique per run: TabSTAR names its checkpoint folder by the current second, so parallel
+    # jobs sharing a working directory would otherwise overwrite each other's checkpoints.
     star = cls(pretrain_dataset_or_path=pretrain, device=device, random_state=seed, is_paper_version=False,
-               lora_batch=64, keep_model=False)
+               lora_batch=64, keep_model=False, output_dir=output_dir, time_limit=time_limit)
     star.fit(x_fit, y_fit, x_val, y_val)                                              # phase 1
     v = star.preprocessor_
     d_out = v.d_output
