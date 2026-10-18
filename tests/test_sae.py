@@ -286,6 +286,70 @@ def test_v2_removes_only_irrelevant():
     assert 0.2 * t.diag["n_eligible"] < t.diag["n_removed"] < 0.8 * t.diag["n_eligible"]  # gentle: roughly half
 
 
+# ---------------- v3: sibling-aware group-shadow pruning (frozen and TAR) ----------------
+
+def test_group_shadow_keeps_relevant_and_prunes_gently():
+    from multabench.sae import relevance as rel
+    emb, atoms, tab, y = _atom_data(n=4000)
+    x = pd.DataFrame({"tab": tab, "txt": ["t"] * len(y)})
+    T, codes = rel.target_matrix(y, True)
+    out = {}
+    for kind in ("sae", "random"):
+        t = rel.GroupShadowSAETransform(rel.tabular_frame(x, ["txt"]), codes, True, kind=kind, n_latents=1024, k=16).fit(emb)
+        kept = np.setdiff1d(np.arange(t.n_latents), t.drop)
+        D = t.W_dec[kept] / np.linalg.norm(t.W_dec[kept], axis=1, keepdims=True)
+        out[kind] = (np.abs(D @ atoms[0]).max(), t.diag)
+    assert out["sae"][0] > 0.8, out["sae"]                           # the weak relevant concept survives
+    d = out["sae"][1]
+    assert 0.1 * d["n_eligible"] < d["n_removed"] < d["n_eligible"]   # removes a real share, not everything
+    assert out["random"][1]["n_removed"] == d["n_removed"]           # control removes exactly as many
+    assert d["n_groups"] <= d["n_eligible"]
+
+
+def test_group_siblings_merges_near_duplicates():
+    from multabench.sae import relevance as rel
+    rng = np.random.default_rng(0)
+    base = rng.normal(size=(5, 64))
+    W = np.vstack([base, base + 0.2 * rng.normal(size=base.shape)])    # each direction has a close sibling
+    labels = rel.group_siblings(W)
+    assert all(labels[i] == labels[i + 5] for i in range(5)) and len(set(labels)) == 5
+
+
+@pytest.fixture()
+def fake_tar(monkeypatch):
+    """LoRA fine-tuning replaced by a counter; the 'tuned' model embeds like the fake frozen one."""
+    import multabench.e5.e5_finetune as ef
+    import multabench.baselines.preprocessing.text_embeddings as te
+    import transformers
+    calls = []
+    monkeypatch.setattr(ef, "finetune_e5_with_lora", lambda **kw: (calls.append(len(kw["train_texts"])), (torch.nn.Identity(), None))[1])
+    monkeypatch.setattr(transformers.AutoTokenizer, "from_pretrained", staticmethod(lambda *a, **k: None))
+    te._TUNED_MEMO.clear()
+    return calls
+
+
+@pytest.mark.parametrize("task", ["bin", "mul", "reg"])
+def test_tar_pruning_shares_one_finetune(fake_e5, fake_tar, task):
+    from multabench.baselines.lgbm import LightGBM
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.e5.constants import TEXT_ENCODERS
+    x, y = _toy_task(task)
+    problem = {"bin": SupervisedTask.BINARY, "mul": SupervisedTask.MULTICLASS, "reg": SupervisedTask.REGRESSION}[task]
+    removed = {}
+    for enc in ("e5-small-tar", "e5-small-tar-gsae", "e5-small-tar-gsae-rand", "e5-small-gsae"):
+        model = LightGBM(problem_type=problem, device=torch.device("cpu"), verbose=False, tune_e5=True,
+                         e5_train_kwargs={}, e5_model_name=TEXT_ENCODERS[enc].encoder_name)
+        model.fit(x.iloc[:1000], y.iloc[:1000])
+        for col in ("review", "title"):
+            assert model.text_transformers[col].n_components == 30
+        if enc != "e5-small-tar":
+            removed[enc] = {c: model.text_transformers[c].encoder.diag["n_removed"] for c in ("review", "title")}
+        pred = model.predict(x.iloc[1000:])
+        assert np.isfinite(pred).all() and len(pred) == 500
+    assert len(fake_tar) == 1, "all TAR arms of a fold must reuse one fine-tuned model"
+    assert removed["e5-small-tar-gsae"] == removed["e5-small-tar-gsae-rand"]
+
+
 # ---------------- TabSTAR + SAE pruning (phase 1 mocked: tiny random TabSTAR, no download) ----------------
 
 @pytest.fixture()

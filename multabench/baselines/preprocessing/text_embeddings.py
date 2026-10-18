@@ -14,7 +14,7 @@ import pandas as pd
 from pandas import DataFrame, Series
 import torch
 
-from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, RELEVANCE_ENCODERS, STACK_ENCODERS, TF_IDF
+from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, PRUNE_ENCODERS, RELEVANCE_ENCODERS, STACK_ENCODERS, TF_IDF
 from multabench.e5.e5_finetune import encode_texts_with_e5, get_vanilla_e5
 
 PCA_COMPONENTS = 30
@@ -167,6 +167,46 @@ def fit_text_encoders_relevance(
     return text_encoders
 
 
+_TUNED_MEMO: Dict[str, Any] = {}
+
+
+def _tuned_key(train_texts, train_y, val_texts, val_y, model_name, kwargs) -> str:
+    """Identity of a TAR fine-tuning run: its exact inputs. Only the latest model is kept (one fold at a time)."""
+    import hashlib
+    h = hashlib.sha1()
+    for part in ("\x1f".join(train_texts), "\x1f".join(val_texts), str(list(train_y)), str(list(val_y)),
+                 model_name, repr(sorted((k, repr(v)) for k, v in kwargs.items()))):
+        h.update(part.encode("utf-8", "replace"))
+    return h.hexdigest()
+
+
+def fit_text_encoders_pruned(x, text_features_list, device, y, is_cls, tuned, kind, e5_train_kwargs, d_output):
+    """Frozen or TAR-tuned E5 per column; PCA-30 replaced by sibling-aware SAE concept pruning + PCA-30."""
+    from multabench.sae import relevance as rel
+    tab = rel.tabular_frame(x, text_features_list)
+    T, codes = rel.target_matrix(y, is_cls)
+    target = codes if is_cls else T[:, 0]
+    sae_device = "cuda" if torch.cuda.is_available() else "cpu"
+    factory = lambda col: rel.GroupShadowSAETransform(tab=tab, target=target, is_cls=is_cls, kind=kind, device=sae_device)
+    if tuned:
+        encs = fit_text_encoders_tuned(x=x, text_features_list=text_features_list, device=device, y=y,
+                                       e5_train_kwargs=e5_train_kwargs or {}, is_cls=is_cls, d_output=d_output,
+                                       transform_factory=factory)
+    else:
+        model, tokenizer = get_vanilla_e5(device, model_name=E5_SMALL_V2)
+        encs = {}
+        for col in text_features_list:
+            texts = x[col].astype(str).fillna("").tolist()
+            emb = encode_texts_with_e5(texts=texts, model=model, tokenizer=tokenizer, device=device, col_name=str(col))
+            encs[col] = E5ColumnEncoder(model=model, tokenizer=tokenizer, col_name=str(col),
+                                        encoder=factory(col).fit(emb, texts=texts))
+    for col, e in encs.items():
+        d = e.encoder.diag
+        print(f"Fitted pruning[{'tar' if tuned else 'frozen'}/{kind}] for {col}: {d['n_removed']}/{d['n_eligible']} "
+              f"concepts removed ({d['n_groups_dropped']}/{d['n_groups']} groups), var removed {d['var_share_removed']}")
+    return encs
+
+
 def fit_text_encoders_tuned(
     x: DataFrame,
     text_features_list: list[str],
@@ -176,6 +216,7 @@ def fit_text_encoders_tuned(
     is_cls: bool,
     d_output: int,
     e5_model_name: str = E5_SMALL_V2,
+    transform_factory=None,
 ) -> Dict[str, E5ColumnEncoder]:
     """Fit a single E5 model for all text columns with passage: col_name: col_val format. Each column gets an E5ColumnEncoder sharing the same tuned model."""
     from transformers import AutoTokenizer
@@ -210,19 +251,34 @@ def fit_text_encoders_tuned(
     train_y_arr = np.array(train_y)
     val_y_arr = np.array(val_y)
 
-    tokenizer = AutoTokenizer.from_pretrained(e5_model_name)
-    print(f"Finetuning single E5 ({e5_model_name}) for {len(text_features_list)} columns with {len(train_texts)} train examples (passage: col_name: col_val)")
-    tuned_model, tuned_tokenizer = finetune_e5_with_lora(
-        train_texts=train_texts,
-        train_y=train_y_arr,
-        val_texts=val_texts,
-        val_y=val_y_arr,
-        device=device,
-        tokenizer=tokenizer,
-        model_name=e5_model_name,
-        **kwargs,
-    )
-    tuned_model.to(device)
+    key = _tuned_key(train_texts, train_y_arr, val_texts, val_y_arr, e5_model_name, kwargs)
+    if _TUNED_MEMO.get("key") == key:   # same fold, another TAR-based arm: reuse the identical fine-tuned model
+        tuned_model, tuned_tokenizer = _TUNED_MEMO["model"]
+        print(f"Reusing the fine-tuned E5 of this fold ({len(train_texts)} train examples)")
+    else:
+        _TUNED_MEMO.clear()
+        tokenizer = AutoTokenizer.from_pretrained(e5_model_name)
+        print(f"Finetuning single E5 ({e5_model_name}) for {len(text_features_list)} columns with {len(train_texts)} train examples (passage: col_name: col_val)")
+        tuned_model, tuned_tokenizer = finetune_e5_with_lora(
+            train_texts=train_texts,
+            train_y=train_y_arr,
+            val_texts=val_texts,
+            val_y=val_y_arr,
+            device=device,
+            tokenizer=tokenizer,
+            model_name=e5_model_name,
+            **kwargs,
+        )
+        tuned_model.to(device)
+        _TUNED_MEMO.update(key=key, model=(tuned_model, tuned_tokenizer))
+    if transform_factory is not None:
+        return {col: E5ColumnEncoder(model=tuned_model, tokenizer=tuned_tokenizer, col_name=str(col),
+                                     encoder=transform_factory(col).fit(
+                                         encode_texts_with_e5(texts=x[col].astype(str).fillna("").tolist(),
+                                                              model=tuned_model, tokenizer=tuned_tokenizer,
+                                                              device=device, col_name=str(col)),
+                                         texts=x[col].astype(str).fillna("").tolist()))
+                for col in text_features_list}
 
     text_encoders: Dict[str, E5ColumnEncoder] = {}
     for col in text_features_list:
@@ -258,6 +314,11 @@ def fit_text_encoders(
             x=x,
             text_features_list=text_features_list,
         )
+    if e5_model_name in PRUNE_ENCODERS:
+        assert y is not None, "concept pruning needs the target"
+        tuned, kind = PRUNE_ENCODERS[e5_model_name]
+        return fit_text_encoders_pruned(x=x, text_features_list=text_features_list, device=device, y=y, is_cls=is_cls,
+                                        tuned=tuned, kind=kind, e5_train_kwargs=e5_train_kwargs, d_output=d_output)
     if e5_model_name in RELEVANCE_ENCODERS:
         assert y is not None, "relevance filtering needs the target"
         return fit_text_encoders_relevance(x=x, text_features_list=text_features_list, device=device, y=y,

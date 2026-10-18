@@ -234,3 +234,120 @@ class PLSTransform:
 
     def transform(self, emb: np.ndarray) -> np.ndarray:
         return self.pls.transform(emb)
+
+
+# ---------------------------------------------------------------- v3: joint (sibling-aware) group-shadow pruning
+GSAE_LATENTS, GSAE_K = 2048, 32
+GROUP_DIST = 0.5        # siblings: average-linkage cosine distance between decoder directions below this
+N_SHADOW_REPEATS = 3
+
+
+def group_siblings(W: np.ndarray, dist_threshold: float = GROUP_DIST) -> np.ndarray:
+    """Cluster latents whose decoder directions point the same way (feature-splitting siblings). Returns labels."""
+    if len(W) < 2:
+        return np.zeros(len(W), dtype=int)
+    from sklearn.cluster import AgglomerativeClustering
+    return AgglomerativeClustering(n_clusters=None, metric="cosine", linkage="average",
+                                   distance_threshold=dist_threshold).fit_predict(W)
+
+
+def group_shadow_importance(tab: DataFrame, z: np.ndarray, groups: np.ndarray, target: np.ndarray, is_cls: bool,
+                            repeats: int = N_SHADOW_REPEATS, seed: int = SEED):
+    """One LightGBM per repeat on [table | all latents | one shadow copy per group]. A group's shadow is its latents
+    with the rows permuted JOINTLY (same permutation for the whole group), so it keeps the group's internal structure
+    and marginal distribution but has no relation to the target, the table or other concepts.
+    Returns (real, shadow): (repeats, n_groups) arrays of total split gain per group."""
+    from lightgbm import LGBMClassifier, LGBMRegressor
+    G = int(groups.max()) + 1 if len(groups) else 0
+    rng = np.random.default_rng(seed)
+    real, shadow = np.zeros((repeats, G)), np.zeros((repeats, G))
+    n_tab, L = tab.shape[1], z.shape[1]
+    for r in range(repeats):
+        sh = np.empty_like(z)
+        for g in range(G):
+            cols = np.where(groups == g)[0]
+            sh[:, cols] = z[np.ix_(rng.permutation(len(z)), cols)]
+        X = pd.concat([tab.reset_index(drop=True),
+                       DataFrame(np.hstack([z, sh]), columns=[f"z{i}" for i in range(L)] + [f"s{i}" for i in range(L)])],
+                      axis=1)
+        params = dict(n_estimators=200, learning_rate=0.05, num_leaves=31, colsample_bytree=0.3, subsample=0.8,
+                      subsample_freq=1, importance_type="gain", verbose=-1, random_state=seed + r)
+        m = (LGBMClassifier(**params) if is_cls else LGBMRegressor(**params)).fit(X, target)
+        imp = m.booster_.feature_importance(importance_type="gain")
+        real[r] = np.bincount(groups, weights=imp[n_tab:n_tab + L], minlength=G)
+        shadow[r] = np.bincount(groups, weights=imp[n_tab + L:], minlength=G)
+    return real, shadow
+
+
+class GroupShadowSAETransform:
+    """Concept pruning judged jointly with sibling concepts and the table (group-wise Boruta).
+
+    Per text column, on the fold's training rows only:
+      1. TopK SAE (2048 latents, k=32) on the column's embeddings (frozen or TAR-tuned), no labels
+      2. eligible latents (active on >= MIN_ACTIVE rows) are clustered into sibling groups by decoder direction
+      3. LightGBM on [table | all eligible latents | a jointly-permuted shadow copy of each group], repeated 3x
+      4. drop a group if its real gain does not beat its own shadow's gain in a majority of repeats
+         (rare latents are never tested and are kept)
+      5. subtractive map-back x~ = x - sum_{dropped} z_i d_i, then PCA-30 (same column count as Frozen/TAR)
+    kind='random' drops the same number of eligible latents chosen at random (same SAE)."""
+
+    def __init__(self, tab: DataFrame, target: np.ndarray, is_cls: bool, kind: str = "sae",
+                 n_latents: int = GSAE_LATENTS, k: int = GSAE_K, device: str = "cpu", seed: int = SEED,
+                 repeats: int = N_SHADOW_REPEATS, dist_threshold: float = GROUP_DIST):
+        self.tab, self.target, self.is_cls, self.kind = tab, target, is_cls, kind
+        self.n_latents, self.k, self.device, self.seed = n_latents, k, str(device), seed
+        self.repeats, self.dist_threshold = repeats, dist_threshold
+        self.diag: Dict = {}
+
+    def fit(self, emb: np.ndarray, texts: Optional[List[str]] = None) -> "GroupShadowSAETransform":
+        assert len(emb) == len(self.tab) == len(self.target), "transform must be fit on the training rows only"
+        L = self.n_latents
+        cfg = SAEConfig(d_in=emb.shape[1], n_latents=L, k=self.k, k_aux=min(L, 512), dead_after=max(len(emb) // 2, 1000))
+        steps_per_epoch = max(1, len(emb) // 256)
+        self.sae = train_sae(emb, cfg, device=self.device, epochs=max(5, min(200, 4000 // steps_per_epoch)),
+                             batch_size=256, lr=1e-3, seed=self.seed, log_every=10**9).cpu()
+        z = encode_numpy(self.sae, emb)
+        self.W_dec = self.sae.W_dec.detach().cpu().numpy()
+        self.b_dec = self.sae.b_dec.detach().cpu().numpy()
+        elig = np.where((z > 0).sum(axis=0) >= MIN_ACTIVE)[0]
+        groups = group_siblings(self.W_dec[elig], self.dist_threshold)
+        real, shadow = group_shadow_importance(self.tab, z[:, elig], groups, self.target, self.is_cls,
+                                               self.repeats, self.seed)
+        wins = (real > shadow).sum(axis=0)
+        drop_groups = np.where(wins <= self.repeats // 2)[0]
+        drop = elig[np.isin(groups, drop_groups)]
+        if self.kind == "random":
+            drop = np.random.default_rng(self.seed).choice(elig, len(drop), replace=False)
+        self.drop = np.sort(drop)
+        x_t = self._filter(emb, z)
+        self.pca = PCA(n_components=min(N_PCA, *x_t.shape), random_state=SEED).fit(x_t)
+        self.n_components = self.pca.n_components_
+        tot = float(((emb - emb.mean(0)) ** 2).sum())
+        removed_part = z[:, self.drop] @ self.W_dec[self.drop]
+        resid = emb - (z @ self.W_dec + self.b_dec)
+        G = int(groups.max()) + 1 if len(groups) else 0
+        sizes = np.bincount(groups, minlength=G)
+        self.diag = {"rule": "group_shadow", "kind": self.kind, "sae": f"{L}/k{self.k}", "n_eligible": int(len(elig)),
+                     "n_groups": G, "n_multi_groups": int((sizes > 1).sum()), "n_groups_dropped": int(len(drop_groups)),
+                     "n_removed": int(len(self.drop)),
+                     "var_share_removed": round(float(((removed_part - removed_part.mean(0)) ** 2).sum()) / tot, 4),
+                     "var_share_sae_error": round(float(((resid - resid.mean(0)) ** 2).sum()) / tot, 4),
+                     "top": self._top(elig, groups, real.mean(0) - shadow.mean(0), z, texts)}
+        return self
+
+    def _top(self, elig, groups, margin, z, texts, n_grp: int = 5, n_txt: int = 3):
+        if texts is None or len(margin) == 0:
+            return []
+        out = []
+        for g in np.argsort(-margin)[:n_grp]:
+            members = elig[groups == g]
+            act = z[:, members].sum(axis=1)
+            out.append({"group": int(g), "latents": [int(i) for i in members[:10]], "gain_margin": round(float(margin[g]), 2),
+                        "examples": [str(texts[j])[:160] for j in np.argsort(-act)[:n_txt]]})
+        return out
+
+    def _filter(self, emb: np.ndarray, z: np.ndarray) -> np.ndarray:
+        return emb - z[:, self.drop] @ self.W_dec[self.drop]
+
+    def transform(self, emb: np.ndarray) -> np.ndarray:
+        return self.pca.transform(self._filter(emb, encode_numpy(self.sae, emb)))
