@@ -13,11 +13,9 @@ set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"
 export MULTABENCH_DYNAMIC_PADDING=1 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK PYTHONUNBUFFERED=1
 
-# the virtualenv must be built on a compute node (the login node's python is different); one task builds it
-(
-  flock 9
-  if [ ! -f .venv/.ok ]; then
-    rm -rf .venv && python3 -m venv .venv && source .venv/bin/activate
+# the environment is built ONCE beforehand (see setup in the instructions); array tasks only use it
+[ -f .venv_full/.ok ] || { echo "missing .venv_full - run the setup srun first"; exit 1; }
+source .venv_full/bin/activate
     pip install -q --upgrade pip
     pip install -q torch lightgbm scikit-learn pandas scipy transformers peft skrub kagglehub python-dotenv "autogluon.core" pytest
     pip uninstall -y -q torchao 2>/dev/null || true
