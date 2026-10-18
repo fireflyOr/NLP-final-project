@@ -220,6 +220,21 @@ def test_stack_oof_differs_from_in_sample(fake_e5):
     assert not np.allclose(oof, ens)
 
 
+def test_stack_keeps_duplicate_texts_in_one_fold():
+    from multabench.stack.text_stack import StackEncoder
+    x, y = _toy_task("mul", n=600)
+    x = pd.concat([x, x.iloc[:200]], ignore_index=True)          # 200 exact text duplicates
+    y = pd.concat([y, y.iloc[:200]], ignore_index=True)
+    st = StackEncoder(kind="frozen", text_cols=["review", "title"], is_cls=True, device=torch.device("cpu"), n_splits=5)
+    yy = st._prepare_target(y)
+    groups = np.array(["|".join(r) for r in x[["review", "title"]].astype(str).itertuples(index=False)])
+    for tr, ho in st._splitter(yy, groups):
+        assert not set(groups[tr]) & set(groups[ho])
+    st.task = "reg"
+    for tr, ho in st._splitter(yy.astype(float), groups):
+        assert not set(groups[tr]) & set(groups[ho])
+
+
 # ---------------- target-relevant concept filtering ----------------
 
 def _atom_data(n=6000, d=256, n_atoms=400, seed=0):

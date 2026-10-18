@@ -142,10 +142,18 @@ class StackEncoder:
         self.y_mean, self.y_std = float(np.nanmean(y)), float(np.nanstd(y) or 1.0)
         return (y - self.y_mean) / self.y_std
 
-    def _splitter(self, yy: np.ndarray):
-        if self.task != "reg" and np.bincount(yy.astype(int)).min() >= self.n_splits:
-            return StratifiedKFold(n_splits=self.n_splits, shuffle=True, random_state=SEED).split(yy, yy)
-        return KFold(n_splits=self.n_splits, shuffle=True, random_state=SEED).split(yy)
+    def _splitter(self, yy: np.ndarray, groups: np.ndarray):
+        """Cross-fitting folds that keep rows with identical text together. Without this, a duplicated text
+        (e.g. the same track listed under several genres) lets the 'out-of-fold' model see the row's twin, so the
+        OOF feature is over-confident on training rows and LightGBM over-trusts it."""
+        from sklearn.model_selection import StratifiedGroupKFold
+        n_groups = len(np.unique(groups))
+        if self.task != "reg" and np.bincount(yy.astype(int)).min() >= self.n_splits and n_groups >= self.n_splits:
+            return StratifiedGroupKFold(n_splits=self.n_splits, shuffle=True, random_state=SEED).split(yy, yy, groups)
+        uniq, inv = np.unique(groups, return_inverse=True)
+        fold_of_group = np.random.default_rng(SEED).permutation(len(uniq)) % self.n_splits
+        fold = fold_of_group[inv]
+        return [(np.where(fold != k)[0], np.where(fold == k)[0]) for k in range(self.n_splits)]
 
     # ---------------- frozen: MLP on concatenated E5 embeddings ----------------
     def _frozen_features(self, x: DataFrame) -> np.ndarray:
@@ -226,7 +234,12 @@ class StackEncoder:
         x, yy = x.loc[keep], yy[keep]
         feats = self._frozen_features(x) if self.kind == "frozen" else None
         oof = np.zeros((len(x), self.n_components), dtype=np.float32)
-        for k, (tr, ho) in enumerate(self._splitter(yy)):
+        groups = np.array([hashlib.sha1("\x1f".join(r).encode("utf-8", "replace")).hexdigest()
+                           for r in x[self.text_cols].astype(str).itertuples(index=False)])
+        self.n_duplicate_rows = int(len(groups) - len(np.unique(groups)))
+        if self.n_duplicate_rows:
+            print(f"🧱 text stack: {self.n_duplicate_rows} training rows duplicate another row's text; kept in one fold")
+        for k, (tr, ho) in enumerate(self._splitter(yy, groups)):
             print(f"🧱 text stack ({self.kind}): fitting split {k + 1}/{self.n_splits} on {len(tr)} rows")
             if self.kind == "frozen":
                 m = self._fit_frozen(feats[tr], yy[tr], seed=k)
