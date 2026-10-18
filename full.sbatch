@@ -16,13 +16,6 @@ export MULTABENCH_DYNAMIC_PADDING=1 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK PYTHONU
 # the environment is built ONCE beforehand (see setup in the instructions); array tasks only use it
 [ -f .venv_full/.ok ] || { echo "missing .venv_full - run the setup srun first"; exit 1; }
 source .venv_full/bin/activate
-    pip install -q --upgrade pip
-    pip install -q torch lightgbm scikit-learn pandas scipy transformers peft skrub kagglehub python-dotenv "autogluon.core" pytest
-    pip uninstall -y -q torchao 2>/dev/null || true
-    touch .venv/.ok
-  fi
-) 9>.venv.lock
-source .venv/bin/activate
 
 DS=(BIN_TEXT_FAKE_JOB_POSTING BIN_TEXT_JIGSAW_TOXICITY BIN_TEXT_KICKSTARTER_FUNDING MUL_TEXT_DATA_SCIENTIST_SALARY
     MUL_TEXT_MICHELIN_RESTAURANTS MUL_TEXT_PRODUCT_SENTIMENT MUL_TEXT_SPOTIFY_GENRES MUL_TEXT_US_ACCIDENTS
