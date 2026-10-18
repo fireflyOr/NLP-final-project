@@ -351,3 +351,144 @@ class GroupShadowSAETransform:
 
     def transform(self, emb: np.ndarray) -> np.ndarray:
         return self.pca.transform(self._filter(emb, encode_numpy(self.sae, emb)))
+
+
+# ---------------------------------------------------------------- v4: held-out, harm-ranked, validated amount
+CV_FRACTIONS = (0.0, 0.1, 0.25, 0.5, 0.75)
+CV_TOL = 0.001          # a larger removal must lower the held-out loss by more than 0.1% to be preferred
+
+
+def _lgbm(is_cls: bool, seed: int, **kw):
+    from lightgbm import LGBMClassifier, LGBMRegressor
+    params = dict(n_estimators=200, learning_rate=0.05, num_leaves=31, subsample=0.8, subsample_freq=1,
+                  verbose=-1, random_state=seed, **kw)
+    return LGBMClassifier(**params) if is_cls else LGBMRegressor(**params)
+
+
+def _loss(model, X, target, is_cls: bool) -> float:
+    """Held-out log loss (classes unseen in training get probability 1e-6) or MSE."""
+    if is_cls:
+        p = np.clip(model.predict_proba(X), 1e-6, 1.0)
+        col = {c: j for j, c in enumerate(model.classes_)}
+        pt = np.array([p[i, col[t]] if t in col else 1e-6 for i, t in enumerate(target)])
+        return float(-np.mean(np.log(pt)))
+    return float(np.mean((model.predict(X) - target) ** 2))
+
+
+def _tab_numeric(tab: DataFrame):
+    """Table as a float matrix; category columns become integer codes (NaN for missing), returned as indices."""
+    cols, cat_idx = [], []
+    for j, c in enumerate(tab.columns):
+        if isinstance(tab[c].dtype, pd.CategoricalDtype):
+            codes = tab[c].cat.codes.to_numpy().astype(float)
+            codes[codes < 0] = np.nan
+            cols.append(codes)
+            cat_idx.append(j)
+        else:
+            cols.append(tab[c].to_numpy(dtype=float))
+    return (np.column_stack(cols) if cols else np.zeros((len(tab), 0))), cat_idx
+
+
+class HeldOutPruneSAETransform:
+    """Concept pruning decided on rows the fine-tuned encoder never trained on.
+
+    `val_mask` marks TAR's own early-stopping rows: TAR's LoRA never took a gradient step on them, so concept
+    activations there are not memorized. Per text column:
+      1. TopK SAE (2048, k=32) on all training-fold embeddings (unsupervised)
+      2. sibling groups of eligible latents (as in v3)
+      3. LightGBM on fit rows over [table | all eligible latents]; group importance = rise in held-out loss when
+         the group's columns are permuted jointly on the held-out rows (joint: all other concepts stay in place)
+      4. harm ranking: a group is harmful when it takes up variance (which PCA-30 spends components on) but
+         carries no held-out signal; score = variance share / max(importance, eps), largest first
+      5. amount: remove the top {0, 10, 25, 50, 75}% of eligible concepts by that ranking; for each, PCA-30 on fit
+         rows -> LightGBM [table | PCA] -> held-out loss; pick the lowest (0% = plain TAR, so it can opt out)
+      6. subtractive map-back of the chosen set, PCA-30 on all training rows
+    Test rows are never used."""
+
+    def __init__(self, tab: DataFrame, target: np.ndarray, is_cls: bool, val_mask: np.ndarray,
+                 n_latents: int = GSAE_LATENTS, k: int = GSAE_K, device: str = "cpu", seed: int = SEED,
+                 fractions=CV_FRACTIONS, dist_threshold: float = GROUP_DIST, n_perm: int = 2):
+        self.tab, self.target, self.is_cls = tab.reset_index(drop=True), np.asarray(target), is_cls
+        self.val = np.asarray(val_mask, dtype=bool)
+        self.n_latents, self.k, self.device, self.seed = n_latents, k, str(device), seed
+        self.fractions, self.dist_threshold, self.n_perm = fractions, dist_threshold, n_perm
+        self.diag: Dict = {}
+
+    def fit(self, emb: np.ndarray, texts: Optional[List[str]] = None) -> "HeldOutPruneSAETransform":
+        assert len(emb) == len(self.tab) == len(self.target) == len(self.val)
+        fit_r, val_r = ~self.val, self.val
+        L = self.n_latents
+        cfg = SAEConfig(d_in=emb.shape[1], n_latents=L, k=self.k, k_aux=min(L, 512), dead_after=max(len(emb) // 2, 1000))
+        steps_per_epoch = max(1, len(emb) // 256)
+        self.sae = train_sae(emb, cfg, device=self.device, epochs=max(5, min(200, 4000 // steps_per_epoch)),
+                             batch_size=256, lr=1e-3, seed=self.seed, log_every=10**9).cpu()
+        z = encode_numpy(self.sae, emb)
+        self.W_dec = self.sae.W_dec.detach().cpu().numpy()
+        self.b_dec = self.sae.b_dec.detach().cpu().numpy()
+        elig = np.where((z[fit_r] > 0).sum(axis=0) >= MIN_ACTIVE)[0]
+        groups = group_siblings(self.W_dec[elig], self.dist_threshold)
+        G = int(groups.max()) + 1 if len(groups) else 0
+
+        # 3. joint held-out permutation importance per group (numpy for speed; categorical table columns as codes)
+        tab_np, cat_idx = _tab_numeric(self.tab)
+        X = np.hstack([tab_np, z[:, elig]])
+        m = _lgbm(self.is_cls, self.seed, colsample_bytree=0.3).fit(X[fit_r], self.target[fit_r],
+                                                                     categorical_feature=cat_idx or "auto")
+        Xv = X[val_r]
+        base = _loss(m, Xv, self.target[val_r], self.is_cls)
+        rng = np.random.default_rng(self.seed)
+        imp = np.zeros(G)
+        n_tab = tab_np.shape[1]
+        for g in range(G):
+            cols_g = n_tab + np.where(groups == g)[0]
+            if not Xv[:, cols_g].any():
+                continue                                  # never active on held-out rows: no evidence either way
+            for _ in range(self.n_perm):
+                Xp = Xv.copy()
+                Xp[:, cols_g] = Xv[rng.permutation(len(Xv))][:, cols_g]
+                imp[g] += (_loss(m, Xp, self.target[val_r], self.is_cls) - base) / self.n_perm
+
+        # 4. harm ranking: variance taken per unit of held-out signal
+        # decoder rows are unit-norm, so the variance contributed by latent i is just var(z_i)
+        tot = float(((emb[fit_r] - emb[fit_r].mean(0)) ** 2).sum())
+        contrib_var = z[fit_r][:, elig].var(axis=0) * fit_r.sum() / tot
+        gvar = np.bincount(groups, weights=contrib_var, minlength=G)
+        pos = imp[imp > 0]
+        eps = 1e-3 * (np.median(pos) if len(pos) else 1e-6)
+        harm = gvar / (np.maximum(imp, 0) + eps)
+        order = np.argsort(-harm)                          # most harmful group first
+        cum = np.cumsum(np.bincount(groups, minlength=G)[order])
+
+        # 5. choose the amount on held-out rows
+        results = []
+        for f in self.fractions:
+            n_groups = int(np.searchsorted(cum, f * len(elig), side="right")) if f > 0 else 0
+            drop = np.sort(elig[np.isin(groups, order[:n_groups])])
+            x_t = emb - z[:, drop] @ self.W_dec[drop]
+            pca = PCA(n_components=min(N_PCA, x_t.shape[1]), random_state=SEED).fit(x_t[fit_r])
+            P = np.hstack([tab_np, pca.transform(x_t)])
+            mm = _lgbm(self.is_cls, self.seed).fit(P[fit_r], self.target[fit_r], categorical_feature=cat_idx or "auto")
+            results.append((f, _loss(mm, P[val_r], self.target[val_r], self.is_cls), drop))
+        loss0 = results[0][1]
+        best = results[0]
+        for f, l, d in results[1:]:
+            if l < min(best[1], loss0 * (1 - CV_TOL)):
+                best = (f, l, d)
+        self.drop = best[2]
+        x_t = self._filter(emb, z)
+        self.pca = PCA(n_components=min(N_PCA, *x_t.shape), random_state=SEED).fit(x_t)
+        self.n_components = self.pca.n_components_
+        removed = z[:, self.drop] @ self.W_dec[self.drop]
+        self.diag = {"rule": "heldout_cv", "sae": f"{L}/k{self.k}", "n_eligible": int(len(elig)), "n_groups": G,
+                     "n_val_rows": int(val_r.sum()), "chosen_fraction": best[0], "n_removed": int(len(self.drop)),
+                     "val_loss": {str(f): round(l, 5) for f, l, _ in results},
+                     "frac_groups_no_signal": round(float((imp <= 0).mean()), 3) if G else None,
+                     "var_share_removed": round(float(((removed - removed.mean(0)) ** 2).sum())
+                                                / float(((emb - emb.mean(0)) ** 2).sum()), 4)}
+        return self
+
+    def _filter(self, emb: np.ndarray, z: np.ndarray) -> np.ndarray:
+        return emb - z[:, self.drop] @ self.W_dec[self.drop]
+
+    def transform(self, emb: np.ndarray) -> np.ndarray:
+        return self.pca.transform(self._filter(emb, encode_numpy(self.sae, emb)))

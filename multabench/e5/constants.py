@@ -52,7 +52,8 @@ E5_SMALL_RELSAE2_RAND = "e5-small-v2|relsae2-rand"
 E5_SMALL_GSAE = "e5-small-v2|gsae"                # frozen E5 -> SAE -> joint pruning -> PCA-30
 E5_SMALL_TAR_GSAE = "e5-small-v2|tar-gsae"        # TAR-tuned E5 -> SAE -> joint pruning -> PCA-30   (main)
 E5_SMALL_TAR_GSAE_RAND = "e5-small-v2|tar-gsae-rand"  # control: same number of random concepts removed
-PRUNE_ENCODERS = {E5_SMALL_GSAE: (False, "sae"), E5_SMALL_TAR_GSAE: (True, "sae"), E5_SMALL_TAR_GSAE_RAND: (True, "random")}
+E5_SMALL_TAR_GSAE_CV = "e5-small-v2|tar-gsae-cv"    # v4: held-out importance, harm ranking, validated amount
+PRUNE_ENCODERS = {E5_SMALL_TAR_GSAE_CV: (True, "heldout"), E5_SMALL_GSAE: (False, "sae"), E5_SMALL_TAR_GSAE: (True, "sae"), E5_SMALL_TAR_GSAE_RAND: (True, "random")}
 
 RELEVANCE_ENCODERS = {E5_SMALL_RELSAE2: "v2_cond", E5_SMALL_RELSAE2_UNI: "v2_uni", E5_SMALL_RELSAE2_RAND: "v2_rand",E5_SMALL_RELSAE: "sae_cond", E5_SMALL_RELSAE_ADD: "sae_cond_add", E5_SMALL_RELSAE_UNI: "sae_uni", E5_SMALL_RELSAE_RAND: "sae_rand",
                       E5_SMALL_RELDIM: "dim_cond", E5_SMALL_PLS: "pls"}
@@ -85,6 +86,7 @@ TEXT_ENCODERS = {
     "e5-small-pls": Encoder(encoder_name=E5_SMALL_PLS, tune_encoder=True),
     "e5-small-gsae": Encoder(encoder_name=E5_SMALL_GSAE, tune_encoder=True),
     "e5-small-tar-gsae": Encoder(encoder_name=E5_SMALL_TAR_GSAE, tune_encoder=True),
+    "e5-small-tar-gsae-cv": Encoder(encoder_name=E5_SMALL_TAR_GSAE_CV, tune_encoder=True),
     "e5-small-tar-gsae-rand": Encoder(encoder_name=E5_SMALL_TAR_GSAE_RAND, tune_encoder=True),
 }
 

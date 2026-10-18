@@ -330,6 +330,24 @@ def test_group_siblings_merges_near_duplicates():
     assert all(labels[i] == labels[i + 5] for i in range(5)) and len(set(labels)) == 5
 
 
+def test_heldout_prune_keeps_relevant_and_can_opt_out():
+    from multabench.sae import relevance as rel
+    emb, atoms, tab, y = _atom_data(n=4000)
+    x = pd.DataFrame({"tab": tab, "txt": ["t"] * len(y)})
+    T, codes = rel.target_matrix(y, True)
+    val = np.zeros(len(y), dtype=bool); val[np.random.default_rng(0).choice(len(y), 600, replace=False)] = True
+    t = rel.HeldOutPruneSAETransform(rel.tabular_frame(x, ["txt"]), codes, True, val, n_latents=1024, k=16).fit(emb)
+    kept = np.setdiff1d(np.arange(t.n_latents), t.drop)
+    D = t.W_dec[kept] / np.linalg.norm(t.W_dec[kept], axis=1, keepdims=True)
+    assert np.abs(D @ atoms[0]).max() > 0.8, t.diag                 # the weak relevant concept is never removed
+    assert set(t.diag["val_loss"]) == {"0.0", "0.1", "0.25", "0.5", "0.75"} and t.n_components == 30
+    # the chosen amount is the held-out minimum (with the tolerance in favour of removing less)
+    losses = {float(k): v for k, v in t.diag["val_loss"].items()}
+    assert losses[t.diag["chosen_fraction"]] <= losses[0.0]
+    # here most variance is irrelevant atoms, so removing it helps on held-out rows
+    assert t.diag["chosen_fraction"] > 0 and losses[t.diag["chosen_fraction"]] < 0.95 * losses[0.0]
+
+
 @pytest.fixture()
 def fake_tar(monkeypatch):
     """LoRA fine-tuning replaced by a counter; the 'tuned' model embeds like the fake frozen one."""
@@ -351,13 +369,16 @@ def test_tar_pruning_shares_one_finetune(fake_e5, fake_tar, task):
     x, y = _toy_task(task)
     problem = {"bin": SupervisedTask.BINARY, "mul": SupervisedTask.MULTICLASS, "reg": SupervisedTask.REGRESSION}[task]
     removed = {}
-    for enc in ("e5-small-tar", "e5-small-tar-gsae", "e5-small-tar-gsae-rand", "e5-small-gsae"):
+    for enc in ("e5-small-tar", "e5-small-tar-gsae", "e5-small-tar-gsae-rand", "e5-small-gsae", "e5-small-tar-gsae-cv"):
         model = LightGBM(problem_type=problem, device=torch.device("cpu"), verbose=False, tune_e5=True,
                          e5_train_kwargs={}, e5_model_name=TEXT_ENCODERS[enc].encoder_name)
         model.fit(x.iloc[:1000], y.iloc[:1000])
         for col in ("review", "title"):
             assert model.text_transformers[col].n_components == 30
-        if enc != "e5-small-tar":
+        if enc == "e5-small-tar-gsae-cv":
+            d = model.text_transformers["review"].encoder.diag
+            assert 0 < d["n_val_rows"] < 1000 and d["chosen_fraction"] in (0.0, 0.1, 0.25, 0.5, 0.75)
+        elif enc != "e5-small-tar":
             removed[enc] = {c: model.text_transformers[c].encoder.diag["n_removed"] for c in ("review", "title")}
         pred = model.predict(x.iloc[1000:])
         assert np.isfinite(pred).all() and len(pred) == 500

@@ -187,7 +187,10 @@ def fit_text_encoders_pruned(x, text_features_list, device, y, is_cls, tuned, ki
     T, codes = rel.target_matrix(y, is_cls)
     target = codes if is_cls else T[:, 0]
     sae_device = "cuda" if torch.cuda.is_available() else "cpu"
-    factory = lambda col: rel.GroupShadowSAETransform(tab=tab, target=target, is_cls=is_cls, kind=kind, device=sae_device)
+    def factory(col, val_mask=None):
+        if kind == "heldout":
+            return rel.HeldOutPruneSAETransform(tab=tab, target=target, is_cls=is_cls, val_mask=val_mask, device=sae_device)
+        return rel.GroupShadowSAETransform(tab=tab, target=target, is_cls=is_cls, kind=kind, device=sae_device)
     if tuned:
         encs = fit_text_encoders_tuned(x=x, text_features_list=text_features_list, device=device, y=y,
                                        e5_train_kwargs=e5_train_kwargs or {}, is_cls=is_cls, d_output=d_output,
@@ -202,6 +205,10 @@ def fit_text_encoders_pruned(x, text_features_list, device, y, is_cls, tuned, ki
                                         encoder=factory(col).fit(emb, texts=texts))
     for col, e in encs.items():
         d = e.encoder.diag
+        if kind == "heldout":
+            print(f"Fitted pruning[tar/heldout] for {col}: chose {d['chosen_fraction']:.0%} -> {d['n_removed']}/"
+                  f"{d['n_eligible']} concepts removed, var removed {d['var_share_removed']}, val loss {d['val_loss']}")
+            continue
         print(f"Fitted pruning[{'tar' if tuned else 'frozen'}/{kind}] for {col}: {d['n_removed']}/{d['n_eligible']} "
               f"concepts removed ({d['n_groups_dropped']}/{d['n_groups']} groups), var removed {d['var_share_removed']}")
     return encs
@@ -272,8 +279,9 @@ def fit_text_encoders_tuned(
         tuned_model.to(device)
         _TUNED_MEMO.update(key=key, model=(tuned_model, tuned_tokenizer))
     if transform_factory is not None:
+        val_mask = x.index.isin(x_val.index)   # TAR's early-stopping rows: never trained on
         return {col: E5ColumnEncoder(model=tuned_model, tokenizer=tuned_tokenizer, col_name=str(col),
-                                     encoder=transform_factory(col).fit(
+                                     encoder=transform_factory(col, val_mask).fit(
                                          encode_texts_with_e5(texts=x[col].astype(str).fillna("").tolist(),
                                                               model=tuned_model, tokenizer=tuned_tokenizer,
                                                               device=device, col_name=str(col)),
