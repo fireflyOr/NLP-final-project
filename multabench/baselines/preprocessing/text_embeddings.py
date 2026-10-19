@@ -183,6 +183,9 @@ def _tuned_key(train_texts, train_y, val_texts, val_y, model_name, kwargs) -> st
 def fit_text_encoders_pruned(x, text_features_list, device, y, is_cls, tuned, kind, e5_train_kwargs, d_output):
     """Frozen or TAR-tuned E5 per column; PCA-30 replaced by sibling-aware SAE concept pruning + PCA-30."""
     from multabench.sae import relevance as rel
+    if kind == "xfit":
+        return fit_text_encoders_xfit(x=x, text_features_list=text_features_list, device=device, y=y, is_cls=is_cls,
+                                      e5_train_kwargs=e5_train_kwargs, d_output=d_output)
     tab = rel.tabular_frame(x, text_features_list)
     T, codes = rel.target_matrix(y, is_cls)
     target = codes if is_cls else T[:, 0]
@@ -214,6 +217,70 @@ def fit_text_encoders_pruned(x, text_features_list, device, y, is_cls, tuned, ki
     return encs
 
 
+def fit_text_encoders_xfit(x, text_features_list, device, y, is_cls, e5_train_kwargs, d_output, n_inner: int = 3):
+    """TAR + SAE pruning whose removal amount is chosen by nested cross-fitting, so every judgment is made on rows
+    the judging encoder never saw.
+
+    Inner loop (training rows only), for each of n_inner splits (A = fit part, B = held-out part):
+      1. fine-tune TAR on A only (same recipe as Joint TAR)
+      2. per text column: SAE + harm ranking on A's embeddings (variance taken / joint shadow-corrected gain)
+      3. for each removal fraction f: drop the top-f concepts, PCA-30 per column (fit on A)
+         -> LightGBM on [table | all text columns] fit on A -> loss on B   (the same model shape as the final one)
+    The fraction with the lowest total held-out loss is chosen (0% = plain TAR; a larger removal must win by 0.1%).
+    Outer step: the fold's usual TAR (shared with the e5-small-tar arm) -> SAE + ranking on all training rows ->
+    drop the chosen fraction -> PCA-30. Test rows are never used."""
+    from sklearn.model_selection import KFold, StratifiedKFold
+    from multabench.sae import relevance as rel
+    tab = rel.tabular_frame(x, text_features_list)
+    T, codes = rel.target_matrix(y, is_cls)
+    target = codes if is_cls else T[:, 0]
+    tab_np, cat_idx = rel._tab_numeric(tab)
+    sae_device = "cuda" if torch.cuda.is_available() else "cpu"
+    fractions = rel.CV_FRACTIONS
+    strat = is_cls and np.bincount(codes).min() >= n_inner
+    splits = (StratifiedKFold(n_inner, shuffle=True, random_state=SEED).split(tab_np, codes) if strat
+              else KFold(n_inner, shuffle=True, random_state=SEED).split(tab_np))
+    losses = {f: 0.0 for f in fractions}
+    for k, (tr, ho) in enumerate(splits):
+        print(f"✂️ cross-fit {k + 1}/{n_inner}: TAR on {len(tr)} rows, judging on {len(ho)} unseen rows")
+        model_k, tok_k = fit_text_encoders_tuned(x=x.iloc[tr], text_features_list=text_features_list, device=device,
+                                                 y=y.iloc[tr], e5_train_kwargs=e5_train_kwargs or {}, is_cls=is_cls,
+                                                 d_output=d_output, use_memo=False, return_model=True)
+        parts_tr = {f: [tab_np[tr]] for f in fractions}
+        parts_ho = {f: [tab_np[ho]] for f in fractions}
+        for col in text_features_list:
+            texts = x[col].astype(str).fillna("").tolist()
+            emb = encode_texts_with_e5(texts=texts, model=model_k, tokenizer=tok_k, device=device, col_name=str(col))
+            pr = rel.RankedSAEPruner(tab.iloc[tr], target[tr], is_cls, device=sae_device).fit(emb[tr])
+            for f in fractions:
+                a, b = pr.filtered(emb[tr], f), pr.filtered(emb[ho], f)
+                pca = PCA(n_components=min(PCA_COMPONENTS, a.shape[1]), random_state=SEED).fit(a)
+                parts_tr[f].append(pca.transform(a))
+                parts_ho[f].append(pca.transform(b))
+        for f in fractions:
+            m = rel._lgbm(is_cls, SEED).fit(np.hstack(parts_tr[f]), target[tr], categorical_feature=cat_idx or "auto")
+            losses[f] += rel._loss(m, np.hstack(parts_ho[f]), target[ho], is_cls) * len(ho) / len(x)
+        del model_k
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+    best = 0.0
+    for f in fractions[1:]:
+        if losses[f] < min(losses[best], losses[0.0] * (1 - rel.CV_TOL)):
+            best = f
+    loss_str = {str(f): round(v, 5) for f, v in losses.items()}
+    print(f"✂️ cross-fitted held-out loss per removal fraction: {loss_str} -> chose {best:.0%}")
+    factory = lambda col, val_mask=None: rel.FixedFractionTransform(
+        rel.RankedSAEPruner(tab, target, is_cls, device=sae_device), best, inner_losses=loss_str)
+    encs = fit_text_encoders_tuned(x=x, text_features_list=text_features_list, device=device, y=y,
+                                   e5_train_kwargs=e5_train_kwargs or {}, is_cls=is_cls, d_output=d_output,
+                                   transform_factory=factory)
+    for col, e in encs.items():
+        d = e.encoder.diag
+        print(f"Fitted pruning[tar/xfit] for {col}: {best:.0%} -> {d['n_removed']}/{d['n_eligible']} concepts removed, "
+              f"var removed {d['var_share_removed']}")
+    return encs
+
+
 def fit_text_encoders_tuned(
     x: DataFrame,
     text_features_list: list[str],
@@ -224,7 +291,9 @@ def fit_text_encoders_tuned(
     d_output: int,
     e5_model_name: str = E5_SMALL_V2,
     transform_factory=None,
-) -> Dict[str, E5ColumnEncoder]:
+    use_memo: bool = True,
+    return_model: bool = False,
+):
     """Fit a single E5 model for all text columns with passage: col_name: col_val format. Each column gets an E5ColumnEncoder sharing the same tuned model."""
     from transformers import AutoTokenizer
 
@@ -259,11 +328,12 @@ def fit_text_encoders_tuned(
     val_y_arr = np.array(val_y)
 
     key = _tuned_key(train_texts, train_y_arr, val_texts, val_y_arr, e5_model_name, kwargs)
-    if _TUNED_MEMO.get("key") == key:   # same fold, another TAR-based arm: reuse the identical fine-tuned model
+    if use_memo and _TUNED_MEMO.get("key") == key:   # same fold, another TAR-based arm: reuse the identical fine-tuned model
         tuned_model, tuned_tokenizer = _TUNED_MEMO["model"]
         print(f"Reusing the fine-tuned E5 of this fold ({len(train_texts)} train examples)")
     else:
-        _TUNED_MEMO.clear()
+        if use_memo:
+            _TUNED_MEMO.clear()
         tokenizer = AutoTokenizer.from_pretrained(e5_model_name)
         print(f"Finetuning single E5 ({e5_model_name}) for {len(text_features_list)} columns with {len(train_texts)} train examples (passage: col_name: col_val)")
         tuned_model, tuned_tokenizer = finetune_e5_with_lora(
@@ -277,7 +347,10 @@ def fit_text_encoders_tuned(
             **kwargs,
         )
         tuned_model.to(device)
-        _TUNED_MEMO.update(key=key, model=(tuned_model, tuned_tokenizer))
+        if use_memo:
+            _TUNED_MEMO.update(key=key, model=(tuned_model, tuned_tokenizer))
+    if return_model:
+        return tuned_model, tuned_tokenizer
     if transform_factory is not None:
         val_mask = x.index.isin(x_val.index)   # TAR's early-stopping rows: never trained on
         return {col: E5ColumnEncoder(model=tuned_model, tokenizer=tuned_tokenizer, col_name=str(col),

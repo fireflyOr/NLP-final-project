@@ -386,6 +386,43 @@ def test_tar_pruning_shares_one_finetune(fake_e5, fake_tar, task):
     assert removed["e5-small-tar-gsae"] == removed["e5-small-tar-gsae-rand"]
 
 
+@pytest.mark.parametrize("task", ["bin", "reg"])
+def test_xfit_inner_tar_never_sees_judged_rows(fake_e5, monkeypatch, task):
+    import multabench.e5.e5_finetune as ef
+    import multabench.baselines.preprocessing.text_embeddings as te
+    import transformers
+    from multabench.baselines.lgbm import LightGBM
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.e5.constants import TEXT_ENCODERS
+    seen = []
+    def finetune(**kw):
+        seen.append(set(kw["train_texts"]) | set(kw["val_texts"]))
+        return torch.nn.Identity(), None
+    monkeypatch.setattr(ef, "finetune_e5_with_lora", finetune)
+    monkeypatch.setattr(transformers.AutoTokenizer, "from_pretrained", staticmethod(lambda *a, **k: None))
+    te._TUNED_MEMO.clear()
+    judged = []
+    real_loss = __import__("multabench.sae.relevance", fromlist=["_loss"])._loss
+    x, y = _toy_task(task)
+    x["review"] = [f"{r} row{i}" for i, r in enumerate(x["review"])]          # unique texts per row
+    problem = SupervisedTask.BINARY if task == "bin" else SupervisedTask.REGRESSION
+    model = LightGBM(problem_type=problem, device=torch.device("cpu"), verbose=False, tune_e5=True,
+                     e5_train_kwargs={}, e5_model_name=TEXT_ENCODERS["e5-small-tar-gsae-xf"].encoder_name)
+    model.fit(x.iloc[:1000], y.iloc[:1000])
+    assert len(seen) == 4                                           # 3 inner TARs + the fold's main TAR
+    main = seen[-1]
+    for inner in seen[:3]:
+        assert len(inner) < 0.8 * len(main)                         # each inner TAR saw only ~2/3 of the rows
+    # every training review text was held out from exactly one inner TAR
+    reviews = {t for t in main if t.startswith("review:")}
+    missed = [sum(t not in inner for inner in seen[:3]) for t in reviews]
+    assert set(missed) == {1}
+    d = model.text_transformers["review"].encoder.diag
+    assert d["rule"] == "xfit" and d["chosen_fraction"] in (0.0, 0.1, 0.25, 0.5, 0.75) and len(d["inner_losses"]) == 5
+    pred = model.predict(x.iloc[1000:])
+    assert np.isfinite(pred).all() and len(pred) == 500
+
+
 # ---------------- TabSTAR + SAE pruning (phase 1 mocked: tiny random TabSTAR, no download) ----------------
 
 @pytest.fixture()

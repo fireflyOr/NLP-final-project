@@ -492,3 +492,72 @@ class HeldOutPruneSAETransform:
 
     def transform(self, emb: np.ndarray) -> np.ndarray:
         return self.pca.transform(self._filter(emb, encode_numpy(self.sae, emb)))
+
+
+# ---------------------------------------------------------------- v5: nested cross-fitted amount (see fit_text_encoders_xfit)
+class RankedSAEPruner:
+    """SAE on one column's training embeddings + a removal order (most harmful first). harm = variance a concept
+    group takes / its joint, shadow-corrected LightGBM gain (one LightGBM with the table, all concepts, and a
+    jointly-permuted shadow of every group)."""
+
+    def __init__(self, tab: DataFrame, target: np.ndarray, is_cls: bool, device: str = "cpu", seed: int = SEED,
+                 n_latents: int = GSAE_LATENTS, k: int = GSAE_K, dist_threshold: float = GROUP_DIST):
+        self.tab, self.target, self.is_cls = tab.reset_index(drop=True), np.asarray(target), is_cls
+        self.device, self.seed, self.n_latents, self.k, self.dist_threshold = str(device), seed, n_latents, k, dist_threshold
+
+    def fit(self, emb: np.ndarray) -> "RankedSAEPruner":
+        assert len(emb) == len(self.tab) == len(self.target)
+        L = self.n_latents
+        cfg = SAEConfig(d_in=emb.shape[1], n_latents=L, k=self.k, k_aux=min(L, 512), dead_after=max(len(emb) // 2, 1000))
+        steps_per_epoch = max(1, len(emb) // 256)
+        self.sae = train_sae(emb, cfg, device=self.device, epochs=max(5, min(200, 4000 // steps_per_epoch)),
+                             batch_size=256, lr=1e-3, seed=self.seed, log_every=10**9).cpu()
+        z = encode_numpy(self.sae, emb)
+        self.W_dec = self.sae.W_dec.detach().cpu().numpy()
+        self.elig = np.where((z > 0).sum(axis=0) >= MIN_ACTIVE)[0]
+        self.groups = group_siblings(self.W_dec[self.elig], self.dist_threshold)
+        G = int(self.groups.max()) + 1 if len(self.groups) else 0
+        real, shadow = group_shadow_importance(self.tab, z[:, self.elig], self.groups, self.target, self.is_cls, repeats=1,
+                                               seed=self.seed)
+        margin = (real - shadow).mean(axis=0)
+        gvar = np.bincount(self.groups, weights=z[:, self.elig].var(axis=0), minlength=G)
+        pos = margin[margin > 0]
+        eps = 1e-3 * (np.median(pos) if len(pos) else 1.0)
+        self.order = np.argsort(-(gvar / (np.maximum(margin, 0) + eps)))
+        self.cum = np.cumsum(np.bincount(self.groups, minlength=G)[self.order])
+        self.total_var = float(((emb - emb.mean(0)) ** 2).sum())
+        return self
+
+    def drop_for(self, fraction: float) -> np.ndarray:
+        if fraction <= 0 or len(self.elig) == 0:
+            return np.array([], dtype=int)
+        n_groups = int(np.searchsorted(self.cum, fraction * len(self.elig), side="right"))
+        return np.sort(self.elig[np.isin(self.groups, self.order[:n_groups])])
+
+    def filtered(self, emb: np.ndarray, fraction: float) -> np.ndarray:
+        drop = self.drop_for(fraction)
+        if len(drop) == 0:
+            return emb
+        return emb - encode_numpy(self.sae, emb)[:, drop] @ self.W_dec[drop]
+
+
+class FixedFractionTransform:
+    """Remove a fixed (pre-chosen) fraction of concepts by the pruner's ranking, then PCA-30."""
+
+    def __init__(self, pruner: RankedSAEPruner, fraction: float, inner_losses: Optional[Dict] = None):
+        self.pruner, self.fraction, self.inner_losses = pruner, fraction, inner_losses or {}
+        self.diag: Dict = {}
+
+    def fit(self, emb: np.ndarray, texts=None) -> "FixedFractionTransform":
+        self.pruner.fit(emb)
+        x_t = self.pruner.filtered(emb, self.fraction)
+        self.pca = PCA(n_components=min(N_PCA, *x_t.shape), random_state=SEED).fit(x_t)
+        self.n_components = self.pca.n_components_
+        removed = emb - x_t
+        self.diag = {"rule": "xfit", "chosen_fraction": self.fraction, "n_eligible": int(len(self.pruner.elig)),
+                     "n_removed": int(len(self.pruner.drop_for(self.fraction))), "inner_losses": self.inner_losses,
+                     "var_share_removed": round(float(((removed - removed.mean(0)) ** 2).sum()) / self.pruner.total_var, 4)}
+        return self
+
+    def transform(self, emb: np.ndarray) -> np.ndarray:
+        return self.pca.transform(self.pruner.filtered(emb, self.fraction))

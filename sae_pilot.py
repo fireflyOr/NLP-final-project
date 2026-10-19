@@ -112,7 +112,13 @@ def _install_embedding_cache(cache_dir: str = None):
 
     def cached(texts, col_name, model, tokenizer, device, **kw):
         h = hashlib.sha1("\x1f".join(texts).encode("utf-8", "replace")).hexdigest()
-        key = (id(model), col_name, len(texts), h)
+        if getattr(model, "_mtb_uid", None) is None:
+            try:
+                import uuid
+                model._mtb_uid = uuid.uuid4().hex   # id() can be reused once a model is freed
+            except Exception:
+                pass
+        key = (getattr(model, "_mtb_uid", id(model)), col_name, len(texts), h)
         if key not in cache:
             compute = lambda ts: original(texts=ts, col_name=col_name, model=model, tokenizer=tokenizer, device=device, **kw)
             if disk is not None and is_frozen(model, device):
