@@ -1,0 +1,228 @@
+\documentclass{article}
+
+% NeurIPS style: put neurips_2025.sty next to this file (from the official NeurIPS template / Overleaf).
+% Without it, a close approximation of the NeurIPS page geometry is used so the page count stays realistic.
+\IfFileExists{neurips_2025.sty}
+  {\usepackage[final]{neurips_2025}}
+  {\usepackage[letterpaper,textwidth=5.5in,textheight=9in,top=1in]{geometry}
+   \usepackage{times}\usepackage[numbers,sort&compress]{natbib}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath,amsfonts}
+\usepackage{microtype}
+\usepackage{xcolor}
+
+% Draft markers: every \TBD{} must be gone before submission.
+\newcommand{\TBD}[1]{\textcolor{red}{[#1]}}
+\newcommand{\ours}{concept pruning}
+
+\title{What Does the Target Leave Behind?\\Sparse-Autoencoder Concept Pruning for Text--Tabular Learning}
+
+\author{Or Davidovich\\Technion -- Israel Institute of Technology}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+In text--tabular learning, each free-text column is embedded and compressed before a tree model sees it. Joint TAR
+fine-tunes the encoder on the target so that this compression keeps target-relevant variation. We ask whether one can
+go further by \emph{removing} concepts: we decompose each column's embeddings with a sparse autoencoder (SAE), judge
+every concept jointly with its sibling concepts and the table, subtract the concepts that do not help predict the
+target, and compress what remains. Across the 20 text datasets of MulTaBench, the selection is consistently far
+better than removing the same number of random concepts (\TBD{+x.xxx}, \TBD{n}/20 datasets), and large shares of the
+representation (\TBD{xx\%} of concepts, \TBD{xx\%} of variance) can be removed at little cost. Yet removal does not
+improve on Joint TAR (\TBD{$\Delta$, $p$}), even when the amount removed is chosen by nested cross-fitting so that
+every decision is made on rows the encoder never saw. We argue that this is a property of the problem rather than of
+the selection rule: after target-aware fine-tuning, what is left to remove carries little variance that the
+downstream compression would otherwise waste.
+\end{abstract}
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Introduction}
+
+Many real tables mix numbers and categories with free text: job ads, product reviews, wine descriptions. A standard
+recipe embeds each text cell with a pretrained encoder, reduces it to a few dimensions, and gives the result to a
+gradient-boosted tree model alongside the other columns \citep{shi2021multimodal,grinsztajn2022tree}. MulTaBench
+\citep{multabench} evaluates two variants of this recipe. \emph{Joint Frozen} embeds with a frozen E5 encoder
+\citep{wang2022e5} and keeps 30 principal components per column; \emph{Joint TAR} first fine-tunes the encoder on
+the target, so that the principal components follow the variation that matters for the label.
+
+Both variants keep \emph{everything} the text expresses and let compression decide what survives. A product
+description, however, talks about many things---materials, shipping, brand tone---of which only a few relate to the
+price. Principal components follow variance, not relevance, so a frequent but irrelevant theme can occupy components
+that a weaker relevant theme needs. This suggests an explicit alternative: break the embedding into interpretable
+concepts, remove those unrelated to the target, and only then compress.
+
+Sparse autoencoders (SAEs) provide such a decomposition: they write an embedding as a sparse, non-negative
+combination of learned directions that tend to be individually interpretable
+\citep{bricken2023monosemanticity,cunningham2023sparse,gao2024scaling}. We use them as a filter rather than as
+features. Our contributions are:
+\begin{itemize}
+  \item A concept-pruning layer for text--tabular pipelines: per-column SAE, joint sibling-aware relevance testing
+        against shuffled ``shadow'' concepts, and subtractive map-back into the embedding space (\S\ref{sec:method}).
+  \item A leakage-controlled evaluation on all 20 MulTaBench text datasets, with a random-removal control and a
+        nested cross-fitted variant that makes every pruning decision on rows the encoder never saw
+        (\S\ref{sec:setup}).
+  \item A negative but informative result: the method knows \emph{which} concepts matter, but removing the rest
+        does not beat target-aware fine-tuning; we analyse why (\S\ref{sec:results}).
+\end{itemize}
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Related work}
+
+\paragraph{Text in tabular learning.} Benchmarks of tables with text fields \citep{shi2021multimodal,multabench}
+show that tree ensembles over compressed text embeddings are strong baselines. Target-aware text representations
+appear both in fine-tuning the encoder before compression (Joint TAR, \citealp{multabench}) and in tabular foundation
+models that attend from target tokens to verbalised cells, such as TabSTAR \citep{arazi2025tabstar}.
+
+\paragraph{Supervised dimensionality reduction.} Supervised PCA keeps only features correlated with the outcome
+before extracting components \citep{bair2006prediction}; partial least squares finds directions of maximal
+covariance with the target \citep{wold2001pls}. Our method applies the screening idea in an SAE concept basis instead
+of raw coordinates, and removes concepts instead of selecting coordinates.
+
+\paragraph{Feature relevance with correlated features.} Univariate screening and marginal importance are unreliable
+when features are redundant \citep{strobl2008conditional}. Boruta \citep{kursa2010boruta} compares each feature
+with permuted ``shadow'' copies inside one model; we extend it to groups of sibling SAE concepts. Out-of-fold
+estimation and cross-fitting \citep{wolpert1992stacked,chernozhukov2018double} motivate our nested variant.
+
+\paragraph{Sparse autoencoders.} SAEs are a central tool of mechanistic interpretability
+\citep{bricken2023monosemanticity,cunningham2023sparse}; we use TopK SAEs \citep{gao2024scaling}. Prior work uses
+SAE concepts to interpret or steer models; we test whether they can \emph{filter} representations for a downstream
+predictor.
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Method}\label{sec:method}
+
+\paragraph{Pipeline.} For each text column $c$, let $x\in\mathbb{R}^{384}$ be the (frozen or TAR-tuned) E5
+embedding of the string ``\texttt{passage: $c$: value}''. Joint Frozen and Joint TAR fit PCA-30 on the training
+rows' $x$ and pass the 30 components to LightGBM \citep{ke2017lightgbm} together with the table. We insert one step
+before PCA, fitted on the training rows only.
+
+\paragraph{Concept decomposition.} We train a TopK SAE \citep{gao2024scaling} with $L=2048$ latents and $k=32$ active
+per input on the column's training embeddings: $z=\mathrm{TopK}(W_e(x-b))$, $\hat x = b + \sum_i z_i d_i$ with
+unit-norm decoder directions $d_i$. The SAE is unsupervised. Concepts active on fewer than 20 training rows are never
+tested and are always kept.
+
+\paragraph{Joint, sibling-aware relevance.} Testing concepts one at a time fails in two ways: near-duplicate
+``sibling'' concepts (common in large SAEs) each look dispensable because the other covers for it, and concepts that
+matter only together with the table or other concepts look irrelevant. We therefore (i) cluster eligible concepts by
+decoder direction (average-linkage cosine distance $<0.5$) into sibling groups; (ii) fit one LightGBM on
+\emph{[table, all concepts, a shadow copy of every group]}, where a group's shadow is its activations with rows
+permuted jointly; and (iii) drop a group whose total split gain does not exceed its own shadow's in a majority of
+three repeats.
+
+\paragraph{Map-back.} Dropped concepts are subtracted, keeping the SAE's reconstruction error:
+$\tilde x = x-\sum_{i\in\mathcal{D}} z_i d_i$. PCA-30 is then fitted on $\tilde x$, so the downstream model sees
+exactly as many text features as in Joint Frozen/TAR.
+
+\paragraph{Choosing how much to remove.} The rule above fixes the amount implicitly. Two variants choose it from
+data. \emph{Held-out}: rank groups by harm (variance taken divided by importance measured as the rise in loss when the
+group is permuted on TAR's early-stopping rows) and pick the removal fraction $f\in\{0,.1,.25,.5,.75\}$ by loss on
+those rows. \emph{Cross-fitted}: split the training rows into three parts; for each part, fine-tune TAR on the other
+two, rank concepts there, and evaluate every $f$ on the unseen part with a LightGBM of the final shape (table and all
+text columns). The $f$ with the lowest total held-out loss is applied to the fold's ordinary TAR. In both variants
+$f=0$ (plain TAR) is a candidate, and a larger removal must lower the loss by more than 0.1\%.
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Experimental setup}\label{sec:setup}
+
+\paragraph{Data and protocol.} All 20 text datasets of MulTaBench (5 binary, 7 multiclass, 8 regression), using the
+benchmark's own splits (two repeats of 3-fold cross-validation, 6 folds; training sets capped at 10k rows) and
+metrics: AUROC (one-vs-rest macro for multiclass) and $R^2$. Joint TAR follows the benchmark recipe: LoRA
+\citep{hu2022lora} of rank 16 on the last three E5 layers, a linear head, regression targets binned into 20
+quantiles, early stopping on 10\% of the training rows. All arms share the fold's split, LightGBM configuration,
+and---for TAR-based arms---the \emph{same} fine-tuned encoder, so differences isolate the pruning step.
+
+\paragraph{Controls.} \emph{Random pruning} removes the same number of eligible concepts, chosen at random, from the
+same SAE. We also report frozen-embedding variants (relevance pruning and \ours{} without fine-tuning), PLS-30
+\citep{wold2001pls}, and out-of-fold stacking of a text-only model's predictions \citep{wolpert1992stacked}.
+
+\paragraph{Leakage control.} Every component that uses the target (SAE ranking, shadow tests, amount selection,
+stacking) is fitted on the training rows of the outer fold only; test rows are never used. Stacking folds keep rows
+with identical text together, since duplicated texts otherwise leak through the out-of-fold models.
+
+\paragraph{Statistics.} Because methods that use the target must be compared with Joint TAR, we test each arm against
+our own TAR run on the same splits with a two-sided Wilcoxon signed-rank test over per-dataset means; the 6 folds of a
+dataset are not independent and are only reported as win/loss counts.
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Results}\label{sec:results}
+
+\begin{table}[t]
+\centering\small
+\caption{Paired comparison with Joint TAR (per-dataset means over 6 folds). $\Delta$: mean difference in
+AUROC/$R^2$; $p$: Wilcoxon signed-rank test over datasets.}
+\label{tab:summary}
+\input{tables/summary.tex}
+\end{table}
+
+\paragraph{Removal does not beat TAR.} Table~\ref{tab:summary} summarises all arms against Joint TAR.
+\TBD{Fill from the final table: TAR+\ours{} $\Delta$, datasets won, $p$. Preliminary (5 datasets): $-0.006$, 0/5,
+2/16 folds.} Choosing the amount on TAR's held-out rows does not help (\TBD{$\Delta$}): on roughly a thousand rows,
+the five candidate amounts differ by less than the selection noise, and the apparent gains do not transfer.
+
+\paragraph{But the selection is far from random.} Removing the same number of random concepts from the same SAE is
+much worse (\TBD{$\Delta$ vs.\ TAR+\ours{}}, \TBD{n}/20 datasets), so the joint test reliably identifies which
+concepts matter. Table~\ref{tab:removal} shows how much is removed: \TBD{xx\%} of the eligible concepts, carrying
+\TBD{xx\%} of the embedding variance.
+
+\begin{table}[t]
+\centering\small
+\caption{How much \ours{} removes, averaged over datasets, folds and text columns.}
+\label{tab:removal}
+\input{tables/removal.tex}
+\end{table}
+
+\paragraph{Clean decisions do not change the picture.} Table~\ref{tab:xf} reports the cross-fitted variant on five
+datasets. \TBD{Fill: chosen fractions and $\Delta$.}
+
+\begin{table}[t]
+\centering\small
+\caption{Nested cross-fitted removal amount (five datasets). Every decision is made on rows the judging encoder never
+saw.}
+\label{tab:xf}
+\input{tables/xf.tex}
+\end{table}
+
+\paragraph{Why there is no headroom.} Three observations point to the same explanation. First, on frozen embeddings,
+PLS---a supervised \emph{projection}---improves over Joint Frozen (\TBD{$\Delta$, $p$}), while \ours{} followed by PCA
+does not; the useful signal from the target enters through choosing \emph{directions to keep}, not through deleting
+concepts. Second, TAR already performs that steering inside the encoder, so the variance that PCA would waste on
+irrelevant concepts is small after fine-tuning. Third, removing concepts also removes their share of genuinely
+useful variation that is spread thinly across many concepts; random removal makes this cost visible.
+
+% ------------------------------------------------------------------------------------------------------------
+\section{Limitations and conclusion}
+
+We used a single encoder (E5-small), one SAE size, and LightGBM as the only downstream model. A pilot with TabSTAR
+\citep{arazi2025tabstar} as the backbone was infeasible on our hardware (two epochs within its 10-hour budget on one
+dataset) and is not reported as a result. Held-out rows for choosing the removal amount are few; cross-fitting
+addresses this at three times the fine-tuning cost.
+
+Concept pruning is a principled, interpretable filter that reliably separates relevant from irrelevant concepts, but
+after target-aware fine-tuning it finds little left to remove. For practitioners, the lesson is to spend supervision
+on \emph{what to keep}---fine-tuning or supervised projection---rather than on what to delete.
+
+\paragraph{Code.} \TBD{Repository URL}. All results can be regenerated with \texttt{sae\_pilot.py}; tables with
+\texttt{paper/make\_tables.py}.
+
+\small
+\bibliographystyle{plainnat}
+\bibliography{refs}
+
+\normalsize
+\appendix
+\section{Per-dataset results}
+\begin{table}[h]
+\centering\small
+\caption{Mean AUROC (classification) or $R^2$ (regression) over 6 folds, LightGBM. Best per row in bold.
+$^\dagger$: fewer than 6 folds.}
+\label{tab:main}
+\input{tables/main.tex}
+\end{table}
+
+\end{document}

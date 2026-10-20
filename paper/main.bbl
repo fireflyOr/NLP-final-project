@@ -1,0 +1,115 @@
+\begin{thebibliography}{16}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Arazi et~al.(2025)Arazi, Shapira, and Reichart]{arazi2025tabstar}
+Alan Arazi, Eilam Shapira, and Roi Reichart.
+\newblock {TabSTAR}: A foundation tabular model with semantically target-aware
+  representations.
+\newblock \emph{arXiv preprint arXiv:2505.18125}, 2025.
+
+\bibitem[Bair et~al.(2006)Bair, Hastie, Paul, and
+  Tibshirani]{bair2006prediction}
+Eric Bair, Trevor Hastie, Debashis Paul, and Robert Tibshirani.
+\newblock Prediction by supervised principal components.
+\newblock \emph{Journal of the American Statistical Association}, 101\penalty0
+  (473):\penalty0 119--137, 2006.
+
+\bibitem[Bricken et~al.(2023)Bricken, Templeton, Batson, Chen, Jermyn,
+  et~al.]{bricken2023monosemanticity}
+Trenton Bricken, Adly Templeton, Joshua Batson, Brian Chen, Adam Jermyn, et~al.
+\newblock Towards monosemanticity: Decomposing language models with dictionary
+  learning.
+\newblock \emph{Transformer Circuits Thread}, 2023.
+
+\bibitem[Chernozhukov et~al.(2018)Chernozhukov, Chetverikov, Demirer, Duflo,
+  Hansen, Newey, and Robins]{chernozhukov2018double}
+Victor Chernozhukov, Denis Chetverikov, Mert Demirer, Esther Duflo, Christian
+  Hansen, Whitney Newey, and James Robins.
+\newblock Double/debiased machine learning for treatment and structural
+  parameters.
+\newblock \emph{The Econometrics Journal}, 21\penalty0 (1):\penalty0 C1--C68,
+  2018.
+
+\bibitem[Cunningham et~al.(2023)Cunningham, Ewart, Riggs, Huben, and
+  Sharkey]{cunningham2023sparse}
+Hoagy Cunningham, Aidan Ewart, Logan Riggs, Robert Huben, and Lee Sharkey.
+\newblock Sparse autoencoders find highly interpretable features in language
+  models.
+\newblock \emph{arXiv preprint arXiv:2309.08600}, 2023.
+
+\bibitem[Gao et~al.(2024)Gao, Dupr{\'e}~la Tour, Tillman, Goh, Troll, Radford,
+  Sutskever, Leike, and Wu]{gao2024scaling}
+Leo Gao, Tom Dupr{\'e}~la Tour, Henk Tillman, Gabriel Goh, Rajan Troll, Alec
+  Radford, Ilya Sutskever, Jan Leike, and Jeffrey Wu.
+\newblock Scaling and evaluating sparse autoencoders.
+\newblock \emph{arXiv preprint arXiv:2406.04093}, 2024.
+
+\bibitem[Grinsztajn et~al.(2022)Grinsztajn, Oyallon, and
+  Varoquaux]{grinsztajn2022tree}
+L{\'e}o Grinsztajn, Edouard Oyallon, and Ga{\"e}l Varoquaux.
+\newblock Why do tree-based models still outperform deep learning on typical
+  tabular data?
+\newblock In \emph{NeurIPS Datasets and Benchmarks Track}, 2022.
+
+\bibitem[Hu et~al.(2022)Hu, Shen, Wallis, Allen-Zhu, Li, Wang, Wang, and
+  Chen]{hu2022lora}
+Edward~J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean
+  Wang, Lu~Wang, and Weizhu Chen.
+\newblock {LoRA}: Low-rank adaptation of large language models.
+\newblock In \emph{International Conference on Learning Representations}, 2022.
+
+\bibitem[Ke et~al.(2017)Ke, Meng, Finley, Wang, Chen, Ma, Ye, and
+  Liu]{ke2017lightgbm}
+Guolin Ke, Qi~Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei
+  Ye, and Tie-Yan Liu.
+\newblock {LightGBM}: A highly efficient gradient boosting decision tree.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2017.
+
+\bibitem[Kursa and Rudnicki(2010)]{kursa2010boruta}
+Miron~B. Kursa and Witold~R. Rudnicki.
+\newblock Feature selection with the {Boruta} package.
+\newblock \emph{Journal of Statistical Software}, 36\penalty0 (11):\penalty0
+  1--13, 2010.
+
+\bibitem[Shi et~al.(2021)Shi, Mueller, Erickson, Li, and
+  Smola]{shi2021multimodal}
+Xingjian Shi, Jonas Mueller, Nick Erickson, Mu~Li, and Alexander~J. Smola.
+\newblock Benchmarking multimodal {AutoML} for tabular data with text fields.
+\newblock In \emph{NeurIPS Datasets and Benchmarks Track}, 2021.
+
+\bibitem[Strobl et~al.(2008)Strobl, Boulesteix, Kneib, Augustin, and
+  Zeileis]{strobl2008conditional}
+Carolin Strobl, Anne-Laure Boulesteix, Thomas Kneib, Thomas Augustin, and Achim
+  Zeileis.
+\newblock Conditional variable importance for random forests.
+\newblock \emph{BMC Bioinformatics}, 9:\penalty0 307, 2008.
+
+\bibitem[{TODO: authors -- copy from arXiv 2605.10616}(2026)]{multabench}
+{TODO: authors -- copy from arXiv 2605.10616}.
+\newblock {MulTaBench}: Benchmarking multimodal tabular learning with text and
+  image.
+\newblock \emph{arXiv preprint arXiv:2605.10616}, 2026.
+
+\bibitem[Wang et~al.(2022)Wang, Yang, Huang, Jiao, Yang, Jiang, Majumder, and
+  Wei]{wang2022e5}
+Liang Wang, Nan Yang, Xiaolong Huang, Binxing Jiao, Linjun Yang, Daxin Jiang,
+  Rangan Majumder, and Furu Wei.
+\newblock Text embeddings by weakly-supervised contrastive pre-training.
+\newblock \emph{arXiv preprint arXiv:2212.03533}, 2022.
+
+\bibitem[Wold et~al.(2001)Wold, Sj{\"o}str{\"o}m, and Eriksson]{wold2001pls}
+Svante Wold, Michael Sj{\"o}str{\"o}m, and Lennart Eriksson.
+\newblock {PLS}-regression: a basic tool of chemometrics.
+\newblock \emph{Chemometrics and Intelligent Laboratory Systems}, 58\penalty0
+  (2):\penalty0 109--130, 2001.
+
+\bibitem[Wolpert(1992)]{wolpert1992stacked}
+David~H. Wolpert.
+\newblock Stacked generalization.
+\newblock \emph{Neural Networks}, 5\penalty0 (2):\penalty0 241--259, 1992.
+
+\end{thebibliography}
