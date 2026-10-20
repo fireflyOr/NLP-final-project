@@ -3,7 +3,7 @@
 #SBATCH --array=0-4%1
 #SBATCH --partition=public
 #SBATCH --gres=gpu:L40:1
-#SBATCH --exclude=tdk-bm4
+#SBATCH --exclude=tdk-bm4,euler2
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
 #SBATCH --time=2-00:00:00
