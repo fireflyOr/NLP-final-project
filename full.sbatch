@@ -3,6 +3,7 @@
 #SBATCH --array=0-19%3
 #SBATCH --partition=public
 #SBATCH --gres=gpu:L40:1
+#SBATCH --exclude=tdk-bm4
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
 #SBATCH --time=2-00:00:00
@@ -16,6 +17,7 @@ export MULTABENCH_DYNAMIC_PADDING=1 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK PYTHONU
 # the environment is built ONCE beforehand (see setup in the instructions); array tasks only use it
 [ -f .venv_full/.ok ] || { echo "missing .venv_full - run the setup srun first"; exit 1; }
 source .venv_full/bin/activate
+python -c "import torch,sys; sys.exit(0 if torch.cuda.is_available() else 1)" || { echo "NO GPU on $(hostname)"; exit 1; }
 
 DS=(BIN_TEXT_FAKE_JOB_POSTING BIN_TEXT_JIGSAW_TOXICITY BIN_TEXT_KICKSTARTER_FUNDING MUL_TEXT_DATA_SCIENTIST_SALARY
     MUL_TEXT_MICHELIN_RESTAURANTS MUL_TEXT_PRODUCT_SENTIMENT MUL_TEXT_SPOTIFY_GENRES MUL_TEXT_US_ACCIDENTS
