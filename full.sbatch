@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=mtb_full
-#SBATCH --array=0-19%5
+#SBATCH --array=0-19%3
 #SBATCH --partition=public
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:L40:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
 #SBATCH --time=2-00:00:00
@@ -26,5 +26,5 @@ ds=${DS[$SLURM_ARRAY_TASK_ID]}
 echo "== $ds on $(hostname)"; nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
 
 PYTHONPATH=. python sae_pilot.py run --out_dir runs_full --emb_cache emb_cache/$ds --datasets $ds \
-  --encoders e5-small e5-small-tar e5-small-tar-gsae e5-small-tar-gsae-rand e5-small-tar-gsae-cv \
+  --encoders e5-small e5-small-tar e5-small-tar-gsae e5-small-tar-gsae-rand \
              e5-small-gsae e5-small-stack e5-small-pls e5-small-relsae2 e5-small-relsae2-rand

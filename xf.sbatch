@@ -1,8 +1,8 @@
 #!/bin/bash
 #SBATCH --job-name=mtb_xf
-#SBATCH --array=0-4
+#SBATCH --array=0-4%1
 #SBATCH --partition=public
-#SBATCH --gres=gpu:1
+#SBATCH --gres=gpu:L40:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
 #SBATCH --time=2-00:00:00
