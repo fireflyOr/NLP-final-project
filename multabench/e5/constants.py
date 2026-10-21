@@ -35,6 +35,8 @@ E5_TRANSFORMS = {
 # Frozen PCA-30 columns + out-of-fold text-model predictions (uses y -> compare against Joint TAR)
 E5_SMALL_STACK = "e5-small-v2|stack"        # MLP on frozen E5 embeddings, 5-fold cross-fitted
 E5_SMALL_TAR_STACK = "e5-small-v2|tarstack" # LoRA-fine-tuned E5 + head (as in TAR), 3-fold cross-fitted
+E5_SMALL_TAR_FSTACK = "e5-small-v2|tar-fstack"  # Joint TAR's PCA-30 columns + out-of-fold frozen-MLP text predictions
+TAR_STACK_ENCODERS = {E5_SMALL_TAR_FSTACK: ("frozen", 5)}
 STACK_ENCODERS = {E5_SMALL_STACK: ("frozen", 5), E5_SMALL_TAR_STACK: ("finetuned", 3)}
 
 # Target-relevant concept filtering before PCA (uses y -> compare against Joint TAR). Value: variant.
@@ -75,6 +77,7 @@ TEXT_ENCODERS = {
     "e5-small-pca50": Encoder(encoder_name=E5_SMALL_PCA50, tune_encoder=False),
     # tune_encoder=True so the pipeline passes y (and the LoRA args) to the text encoder
     "e5-small-stack": Encoder(encoder_name=E5_SMALL_STACK, tune_encoder=True),
+    "e5-small-tar-fstack": Encoder(encoder_name=E5_SMALL_TAR_FSTACK, tune_encoder=True),
     "e5-small-tar-stack": Encoder(encoder_name=E5_SMALL_TAR_STACK, tune_encoder=True),
     "e5-small-relsae": Encoder(encoder_name=E5_SMALL_RELSAE, tune_encoder=True),
     "e5-small-relsae2": Encoder(encoder_name=E5_SMALL_RELSAE2, tune_encoder=True),

@@ -14,7 +14,7 @@ import pandas as pd
 from pandas import DataFrame, Series
 import torch
 
-from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, PRUNE_ENCODERS, RELEVANCE_ENCODERS, STACK_ENCODERS, TF_IDF
+from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, PRUNE_ENCODERS, RELEVANCE_ENCODERS, STACK_ENCODERS, TAR_STACK_ENCODERS, TF_IDF
 from multabench.e5.e5_finetune import encode_texts_with_e5, get_vanilla_e5
 
 PCA_COMPONENTS = 30
@@ -404,6 +404,16 @@ def fit_text_encoders(
         assert y is not None, "relevance filtering needs the target"
         return fit_text_encoders_relevance(x=x, text_features_list=text_features_list, device=device, y=y,
                                            is_cls=is_cls, variant=RELEVANCE_ENCODERS[e5_model_name])
+    if e5_model_name in TAR_STACK_ENCODERS:
+        # Joint TAR unchanged (same fine-tuned E5 as the e5-small-tar arm of this fold) + stacked text predictions
+        from multabench.stack.text_stack import STACK_KEY, StackEncoder
+        assert y is not None, "text stacking needs the target"
+        kind, n_splits = TAR_STACK_ENCODERS[e5_model_name]
+        text_encoders = fit_text_encoders_tuned(x=x, text_features_list=text_features_list, device=device, y=y,
+                                                e5_train_kwargs=e5_train_kwargs or {}, is_cls=is_cls, d_output=d_output)
+        text_encoders[STACK_KEY] = StackEncoder(kind=kind, text_cols=text_features_list, is_cls=is_cls, device=device,
+                                                n_splits=n_splits, e5_train_kwargs=e5_train_kwargs).fit(x, y)
+        return text_encoders
     if e5_model_name in STACK_ENCODERS:
         from multabench.stack.text_stack import STACK_KEY, StackEncoder
         assert y is not None, "text stacking needs the target"

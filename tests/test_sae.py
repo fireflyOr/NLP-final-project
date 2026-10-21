@@ -423,6 +423,30 @@ def test_xfit_inner_tar_never_sees_judged_rows(fake_e5, monkeypatch, task):
     assert np.isfinite(pred).all() and len(pred) == 500
 
 
+@pytest.mark.parametrize("task", ["bin", "mul", "reg"])
+def test_tar_plus_stack_shares_tar_and_adds_oof_columns(fake_e5, fake_tar, task):
+    from multabench.baselines.lgbm import LightGBM
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.e5.constants import TEXT_ENCODERS
+    from multabench.stack.text_stack import STACK_KEY
+    x, y = _toy_task(task)
+    problem = {"bin": SupervisedTask.BINARY, "mul": SupervisedTask.MULTICLASS, "reg": SupervisedTask.REGRESSION}[task]
+    feats = {}
+    for enc in ("e5-small-tar", "e5-small-tar-fstack"):
+        model = LightGBM(problem_type=problem, device=torch.device("cpu"), verbose=False, tune_e5=True,
+                         e5_train_kwargs={}, e5_model_name=TEXT_ENCODERS[enc].encoder_name)
+        model.fit(x.iloc[:1000], y.iloc[:1000])
+        feats[enc] = model.text_transformers
+        pred = model.predict(x.iloc[1000:])
+        assert np.isfinite(pred).all() and len(pred) == 500
+    assert len(fake_tar) == 1, "TAR+stack must reuse the TAR arm's fine-tuned E5"
+    st = feats["e5-small-tar-fstack"][STACK_KEY]
+    assert st.n_components == {"bin": 1, "mul": 4, "reg": 1}[task]
+    assert st.n_ensemble_rows > 0 and len(st.oof) > 0       # training rows got OOF features, others the ensemble
+    for col in ("review", "title"):
+        assert feats["e5-small-tar-fstack"][col].model is feats["e5-small-tar"][col].model
+
+
 # ---------------- TabSTAR + SAE pruning (phase 1 mocked: tiny random TabSTAR, no download) ----------------
 
 @pytest.fixture()
