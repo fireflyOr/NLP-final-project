@@ -1,12 +1,12 @@
-\begin{tabular}{lcccc}
+\begin{tabular}{lccccc}
 \toprule
-Method & $\Delta$ vs.\ TAR & datasets won & folds won/lost & $p$ (datasets) \\
+Method & $\Delta$ vs.\ TAR & datasets won & folds won/lost & $p$ & $p_{\text{Holm}}$ \\
 \midrule
-TAR + concept pruning (ours) & -0.0035 & 4/20 & 44/76 & 0.006 \\
-TAR + random pruning & -0.0210 & 1/20 & 13/107 & $<$0.001 \\
-Frozen + concept pruning & -0.0212 & 0/20 & 13/107 & $<$0.001 \\
-Frozen + PLS & -0.0128 & 3/20 & 23/97 & 0.001 \\
-Frozen + stacking & -0.0086 & 8/20 & 51/69 & 0.546 \\
-Joint Frozen & -0.0172 & 1/20 & 10/110 & $<$0.001 \\
+TAR + concept pruning (ours) & -0.0035 & 4/20 & 44/76 & 0.006 & 0.011 \\
+TAR + random pruning & -0.0210 & 1/20 & 13/107 & $<$0.001 & $<$0.001 \\
+Frozen + concept pruning & -0.0212 & 0/20 & 13/107 & $<$0.001 & $<$0.001 \\
+Frozen + PLS & -0.0128 & 3/20 & 23/97 & 0.001 & 0.003 \\
+Frozen + stacking & -0.0086 & 8/20 & 51/69 & 0.546 & 0.546 \\
+Joint Frozen & -0.0172 & 1/20 & 10/110 & $<$0.001 & $<$0.001 \\
 \bottomrule
 \end{tabular}

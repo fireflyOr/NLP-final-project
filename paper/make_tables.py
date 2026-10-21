@@ -48,10 +48,15 @@ def task(ds):
     return {"BIN": "bin", "MUL": "mul", "REG": "reg"}[ds[:3]]
 
 
-def main_table(df, out):
+FINAL_MAIN = [("e5-small-tar", "TAR"), ("e5-small-tar-fstack", "+stack"), ("e5-small-tar-pls", "+PLS"),
+              ("e5-small-tar-full", "384-d"), ("late-fusion", "Late"), ("e5-small-tar-gsae", "+prune"),
+              ("e5-small-tar-gsae-randvar", "+rand(var)")]
+
+
+def main_table(df, out, arms=MAIN):
     m = df.pivot_table(index="dataset", columns="encoder", values="course_score", aggfunc="mean")
     n = df.pivot_table(index="dataset", columns="encoder", values="fold", aggfunc="count")
-    cols = [(e, h) for e, h in MAIN if e in m]
+    cols = [(e, h) for e, h in arms if e in m]
     lines = [r"\begin{tabular}{l" + "c" * len(cols) + "}", r"\toprule",
              "Dataset & " + " & ".join(h for _, h in cols) + r" \\", r"\midrule"]
     for ds in sorted(m.index, key=lambda d: (d[:3] != "BIN", d[:3] != "MUL", SHORT.get(d, d))):
@@ -132,24 +137,29 @@ def learners_table(df, out):
 
 
 def removal_table(df, out):
+    """Concepts and variance removed per arm (TAR embeddings); for the selection, the share of removed groups that
+    were never split on by either the concept or its shadow."""
     rows = []
-    for _, r in df[df.encoder.isin(["e5-small-tar-gsae", "e5-small-gsae"])].iterrows():
-        for col, d in (r.get("diagnostics") or {}).items():
-            if isinstance(d, dict) and "n_removed" in d and d.get("n_eligible"):
+    for _, r in df.iterrows():
+        for d in (r.get("diagnostics") or {}).values():
+            if isinstance(d, dict) and d.get("n_eligible") and "n_removed" in d:
                 rows.append({"enc": r.encoder, "frac": d["n_removed"] / d["n_eligible"],
-                             "var": d.get("var_share_removed", np.nan), "groups": d.get("n_groups", np.nan),
-                             "elig": d["n_eligible"]})
+                             "var": d.get("var_share_removed", np.nan),
+                             "unused": (d["n_groups_unused"] / d["n_groups_dropped"]
+                                        if d.get("n_groups_dropped") and "n_groups_unused" in d else np.nan)})
     if not rows:
         return
-    t = pd.DataFrame(rows).groupby("enc").agg(frac=("frac", "mean"), var=("var", "mean"), elig=("elig", "mean"),
-                                              groups=("groups", "mean"), n=("frac", "size"))
-    lines = [r"\begin{tabular}{lcccc}", r"\toprule",
-             r"Embeddings & concepts removed & variance removed & eligible concepts & sibling groups \\", r"\midrule"]
-    for e, name in (("e5-small", "Frozen"), ("e5-small-tar", "TAR")):
-        key = e + "-gsae" if e == "e5-small" else "e5-small-tar-gsae"
-        if key in t.index:
-            x = t.loc[key]
-            lines.append(f"{name} & {x['frac']:.0%} & {x['var']:.0%} & {x['elig']:.0f} & {x['groups']:.0f}" + r" \\")
+    t = pd.DataFrame(rows).groupby("enc").mean()
+    names = [("e5-small-tar-gsae", "Concept pruning (ours)"), ("e5-small-tar-gsae-rand", "Random, same number"),
+             ("e5-small-tar-gsae-randvar", "Random, same variance"), ("e5-small-gsae", "Ours on frozen embeddings")]
+    pct = lambda v: "--" if not np.isfinite(v) else f"{v:.0%}"
+    lines = [r"\begin{tabular}{lccc}", r"\toprule",
+             r"Removal & concepts removed & variance removed & removed groups never used \\", r"\midrule"]
+    for e, name in names:
+        if e in t.index:
+            x = t.loc[e]
+            unused = x["unused"] if "rand" not in e else np.nan   # random arms inherit the selection's count
+            lines.append(f"{name} & {pct(x['frac'])} & {pct(x['var'])} & {pct(unused)}" + r" \\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     open(os.path.join(out, "removal.tex"), "w").write("\n".join(lines).replace("%", r"\%") + "\n")
 
@@ -193,6 +203,7 @@ if __name__ == "__main__":
         final = final_all[final_all.model == "light"]
         os.makedirs(os.path.join(args.out, "final"), exist_ok=True)
         summary_table(final, os.path.join(args.out, "final"))
+        main_table(final, os.path.join(args.out, "final"), arms=FINAL_MAIN)
         removal_table(final, os.path.join(args.out, "final"))
         learners_table(final_all, os.path.join(args.out, "final"))
     print("tables written to", args.out)
