@@ -29,4 +29,4 @@ ds=${DS[$SLURM_ARRAY_TASK_ID]}
 echo "== $ds on $(hostname)"; nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
 
 PYTHONPATH=. python sae_pilot.py run --out_dir runs_tarstack --emb_cache emb_cache/$ds --datasets $ds \
-  --encoders e5-small-tar e5-small-tar-fstack
+  --encoders e5-small-tar e5-small-tar-fstack e5-small-tar-gsae e5-small-tar-gsae-randvar e5-small-tar-gsae-rand

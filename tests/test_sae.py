@@ -318,6 +318,9 @@ def test_group_shadow_keeps_relevant_and_prunes_gently():
     d = out["sae"][1]
     assert 0.1 * d["n_eligible"] < d["n_removed"] < d["n_eligible"]   # removes a real share, not everything
     assert out["random"][1]["n_removed"] == d["n_removed"]           # control removes exactly as many
+    tv = rel.GroupShadowSAETransform(rel.tabular_frame(x, ["txt"]), codes, True, kind="random_var", n_latents=1024, k=16).fit(emb)
+    assert abs(tv.diag["var_share_removed"] - d["var_share_removed"]) < 0.25 * d["var_share_removed"] + 0.02, (tv.diag, d)
+    assert 0 <= d["n_groups_unused"] <= d["n_groups"]
     assert d["n_groups"] <= d["n_eligible"]
 
 

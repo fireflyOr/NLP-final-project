@@ -124,8 +124,9 @@ exactly as many text features as in Joint Frozen/TAR.
 data. \emph{Held-out}: rank groups by harm (variance taken divided by importance measured as the rise in loss when the
 group is permuted on TAR's early-stopping rows) and pick the removal fraction $f\in\{0,.1,.25,.5,.75\}$ by loss on
 those rows. \emph{Cross-fitted}: split the training rows into three parts; for each part, fine-tune TAR on the other
-two, rank concepts there, and evaluate every $f$ on the unseen part with a LightGBM of the final shape (table and all
-text columns). The $f$ with the lowest total held-out loss is applied to the fold's ordinary TAR. In both variants
+two, rank concepts there (variance taken divided by shadow-corrected gain, from one shadow-test LightGBM), and
+evaluate every $f$ on the unseen part with a LightGBM on the same inputs as the final model (table and all text
+columns). The $f$ with the lowest total held-out loss is applied to the fold's ordinary TAR. In both variants
 $f=0$ (plain TAR) is a candidate, and a larger removal must lower the loss by more than 0.1\%.
 
 % ------------------------------------------------------------------------------------------------------------
@@ -216,8 +217,8 @@ We used a single encoder (E5-small), one SAE size, and LightGBM as the only down
 \citep{arazi2025tabstar} as the backbone was infeasible on our hardware (two epochs within its 10-hour budget on one
 dataset) and is not reported as a result. Held-out rows for choosing the removal amount are few; cross-fitting
 addresses this at three times the fine-tuning cost and was run on five datasets only. In three multiclass runs
-(stacking on Spotify, folds 1 and 5; held-out pruning on Wine, fold 1) LightGBM diverged (test log loss $>29$, AUROC
-near 0.5); we report them unchanged.
+(stacking on Spotify, folds 1 and 5; held-out pruning on Wine, fold 1) the final model collapsed to chance level
+(test log loss $>29$, AUROC near 0.5); we have not identified the cause and report them unchanged.
 
 Concept pruning is a principled, interpretable filter that reliably separates relevant from irrelevant concepts, but
 after target-aware fine-tuning it finds little left to remove. For practitioners, the lesson is to spend supervision

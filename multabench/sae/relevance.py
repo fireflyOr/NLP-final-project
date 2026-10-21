@@ -316,8 +316,17 @@ class GroupShadowSAETransform:
         wins = (real > shadow).sum(axis=0)
         drop_groups = np.where(wins <= self.repeats // 2)[0]
         drop = elig[np.isin(groups, drop_groups)]
+        n_unused = int(((real == 0) & (shadow == 0)).all(axis=0).sum())   # never split on, real nor shadow
         if self.kind == "random":
             drop = np.random.default_rng(self.seed).choice(elig, len(drop), replace=False)
+        elif self.kind == "random_var":
+            # random concepts whose total variance matches the selected set's (removing more variance is a confound)
+            v = z.var(axis=0)
+            target_var = float(v[drop].sum())
+            perm = np.random.default_rng(self.seed).permutation(elig)
+            cum = np.cumsum(v[perm])
+            n = int(np.argmin(np.abs(cum - target_var))) + 1 if len(perm) and target_var > 0 else 0
+            drop = perm[:n]
         self.drop = np.sort(drop)
         x_t = self._filter(emb, z)
         self.pca = PCA(n_components=min(N_PCA, *x_t.shape), random_state=SEED).fit(x_t)
@@ -329,6 +338,7 @@ class GroupShadowSAETransform:
         sizes = np.bincount(groups, minlength=G)
         self.diag = {"rule": "group_shadow", "kind": self.kind, "sae": f"{L}/k{self.k}", "n_eligible": int(len(elig)),
                      "n_groups": G, "n_multi_groups": int((sizes > 1).sum()), "n_groups_dropped": int(len(drop_groups)),
+                     "n_groups_unused": n_unused,
                      "n_removed": int(len(self.drop)),
                      "var_share_removed": round(float(((removed_part - removed_part.mean(0)) ** 2).sum()) / tot, 4),
                      "var_share_sae_error": round(float(((resid - resid.mean(0)) ** 2).sum()) / tot, 4),
