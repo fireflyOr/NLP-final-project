@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23478821284133067,
+  "test_error": 0.23478821284133067,
+  "course_metric": "r2",
+  "course_score": 0.47524517975962555,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 73.41098666191101,
+  "diagnostics": {
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 347,
+      "n_removed": 165,
+      "threshold": 0.0692,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.5565,
+      "var_share_kept": 0.6452,
+      "var_share_sae_error": 0.1219,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 163,
+          "score": 0.1025,
+          "n_active": 132,
+          "examples": [
+            "Lonely Planet",
+            "Lonely Planet",
+            "Lonely Planet"
+          ]
+        },
+        {
+          "latent": 504,
+          "score": 0.0893,
+          "n_active": 187,
+          "examples": [
+            "Robert Louis Stevenson",
+            "Robert Louis Stevenson",
+            "Agatha Christie"
+          ]
+        },
+        {
+          "latent": 328,
+          "score": 0.0862,
+          "n_active": 238,
+          "examples": [
+            "Warner Bros",
+            "Warner Bros",
+            "Howard Gardner"
+          ]
+        },
+        {
+          "latent": 188,
+          "score": 0.0824,
+          "n_active": 143,
+          "examples": [
+            "Wonder House Books",
+            "Wonder House Books",
+            "Wonder House Books"
+          ]
+        },
+        {
+          "latent": 0,
+          "score": 0.08,
+          "n_active": 233,
+          "examples": [
+            "P.G. Wodehouse",
+            "P.G. Wodehouse",
+            "P.G. Wodehouse"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 310,
+      "n_kept": 437,
+      "n_removed": 75,
+      "threshold": 0.0685,
+      "passed_test": 26,
+      "removed_norm_ratio": 0.3453,
+      "var_share_kept": 0.7133,
+      "var_share_sae_error": 0.0027,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 34,
+          "score": 0.2075,
+          "n_active": 420,
+          "examples": [
+            "Hardcover,\u2013 30 May 2013",
+            "Hardcover,\u2013 29 May 2009",
+            "Hardcover,\u2013 18 May 2012"
+          ]
+        },
+        {
+          "latent": 161,
+          "score": 0.1623,
+          "n_active": 219,
+          "examples": [
+            "Paperback,\u2013 Illustrated, 2001",
+            "Paperback,\u2013 2002",
+            "Paperback,\u2013 2002"
+          ]
+        },
+        {
+          "latent": 501,
+          "score": 0.1535,
+          "n_active": 175,
+          "examples": [
+            "Paperback,\u2013 2005",
+            "Paperback,\u2013 2005",
+            "Paperback,\u2013 2005"
+          ]
+        },
+        {
+          "latent": 314,
+          "score": 0.1237,
+          "n_active": 121,
+          "examples": [
+            "Paperback,\u2013 2018",
+            "Paperback,\u2013 2018",
+            "Paperback,\u2013 2018"
+          ]
+        },
+        {
+          "latent": 101,
+          "score": 0.1222,
+          "n_active": 167,
+          "examples": [
+            "Paperback,\u2013 Abridged, Audiobook, Large Print",
+            "Paperback,\u2013 Large Print, Import",
+            "Paperback,\u2013 Large Print, Import"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 487,
+      "n_kept": 356,
+      "n_removed": 156,
+      "threshold": 0.0713,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.5063,
+      "var_share_kept": 0.6189,
+      "var_share_sae_error": 0.0005,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 88,
+          "score": 0.1191,
+          "n_active": 238,
+          "examples": [
+            "Sikhism (Books)",
+            "Language, Linguistics & Writing (Books)",
+            "Language, Linguistics & Writing (Books)"
+          ]
+        },
+        {
+          "latent": 349,
+          "score": 0.1099,
+          "n_active": 116,
+          "examples": [
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)"
+          ]
+        },
+        {
+          "latent": 261,
+          "score": 0.1071,
+          "n_active": 133,
+          "examples": [
+            "Development & Growth",
+            "General Dentistry",
+            "Medicine`"
+          ]
+        },
+        {
+          "latent": 8,
+          "score": 0.0993,
+          "n_active": 122,
+          "examples": [
+            "Public Affairs",
+            "Society & Culture (Books)",
+            "Society & Culture (Books)"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.0988,
+          "n_active": 201,
+          "examples": [
+            "Operating Systems Textbooks",
+            "Operating Systems Textbooks",
+            "Political Structure & Processes (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 362,
+      "n_removed": 150,
+      "threshold": 0.0685,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.4691,
+      "var_share_kept": 0.5293,
+      "var_share_sae_error": 0.2531,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 450,
+          "score": 0.0837,
+          "n_active": 189,
+          "examples": [
+            "MARIO PUZO'S FIRST ACCLAIMED NOVEL, BEFORE HIS CREATION OF THE INTERNATIONAL BESTSELLER, THE GODFATHER. AN ASTOUNDING STORY OF CORRUPTION AND BETRAYAL.\n\nHardene",
+            "MARIO PUZO'S FIRST ACCLAIMED NOVEL, BEFORE HIS CREATION OF THE INTERNATIONAL BESTSELLER, THE GODFATHER. AN ASTOUNDING STORY OF CORRUPTION AND BETRAYAL.\n\nHardene",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. "
+          ]
+        },
+        {
+          "latent": 460,
+          "score": 0.0836,
+          "n_active": 206,
+          "examples": [
+            "All selected pieces for the grade 2 examination for the Trinity College London Guitar syllabus 2016-2019.",
+            "All selected pieces for the grade 1 examination for the Trinity College London Guitar syllabus 2016-2019.",
+            "This book contains everything needed to prepare for the performance and technical work components of a Trinity Electronic Keyboard Grade 3 exam in 2019-2022. Al"
+          ]
+        },
+        {
+          "latent": 503,
+          "score": 0.0833,
+          "n_active": 198,
+          "examples": [
+            "Are you stressed? The workplace has become increasingly competitive, family life has its never - ending complications,and when you step outside, you have to dea",
+            "Popularly regarded as one of the best books to be borne from World War I, A Farewell to Arms is a poignant and unforgettable semi-autobiographical story of an A",
+            "Dying to be Me is about a woman's journey of self-discovery and how she learnt to utilise the power within her to cure herself from cancer. The author, Anita Mo"
+          ]
+        },
+        {
+          "latent": 194,
+          "score": 0.0832,
+          "n_active": 156,
+          "examples": [
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. "
+          ]
+        },
+        {
+          "latent": 219,
+          "score": 0.082,
+          "n_active": 159,
+          "examples": [
+            "Lavanya Gogoi is from the scenic hills of Shillong while Rajveer Saini belongs to the shahi city of Patiala. Worlds apart from one another, the two land up next",
+            "'An important and timely book . . . Bigotry doesn't stop at Karni Sena going on a rampage over a Padmaavat, it comes home in the form of a child who thinks noth",
+            "Prep for the GRE on-the-go with 500 essential flashcards to help you build strong vocabulary skills and master the Verbal Reasoning section of the test. Kaplan'"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 325,
+      "n_removed": 187,
+      "threshold": 0.0746,
+      "passed_test": 6,
+      "removed_norm_ratio": 0.5217,
+      "var_share_kept": 0.5092,
+      "var_share_sae_error": 0.1966,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 213,
+          "score": 0.107,
+          "n_active": 505,
+          "examples": [
+            "How to Play Guitar Step by Step: The Complete Guide to Mastering the Guitar (Step By Step Book & DVD)",
+            "C & C++ Interview Questions You'll Most Likely Be Asked: 4 (Job Interview Questions)",
+            "Runner\u2019s World Race Everything: How to Conquer Any Race at Any Distance in Any Environment and Have Fun Doing It"
+          ]
+        },
+        {
+          "latent": 338,
+          "score": 0.0998,
+          "n_active": 228,
+          "examples": [
+            "The Complete Novels of Sherlock Holmes (Deluxe Hardbound Edition)",
+            "The Memoirs of Sherlock Holmes",
+            "The Adventures of Sherlock Holmes and the Memoirs of Sherlock Holmes (Penguin Classics)"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.0913,
+          "n_active": 138,
+          "examples": [
+            "Piano Exam Pieces 2019 & 2020, ABRSM Grade 2: Selected from the 2019 & 2020 syllabus (ABRSM Exam Pieces)",
+            "General Knowledge 2019",
+            "Trinity College London Piano Exam Pieces & Exercises 2018-2020. Grade 4 (with CD) (Piano 2018-2020)"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0907,
+          "n_active": 208,
+          "examples": [
+            "Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming",
+            "The Official Cambridge Guide to IELTS Student's Book with Answers with DVD-ROM (Cambridge English)",
+            "The Archie Wedding: Archie in Will You Marry Me? (The Married Life Series)"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0883,
+          "n_active": 229,
+          "examples": [
+            "The Complete MAUS",
+            "Complete ABAP",
+            "The Complete Novels (Penguin Classics Deluxe editions)"
+          ]
+        }
+      ]
+    }
+  }
+}

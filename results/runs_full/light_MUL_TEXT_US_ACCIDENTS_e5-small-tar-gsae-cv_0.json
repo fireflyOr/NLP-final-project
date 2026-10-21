@@ -1,0 +1,181 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-tar-gsae-cv",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.26591494608538196,
+  "test_error": 0.26591494608538196,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9804659279667503,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 980.9619867801666,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1659,
+      "n_groups": 1658,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.5,
+      "n_removed": 829,
+      "val_loss": {
+        "0.0": 0.47672,
+        "0.1": 0.4776,
+        "0.25": 0.48062,
+        "0.5": 0.47521,
+        "0.75": 0.47787
+      },
+      "frac_groups_no_signal": 0.644,
+      "var_share_removed": 0.3813
+    },
+    "City": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1869,
+      "n_groups": 1868,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.5,
+      "n_removed": 934,
+      "val_loss": {
+        "0.0": 0.48137,
+        "0.1": 0.4862,
+        "0.25": 0.46991,
+        "0.5": 0.46972,
+        "0.75": 0.47107
+      },
+      "frac_groups_no_signal": 0.632,
+      "var_share_removed": 0.4963
+    },
+    "County": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1469,
+      "n_groups": 1468,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.75,
+      "n_removed": 1101,
+      "val_loss": {
+        "0.0": 0.4696,
+        "0.1": 0.46698,
+        "0.25": 0.45802,
+        "0.5": 0.45027,
+        "0.75": 0.44918
+      },
+      "frac_groups_no_signal": 0.629,
+      "var_share_removed": 0.5657
+    },
+    "Description": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1541,
+      "n_groups": 1524,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.75,
+      "n_removed": 1155,
+      "val_loss": {
+        "0.0": 0.29315,
+        "0.1": 0.28814,
+        "0.25": 0.2959,
+        "0.5": 0.2869,
+        "0.75": 0.28091
+      },
+      "frac_groups_no_signal": 0.76,
+      "var_share_removed": 0.497
+    },
+    "End_Time": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 465,
+      "n_groups": 413,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.75,
+      "n_removed": 347,
+      "val_loss": {
+        "0.0": 0.44844,
+        "0.1": 0.43931,
+        "0.25": 0.44543,
+        "0.5": 0.43728,
+        "0.75": 0.4329
+      },
+      "frac_groups_no_signal": 0.639,
+      "var_share_removed": 0.5955
+    },
+    "Start_Time": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 482,
+      "n_groups": 443,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.5,
+      "n_removed": 241,
+      "val_loss": {
+        "0.0": 0.4502,
+        "0.1": 0.44006,
+        "0.25": 0.4395,
+        "0.5": 0.42979,
+        "0.75": 0.4392
+      },
+      "frac_groups_no_signal": 0.609,
+      "var_share_removed": 0.2147
+    },
+    "Street": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1904,
+      "n_groups": 1893,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.75,
+      "n_removed": 1428,
+      "val_loss": {
+        "0.0": 0.45773,
+        "0.1": 0.45388,
+        "0.25": 0.44152,
+        "0.5": 0.44905,
+        "0.75": 0.43906
+      },
+      "frac_groups_no_signal": 0.639,
+      "var_share_removed": 0.6195
+    },
+    "Weather_Timestamp": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 478,
+      "n_groups": 433,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.75,
+      "n_removed": 358,
+      "val_loss": {
+        "0.0": 0.43264,
+        "0.1": 0.43121,
+        "0.25": 0.43118,
+        "0.5": 0.43025,
+        "0.75": 0.42589
+      },
+      "frac_groups_no_signal": 0.584,
+      "var_share_removed": 0.5063
+    },
+    "Zipcode": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1297,
+      "n_groups": 1251,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.0,
+      "n_removed": 0,
+      "val_loss": {
+        "0.0": 0.46328,
+        "0.1": 0.47012,
+        "0.25": 0.47717,
+        "0.5": 0.46288,
+        "0.75": 0.47209
+      },
+      "frac_groups_no_signal": 0.605,
+      "var_share_removed": 0.0
+    }
+  }
+}

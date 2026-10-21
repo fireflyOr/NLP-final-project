@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.9054435484329705,
+  "test_error": 0.9054435484329705,
+  "course_metric": "r2",
+  "course_score": 0.7912822625707607,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 83.86296677589417,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 461,
+      "n_kept": 329,
+      "n_removed": 183,
+      "threshold": 0.0756,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.543,
+      "var_share_kept": 0.4957,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 186,
+          "score": 0.087,
+          "n_active": 38,
+          "examples": [
+            "Fairy Tales from Brazil",
+            "The Indian Fairy Book\nFrom the Original Legends",
+            "Indian Fairy Tales"
+          ]
+        },
+        {
+          "latent": 357,
+          "score": 0.0809,
+          "n_active": 71,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.0659,
+          "n_active": 309,
+          "examples": [
+            "The Crimson Fairy Book",
+            "THE FAIRY BOOK.",
+            "Journeys Through Bookland, Vol. 10."
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0645,
+          "n_active": 27,
+          "examples": [
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm"
+          ]
+        },
+        {
+          "latent": 396,
+          "score": 0.0641,
+          "n_active": 51,
+          "examples": [
+            "The Lilac Fairy Book",
+            "THE FAIRY BOOK.",
+            "The Firelight Fairy Book"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 266,
+      "n_removed": 246,
+      "threshold": 0.0701,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.6947,
+      "var_share_kept": 0.5155,
+      "var_share_sae_error": 0.0864,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 197,
+          "score": 0.0705,
+          "n_active": 181,
+          "examples": [
+            "Prime Minister Asquith",
+            "Prime Minister Asquith",
+            "R.M. Ballantyne"
+          ]
+        },
+        {
+          "latent": 362,
+          "score": 0.0704,
+          "n_active": 117,
+          "examples": [
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF).",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF).",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF)."
+          ]
+        },
+        {
+          "latent": 30,
+          "score": 0.0686,
+          "n_active": 165,
+          "examples": [
+            "Haitham Hajjo and Asya Rolls",
+            "On Dec. 18, 1914, the new Russian Minister to Servia, Prince Troubetzko\u00ef, presented his credentials to the Servian Crown Prince Alexander, whom he addressed as ",
+            "Gertrude Franklin Horn Atherton"
+          ]
+        },
+        {
+          "latent": 28,
+          "score": 0.0683,
+          "n_active": 261,
+          "examples": [
+            "Traditional San story",
+            "Traditional San story",
+            "Traditional San story"
+          ]
+        },
+        {
+          "latent": 489,
+          "score": 0.0665,
+          "n_active": 120,
+          "examples": [
+            "From American Agriculturist",
+            "The Professors of Germany",
+            "Knowles and Malory"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 158,
+      "n_kept": 416,
+      "n_removed": 96,
+      "threshold": 0.0666,
+      "passed_test": 0,
+      "removed_norm_ratio": 1.8608,
+      "var_share_kept": 0.4114,
+      "var_share_sae_error": 0.0009,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 367,
+          "score": 0.0355,
+          "n_active": 24,
+          "examples": [
+            "sulphurous",
+            "cypher, cypher, cyphers, cypher",
+            "colour, vigour, homoeopathy"
+          ]
+        },
+        {
+          "latent": 5,
+          "score": 0.0297,
+          "n_active": 27,
+          "examples": [
+            "levelling",
+            "millilitres",
+            "labouring"
+          ]
+        },
+        {
+          "latent": 2,
+          "score": 0.0294,
+          "n_active": 36,
+          "examples": [
+            "coloured, favourites",
+            "carolled, colour",
+            "favourite, programme, colours"
+          ]
+        },
+        {
+          "latent": 51,
+          "score": 0.0231,
+          "n_active": 32,
+          "examples": [
+            "organised, rumours",
+            "offence, rumours",
+            "litres, litres, litre, litre, litre, litres, litre, litre, litres"
+          ]
+        },
+        {
+          "latent": 428,
+          "score": 0.0229,
+          "n_active": 23,
+          "examples": [
+            "carolled, colour",
+            "coloured, favourites",
+            "favourite, programme, colours"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 327,
+      "n_removed": 185,
+      "threshold": 0.0748,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5028,
+      "var_share_kept": 0.4479,
+      "var_share_sae_error": 0.2565,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 195,
+          "score": 0.1015,
+          "n_active": 236,
+          "examples": [
+            "Many animals came from the bush to join in the dancing and singing. Lion brought his fire sticks. He rubbed the sticks, rubbed and rubbed. Soon a little smoke a",
+            "Civil rights are rights that all people in a country have. The civil rights of a country apply to all the citizens within its borders. These rights are given by",
+            "About six weeks after the beginning of the half, as Tom and Arthur were sitting one night before supper beginning their verses, Arthur suddenly stopped, and loo"
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.0947,
+          "n_active": 289,
+          "examples": [
+            "There lived a beautiful girl. One day she was very hungry. She thought of ways of getting something to eat. She met a man who asked her, \"How are you, young gir",
+            "There was a hyena and a donkey who lived near a city. They met by chance and became friends. They made an agreement to share food, and to defend themselves toge",
+            "Cat and Dog walk. They walk in their village. Then they see an egg. The egg is in the grass. The egg is alone in the grass. The egg is all alone. Cat and Dog wa"
+          ]
+        },
+        {
+          "latent": 454,
+          "score": 0.0886,
+          "n_active": 324,
+          "examples": [
+            "There was a terrible hubbub in the henhouse. The Rooster squalled so loudly that he waked up every hen in the place. And when they heard him crying that a skunk",
+            "One day last summer, as I sat on the bank of the river, looking at the pretty blue rippling water, who should come walking proudly down to the water's-edge but,",
+            "Mrs. F., a lady living not far from Boston, has a bantam hen, who, every spring morning, walks into the house, and lays an egg in a rocking-chair.\nAfter laying "
+          ]
+        },
+        {
+          "latent": 377,
+          "score": 0.0769,
+          "n_active": 220,
+          "examples": [
+            "Sif was Thor's wife.\nSif had long golden hair. Thor was very proud of Sif's golden hair.\nThor was always going on long journeys. One day he went off and left Si",
+            "Early last spring, Mistress Jenny Wren took possession of the little box nailed to a tree immediately in front of Mr. Philip's house. She had not really moved i",
+            "Thor was always going on long journeys. One day he went off and left Sif alone. She went out on the porch and fell asleep.\nLoki came along. He was always playin"
+          ]
+        },
+        {
+          "latent": 339,
+          "score": 0.0651,
+          "n_active": 171,
+          "examples": [
+            "A V6 engine, often just called a V6, is an internal combustion engine with six cylinders. The engine has three cylinders on each side called banks. The two bank",
+            "There is no specific scientific calculator prescribed for this subject. Any scientific, nonprogrammable calculator is suitable for your studies. Different scien",
+            "The author then briefly described the modern marine engine and boiler. The three great types of compound engines may be placed as follows in the order of their "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 278,
+      "n_removed": 234,
+      "threshold": 0.0768,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5931,
+      "var_share_kept": 0.4037,
+      "var_share_sae_error": 0.2076,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 184,
+          "score": 0.0626,
+          "n_active": 173,
+          "examples": [
+            "Cat and Dog:\nCat is yellow",
+            "HOW TINY HARE MET CAT",
+            "THE BLACK CAT"
+          ]
+        },
+        {
+          "latent": 69,
+          "score": 0.0555,
+          "n_active": 166,
+          "examples": [
+            "Havelok Wins Back His Kingdom",
+            "The Lost Rabbit",
+            "Hare and Tortoise (Again!)"
+          ]
+        },
+        {
+          "latent": 308,
+          "score": 0.046,
+          "n_active": 186,
+          "examples": [
+            "OPEN LETTER TO PRESIDENT WILSON",
+            "Remarks of Senator John F. Kennedy on Young People and International Service",
+            "John Marshall and the Constitution"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0459,
+          "n_active": 201,
+          "examples": [
+            "Kidnapped",
+            "Taken by the Enemy",
+            "The smell thief"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.0457,
+          "n_active": 132,
+          "examples": [
+            "Excerpt from \u201cBartleby, the Scrivener: A Story of Wall-Street\u201d",
+            "Excerpt from Peter Pan: \"When Wendy Grew Up\"",
+            "he Armies of Labor\nVolume 40 in The Chronicles Of America Series"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 226,
+      "n_removed": 286,
+      "threshold": 0.0807,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.744,
+      "var_share_kept": 0.3239,
+      "var_share_sae_error": 0.0556,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 152,
+          "score": 0.0551,
+          "n_active": 425,
+          "examples": [
+            "http://www.gutenberg.org/files/22420/22420-h/22420-h.htm",
+            "http://www.gutenberg.org/files/22420/22420-h/22420-h.htm",
+            "http://www.gutenberg.org/files/22420/22420-h/22420-h.htm#Page_86"
+          ]
+        },
+        {
+          "latent": 173,
+          "score": 0.0495,
+          "n_active": 108,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Temperature-programmed_reduction",
+            "https://www.commonlit.org/texts/what-is-a-spacewalk",
+            "https://www.commonlit.org/texts/what-are-clouds"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0454,
+          "n_active": 204,
+          "examples": [
+            "https://www.commonlit.org/texts/the-1972-andes-flight-disaster",
+            "http://www.gutenberg.org/files/19821/19821-h/19821-h.htm#tug",
+            "http://www.online-literature.com/george-gissing/ionian-sea/"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.0413,
+          "n_active": 81,
+          "examples": [
+            "https://www.commonlit.org/texts/the-little-girl-who-would-not-work-1",
+            "https://www.commonlit.org/texts/joseph-s-dreams-from-genesis-37",
+            "https://www.commonlit.org/texts/the-lady-or-the-tiger"
+          ]
+        },
+        {
+          "latent": 282,
+          "score": 0.0397,
+          "n_active": 80,
+          "examples": [
+            "https://www.commonlit.org/texts/excerpt-from-the-autobiography-of-an-ex-colored-man",
+            "https://www.commonlit.org/texts/tinker-v-des-moines-independent-community-school-district-the-majority-opinion",
+            "http://www.gutenberg.org/files/18880/18880-h/18880-h.htm#Story_of_the_Man_Who_Fired_on_the_Rheims_Cathedral"
+          ]
+        }
+      ]
+    }
+  }
+}

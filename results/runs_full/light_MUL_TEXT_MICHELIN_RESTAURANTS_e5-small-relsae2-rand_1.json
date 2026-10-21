@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7381005589910344,
+  "test_error": 0.7381005589910344,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8866141673024804,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 105.77362656593323,
+  "diagnostics": {
+    "Address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 198,
+      "n_removed": 314,
+      "threshold": 0.0438,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6891,
+      "var_share_kept": 0.2507,
+      "var_share_sae_error": 0.2326,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 232,
+          "score": 0.0303,
+          "n_active": 1258,
+          "examples": [
+            "1050 20th St., Ste. 180, Sacramento, CA, 95811, USA",
+            "Street 20, Nadd Al Sheba Road, Nad Al Sheba 1, Dubai",
+            "20 Spring St., New York, NY, 10012, USA"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.0301,
+          "n_active": 787,
+          "examples": [
+            "The Centennial Hall Complex Wroclaw Congress Centre Wystawowa 1, Wroc\u0142aw, 51-618, Poland",
+            "41 Fore Street, Topsham, EX3 0HU, United Kingdom",
+            "Rue Naxhelet 1, Wanze, 4520, Belgium"
+          ]
+        },
+        {
+          "latent": 408,
+          "score": 0.0299,
+          "n_active": 649,
+          "examples": [
+            "Colima 134, Roma Norte, Cuauht\u00e9moc, 06700, Mexico",
+            "Colima 166, Roma Norte, Cuauht\u00e9moc, 06700, Mexico",
+            "Colima 159 1A, Roma Norte, Cuauht\u00e9moc, 06700, Mexico"
+          ]
+        },
+        {
+          "latent": 105,
+          "score": 0.0297,
+          "n_active": 465,
+          "examples": [
+            "Korunn\u00ed 1304/92, Prague, 101 00, Czechia",
+            "Lodeck\u00e1 4, Prague, 110 00, Czechia",
+            "N\u00e1m\u0115st\u00ed M\u00edru 6, Prague, 120 00, Czechia"
+          ]
+        },
+        {
+          "latent": 127,
+          "score": 0.0295,
+          "n_active": 789,
+          "examples": [
+            "The Macallan Estate, Easter Elchies, Aberlour, AB38 9RX, United Kingdom",
+            "Cardamom Building, 31G Shad Thames, Butlers Wharf, London, SE1 2YR, United Kingdom",
+            "vicolo della Chiesa 8, loc. Perno, Monforte d'Alba, 12065, Italy"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 499,
+      "n_kept": 347,
+      "n_removed": 165,
+      "threshold": 0.0504,
+      "passed_test": 32,
+      "removed_norm_ratio": 0.4889,
+      "var_share_kept": 0.568,
+      "var_share_sae_error": 0.0028,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 309,
+          "score": 0.1007,
+          "n_active": 867,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Innovative, Creative"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.0995,
+          "n_active": 735,
+          "examples": [
+            "Creative, Seafood",
+            "Creative, Seafood",
+            "Creative, Seafood"
+          ]
+        },
+        {
+          "latent": 319,
+          "score": 0.0872,
+          "n_active": 1070,
+          "examples": [
+            "Modern British, Creative",
+            "Creative British",
+            "Creative British"
+          ]
+        },
+        {
+          "latent": 198,
+          "score": 0.0835,
+          "n_active": 325,
+          "examples": [
+            "Innovative",
+            "Innovative",
+            "Innovative"
+          ]
+        },
+        {
+          "latent": 0,
+          "score": 0.0774,
+          "n_active": 2134,
+          "examples": [
+            "Creative, Fusion",
+            "Creative, Fusion",
+            "Creative, Fusion"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 330,
+      "n_removed": 182,
+      "threshold": 0.046,
+      "passed_test": 10,
+      "removed_norm_ratio": 0.4666,
+      "var_share_kept": 0.3459,
+      "var_share_sae_error": 0.3712,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 451,
+          "score": 0.0606,
+          "n_active": 826,
+          "examples": [
+            "A veritable culinary institution, De Bokkedoorns was established in 1961 and has held on to its two MICHELIN stars for the past 30 years. Owner Pascal Beeren, w",
+            "A diminutive, unpretentious and informal restaurant with a name that pays homage to the traditional \u201cberbena\u201d festivals. At the centre of everything here is Car",
+            "Exclusivity is a word that comes to mind when thinking about this small restaurant in the F\u00e4hrhaus hotel: a prime location on the Moselle riverfront, an elegant"
+          ]
+        },
+        {
+          "latent": 131,
+          "score": 0.0526,
+          "n_active": 478,
+          "examples": [
+            "With a slogan like Volg de natuur (\"Follow nature\") and a name that refers to the fertile, clay-rich soil of the area, it is immediately clear that terroir is a",
+            "It isn\u2019t often you hear of a restaurant that gives free rein to its chef\u2019s desire and passion for food, life and nature\u2014yet at Evvai that is exactly what you\u2019ll",
+            "A standout name in Catalan cuisine, both for its setting in a delightful farmhouse and the talent of chef Nandu Jubany, a man with a passion for motorbikes to t"
+          ]
+        },
+        {
+          "latent": 170,
+          "score": 0.052,
+          "n_active": 987,
+          "examples": [
+            "Housed in the private beach club of the same name, this elegant restaurant serves fish and seafood dishes made from carefully selected and top-quality ingredien",
+            "This picturesque 19C blue and white house stands on the boulevard that skirts the immense beach. Take a seat in a contemporary dining room overlooking the sea a",
+            "It\u2019s the perfect place to visit after a day at the beach or simply to enjoy a relaxing seaside meal. Located within a nature reserve at Praia do Anc\u00e3o, this ven"
+          ]
+        },
+        {
+          "latent": 491,
+          "score": 0.0491,
+          "n_active": 561,
+          "examples": [
+            "Located on the ground floor of the sumptuous Corinthia Hotel, Mezzogiorno spans two suitably elegant dining rooms: the main one is a high-ceilinged space with a",
+            "The Italian-trained chef runs this restaurant with his wife. A chance encounter with a fishmonger in Shizuoka Prefecture made the seafood of Suruga Bay the star",
+            "It's unusual to find spin-offs that manage to live up to the standards set by the original, but that is exactly what has happened in this incredible restaurant,"
+          ]
+        },
+        {
+          "latent": 149,
+          "score": 0.048,
+          "n_active": 784,
+          "examples": [
+            "This third-generation family-run street food joint has been offering tasty boat noodles for over five decades. Try their pork or beef boat noodles for great val",
+            "This shop specialises in beef noodle soup \u2013 choose between sliced beef, brisket, or both. As opposed to raw beef instantly blanched in the hot broth, its signat",
+            "Order the Ji Ji noodle bowl \u2013 noodle soup or \u2018dry\u2019 noodles are topped with char siew, deep-fried wonton and veggies and served with wonton soup. Pork crackling "
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 436,
+      "n_kept": 424,
+      "n_removed": 88,
+      "threshold": 0.0498,
+      "passed_test": 36,
+      "removed_norm_ratio": 0.2435,
+      "var_share_kept": 0.7615,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 389,
+          "score": 0.1205,
+          "n_active": 777,
+          "examples": [
+            "Garden or park,Interesting wine list,Terrace,Wheelchair access",
+            "Brunch,Interesting wine list,Terrace,Wheelchair access",
+            "Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 480,
+          "score": 0.1166,
+          "n_active": 705,
+          "examples": [
+            "Garden or park,Interesting wine list,Wheelchair access",
+            "Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Counter dining,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 363,
+          "score": 0.1138,
+          "n_active": 1343,
+          "examples": [
+            "Credit cards not accepted,Interesting wine list",
+            "Credit cards not accepted,Interesting wine list",
+            "Credit cards not accepted,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 242,
+          "score": 0.1097,
+          "n_active": 1024,
+          "examples": [
+            "Air conditioning,Brunch,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Brunch,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 123,
+          "score": 0.1094,
+          "n_active": 635,
+          "examples": [
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 111,
+      "n_removed": 401,
+      "threshold": 0.0475,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.8685,
+      "var_share_kept": 0.2111,
+      "var_share_sae_error": 0.0827,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 356,
+          "score": 0.0253,
+          "n_active": 473,
+          "examples": [
+            "Asheville, NC, USA",
+            "Asheville, NC, USA",
+            "Asheville, NC, USA"
+          ]
+        },
+        {
+          "latent": 442,
+          "score": 0.0244,
+          "n_active": 524,
+          "examples": [
+            "Gluringen Goms, Switzerland",
+            "Goulles, France",
+            "Goult, France"
+          ]
+        },
+        {
+          "latent": 251,
+          "score": 0.0226,
+          "n_active": 520,
+          "examples": [
+            "Fasano del Garda, Italy",
+            "Fasano del Garda, Italy",
+            "Garda, Italy"
+          ]
+        },
+        {
+          "latent": 491,
+          "score": 0.0214,
+          "n_active": 621,
+          "examples": [
+            "Chiclana de la Frontera, Spain",
+            "Castrocaro Terme, Italy",
+            "Perpignan, France"
+          ]
+        },
+        {
+          "latent": 462,
+          "score": 0.02,
+          "n_active": 503,
+          "examples": [
+            "P\u00e9cs, Hungary",
+            "Miskolc, Hungary",
+            "Sienna, Italy"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 276,
+      "n_removed": 236,
+      "threshold": 0.0478,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5741,
+      "var_share_kept": 0.3771,
+      "var_share_sae_error": 0.2352,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 123,
+          "score": 0.0431,
+          "n_active": 432,
+          "examples": [
+            "Louroc - H\u00f4tel du Cap-Eden-Roc",
+            "Bistrot 1936 - Domaine du Limonay",
+            "La Bastide Bourrelly - Mathias Dandine"
+          ]
+        },
+        {
+          "latent": 471,
+          "score": 0.0385,
+          "n_active": 595,
+          "examples": [
+            "Sushi Shikon",
+            "Shibari Sushi and Grill",
+            "Cracco in Galleria"
+          ]
+        },
+        {
+          "latent": 390,
+          "score": 0.0365,
+          "n_active": 194,
+          "examples": [
+            "Runner Up",
+            "Fleher Hof",
+            "Aschbacher Hof"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0346,
+          "n_active": 428,
+          "examples": [
+            "Pollini at Ladbroke Hall",
+            "Hongtu Hall",
+            "Boys Hall"
+          ]
+        },
+        {
+          "latent": 477,
+          "score": 0.033,
+          "n_active": 379,
+          "examples": [
+            "Bolle",
+            "Boma",
+            "Borsa Restaurant"
+          ]
+        }
+      ]
+    }
+  }
+}

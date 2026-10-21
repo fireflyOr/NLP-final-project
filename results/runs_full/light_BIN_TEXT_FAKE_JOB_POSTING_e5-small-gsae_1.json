@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9026774808751366,
+  "test_error": 0.09732251912486345,
+  "course_metric": "auroc",
+  "course_score": 0.9026774808751366,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 48.67457318305969,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1275,
+      "n_removed": 1276,
+      "var_share_removed": 0.5017,
+      "var_share_sae_error": 0.1052,
+      "top": [
+        {
+          "group": 1650,
+          "latents": [
+            509
+          ],
+          "gain_margin": 640.17,
+          "examples": [
+            "Alliance is a Nationwide Business Services provider (California) based, nationally established credit card processor looking for MONEY MOTIVATED outside sales r",
+            "Part Time Cash Jobs To Immediate Starts.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra Per ",
+            "Make money from home . Earn up to $100 a day posting ads on the internet &amp; taking inbound calls. Please call me @ #PHONE_3ab7393b91c85a9f1aa761c4b4d2ece49e6"
+          ]
+        },
+        {
+          "group": 1812,
+          "latents": [
+            776
+          ],
+          "gain_margin": 451.67,
+          "examples": [
+            "We need good techs with either Cable or Satellite experience.We can train.\u00a0Must have truck\u00a0Start TodayPaid Mileage$4,000-$7,000 a month to startPaid weekly***10",
+            "- Work from home anywhere in New Zealand!\u00a0- Starting 15-20 hours a week\u00a0- Late Evening and Night work \u2013 7 days a week available\u00a0- Competitive hourly rate\u00a0Your s",
+            "The desired candidate will work in a fast paced office with many calls to answer and people to greet.\u00a0 Each day you will review all contacts from our advertisem"
+          ]
+        },
+        {
+          "group": 791,
+          "latents": [
+            856
+          ],
+          "gain_margin": 311.2,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 1766,
+          "latents": [
+            709
+          ],
+          "gain_margin": 305.85,
+          "examples": [
+            "Description of the Church Administrative AssistantThe Church Administrative Assistant serves under the direct supervision of the Senior Pastor, to manage all ac",
+            "SunnyView Dental is looking for an *experienced* dental receptionist leading to an office manager position in our GEORGETOWN location. We are Canada's fastest g",
+            "We the Montcalm Hotel are looking for the position of a Receptionist to work here in London, Interested persons are encouraged to send their resume application "
+          ]
+        },
+        {
+          "group": 72,
+          "latents": [
+            1960
+          ],
+          "gain_margin": 288.86,
+          "examples": [
+            "Immediate Openings!!\u00a0 Multiple positions for CDL Class A drivers!Drivers will be responsible for completing LOCAL Deliveries for distribution and manufacturing ",
+            "Well Paid Cash Jobs To Start Immediately. No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $350 To $400 Extra Pe",
+            "Part Time Cash Jobs To Immediate Starts.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra Per "
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 284,
+      "n_groups": 255,
+      "n_multi_groups": 17,
+      "n_groups_dropped": 221,
+      "n_removed": 249,
+      "var_share_removed": 0.8803,
+      "var_share_sae_error": 0.0043,
+      "top": [
+        {
+          "group": 149,
+          "latents": [
+            552
+          ],
+          "gain_margin": 175.07,
+          "examples": [
+            "20-3075",
+            "24900-31200",
+            "20-25"
+          ]
+        },
+        {
+          "group": 160,
+          "latents": [
+            230
+          ],
+          "gain_margin": 73.49,
+          "examples": [
+            "1600-1700",
+            "5000-6000",
+            "3000-6000"
+          ]
+        },
+        {
+          "group": 167,
+          "latents": [
+            965
+          ],
+          "gain_margin": 63.47,
+          "examples": [
+            "52000-78000",
+            "7200-1380000",
+            "52000-100000"
+          ]
+        },
+        {
+          "group": 128,
+          "latents": [
+            1832
+          ],
+          "gain_margin": 45.87,
+          "examples": [
+            "1000-1000",
+            "1000-20000",
+            "1000-10000"
+          ]
+        },
+        {
+          "group": 224,
+          "latents": [
+            761
+          ],
+          "gain_margin": 35.9,
+          "examples": [
+            "22-61000",
+            "196000-230000",
+            "21-63000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1984,
+      "n_groups": 1977,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1372,
+      "n_removed": 1373,
+      "var_share_removed": 0.5055,
+      "var_share_sae_error": 0.0251,
+      "top": [
+        {
+          "group": 1837,
+          "latents": [
+            389
+          ],
+          "gain_margin": 378.78,
+          "examples": [
+            "Administrative / Proofreader / HTML Editor",
+            "Administrative Workers Wanted",
+            "Administrative Support"
+          ]
+        },
+        {
+          "group": 1656,
+          "latents": [
+            209
+          ],
+          "gain_margin": 295.75,
+          "examples": [
+            "Operating Room Director  ",
+            "RN, SURGERY UNIT DIRECTOR  ",
+            "Director of Peri-Anesthesia  "
+          ]
+        },
+        {
+          "group": 781,
+          "latents": [
+            817
+          ],
+          "gain_margin": 210.88,
+          "examples": [
+            "Caregiver's and CNA's needed ASAP",
+            "Respite caregiver needed ASAP 4 days and 3 days",
+            "URGENT HIRING For Web Designer...!!!"
+          ]
+        },
+        {
+          "group": 1941,
+          "latents": [
+            986
+          ],
+          "gain_margin": 204.94,
+          "examples": [
+            "Administrative Positions",
+            "General Secretary",
+            "Senior Local Government Affairs Representative"
+          ]
+        },
+        {
+          "group": 742,
+          "latents": [
+            1247
+          ],
+          "gain_margin": 169.38,
+          "examples": [
+            "Dental Receptionist / Dental Office Manager",
+            "Occupational Therapist",
+            "Occupational Therapy"
+          ]
+        }
+      ]
+    }
+  }
+}

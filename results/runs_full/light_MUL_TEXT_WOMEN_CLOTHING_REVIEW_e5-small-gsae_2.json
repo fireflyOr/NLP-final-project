@@ -1,0 +1,170 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7420018023011778,
+  "test_error": 0.7420018023011778,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8962271813039842,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 73.89002656936646,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2036,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 852,
+      "n_removed": 853,
+      "var_share_removed": 0.282,
+      "var_share_sae_error": 0.1123,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            76,
+            944
+          ],
+          "gain_margin": 4792.36,
+          "examples": [
+            "The shirt cuts too high up and is very awkward looking on. sent it back. wouldn't buy even on sale.",
+            "Runs small. arms very short and hits in the wrong place across your chest. would not recommend.",
+            "Wanted to like this top but it looks terrible and does not lay right. the bust line is not tight enough to contrast the rest of the top being flowy. does not gi"
+          ]
+        },
+        {
+          "group": 20,
+          "latents": [
+            2016
+          ],
+          "gain_margin": 2082.8,
+          "examples": [
+            "This dress was very boxy and unflattering. i really wanted to like it because the blue and white details were so pretty but it had to go back.",
+            "Horrible fit not true to size again aline outside of the dress and a very tight camisole underneath",
+            "I had high hopes for this top but it was too big and too much fabric."
+          ]
+        },
+        {
+          "group": 1003,
+          "latents": [
+            1373
+          ],
+          "gain_margin": 1388.64,
+          "examples": [
+            "This is a great cut and looks good on. it is a very poor quality material. it balled and frayed in two wears. i returned it to the store.",
+            "Got this in the blue and was so excited. while it looks cute, someone had clearly bought this, worn it, and returned it. it had human and dog hair all over it. ",
+            "Much lower quality than other robes i have purchased"
+          ]
+        },
+        {
+          "group": 643,
+          "latents": [
+            1171
+          ],
+          "gain_margin": 1318.49,
+          "examples": [
+            "Very disappointed when i received this. the colors and ombre fabric are beautiful. beading and embroidery make it a even more unique top however the shape ruins",
+            "Uhm no. oh dear, no. i was initially drawn to this blouse's lovely fabric, the color and pattern are truly stunning. i decided to give it a try because it seeme",
+            "Was really excited for this dress but should have paid more attention to the material it was made with. for the price of the dress, it felt very cheap. i didn't"
+          ]
+        },
+        {
+          "group": 1986,
+          "latents": [
+            903
+          ],
+          "gain_margin": 1172.11,
+          "examples": [
+            "It doesn't work with me only because i have very skinny arm. i can not handle the arm part of the dress. it is still very pretty though. i would keep it if i fi",
+            "Bought the dress online and it only has an eye and hook at the top. the waist has no stretch and their isn't a zipper. you have to be a contortionist to get it ",
+            "This top runs super small in the upper arms, shoulder area..could not even stretch out my arms! ...other then that major problem, the length and body fit were p"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1829,
+      "n_groups": 1813,
+      "n_multi_groups": 15,
+      "n_groups_dropped": 1066,
+      "n_removed": 1071,
+      "var_share_removed": 0.4369,
+      "var_share_sae_error": 0.0188,
+      "top": [
+        {
+          "group": 1791,
+          "latents": [
+            76
+          ],
+          "gain_margin": 4917.57,
+          "examples": [
+            "Poor quality, unflattering fit",
+            "Poorly made, static, and too tight.",
+            "Horrible fabric!"
+          ]
+        },
+        {
+          "group": 520,
+          "latents": [
+            1141
+          ],
+          "gain_margin": 4798.88,
+          "examples": [
+            "Amazing everything !!!",
+            "My best retailer purchase, ever",
+            "Best shorts...ever!"
+          ]
+        },
+        {
+          "group": 18,
+          "latents": [
+            870,
+            918
+          ],
+          "gain_margin": 2780.15,
+          "examples": [
+            "Doesn't fit",
+            "Didn't work!",
+            "No"
+          ]
+        },
+        {
+          "group": 902,
+          "latents": [
+            1034
+          ],
+          "gain_margin": 2494.65,
+          "examples": [
+            "Cute but too many fit/fabric issues",
+            "Lovely, but needs better sizing",
+            "Nice quality but too short for my tall frame"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            51,
+            1005
+          ],
+          "gain_margin": 1786.2,
+          "examples": [
+            "Like but not love",
+            "Triangles aren't my shape",
+            "Not your everyday cardi"
+          ]
+        }
+      ]
+    }
+  }
+}

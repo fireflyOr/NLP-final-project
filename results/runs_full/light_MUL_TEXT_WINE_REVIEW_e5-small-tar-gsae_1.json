@@ -1,0 +1,170 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2469050429789896,
+  "test_error": 1.2469050429789896,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9753395304788963,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 293.3421301841736,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1402,
+      "n_groups": 1389,
+      "n_multi_groups": 13,
+      "n_groups_dropped": 163,
+      "n_removed": 163,
+      "var_share_removed": 0.0087,
+      "var_share_sae_error": 0.024,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            694,
+            934
+          ],
+          "gain_margin": 19448.65,
+          "examples": [
+            "Racy, clean and seemingly bone dry, this wine is elegant and almost shy in its approach. Food friendly and Chablis-like, it has plenty of citrus, cream, mineral",
+            "From a quartet of cool, coastal vineyard sites, including Platt, a single-vineyard designate for the producer, this is a crisp expression of honeycomb and green",
+            "High in acidity and well-defined minerality, this wine is also soft and velvety, with a sensibility of crushed rocks and preserved lemon. From a younger block o"
+          ]
+        },
+        {
+          "group": 11,
+          "latents": [
+            494,
+            1795
+          ],
+          "gain_margin": 11977.77,
+          "examples": [
+            "Aromas recall white spring flower, citrus and a hint of herb. The fresh palate offers nectarine and lemon zest alongside brisk acidity that leaves a clean finis",
+            "Fresh, totally dry, very fruity, this is a great quaffing white wine. Enjoy the flavors of white peach, citrus, bright and vivid acidity. Drink now. Screwcap.",
+            "Subtle notes of earth mix with summer blossom, along with hints of honey, quince and zesty, fresh lemon peel. These aromas dance and take turns on the dry, bala"
+          ]
+        },
+        {
+          "group": 8,
+          "latents": [
+            20,
+            1928
+          ],
+          "gain_margin": 10227.97,
+          "examples": [
+            "Rich Bordeaux, with concentrated blackberry fruits and dry tannins. There is a dry core and intense acidity. The wine is ready to drink, but could mature for 1\u2013",
+            "88-90 Barrel sample. Ripe and sweet, plush fruit, balanced sufficiently with acidity and some firm tannic character. The wine is chunky, but there is balance.",
+            "88-90 Solid, chunky wine, firmly tannic and tough. The weight of fruit is there to give promise for the future."
+          ]
+        },
+        {
+          "group": 1260,
+          "latents": [
+            564
+          ],
+          "gain_margin": 7484.32,
+          "examples": [
+            "With an opening scent of freshly crushed raspberries and cherries sprinkled with black pepper and drizzled with anisette, this is an inviting wine. A Grenache-b",
+            "Tinata is a sultry blend of Syrah and Grenache, a Rh\u00f4ne-style blend unlike any other wine in the area. These grapes seem perfectly adapted to the little-known r",
+            "A blend of Grenache and Syrah, this is slightly minty upfront, followed by bright cherry flavors. It's on the light side for a C\u00f4tes du Rh\u00f4ne, but fresh and sil"
+          ]
+        },
+        {
+          "group": 785,
+          "latents": [
+            598
+          ],
+          "gain_margin": 7466.16,
+          "examples": [
+            "This is a complex, pale salmon-pink wine, delicious and worth aging. It has the hallmark light touch of Belle Epoque, all fresh and light as well as fruity. A m",
+            "Packed with exotic, tropical fruits, this is the essence of Gewurztraminer. It's perfumed, ripe, over the top and spicy. Lychee juice and peppered pears dominat",
+            "A creamy Champagne that is softly sweet, balanced between ripe pear and crisp acidity. It remains tightly textured while also offering an attractive richness."
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 709,
+      "n_groups": 709,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 614,
+      "n_removed": 614,
+      "var_share_removed": 0.6098,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 429,
+          "latents": [
+            47
+          ],
+          "gain_margin": 5768.95,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 456,
+          "latents": [
+            187
+          ],
+          "gain_margin": 3377.31,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 643,
+          "latents": [
+            222
+          ],
+          "gain_margin": 3356.6,
+          "examples": [
+            "Campanha",
+            "D\u00e3o",
+            "D\u00e3o"
+          ]
+        },
+        {
+          "group": 50,
+          "latents": [
+            1817
+          ],
+          "gain_margin": 2736.74,
+          "examples": [
+            "Weinviertel",
+            "Weinviertel",
+            "Weinviertel"
+          ]
+        },
+        {
+          "group": 203,
+          "latents": [
+            1658
+          ],
+          "gain_margin": 2539.95,
+          "examples": [
+            "San Vicente",
+            "Southwest France",
+            "Southwest France"
+          ]
+        }
+      ]
+    }
+  }
+}

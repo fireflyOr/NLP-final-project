@@ -1,0 +1,169 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7437138087113896,
+  "test_error": 0.7437138087113896,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8966511199170458,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 191.49688601493835,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2035,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 814,
+      "n_removed": 814,
+      "var_share_removed": 0.2727,
+      "var_share_sae_error": 0.1131,
+      "top": [
+        {
+          "group": 30,
+          "latents": [
+            2016
+          ],
+          "gain_margin": 3914.93,
+          "examples": [
+            "I found it hard to pair with bottoms. fit wasn't very flattering for me.",
+            "They were ok pants but too small. the texture and shape were not what i expected either.",
+            "Large and the material is too bulky. i returned it."
+          ]
+        },
+        {
+          "group": 1109,
+          "latents": [
+            944
+          ],
+          "gain_margin": 2998.45,
+          "examples": [
+            "Very poorly made- wide and short, very unflattering. the material is advertised as cotton, but it felt very synthetic.",
+            "I'm usually a fan of maeve, but this dress is just bad. the fabric is thin and filmy, and it stretches to sheer over your chest. the turtleneck is neither tight",
+            "Super large and a very weird cut.  the sides were much shorter than the front and back and this just looked awful on me."
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            76
+          ],
+          "gain_margin": 2510.88,
+          "examples": [
+            "What a disappointment and for the price, it's outrageous!",
+            "So thin and see thru it's not even wearable in public. extremely cheap and ill fitting for any price let alone this price. i feel like they will rip the moment ",
+            "The material is thin and of poor quality.  it snagged the first time i wore it. the arm holes are very low as other reviewers stated."
+          ]
+        },
+        {
+          "group": 1995,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 1108.6,
+          "examples": [
+            "Cute top but started disintegrating after two washes. the delicate cutouts in the top tore apart. i machine washed it in the gentle cycle and didn't use the dry",
+            "This shirt was great for one wear. after just one wash (followed instructions to dry clean) it lost all shape and now hangs like a bed sheet. terrible waste of ",
+            "This top is quite boxy and i was very disappointed with the color, it looked as if i'd washed it in filthy water. it's a very dingy white, needless to say it we"
+          ]
+        },
+        {
+          "group": 781,
+          "latents": [
+            903
+          ],
+          "gain_margin": 910.98,
+          "examples": [
+            "I so badly wanted this top to work. it looks so cute! but, as soon as i tried it on, i knew it wasn't a keeper. i didn't even need a mirror! it's not suited for",
+            "......not for the long waisted. i immediately ordered this top when i saw it online. the embroidery is beuatiful (although it will require extra care). the soft",
+            "This top is very soft and well made. for my short and curvy figure, it is very unflattering. i considered altering it, but there is no way to do it. it gapes in"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1842,
+      "n_groups": 1829,
+      "n_multi_groups": 13,
+      "n_groups_dropped": 1042,
+      "n_removed": 1049,
+      "var_share_removed": 0.4185,
+      "var_share_sae_error": 0.019,
+      "top": [
+        {
+          "group": 1796,
+          "latents": [
+            76
+          ],
+          "gain_margin": 6781.57,
+          "examples": [
+            "Really, really bad",
+            "Absolutely awful",
+            "Cheap fabric and terrible fit"
+          ]
+        },
+        {
+          "group": 1548,
+          "latents": [
+            1141
+          ],
+          "gain_margin": 5093.22,
+          "examples": [
+            "So many compliments!",
+            "My best retailer purchase, ever",
+            "Perfect in every way!"
+          ]
+        },
+        {
+          "group": 1778,
+          "latents": [
+            870
+          ],
+          "gain_margin": 1703.06,
+          "examples": [
+            "Not great quality",
+            "Not the best quality",
+            "Quality was not that great."
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            1034,
+            1171
+          ],
+          "gain_margin": 1181.55,
+          "examples": [
+            "Cute print, but didn't fit quite right",
+            "Cute, but \"off\" fit",
+            "Cute but too many fit/fabric issues"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            930,
+            1005
+          ],
+          "gain_margin": 1147.7,
+          "examples": [
+            "I like them but...",
+            "Love the pattern but",
+            "Loved them but..."
+          ]
+        }
+      ]
+    }
+  }
+}

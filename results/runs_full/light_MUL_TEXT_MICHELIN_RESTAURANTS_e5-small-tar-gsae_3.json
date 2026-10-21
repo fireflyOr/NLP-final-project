@@ -1,0 +1,467 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6948746385015203,
+  "test_error": 0.6948746385015203,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9095178988198809,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 194.59978890419006,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2031,
+      "n_groups": 2029,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1057,
+      "n_removed": 1057,
+      "var_share_removed": 0.318,
+      "var_share_sae_error": 0.0659,
+      "top": [
+        {
+          "group": 506,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 546.96,
+          "examples": [
+            "184 Xiahe Road, Siming, Xiamen, China Mainland",
+            "11 Dayuan Road, Siming, Xiamen, China Mainland",
+            "66 Binjiang East Road, Jinjiang, Chengdu, China Mainland"
+          ]
+        },
+        {
+          "group": 1688,
+          "latents": [
+            180
+          ],
+          "gain_margin": 451.26,
+          "examples": [
+            "The Merrion Hotel, 21 Upper Merrion Street, Dublin City, D02 KF79, Ireland",
+            "Inside Vallie Hotel, 85-3 Zhijiang Road, Xihu, Hangzhou, China Mainland",
+            "Best Western Inn of Los Gatos, 57 Los Gatos-Saratoga Rd., Los Gatos, CA, 95032, USA"
+          ]
+        },
+        {
+          "group": 2003,
+          "latents": [
+            114
+          ],
+          "gain_margin": 373.02,
+          "examples": [
+            "1F, The Wellington, 198 Wellington Street, Central, Hong Kong, Hong Kong SAR China",
+            "1F, Waldorf Astoria Hotel, 5-15 Jinyu Hutong, Dongcheng, Beijing, China Mainland",
+            "No. 202, 2F, Building 111, Huizhong North Lane, Datun North Road, Chaoyang, Beijing, China Mainland"
+          ]
+        },
+        {
+          "group": 1972,
+          "latents": [
+            363
+          ],
+          "gain_margin": 309.47,
+          "examples": [
+            "6F L'Escape Hotel, 67 Toegye-ro, Jung-gu, Seoul, 04529, South Korea",
+            "4F The Warehouse, 867 Charoenkrung Road, Talat Noi, Samphanthawong, Bangkok, 10100, Thailand",
+            "6F, Cordis Hotel, 555 Shanghai Street, Mong Kok, Hong Kong, Hong Kong SAR China"
+          ]
+        },
+        {
+          "group": 1012,
+          "latents": [
+            750
+          ],
+          "gain_margin": 267.59,
+          "examples": [
+            "170 Sappasit Road, Nai Mueang, Mueang Ubon Ratchathani, Ubon Ratchathani, 34000, Thailand",
+            "126 Bangsaenlang Road, Saen Suk, Mueang Chon Buri, Chon Buri, 20130, Thailand",
+            "319 Jalan Burma, George Town, 10350, Malaysia"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1152,
+      "n_groups": 1151,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 997,
+      "n_removed": 998,
+      "var_share_removed": 0.5125,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 541,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 2445.87,
+          "examples": [
+            "Hunanese",
+            "Hunanese",
+            "Hunanese"
+          ]
+        },
+        {
+          "group": 549,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1817.01,
+          "examples": [
+            "Japanese, Creative",
+            "Japanese, Creative",
+            "Japanese, Creative"
+          ]
+        },
+        {
+          "group": 1136,
+          "latents": [
+            249
+          ],
+          "gain_margin": 1423.98,
+          "examples": [
+            "Japanese, Creative",
+            "Japanese, Creative",
+            "Japanese, Creative"
+          ]
+        },
+        {
+          "group": 755,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 853.43,
+          "examples": [
+            "Creative, Japanese",
+            "Creative, Japanese Contemporary",
+            "Japanese, Creative"
+          ]
+        },
+        {
+          "group": 136,
+          "latents": [
+            1641
+          ],
+          "gain_margin": 553.24,
+          "examples": [
+            "Pork, Regional Cuisine",
+            "Apulian, Regional Cuisine",
+            "Cuisine from Romagna, Regional Cuisine"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2039,
+      "n_groups": 2033,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 934,
+      "n_removed": 935,
+      "var_share_removed": 0.1363,
+      "var_share_sae_error": 0.0829,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            249,
+            950,
+            1502
+          ],
+          "gain_margin": 17547.32,
+          "examples": [
+            "2027 will mark forty years of business: a story made up of aromas, flavours and traditions, the story of the Portinari family, who have carved their name among ",
+            "A meal by Gert De Mangeleer and sommelier Joachim Bouden is in a class of its own, starting with the swish Botanic Sanctuary Hotel, which immerses you in a worl",
+            "Emile van der Staak's vision comes to life in this urban restaurant, where you can see the impressive team at work in the open kitchen. His botanical gastronomy"
+          ]
+        },
+        {
+          "group": 793,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 6491.61,
+          "examples": [
+            "Trained in Huaiyang cuisine, the owner applies the same level of care to preparing his noodles. Suzhou-style noodles work magic with Nanjing-style marinated mea",
+            "On a quiet street in the Leather District, this friendly Chinese restaurant specializes in Lanzhou-style hand-pulled noodles. A constant whack and thud rings ou",
+            "You won't get a lot of fuss at this Midtown spot, an offshoot of the original in Duluth. You'll order at the counter and then pick up a paper plate, but what th"
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            74
+          ],
+          "gain_margin": 2677.48,
+          "examples": [
+            "The owner opened this joint in early 2000s to serve signature dishes from his hometown of Ningbo, especially seafood \u2013 his close connections with fishermen back",
+            "Honouring Phuket town classics beneath the leafy canopy of an old mayom tree, this humble eatery focus on quality. From the short menu, we recommend the local f",
+            "This family-run restaurant, located next door to the Santa Mar\u00eda church, is a respected name in the hospitality sector thanks to the high quality of its ingredi"
+          ]
+        },
+        {
+          "group": 2023,
+          "latents": [
+            166
+          ],
+          "gain_margin": 1750.53,
+          "examples": [
+            "Kei for Kei Kobayashi, a chef born in Nagano, Japan, who trained with the likes of Gilles Goujon and Alain Ducasse. His father was a cook in a traditional kaise",
+            "In the chic fine dining restaurant of the luxurious Widder boutique hotel, chef Stefan Heilemann and his team skilfully bridge the gap between classic and moder",
+            "Sven Wassmer's cooking is really quite something. He has no need for showmanship or technical gimmicks; instead he captivates diners with a uniqueness that is d"
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            219
+          ],
+          "gain_margin": 1590.49,
+          "examples": [
+            "The hotel\u2019s restaurant has been completely revamped and moved to the 31st floor, commanding breathtaking views. Now helmed by a native Thai chef with extensive ",
+            "In contrast to the huge Emirates Palace hotel in which its located, this Indian restaurant occupies a surprisingly small and intimate space. Its eponymous chef ",
+            "This fine dining restaurant in an 18C castle-turned heritage boutique hotel boasts graceful architecture and a stunning dining room done up in a colonial style "
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 706,
+      "n_groups": 695,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 628,
+      "n_removed": 638,
+      "var_share_removed": 0.6624,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 554,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1549.65,
+          "examples": [
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 162,
+          "latents": [
+            1626
+          ],
+          "gain_margin": 1069.95,
+          "examples": [
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 170,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 874.25,
+          "examples": [
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list"
+          ]
+        },
+        {
+          "group": 615,
+          "latents": [
+            106
+          ],
+          "gain_margin": 863.62,
+          "examples": [
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 637,
+          "latents": [
+            166
+          ],
+          "gain_margin": 752.85,
+          "examples": [
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1921,
+      "n_groups": 1921,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1472,
+      "n_removed": 1472,
+      "var_share_removed": 0.6928,
+      "var_share_sae_error": 0.01,
+      "top": [
+        {
+          "group": 852,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 139.78,
+          "examples": [
+            "Yangzhou, China Mainland",
+            "Yangzhou, China Mainland",
+            "Yangzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 1731,
+          "latents": [
+            638
+          ],
+          "gain_margin": 101.23,
+          "examples": [
+            "Ootmarsum, Netherlands",
+            "Harderwijk, Netherlands",
+            "Nootdorp, Netherlands"
+          ]
+        },
+        {
+          "group": 439,
+          "latents": [
+            1651
+          ],
+          "gain_margin": 97.53,
+          "examples": [
+            "Dallenwil, Switzerland",
+            "Dallenwil, Switzerland",
+            "Isola di Capo Rizzuto, Italy"
+          ]
+        },
+        {
+          "group": 1765,
+          "latents": [
+            245
+          ],
+          "gain_margin": 97.32,
+          "examples": [
+            "Chon Buri, Thailand",
+            "Chon Buri, Thailand",
+            "Chon Buri, Thailand"
+          ]
+        },
+        {
+          "group": 1340,
+          "latents": [
+            483
+          ],
+          "gain_margin": 88.93,
+          "examples": [
+            "Satigny, Switzerland",
+            "Satigny, Switzerland",
+            "Le Havre, France"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2044,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1082,
+      "n_removed": 1082,
+      "var_share_removed": 0.3238,
+      "var_share_sae_error": 0.0929,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            1271,
+            1774
+          ],
+          "gain_margin": 1325.35,
+          "examples": [
+            "Goh Thew Chik Hainan Chicken Rice",
+            "Ciao Zai Tou Huang's Braised Pork Rice (Ciaotou)",
+            "Rung Rueang Tung Pork Noodle"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1502,
+            1814
+          ],
+          "gain_margin": 695.42,
+          "examples": [
+            "ESTERRE by Alain Ducasse",
+            "Philippe Fauchet",
+            "Nerua Guggenheim Bilbao"
+          ]
+        },
+        {
+          "group": 553,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 441.31,
+          "examples": [
+            "Xiao Dian Huang",
+            "Dingshan\u00b7Jiangyan (Xiangcheng)",
+            "Fu Yuan Ju (Shangcheng)"
+          ]
+        },
+        {
+          "group": 1019,
+          "latents": [
+            750
+          ],
+          "gain_margin": 371.41,
+          "examples": [
+            "Hing Kee Bakuteh (121 Jalan Kepong)",
+            "Baan Landai (Phra Pok Klao Road)",
+            "Musoshin Ramen"
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            1249
+          ],
+          "gain_margin": 239.26,
+          "examples": [
+            "Ph\u1edf Cu\u1ed1n Chinh Th\u1eafng",
+            "Krua Lawng Khao",
+            "Klang Na Pla Khao"
+          ]
+        }
+      ]
+    }
+  }
+}

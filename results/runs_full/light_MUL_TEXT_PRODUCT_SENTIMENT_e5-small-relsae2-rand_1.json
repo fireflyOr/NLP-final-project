@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6871337922865582,
+  "test_error": 0.6871337922865582,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8525160546985031,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 16.443835020065308,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 367,
+      "n_removed": 145,
+      "threshold": 0.0838,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.4673,
+      "var_share_kept": 0.5895,
+      "var_share_sae_error": 0.1632,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 235,
+          "score": 0.176,
+          "n_active": 143,
+          "examples": [
+            "First up: iPad Design Headaches (2 Tablets, Call in the Morning). #SXSW #tapworthy",
+            "Checking out iPad Design Headaches (2 Tablets, Call in the Morning).\n{link} #SXSW #tapworthy #fb",
+            "SXSW 2011: The Google and Bing smackdown in all its bloody banality (Guardian) {link} #SXSW"
+          ]
+        },
+        {
+          "latent": 86,
+          "score": 0.1754,
+          "n_active": 276,
+          "examples": [
+            "I agree with @mention on their @mention concerns, but your #sxsw #microformats panelist is just condescending and rude.",
+            "&quot;This is the first of 11 shows this week,&quot; says Elliott Frazier of Ringo Deathstarr at Red 7 just now.  Location: {link}  #sxsw",
+            "Idle time on a #SXSW Friday can be an expensive thing. (@mention Apple Store, SXSW w/ 80 others) [pic]: {link}"
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.1203,
+          "n_active": 227,
+          "examples": [
+            "@mention my iPhone crashed &amp; I had to do a fresh restore &amp; lost my fave Dali/canvas pak? Can I ever get it back? Also are you @mention #sxsw?",
+            "Per this rumor, Google may preview its big social strategy at an '80s-themed costume party at #SXSW. Yep. http:/... {link}",
+            "New post: Per this rumor, Google may preview its big social strategy at an '80s-themed costume party at #SXSW. Yep {link}"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.1097,
+          "n_active": 214,
+          "examples": [
+            "Both Microsoft and Google are ripping us off too {link} :( @mention a Joomla! wannabe logo #sxsw {link}",
+            "About to watch &quot;Something Ventured&quot;, a documentary about the entrepreneurs behind Apple, Intel, Cisco &amp; Atari. Filmakers in attendence #SXSW",
+            "After typing for 4 days on the iPad, fingers feel seriously weird on a real keyboard. #sxsw #uselessobservations"
+          ]
+        },
+        {
+          "latent": 191,
+          "score": 0.1048,
+          "n_active": 129,
+          "examples": [
+            "Google vs Bing on #bettersearch. Bing has a shot at success w/ structured search.  Potentially higher margin CPA model vs #Google. #SXSW",
+            "Apple likes it when you pay them. As long as the gadget will be liked by many, this closed system will work. #pnid #sxsw",
+            "Google two-factor auth is AWESOME when you're using public computers. Just used it at #SXSW {link}"
+          ]
+        }
+      ]
+    }
+  }
+}

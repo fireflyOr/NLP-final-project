@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -25.981159262373648,
+  "test_error": 25.981159262373648,
+  "course_metric": "r2",
+  "course_score": 0.7078054249540748,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 73.07021307945251,
+  "diagnostics": {
+    "colors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 230,
+      "n_kept": 445,
+      "n_removed": 67,
+      "threshold": 0.0668,
+      "passed_test": 0,
+      "removed_norm_ratio": 1.1121,
+      "var_share_kept": 0.5958,
+      "var_share_sae_error": 0.0126,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 465,
+          "score": 0.0607,
+          "n_active": 142,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.0573,
+          "n_active": 46,
+          "examples": [
+            "cream / blue / grey",
+            "blue / cream / green",
+            "cream / blue / pink"
+          ]
+        },
+        {
+          "latent": 439,
+          "score": 0.0572,
+          "n_active": 129,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        },
+        {
+          "latent": 335,
+          "score": 0.057,
+          "n_active": 57,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 14,
+          "score": 0.0555,
+          "n_active": 118,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 280,
+      "n_kept": 450,
+      "n_removed": 62,
+      "threshold": 0.0748,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5009,
+      "var_share_kept": 0.7132,
+      "var_share_sae_error": 0.0008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 148,
+          "score": 0.0777,
+          "n_active": 43,
+          "examples": [
+            "The Beatrix Girls",
+            "The Beatrix Girls",
+            "Star Wars Rebels"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.077,
+          "n_active": 34,
+          "examples": [
+            "RoomMates! Simply",
+            "RoomMates! Simply",
+            "RoomMates! Simply"
+          ]
+        },
+        {
+          "latent": 240,
+          "score": 0.0769,
+          "n_active": 229,
+          "examples": [
+            "The Academy",
+            "The Academy",
+            "The Academy"
+          ]
+        },
+        {
+          "latent": 343,
+          "score": 0.0756,
+          "n_active": 28,
+          "examples": [
+            "RoomMates! Simply",
+            "RoomMates! Simply",
+            "RoomMates! Simply"
+          ]
+        },
+        {
+          "latent": 151,
+          "score": 0.075,
+          "n_active": 193,
+          "examples": [
+            "Trend Lab Waverly",
+            "Delta Children's Products.",
+            "Delta Children's Products."
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 484,
+      "n_kept": 430,
+      "n_removed": 82,
+      "threshold": 0.0727,
+      "passed_test": 108,
+      "removed_norm_ratio": 0.3514,
+      "var_share_kept": 0.7782,
+      "var_share_sae_error": 0.0,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 115,
+          "score": 0.3031,
+          "n_active": 28,
+          "examples": [
+            "Candide",
+            "Candide",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.2623,
+          "n_active": 159,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.2538,
+          "n_active": 66,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "latent": 366,
+          "score": 0.2498,
+          "n_active": 205,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.2228,
+          "n_active": 46,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 394,
+      "n_removed": 118,
+      "threshold": 0.0707,
+      "passed_test": 78,
+      "removed_norm_ratio": 0.4495,
+      "var_share_kept": 0.7318,
+      "var_share_sae_error": 0.0779,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 362,
+          "score": 0.2568,
+          "n_active": 298,
+          "examples": [
+            "Snuggleberry Baby Sunflower Love 6 Piece Crib Bedding Set with Storybook",
+            "Snuggleberry Baby Nightie Night Owl 6 Piece Crib Bedding Set with Storybook",
+            "Cotton Tale Here Kitty Kitty 7 Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.2383,
+          "n_active": 365,
+          "examples": [
+            "Fleeting Flora 4-Piece Bedding Set",
+            "Summer Infant 4 Piece Bedding Set - Parisian Pink",
+            "Desert Dreams 4-Piece Bedding Set"
+          ]
+        },
+        {
+          "latent": 128,
+          "score": 0.1783,
+          "n_active": 567,
+          "examples": [
+            "Kids Line Fleur 9 Piece Crib Bedding Set",
+            "NoJo Play Ball 9-Piece Crib Bedding Set",
+            "Trend Lab Versailles 6-Piece Crib Bedding Set - Black/White"
+          ]
+        },
+        {
+          "latent": 474,
+          "score": 0.1666,
+          "n_active": 167,
+          "examples": [
+            "Gallery Wrought Iron and Crystal 5 Light Chandelier with 40mm Faceted Crystal Balls",
+            "Ace Baby Furniture Kids Rabbit Mobile Dress-Up Closet - White",
+            "Ace Baby Furniture Kids Lion Mobile Dress-Up Closet - White"
+          ]
+        },
+        {
+          "latent": 342,
+          "score": 0.1666,
+          "n_active": 172,
+          "examples": [
+            "Manam Kids Mini Zebra Gray Rug - 2.8x4.8",
+            "Manam Kids Shaggy Raggy Bubble Gum Rug - 2.8x4.8",
+            "Manam Kids Shaggy Raggy Grey Rug - Size 2.8 x 4.8"
+          ]
+        }
+      ]
+    }
+  }
+}

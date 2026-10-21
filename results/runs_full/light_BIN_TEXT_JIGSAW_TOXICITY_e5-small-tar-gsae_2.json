@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9340433719858245,
+  "test_error": 0.06595662801417546,
+  "course_metric": "auroc",
+  "course_score": 0.9340433719858245,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 39.18379831314087,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1428,
+      "n_removed": 1428,
+      "var_share_removed": 0.3098,
+      "var_share_sae_error": 0.1081,
+      "top": [
+        {
+          "group": 2044,
+          "latents": [
+            227
+          ],
+          "gain_margin": 6050.22,
+          "examples": [
+            "The Mickey rourke look alike is ugly as sin and idiotic like trump!",
+            "Don't let facts get in the way of a privileged trump voter's absurd, racist & childish rant.  They are only emulating their stupid dufus president after all.",
+            "You go out with a girl on a date and then you own her?\nA bunch of pathetic losers. \nYou don't own your SPOUSE OR YOUR GIRLFRIENDS!"
+          ]
+        },
+        {
+          "group": 1662,
+          "latents": [
+            315
+          ],
+          "gain_margin": 2545.77,
+          "examples": [
+            "This is old news and undoubtedlt he bought them off to keep quite. Just another GOP bible thumping hypocrite.",
+            "American law is, by definition, Sharia Law. These idiots are protesting their own country's legal system! I love it.",
+            "Flagging all posts by this poser who plays the drunk indian stereotype.\nDisgusting."
+          ]
+        },
+        {
+          "group": 510,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 2513.77,
+          "examples": [
+            "She is such an IDIOT",
+            "Frederica is one dumb Black Woman who has no business being in congress. She belongs back in the hood or in Africa with the rest of the apes and monkeys. Her me",
+            "every country should cancel their meetings with this damn bully"
+          ]
+        },
+        {
+          "group": 1918,
+          "latents": [
+            510
+          ],
+          "gain_margin": 2260.06,
+          "examples": [
+            "She is such an IDIOT",
+            "wow and this jackass is a police officer? Really? wow sad, but scary really....",
+            "sending sludge to China is going power them? You have to be the biggest idiot on this whole planet."
+          ]
+        },
+        {
+          "group": 945,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 1125.15,
+          "examples": [
+            "There is only one compelling argument against \"vote by mail.\"  It would increase voter turn-out and counter efforts at voter suppression.  Since all polling dat",
+            "A valid point.   Canadian milk (and other agricultural)  products command a good price because of their high quality attributes that result in part due to suppl",
+            "I believe both the HOOPP board and Warren Buffet acted on inside information. Likely they\u2019ve been assured by those in the know that under no circumstances will "
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1374,
+      "n_groups": 1269,
+      "n_multi_groups": 92,
+      "n_groups_dropped": 949,
+      "n_removed": 1011,
+      "var_share_removed": 0.515,
+      "var_share_sae_error": 0.0183,
+      "top": [
+        {
+          "group": 1036,
+          "latents": [
+            55
+          ],
+          "gain_margin": 137.55,
+          "examples": [
+            "2017-05-21 04:04:01.727264",
+            "2016-05-09 20:00:18.722771",
+            "2017-10-16 17:32:29.724201"
+          ]
+        },
+        {
+          "group": 865,
+          "latents": [
+            534
+          ],
+          "gain_margin": 100.34,
+          "examples": [
+            "2016-08-03 03:17:17.273464",
+            "2016-11-03 03:07:00.480876",
+            "2016-11-03 03:13:24.754318"
+          ]
+        },
+        {
+          "group": 306,
+          "latents": [
+            1864
+          ],
+          "gain_margin": 99.12,
+          "examples": [
+            "2016-10-19 23:58:33.007807",
+            "2017-01-25 15:10:35.428007",
+            "2017-01-19 12:44:30.714067"
+          ]
+        },
+        {
+          "group": 41,
+          "latents": [
+            1803,
+            1897
+          ],
+          "gain_margin": 91.3,
+          "examples": [
+            "2016-12-17 15:54:03.012387",
+            "2017-06-16 03:58:01.940237",
+            "2016-11-18 00:45:18.948236"
+          ]
+        },
+        {
+          "group": 327,
+          "latents": [
+            1342
+          ],
+          "gain_margin": 85.99,
+          "examples": [
+            "2016-11-19 03:18:05.970153",
+            "2017-10-11 23:09:31.973555",
+            "2017-09-15 01:01:13.970804"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6544108791495874,
+  "test_error": 0.6544108791495874,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8562780220755338,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 25.19153881072998,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1827,
+      "n_groups": 1821,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 867,
+      "n_removed": 873,
+      "var_share_removed": 0.4629,
+      "var_share_sae_error": 0.0198,
+      "top": [
+        {
+          "group": 1095,
+          "latents": [
+            76
+          ],
+          "gain_margin": 311.25,
+          "examples": [
+            "Panels on PR, cloud computing, Android design, iPhone design today. Hope to redeem my panel experience in one fell swoop #sxsw",
+            "iPad 2 turned into giant camera looks plain stupid #sxsw",
+            "Apple cited as the opposite of crowdsourcing - proprietary, Steve Jobs tells you what you want #csuitecsourcing #sxsw"
+          ]
+        },
+        {
+          "group": 1289,
+          "latents": [
+            457
+          ],
+          "gain_margin": 194.3,
+          "examples": [
+            "&quot;Apple: the most elegant fascist corporation in America today.&quot; -- Kara Swisher #sxsw #flipboard",
+            "#sxsw #csr reporting: Janecek: Microsoft gives $ to charity. Apple gives nothing. Everyone in room has iPhone. What drives that decision?",
+            "tools for collaboration across boundaries ~ google, webex, dropbox, whiteboarding, basecamp, join.me, ipad #sxsw #evolvingworkplace"
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            1669
+          ],
+          "gain_margin": 149.61,
+          "examples": [
+            "&quot;Google looks for technical solutions, which why they're not great at community because it's a human solution.&quot; #SXSW",
+            "RT @mention &quot;Google looks for technical solutions, which why they're not great at community because it's a human solution.&quot; #SXSW",
+            "@mention google didn't deny that they are working on such a project. They just didn't release it at #SXSW"
+          ]
+        },
+        {
+          "group": 1457,
+          "latents": [
+            440
+          ],
+          "gain_margin": 148.47,
+          "examples": [
+            "Tomlinson of TX Observer says Apple subscription data holding is biggest impediment to success. #newsapps #sxsw",
+            "Paywall panel: Daniel Bernard WSJ:\nIn app (game) purchases are frictionless like apple. &quot;the new free&quot; #sxsw",
+            "Verizon iPhones Fell Back an Hour Instead of Springing Ahead {link} #sxsw #tech"
+          ]
+        },
+        {
+          "group": 20,
+          "latents": [
+            2023
+          ],
+          "gain_margin": 143.9,
+          "examples": [
+            "smoked way too much yesterday! hahaha  #austin #wakeNbake  painting at this Android Party tonight #sxsw #AndroidSXSW {link}",
+            "Get in the season with Clover Touch:\n{link} #Games #STPATRICK",
+            "All Packed. A few too many #Apple devices. Alarm set for 5:15am. See ya'll at #SXSW. Psyched to meet (finally) many of you guys!"
+          ]
+        }
+      ]
+    }
+  }
+}

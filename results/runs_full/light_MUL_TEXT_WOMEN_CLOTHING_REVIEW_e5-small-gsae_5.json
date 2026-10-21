@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7618492361084104,
+  "test_error": 0.7618492361084104,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8936289544035478,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 76.56461119651794,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2037,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 846,
+      "n_removed": 846,
+      "var_share_removed": 0.2628,
+      "var_share_sae_error": 0.1128,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            76,
+            944
+          ],
+          "gain_margin": 5838.52,
+          "examples": [
+            "I'm returning this cardigan. it doesn't fit me at all. it's shapeless and loose.",
+            "Recently received this and was very disappointed with the quality. the fabric was very thin, easily stretched out of shape. price is ridiculous for this item!",
+            "Awful color, horribly wrinkled and just a mess...so disappointed"
+          ]
+        },
+        {
+          "group": 33,
+          "latents": [
+            2016
+          ],
+          "gain_margin": 2980.1,
+          "examples": [
+            "Color is not like photo and fit doesn't work if you're busty",
+            "Too big and it's not secure enough to wear for swimming.",
+            "These leggings are loose fitting and the quality is just not there.. i am returning the item."
+          ]
+        },
+        {
+          "group": 2005,
+          "latents": [
+            903
+          ],
+          "gain_margin": 1756.97,
+          "examples": [
+            "Wanted to love this top, but couldn't. the arm holes where so big you have to wear a top under to hide side boob... very light sheer material. had to go back",
+            "I have to return this top. the armholes are huge. the material is on the thin side and not what i expected. i can't size down. i got an xxs. maybe if i had been",
+            "I wanted to like this and even considered getting it altered, but just decided to return. it runs big and from the front it looks good, but the back just looked"
+          ]
+        },
+        {
+          "group": 195,
+          "latents": [
+            1867
+          ],
+          "gain_margin": 1003.2,
+          "examples": [
+            "These are simply the best of everything i love about charlie trousers. great fit, classic styling with the pop of the unexpected. the fabric is thinner than it ",
+            "Soooo disappointed in this dress. the colors are beautiful for fall. the fabric feels luxe. the slip fits perfectly. the dress however is a hot mess. it is easi",
+            "The fabric is absolutely lovely on these, but very thin. the top part was tighter than usual (and i sized up from my regular pilcro jean size) and they flare a "
+          ]
+        },
+        {
+          "group": 166,
+          "latents": [
+            1980
+          ],
+          "gain_margin": 777.08,
+          "examples": [
+            "Runs a size big unless you want it really boxy. felt the matl was flimsy and would prob pill soon. turquoise was a pretty color but returning this one.",
+            "Ordered a petite and it was not as dark of a denim like the picture. the pockets on the backside are wide and are not flattering if you have any curve to your r",
+            "I ordered a small, which is my usual retailer size, but this was like a tent on me. it's fine if you like things super super blousey but that wasn't what i was "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1818,
+      "n_groups": 1805,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 1021,
+      "n_removed": 1024,
+      "var_share_removed": 0.3594,
+      "var_share_sae_error": 0.0187,
+      "top": [
+        {
+          "group": 1098,
+          "latents": [
+            1141
+          ],
+          "gain_margin": 5614.98,
+          "examples": [
+            "Cannot get enough of this!",
+            "Ooooo! love this so much more than i thought",
+            "Believe all the great reviews!"
+          ]
+        },
+        {
+          "group": 1796,
+          "latents": [
+            76
+          ],
+          "gain_margin": 4667.37,
+          "examples": [
+            "Bad fit and bad construction",
+            "Cheap fabric and terrible fit",
+            "Cheap material -- poorly made"
+          ]
+        },
+        {
+          "group": 227,
+          "latents": [
+            1171
+          ],
+          "gain_margin": 3068.15,
+          "examples": [
+            "Close but not quite right",
+            "Close but not quite right",
+            "Almost but not quite"
+          ]
+        },
+        {
+          "group": 142,
+          "latents": [
+            1757
+          ],
+          "gain_margin": 1831.11,
+          "examples": [
+            "Unflattering and uncomfortable",
+            "Really odd fit!",
+            "Weird unflattering shape"
+          ]
+        },
+        {
+          "group": 1753,
+          "latents": [
+            356
+          ],
+          "gain_margin": 1666.06,
+          "examples": [
+            "Didn't work!",
+            "Unfortunately didn't work in xl",
+            "Didn't work"
+          ]
+        }
+      ]
+    }
+  }
+}

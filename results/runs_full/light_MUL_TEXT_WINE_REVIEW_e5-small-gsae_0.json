@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3608821059227394,
+  "test_error": 1.3608821059227394,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9682391868514075,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 306.54163575172424,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2036,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 286,
+      "n_removed": 286,
+      "var_share_removed": 0.0591,
+      "var_share_sae_error": 0.1242,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            461,
+            1377
+          ],
+          "gain_margin": 6652.84,
+          "examples": [
+            "This is a very good, crowd-pleasing Chardonnay with lots of ripe, fresh fruit flavors and tasty accents of vanilla and butter. It is medium-bodied, soft and smo",
+            "Delicately structured, this Chardonnay has simple citrus peach flavors, with an undertow of green herbs. It's dry and tart with acidity.",
+            "Not the richest Chardonnay ever, but it has complex notes of citrus, apple, nectarine and tropical fruits, with kisses of vanilla and cream. Acidity gives it el"
+          ]
+        },
+        {
+          "group": 1533,
+          "latents": [
+            52
+          ],
+          "gain_margin": 5711.65,
+          "examples": [
+            "This subtle, graceful Syrah acknowledges the cool vintage and takes full advantage of what it has to offer. It's based upon elegantly-layered citrus and sappy b",
+            "A nice interpretation of Syrah, this shows fine Napa elegance and structure. Dry and complex, this 100% Syrah has flavors of ripe, crushed blackberry fruit, raw",
+            "This is a tight, monstrous Syrah, with a pocket of black fruit flavor and a dollop of earthiness. It veers into raisiny territory on the finish."
+          ]
+        },
+        {
+          "group": 1950,
+          "latents": [
+            74
+          ],
+          "gain_margin": 5485.68,
+          "examples": [
+            "It is rare to find a high-end domestic Pinot Noir so restrained, so elegant. Lightly layered with tangy raspberry, mineral and herb, this wine proves that suppl",
+            "An estate bottled Pinot, this wine is inviting in floral and fruity characteristics, offering concise layers of red cherry, rose petals and a spark of oak that ",
+            "Smoky, spicy and midweight, this earthy, brooding Pinot maintains layers of minerality amid fresh red berry fruit. The texture opens up into silky waves in the "
+          ]
+        },
+        {
+          "group": 1367,
+          "latents": [
+            500
+          ],
+          "gain_margin": 5322.16,
+          "examples": [
+            "This shows the rich density of Merlot in 2009, giving a solid structure, with dried fruit and red berry flavors and a concentrated line of tannins. Big and dens",
+            "A majority of Merlot speaks in this nicely approachable wine, a high-toned expression of cranberry and cherry. Mid-tier complexity and full-bodied weight give w",
+            "This Merlot seems designed for folks who like their red wines with residual sugar. It's soft and sugary, with raspberry jam and oak flavors."
+          ]
+        },
+        {
+          "group": 1912,
+          "latents": [
+            103
+          ],
+          "gain_margin": 4161.54,
+          "examples": [
+            "This plump, dry ros\u00e9 features hints of wet stone, strawberry and barely ripe melon. It's vibrant, refreshing and an ideal thirst-quencher for the warm months ah",
+            "This is an attractive, fruity, fresh ros\u00e9. It is dry but balances acidity and fruitiness with its sweet strawberry fruit and light touch of vanilla pod. Drink n",
+            "An easy, fun ros\u00e9, with apricot, peach, orange and melon flavors, brightened with crisp acidity. The finish is nice and dry."
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 865,
+      "n_groups": 864,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 715,
+      "n_removed": 716,
+      "var_share_removed": 0.6358,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 815,
+          "latents": [
+            204
+          ],
+          "gain_margin": 6158.58,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 832,
+          "latents": [
+            360
+          ],
+          "gain_margin": 5078.25,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 24,
+          "latents": [
+            1936
+          ],
+          "gain_margin": 2672.37,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 605,
+          "latents": [
+            64
+          ],
+          "gain_margin": 2547.06,
+          "examples": [
+            "Tuscany",
+            "Tuscany",
+            "Tuscany"
+          ]
+        },
+        {
+          "group": 298,
+          "latents": [
+            1215
+          ],
+          "gain_margin": 2513.95,
+          "examples": [
+            "Primorska",
+            "Vipavska Dolina",
+            "Jidvei"
+          ]
+        }
+      ]
+    }
+  }
+}

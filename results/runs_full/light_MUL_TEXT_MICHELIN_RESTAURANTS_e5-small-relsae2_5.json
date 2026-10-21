@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7334690755938472,
+  "test_error": 0.7334690755938472,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8919287367797036,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 96.18900442123413,
+  "diagnostics": {
+    "Address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 208,
+      "n_removed": 304,
+      "threshold": 0.047,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6899,
+      "var_share_kept": 0.2529,
+      "var_share_sae_error": 0.234,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 52,
+          "score": 0.0425,
+          "n_active": 705,
+          "examples": [
+            "28 Broad St., Charleston, SC, 29401, USA",
+            "88 Broad St., Charleston, SC, 29401, USA",
+            "29 Houjiangdai Road, Siming, Xiamen, China Mainland"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.0386,
+          "n_active": 660,
+          "examples": [
+            "46 Spittal Street, Marlow, SL7 1DB, United Kingdom",
+            "1 place des Marronniers, Montbazon, 37250, France",
+            "Boulevard Pr\u00edncipe Alfonso von Hohenlohe, Marbella, 29600, Spain"
+          ]
+        },
+        {
+          "latent": 249,
+          "score": 0.0355,
+          "n_active": 663,
+          "examples": [
+            "4-6 Town Street, Horsforth, LS18 4RJ, United Kingdom",
+            "7 Town Street, Horsforth, LS18 5LJ, United Kingdom",
+            "The Old No. 77 Hotel & Chandlery, 535 Tchoupitoulas St., New Orleans, LA, 70130, USA"
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.0336,
+          "n_active": 422,
+          "examples": [
+            "The Old No. 77 Hotel & Chandlery, 535 Tchoupitoulas St., New Orleans, LA, 70130, USA",
+            "20 Chenggong 1st, Zhubei city, Hsinchu County, Taiwan",
+            "U-105, First Midland Condominium Building, 109 Gamboa, Makati - Metro Manila, 1223, The Philippines"
+          ]
+        },
+        {
+          "latent": 335,
+          "score": 0.0325,
+          "n_active": 345,
+          "examples": [
+            "898 Santa Cruz Ave., Menlo Park, CA, 94025, USA",
+            "Rosewood Sand Hill, 2825 Sand Hill Rd., Menlo Park, CA, 94025, USA",
+            "290 S. Park Ave., Winter Park, FL, 32789, USA"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 499,
+      "n_kept": 362,
+      "n_removed": 150,
+      "threshold": 0.0506,
+      "passed_test": 26,
+      "removed_norm_ratio": 0.3177,
+      "var_share_kept": 0.7338,
+      "var_share_sae_error": 0.0028,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 163,
+          "score": 0.1155,
+          "n_active": 791,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "latent": 314,
+          "score": 0.1128,
+          "n_active": 800,
+          "examples": [
+            "Creative, Portuguese",
+            "Creative French",
+            "Creative French"
+          ]
+        },
+        {
+          "latent": 270,
+          "score": 0.1091,
+          "n_active": 723,
+          "examples": [
+            "Asian, Creative",
+            "Italian, Creative",
+            "Italian, Creative"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.1056,
+          "n_active": 808,
+          "examples": [
+            "Creative, Seafood",
+            "Creative, Seafood",
+            "Creative, Seafood"
+          ]
+        },
+        {
+          "latent": 309,
+          "score": 0.1024,
+          "n_active": 982,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 311,
+      "n_removed": 201,
+      "threshold": 0.0468,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.4614,
+      "var_share_kept": 0.3562,
+      "var_share_sae_error": 0.3715,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 26,
+          "score": 0.0676,
+          "n_active": 1086,
+          "examples": [
+            "Situated in the historic centre of the charming small village of San Felice del Benaco, Duo is the project of chefs Daniele Ghedini and Federico Pelizzari (the ",
+            "Two brothers are your hosts in this city centre restaurant. International dishes with a Mediterranean influence are served in a modern atmosphere.",
+            "Two mates, Michael and Niels, welcome guests to their aptly named joint in the heart of Dilbeek complete with a lovely garden patio. The pair, who does everythi"
+          ]
+        },
+        {
+          "latent": 348,
+          "score": 0.0584,
+          "n_active": 1062,
+          "examples": [
+            "A welcoming inn nestled amid the last vineyards of Valpolicella and the first pasturelands of the lower Lessinia region, where a young chef serves cuisine with ",
+            "This lovely village inn serves dishes with classical foundations and modern inspirations. The seasons call the shots, and there is a preference for quality prod",
+            "This inn has a long-standing tradition of hospitality. A relaxed atmosphere reigns in the delightful interior, which combines modern elements with rustic charm."
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0556,
+          "n_active": 744,
+          "examples": [
+            "A lively fish and seafood restaurant on the seafront, which is always busy thanks to its excellent value for money \u2013 booking ahead is highly recommended! Fish-b",
+            "An attractively furnished restaurant on the seafront with a small dining room and a veranda offering partial views of the sea. Fish takes pride of place on the ",
+            "Although its immediate setting may lack charm, the position of this restaurant facing the marina is delightful, with its superb sea views through its picture wi"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.0556,
+          "n_active": 733,
+          "examples": [
+            "This is an original Taverne with its contemporary, elegant, light - filled decor \u2013 and a terrace giving onto the countryside. Enjoy the enticing food, blending ",
+            "You will feel at home here for a number of reasons. Not only can you enjoy the modern, classic and seasonal cuisine showcasing local produce, but there is also ",
+            "Dine in the shade of one of the oldest trees in the Wielkopolska region in the small enclosed garden of this romantic restaurant. The elegant dining room is fil"
+          ]
+        },
+        {
+          "latent": 311,
+          "score": 0.0544,
+          "n_active": 714,
+          "examples": [
+            "A family-run restaurant with over 100 years of history, dating back to the simple wine cellar that first opened in 1915. Over time it became a tapas bar and now",
+            "This edifice, steeped in history, stands on the cellars of the former Grands-Augustins convent and it was here on 14 May 1610, an hour after his father King Hen",
+            "In the heart of Valle de Lecr\u00edn, housed in a restored mansion overlooking the beautiful surroundings of Meleg\u00eds in Granada, this restaurant adds a gourmet touch"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 437,
+      "n_kept": 408,
+      "n_removed": 104,
+      "threshold": 0.0495,
+      "passed_test": 41,
+      "removed_norm_ratio": 0.1709,
+      "var_share_kept": 0.84,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 389,
+          "score": 0.146,
+          "n_active": 829,
+          "examples": [
+            "Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.1365,
+          "n_active": 968,
+          "examples": [
+            "Garden or park,Interesting wine list",
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 242,
+          "score": 0.132,
+          "n_active": 473,
+          "examples": [
+            "Air conditioning,Brunch,Car park,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Interesting wine list,Valet parking",
+            "Air conditioning,Car park,Garden or park,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 127,
+          "score": 0.1275,
+          "n_active": 1659,
+          "examples": [
+            "Interesting wine list",
+            "Interesting wine list",
+            "Interesting wine list"
+          ]
+        },
+        {
+          "latent": 363,
+          "score": 0.1257,
+          "n_active": 1043,
+          "examples": [
+            "Credit cards not accepted,Interesting wine list",
+            "Credit cards not accepted,Interesting wine list",
+            "Air conditioning,Interesting wine list,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 111,
+      "n_removed": 401,
+      "threshold": 0.0454,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.9045,
+      "var_share_kept": 0.1599,
+      "var_share_sae_error": 0.0839,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 279,
+          "score": 0.0317,
+          "n_active": 377,
+          "examples": [
+            "Brunswick, Germany",
+            "Brunswick, Germany",
+            "Brunswick, Germany"
+          ]
+        },
+        {
+          "latent": 22,
+          "score": 0.0284,
+          "n_active": 364,
+          "examples": [
+            "Horsforth, United Kingdom",
+            "Horsforth, United Kingdom",
+            "Horsham, United Kingdom"
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0275,
+          "n_active": 692,
+          "examples": [
+            "Montsoreau, France",
+            "Montarcher, France",
+            "Mont\u00e0, Italy"
+          ]
+        },
+        {
+          "latent": 19,
+          "score": 0.0269,
+          "n_active": 383,
+          "examples": [
+            "Breda, Netherlands",
+            "Breda, Netherlands",
+            "Breda, Netherlands"
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.0268,
+          "n_active": 633,
+          "examples": [
+            "Sopot, Poland",
+            "Sopot, Poland",
+            "Sopot, Poland"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 269,
+      "n_removed": 243,
+      "threshold": 0.047,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5633,
+      "var_share_kept": 0.399,
+      "var_share_sae_error": 0.2361,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 93,
+          "score": 0.0425,
+          "n_active": 622,
+          "examples": [
+            "Saint-Christophe",
+            "Moi",
+            "La Table du Saint-Christophe"
+          ]
+        },
+        {
+          "latent": 207,
+          "score": 0.0412,
+          "n_active": 202,
+          "examples": [
+            "\u00c0 Table",
+            "Friend's Table",
+            "La Table"
+          ]
+        },
+        {
+          "latent": 330,
+          "score": 0.0388,
+          "n_active": 1692,
+          "examples": [
+            "Christopher Coutanceau",
+            "Massimo Camia",
+            "Philipp Soldan"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.0375,
+          "n_active": 706,
+          "examples": [
+            "The Restaurant",
+            "Restaurant ET",
+            "Restaurant LA"
+          ]
+        },
+        {
+          "latent": 429,
+          "score": 0.0356,
+          "n_active": 362,
+          "examples": [
+            "Casa 201",
+            "Casa 887",
+            "Casa Pedro"
+          ]
+        }
+      ]
+    }
+  }
+}

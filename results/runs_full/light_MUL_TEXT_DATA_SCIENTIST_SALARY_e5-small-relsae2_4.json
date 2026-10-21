@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.401328457974499,
+  "test_error": 1.401328457974499,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7949440505334375,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 86.14483547210693,
+  "diagnostics": {
+    "experience": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 447,
+      "n_kept": 512,
+      "n_removed": 0,
+      "threshold": 0.0478,
+      "passed_test": 405,
+      "removed_norm_ratio": 0.0,
+      "var_share_kept": 1.0025,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 205,
+          "score": 0.4629,
+          "n_active": 777,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 144,
+          "score": 0.4627,
+          "n_active": 776,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.4624,
+          "n_active": 776,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 57,
+          "score": 0.4621,
+          "n_active": 776,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 28,
+          "score": 0.4495,
+          "n_active": 1320,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 492,
+      "n_removed": 20,
+      "threshold": 0.0443,
+      "passed_test": 216,
+      "removed_norm_ratio": 0.0793,
+      "var_share_kept": 0.848,
+      "var_share_sae_error": 0.1226,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 499,
+          "score": 0.2802,
+          "n_active": 2179,
+          "examples": [
+            "Deliver train-the-trainer sessions are conducted in a standardized, accurate, and level appropriate ...",
+            "The Network Development Manager (NDM) is primarily responsible for creation and development of Sales ...",
+            "Nature of Business - Ecommerce  Website- www.creez.in  Brand Name - CREEZ ..."
+          ]
+        },
+        {
+          "latent": 49,
+          "score": 0.2757,
+          "n_active": 2078,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 473,
+          "score": 0.2738,
+          "n_active": 2106,
+          "examples": [
+            "Need person residing in Mumbai preferred in near by distance area - Navi Mumbai, Panvel, Kamothe area ...",
+            "Designation : BI Expert  Location : Mumbai  Looking for a rock star data artisan to work ...",
+            "Designation : BI Expert  Location : Mumbai  Looking for a rock star data artisan to work ..."
+          ]
+        },
+        {
+          "latent": 105,
+          "score": 0.273,
+          "n_active": 2115,
+          "examples": [
+            "5.Static Timing Analysis in Primetime or Primetime-SI 6.DRC, LVS DFM, Antenna, Density Fill Routines and ...",
+            "Our 100,000+ staff deliver technology-infused, omni - channel customer experience management, marketing ...",
+            "Our 100,000+ staff deliver technology-infused, omni-channel customer experience management, marketing ..."
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.2728,
+          "n_active": 2149,
+          "examples": [
+            " Job Responsibilities:   - Work on assigned leads (given by the Nationalize Banks) and ...",
+            " Book keeping experience in computerized accounts(QB Preffered); Good Communication, Flexible ...",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 467,
+      "n_removed": 45,
+      "threshold": 0.0441,
+      "passed_test": 178,
+      "removed_norm_ratio": 0.1556,
+      "var_share_kept": 0.839,
+      "var_share_sae_error": 0.1058,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 367,
+          "score": 0.1988,
+          "n_active": 765,
+          "examples": [
+            "Chartering Executive",
+            "Executive Custome Executive (merchandising )",
+            "Operation Executive, Associate Operations, Back Office Executive"
+          ]
+        },
+        {
+          "latent": 324,
+          "score": 0.1861,
+          "n_active": 888,
+          "examples": [
+            "Research Executive",
+            "Store Executive",
+            "Store Executive"
+          ]
+        },
+        {
+          "latent": 437,
+          "score": 0.1629,
+          "n_active": 1002,
+          "examples": [
+            "Executive Assistant",
+            "Executive Assistant",
+            "Executive Assistant"
+          ]
+        },
+        {
+          "latent": 199,
+          "score": 0.1602,
+          "n_active": 350,
+          "examples": [
+            "International Voice Process",
+            "German Language Expert - Voice Process",
+            "Hiring for Communication/voice and Accent Trainers"
+          ]
+        },
+        {
+          "latent": 68,
+          "score": 0.1518,
+          "n_active": 1100,
+          "examples": [
+            "Hiring for Senior Executive ( Recommendations Platform)",
+            "Hiring for AM and KAM for Leading Bank",
+            "Hiring up for \"data Scientist\" for Leading Mnc"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 460,
+      "n_removed": 52,
+      "threshold": 0.046,
+      "passed_test": 156,
+      "removed_norm_ratio": 0.1718,
+      "var_share_kept": 0.8297,
+      "var_share_sae_error": 0.099,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 446,
+          "score": 0.1693,
+          "n_active": 1054,
+          "examples": [
+            "communication skills, client communication, trade processing...",
+            "Verbal Communication, Communication Skills, Software Quality...",
+            "Verbal Communication, Communication Skills, Software Quality..."
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.1651,
+          "n_active": 190,
+          "examples": [
+            "AR Calling, Medical Billing, Quality Analysis, Senior AR Caller, AR Caller,...",
+            "Pain Management, AR Follow - up, AR CALLING, HEALTHCARE, Medical Billing...",
+            "Pain Management, AR Follow - up, AR CALLING, HEALTHCARE, Medical Billing..."
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.1495,
+          "n_active": 454,
+          "examples": [
+            "Call Monitoring, Quality Analysis, Feedback",
+            "ar calling, revenue cycle management, voice process, account receivable, ar...",
+            "quality analysis, call monitoring"
+          ]
+        },
+        {
+          "latent": 484,
+          "score": 0.1193,
+          "n_active": 386,
+          "examples": [
+            "bpo, kpo, international bpo, fresher, technical support, call center jobs...",
+            "Bpo Operations, Customer Operations, Technical Support, Team Management...",
+            "bpo, call center, bpo operations, bpo trainer, Quality Analyst, Fresher..."
+          ]
+        },
+        {
+          "latent": 472,
+          "score": 0.1162,
+          "n_active": 353,
+          "examples": [
+            "Office Coordination, office sales coordinator, office sales admin...",
+            "Back Office Operations, MS Office, HTML Fresher",
+            "ms office, typing speed, analytical"
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 501,
+      "n_kept": 493,
+      "n_removed": 19,
+      "threshold": 0.046,
+      "passed_test": 262,
+      "removed_norm_ratio": 0.0554,
+      "var_share_kept": 0.957,
+      "var_share_sae_error": 0.0047,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.1422,
+          "n_active": 3131,
+          "examples": [
+            "Bengaluru(Residency Road)",
+            "Bengaluru(Palace Road)",
+            "Mumbai(Kalina)"
+          ]
+        },
+        {
+          "latent": 362,
+          "score": 0.1323,
+          "n_active": 204,
+          "examples": [
+            "jaunpur, azamgarh, pratapgarh, pilibhit, sambhal, chandauli, shamli, bulandshahr, farrukhabad",
+            "jaunpur, azamgarh, pratapgarh, pilibhit, sambhal, chandauli, shamli, bulandshahr, farrukhabad",
+            "goalpara, golaghat, hailakandi, jorhat, kamrup, gowahati, karimganj, kokrajhar, north lakhimpur"
+          ]
+        },
+        {
+          "latent": 298,
+          "score": 0.1288,
+          "n_active": 2669,
+          "examples": [
+            "Bengaluru(Sarjapur)",
+            "Bengaluru(Sarjapur)",
+            "Bengaluru(Sarjapur)"
+          ]
+        },
+        {
+          "latent": 9,
+          "score": 0.1276,
+          "n_active": 2150,
+          "examples": [
+            "Bengaluru(7th Phase JP Nagar+3)",
+            "Bengaluru(4th Phase JP Nagar)",
+            "Bengaluru(4th Phase JP Nagar)"
+          ]
+        },
+        {
+          "latent": 466,
+          "score": 0.1266,
+          "n_active": 232,
+          "examples": [
+            "Mohali, Jaipur, Chandigarh",
+            "Mohali, Jaipur, Chandigarh",
+            "Jaipur, Lucknow, Chandigarh, Varanasi, Jodhpur, Udaipur"
+          ]
+        }
+      ]
+    }
+  }
+}

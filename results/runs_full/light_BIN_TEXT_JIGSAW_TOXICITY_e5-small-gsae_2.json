@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7990599071325265,
+  "test_error": 0.2009400928674735,
+  "course_metric": "auroc",
+  "course_score": 0.7990599071325265,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 37.40009570121765,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1378,
+      "n_removed": 1379,
+      "var_share_removed": 0.434,
+      "var_share_sae_error": 0.1734,
+      "top": [
+        {
+          "group": 1117,
+          "latents": [
+            653
+          ],
+          "gain_margin": 924.28,
+          "examples": [
+            "Feinstein certainly knows stupid, in fact she is an expert in getting elected with a single digit IQ, so when she thinks something is stupid, I submit to her au",
+            "I agree! At least with the intelligent ones.",
+            "These two ladies are either ignorant or hopelessly stupid."
+          ]
+        },
+        {
+          "group": 1397,
+          "latents": [
+            599
+          ],
+          "gain_margin": 696.18,
+          "examples": [
+            "She is such an IDIOT",
+            "We've got one clown in the WH....why not another?",
+            "Ah, someone else who has drunk deep of the anti-Obamacare Kool-Aid."
+          ]
+        },
+        {
+          "group": 2026,
+          "latents": [
+            614
+          ],
+          "gain_margin": 305.13,
+          "examples": [
+            "Well where else is he going to meet his next victims?",
+            "Oh yawn.",
+            "Scary stuff!"
+          ]
+        },
+        {
+          "group": 996,
+          "latents": [
+            1049
+          ],
+          "gain_margin": 301.44,
+          "examples": [
+            "Or Trump himself.",
+            "Lester, Golf is President Trump's way to exercise. \nSome Presidents work out everyday, and play golf too, and play basketball, and go to the shooting range like",
+            "Donald Trump is not well?  Most assuredly he is NOT well.  Trump is a narcissistic sociopath.  So, no, Trump is not well.  He has a mental illness."
+          ]
+        },
+        {
+          "group": 1795,
+          "latents": [
+            290
+          ],
+          "gain_margin": 300.14,
+          "examples": [
+            "Leftists don't get it.",
+            "The multiple use of \"leftist\" is an example of your and your fellow travelers' limited vocabulary, logic, and intellectual capability.",
+            "Leftists are such home wreckers."
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 916,
+      "n_groups": 851,
+      "n_multi_groups": 51,
+      "n_groups_dropped": 649,
+      "n_removed": 681,
+      "var_share_removed": 0.5943,
+      "var_share_sae_error": 0.0162,
+      "top": [
+        {
+          "group": 848,
+          "latents": [
+            1109
+          ],
+          "gain_margin": 126.01,
+          "examples": [
+            "2017-09-23 23:14:30.421851",
+            "2016-07-23 16:13:00.314327",
+            "2016-06-23 23:01:42.394014"
+          ]
+        },
+        {
+          "group": 595,
+          "latents": [
+            1678
+          ],
+          "gain_margin": 107.58,
+          "examples": [
+            "2016-12-28 15:13:37.422995",
+            "2017-06-01 02:04:01.589926",
+            "2016-06-17 17:39:56.499991"
+          ]
+        },
+        {
+          "group": 314,
+          "latents": [
+            1643
+          ],
+          "gain_margin": 101.03,
+          "examples": [
+            "2017-08-28 16:20:54.420368",
+            "2017-08-14 15:17:09.421187",
+            "2016-03-23 15:14:31.415707"
+          ]
+        },
+        {
+          "group": 114,
+          "latents": [
+            211,
+            899
+          ],
+          "gain_margin": 88.93,
+          "examples": [
+            "2017-03-09 00:49:00.721161",
+            "2017-05-21 04:04:01.727264",
+            "2017-10-16 17:32:29.724201"
+          ]
+        },
+        {
+          "group": 407,
+          "latents": [
+            641
+          ],
+          "gain_margin": 87.8,
+          "examples": [
+            "2017-04-07 01:54:49.007730",
+            "2016-04-01 22:29:11.657630",
+            "2016-12-01 05:47:42.045330"
+          ]
+        }
+      ]
+    }
+  }
+}

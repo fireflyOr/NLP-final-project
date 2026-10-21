@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-stack",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7305417044674449,
+  "test_error": 0.26945829553255507,
+  "course_metric": "auroc",
+  "course_score": 0.730541704467445,
+  "n_text_cols": 5,
+  "n_text_features": 151,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 9.848931550979614,
+  "diagnostics": {}
+}

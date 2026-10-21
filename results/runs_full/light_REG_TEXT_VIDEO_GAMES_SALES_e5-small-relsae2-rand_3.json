@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.1515526633276696,
+  "test_error": 1.1515526633276696,
+  "course_metric": "r2",
+  "course_score": 0.3523983716946344,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.187910079956055,
+  "diagnostics": {
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 395,
+      "n_removed": 117,
+      "threshold": 0.0482,
+      "passed_test": 33,
+      "removed_norm_ratio": 0.3978,
+      "var_share_kept": 0.5767,
+      "var_share_sae_error": 0.213,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 212,
+          "score": 0.2043,
+          "n_active": 877,
+          "examples": [
+            "Far Cry: Primal",
+            "Far Cry: Primal",
+            "Red Dead Redemption"
+          ]
+        },
+        {
+          "latent": 429,
+          "score": 0.1191,
+          "n_active": 389,
+          "examples": [
+            "The Bachelor: The Videogame",
+            "The Bachelor: The Videogame",
+            "Guinness World Records: The Videogame"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.1171,
+          "n_active": 635,
+          "examples": [
+            "Tom Clancy's Rainbow Six: Lockdown",
+            "Tom Clancy's Rainbow Six: Lockdown",
+            "Tom Clancy's Rainbow Six: Lockdown"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1137,
+          "n_active": 521,
+          "examples": [
+            "Imagine: Artist",
+            "You Don't Know Jack",
+            "You Don't Know Jack"
+          ]
+        },
+        {
+          "latent": 450,
+          "score": 0.0992,
+          "n_active": 633,
+          "examples": [
+            "Spider-Man",
+            "Spider-Man",
+            "The Amazing Spider-Man (Console Version)"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 500,
+      "n_kept": 482,
+      "n_removed": 30,
+      "threshold": 0.0539,
+      "passed_test": 56,
+      "removed_norm_ratio": 0.2035,
+      "var_share_kept": 0.9441,
+      "var_share_sae_error": 0.0007,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 254,
+          "score": 0.2313,
+          "n_active": 386,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.225,
+          "n_active": 402,
+          "examples": [
+            "Office Create",
+            "Ecole",
+            "KID"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.2068,
+          "n_active": 451,
+          "examples": [
+            "PopCap Games",
+            "PopCap Games",
+            "PopCap Games"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.1864,
+          "n_active": 620,
+          "examples": [
+            "Coconuts Japan",
+            "Yacht Club Games",
+            "Yacht Club Games"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1827,
+          "n_active": 529,
+          "examples": [
+            "7G//AMES",
+            "7G//AMES",
+            "Phantagram"
+          ]
+        }
+      ]
+    }
+  }
+}

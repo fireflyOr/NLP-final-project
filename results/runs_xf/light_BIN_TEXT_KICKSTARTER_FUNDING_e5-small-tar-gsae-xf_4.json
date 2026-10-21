@@ -1,0 +1,89 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-xf",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7265889019122227,
+  "test_error": 0.2734110980877773,
+  "course_metric": "auroc",
+  "course_score": 0.7265889019122227,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1704.5354616641998,
+  "diagnostics": {
+    "created_at": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 877,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.57808,
+        "0.1": 0.58832,
+        "0.25": 0.59772,
+        "0.5": 0.60975,
+        "0.75": 0.65055
+      },
+      "var_share_removed": 0.0
+    },
+    "deadline": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 858,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.57808,
+        "0.1": 0.58832,
+        "0.25": 0.59772,
+        "0.5": 0.60975,
+        "0.75": 0.65055
+      },
+      "var_share_removed": 0.0
+    },
+    "desc": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 2048,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.57808,
+        "0.1": 0.58832,
+        "0.25": 0.59772,
+        "0.5": 0.60975,
+        "0.75": 0.65055
+      },
+      "var_share_removed": 0.0
+    },
+    "keywords": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 2048,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.57808,
+        "0.1": 0.58832,
+        "0.25": 0.59772,
+        "0.5": 0.60975,
+        "0.75": 0.65055
+      },
+      "var_share_removed": 0.0
+    },
+    "name": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 2048,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.57808,
+        "0.1": 0.58832,
+        "0.25": 0.59772,
+        "0.5": 0.60975,
+        "0.75": 0.65055
+      },
+      "var_share_removed": 0.0
+    }
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.80340795998861,
+  "test_error": 0.19659204001138997,
+  "course_metric": "auroc",
+  "course_score": 0.80340795998861,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 36.72817921638489,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1317,
+      "n_removed": 1317,
+      "var_share_removed": 0.4317,
+      "var_share_sae_error": 0.1731,
+      "top": [
+        {
+          "group": 241,
+          "latents": [
+            1867
+          ],
+          "gain_margin": 591.58,
+          "examples": [
+            "Dyson will have to improve their customer service. Our $500 vacuum motor died one month before the end of their warranty and numerous telephone calls enlisted n",
+            "Chr\u00e9tien was a brilliant communicator and a fine orator, even if his grammar and word choices were.......odd.  He had a compelling presence which, for me anyway",
+            "It\u2019s urban dictionary slang to describe the new communists; most of whom don\u2019t even know that they are repackaging an idiotic failed system. Instead of letting "
+          ]
+        },
+        {
+          "group": 1864,
+          "latents": [
+            614
+          ],
+          "gain_margin": 460.23,
+          "examples": [
+            "Relax, you're going berserk.",
+            "Live by the sword, perish by the sword!",
+            "The Pumpkin Fuhrer is going to pop a blood vessel."
+          ]
+        },
+        {
+          "group": 938,
+          "latents": [
+            1049
+          ],
+          "gain_margin": 322.96,
+          "examples": [
+            "Donald Trump is a real estate conman.  He doesn't worry about principles.",
+            "\"Trump said.\"",
+            "Marianne Grant, I agree with you.  Trump is a guy who's style is to always play in \"offense mode\", and people are not used to that and afraid of that style, whi"
+          ]
+        },
+        {
+          "group": 1574,
+          "latents": [
+            51
+          ],
+          "gain_margin": 314.79,
+          "examples": [
+            "Your right.   The year I started high school boys had to be clean shaven and their shirts tucked in . By the time I left three years later you could dress any w",
+            "Thank you Peter, it's individuals such as yourself that have made my family and I feel welcome. We moved to Eugene last September from west Texas. We've lived a",
+            "For a second there, when I thought that Denise Balkisoon was actually going to write that identity politics had gone too far in prescribing what could and could"
+          ]
+        },
+        {
+          "group": 873,
+          "latents": [
+            1570
+          ],
+          "gain_margin": 285.56,
+          "examples": [
+            "Forgot to mention we have an RZ500 squirrelled away in the garage. By now the thing needs to be refreshed but that's no big deal.",
+            "This story fails to mention that Mr. Rockett is, in fact, a genetically modified raccoon.",
+            "Completely agree.  \n\nYears ago the only email I could find for Ikelite, www.ikelite.com, was Ike Brigham's so I emailed him about who I should talk to about get"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 832,
+      "n_groups": 783,
+      "n_multi_groups": 44,
+      "n_groups_dropped": 594,
+      "n_removed": 617,
+      "var_share_removed": 0.4437,
+      "var_share_sae_error": 0.0171,
+      "top": [
+        {
+          "group": 137,
+          "latents": [
+            1908
+          ],
+          "gain_margin": 138.33,
+          "examples": [
+            "2017-10-27 14:22:05.057433",
+            "2016-10-13 05:05:01.234954",
+            "2017-02-05 05:13:25.250001"
+          ]
+        },
+        {
+          "group": 426,
+          "latents": [
+            1031
+          ],
+          "gain_margin": 109.02,
+          "examples": [
+            "2016-07-23 17:21:43.871330",
+            "2016-08-02 13:23:43.839032",
+            "2016-09-27 04:14:43.826232"
+          ]
+        },
+        {
+          "group": 126,
+          "latents": [
+            1437,
+            1532
+          ],
+          "gain_margin": 95.8,
+          "examples": [
+            "2016-12-13 09:16:35.854745",
+            "2016-12-04 17:10:23.853203",
+            "2017-08-16 16:29:01.854417"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            556,
+            952
+          ],
+          "gain_margin": 89.02,
+          "examples": [
+            "2017-01-29 23:30:05.001069",
+            "2017-01-29 00:55:08.389705",
+            "2017-04-29 00:02:51.076792"
+          ]
+        },
+        {
+          "group": 16,
+          "latents": [
+            604,
+            1376
+          ],
+          "gain_margin": 86.64,
+          "examples": [
+            "2017-07-07 01:55:58.332324",
+            "2017-07-07 14:29:09.649352",
+            "2017-07-07 03:02:52.544745"
+          ]
+        }
+      ]
+    }
+  }
+}

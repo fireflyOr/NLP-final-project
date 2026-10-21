@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3955003768107885,
+  "test_error": 1.3955003768107885,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7969832856146937,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 80.62589907646179,
+  "diagnostics": {
+    "experience": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 430,
+      "n_kept": 512,
+      "n_removed": 0,
+      "threshold": 0.044,
+      "passed_test": 406,
+      "removed_norm_ratio": 0.0,
+      "var_share_kept": 0.9982,
+      "var_share_sae_error": 0.0,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 205,
+          "score": 0.4713,
+          "n_active": 1010,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 28,
+          "score": 0.4655,
+          "n_active": 1337,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "latent": 57,
+          "score": 0.4539,
+          "n_active": 751,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 144,
+          "score": 0.4524,
+          "n_active": 751,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.4511,
+          "n_active": 751,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 478,
+      "n_removed": 34,
+      "threshold": 0.0434,
+      "passed_test": 199,
+      "removed_norm_ratio": 0.1508,
+      "var_share_kept": 0.8007,
+      "var_share_sae_error": 0.1211,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 473,
+          "score": 0.2611,
+          "n_active": 2177,
+          "examples": [
+            "He should be interested for relocating to Nagpur. ;Candidate should be MHA / DHA ...",
+            "He should be interested for relocating to Nagpur. ;Candidate should be MHA / DHA ...",
+            "Terms: Temporary with possibility of permanent Only candidates from Mumbai can apply. ..."
+          ]
+        },
+        {
+          "latent": 357,
+          "score": 0.2582,
+          "n_active": 2490,
+          "examples": [
+            " Hands-on experience ...",
+            " Hands-on experience ...",
+            " If you are comfortable with ..."
+          ]
+        },
+        {
+          "latent": 449,
+          "score": 0.2582,
+          "n_active": 2170,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 105,
+          "score": 0.2563,
+          "n_active": 2175,
+          "examples": [
+            "- Prior experience in investment banking / finance is not ...",
+            "Care should be taken to omit terms contained within the proposal that are unfavorable to client, while ...",
+            "We are a part of the broader North America Cards team providing strategic and analytical decision ..."
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.2559,
+          "n_active": 2169,
+          "examples": [
+            "Thanks & Regards  SHIKHA ZUTSHI   MANAGER-HR +91-9205684519 . Must have minimum ...",
+            "SAS/SPSS/MATLAB.Azure Storage, experience in any one flavor Cloudera/Hortonwork/MapR ...",
+            "SAS/SPSS/MATLAB.Azure Storage, experience in any one flavor Cloudera/Hortonwork/MapR ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 470,
+      "n_removed": 42,
+      "threshold": 0.0468,
+      "passed_test": 170,
+      "removed_norm_ratio": 0.2225,
+      "var_share_kept": 0.8082,
+      "var_share_sae_error": 0.1043,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 189,
+          "score": 0.1996,
+          "n_active": 183,
+          "examples": [
+            "Vice President- Operations",
+            "Vice President",
+            "Vice President"
+          ]
+        },
+        {
+          "latent": 437,
+          "score": 0.1994,
+          "n_active": 640,
+          "examples": [
+            "Executive Assistant  | Fractal Analytics | Goregaon, Mumbai",
+            "Executive Assistant to President",
+            "Executive Assistant"
+          ]
+        },
+        {
+          "latent": 324,
+          "score": 0.188,
+          "n_active": 804,
+          "examples": [
+            "Email Support Executive",
+            "Research Executive",
+            "Research Executive"
+          ]
+        },
+        {
+          "latent": 484,
+          "score": 0.1502,
+          "n_active": 395,
+          "examples": [
+            "BPO Executive, BPO Analyst, Bpo Associate,",
+            "BPO Executive, BPO Analyst, Bpo Associate,",
+            "SPOT Offer - BPO- UK Web-chat Process @ Kalyani Nagar"
+          ]
+        },
+        {
+          "latent": 43,
+          "score": 0.1458,
+          "n_active": 304,
+          "examples": [
+            "Walk in : Finance Executive",
+            "WALK IN - Record To Report",
+            "Walk in for  Payroll Executive"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 476,
+      "n_removed": 36,
+      "threshold": 0.0457,
+      "passed_test": 155,
+      "removed_norm_ratio": 0.1903,
+      "var_share_kept": 0.8195,
+      "var_share_sae_error": 0.0979,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 90,
+          "score": 0.1547,
+          "n_active": 267,
+          "examples": [
+            "call monitoring, quality analysis, feedback, Call Audit...",
+            "call monitoring, quality analysis, feedback, Call Audit...",
+            "quality analysis, call monitoring"
+          ]
+        },
+        {
+          "latent": 446,
+          "score": 0.1437,
+          "n_active": 1267,
+          "examples": [
+            "Communication Skills, Presentation Skills, Relationship Building, MAR...",
+            "Verbal Communication, Communication Skills, Software Quality...",
+            "communication skills, client communication, trade processing..."
+          ]
+        },
+        {
+          "latent": 220,
+          "score": 0.1388,
+          "n_active": 172,
+          "examples": [
+            "voice analyst , voice research",
+            "semi voice process, semi voice, non voice, non voice process, fresher...",
+            "semi voice process, semi voice, non voice, non voice process, fresher..."
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.125,
+          "n_active": 402,
+          "examples": [
+            "shrinkage, people management, contact center operations, team leader...",
+            "wfm, scheduling, workforce management, contact center, advanced excel...",
+            "payroll, contract preparation, contract management, uk shift..."
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.1138,
+          "n_active": 451,
+          "examples": [
+            "part time, freelancing, data entry, present job, work from home...",
+            "part time, freelancing, data entry, present job, work from home...",
+            "part time, freelancing, data entry, present job, work from home..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 498,
+      "n_kept": 491,
+      "n_removed": 21,
+      "threshold": 0.0462,
+      "passed_test": 254,
+      "removed_norm_ratio": 0.1376,
+      "var_share_kept": 0.9138,
+      "var_share_sae_error": 0.0049,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.1414,
+          "n_active": 3171,
+          "examples": [
+            "Bengaluru(Residency Road)",
+            "Bengaluru(Palace Road)",
+            "Mumbai(Charni Road)"
+          ]
+        },
+        {
+          "latent": 35,
+          "score": 0.1325,
+          "n_active": 34,
+          "examples": [
+            "Australia, Canada",
+            "Australia, Canada",
+            "Australia, Canada"
+          ]
+        },
+        {
+          "latent": 65,
+          "score": 0.1286,
+          "n_active": 2018,
+          "examples": [
+            "Bengaluru(Manayata Tech Park)",
+            "Bengaluru(Manayata Tech Park)",
+            "Bengaluru(Electronics City Phase 1)"
+          ]
+        },
+        {
+          "latent": 371,
+          "score": 0.1282,
+          "n_active": 2718,
+          "examples": [
+            "Bangalore, Bangalore",
+            "Bangalore, Bangalore",
+            "Bangalore, Bangalore"
+          ]
+        },
+        {
+          "latent": 40,
+          "score": 0.1262,
+          "n_active": 2188,
+          "examples": [
+            "Bengaluru(Bommenahalli+6)",
+            "Bengaluru(Bommenahalli+6)",
+            "Bengaluru, Indiranagar"
+          ]
+        }
+      ]
+    }
+  }
+}

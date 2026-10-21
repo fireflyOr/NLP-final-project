@@ -1,0 +1,394 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4055490018995207,
+  "test_error": 1.4055490018995207,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7924471681842494,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 473.35902428627014,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 621,
+      "n_groups": 621,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 574,
+      "n_removed": 574,
+      "var_share_removed": 0.7096,
+      "var_share_sae_error": 0.0001,
+      "top": [
+        {
+          "group": 340,
+          "latents": [
+            506
+          ],
+          "gain_margin": 4129.59,
+          "examples": [
+            "10-16 yrs",
+            "10-16 yrs",
+            "10-16 yrs"
+          ]
+        },
+        {
+          "group": 222,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 3509.43,
+          "examples": [
+            "0-2 yrs",
+            "0-2 yrs",
+            "0-2 yrs"
+          ]
+        },
+        {
+          "group": 388,
+          "latents": [
+            873
+          ],
+          "gain_margin": 3387.19,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 286,
+          "latents": [
+            389
+          ],
+          "gain_margin": 2998.71,
+          "examples": [
+            "11-18 yrs",
+            "11-18 yrs",
+            "11-18 yrs"
+          ]
+        },
+        {
+          "group": 474,
+          "latents": [
+            36
+          ],
+          "gain_margin": 1225.59,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2023,
+      "n_groups": 2019,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1146,
+      "n_removed": 1148,
+      "var_share_removed": 0.3108,
+      "var_share_sae_error": 0.0413,
+      "top": [
+        {
+          "group": 1002,
+          "latents": [
+            1180
+          ],
+          "gain_margin": 2756.6,
+          "examples": [
+            " Hands-on experience ...",
+            " Should have good communication ...",
+            " Experience in working on a ..."
+          ]
+        },
+        {
+          "group": 120,
+          "latents": [
+            1934
+          ],
+          "gain_margin": 1131.54,
+          "examples": [
+            "Exposure to any source code management system, preferably Aldon;Proven knowledge of databases ORACLE, ...",
+            " Binary Semantics Limited (BSL ...",
+            " Notice period: Looking for ..."
+          ]
+        },
+        {
+          "group": 1592,
+          "latents": [
+            228
+          ],
+          "gain_margin": 1051.04,
+          "examples": [
+            "Experience : 10+ yrs;Education Background - Tier ...",
+            "10 years project management experience PMP certification Preferred Additional skills Business analysis ...",
+            "- Minimum of 10 years experience in designing and developing web applications using latest technologies ..."
+          ]
+        },
+        {
+          "group": 60,
+          "latents": [
+            1956
+          ],
+          "gain_margin": 976.1,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 1956,
+          "latents": [
+            1125
+          ],
+          "gain_margin": 547.52,
+          "examples": [
+            "15+ years payment card financial services experience leading payment product and service fee-based ...",
+            "Required Experience : 15+ years- experience in Manufacturing / Consumer Electronics & Durables/ ...",
+            "Minimum of 15 plus years job experience supporting IT functions in engineering or construction industry ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2006,
+      "n_groups": 1983,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 922,
+      "n_removed": 927,
+      "var_share_removed": 0.2452,
+      "var_share_sae_error": 0.0326,
+      "top": [
+        {
+          "group": 116,
+          "latents": [
+            1983
+          ],
+          "gain_margin": 2383.06,
+          "examples": [
+            "Business Executive,",
+            "BD Executive, IT Sales Executive",
+            "Social Media Executive"
+          ]
+        },
+        {
+          "group": 1953,
+          "latents": [
+            311
+          ],
+          "gain_margin": 2113.98,
+          "examples": [
+            "Manager",
+            "Manager",
+            "Manager"
+          ]
+        },
+        {
+          "group": 980,
+          "latents": [
+            1533
+          ],
+          "gain_margin": 2044.28,
+          "examples": [
+            "Executive Assistant to CEO",
+            "Executive Assistant to CEO",
+            "Executive Assistant to CEO"
+          ]
+        },
+        {
+          "group": 1812,
+          "latents": [
+            1449
+          ],
+          "gain_margin": 1945.35,
+          "examples": [
+            "Associate Director - Analytics",
+            "Associate Director - Analytics",
+            "Associate Director - Analytics"
+          ]
+        },
+        {
+          "group": 819,
+          "latents": [
+            1148
+          ],
+          "gain_margin": 1708.67,
+          "examples": [
+            "Head of Marketing",
+            "Head of Product (b2b)",
+            "Head of Product (b2b)"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1960,
+      "n_groups": 1920,
+      "n_multi_groups": 26,
+      "n_groups_dropped": 873,
+      "n_removed": 879,
+      "var_share_removed": 0.2092,
+      "var_share_sae_error": 0.0283,
+      "top": [
+        {
+          "group": 95,
+          "latents": [
+            371,
+            1701
+          ],
+          "gain_margin": 2108.05,
+          "examples": [
+            "Outsourcing, Operations, advanced analytics, Manager Technology",
+            "Outsourcing, Operations, advanced analytics, Manager Technology",
+            "Project management, Solution architecture, Outsourcing..."
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            1275,
+            1449,
+            1497
+          ],
+          "gain_margin": 1438.28,
+          "examples": [
+            "Analytics, Manager - Analytics, Model Development, strategy development...",
+            "analytics, analytics head, sas, reporting",
+            "Analytics, Manager - Analytics, Python, consulting, Marketing Analytics..."
+          ]
+        },
+        {
+          "group": 1645,
+          "latents": [
+            189
+          ],
+          "gain_margin": 947.84,
+          "examples": [
+            "domestic bpo, call quality, Call Audit, Quality Analyst, Quality Analysis...",
+            "call monitoring, quality analysis, domestic bpo, feedback, outbound...",
+            "call monitoring, quality analysis, domestic bpo, feedback, outbound..."
+          ]
+        },
+        {
+          "group": 1021,
+          "latents": [
+            1405
+          ],
+          "gain_margin": 867.75,
+          "examples": [
+            "seo, seo executive, search engine optimization executive...",
+            "field executive, Field Work",
+            "Business Development Executive"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            701,
+            1081,
+            1733
+          ],
+          "gain_margin": 763.28,
+          "examples": [
+            "revenue management, monthly reports, revenue manager, yield management...",
+            "Manager - Operations, Operations, sales management, Product development...",
+            "Manager - Talent Acquisition, Talent Acquisition, Talent Management, Hiring..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 936,
+      "n_groups": 928,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 799,
+      "n_removed": 807,
+      "var_share_removed": 0.8482,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 183,
+          "latents": [
+            1801
+          ],
+          "gain_margin": 235.98,
+          "examples": [
+            "Delhi(Jhandewalan)",
+            "United States (U.S), New Jersey",
+            "United States (U.S), New Jersey"
+          ]
+        },
+        {
+          "group": 303,
+          "latents": [
+            1372
+          ],
+          "gain_margin": 163.51,
+          "examples": [
+            "Canada, Australia, Germany, Dubai/ UAE, New Zealand, Hong Kong",
+            "Canada, Germany, Australia",
+            "Qatar"
+          ]
+        },
+        {
+          "group": 770,
+          "latents": [
+            1301
+          ],
+          "gain_margin": 140.43,
+          "examples": [
+            "Canada",
+            "Canada",
+            "Canada"
+          ]
+        },
+        {
+          "group": 304,
+          "latents": [
+            1509
+          ],
+          "gain_margin": 132.12,
+          "examples": [
+            "Allahabad, Patna, Bengaluru",
+            "Allahabad, Patna, Bengaluru",
+            "Bengaluru, Hyderabad, Anantapur"
+          ]
+        },
+        {
+          "group": 871,
+          "latents": [
+            514
+          ],
+          "gain_margin": 129.78,
+          "examples": [
+            "Mumbai Suburbs",
+            "Mumbai Suburbs",
+            "Mumbai Suburbs"
+          ]
+        }
+      ]
+    }
+  }
+}

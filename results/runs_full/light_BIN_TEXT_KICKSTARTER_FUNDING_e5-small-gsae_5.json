@@ -1,0 +1,403 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7255726036146006,
+  "test_error": 0.27442739638539937,
+  "course_metric": "auroc",
+  "course_score": 0.7255726036146005,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 89.62285947799683,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 522,
+      "n_groups": 416,
+      "n_multi_groups": 77,
+      "n_groups_dropped": 247,
+      "n_removed": 296,
+      "var_share_removed": 0.4727,
+      "var_share_sae_error": 0.011,
+      "top": [
+        {
+          "group": 118,
+          "latents": [
+            976,
+            1154,
+            1886
+          ],
+          "gain_margin": 420.02,
+          "examples": [
+            "1970-01-01 00:00:01.423080547",
+            "1970-01-01 00:00:01.427020750",
+            "1970-01-01 00:00:01.423253131"
+          ]
+        },
+        {
+          "group": 64,
+          "latents": [
+            379,
+            1206,
+            1807
+          ],
+          "gain_margin": 331.83,
+          "examples": [
+            "1970-01-01 00:00:01.405054000",
+            "1970-01-01 00:00:01.405000267",
+            "1970-01-01 00:00:01.405320481"
+          ]
+        },
+        {
+          "group": 50,
+          "latents": [
+            875,
+            1431
+          ],
+          "gain_margin": 275.94,
+          "examples": [
+            "1970-01-01 00:00:01.418014480",
+            "1970-01-01 00:00:01.413249157",
+            "1970-01-01 00:00:01.413221177"
+          ]
+        },
+        {
+          "group": 59,
+          "latents": [
+            1023,
+            1334,
+            1752
+          ],
+          "gain_margin": 199.34,
+          "examples": [
+            "1970-01-01 00:00:01.404141578",
+            "1970-01-01 00:00:01.404910450",
+            "1970-01-01 00:00:01.404325180"
+          ]
+        },
+        {
+          "group": 267,
+          "latents": [
+            1171
+          ],
+          "gain_margin": 142.12,
+          "examples": [
+            "1970-01-01 00:00:01.364510007",
+            "1970-01-01 00:00:01.361402051",
+            "1970-01-01 00:00:01.361413847"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 645,
+      "n_groups": 553,
+      "n_multi_groups": 70,
+      "n_groups_dropped": 357,
+      "n_removed": 393,
+      "var_share_removed": 0.3463,
+      "var_share_sae_error": 0.0079,
+      "top": [
+        {
+          "group": 298,
+          "latents": [
+            405
+          ],
+          "gain_margin": 342.35,
+          "examples": [
+            "1970-01-01 00:00:01.394179140",
+            "1970-01-01 00:00:01.414177140",
+            "1970-01-01 00:00:01.346472000"
+          ]
+        },
+        {
+          "group": 94,
+          "latents": [
+            976,
+            1154,
+            1886
+          ],
+          "gain_margin": 293.91,
+          "examples": [
+            "1970-01-01 00:00:01.423375140",
+            "1970-01-01 00:00:01.427551140",
+            "1970-01-01 00:00:01.424502000"
+          ]
+        },
+        {
+          "group": 36,
+          "latents": [
+            309,
+            480,
+            1287
+          ],
+          "gain_margin": 256.2,
+          "examples": [
+            "1970-01-01 00:00:01.407042000",
+            "1970-01-01 00:00:01.407070800",
+            "1970-01-01 00:00:01.407442020"
+          ]
+        },
+        {
+          "group": 15,
+          "latents": [
+            685,
+            721,
+            1867,
+            1973
+          ],
+          "gain_margin": 253.15,
+          "examples": [
+            "1970-01-01 00:00:01.405483140",
+            "1970-01-01 00:00:01.250485140",
+            "1970-01-01 00:00:01.430542740"
+          ]
+        },
+        {
+          "group": 130,
+          "latents": [
+            1833
+          ],
+          "gain_margin": 230.88,
+          "examples": [
+            "1970-01-01 00:00:01.393030800",
+            "1970-01-01 00:00:01.393023287",
+            "1970-01-01 00:00:01.396755000"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1219,
+      "n_removed": 1219,
+      "var_share_removed": 0.3769,
+      "var_share_sae_error": 0.1684,
+      "top": [
+        {
+          "group": 1021,
+          "latents": [
+            917
+          ],
+          "gain_margin": 597.57,
+          "examples": [
+            "\"Slave To The Grind is the first feature length documentary on Grindcore\"",
+            "\"Help us complete a feature-length documentary about the future of the independent music industry!\"",
+            "\"Boom! is a feature-length documentary about the Baby Boomer generation reaching retirement and their Financial Planning.\""
+          ]
+        },
+        {
+          "group": 350,
+          "latents": [
+            1531
+          ],
+          "gain_margin": 384.05,
+          "examples": [
+            "\"RoS is a Free-to-Play tabletop fantasy RPG; featuring a dynamic class system, strategic combat, & limitless character customization.\"",
+            "\"A new fantasy RPG based on the d20 system.\"",
+            "\"A cinematic, fast playing, super fun combat system for miniatures and tabletop.\""
+          ]
+        },
+        {
+          "group": 1184,
+          "latents": [
+            346
+          ],
+          "gain_margin": 285.53,
+          "examples": [
+            "\"An amazing album that could influence the world.\"",
+            "\"I'm making a new album, & YOU can be a big part in it being released in some special/awesome ways!\"",
+            "\"We've recorded our second album, we're extremely happy with it but we need YOU to help us release it.\""
+          ]
+        },
+        {
+          "group": 1992,
+          "latents": [
+            67
+          ],
+          "gain_margin": 235.65,
+          "examples": [
+            "\"app\"",
+            "\"Public Radio Project\"",
+            "\"Research Study\""
+          ]
+        },
+        {
+          "group": 677,
+          "latents": [
+            1571
+          ],
+          "gain_margin": 229.2,
+          "examples": [
+            "\"Will this be the greatest podcast of all time??.....Look, i don't have all the answers all the time but what I will say is this....nope\"",
+            "\"Du simulcast, mais enfin de qualit\u00e9 !\n\nVous en avez assez de payer pour du sub \u00e0 la qualit\u00e9 douteuse ? Nous voil\u00e0 !\"",
+            "\"U heeft iets nodig, maar heeft geen zin of tijd om het zelf te regelen? Laat het door een van onze Superfriends oplossen!\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2040,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1264,
+      "n_removed": 1266,
+      "var_share_removed": 0.4017,
+      "var_share_sae_error": 0.1425,
+      "top": [
+        {
+          "group": 245,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 300.92,
+          "examples": [
+            "\"global-cuba-the-documentary\"",
+            "\"ma-maison-a-documentary\"",
+            "\"if-a-documentary-film-of-the-egyptian-revolution\""
+          ]
+        },
+        {
+          "group": 2035,
+          "latents": [
+            394
+          ],
+          "gain_margin": 271.85,
+          "examples": [
+            "\"at-a-loss-for-words-releases-their-first-album\"",
+            "\"help-howth-release-their-new-album\"",
+            "\"a-fistful-of-sugar-makes-their-first-album\""
+          ]
+        },
+        {
+          "group": 865,
+          "latents": [
+            1093
+          ],
+          "gain_margin": 256.17,
+          "examples": [
+            "\"foodtimes-a-time-for-food\"",
+            "\"the-local-great-foodnaturally\"",
+            "\"food-that-feeds-the-soul\""
+          ]
+        },
+        {
+          "group": 1848,
+          "latents": [
+            228
+          ],
+          "gain_margin": 238.78,
+          "examples": [
+            "\"two-in-a-million-a-documentary-honoring-beatle\"",
+            "\"strongest-hearts-documentary-series-on-vegan-athle\"",
+            "\"touching-sound-the-technika-documentary\""
+          ]
+        },
+        {
+          "group": 1393,
+          "latents": [
+            101
+          ],
+          "gain_margin": 223.38,
+          "examples": [
+            "\"new-music-video-project\"",
+            "\"now-what-the-new-season\"",
+            "\"the-fallens-new-album\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2041,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1272,
+      "n_removed": 1275,
+      "var_share_removed": 0.3932,
+      "var_share_sae_error": 0.1557,
+      "top": [
+        {
+          "group": 2011,
+          "latents": [
+            23
+          ],
+          "gain_margin": 1330.65,
+          "examples": [
+            "\"Project Cancelled (Canceled)\"",
+            "\"Research Study (Canceled)\"",
+            "\"ArmyPro (Canceled)\""
+          ]
+        },
+        {
+          "group": 37,
+          "latents": [
+            2029
+          ],
+          "gain_margin": 643.97,
+          "examples": [
+            "\"TheTruth - A Facebook Mobile Dating App (Canceled)\"",
+            "\"Idol Creation website & marketing (Canceled)\"",
+            "\"Song of the South (Canceled)\""
+          ]
+        },
+        {
+          "group": 2031,
+          "latents": [
+            228
+          ],
+          "gain_margin": 467.56,
+          "examples": [
+            "\"Ma Maison - A Documentary\"",
+            "\"Out of Service -  a documentary\"",
+            "\"El Sistema USA Documentary\""
+          ]
+        },
+        {
+          "group": 193,
+          "latents": [
+            1468
+          ],
+          "gain_margin": 323.63,
+          "examples": [
+            "\"New Recording Project\"",
+            "\"New EP!\"",
+            "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"New Air\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\""
+          ]
+        },
+        {
+          "group": 1971,
+          "latents": [
+            235
+          ],
+          "gain_margin": 262.27,
+          "examples": [
+            "\"Cards Across America\"",
+            "\"Bicycle Occults Playing Cards Deck\"",
+            "\"Kings Playing Cards\""
+          ]
+        }
+      ]
+    }
+  }
+}

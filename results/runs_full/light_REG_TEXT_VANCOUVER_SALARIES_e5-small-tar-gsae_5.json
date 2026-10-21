@@ -1,0 +1,170 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -12996.814210169825,
+  "test_error": 12996.814210169825,
+  "course_metric": "r2",
+  "course_score": 0.7749860986355581,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 37.21980047225952,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2031,
+      "n_groups": 2020,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1243,
+      "n_removed": 1246,
+      "var_share_removed": 0.4818,
+      "var_share_sae_error": 0.0265,
+      "top": [
+        {
+          "group": 471,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 690.0,
+          "examples": [
+            "Connelly, P",
+            "Connelly, P",
+            "Connell, F J*"
+          ]
+        },
+        {
+          "group": 1996,
+          "latents": [
+            204
+          ],
+          "gain_margin": 470.73,
+          "examples": [
+            "Owen, C",
+            "Owen, T",
+            "Owen, K W"
+          ]
+        },
+        {
+          "group": 1412,
+          "latents": [
+            1143
+          ],
+          "gain_margin": 452.14,
+          "examples": [
+            "Ruhle, S",
+            "Ruhle, S",
+            "Soulliere, T W"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            86,
+            305,
+            1629,
+            1673
+          ],
+          "gain_margin": 404.62,
+          "examples": [
+            "Bishop, J A",
+            "Lamb, J B",
+            "Williams, J C"
+          ]
+        },
+        {
+          "group": 2004,
+          "latents": [
+            778
+          ],
+          "gain_margin": 364.11,
+          "examples": [
+            "Fanning, P J",
+            "Fanning, P J",
+            "Fanning, P J"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1019,
+      "n_groups": 1015,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 702,
+      "n_removed": 706,
+      "var_share_removed": 0.1946,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 39,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 9657.44,
+          "examples": [
+            "DEPUTY GENERAL MANAGER, ACT",
+            "General Manager Planning, Urban Des& Sustain",
+            "General Manager Real Estate & Facilities"
+          ]
+        },
+        {
+          "group": 980,
+          "latents": [
+            305
+          ],
+          "gain_margin": 5961.93,
+          "examples": [
+            "SENIOR MANAGER, INFORMATION TECHNOLOGY",
+            "Senior Manager, Information Technology",
+            "Chief Human Resources Officer"
+          ]
+        },
+        {
+          "group": 970,
+          "latents": [
+            564
+          ],
+          "gain_margin": 4490.32,
+          "examples": [
+            "Managing Director Dept Svc & Ptr Agree",
+            "Managing Director Dept Svc & Ptr Agree",
+            "Director, Housing Policy & Regulation"
+          ]
+        },
+        {
+          "group": 910,
+          "latents": [
+            204
+          ],
+          "gain_margin": 4428.07,
+          "examples": [
+            "A/DIR NEIGHBOURHOOD & YOUTH SERVICES",
+            "Solicitor III",
+            "Solicitor III"
+          ]
+        },
+        {
+          "group": 833,
+          "latents": [
+            457
+          ],
+          "gain_margin": 2311.19,
+          "examples": [
+            "Associate Director - Facilites Development",
+            "Director, Ops Info & Planning (T)",
+            "Director, Ops Info & Planning"
+          ]
+        }
+      ]
+    }
+  }
+}

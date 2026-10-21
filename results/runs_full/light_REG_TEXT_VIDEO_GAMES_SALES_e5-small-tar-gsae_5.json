@@ -1,0 +1,169 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.3982664944333765,
+  "test_error": 1.3982664944333765,
+  "course_metric": "r2",
+  "course_score": 0.3120081214616195,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.26111960411072,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2041,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1643,
+      "n_removed": 1643,
+      "var_share_removed": 0.4588,
+      "var_share_sae_error": 0.0554,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            1233,
+            1847
+          ],
+          "gain_margin": 16745.14,
+          "examples": [
+            "Super Mario Bros. 2",
+            "Super Mario 64",
+            "Super Mario Land"
+          ]
+        },
+        {
+          "group": 238,
+          "latents": [
+            1810
+          ],
+          "gain_margin": 6449.59,
+          "examples": [
+            "Nintendogs",
+            "Super Smash Bros.",
+            "Super Smash Bros. Melee"
+          ]
+        },
+        {
+          "group": 1896,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 3963.99,
+          "examples": [
+            "Spyro: Season of Ice",
+            "Karaoke Joysound Wii DX",
+            "Spyro 2: Season of Flame"
+          ]
+        },
+        {
+          "group": 998,
+          "latents": [
+            1416
+          ],
+          "gain_margin": 3131.03,
+          "examples": [
+            "Billy's Boot Camp: Wii de Enjoy Diet!",
+            "SpongeBob SquarePants: Game Boy Advance Video Volume 3",
+            "SpongeBob SquarePants: Game Boy Advance Video Volume 1"
+          ]
+        },
+        {
+          "group": 1492,
+          "latents": [
+            1086
+          ],
+          "gain_margin": 1633.35,
+          "examples": [
+            "Forza Motorsport 3: Ultimate Edition",
+            "Forza Motorsport 2",
+            "Forza Motorsport 5"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1031,
+      "n_groups": 1031,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 958,
+      "n_removed": 958,
+      "var_share_removed": 0.7239,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 526,
+          "latents": [
+            29
+          ],
+          "gain_margin": 1894.58,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 916,
+          "latents": [
+            168
+          ],
+          "gain_margin": 1633.62,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 689,
+          "latents": [
+            99
+          ],
+          "gain_margin": 1288.42,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 605,
+          "latents": [
+            200
+          ],
+          "gain_margin": 1032.84,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 423,
+          "latents": [
+            998
+          ],
+          "gain_margin": 959.02,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

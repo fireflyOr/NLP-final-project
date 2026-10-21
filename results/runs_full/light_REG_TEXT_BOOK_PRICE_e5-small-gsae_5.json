@@ -1,0 +1,392 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23314562803483088,
+  "test_error": 0.23314562803483088,
+  "course_metric": "r2",
+  "course_score": 0.48759327793113416,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 49.991722106933594,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1797,
+      "n_groups": 1797,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1130,
+      "n_removed": 1130,
+      "var_share_removed": 0.5811,
+      "var_share_sae_error": 0.0037,
+      "top": [
+        {
+          "group": 876,
+          "latents": [
+            94
+          ],
+          "gain_margin": 284.54,
+          "examples": [
+            "Anuja Chandramouli",
+            "Anuja Chandramouli",
+            "Anuja Chandramouli"
+          ]
+        },
+        {
+          "group": 1693,
+          "latents": [
+            841
+          ],
+          "gain_margin": 185.06,
+          "examples": [
+            "Russ Manning",
+            "Russ Manning",
+            "Russ Manning"
+          ]
+        },
+        {
+          "group": 578,
+          "latents": [
+            1376
+          ],
+          "gain_margin": 113.67,
+          "examples": [
+            "The Editors of O the Oprah Magazine",
+            "American Heritage Editors",
+            "Lillian Herlands Hornstein, G. D. Percy, Calvin S. Brown"
+          ]
+        },
+        {
+          "group": 623,
+          "latents": [
+            887
+          ],
+          "gain_margin": 112.19,
+          "examples": [
+            "Betty Edwards",
+            "Barbara Taylor Bradford",
+            "Louise Penny"
+          ]
+        },
+        {
+          "group": 704,
+          "latents": [
+            1028
+          ],
+          "gain_margin": 111.62,
+          "examples": [
+            "Elfriede Jelinek",
+            "Jill Chamberlain",
+            "Jill Chamberlain"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 500,
+      "n_groups": 470,
+      "n_multi_groups": 25,
+      "n_groups_dropped": 296,
+      "n_removed": 310,
+      "var_share_removed": 0.3154,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 28,
+          "latents": [
+            551,
+            679,
+            960
+          ],
+          "gain_margin": 1618.42,
+          "examples": [
+            "Hardcover,\u2013 30 May 2013",
+            "Hardcover,\u2013 2 May 2011",
+            "Hardcover,\u2013 29 May 2009"
+          ]
+        },
+        {
+          "group": 118,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 349.48,
+          "examples": [
+            "Cards,\u2013 2015",
+            "Paperback,\u2013 2011",
+            "Paperback,\u2013 2011"
+          ]
+        },
+        {
+          "group": 438,
+          "latents": [
+            67
+          ],
+          "gain_margin": 264.37,
+          "examples": [
+            "(Kannada),Paperback,\u2013 2014",
+            "Flexibound,\u2013 Import, 2018",
+            "Cards,\u2013 2015"
+          ]
+        },
+        {
+          "group": 213,
+          "latents": [
+            648
+          ],
+          "gain_margin": 108.19,
+          "examples": [
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1169,
+            1774
+          ],
+          "gain_margin": 87.96,
+          "examples": [
+            "Paperback,\u2013 15 Nov 1990",
+            "Hardcover,\u2013 Unabridged, 20 Feb 1925",
+            "Paperback,\u2013 8 Jan 1990"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 850,
+      "n_groups": 850,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 687,
+      "n_removed": 687,
+      "var_share_removed": 0.5816,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 827,
+          "latents": [
+            35
+          ],
+          "gain_margin": 181.16,
+          "examples": [
+            "Medicine`",
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)"
+          ]
+        },
+        {
+          "group": 512,
+          "latents": [
+            567
+          ],
+          "gain_margin": 125.69,
+          "examples": [
+            "Visual C++ Programming",
+            "Design Pattern Programming",
+            "Design Pattern Programming"
+          ]
+        },
+        {
+          "group": 23,
+          "latents": [
+            1975
+          ],
+          "gain_margin": 100.27,
+          "examples": [
+            "Literary Travel",
+            "Literary Travel",
+            "Literary Travel"
+          ]
+        },
+        {
+          "group": 811,
+          "latents": [
+            103
+          ],
+          "gain_margin": 96.81,
+          "examples": [
+            "Software Architecture",
+            "Software Architecture",
+            "Software Architecture"
+          ]
+        },
+        {
+          "group": 843,
+          "latents": [
+            852
+          ],
+          "gain_margin": 94.05,
+          "examples": [
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1997,
+      "n_groups": 1997,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1223,
+      "n_removed": 1223,
+      "var_share_removed": 0.6533,
+      "var_share_sae_error": 0.0318,
+      "top": [
+        {
+          "group": 604,
+          "latents": [
+            1474
+          ],
+          "gain_margin": 187.99,
+          "examples": [
+            "This third volume of a four-book series collecting the entire run of the Tarzan newspaper strip by Russ Manning presents the final two, complete daily storyline",
+            "This second volume of a 4-book series collecting the entire run of the Tarzan newspaper strip by Russ Manning presents five complete daily storylines and five c",
+            "This second volume of a 4-book series collecting the entire run of the Tarzan newspaper strip by Russ Manning presents five complete daily storylines and five c"
+          ]
+        },
+        {
+          "group": 857,
+          "latents": [
+            1453
+          ],
+          "gain_margin": 144.7,
+          "examples": [
+            "About the book:\nAlgorithm Design Techniques: Recursion, Backtracking, Greedy, Divide and Conquer, and Dynamic Programming.\n\nAlgorithm Design Techniques is a det",
+            "Good game design happens when you view your game from as many perspectives as possible. Written by one of the world's top game designers, The Art of Game Design",
+            "To write such a program, which probably runs into a hundred thousand lines or more, knowledge of an object-oriented language like Java or C++ is not enough. Uni"
+          ]
+        },
+        {
+          "group": 139,
+          "latents": [
+            1779
+          ],
+          "gain_margin": 144.63,
+          "examples": [
+            "Spelling Success presents user-friendly and practical activities. This book, part of a series of carefully graded books for three different levels, is designed ",
+            "Spelling Success presents user-friendly and practical activities. This book, part of a series of carefully graded books for three different levels, is designed ",
+            "Good writing skills play a far bigger role in your professional life than you may realize. They present you as more capable and more credible than those whose w"
+          ]
+        },
+        {
+          "group": 256,
+          "latents": [
+            1781
+          ],
+          "gain_margin": 129.48,
+          "examples": [
+            "By popular demand, the classic Dennis the Menace comicbooks are presented for a new audience! Originally published in the 50s, 60s, and 70s, (when they were ill",
+            "(Music Sales America). Learning to play harmonica is now easier than ever before! The Absolute Beginners course has been designed to tell you everything you nee",
+            "When the hero Vercingetorix was defeated he threw his arms at Julius Caesar's feet. Years later, Caesar plans to hold a triumph with his enemy's shield - but wh"
+          ]
+        },
+        {
+          "group": 1041,
+          "latents": [
+            261
+          ],
+          "gain_margin": 126.17,
+          "examples": [
+            "A comprehensive guide to visual storytelling from Savannah College of Art and Design (SCAD), one of the world's leaders in sequential arts instruction. Storyboa",
+            "Compiled and edited by a board of distinguished educators, this single-volume encyclopedia contains vital information on the world's greatest literary masterpie",
+            "\u201cRiveting, heart-wrenching, and full of Old Hollywood glamour, The Seven Husbands of Evelyn Hugo is one of the most captivating reads of 2017.\u201d \u2013BuzzFeed\n\n\u201cThe "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1956,
+      "n_groups": 1956,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1262,
+      "n_removed": 1262,
+      "var_share_removed": 0.6151,
+      "var_share_sae_error": 0.0252,
+      "top": [
+        {
+          "group": 1952,
+          "latents": [
+            261
+          ],
+          "gain_margin": 196.54,
+          "examples": [
+            "Digital Photography For Beginners: Photography Essentials Basics Lessons Course, Master Photography Art and Start Taking Better Pictures",
+            "Mastering Composition: The Definitive Guide for Photographers",
+            "Logo Design Love: A guide to creating iconic brand identities (Voices That Matter)"
+          ]
+        },
+        {
+          "group": 552,
+          "latents": [
+            842
+          ],
+          "gain_margin": 181.4,
+          "examples": [
+            "Introduction to Computation and Programming Using Python with Application to Understanding Data",
+            "Introduction to Computing & Problem Solving with Python",
+            "The Self-Taught Programmer: The Definitive Guide to Programming Professionally"
+          ]
+        },
+        {
+          "group": 367,
+          "latents": [
+            1788
+          ],
+          "gain_margin": 133.36,
+          "examples": [
+            "Natural Language Processing: A Paninian Perspective",
+            "Czech: An Essential Grammar (Routledge Essential Grammars)",
+            "Natural Language Processing with Python: Analyzing Text with the Natural Language Toolkit"
+          ]
+        },
+        {
+          "group": 1053,
+          "latents": [
+            712
+          ],
+          "gain_margin": 119.46,
+          "examples": [
+            "English Vocabulary in Use Upper - Intermediate with CD-ROM",
+            "Oxford Word Skills Basic (Book & CD Rom)",
+            "Programming in Visual Basic 6.0 with Working Model CD-ROM"
+          ]
+        },
+        {
+          "group": 228,
+          "latents": [
+            1755
+          ],
+          "gain_margin": 109.26,
+          "examples": [
+            "India: Contemporary Design: Fashion, Graphics, Interiors",
+            "Harry Potter - A History of Magic: The Book of the Exhibition",
+            "Dare Eat That: A Guide to Bizarre Foods from Around the World"
+          ]
+        }
+      ]
+    }
+  }
+}

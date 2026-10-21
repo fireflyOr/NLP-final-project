@@ -1,0 +1,317 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -17.688117102327286,
+  "test_error": 17.688117102327286,
+  "course_metric": "r2",
+  "course_score": 0.81233782688927,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 36.03529238700867,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 245,
+      "n_groups": 243,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 231,
+      "n_removed": 233,
+      "var_share_removed": 0.9085,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 11,
+          "latents": [
+            1935
+          ],
+          "gain_margin": 35.76,
+          "examples": [
+            "espresso",
+            "espresso",
+            "espresso"
+          ]
+        },
+        {
+          "group": 169,
+          "latents": [
+            708
+          ],
+          "gain_margin": 34.29,
+          "examples": [
+            "blue / cream",
+            "blue / cream / green",
+            "cream / blue / red"
+          ]
+        },
+        {
+          "group": 16,
+          "latents": [
+            1925
+          ],
+          "gain_margin": 15.03,
+          "examples": [
+            "cream / black",
+            "black",
+            "black"
+          ]
+        },
+        {
+          "group": 242,
+          "latents": [
+            1388
+          ],
+          "gain_margin": 14.61,
+          "examples": [
+            "blue / gray",
+            "blue / gray",
+            "blue / gray"
+          ]
+        },
+        {
+          "group": 188,
+          "latents": [
+            457
+          ],
+          "gain_margin": 14.34,
+          "examples": [
+            "purple",
+            "purple",
+            "purple"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 262,
+      "n_groups": 260,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 240,
+      "n_removed": 241,
+      "var_share_removed": 0.6581,
+      "var_share_sae_error": 0.0036,
+      "top": [
+        {
+          "group": 49,
+          "latents": [
+            1180
+          ],
+          "gain_margin": 49.92,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 167,
+          "latents": [
+            603
+          ],
+          "gain_margin": 47.94,
+          "examples": [
+            "Glenna Jean, Diaper",
+            "Glenna Jean",
+            "Glenna Jean Lil'"
+          ]
+        },
+        {
+          "group": 182,
+          "latents": [
+            978
+          ],
+          "gain_margin": 39.62,
+          "examples": [
+            "Pam Grace Creations.",
+            "Pam Grace Creations",
+            "Pam Grace Creations"
+          ]
+        },
+        {
+          "group": 60,
+          "latents": [
+            1679
+          ],
+          "gain_margin": 22.91,
+          "examples": [
+            "Kate Mawdsley",
+            "Kate Mawdsley",
+            "Wildkin"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            1035,
+            1585
+          ],
+          "gain_margin": 20.72,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 914,
+      "n_groups": 914,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 574,
+      "n_removed": 574,
+      "var_share_removed": 0.3643,
+      "var_share_sae_error": 0.0054,
+      "top": [
+        {
+          "group": 243,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 1139.94,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 170,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 1026.18,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "group": 875,
+          "latents": [
+            36
+          ],
+          "gain_margin": 725.71,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 619,
+          "latents": [
+            359
+          ],
+          "gain_margin": 536.31,
+          "examples": [
+            "York Wall Coverings",
+            "York Wall Coverings",
+            "York Wall Coverings"
+          ]
+        },
+        {
+          "group": 485,
+          "latents": [
+            1228
+          ],
+          "gain_margin": 295.97,
+          "examples": [
+            "Baby Boom",
+            "Baby Boom",
+            "Baby Boom"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1811,
+      "n_groups": 1799,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 1091,
+      "n_removed": 1095,
+      "var_share_removed": 0.4099,
+      "var_share_sae_error": 0.0085,
+      "top": [
+        {
+          "group": 826,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 1037.97,
+          "examples": [
+            "One Grace Place - Sassy Shaylee's 3 Piece Bedding Set",
+            "COCALO Connor Fish 3-Piece Wall Hook Set",
+            "One Grace Place - Magical Michayla's 3 Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 8,
+          "latents": [
+            315,
+            1943
+          ],
+          "gain_margin": 761.97,
+          "examples": [
+            "Trend Lab Dr. Seuss The Lorax 3 Piece Crib Bedding Set - Natural/Blue/Green",
+            "Trend Lab Lucy 3 Piece Crib Bedding Set",
+            "Trend Lab Dr. Seuss Cat in the Hat 4-Piece Toddler Bedding Set - Black and White"
+          ]
+        },
+        {
+          "group": 1291,
+          "latents": [
+            40
+          ],
+          "gain_margin": 545.14,
+          "examples": [
+            "Bella 6 Piece Bed Set",
+            "Tulip Garden 6-Piece Bedding Set",
+            "Fleeting Flora 6-Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 1470,
+          "latents": [
+            534
+          ],
+          "gain_margin": 487.52,
+          "examples": [
+            "Biggshots Detroit Lions - Matthew Stafford 18 x 18 Inch Toss Pillow",
+            "Green Bay Packers Aaron Rodgers Biggshots Full Comforter Set",
+            "Biggshots New England Patriots Toss Pillow - Tom Brady"
+          ]
+        },
+        {
+          "group": 751,
+          "latents": [
+            1174
+          ],
+          "gain_margin": 467.97,
+          "examples": [
+            "Marmont Hill 'Dream Color' Peanuts Print on Canvas",
+            "Marmont Hill - 'Belle Sugar and Spice' Peanuts Print on Canvas",
+            "Marmont Hill - 'Belle Sugar and Spice' Peanuts Print on Canvas"
+          ]
+        }
+      ]
+    }
+  }
+}

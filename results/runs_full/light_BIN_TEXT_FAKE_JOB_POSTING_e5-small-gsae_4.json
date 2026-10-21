@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9073448582510124,
+  "test_error": 0.09265514174898759,
+  "course_metric": "auroc",
+  "course_score": 0.9073448582510124,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 48.405606508255005,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1346,
+      "n_removed": 1346,
+      "var_share_removed": 0.5128,
+      "var_share_sae_error": 0.1047,
+      "top": [
+        {
+          "group": 1414,
+          "latents": [
+            509
+          ],
+          "gain_margin": 1255.81,
+          "examples": [
+            "Freelance Academic Writer \u00a0We are hiring freelance academic writers (part time work-from-home job - academic sample essay and research paper writing for US stud",
+            "Hiring Part-Time Workers (CASH PAYING)You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cash",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 1476,
+          "latents": [
+            856
+          ],
+          "gain_margin": 498.21,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 925,
+          "latents": [
+            776
+          ],
+          "gain_margin": 433.87,
+          "examples": [
+            "Part Time Workers Wanted, Urgent Jobs.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra Per Da",
+            "PART-TIME WORK FROM YOUR PLACEFlexible schedule, $65 per hr Guaranteed pay.No experience is required &amp; training given.Please send an email to get in touch.#",
+            "Weekend Cash Jobs Part time &amp; Full time.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra "
+          ]
+        },
+        {
+          "group": 1985,
+          "latents": [
+            592
+          ],
+          "gain_margin": 367.53,
+          "examples": [
+            "Design core, backend/frontend software componentsEngineer the libraries and frameworks that power our front-end stackAnalyze and improve efficiency, scalability",
+            "At Puget SoundEnergy (PSE) we have a long tradition of service, and anexciting and innovative future ahead!Consider PSE for the next step in yourcareer.Senior L",
+            "Company DescriptionUrban Asset Holdings (UAH) is a full service multi-divisional private investment company. We provide personalized real estate development, ma"
+          ]
+        },
+        {
+          "group": 1051,
+          "latents": [
+            1194
+          ],
+          "gain_margin": 339.91,
+          "examples": [
+            "This is a new role. We are looking for a (mid to senior level) media planner to lead and grow our media team. We specialise in Digital Media and are looking for",
+            "This is a new role. We are looking for a (mid to senior level) media planner to help us grow our media team. We specialise in Digital Media and are looking for ",
+            "Aclima is an early-stage company based in San Francisco that designs and deploys distributed, large-scale sensor networks to empower people with actionable envi"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 257,
+      "n_groups": 234,
+      "n_multi_groups": 13,
+      "n_groups_dropped": 203,
+      "n_removed": 225,
+      "var_share_removed": 0.869,
+      "var_share_sae_error": 0.0025,
+      "top": [
+        {
+          "group": 137,
+          "latents": [
+            481
+          ],
+          "gain_margin": 81.01,
+          "examples": [
+            "30-50",
+            "30-50",
+            "30-50"
+          ]
+        },
+        {
+          "group": 110,
+          "latents": [
+            1595
+          ],
+          "gain_margin": 53.8,
+          "examples": [
+            "750-750",
+            "750-750",
+            "1600-1700"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            230
+          ],
+          "gain_margin": 45.91,
+          "examples": [
+            "2000-4000",
+            "2000-5000",
+            "4000-5000"
+          ]
+        },
+        {
+          "group": 207,
+          "latents": [
+            875
+          ],
+          "gain_margin": 43.66,
+          "examples": [
+            "43000-69000",
+            "42000-42000",
+            "34000-42000"
+          ]
+        },
+        {
+          "group": 185,
+          "latents": [
+            484
+          ],
+          "gain_margin": 32.75,
+          "examples": [
+            "50-95",
+            "50-65",
+            "50-90"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1996,
+      "n_groups": 1989,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1389,
+      "n_removed": 1391,
+      "var_share_removed": 0.4675,
+      "var_share_sae_error": 0.0251,
+      "top": [
+        {
+          "group": 1412,
+          "latents": [
+            54
+          ],
+          "gain_margin": 400.88,
+          "examples": [
+            "Cash In Hand Jobs To Begin This Week.",
+            "Great Part Time Jobs & Cash In Hand Jobs.",
+            "Part Time & Full Time Jobs, Cash In Hands."
+          ]
+        },
+        {
+          "group": 1558,
+          "latents": [
+            979
+          ],
+          "gain_margin": 347.75,
+          "examples": [
+            "Entry Level Medical Transcriptionist",
+            "Payroll Processor Entry Clerk Position - $50/Hr",
+            "Resume submitted to jobs@valorservices.com"
+          ]
+        },
+        {
+          "group": 1747,
+          "latents": [
+            523
+          ],
+          "gain_margin": 265.87,
+          "examples": [
+            "Weekly CASH Jobs, Hiring Part Time Workers.",
+            "Great Part Time Jobs & Cash In Hand Jobs.",
+            "CASH JOBS, Part Time Workers Needed."
+          ]
+        },
+        {
+          "group": 368,
+          "latents": [
+            1280
+          ],
+          "gain_margin": 247.11,
+          "examples": [
+            "Administrative Assistant - $19.35 Per Hr",
+            "Administrative Assistant",
+            "Administrative Assistant"
+          ]
+        },
+        {
+          "group": 57,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 214.63,
+          "examples": [
+            "Executive Assistant For Rapidly Growing Startup (Temp-to-Perm) - $36K",
+            "Home Assistant",
+            "Communications Assistant"
+          ]
+        }
+      ]
+    }
+  }
+}

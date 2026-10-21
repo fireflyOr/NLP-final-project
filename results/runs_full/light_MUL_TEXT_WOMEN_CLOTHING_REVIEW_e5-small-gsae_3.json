@@ -1,0 +1,171 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7292453059333888,
+  "test_error": 0.7292453059333888,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8978475340609519,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 73.37099885940552,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2037,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 787,
+      "n_removed": 788,
+      "var_share_removed": 0.2276,
+      "var_share_sae_error": 0.111,
+      "top": [
+        {
+          "group": 2029,
+          "latents": [
+            76
+          ],
+          "gain_margin": 2996.95,
+          "examples": [
+            "Very small! so disappointed! they did not even have a size for me to exchange a day later when they arrived!",
+            "I am very disappointed with this order. the shirt looks and feels cheap, is not flattering in any way. i am sending it back right away.",
+            "The shirt cuts too high up and is very awkward looking on. sent it back. wouldn't buy even on sale."
+          ]
+        },
+        {
+          "group": 277,
+          "latents": [
+            1598
+          ],
+          "gain_margin": 2623.94,
+          "examples": [
+            "So stylish. i have gotten tons of compliments on this sweater. i absolutely love it!",
+            "I absolutely love this dress. i have received so many compliments. the quality is incredible.",
+            "Very flattering tee. nice details & quality.\r\nmy first time purchasing this brand, but will look for similar items from them."
+          ]
+        },
+        {
+          "group": 21,
+          "latents": [
+            2016
+          ],
+          "gain_margin": 2552.82,
+          "examples": [
+            "This sweater coat is very bulky and has an odd and unflattering shape when on.",
+            "This dress was very boxy and unflattering. i really wanted to like it because the blue and white details were so pretty but it had to go back.",
+            "This sweater is a dull off white color. it looks old fashioned. don't get."
+          ]
+        },
+        {
+          "group": 414,
+          "latents": [
+            1775
+          ],
+          "gain_margin": 2173.37,
+          "examples": [
+            "I would have liked it but it was too small for me.",
+            "I'm very pale, and on me the rose color looked really washed out. the catalog photo is not an accurate representation. look at the product shot for a truer repr",
+            "This hoodie was too thin. you can see right through it. i returned it."
+          ]
+        },
+        {
+          "group": 1973,
+          "latents": [
+            63
+          ],
+          "gain_margin": 1542.26,
+          "examples": [
+            "I was so excited to try this on--but this was a big nope for me unfortunately. i ordered both an xs and s (i normally wear a s), both hung horribly on me, they ",
+            "I thought this top was absolutely beautiful! i couldn't wait to get it in but unfortunately it was very big on me. (i'm 5 ft, 105 lbs and got the pxs) the arm h",
+            "Ugh, the fit of this dress is terrible :/ what a beautiful dress though -- the material and the colors -- had so much potential. but, the fit is awful -- i orde"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1805,
+      "n_groups": 1790,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 1040,
+      "n_removed": 1046,
+      "var_share_removed": 0.4,
+      "var_share_sae_error": 0.0187,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            76,
+            126
+          ],
+          "gain_margin": 6921.4,
+          "examples": [
+            "Really, really bad",
+            "Cute jeans, terrible quality!",
+            "Cute, bad fit!"
+          ]
+        },
+        {
+          "group": 782,
+          "latents": [
+            1141
+          ],
+          "gain_margin": 4588.79,
+          "examples": [
+            "Amazing everything !!!",
+            "Perfect in every way!",
+            "So many compliments!"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            563,
+            995,
+            1005,
+            1034
+          ],
+          "gain_margin": 3255.39,
+          "examples": [
+            "Great fabric, but...",
+            "Beautiful fabric but...",
+            "Love the pattern but"
+          ]
+        },
+        {
+          "group": 887,
+          "latents": [
+            870
+          ],
+          "gain_margin": 1978.91,
+          "examples": [
+            "Not great quality",
+            "Not as advertised!",
+            "Not flattering."
+          ]
+        },
+        {
+          "group": 897,
+          "latents": [
+            918
+          ],
+          "gain_margin": 1096.52,
+          "examples": [
+            "No",
+            "No",
+            "No!!"
+          ]
+        }
+      ]
+    }
+  }
+}

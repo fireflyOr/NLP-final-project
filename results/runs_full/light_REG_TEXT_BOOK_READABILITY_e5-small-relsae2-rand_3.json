@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8694733043236149,
+  "test_error": 0.8694733043236149,
+  "course_metric": "r2",
+  "course_score": 0.8009136129213368,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 83.77661681175232,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 457,
+      "n_kept": 330,
+      "n_removed": 182,
+      "threshold": 0.0737,
+      "passed_test": 15,
+      "removed_norm_ratio": 0.54,
+      "var_share_kept": 0.4987,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 427,
+          "score": 0.1002,
+          "n_active": 65,
+          "examples": [
+            "The Peace Egg and Other tales",
+            "Stories from the Ballads\nTold to the Children",
+            "Stories from the Ballads\nTold to the Children"
+          ]
+        },
+        {
+          "latent": 188,
+          "score": 0.0933,
+          "n_active": 34,
+          "examples": [
+            "African Storybook Level 2",
+            "African Storybook Level 2",
+            "African Storybook Level 2"
+          ]
+        },
+        {
+          "latent": 287,
+          "score": 0.0903,
+          "n_active": 36,
+          "examples": [
+            "Great Epochs in American History, Volume I. Voyages Of Discovery And Early Explorations: 1000 A.D.-1684",
+            "Great Epochs in American History, Volume I. Voyages Of Discovery And Early Explorations: 1000 A.D.-1683",
+            "A WONDER-BOOK FOR GIRLS AND BOYS"
+          ]
+        },
+        {
+          "latent": 34,
+          "score": 0.0862,
+          "n_active": 62,
+          "examples": [
+            "A Chinese Wonder Book",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "latent": 62,
+          "score": 0.0845,
+          "n_active": 70,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 277,
+      "n_removed": 235,
+      "threshold": 0.076,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6897,
+      "var_share_kept": 0.5226,
+      "var_share_sae_error": 0.0898,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 460,
+          "score": 0.0565,
+          "n_active": 228,
+          "examples": [
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes"
+          ]
+        },
+        {
+          "latent": 5,
+          "score": 0.0473,
+          "n_active": 124,
+          "examples": [
+            "FLEEMING JENKIN",
+            "Mr. James N. Paxman",
+            "By P. J. Stahl.\n"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0467,
+          "n_active": 131,
+          "examples": [
+            "The following is a literal translation of a letter just received in New York by a French lady's maid from her sister at Rouen, and gives the point of view of th",
+            "Leo Tolstoy translated by Aylmer Maude",
+            "LEO N. TOLSTOY"
+          ]
+        },
+        {
+          "latent": 306,
+          "score": 0.0458,
+          "n_active": 118,
+          "examples": [
+            "Southern African Folktale",
+            "Southern African Folktale",
+            "South African Folktale"
+          ]
+        },
+        {
+          "latent": 238,
+          "score": 0.0442,
+          "n_active": 108,
+          "examples": [
+            "NASA",
+            "NASA",
+            "NASA"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 144,
+      "n_kept": 434,
+      "n_removed": 78,
+      "threshold": 0.0687,
+      "passed_test": 0,
+      "removed_norm_ratio": 1.4533,
+      "var_share_kept": 0.4589,
+      "var_share_sae_error": 0.0014,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 361,
+          "score": 0.0343,
+          "n_active": 40,
+          "examples": [
+            "pretence, marvelled",
+            "marvellous",
+            "marvellous"
+          ]
+        },
+        {
+          "latent": 448,
+          "score": 0.0316,
+          "n_active": 2560,
+          "examples": [
+            "parlour, honoured, parlour",
+            "parlour",
+            "parlour"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.0282,
+          "n_active": 20,
+          "examples": [
+            "scrutinising",
+            "pretence, marvelled",
+            "smoulders"
+          ]
+        },
+        {
+          "latent": 6,
+          "score": 0.0243,
+          "n_active": 53,
+          "examples": [
+            "colour",
+            "colour",
+            "colour"
+          ]
+        },
+        {
+          "latent": 343,
+          "score": 0.0231,
+          "n_active": 2832,
+          "examples": [
+            "neighbour, kilometres",
+            "neighbour",
+            "neighbours"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 319,
+      "n_removed": 193,
+      "threshold": 0.0739,
+      "passed_test": 4,
+      "removed_norm_ratio": 0.5187,
+      "var_share_kept": 0.432,
+      "var_share_sae_error": 0.2571,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 23,
+          "score": 0.0842,
+          "n_active": 192,
+          "examples": [
+            "Groton Bay, as every student of geography knows, is a nearly landlocked, well sheltered body of water, some seven miles long and three wide. At the mouth of the",
+            "Le Beau Disconus leapt on his war-horse and took his arms, and rode towards the fire. When he drew nigh he saw there two giants.\nThe maiden cried aloud for help",
+            "Fatima arrived the next day. Max brought her out in a covered basket, lined with padded crimson satin. Max likes cats and Aunt Cynthia. He explained how we were"
+          ]
+        },
+        {
+          "latent": 299,
+          "score": 0.0771,
+          "n_active": 169,
+          "examples": [
+            "The best kind of tea to use if teacup reading is to be followed is undoubtedly China tea, the original tea imported into this country and still the best for all",
+            "One day the children were out in the fields, running races, picking flowers, and making daisy-chains!\nWhen they began to feel tired and hungry, they got milk an",
+            "A glorious sensation of freedom came over me as I felt my horse's springy step,\u2014a sensation which brought powerfully back the memory of those days when I first "
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0762,
+          "n_active": 156,
+          "examples": [
+            "The catbird belongs to the family of thrushes, and is one of the most peculiar of our American birds. It is dark colored, with brown head and neck, and greenish",
+            "On one of her voyages from China, the Pitt, East Indiaman, had on board, among her passengers, a young tiger. He appeared to be as harmless and playful as a kit",
+            "Lin-Manuel Miranda often cites his childhood years as a source of inspiration for his work. He was born on January 16, 1980, in Washington Heights, a majority-L"
+          ]
+        },
+        {
+          "latent": 391,
+          "score": 0.0669,
+          "n_active": 150,
+          "examples": [
+            "Although the vacuum tube was invented by John Ambrose Fleming, it was Thomas Edison who later discovered the \"Edison effect,\" which states that electricity does",
+            "A television (also TV, telly or tube) is a machine with a screen. Televisions receive broadcast signals and turn them into pictures and sound. The word \"televis",
+            "At first, some scientists thought that the brain could benefit just by listening to music. They showed that people's scores on IQ tests improved when they liste"
+          ]
+        },
+        {
+          "latent": 342,
+          "score": 0.0668,
+          "n_active": 214,
+          "examples": [
+            "A computing platform is, in the most general sense, whatever a pre-existing piece of computer software or code object is designed to run within, obeying its con",
+            "Geometry is a kind of mathematics that studies the size, shapes, and positions of things. There are flat (2D) shapes and solid (3D) shapes in geometry. Squares,",
+            "Little Sutton was an old house, parts of which were in existence before the time of Cromwell. It is situated in a picturesque old garden, surrounded by ivy-clad"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 287,
+      "n_removed": 225,
+      "threshold": 0.0701,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.5753,
+      "var_share_kept": 0.421,
+      "var_share_sae_error": 0.2069,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 132,
+          "score": 0.0576,
+          "n_active": 113,
+          "examples": [
+            "LATONA AND THE RUSTICS",
+            "Searching for the spirit of Spring\n",
+            "The Recovery Of The Hispaniola"
+          ]
+        },
+        {
+          "latent": 289,
+          "score": 0.055,
+          "n_active": 146,
+          "examples": [
+            "Technology Grade 7",
+            "The Wolf and the Seven Young Kids",
+            "THE SEVENTH BIRTHDAY OF THE LITTLE\nCOUSIN FROM CONSTANTINOPLE"
+          ]
+        },
+        {
+          "latent": 66,
+          "score": 0.0547,
+          "n_active": 199,
+          "examples": [
+            "THE YOUNG CRITIC",
+            "THE YOUNG LAMPLIGHTER",
+            "THE YOUNG FISHERMAN"
+          ]
+        },
+        {
+          "latent": 204,
+          "score": 0.0486,
+          "n_active": 178,
+          "examples": [
+            "Internet",
+            "Internet_Protocol",
+            "How the Internet Came to Be"
+          ]
+        },
+        {
+          "latent": 296,
+          "score": 0.0472,
+          "n_active": 215,
+          "examples": [
+            "TELLING A STORY",
+            "The Story Girl",
+            "A CAT STORY"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 286,
+      "n_removed": 226,
+      "threshold": 0.0728,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6145,
+      "var_share_kept": 0.4898,
+      "var_share_sae_error": 0.0556,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 387,
+          "score": 0.0683,
+          "n_active": 82,
+          "examples": [
+            "http://www.gutenberg.org/files/14170/14170-h/14170-h.htm#A_SMART_HORSE",
+            "https://www.commonlit.org/texts/from-the-wild-horses-of-assateague-island",
+            "https://www.commonlit.org/texts/the-fox-the-hen-and-the-drum"
+          ]
+        },
+        {
+          "latent": 15,
+          "score": 0.0662,
+          "n_active": 51,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Food_chain",
+            "http://www.gutenberg.org/files/19909/19909-h/19909-h.htm#A_MYSTERY_IN_THE_KITCHEN",
+            "http://www.gutenberg.org/files/14170/14170-h/14170-h.htm#ABOUT_FLAX_BARLEY_AND_RYE"
+          ]
+        },
+        {
+          "latent": 485,
+          "score": 0.0583,
+          "n_active": 132,
+          "examples": [
+            "https://www.commonlit.org/texts/excerpt-from-peter-pan-when-wendy-grew-up",
+            "https://www.commonlit.org/texts/the-1972-andes-flight-disaster",
+            "https://www.commonlit.org/texts/from-lithuania-to-the-chicago-stockyards"
+          ]
+        },
+        {
+          "latent": 407,
+          "score": 0.0552,
+          "n_active": 149,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Firewall_(computing)",
+            "https://en.wikipedia.org/wiki/Software_as_a_service",
+            "https://www.commonlit.org/texts/steve-jobs-stanford-university-commencement-speech"
+          ]
+        },
+        {
+          "latent": 81,
+          "score": 0.0518,
+          "n_active": 985,
+          "examples": [
+            "https://www.digitallibrary.io/en/books/read/3718",
+            "http://www.gutenberg.org/files/16/16-h/16-h.htm",
+            "http://www.gutenberg.org/files/16/16-h/16-h.htm"
+          ]
+        }
+      ]
+    }
+  }
+}

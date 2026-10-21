@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7492873750928247,
+  "test_error": 0.7492873750928247,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9025407651608509,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 70.26633286476135,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1795,
+      "n_groups": 1787,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 916,
+      "n_removed": 917,
+      "var_share_removed": 0.08,
+      "var_share_sae_error": 0.0352,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            83,
+            227
+          ],
+          "gain_margin": 15902.14,
+          "examples": [
+            "I love the style of this top, and the longer length would be great with leggings and fitted shorts. it's somewhat fitted on the top yet it's a-line shape gives ",
+            "I ordered this in the blue, it's a beautiful shade of blue. love the lace up detail in the back, but the size small was just short and very wide. i understand i",
+            "I bought this because i thought it would flatter my boxy big busted shape and it does. however, while i liked the irregular hemline on the model, on my 5'5 fram"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            828,
+            2038
+          ],
+          "gain_margin": 13396.03,
+          "examples": [
+            "This is the perfect warm cozy boho sweater. the blue trim really stands out and brightens up the grey. this sweater will look cute over any outfit, or with jean",
+            "This is a terrific top!  the supima cotton is super-soft; the black, a deep black.  i love that antho is listening, and that it's made in the usa!  the lines an",
+            "I love this sweater! i ordered the xs petite. it fits perfectly! it is soft. i hate itchy sweaters. the \"peach\" color is actually more pink, but i love the colo"
+          ]
+        },
+        {
+          "group": 1784,
+          "latents": [
+            698
+          ],
+          "gain_margin": 13323.53,
+          "examples": [
+            "This shirt is so small. i am not sure who came up with the sizing but you have to go up several sizes to get a comfortable fit. don't waste your time on this sh",
+            "I wanted to love this shirt, but was very disappointed. i had read other reviews and still ordered, but wish i would have listened. the shirt looks nothing like",
+            "Although i am small (size xs on top, 27 waist) this dress is not flattering if have any fat on your body....i would not recommend it."
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            437,
+            864,
+            1002
+          ],
+          "gain_margin": 10586.73,
+          "examples": [
+            "This has such awful proportions. i'm 5'0 and 100 lbs, ordered xxs petite (in the neutral color). the seam at the bust literally hits in the middle of my bust!! ",
+            "The models pose and description are misleading. this top has absolutely no shape to it. the front of the shirt is kind of like a slub shirt texture, plain black",
+            "This is the widest sweater i have ever seen. i laughed out loud when i opened it, and then showed it around my office and everyone else cracked up too. it is co"
+          ]
+        },
+        {
+          "group": 1779,
+          "latents": [
+            106
+          ],
+          "gain_margin": 4863.85,
+          "examples": [
+            "Awful color, horribly wrinkled and just a mess...so disappointed",
+            "This cardigan looked great on line but it is one of the worst things i ever ordered at retailer. the quality is awful and the material feels flimsy and cheap.",
+            "This is another one of those darned swing tops. i can't even with this trend. this shirt has such a nice print/color palette going on but it's ruined by the swi"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1582,
+      "n_groups": 1575,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1024,
+      "n_removed": 1026,
+      "var_share_removed": 0.2507,
+      "var_share_sae_error": 0.0131,
+      "top": [
+        {
+          "group": 5,
+          "latents": [
+            153,
+            828
+          ],
+          "gain_margin": 8528.1,
+          "examples": [
+            "Flattering and comfy - my perfect jean!",
+            "Feminine and flattering, love this dress!!",
+            "I'm in love with this dress! (the blue green one)"
+          ]
+        },
+        {
+          "group": 1565,
+          "latents": [
+            698
+          ],
+          "gain_margin": 8382.35,
+          "examples": [
+            "Beautiful sweater but extremely itchy",
+            "Not quite as pictured",
+            "Oddly shaped."
+          ]
+        },
+        {
+          "group": 1574,
+          "latents": [
+            106
+          ],
+          "gain_margin": 6722.67,
+          "examples": [
+            "Not good quality",
+            "Disappointing quality",
+            "Disappointing quality"
+          ]
+        },
+        {
+          "group": 1162,
+          "latents": [
+            437
+          ],
+          "gain_margin": 5416.95,
+          "examples": [
+            "Very thin material",
+            "Hideous looking",
+            "Bizarre seams at waist"
+          ]
+        },
+        {
+          "group": 1572,
+          "latents": [
+            396
+          ],
+          "gain_margin": 3819.12,
+          "examples": [
+            "This dress is awful!!!!!!!",
+            "Cheap fabric and terrible fit",
+            "Very unflattering dress"
+          ]
+        }
+      ]
+    }
+  }
+}

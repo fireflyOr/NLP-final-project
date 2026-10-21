@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -4709.6106811251675,
+  "test_error": 4709.6106811251675,
+  "course_metric": "r2",
+  "course_score": 0.973577325110032,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 72.30689573287964,
+  "diagnostics": {
+    "date_first_hired": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 441,
+      "n_kept": 394,
+      "n_removed": 118,
+      "threshold": 0.0597,
+      "passed_test": 18,
+      "removed_norm_ratio": 0.3181,
+      "var_share_kept": 0.7289,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 262,
+          "score": 0.1251,
+          "n_active": 231,
+          "examples": [
+            "2016-10-03",
+            "2016-10-03",
+            "2016-10-03"
+          ]
+        },
+        {
+          "latent": 229,
+          "score": 0.1227,
+          "n_active": 383,
+          "examples": [
+            "2016-10-31",
+            "2016-10-31",
+            "2016-10-31"
+          ]
+        },
+        {
+          "latent": 10,
+          "score": 0.1221,
+          "n_active": 347,
+          "examples": [
+            "2016-11-28",
+            "2016-11-28",
+            "2016-11-28"
+          ]
+        },
+        {
+          "latent": 395,
+          "score": 0.1152,
+          "n_active": 377,
+          "examples": [
+            "2016-10-03",
+            "2016-10-03",
+            "2016-10-03"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.1134,
+          "n_active": 420,
+          "examples": [
+            "2016-01-27",
+            "2016-06-13",
+            "2016-06-13"
+          ]
+        }
+      ]
+    },
+    "division": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 385,
+      "n_removed": 127,
+      "threshold": 0.0541,
+      "passed_test": 45,
+      "removed_norm_ratio": 0.507,
+      "var_share_kept": 0.8467,
+      "var_share_sae_error": 0.002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 197,
+          "score": 0.1209,
+          "n_active": 278,
+          "examples": [
+            "Tuberculosis Program",
+            "Tuberculosis Program",
+            "Director's Office"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.1031,
+          "n_active": 591,
+          "examples": [
+            "ESOD Data Center Operations",
+            "ESOD Data Center Operations",
+            "ESOD Data Center Operations"
+          ]
+        },
+        {
+          "latent": 436,
+          "score": 0.0886,
+          "n_active": 448,
+          "examples": [
+            "Fire Chief's Executive Office",
+            "Fire Chief's Executive Office",
+            "Fire Chief's Executive Office"
+          ]
+        },
+        {
+          "latent": 503,
+          "score": 0.0875,
+          "n_active": 599,
+          "examples": [
+            "Wholesale Administration",
+            "Wholesale Administration",
+            "Housing Administration"
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.087,
+          "n_active": 168,
+          "examples": [
+            "PSB 2nd District Educational Facilities Officers",
+            "PSB 1st District Educational Facilities Officers",
+            "PSB 1st District Educational Facilities Officers"
+          ]
+        }
+      ]
+    },
+    "employee_position_title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 504,
+      "n_kept": 425,
+      "n_removed": 87,
+      "threshold": 0.0528,
+      "passed_test": 129,
+      "removed_norm_ratio": 0.2509,
+      "var_share_kept": 0.8345,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 197,
+          "score": 0.1361,
+          "n_active": 57,
+          "examples": [
+            "Director Department of Public Libraries",
+            "Forest Conservation Coordinator",
+            "Director Department of General Services"
+          ]
+        },
+        {
+          "latent": 328,
+          "score": 0.1341,
+          "n_active": 52,
+          "examples": [
+            "Resident Supervisor III",
+            "Resident Supervisor III",
+            "Resident Supervisor III"
+          ]
+        },
+        {
+          "latent": 386,
+          "score": 0.134,
+          "n_active": 186,
+          "examples": [
+            "Assistant Chief Administrative Officer",
+            "Assistant Chief Administrative Officer",
+            "Assistant Chief of Police"
+          ]
+        },
+        {
+          "latent": 130,
+          "score": 0.1339,
+          "n_active": 215,
+          "examples": [
+            "Community Health Nurse II",
+            "Community Health Nurse II",
+            "Community Health Nurse II"
+          ]
+        },
+        {
+          "latent": 333,
+          "score": 0.1306,
+          "n_active": 187,
+          "examples": [
+            "Fire/Rescue Captain",
+            "Fire/Rescue Captain",
+            "Fire/Rescue Captain"
+          ]
+        }
+      ]
+    },
+    "full_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 304,
+      "n_removed": 208,
+      "threshold": 0.0545,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5274,
+      "var_share_kept": 0.4468,
+      "var_share_sae_error": 0.2023,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 447,
+          "score": 0.0486,
+          "n_active": 237,
+          "examples": [
+            "Dancy, Donna A.",
+            "Klein, Donna T.",
+            "Hottinger, Donna L."
+          ]
+        },
+        {
+          "latent": 432,
+          "score": 0.0455,
+          "n_active": 315,
+          "examples": [
+            "Vaz, Eugene M.",
+            "Delgado, Annette J.",
+            "Cole, Ronald L."
+          ]
+        },
+        {
+          "latent": 479,
+          "score": 0.0432,
+          "n_active": 316,
+          "examples": [
+            "Arbaugh, Darrin W.",
+            "Ryan, John N.",
+            "Kishbaugh, Darrin R."
+          ]
+        },
+        {
+          "latent": 343,
+          "score": 0.043,
+          "n_active": 401,
+          "examples": [
+            "Ream, James C.",
+            "Schlosser, James M.",
+            "Holloway, James JR.."
+          ]
+        },
+        {
+          "latent": 82,
+          "score": 0.0428,
+          "n_active": 384,
+          "examples": [
+            "Bekele, Emwedish",
+            "Nembhard, Richon M.",
+            "Schlosser, James M."
+          ]
+        }
+      ]
+    }
+  }
+}

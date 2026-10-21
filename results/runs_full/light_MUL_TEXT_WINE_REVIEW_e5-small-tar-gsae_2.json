@@ -1,0 +1,170 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2488741444080247,
+  "test_error": 1.2488741444080247,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9740137017340422,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 253.8293492794037,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1375,
+      "n_groups": 1359,
+      "n_multi_groups": 16,
+      "n_groups_dropped": 182,
+      "n_removed": 182,
+      "var_share_removed": 0.0074,
+      "var_share_sae_error": 0.0243,
+      "top": [
+        {
+          "group": 19,
+          "latents": [
+            1693,
+            1795
+          ],
+          "gain_margin": 15363.46,
+          "examples": [
+            "This is a blend of Sauvignon Blanc, Pinot Grigio, Gew\u00fcrztraminer and Semillon. It's nicely crisp in acids, with sweet, jammy pineapple, apricot, peach, vanilla ",
+            "Made from a bunch of different varieties, including Viognier and Pinot Grigio, this white blend is off-dry, with a sweet edge to the orange and peach fruit.",
+            "Lively and full-bodied, the blend includes Chardonnay, Marsanne, Roussanne and Pinot Gris. Citrus fruits fill the mouth, with a streak of honey and appealing ro"
+          ]
+        },
+        {
+          "group": 1318,
+          "latents": [
+            694
+          ],
+          "gain_margin": 13512.44,
+          "examples": [
+            "Fermented in stainless steel and one neutral barrel, this aromatic and compelling wine is clean, fresh and full of delicious fruit. Meyer lemon, satsuma orange ",
+            "Aromas of orange peel and citrus pulp are oily but not oaky. This is chunky and seems to be starting to fade. Salty citrus flavors are mild, while controlled sa",
+            "From three vineyards, including Roberts Road, this wine impresses in floral honeycomb and a freshness that belies its medium-bodied weight and pithy texture, fi"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            377,
+            497
+          ],
+          "gain_margin": 9392.4,
+          "examples": [
+            "Fragrant and firmly structured, this offers enticing scents of ripe berry, baking spice, tobacco, leather and a balsamic note. The solid palate doles out sour c",
+            "There's a ripe, almost jammy quality to the bouquet of this Riserva Barbaresco that appears as raspberry or strawberry candy with subtle cola, leather and tar a",
+            "Pressed violet, ripe berry and a whiff of cake spice unfold in the glass. The bright, structured palate doles out juicy wild cherry, white pepper and a cinnamon"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            154,
+            1187
+          ],
+          "gain_margin": 8202.77,
+          "examples": [
+            "This is Steve MacRostie's vineyard, located in the far northwest of the appellation, practically in Sonoma Coast. Their '04 strikes me as a little heavy and obv",
+            "Primary, concentrated raspberry and cherry flavors pierce through the core of this rich, fruity Pinot. Subtle oak aging lends delicate vanilla, spice and nut to",
+            "Despite appealing raspberry and cherry-pie filling, cola and spice notes, this Pinot is a bit hard and even green, with some tomato notes. The acidity is brisk,"
+          ]
+        },
+        {
+          "group": 1156,
+          "latents": [
+            15
+          ],
+          "gain_margin": 7857.32,
+          "examples": [
+            "Dark chocolate, black cherry, plum and wet concrete show on the nose of this bottling from a winery recently acquired by O'Neill Vintners. There are lots of ear",
+            "The flagship bottling for this winery, this brings aromas of dried herbs, dark chocolate, espresso bean, black currant and cherry. The dark fruit flavors are ri",
+            "Slate, plum, red fruits, and baking spices of cinnamon and clove show on the nose of this wine from a longtime vineyard east of Solvang. It's fairly light in bo"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 705,
+      "n_groups": 704,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 592,
+      "n_removed": 593,
+      "var_share_removed": 0.5579,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 353,
+          "latents": [
+            47
+          ],
+          "gain_margin": 6456.07,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 515,
+          "latents": [
+            187
+          ],
+          "gain_margin": 3129.17,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 434,
+          "latents": [
+            374
+          ],
+          "gain_margin": 3126.57,
+          "examples": [
+            "Champagne",
+            "Champagne",
+            "Champagne"
+          ]
+        },
+        {
+          "group": 671,
+          "latents": [
+            222
+          ],
+          "gain_margin": 2984.65,
+          "examples": [
+            "Achaia",
+            "Alentejano",
+            "Alentejano"
+          ]
+        },
+        {
+          "group": 651,
+          "latents": [
+            726
+          ],
+          "gain_margin": 2666.53,
+          "examples": [
+            "Central Spain",
+            "Central Spain",
+            "Central Spain"
+          ]
+        }
+      ]
+    }
+  }
+}

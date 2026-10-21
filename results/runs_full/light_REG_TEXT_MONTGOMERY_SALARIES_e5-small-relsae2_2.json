@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -5354.277219347675,
+  "test_error": 5354.277219347675,
+  "course_metric": "r2",
+  "course_score": 0.967233228848758,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 71.01156282424927,
+  "diagnostics": {
+    "date_first_hired": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 452,
+      "n_kept": 394,
+      "n_removed": 118,
+      "threshold": 0.0531,
+      "passed_test": 41,
+      "removed_norm_ratio": 0.2699,
+      "var_share_kept": 0.749,
+      "var_share_sae_error": 0.0014,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 395,
+          "score": 0.1262,
+          "n_active": 341,
+          "examples": [
+            "2016-05-02",
+            "2016-05-02",
+            "2016-05-02"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.1255,
+          "n_active": 332,
+          "examples": [
+            "2016-01-27",
+            "2016-01-27",
+            "2016-01-11"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.1222,
+          "n_active": 374,
+          "examples": [
+            "2016-10-31",
+            "2016-10-31",
+            "2016-10-31"
+          ]
+        },
+        {
+          "latent": 339,
+          "score": 0.1161,
+          "n_active": 267,
+          "examples": [
+            "2016-02-28",
+            "2016-01-27",
+            "2016-01-27"
+          ]
+        },
+        {
+          "latent": 262,
+          "score": 0.1129,
+          "n_active": 199,
+          "examples": [
+            "2016-05-04",
+            "2016-04-25",
+            "2016-10-03"
+          ]
+        }
+      ]
+    },
+    "division": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 380,
+      "n_removed": 132,
+      "threshold": 0.0511,
+      "passed_test": 40,
+      "removed_norm_ratio": 0.5394,
+      "var_share_kept": 0.8155,
+      "var_share_sae_error": 0.0022,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 162,
+          "score": 0.1166,
+          "n_active": 675,
+          "examples": [
+            "School Health Services Center",
+            "School Health Services Center",
+            "School Health Services"
+          ]
+        },
+        {
+          "latent": 503,
+          "score": 0.0958,
+          "n_active": 516,
+          "examples": [
+            "Wholesale Administration",
+            "Wholesale Administration",
+            "Wholesale Administration"
+          ]
+        },
+        {
+          "latent": 97,
+          "score": 0.0891,
+          "n_active": 214,
+          "examples": [
+            "Traffic Engineering Studies Section",
+            "Traffic Engineering Studies Section",
+            "Traffic Engineering Studies Section"
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.0824,
+          "n_active": 190,
+          "examples": [
+            "Northern Region Area I",
+            "Northern Region Area I",
+            "Special Projects - Linkages to Learning"
+          ]
+        },
+        {
+          "latent": 177,
+          "score": 0.0821,
+          "n_active": 435,
+          "examples": [
+            "First Battalion - Administration",
+            "First Battalion - Administration",
+            "First Battalion - Administration"
+          ]
+        }
+      ]
+    },
+    "employee_position_title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 497,
+      "n_kept": 425,
+      "n_removed": 87,
+      "threshold": 0.0522,
+      "passed_test": 142,
+      "removed_norm_ratio": 0.3294,
+      "var_share_kept": 0.7615,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 328,
+          "score": 0.1385,
+          "n_active": 60,
+          "examples": [
+            "Resident Supervisor III",
+            "Resident Supervisor III",
+            "Resident Supervisor III"
+          ]
+        },
+        {
+          "latent": 431,
+          "score": 0.1347,
+          "n_active": 123,
+          "examples": [
+            "Fire/Rescue Battalion Chief",
+            "Fire/Rescue Battalion Chief",
+            "Fire/Rescue Battalion Chief"
+          ]
+        },
+        {
+          "latent": 243,
+          "score": 0.1307,
+          "n_active": 750,
+          "examples": [
+            "Equipment Operator I",
+            "Equipment Operator I",
+            "Equipment Operator I"
+          ]
+        },
+        {
+          "latent": 107,
+          "score": 0.1294,
+          "n_active": 365,
+          "examples": [
+            "Hearing Examiner",
+            "Dental Hygienist",
+            "Dental Hygienist"
+          ]
+        },
+        {
+          "latent": 212,
+          "score": 0.1283,
+          "n_active": 147,
+          "examples": [
+            "Enterprise Technology Expert",
+            "Enterprise Technology Expert",
+            "Registered Veterinary Technician"
+          ]
+        }
+      ]
+    },
+    "full_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 278,
+      "n_removed": 234,
+      "threshold": 0.0518,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5931,
+      "var_share_kept": 0.3837,
+      "var_share_sae_error": 0.2035,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 426,
+          "score": 0.0442,
+          "n_active": 148,
+          "examples": [
+            "Jackson, Shate P.",
+            "Jackson, Lonnie D.",
+            "Jackson, Denise R."
+          ]
+        },
+        {
+          "latent": 81,
+          "score": 0.0419,
+          "n_active": 425,
+          "examples": [
+            "Schmidt, Sandra L.",
+            "Schmidt, Bradley A.",
+            "Schmidt, Michael F."
+          ]
+        },
+        {
+          "latent": 291,
+          "score": 0.0419,
+          "n_active": 388,
+          "examples": [
+            "Baron, Robyn L.",
+            "Bonnin, Barbara A.",
+            "Baron, Wendy M."
+          ]
+        },
+        {
+          "latent": 128,
+          "score": 0.0402,
+          "n_active": 431,
+          "examples": [
+            "Pastor, Paulino C.",
+            "Bishop, Cheryl C.",
+            "Gay, David C."
+          ]
+        },
+        {
+          "latent": 135,
+          "score": 0.0387,
+          "n_active": 361,
+          "examples": [
+            "Sudano, Donna A.",
+            "Sotero, Brian L.",
+            "Bonanno, Mark E."
+          ]
+        }
+      ]
+    }
+  }
+}

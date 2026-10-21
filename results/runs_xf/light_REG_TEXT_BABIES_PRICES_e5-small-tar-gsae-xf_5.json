@@ -1,0 +1,75 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae-xf",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -17.79607639405821,
+  "test_error": 17.79607639405821,
+  "course_metric": "r2",
+  "course_score": 0.8100400466138953,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 454.3825352191925,
+  "diagnostics": {
+    "colors": {
+      "rule": "xfit",
+      "chosen_fraction": 0.5,
+      "n_eligible": 287,
+      "n_removed": 143,
+      "inner_losses": {
+        "0.0": 0.2426,
+        "0.1": 0.24015,
+        "0.25": 0.23884,
+        "0.5": 0.23464,
+        "0.75": 0.24279
+      },
+      "var_share_removed": 0.7579
+    },
+    "company_free": {
+      "rule": "xfit",
+      "chosen_fraction": 0.5,
+      "n_eligible": 251,
+      "n_removed": 125,
+      "inner_losses": {
+        "0.0": 0.2426,
+        "0.1": 0.24015,
+        "0.25": 0.23884,
+        "0.5": 0.23464,
+        "0.75": 0.24279
+      },
+      "var_share_removed": 0.5057
+    },
+    "company_struct": {
+      "rule": "xfit",
+      "chosen_fraction": 0.5,
+      "n_eligible": 782,
+      "n_removed": 391,
+      "inner_losses": {
+        "0.0": 0.2426,
+        "0.1": 0.24015,
+        "0.25": 0.23884,
+        "0.5": 0.23464,
+        "0.75": 0.24279
+      },
+      "var_share_removed": 0.3834
+    },
+    "title": {
+      "rule": "xfit",
+      "chosen_fraction": 0.5,
+      "n_eligible": 1208,
+      "n_removed": 604,
+      "inner_losses": {
+        "0.0": 0.2426,
+        "0.1": 0.24015,
+        "0.25": 0.23884,
+        "0.5": 0.23464,
+        "0.75": 0.24279
+      },
+      "var_share_removed": 0.2264
+    }
+  }
+}

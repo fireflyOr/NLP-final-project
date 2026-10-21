@@ -1,0 +1,703 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.2765713079770894,
+  "test_error": 0.2765713079770894,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9735269427305342,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 662.32057929039,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1733,
+      "n_groups": 1728,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1335,
+      "n_removed": 1338,
+      "var_share_removed": 0.6749,
+      "var_share_sae_error": 0.0021,
+      "top": [
+        {
+          "group": 1675,
+          "latents": [
+            277
+          ],
+          "gain_margin": 93.46,
+          "examples": [
+            "KHKS",
+            "KHKS",
+            "KHKS"
+          ]
+        },
+        {
+          "group": 60,
+          "latents": [
+            1998
+          ],
+          "gain_margin": 87.95,
+          "examples": [
+            "KS14",
+            "K0J4",
+            "K0J4"
+          ]
+        },
+        {
+          "group": 718,
+          "latents": [
+            1605
+          ],
+          "gain_margin": 86.65,
+          "examples": [
+            "KTTF",
+            "KTTF",
+            "KTTF"
+          ]
+        },
+        {
+          "group": 753,
+          "latents": [
+            1419
+          ],
+          "gain_margin": 84.14,
+          "examples": [
+            "KBCT",
+            "KBCT",
+            "KBCT"
+          ]
+        },
+        {
+          "group": 1175,
+          "latents": [
+            130
+          ],
+          "gain_margin": 71.96,
+          "examples": [
+            "KEUL",
+            "KEUL",
+            "KMUL"
+          ]
+        }
+      ]
+    },
+    "City": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1977,
+      "n_groups": 1977,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1351,
+      "n_removed": 1351,
+      "var_share_removed": 0.6636,
+      "var_share_sae_error": 0.0056,
+      "top": [
+        {
+          "group": 744,
+          "latents": [
+            1448
+          ],
+          "gain_margin": 203.91,
+          "examples": [
+            "Salinas",
+            "Salinas",
+            "Salinas"
+          ]
+        },
+        {
+          "group": 771,
+          "latents": [
+            380
+          ],
+          "gain_margin": 147.3,
+          "examples": [
+            "Talent",
+            "Talent",
+            "Talent"
+          ]
+        },
+        {
+          "group": 1921,
+          "latents": [
+            379
+          ],
+          "gain_margin": 115.49,
+          "examples": [
+            "Providence Forge",
+            "Excelsior",
+            "Mission Viejo"
+          ]
+        },
+        {
+          "group": 680,
+          "latents": [
+            542
+          ],
+          "gain_margin": 96.12,
+          "examples": [
+            "Aledo",
+            "Napoleon",
+            "Romulus"
+          ]
+        },
+        {
+          "group": 304,
+          "latents": [
+            1456
+          ],
+          "gain_margin": 89.86,
+          "examples": [
+            "Keams Canyon",
+            "Medley",
+            "Catawba"
+          ]
+        }
+      ]
+    },
+    "County": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1619,
+      "n_groups": 1619,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1208,
+      "n_removed": 1208,
+      "var_share_removed": 0.6431,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 1421,
+          "latents": [
+            82
+          ],
+          "gain_margin": 188.17,
+          "examples": [
+            "Grand Forks",
+            "Sonoma",
+            "Sonoma"
+          ]
+        },
+        {
+          "group": 1076,
+          "latents": [
+            41
+          ],
+          "gain_margin": 113.75,
+          "examples": [
+            "Stark",
+            "Sandoval",
+            "Sandoval"
+          ]
+        },
+        {
+          "group": 789,
+          "latents": [
+            717
+          ],
+          "gain_margin": 112.62,
+          "examples": [
+            "Putnam",
+            "Putnam",
+            "Putnam"
+          ]
+        },
+        {
+          "group": 1237,
+          "latents": [
+            291
+          ],
+          "gain_margin": 111.67,
+          "examples": [
+            "Crook",
+            "Alameda",
+            "Alameda"
+          ]
+        },
+        {
+          "group": 446,
+          "latents": [
+            967
+          ],
+          "gain_margin": 77.09,
+          "examples": [
+            "Beaver",
+            "Macon",
+            "Macon"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2016,
+      "n_multi_groups": 21,
+      "n_groups_dropped": 928,
+      "n_removed": 932,
+      "var_share_removed": 0.2123,
+      "var_share_sae_error": 0.0725,
+      "top": [
+        {
+          "group": 34,
+          "latents": [
+            792,
+            1535
+          ],
+          "gain_margin": 4742.84,
+          "examples": [
+            "Incident on CALIFORNIA AVE near HOUSE 4112 Road closed. Take alternate route.",
+            "Incident on PA-837 NB near PA-51 Road closed. Take alternate route.",
+            "Incident on MURRELL RD NB near CR-502 Road closed. Take alternate route."
+          ]
+        },
+        {
+          "group": 7,
+          "latents": [
+            559,
+            905
+          ],
+          "gain_margin": 3881.19,
+          "examples": [
+            "At Lakeview Ave - Accident.",
+            "At W Florida Ave - Accident.",
+            "At Arlington Ave - Accident."
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            453,
+            1045,
+            1347,
+            2024
+          ],
+          "gain_margin": 3521.25,
+          "examples": [
+            "At US-80 - Accident. Two lanes blocked.",
+            "At Downey Ave - Accident. Right lane blocked.",
+            "At I-95 - Accident. Right lane blocked."
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            182,
+            1296
+          ],
+          "gain_margin": 2969.72,
+          "examples": [
+            "At Isabel Ave/Exit 51 - Accident.",
+            "At Isabel Ave/Exit 51 - Accident.",
+            "At TX-5/Greenville Ave/Exit 18 - Accident."
+          ]
+        },
+        {
+          "group": 656,
+          "latents": [
+            604
+          ],
+          "gain_margin": 2507.28,
+          "examples": [
+            "Accident on I-95 Northbound at Exits 86A 86B I-26 Exits 169A 169B.",
+            "Lane blocked due to accident on I-94 Eastbound at Exits 233B 234A 234B 234C I-35W Exits 16B 17A 17B 17C.",
+            "Lane blocked due to crash on I-635 Eastbound at Exits 26 27A 27B 27C I-35E Exits 440B 440C 441."
+          ]
+        }
+      ]
+    },
+    "End_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 313,
+      "n_groups": 293,
+      "n_multi_groups": 18,
+      "n_groups_dropped": 137,
+      "n_removed": 145,
+      "var_share_removed": 0.1481,
+      "var_share_sae_error": 0.0061,
+      "top": [
+        {
+          "group": 106,
+          "latents": [
+            1498
+          ],
+          "gain_margin": 542.31,
+          "examples": [
+            "2022-12-22 21:37:47",
+            "2022-11-14 15:48:43",
+            "2022-12-12 19:42:34"
+          ]
+        },
+        {
+          "group": 232,
+          "latents": [
+            977
+          ],
+          "gain_margin": 508.93,
+          "examples": [
+            "2021-06-03 22:32:30",
+            "2021-12-09 12:38:30",
+            "2021-10-05 10:30:00"
+          ]
+        },
+        {
+          "group": 110,
+          "latents": [
+            862
+          ],
+          "gain_margin": 483.26,
+          "examples": [
+            "2019-08-02 09:30:00",
+            "2019-08-03 08:00:00",
+            "2019-11-30 18:00:07"
+          ]
+        },
+        {
+          "group": 46,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 250.05,
+          "examples": [
+            "2020-01-31 19:37:00",
+            "2020-03-05 19:00:47",
+            "2020-06-06 23:06:00"
+          ]
+        },
+        {
+          "group": 72,
+          "latents": [
+            1362
+          ],
+          "gain_margin": 249.57,
+          "examples": [
+            "2020-03-04 07:53:33",
+            "2020-09-03 19:03:09",
+            "2020-01-03 16:07:47"
+          ]
+        }
+      ]
+    },
+    "Start_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 369,
+      "n_groups": 339,
+      "n_multi_groups": 26,
+      "n_groups_dropped": 171,
+      "n_removed": 180,
+      "var_share_removed": 0.1786,
+      "var_share_sae_error": 0.0051,
+      "top": [
+        {
+          "group": 167,
+          "latents": [
+            1362
+          ],
+          "gain_margin": 652.25,
+          "examples": [
+            "2020-03-03 06:33:53",
+            "2020-05-13 17:07:36",
+            "2020-12-13 02:39:53"
+          ]
+        },
+        {
+          "group": 64,
+          "latents": [
+            1393
+          ],
+          "gain_margin": 569.81,
+          "examples": [
+            "2018-10-04 12:06:00",
+            "2018-08-08 16:21:00",
+            "2018-02-08 08:44:30"
+          ]
+        },
+        {
+          "group": 69,
+          "latents": [
+            1670
+          ],
+          "gain_margin": 482.14,
+          "examples": [
+            "2018-09-30 13:00:00",
+            "2021-11-10 14:00:00",
+            "2020-10-28 23:00:00"
+          ]
+        },
+        {
+          "group": 280,
+          "latents": [
+            940
+          ],
+          "gain_margin": 473.92,
+          "examples": [
+            "2018-01-01 19:29:33",
+            "2017-12-01 11:04:22",
+            "2018-02-27 07:18:34"
+          ]
+        },
+        {
+          "group": 289,
+          "latents": [
+            244
+          ],
+          "gain_margin": 455.32,
+          "examples": [
+            "2023-01-02 00:09:04",
+            "2023-01-03 08:08:11",
+            "2023-02-12 00:13:00"
+          ]
+        }
+      ]
+    },
+    "Street": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2022,
+      "n_groups": 2015,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1182,
+      "n_removed": 1182,
+      "var_share_removed": 0.4367,
+      "var_share_sae_error": 0.0223,
+      "top": [
+        {
+          "group": 14,
+          "latents": [
+            670,
+            866,
+            1981
+          ],
+          "gain_margin": 4105.11,
+          "examples": [
+            "I-79",
+            "I-79",
+            "I-77"
+          ]
+        },
+        {
+          "group": 497,
+          "latents": [
+            1780
+          ],
+          "gain_margin": 733.75,
+          "examples": [
+            "I-205",
+            "I-380",
+            "I-205 S"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            648,
+            1836,
+            2031
+          ],
+          "gain_margin": 351.94,
+          "examples": [
+            " County Road W",
+            "3rd Ave W",
+            " W End Ave"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            285,
+            1891
+          ],
+          "gain_margin": 351.03,
+          "examples": [
+            "S Mountain Rd",
+            "S Elms Rd",
+            " S Park Ave"
+          ]
+        },
+        {
+          "group": 1936,
+          "latents": [
+            1127
+          ],
+          "gain_margin": 326.16,
+          "examples": [
+            "US Highway 425 N",
+            " US Highway 87 E",
+            "US Highway 87 E"
+          ]
+        }
+      ]
+    },
+    "Weather_Timestamp": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 286,
+      "n_groups": 254,
+      "n_multi_groups": 27,
+      "n_groups_dropped": 145,
+      "n_removed": 156,
+      "var_share_removed": 0.2097,
+      "var_share_sae_error": 0.0037,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            285,
+            1402,
+            1811,
+            1945
+          ],
+          "gain_margin": 1188.26,
+          "examples": [
+            "2021-01-08 07:00:00",
+            "2021-01-01 08:30:00",
+            "2021-01-11 06:54:00"
+          ]
+        },
+        {
+          "group": 7,
+          "latents": [
+            1835,
+            1838
+          ],
+          "gain_margin": 710.77,
+          "examples": [
+            "2018-01-30 07:54:00",
+            "2017-12-29 07:50:00",
+            "2017-12-18 07:55:00"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            617,
+            1837,
+            1874
+          ],
+          "gain_margin": 695.31,
+          "examples": [
+            "2020-01-01 00:55:00",
+            "2020-01-01 05:56:00",
+            "2020-01-09 18:54:00"
+          ]
+        },
+        {
+          "group": 118,
+          "latents": [
+            1637
+          ],
+          "gain_margin": 521.69,
+          "examples": [
+            "2018-11-13 10:10:00",
+            "2018-11-26 11:13:00",
+            "2018-03-13 08:00:00"
+          ]
+        },
+        {
+          "group": 209,
+          "latents": [
+            862
+          ],
+          "gain_margin": 359.92,
+          "examples": [
+            "2018-10-08 10:40:00",
+            "2018-04-24 19:07:00",
+            "2018-05-09 10:30:00"
+          ]
+        }
+      ]
+    },
+    "Zipcode": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1417,
+      "n_groups": 1317,
+      "n_multi_groups": 91,
+      "n_groups_dropped": 769,
+      "n_removed": 815,
+      "var_share_removed": 0.3414,
+      "var_share_sae_error": 0.0064,
+      "top": [
+        {
+          "group": 515,
+          "latents": [
+            1404
+          ],
+          "gain_margin": 3487.65,
+          "examples": [
+            "76087-7690",
+            "90280-5557",
+            "92081-4614"
+          ]
+        },
+        {
+          "group": 72,
+          "latents": [
+            508,
+            1075
+          ],
+          "gain_margin": 225.49,
+          "examples": [
+            "92570",
+            "92570",
+            "92392"
+          ]
+        },
+        {
+          "group": 549,
+          "latents": [
+            630
+          ],
+          "gain_margin": 204.68,
+          "examples": [
+            "95249-9589",
+            "24202-2421",
+            "92545-9223"
+          ]
+        },
+        {
+          "group": 321,
+          "latents": [
+            1321
+          ],
+          "gain_margin": 187.35,
+          "examples": [
+            "77204",
+            "78204",
+            "78204"
+          ]
+        },
+        {
+          "group": 306,
+          "latents": [
+            1925
+          ],
+          "gain_margin": 178.44,
+          "examples": [
+            "17063",
+            "17551",
+            "17554"
+          ]
+        }
+      ]
+    }
+  }
+}

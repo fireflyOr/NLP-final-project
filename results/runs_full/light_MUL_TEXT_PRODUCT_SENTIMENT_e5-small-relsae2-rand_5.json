@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6034443008788718,
+  "test_error": 0.6034443008788718,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8738885511905317,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 13.179198265075684,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 365,
+      "n_removed": 147,
+      "threshold": 0.0834,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.4751,
+      "var_share_kept": 0.5961,
+      "var_share_sae_error": 0.1618,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 86,
+          "score": 0.1459,
+          "n_active": 193,
+          "examples": [
+            "The bad apple shows up late shoots down ideas and leaves early - meeting personality #2 #gamestorming #sxsw",
+            "RT @mention #SXSW: iPad Design Headaches (Take Two Tablet and Call Me in the Morning) {link}",
+            "Wow folks, make sure that iPhone ringer is turned ALL the way up when u have to be up pre-sunrise for a flight. #internalalarmclockFTW #sxsw"
+          ]
+        },
+        {
+          "latent": 312,
+          "score": 0.1079,
+          "n_active": 252,
+          "examples": [
+            "The volume is overwhelming but the market will self-police. That's why users picked Google over Bing.  #curatedebate #SXSW",
+            "Google is focusing on bridging the digital/physical divide. Eg. maps, streetview, hotpot &amp; autonomous driving. #sxsw @mention",
+            "RT @mention &quot;Google before you tweet is the new think before you speak&quot; -- Belinsky of Digital Democracy #sxsw /via @mention"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.1023,
+          "n_active": 266,
+          "examples": [
+            "like that's bad RT @mention Sitting at a bar listening to music w 3 ppl who r all nose down on iPhone. Waitress looks confused. #sxsw",
+            "After typing for 4 days on the iPad, fingers feel seriously weird on a real keyboard. #sxsw #uselessobservations",
+            "Apple autocorrect is so weird. Ogilvy autocorrects to idiocy. #ogilvynotes #sxsw :)"
+          ]
+        },
+        {
+          "latent": 243,
+          "score": 0.0979,
+          "n_active": 192,
+          "examples": [
+            "Andrew K of PRX equates the homogeneity of the Apple ecosystem w predictability, vs Android's wild west. #imaconf #sxsw #drumbeat #MoJo",
+            "Got my flask &amp; my iPad . Yes,  I'm sitting on 9th st waiting for AICN screening. #sxsw #prepared # ILoveaSurprise {link}",
+            "Someone at #sxsw stole my ipad from mtg room 9abc, and it wasn't even a new one. Talk about lame."
+          ]
+        },
+        {
+          "latent": 148,
+          "score": 0.0947,
+          "n_active": 183,
+          "examples": [
+            "Found the app kyping my iPhone's geolocation &amp; not releasing when in background. Need a patch, @mention #batterykiller #SXSW",
+            "RT @mention Found the app kyping my iPhone's geolocation &amp; not releasing when in background. Need a patch, @mention #batterykiller #SXSW",
+            "The new #4sq3 looks like it is going to rock. Update for iPhone and Android should push tonight http://bit.ly/etsbZk #SXSW #KeepAustinWeird"
+          ]
+        }
+      ]
+    }
+  }
+}

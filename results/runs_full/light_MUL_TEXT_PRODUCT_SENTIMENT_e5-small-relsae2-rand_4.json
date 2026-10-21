@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.589110711808356,
+  "test_error": 0.589110711808356,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8805969135429852,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 13.250304222106934,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 363,
+      "n_removed": 149,
+      "threshold": 0.0831,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.4975,
+      "var_share_kept": 0.5831,
+      "var_share_sae_error": 0.1618,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 141,
+          "score": 0.162,
+          "n_active": 312,
+          "examples": [
+            "@mention helaas... &quot;@mention Google is NOT launching any products at  #SXSW {link}",
+            "Google will not launch Facebook competitor Circles @mention #sxsw today as thought, creeper half-friends the world over disappointed.",
+            "Google Circles will not launch at #SXSW - {link}"
+          ]
+        },
+        {
+          "latent": 124,
+          "score": 0.1153,
+          "n_active": 161,
+          "examples": [
+            "RT @mention Texas Observer Tomlinson says they would double revenue per issue with iPad subscriptions. #newsapps #sxsw",
+            "Apple likes it when you pay them. As long as the gadget will be liked by many, this closed system will work. #pnid #sxsw",
+            "$15k for a &quot;high-quality PDF&quot; iPad app is a good investment for small mags, says Chris Tomlinson, formerly Texas Obs (now AP) #sxsw"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.1142,
+          "n_active": 218,
+          "examples": [
+            "First up: iPad Design Headaches (2 Tablets, Call in the Morning). #SXSW #tapworthy",
+            "Checking out iPad Design Headaches (2 Tablets, Call in the Morning).\n{link} #SXSW #tapworthy #fb",
+            "#SXSW ##tapworthy Check out iPad Design Headaches (2 Tablets, Call in the Morning) at SXSW.\n{link}"
+          ]
+        },
+        {
+          "latent": 454,
+          "score": 0.0761,
+          "n_active": 107,
+          "examples": [
+            "RT @mention Tim O'Reilly his Web 2.0 definition - companies that survived built value from consumer-generated data. eBay, Amazon, Google. #sxsw",
+            "Tim O'Reilly his Web 2.0 definition - companies that survived built value from consumer-generated data. eBay, Amazon, Google. #sxsw",
+            "RT @mention Tim O'Reilly his Web 2.0 definition -firms tht survived built value frm consumer-generated data. eBay,Amazon,Google. #sxsw"
+          ]
+        },
+        {
+          "latent": 289,
+          "score": 0.0749,
+          "n_active": 159,
+          "examples": [
+            "RT @mention Google Latina and see what you find? Porn...this is the first impression that people get about us? #latism #sxsw #sxswLatAm #LatinasInTech\u0089\u00db\u009d",
+            "Know that &quot;dataviz&quot; translates to &quot;satanic&quot; on an iPhone. I'm just sayin'. #sxsw",
+            "RT @mention @mention Enchantment: get a trustworthiness of #zappos likeability of #virgin and a product of #apple @mention #sxsw"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5666899899362802,
+  "test_error": 0.5666899899362802,
+  "course_metric": "r2",
+  "course_score": 0.44420781760971995,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 95.32029414176941,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1069,
+      "n_groups": 1069,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 830,
+      "n_removed": 830,
+      "var_share_removed": 0.5043,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 520,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3340.67,
+          "examples": [
+            "Yeezy",
+            "Yeezy",
+            "Yeezy"
+          ]
+        },
+        {
+          "group": 1068,
+          "latents": [
+            174
+          ],
+          "gain_margin": 2080.57,
+          "examples": [
+            "Garmin",
+            "Christian Louboutin",
+            "Christian Louboutin"
+          ]
+        },
+        {
+          "group": 51,
+          "latents": [
+            1713
+          ],
+          "gain_margin": 1082.11,
+          "examples": [
+            "Rock Revival",
+            "Rock Revival",
+            "Rock Revival"
+          ]
+        },
+        {
+          "group": 931,
+          "latents": [
+            204
+          ],
+          "gain_margin": 503.77,
+          "examples": [
+            "Beats",
+            "Beats",
+            "Beats"
+          ]
+        },
+        {
+          "group": 1010,
+          "latents": [
+            860
+          ],
+          "gain_margin": 441.35,
+          "examples": [
+            "Kardashian Kollection",
+            "Kardashian Kollection",
+            "Reebok"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 793,
+      "n_groups": 793,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 701,
+      "n_removed": 701,
+      "var_share_removed": 0.6679,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 754,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1963.58,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 637,
+          "latents": [
+            907
+          ],
+          "gain_margin": 1115.67,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 42,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 835.87,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 20,
+          "latents": [
+            1875
+          ],
+          "gain_margin": 548.41,
+          "examples": [
+            "Blazers & Sport Coats",
+            "Coats & Jackets",
+            "Coats & Jackets"
+          ]
+        },
+        {
+          "group": 112,
+          "latents": [
+            1582
+          ],
+          "gain_margin": 386.77,
+          "examples": [
+            "Strollers",
+            "Strollers",
+            "Strollers"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1268,
+      "n_groups": 1268,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1022,
+      "n_removed": 1022,
+      "var_share_removed": 0.5055,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 1208,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 3061.63,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 1263,
+          "latents": [
+            174
+          ],
+          "gain_margin": 1573.53,
+          "examples": [
+            "Hip Bag",
+            "Hip Bag",
+            "Change Purse"
+          ]
+        },
+        {
+          "group": 568,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1009.5,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 785,
+          "latents": [
+            118
+          ],
+          "gain_margin": 756.4,
+          "examples": [
+            "Desktops & All-In-Ones",
+            "Desktops & All-In-Ones",
+            "Desktops & All-In-Ones"
+          ]
+        },
+        {
+          "group": 451,
+          "latents": [
+            1581
+          ],
+          "gain_margin": 633.17,
+          "examples": [
+            "Tank, Cami",
+            "Tank, Cami",
+            "Tank, Cami"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1236,
+      "n_groups": 1234,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 979,
+      "n_removed": 980,
+      "var_share_removed": 0.4159,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 605,
+          "latents": [
+            892
+          ],
+          "gain_margin": 2719.33,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "group": 1008,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 2444.62,
+          "examples": [
+            "Men/Shoes/Athletic",
+            "Men/Shoes/Athletic",
+            "Men/Shoes/Athletic"
+          ]
+        },
+        {
+          "group": 229,
+          "latents": [
+            1641
+          ],
+          "gain_margin": 871.43,
+          "examples": [
+            "Women/Coats & Jackets/Fleece Jacket",
+            "Women/Coats & Jackets/Fleece Jacket",
+            "Women/Coats & Jackets/Fleece Jacket"
+          ]
+        },
+        {
+          "group": 1217,
+          "latents": [
+            620
+          ],
+          "gain_margin": 836.03,
+          "examples": [
+            "Handmade/Paper Goods/Sticker",
+            "Handmade/Paper Goods/Sticker",
+            "Handmade/Paper Goods/Sticker"
+          ]
+        },
+        {
+          "group": 1165,
+          "latents": [
+            396
+          ],
+          "gain_margin": 657.62,
+          "examples": [
+            "Kids/Toys/Arts & Crafts",
+            "Kids/Toys/Arts & Crafts",
+            "Kids/Toys/Arts & Crafts"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2044,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1291,
+      "n_removed": 1292,
+      "var_share_removed": 0.2914,
+      "var_share_sae_error": 0.0808,
+      "top": [
+        {
+          "group": 2040,
+          "latents": [
+            305
+          ],
+          "gain_margin": 8891.37,
+          "examples": [
+            "Nike What The Kobe sz 8.5 100% authentic with og box and faded out receipt. Worn only a few times, huge grails to most. Not easy to come by in this condition. N",
+            "White Jordan Eclipses Size 8 in Women, 6.5 Men Pure white Only worn twice Original price: [rm] Brand: Air Jordan",
+            "\u2764\ufe0fSold out\u203c\ufe0fLaces included. No Longer Available in this color & size at LL Bean in store or online!! \u2764\ufe0fUnique Rare color. WOMENS 9, Men's 7 Stamped. Excellent C"
+          ]
+        },
+        {
+          "group": 2010,
+          "latents": [
+            396
+          ],
+          "gain_margin": 3711.65,
+          "examples": [
+            "These stickers are quite a bit larger than your average sticker! Price includes tracked shipping! Large 4x4 Weeknd Sticker. Permanent, Outdoor Vinyl! Can be use",
+            "Reggae Music Tumblr Large Glossy Stickers This listing is for the 4 stickers in the pictures. These stickers are large as you can see from the photos. They are ",
+            "15 Dessert Stickers Lot This listing is for 15 stickers from the pictures shown. Quarter in pictures show scale of stickers. No repeats. Tags: icecream cake cup"
+          ]
+        },
+        {
+          "group": 1970,
+          "latents": [
+            892
+          ],
+          "gain_margin": 948.45,
+          "examples": [
+            "100% guaranteed authentic Kate Spade purse. Original owner, used once. Polkadot kate Spade wallet not included in this listing. It's in a separate listing.",
+            "Pandora Limited Edition 2016 snowflake bangle size medium measures 19cm. 100 authentic comes with box. Do not purchase if you have no ratings I will cancel your",
+            "Rose Gold and ivory pearl. Comes with dustbag. PRICE IS FIRM."
+          ]
+        },
+        {
+          "group": 2043,
+          "latents": [
+            93
+          ],
+          "gain_margin": 864.23,
+          "examples": [
+            "Rogue red running shorts",
+            "Justice Tank Top and Shorts Outfit Tank top has small peplum like band at bottom Shorts are loose fitting with \"fancy\" trim Size 8 Worn once",
+            "Super cute and soft tank top. Flowy fit. From Wet seal. Size M but can also fit a L. No flaws or issues!"
+          ]
+        },
+        {
+          "group": 1938,
+          "latents": [
+            354
+          ],
+          "gain_margin": 635.83,
+          "examples": [
+            "16gb T-mobile Silver Has a few dings on the edges and sides but it's normal wear and tear, daily use. No iCloud lock Ask me questions!",
+            "Black 32gb 4G LTE unlocked (Verizon) phone, in great condition",
+            "A little bit of scratches on the back! 16GB Still works fine!!"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1155,
+      "n_removed": 1155,
+      "var_share_removed": 0.2594,
+      "var_share_sae_error": 0.0642,
+      "top": [
+        {
+          "group": 2024,
+          "latents": [
+            305
+          ],
+          "gain_margin": 9293.25,
+          "examples": [
+            "Lululemon swiftly long sleeve 8",
+            "Lululemon Reversible Grey/Striped Sweate",
+            "6 NWT Lululemon Berry Fleece Out Jacket"
+          ]
+        },
+        {
+          "group": 407,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 4842.64,
+          "examples": [
+            "Sexy little things Noir body spray",
+            "C.O Bigelow lip tint",
+            "Eyeliner"
+          ]
+        },
+        {
+          "group": 1022,
+          "latents": [
+            396
+          ],
+          "gain_margin": 2207.91,
+          "examples": [
+            "Personalized Name Tumblr Sticker Pack",
+            "USB Type C Cable (2 Pack - 1 FT)",
+            "Blue Tumblr Summer Cute Sticker Lot Pack"
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            344
+          ],
+          "gain_margin": 1322.0,
+          "examples": [
+            "AALopez28 hold",
+            "Apple IPhone 6 64gb",
+            "Apple Watch Series 1"
+          ]
+        },
+        {
+          "group": 1262,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1284.84,
+          "examples": [
+            "Michael Kors Sutton Satchel",
+            "King Master genuine diamond watch",
+            "Louis Vuitton like wrislett"
+          ]
+        }
+      ]
+    }
+  }
+}

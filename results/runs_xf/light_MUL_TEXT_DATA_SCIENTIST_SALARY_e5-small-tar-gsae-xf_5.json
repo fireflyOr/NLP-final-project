@@ -1,0 +1,89 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar-gsae-xf",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3681784289640175,
+  "test_error": 1.3681784289640175,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8073917475465958,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 762.1710221767426,
+  "diagnostics": {
+    "experience": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 368,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 1.46664,
+        "0.1": 1.46959,
+        "0.25": 1.4732,
+        "0.5": 1.47952,
+        "0.75": 1.49352
+      },
+      "var_share_removed": 0.0
+    },
+    "job_description": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 1984,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 1.46664,
+        "0.1": 1.46959,
+        "0.25": 1.4732,
+        "0.5": 1.47952,
+        "0.75": 1.49352
+      },
+      "var_share_removed": 0.0
+    },
+    "job_desig": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 1946,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 1.46664,
+        "0.1": 1.46959,
+        "0.25": 1.4732,
+        "0.5": 1.47952,
+        "0.75": 1.49352
+      },
+      "var_share_removed": 0.0
+    },
+    "key_skills": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 1988,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 1.46664,
+        "0.1": 1.46959,
+        "0.25": 1.4732,
+        "0.5": 1.47952,
+        "0.75": 1.49352
+      },
+      "var_share_removed": 0.0
+    },
+    "location": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 827,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 1.46664,
+        "0.1": 1.46959,
+        "0.25": 1.4732,
+        "0.5": 1.47952,
+        "0.75": 1.49352
+      },
+      "var_share_removed": 0.0
+    }
+  }
+}

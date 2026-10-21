@@ -1,0 +1,55 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-cv",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9205608135348563,
+  "test_error": 0.0794391864651437,
+  "course_metric": "auroc",
+  "course_score": 0.9205608135348563,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 61.46691131591797,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2045,
+      "n_val_rows": 901,
+      "chosen_fraction": 0.75,
+      "n_removed": 1534,
+      "val_loss": {
+        "0.0": 0.19208,
+        "0.1": 0.19016,
+        "0.25": 0.18531,
+        "0.5": 0.1866,
+        "0.75": 0.1777
+      },
+      "frac_groups_no_signal": 0.796,
+      "var_share_removed": 0.3482
+    },
+    "created_date": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 647,
+      "n_groups": 587,
+      "n_val_rows": 901,
+      "chosen_fraction": 0.75,
+      "n_removed": 485,
+      "val_loss": {
+        "0.0": 0.2645,
+        "0.1": 0.25293,
+        "0.25": 0.24779,
+        "0.5": 0.24644,
+        "0.75": 0.24572
+      },
+      "frac_groups_no_signal": 0.71,
+      "var_share_removed": 0.7193
+    }
+  }
+}

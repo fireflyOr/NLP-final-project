@@ -1,0 +1,321 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -5354.681716728733,
+  "test_error": 5354.681716728733,
+  "course_metric": "r2",
+  "course_score": 0.9680268687186445,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 59.2022180557251,
+  "diagnostics": {
+    "date_first_hired": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 989,
+      "n_groups": 803,
+      "n_multi_groups": 109,
+      "n_groups_dropped": 550,
+      "n_removed": 584,
+      "var_share_removed": 0.0757,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 19,
+          "latents": [
+            126,
+            298
+          ],
+          "gain_margin": 505.58,
+          "examples": [
+            "1989-12-11",
+            "1989-12-11",
+            "1989-12-18"
+          ]
+        },
+        {
+          "group": 39,
+          "latents": [
+            383,
+            1408,
+            1810
+          ],
+          "gain_margin": 446.93,
+          "examples": [
+            "1997-12-01",
+            "1997-05-11",
+            "1997-01-06"
+          ]
+        },
+        {
+          "group": 33,
+          "latents": [
+            1239,
+            1405,
+            1710
+          ],
+          "gain_margin": 388.79,
+          "examples": [
+            "2014-12-02",
+            "2014-12-02",
+            "2014-12-02"
+          ]
+        },
+        {
+          "group": 692,
+          "latents": [
+            964
+          ],
+          "gain_margin": 378.47,
+          "examples": [
+            "2016-10-31",
+            "2016-10-31",
+            "2016-10-31"
+          ]
+        },
+        {
+          "group": 66,
+          "latents": [
+            198,
+            1240
+          ],
+          "gain_margin": 322.09,
+          "examples": [
+            "1986-12-29",
+            "1986-11-10",
+            "1986-12-17"
+          ]
+        }
+      ]
+    },
+    "division": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1387,
+      "n_groups": 1387,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 857,
+      "n_removed": 857,
+      "var_share_removed": 0.2756,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 673,
+          "latents": [
+            362
+          ],
+          "gain_margin": 482.72,
+          "examples": [
+            "Transit Silver Spring Ride On",
+            "Transit Silver Spring Ride On",
+            "Transit Silver Spring Ride On"
+          ]
+        },
+        {
+          "group": 798,
+          "latents": [
+            429
+          ],
+          "gain_margin": 454.08,
+          "examples": [
+            "Transit Safety and Instruction",
+            "Transit Safety and Instruction",
+            "Transit Safety and Instruction"
+          ]
+        },
+        {
+          "group": 1327,
+          "latents": [
+            483
+          ],
+          "gain_margin": 305.07,
+          "examples": [
+            "Building Design and Construction",
+            "Building Design and Construction",
+            "Building Design and Construction"
+          ]
+        },
+        {
+          "group": 331,
+          "latents": [
+            1600
+          ],
+          "gain_margin": 273.04,
+          "examples": [
+            "Transit Silver Spring Ride On",
+            "Transit Silver Spring Ride On",
+            "Transit Silver Spring Ride On"
+          ]
+        },
+        {
+          "group": 1030,
+          "latents": [
+            939
+          ],
+          "gain_margin": 236.42,
+          "examples": [
+            "School Health Services Center",
+            "School Health Services Center",
+            "School Health Services Center"
+          ]
+        }
+      ]
+    },
+    "employee_position_title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1082,
+      "n_groups": 1082,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 536,
+      "n_removed": 536,
+      "var_share_removed": 0.1303,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 176,
+          "latents": [
+            1725
+          ],
+          "gain_margin": 1840.97,
+          "examples": [
+            "Manager III",
+            "Manager III",
+            "Manager III"
+          ]
+        },
+        {
+          "group": 1030,
+          "latents": [
+            410
+          ],
+          "gain_margin": 1415.89,
+          "examples": [
+            "Manager I",
+            "Manager I",
+            "Manager I"
+          ]
+        },
+        {
+          "group": 148,
+          "latents": [
+            1765
+          ],
+          "gain_margin": 1230.73,
+          "examples": [
+            "Property Manager II",
+            "Property Manager II",
+            "Property Manager II"
+          ]
+        },
+        {
+          "group": 52,
+          "latents": [
+            1962
+          ],
+          "gain_margin": 650.46,
+          "examples": [
+            "Manager III",
+            "Manager III",
+            "Manager III"
+          ]
+        },
+        {
+          "group": 205,
+          "latents": [
+            1708
+          ],
+          "gain_margin": 550.56,
+          "examples": [
+            "Fire/Rescue Captain",
+            "Fire/Rescue Captain",
+            "Fire/Rescue Captain"
+          ]
+        }
+      ]
+    },
+    "full_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2040,
+      "n_groups": 2037,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1367,
+      "n_removed": 1367,
+      "var_share_removed": 0.5566,
+      "var_share_sae_error": 0.0598,
+      "top": [
+        {
+          "group": 859,
+          "latents": [
+            1208
+          ],
+          "gain_margin": 46.42,
+          "examples": [
+            "Williams, David A.",
+            "Brown, David R.",
+            "Carter, David C."
+          ]
+        },
+        {
+          "group": 648,
+          "latents": [
+            1282
+          ],
+          "gain_margin": 41.66,
+          "examples": [
+            "Smith, John C.",
+            "Lee, John F.",
+            "Ryan, John N."
+          ]
+        },
+        {
+          "group": 455,
+          "latents": [
+            1298
+          ],
+          "gain_margin": 32.19,
+          "examples": [
+            "Massicott, Arnold",
+            "Arnold, Jacqueline M.",
+            "Greenberg, Shelley A."
+          ]
+        },
+        {
+          "group": 74,
+          "latents": [
+            1941
+          ],
+          "gain_margin": 30.69,
+          "examples": [
+            "Tibbs, Gerald D. Jr..",
+            "Boss, Alvin V.",
+            "Prophet, Adrian D."
+          ]
+        },
+        {
+          "group": 1907,
+          "latents": [
+            323
+          ],
+          "gain_margin": 30.57,
+          "examples": [
+            "Kocevar, David A.",
+            "Pittenger, David D.",
+            "Crow, David M."
+          ]
+        }
+      ]
+    }
+  }
+}

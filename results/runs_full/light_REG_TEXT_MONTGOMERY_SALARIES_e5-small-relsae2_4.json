@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -5216.299470345502,
+  "test_error": 5216.299470345502,
+  "course_metric": "r2",
+  "course_score": 0.9696580924248948,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 72.19056296348572,
+  "diagnostics": {
+    "date_first_hired": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 442,
+      "n_kept": 397,
+      "n_removed": 115,
+      "threshold": 0.0534,
+      "passed_test": 40,
+      "removed_norm_ratio": 0.3353,
+      "var_share_kept": 0.7445,
+      "var_share_sae_error": 0.0013,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 262,
+          "score": 0.1282,
+          "n_active": 364,
+          "examples": [
+            "2016-03-07",
+            "2016-03-07",
+            "2016-03-07"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.1196,
+          "n_active": 356,
+          "examples": [
+            "2016-06-13",
+            "2016-06-13",
+            "2016-06-13"
+          ]
+        },
+        {
+          "latent": 395,
+          "score": 0.1187,
+          "n_active": 395,
+          "examples": [
+            "2016-05-31",
+            "2016-05-31",
+            "2016-05-31"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.1164,
+          "n_active": 412,
+          "examples": [
+            "2016-11-28",
+            "2016-11-28",
+            "2016-11-28"
+          ]
+        },
+        {
+          "latent": 339,
+          "score": 0.1108,
+          "n_active": 193,
+          "examples": [
+            "2016-03-28",
+            "2016-02-08",
+            "2016-02-08"
+          ]
+        }
+      ]
+    },
+    "division": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 379,
+      "n_removed": 133,
+      "threshold": 0.0515,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.5582,
+      "var_share_kept": 0.7861,
+      "var_share_sae_error": 0.002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 426,
+          "score": 0.0835,
+          "n_active": 620,
+          "examples": [
+            "Jail Addiction Services",
+            "Jail Addiction Services",
+            "Jail Addiction Services"
+          ]
+        },
+        {
+          "latent": 489,
+          "score": 0.0821,
+          "n_active": 361,
+          "examples": [
+            "Praisner Community Recreation Center",
+            "Community Action Agency",
+            "Community Action Agency"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.0814,
+          "n_active": 617,
+          "examples": [
+            "ESOD Data Center Operations",
+            "Asian American Health Initiative",
+            "School Health Services Center"
+          ]
+        },
+        {
+          "latent": 97,
+          "score": 0.0804,
+          "n_active": 182,
+          "examples": [
+            "Zoning",
+            "Zoning",
+            "Zoning"
+          ]
+        },
+        {
+          "latent": 35,
+          "score": 0.0791,
+          "n_active": 603,
+          "examples": [
+            "Information Technology",
+            "Information Technology",
+            "Information Technology"
+          ]
+        }
+      ]
+    },
+    "employee_position_title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 499,
+      "n_kept": 427,
+      "n_removed": 85,
+      "threshold": 0.0518,
+      "passed_test": 121,
+      "removed_norm_ratio": 0.2968,
+      "var_share_kept": 0.7914,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 333,
+          "score": 0.1641,
+          "n_active": 197,
+          "examples": [
+            "Fire/Rescue Captain",
+            "Fire/Rescue Captain",
+            "Fire/Rescue Captain"
+          ]
+        },
+        {
+          "latent": 431,
+          "score": 0.159,
+          "n_active": 30,
+          "examples": [
+            "Fire/Rescue Battalion Chief",
+            "Fire/Rescue Battalion Chief",
+            "Fire/Rescue Battalion Chief"
+          ]
+        },
+        {
+          "latent": 501,
+          "score": 0.1202,
+          "n_active": 110,
+          "examples": [
+            "Police Captain",
+            "Police Captain",
+            "Police Captain"
+          ]
+        },
+        {
+          "latent": 174,
+          "score": 0.117,
+          "n_active": 515,
+          "examples": [
+            "Master Police Officer",
+            "Master Police Officer",
+            "Master Police Officer"
+          ]
+        },
+        {
+          "latent": 386,
+          "score": 0.1169,
+          "n_active": 231,
+          "examples": [
+            "Chief Special Needs Housing",
+            "Council President",
+            "Assistant Chief of Police"
+          ]
+        }
+      ]
+    },
+    "full_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 255,
+      "n_removed": 257,
+      "threshold": 0.0511,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.618,
+      "var_share_kept": 0.3564,
+      "var_share_sae_error": 0.2029,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 210,
+          "score": 0.0499,
+          "n_active": 132,
+          "examples": [
+            "Brown, Eric S.",
+            "Griffith, Eric A.",
+            "Glass, Eric M."
+          ]
+        },
+        {
+          "latent": 350,
+          "score": 0.0436,
+          "n_active": 343,
+          "examples": [
+            "Jackson, Rebecca L.",
+            "Jackson, Raymond F.",
+            "Jackson, Jerome"
+          ]
+        },
+        {
+          "latent": 312,
+          "score": 0.043,
+          "n_active": 326,
+          "examples": [
+            "Kao, Brian",
+            "Kapust, Suzanne H.",
+            "Kargbo, Trivens A."
+          ]
+        },
+        {
+          "latent": 451,
+          "score": 0.041,
+          "n_active": 403,
+          "examples": [
+            "Shaw, Deborah A.",
+            "Norris, Deborah D.",
+            "Milo, Deborah L."
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.0398,
+          "n_active": 491,
+          "examples": [
+            "Koricho, Ahmed M.",
+            "Kao, Brian",
+            "Kossa, Tesso M."
+          ]
+        }
+      ]
+    }
+  }
+}

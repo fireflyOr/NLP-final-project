@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.914193645689416,
+  "test_error": 0.08580635431058403,
+  "course_metric": "auroc",
+  "course_score": 0.914193645689416,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 56.65068960189819,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 379,
+      "n_removed": 133,
+      "threshold": 0.0472,
+      "passed_test": 39,
+      "removed_norm_ratio": 0.4085,
+      "var_share_kept": 0.5281,
+      "var_share_sae_error": 0.2581,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 342,
+          "score": 0.1569,
+          "n_active": 507,
+          "examples": [
+            "The CompanyThe Beans Group is a media company that exists to empower young people to thrive. \u00a0We have been on an exponential growth spurt since our inception as",
+            "Customer Relationship Management specialist company looking to hire people to add to our Telemarketing team. This is a Virtual position and all Candidates must ",
+            "Award-Winning London-Based Technology Media Company Seek an Ambitious and Passionate Developer.The CompanyThe Beans Group is a media company that exists to empo"
+          ]
+        },
+        {
+          "latent": 75,
+          "score": 0.0968,
+          "n_active": 394,
+          "examples": [
+            "#URL_40db8ee573e5afc88001636e8ccb082c0d19fe854bf028429228acb51eacede4# is looking for an outstanding and committed individual with a strong interest in cities, ",
+            "We currently have a vacancy for a PowerBuilder Developer, fluent in English and French, to offer his/her services as an expert who will be based in Brussels, Be",
+            "We currently have a vacancy for an Analyst fluent in English and French, to offer his/her services as an expert who will be based in Brussels. The work will be "
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0894,
+          "n_active": 858,
+          "examples": [
+            "Essential Duties and Responsibilities include the following: -Provides sales support to Sales Representatives.  -Coordinates sales for assigned accounts. -Speak",
+            "Duties and Responsibilities:  1. A marketing representative is required to attend regular meetings with upper management weekly 2. He/ She have to attend sales ",
+            "The Administrative Assistant I is responsible for the completion of assigned office and administrative tasks.\u00a0 Maintains confidentiality of client, employee, an"
+          ]
+        },
+        {
+          "latent": 164,
+          "score": 0.0842,
+          "n_active": 628,
+          "examples": [
+            "Salary Range$100K-$125K+ with generous benefits package.Requires working knowledge of purchasing, materials, payroll, accounts payable, accounts receivable, IT,",
+            "Play with kids, get paid for it\u00a0Love travel? Jobs in Asia$1500 USD + monthly ($200 Cost of living)Excellent for student loans/credit cardsHousing provided (Furn",
+            "We need good techs with either Cable or Satellite experience.We can train.\u00a0Must have truck\u00a0Start TodayPaid Mileage$4,000-$7,000 a month to startPaid weekly***10"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.0835,
+          "n_active": 354,
+          "examples": [
+            "Seeking PART-TIME day and night janitors to clean commercial office buildings in Antioch, Emeryville, Hayward, Martinez, Oakland, San Francisco and Santa Clara.",
+            "OverviewProenza Schouler is looking for an experienced Office Manager to work in our SoHo corporate headquarters. This individual will be the first point of con",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 295,
+      "n_kept": 428,
+      "n_removed": 84,
+      "threshold": 0.0535,
+      "passed_test": 49,
+      "removed_norm_ratio": 0.1118,
+      "var_share_kept": 0.8714,
+      "var_share_sae_error": 0.0063,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 212,
+          "score": 0.0964,
+          "n_active": 56,
+          "examples": [
+            "18-22",
+            "22-28",
+            "Jun-18"
+          ]
+        },
+        {
+          "latent": 68,
+          "score": 0.0959,
+          "n_active": 22,
+          "examples": [
+            "18-22",
+            "Jun-18",
+            "Dec-25"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.0955,
+          "n_active": 84,
+          "examples": [
+            "20-3075",
+            "13-20",
+            "Oct-20"
+          ]
+        },
+        {
+          "latent": 511,
+          "score": 0.0875,
+          "n_active": 35,
+          "examples": [
+            "21600-31200",
+            "21600-31200",
+            "21600-31200"
+          ]
+        },
+        {
+          "latent": 97,
+          "score": 0.0859,
+          "n_active": 32,
+          "examples": [
+            "20-25",
+            "13-20",
+            "25-30"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 387,
+      "n_removed": 125,
+      "threshold": 0.0503,
+      "passed_test": 28,
+      "removed_norm_ratio": 0.4119,
+      "var_share_kept": 0.668,
+      "var_share_sae_error": 0.0994,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 373,
+          "score": 0.1259,
+          "n_active": 401,
+          "examples": [
+            "Administrative Assitstant",
+            "Administrative Manager",
+            "Administrative Assistant / Office Manager"
+          ]
+        },
+        {
+          "latent": 342,
+          "score": 0.1056,
+          "n_active": 325,
+          "examples": [
+            "Use Your Spare Time to Start Earning More",
+            "Earn the Income You Deserve",
+            "Well Paid Cash Jobs To Start Immediately. "
+          ]
+        },
+        {
+          "latent": 377,
+          "score": 0.0963,
+          "n_active": 564,
+          "examples": [
+            "Immediate Opening : Oracle Developer for  Bahrain",
+            "Cruise Staff Wanted *URGENT*",
+            "Cruise Staff Wanted *URGENT*"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.0912,
+          "n_active": 385,
+          "examples": [
+            "Office Manager",
+            "Office Manager",
+            "Office Manager"
+          ]
+        },
+        {
+          "latent": 64,
+          "score": 0.0822,
+          "n_active": 337,
+          "examples": [
+            "Accounting Clerk",
+            "Records Clerk ",
+            "Records Clerk "
+          ]
+        }
+      ]
+    }
+  }
+}

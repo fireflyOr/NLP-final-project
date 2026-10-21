@@ -1,0 +1,467 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6912322839141629,
+  "test_error": 0.6912322839141629,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9074557612180623,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 199.89017486572266,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2034,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1091,
+      "n_removed": 1091,
+      "var_share_removed": 0.3584,
+      "var_share_sae_error": 0.0632,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            688,
+            1502
+          ],
+          "gain_margin": 691.96,
+          "examples": [
+            "Metropolitan Paris Tour Eiffel, 3 rue des Belles-Feuilles, Paris, 75016, France",
+            "1F, Luohong Art Museum, 89 Capital Airport Road, Shunyi, Beijing, China Mainland",
+            "M\u00e4ster Johansgatan 11, Malmo, 21121, Sweden"
+          ]
+        },
+        {
+          "group": 70,
+          "latents": [
+            1774
+          ],
+          "gain_margin": 635.85,
+          "examples": [
+            "324/61 Chaiyaphruek Road, Pattaya, Nong Prue, Bang Lamung, Chon Buri, 20150, Thailand",
+            "50 Mu 7, Nongmaikean Road, Pattaya, Nong Prue, Bang Lamung, Chon Buri, 20150, Thailand",
+            "49 Zhongzheng Road, Beipu Township, Hsinchu County, 314002, Taiwan"
+          ]
+        },
+        {
+          "group": 1010,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 276.72,
+          "examples": [
+            "315 Ji Mao Road, Xihu, Hangzhou, China Mainland",
+            "52 Dongquan Gate, Guangling, Yangzhou, China Mainland",
+            "69 Tianzhu Road, Xihu, Hangzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 568,
+          "latents": [
+            1257
+          ],
+          "gain_margin": 244.35,
+          "examples": [
+            "Ace Hotel Toronto, 51 Camden St., Toronto, M5V 1V2, Canada",
+            "Grand H\u00f4tel Henri, 1 cours Ren\u00e9-Char, L'Isle-sur-la-Sorgue, 84800, France",
+            "Hotel Rum Budapest, Kir\u00e1lyi P\u00e1l utca 4, Budapest, 1053, Hungary"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            363,
+            1292
+          ],
+          "gain_margin": 239.3,
+          "examples": [
+            "4F, Building 2, Diamond Towers, Shin Kong Mitsukoshi, 282, Section 3, Zhongxiao East Road, Da'an District, Taipei, 106, Taiwan",
+            "Shop 102, 1F, Metro South Tower 2, 39 Wong Chuk Hang Road, Wong Chuk Hang, Hong Kong, Hong Kong SAR China",
+            "1F, H Code, 45 Pottinger Street, Central, Hong Kong, Hong Kong SAR China"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1172,
+      "n_groups": 1171,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1000,
+      "n_removed": 1001,
+      "var_share_removed": 0.729,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 405,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 2148.15,
+          "examples": [
+            "Vietnamese, Noodles",
+            "Noodles, Rice Dishes",
+            "Noodles and Congee"
+          ]
+        },
+        {
+          "group": 1094,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1300.04,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        },
+        {
+          "group": 1151,
+          "latents": [
+            750
+          ],
+          "gain_margin": 920.98,
+          "examples": [
+            "Vietnamese, Noodles",
+            "Southern Thai, Thai",
+            "Thai, Traditional Cuisine"
+          ]
+        },
+        {
+          "group": 440,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 789.19,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative"
+          ]
+        },
+        {
+          "group": 578,
+          "latents": [
+            164
+          ],
+          "gain_margin": 682.87,
+          "examples": [
+            "Modern Cuisine, Creative",
+            "Modern Cuisine, Creative",
+            "Modern Cuisine, Creative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2027,
+      "n_groups": 2021,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 907,
+      "n_removed": 907,
+      "var_share_removed": 0.47,
+      "var_share_sae_error": 0.0764,
+      "top": [
+        {
+          "group": 1384,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 7438.57,
+          "examples": [
+            "Zilte strives to offer a global emotional experience, starting with the view of the city skyline from the top floor of the Museum aan de Stroom. The understated",
+            "The fine-dining restaurant at the Mandarin Oriental Barcelona hotel is run by Ra\u00fcl Balam, son of the legendary chef Carme Ruscalleda. In addition to his own und",
+            "Sidney Schutte is a citizen of the world. He trained in renowned kitchens such as De Librije and Amber, where he developed his own inventive style enriched with"
+          ]
+        },
+        {
+          "group": 1634,
+          "latents": [
+            74
+          ],
+          "gain_margin": 5730.2,
+          "examples": [
+            "This casual eatery, which opened nearly two decades ago, is all about its signature shrimp dishes. Shrimp paired with bold Thai flavours and Southern influences",
+            "The cuisine of the local Baba (Chinese-Thai) people lives on here. Named in honour of the owner\u2019s grandfather, a 'Juumpo' or chef on a Chinese boat more than 80",
+            "Four times in a decade, this Thai restaurant changed locations before finally opening on the chef-owner\u2019s land in Nakhon Pathom. Each time, regulars followed al"
+          ]
+        },
+        {
+          "group": 995,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 4807.7,
+          "examples": [
+            "Order the Ji Ji noodle bowl \u2013 noodle soup or \u2018dry\u2019 noodles are topped with char siew, deep-fried wonton and veggies and served with wonton soup. Pork crackling ",
+            "A family vibe sets the scene in this shop serving healthy home-style cooking. Their signature chicken soup is made daily with freshly slaughtered free-range chi",
+            "This long-standing neighbourhood noodle shop was renovated a few years back. Noodles are either tossed in shallot oil or served in broth, but the former are mor"
+          ]
+        },
+        {
+          "group": 2004,
+          "latents": [
+            950
+          ],
+          "gain_margin": 3881.27,
+          "examples": [
+            "A wind of enthusiasm heralds Thijs Vervloet\u2019s return to Tongerlo. This former doctor\u2019s home has been entirely refurbished with alfresco dining in the garden and",
+            "You might say that Arnaud Lallement grew up at Assiette Champenoise, which was originally opened by his parents. Trained by the best in the business (Roger Verg",
+            "La Marine has had a facelift. In the elegant new setting, opt for the extensive tasting menu, which is constantly updated depending on the season's produce. It "
+          ]
+        },
+        {
+          "group": 2020,
+          "latents": [
+            249
+          ],
+          "gain_margin": 3129.81,
+          "examples": [
+            "Within the Feniletto Nature Oasis, the facility unfolds among a wooded garden, a farmyard dedicated to farm animals, stables with horses, an organic vegetable g",
+            "This restaurant, known simply as \"Crissier\" by its regulars, boasts a star-studded history. The success of the restaurant, which was first awarded three stars i",
+            "What an experience! Here on the third floor of an unassuming factory building, in a loft-style space with an industrial chic design, the open kitchen takes cent"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 663,
+      "n_groups": 652,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 579,
+      "n_removed": 588,
+      "var_share_removed": 0.7492,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 226,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1707.0,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Notable sake list,Valet parking",
+            "Air conditioning,Car park,Great view,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 427,
+          "latents": [
+            166
+          ],
+          "gain_margin": 1139.32,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 978.73,
+          "examples": [
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 519,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 611.88,
+          "examples": [
+            "Air conditioning,Bring your own bottle,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 624,
+          "latents": [
+            750
+          ],
+          "gain_margin": 463.18,
+          "examples": [
+            "Brunch,Credit cards not accepted",
+            "Foreign credit cards not accepted",
+            "Foreign credit cards not accepted"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1892,
+      "n_groups": 1892,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1445,
+      "n_removed": 1445,
+      "var_share_removed": 0.7062,
+      "var_share_sae_error": 0.0103,
+      "top": [
+        {
+          "group": 1697,
+          "latents": [
+            74
+          ],
+          "gain_margin": 228.15,
+          "examples": [
+            "Khon Kaen, Thailand",
+            "Khon Kaen, Thailand",
+            "Khon Kaen, Thailand"
+          ]
+        },
+        {
+          "group": 1650,
+          "latents": [
+            445
+          ],
+          "gain_margin": 181.71,
+          "examples": [
+            "Nanjing, China Mainland",
+            "Nanjing, China Mainland",
+            "Nanjing, China Mainland"
+          ]
+        },
+        {
+          "group": 485,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 173.85,
+          "examples": [
+            "Quanzhou, China Mainland",
+            "Quanzhou, China Mainland",
+            "Quanzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 851,
+          "latents": [
+            1329
+          ],
+          "gain_margin": 166.42,
+          "examples": [
+            "Berne, Switzerland",
+            "Berne, Switzerland",
+            "Berne, Switzerland"
+          ]
+        },
+        {
+          "group": 723,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 157.8,
+          "examples": [
+            "Hangzhou, China Mainland",
+            "Hangzhou, China Mainland",
+            "Hangzhou, China Mainland"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2044,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1068,
+      "n_removed": 1068,
+      "var_share_removed": 0.3883,
+      "var_share_sae_error": 0.0903,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            750,
+            1271
+          ],
+          "gain_margin": 1714.28,
+          "examples": [
+            "Lao Shih Kuan Noodles",
+            "Pranom Shredded Chicken Noodles (Tha Wasukri)",
+            "Dongmen Rice Noodle Soup"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            950,
+            1502
+          ],
+          "gain_margin": 476.02,
+          "examples": [
+            "Eximio by Fernando Mart\u00edn",
+            "Lars Amsterdam",
+            "La Maadeleine by Beno\u00eet Neusy"
+          ]
+        },
+        {
+          "group": 62,
+          "latents": [
+            1814
+          ],
+          "gain_margin": 423.57,
+          "examples": [
+            "Philippe Meyers",
+            "Paolo Teverini",
+            "Olivier Leflaive"
+          ]
+        },
+        {
+          "group": 209,
+          "latents": [
+            1831
+          ],
+          "gain_margin": 191.86,
+          "examples": [
+            "L'Ekrin by Laurent Azoulay",
+            "Sa Pleta by Marc Fosh",
+            "Brooklands by Claude Bosi"
+          ]
+        },
+        {
+          "group": 126,
+          "latents": [
+            1774
+          ],
+          "gain_margin": 190.71,
+          "examples": [
+            "Taman Bukit Curry Mee",
+            "Xuanhe Cuisine",
+            "Ren He Guan (Xuhui)"
+          ]
+        }
+      ]
+    }
+  }
+}

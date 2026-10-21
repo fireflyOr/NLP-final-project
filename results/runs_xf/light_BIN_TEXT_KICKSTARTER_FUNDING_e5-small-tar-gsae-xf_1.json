@@ -1,0 +1,89 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-xf",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7319448399270398,
+  "test_error": 0.26805516007296015,
+  "course_metric": "auroc",
+  "course_score": 0.7319448399270398,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1528.7756552696228,
+  "diagnostics": {
+    "created_at": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 859,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.5747,
+        "0.1": 0.5822,
+        "0.25": 0.58943,
+        "0.5": 0.59959,
+        "0.75": 0.62043
+      },
+      "var_share_removed": 0.0
+    },
+    "deadline": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 856,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.5747,
+        "0.1": 0.5822,
+        "0.25": 0.58943,
+        "0.5": 0.59959,
+        "0.75": 0.62043
+      },
+      "var_share_removed": 0.0
+    },
+    "desc": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 2048,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.5747,
+        "0.1": 0.5822,
+        "0.25": 0.58943,
+        "0.5": 0.59959,
+        "0.75": 0.62043
+      },
+      "var_share_removed": 0.0
+    },
+    "keywords": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 2048,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.5747,
+        "0.1": 0.5822,
+        "0.25": 0.58943,
+        "0.5": 0.59959,
+        "0.75": 0.62043
+      },
+      "var_share_removed": 0.0
+    },
+    "name": {
+      "rule": "xfit",
+      "chosen_fraction": 0.0,
+      "n_eligible": 2048,
+      "n_removed": 0,
+      "inner_losses": {
+        "0.0": 0.5747,
+        "0.1": 0.5822,
+        "0.25": 0.58943,
+        "0.5": 0.59959,
+        "0.75": 0.62043
+      },
+      "var_share_removed": 0.0
+    }
+  }
+}

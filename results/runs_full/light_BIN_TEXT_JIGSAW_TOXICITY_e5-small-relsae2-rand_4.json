@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7993791919345699,
+  "test_error": 0.20062080806543015,
+  "course_metric": "auroc",
+  "course_score": 0.79937919193457,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 42.18048906326294,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 380,
+      "n_removed": 132,
+      "threshold": 0.0387,
+      "passed_test": 36,
+      "removed_norm_ratio": 0.3568,
+      "var_share_kept": 0.4757,
+      "var_share_sae_error": 0.3185,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 66,
+          "score": 0.1663,
+          "n_active": 555,
+          "examples": [
+            "I think you are right.  He isn't stupid, but he is ignorant and arrogant.  He is ignorant in that he doesn't fully understand the repercusions of what he says a",
+            "Speaking about who's dumb, it's clear that you don't have a clue regarding the criminal code in Colorado.",
+            "The idiots don;t have a clue"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0961,
+          "n_active": 2287,
+          "examples": [
+            "This is your third post of the same garbage.  Exactly what is expected from a repulsive left wing troll.",
+            "\" misogynistic\"? Give us a break.",
+            "Lol.  Just a bizarre angry post void of facts."
+          ]
+        },
+        {
+          "latent": 187,
+          "score": 0.0757,
+          "n_active": 700,
+          "examples": [
+            "Ask Jim McCrea, I was replying to his comment in which he used the phrase, \"homosexual acts among opposite-sex couples.\"",
+            "Ironic remark there.",
+            "Yes. Pre-cleaning as in honest smart estate planning.  Dirty estates, toxic relationships between sibling heirs\u2026 I see it all the time.  Dishonest executors and"
+          ]
+        },
+        {
+          "latent": 29,
+          "score": 0.0729,
+          "n_active": 996,
+          "examples": [
+            "Now that's really getting sad.",
+            "Worst zoning ever. We will regret that in the future.",
+            "What an asinine comment."
+          ]
+        },
+        {
+          "latent": 450,
+          "score": 0.0719,
+          "n_active": 1333,
+          "examples": [
+            "Trump U.",
+            "This is trump's katrina.",
+            "Trump is an idiot."
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 332,
+      "n_kept": 344,
+      "n_removed": 168,
+      "threshold": 0.0427,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6623,
+      "var_share_kept": 0.4225,
+      "var_share_sae_error": 0.0313,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 93,
+          "score": 0.0471,
+          "n_active": 34,
+          "examples": [
+            "2017-07-01 04:14:50.120133",
+            "2017-02-04 14:50:28.777065",
+            "2017-01-12 02:20:50.802145"
+          ]
+        },
+        {
+          "latent": 178,
+          "score": 0.0279,
+          "n_active": 5059,
+          "examples": [
+            "2016-10-30 13:30:12.006773",
+            "2017-05-30 12:00:29.007158",
+            "2017-06-30 14:04:00.095706"
+          ]
+        },
+        {
+          "latent": 142,
+          "score": 0.0263,
+          "n_active": 20,
+          "examples": [
+            "2016-04-05 04:00:57.975711",
+            "2017-06-14 12:00:53.231982",
+            "2017-06-24 19:00:56.188879"
+          ]
+        },
+        {
+          "latent": 299,
+          "score": 0.0254,
+          "n_active": 134,
+          "examples": [
+            "2017-05-25 16:15:15.262403",
+            "2016-02-25 05:37:26.262187",
+            "2017-10-09 20:17:40.262980"
+          ]
+        },
+        {
+          "latent": 132,
+          "score": 0.0232,
+          "n_active": 176,
+          "examples": [
+            "2017-05-04 14:09:00.868390",
+            "2016-05-15 20:32:09.862997",
+            "2016-10-20 12:18:28.869581"
+          ]
+        }
+      ]
+    }
+  }
+}

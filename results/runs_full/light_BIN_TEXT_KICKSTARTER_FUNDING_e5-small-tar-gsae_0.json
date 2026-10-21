@@ -1,0 +1,390 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7213705550515451,
+  "test_error": 0.2786294449484549,
+  "course_metric": "auroc",
+  "course_score": 0.7213705550515451,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 93.15659737586975,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 927,
+      "n_groups": 917,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 700,
+      "n_removed": 705,
+      "var_share_removed": 0.4743,
+      "var_share_sae_error": 0.006,
+      "top": [
+        {
+          "group": 534,
+          "latents": [
+            508
+          ],
+          "gain_margin": 332.47,
+          "examples": [
+            "1970-01-01 00:00:01.428009737",
+            "1970-01-01 00:00:01.427614023",
+            "1970-01-01 00:00:01.428011257"
+          ]
+        },
+        {
+          "group": 857,
+          "latents": [
+            1199
+          ],
+          "gain_margin": 253.87,
+          "examples": [
+            "1970-01-01 00:00:01.407284225",
+            "1970-01-01 00:00:01.407283725",
+            "1970-01-01 00:00:01.407642912"
+          ]
+        },
+        {
+          "group": 116,
+          "latents": [
+            1748
+          ],
+          "gain_margin": 252.46,
+          "examples": [
+            "1970-01-01 00:00:01.404732284",
+            "1970-01-01 00:00:01.404832356",
+            "1970-01-01 00:00:01.404832592"
+          ]
+        },
+        {
+          "group": 380,
+          "latents": [
+            792
+          ],
+          "gain_margin": 119.78,
+          "examples": [
+            "1970-01-01 00:00:01.427203055",
+            "1970-01-01 00:00:01.427813171",
+            "1970-01-01 00:00:01.418112130"
+          ]
+        },
+        {
+          "group": 459,
+          "latents": [
+            1106
+          ],
+          "gain_margin": 114.9,
+          "examples": [
+            "1970-01-01 00:00:01.370941233",
+            "1970-01-01 00:00:01.401010703",
+            "1970-01-01 00:00:01.420931503"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 896,
+      "n_groups": 873,
+      "n_multi_groups": 18,
+      "n_groups_dropped": 644,
+      "n_removed": 662,
+      "var_share_removed": 0.4373,
+      "var_share_sae_error": 0.0058,
+      "top": [
+        {
+          "group": 271,
+          "latents": [
+            1722
+          ],
+          "gain_margin": 411.23,
+          "examples": [
+            "1970-01-01 00:00:01.359565200",
+            "1970-01-01 00:00:01.302645600",
+            "1970-01-01 00:00:01.335574800"
+          ]
+        },
+        {
+          "group": 282,
+          "latents": [
+            1603
+          ],
+          "gain_margin": 392.54,
+          "examples": [
+            "1970-01-01 00:00:01.431791365",
+            "1970-01-01 00:00:01.432766645",
+            "1970-01-01 00:00:01.432685412"
+          ]
+        },
+        {
+          "group": 299,
+          "latents": [
+            792
+          ],
+          "gain_margin": 305.05,
+          "examples": [
+            "1970-01-01 00:00:01.431175171",
+            "1970-01-01 00:00:01.431375720",
+            "1970-01-01 00:00:01.431114197"
+          ]
+        },
+        {
+          "group": 870,
+          "latents": [
+            508
+          ],
+          "gain_margin": 185.07,
+          "examples": [
+            "1970-01-01 00:00:01.408765023",
+            "1970-01-01 00:00:01.408135745",
+            "1970-01-01 00:00:01.408813200"
+          ]
+        },
+        {
+          "group": 348,
+          "latents": [
+            1172
+          ],
+          "gain_margin": 168.75,
+          "examples": [
+            "1970-01-01 00:00:01.401001140",
+            "1970-01-01 00:00:01.404406740",
+            "1970-01-01 00:00:01.401671040"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1247,
+      "n_removed": 1249,
+      "var_share_removed": 0.3608,
+      "var_share_sae_error": 0.1477,
+      "top": [
+        {
+          "group": 1131,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 1980.89,
+          "examples": [
+            "\"Sharing your own content? Selling products on EBay? We want to create Social Media Optimized links to make your shared links beautiful\"",
+            "\"The Facebook App Creator... Where you yourself can create a Facebook Page/App even if you have little to no experience..\"",
+            "\"The collaborative social networking platform designed to enable professionals across all industries to showcase their ideas and work.\""
+          ]
+        },
+        {
+          "group": 2024,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 548.81,
+          "examples": [
+            "\"The smallest case for your Raspberry Pi and now ScorPi, a new camera board holder.\"",
+            "\"An amphibious surfboard that is as much fun riding down to or around the water, as out in or on the water.\"",
+            "\"An MDF base to keep your Catan board: Flat, Organized, Movable, Dry, Safe, and Snug. Durable, Cheap, Convenient, and it Works!\""
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            510
+          ],
+          "gain_margin": 468.29,
+          "examples": [
+            "\"Hanafuda cards, are beautifully illustrated Japanese playing cards that can be used to play a wide variety of games.\"",
+            "\"Officially licensed custom playing cards are the perfect way to celebrate the Wizard of Oz's 75th Anniversary.\"",
+            "\"Global Harmony joins worldwide orchestras and sponsors for an exciting piano concerto by Pulitzer Prize composer, Ellen Taaffe Zwilich.\""
+          ]
+        },
+        {
+          "group": 972,
+          "latents": [
+            793
+          ],
+          "gain_margin": 418.28,
+          "examples": [
+            "\"Doctor Daedalus and the Devil's Army, is my first (Fantasy) Steampunk novel to be self-published in December of 2012.\"",
+            "\"Help us premiere PaperPieces at CPR September 25-26th.       A world of papered architecture, tender collisions and snow globe memories\"",
+            "\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"Hanna Watches a Porno\"\"\"\"\"\"\"\"\"\""
+          ]
+        },
+        {
+          "group": 1340,
+          "latents": [
+            886
+          ],
+          "gain_margin": 418.19,
+          "examples": [
+            "\"Mount Joy is recording their first full length album and needs your help to make it happen.\"",
+            "\"Hannah Smith is releasing her first full-length album. Get involved by pre-ordering your copy of the record and other goodies here!\"",
+            "\"First full-length album, and we want you to be a part of it!\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1236,
+      "n_removed": 1236,
+      "var_share_removed": 0.3753,
+      "var_share_sae_error": 0.132,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            48,
+            1467
+          ],
+          "gain_margin": 759.86,
+          "examples": [
+            "\"sportswide\"",
+            "\"want-to-be-a-bar-owner\"",
+            "\"financeer\""
+          ]
+        },
+        {
+          "group": 171,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 257.39,
+          "examples": [
+            "\"blue-moon-box-a-monthly-science-subscription-kit-f\"",
+            "\"back-to-the-future-time-machine-1981-delorean-dmc1\"",
+            "\"andi-the-alien-and-the-fourth-grade-science-projec\""
+          ]
+        },
+        {
+          "group": 1011,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 237.38,
+          "examples": [
+            "\"super-nutritionally-enhanced-vegetables\"",
+            "\"the-business-owners-bible-epiphanies\"",
+            "\"ivf-miracle-of-having-a-baby\""
+          ]
+        },
+        {
+          "group": 1224,
+          "latents": [
+            886
+          ],
+          "gain_margin": 213.28,
+          "examples": [
+            "\"new-world-a-progressive-rock-album-by-dave-kerzner\"",
+            "\"brent-allen-is-recording-an-album-with-walt-wilkin\"",
+            "\"bitterroots-debut-album-the-valley-of-peace\""
+          ]
+        },
+        {
+          "group": 870,
+          "latents": [
+            1557
+          ],
+          "gain_margin": 187.41,
+          "examples": [
+            "\"changing-the-game-the-soccer-documentary\"",
+            "\"teach-me-nothing-a-documentary\"",
+            "\"the-adults-in-the-room-documentary\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1251,
+      "n_removed": 1251,
+      "var_share_removed": 0.3697,
+      "var_share_sae_error": 0.1387,
+      "top": [
+        {
+          "group": 1017,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 1469.63,
+          "examples": [
+            "\"LEVEL - web app to answer business questions for money.\"",
+            "\"Instant Reply Text Messaging Application (Canceled)\"",
+            "\"Building Business Connections & Networks for Entrepreneurs\""
+          ]
+        },
+        {
+          "group": 2032,
+          "latents": [
+            38
+          ],
+          "gain_margin": 788.84,
+          "examples": [
+            "\"THE NEXT BIG SOCIAL NETWORK -    MY PRYME (Canceled)\"",
+            "\"LATENT TALENT: Leaping from de Poverty Line (Canceled)\"",
+            "\"Rider Down --  tracking and analysis system (Canceled)\""
+          ]
+        },
+        {
+          "group": 1459,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 399.34,
+          "examples": [
+            "\"Boner3D: Auto-Rigging for the Masses (Canceled)\"",
+            "\"Help me build a computer! (Canceled)\"",
+            "\"DOTS911: Mobile Phone Signal Finder and Enhancer (Canceled)\""
+          ]
+        },
+        {
+          "group": 2010,
+          "latents": [
+            886
+          ],
+          "gain_margin": 387.06,
+          "examples": [
+            "\"Outlaw Con Bandana Double LP Vinyl and Writing Collection\"",
+            "\"John Clark Records His Debut Album \u201cAll I Have\u201d\"",
+            "\"Bitterroot's Debut Album \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"The Va"
+          ]
+        },
+        {
+          "group": 1984,
+          "latents": [
+            485
+          ],
+          "gain_margin": 298.26,
+          "examples": [
+            "\"The Wittgenstein Vector: On the Wall poetry\"",
+            "\"Farmwood Gateway Wilson, NC\"",
+            "\"CordCase\u2122 for the iPhone 5, 5S & NEW iPhone 6 & 6 Plus\""
+          ]
+        }
+      ]
+    }
+  }
+}

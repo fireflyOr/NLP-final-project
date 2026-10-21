@@ -1,0 +1,244 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.907226365244932,
+  "test_error": 0.09277363475506795,
+  "course_metric": "auroc",
+  "course_score": 0.9072263652449322,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 49.64689612388611,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2040,
+      "n_groups": 2037,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1421,
+      "n_removed": 1421,
+      "var_share_removed": 0.435,
+      "var_share_sae_error": 0.0741,
+      "top": [
+        {
+          "group": 2035,
+          "latents": [
+            480
+          ],
+          "gain_margin": 4172.12,
+          "examples": [
+            "We're looking for self-motivated individuals who are interested in working from home by performing online data entry work, and other types of work from home dut",
+            "We're looking for self-motivated individuals who are interested in working from home by performing online data entry work, and other types of work from home dut",
+            "Offering CASH Positions, Immediate Start.Work as many or little hrs as u like, No cost.You can earn $300 to $400 extra a day.No experience required for this job"
+          ]
+        },
+        {
+          "group": 2036,
+          "latents": [
+            315
+          ],
+          "gain_margin": 3334.36,
+          "examples": [
+            "URGENT Part Timers &amp; Full Timers Required.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $350 To $400 Extr",
+            "We have several openings available in this area earning $1000.00-$2500.00 per week.\u00a0We are seeking only honest, self-motivated people with a desire to work in t",
+            "2-Workonline is seeking individuals for both full-time and part-time opportunities in a variety of career fields including data entry, and typing.\u00a0These positio"
+          ]
+        },
+        {
+          "group": 836,
+          "latents": [
+            1530
+          ],
+          "gain_margin": 2166.32,
+          "examples": [
+            "Senior Engineering Product ManagerAs a member of the Service Provider Engineering team, you will be responsible for managing the development of broadband DSL pr",
+            "Weekly PART TIME Cash Job, Staff Required.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest ",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 1559,
+          "latents": [
+            1055
+          ],
+          "gain_margin": 1392.56,
+          "examples": [
+            "St. Ermin's Hotel2 Caxton Street Westminster,\u00a0London SW1H 0QWUNITED KINGDOM+44 70538 25547St. Ermins Hotel \u00a0urgently needs the services of devoted and Hard work",
+            "We seek to hire a full time Administrative assistant for our new office to Assists management staff by performing administrative dutiesAdministrative Assistant.",
+            "Our company is seeking Receptionist/ Administrative Assistant to monitor multi-line phones, greet visitors, and assist with various clerical duties as needed. M"
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            386
+          ],
+          "gain_margin": 831.86,
+          "examples": [
+            "Job DescriptionAdministrative AssistantDescriptionAn insurance consulting practice is currently seeking a skilled Administrative Assistant to join its team.The ",
+            "Job DescriptionAdministrative AssistantDescriptionAn insurance consulting practice is currently seeking a skilled Administrative Assistant to join its team.The ",
+            "Experienced, reliable team members are needed for our Data Entry Clerk / Administrative Assistant needed! We are currently searching for candidates with previou"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 368,
+      "n_groups": 355,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 286,
+      "n_removed": 297,
+      "var_share_removed": 0.7126,
+      "var_share_sae_error": 0.0027,
+      "top": [
+        {
+          "group": 156,
+          "latents": [
+            1103
+          ],
+          "gain_margin": 116.68,
+          "examples": [
+            "27000-34000",
+            "27000-34280",
+            "27000-32000"
+          ]
+        },
+        {
+          "group": 47,
+          "latents": [
+            1643
+          ],
+          "gain_margin": 114.58,
+          "examples": [
+            "750-750",
+            "750-750",
+            "42000-80000"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            739,
+            1617,
+            1828
+          ],
+          "gain_margin": 112.53,
+          "examples": [
+            "3000-100000",
+            "0-30000",
+            "0-30000"
+          ]
+        },
+        {
+          "group": 166,
+          "latents": [
+            1187
+          ],
+          "gain_margin": 106.84,
+          "examples": [
+            "20-25",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "group": 316,
+          "latents": [
+            480
+          ],
+          "gain_margin": 70.58,
+          "examples": [
+            "55386-66731",
+            "55386-66731",
+            "22-61000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1979,
+      "n_groups": 1972,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1458,
+      "n_removed": 1459,
+      "var_share_removed": 0.457,
+      "var_share_sae_error": 0.027,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            480,
+            1055
+          ],
+          "gain_margin": 3966.54,
+          "examples": [
+            "Offering CASH Positions, Immediate Start.",
+            "Data Entry Admin/Clerical Positions - Work From Home",
+            "Part Time Cash Jobs To Immediate Starts."
+          ]
+        },
+        {
+          "group": 1966,
+          "latents": [
+            386
+          ],
+          "gain_margin": 1139.89,
+          "examples": [
+            "URGENT Part Timers & Full Timers Required.",
+            "Immediate Staff Needed For Cash Positions.",
+            "Part Time Workers Wanted, Urgent Jobs."
+          ]
+        },
+        {
+          "group": 455,
+          "latents": [
+            1514
+          ],
+          "gain_margin": 485.9,
+          "examples": [
+            "Well Paid Cash Jobs To Start Immediately. ",
+            "Hiring Part-Time Workers (CASH PAYING)",
+            "URGENT Job Full Time & Part Time, Cash Pay."
+          ]
+        },
+        {
+          "group": 1898,
+          "latents": [
+            315
+          ],
+          "gain_margin": 344.07,
+          "examples": [
+            "Accounting Clerk/ $23",
+            "Administrative Assistant/Front Desk Clerk",
+            "Administrative Assistant - $19.35 Per Hr"
+          ]
+        },
+        {
+          "group": 824,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 256.23,
+          "examples": [
+            "Home Based Payroll Typist/Data Entry Clerks Positions Available",
+            "Assistant position. The best job is waiting for you!!! ",
+            " Payroll Data Entry Clerk Position - Earn $100-$200 Daily "
+          ]
+        }
+      ]
+    }
+  }
+}

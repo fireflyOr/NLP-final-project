@@ -1,0 +1,93 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.5856107297282575,
+  "test_error": 0.5856107297282575,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8735302538406936,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 23.887773513793945,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1808,
+      "n_groups": 1803,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 859,
+      "n_removed": 864,
+      "var_share_removed": 0.4618,
+      "var_share_sae_error": 0.0196,
+      "top": [
+        {
+          "group": 1303,
+          "latents": [
+            483
+          ],
+          "gain_margin": 248.01,
+          "examples": [
+            "Asked Google Chrome team about IE9. Feeback: Anything that raises the bar on browser performance is a good thing #telling #ie9 #fast #sxsw",
+            "Apple likes it if you pay them. That's what Apple likes. - Barry Diller #SXSW",
+            "Barry Diller: I have a truly emotional thing about the iPad. Harlow: iPad2? Diller: &quot;It's better.&quot; #sxsw"
+          ]
+        },
+        {
+          "group": 1589,
+          "latents": [
+            360
+          ],
+          "gain_margin": 207.96,
+          "examples": [
+            "This double buzzing issue with iPhone iOS 4.3 is getting annoying. In other news, an iPhone may fly across the room at #GR2L2 #SXSW",
+            "So strange, mixed tweets of #ipad spammers, #sxsw, and regular life together w/Pacific Rim rocking near nuclear disaster. Does not compute",
+            "Grrrr @mention not muting #sxsw as thought on web or iphone :("
+          ]
+        },
+        {
+          "group": 874,
+          "latents": [
+            1551
+          ],
+          "gain_margin": 180.13,
+          "examples": [
+            "&quot;Apple: the most elegant fascist corporation in America today.&quot; -- Kara Swisher #sxsw #flipboard",
+            "hahahahah that's funny RT @mention Never seen so many heads turn at one point. Someone from #Apple asks a question to Reid Hoffman #SXSW",
+            "&quot;Apple is the most elegant fascist company in America.&quot; #flipboard #SXSW"
+          ]
+        },
+        {
+          "group": 1662,
+          "latents": [
+            76
+          ],
+          "gain_margin": 152.35,
+          "examples": [
+            "iPad 2 turned into giant camera looks plain stupid #sxsw",
+            "This double buzzing issue with iPhone iOS 4.3 is getting annoying. In other news, an iPhone may fly across the room at #GR2L2 #SXSW",
+            "Google seems to have sabotaged my YouTube account - WTF? Are they trying to OWN the entire online ecosystem?  VERY BAD FORM #SXSW"
+          ]
+        },
+        {
+          "group": 720,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 149.16,
+          "examples": [
+            "&quot;Apple: the most elegant fascist corporation in America today.&quot; -- Kara Swisher #sxsw #flipboard",
+            "&quot;Apple is the most elegant fascist company in America.&quot; #flipboard #SXSW",
+            "@mention - #Apple is the classiest fascist company in America. Really elegant. #sxsw #rji"
+          ]
+        }
+      ]
+    }
+  }
+}

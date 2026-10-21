@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.188784181865783,
+  "test_error": 1.188784181865783,
+  "course_metric": "r2",
+  "course_score": 0.30984544416937243,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.431110858917236,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1586,
+      "n_removed": 1586,
+      "var_share_removed": 0.6062,
+      "var_share_sae_error": 0.0734,
+      "top": [
+        {
+          "group": 463,
+          "latents": [
+            1622
+          ],
+          "gain_margin": 3261.75,
+          "examples": [
+            "Dragon Ball: Raging Blast 2",
+            "Dragon Ball: Raging Blast 2",
+            "Dragon Ball: Raging Blast"
+          ]
+        },
+        {
+          "group": 1911,
+          "latents": [
+            256
+          ],
+          "gain_margin": 2830.16,
+          "examples": [
+            "Mario Bros.",
+            "Mario Bros.",
+            "Mario Tennis"
+          ]
+        },
+        {
+          "group": 551,
+          "latents": [
+            1420
+          ],
+          "gain_margin": 1854.93,
+          "examples": [
+            "Pokemon Channel",
+            "Pokemon Art Academy",
+            "Pokemon Black/Pokemon White"
+          ]
+        },
+        {
+          "group": 306,
+          "latents": [
+            1842
+          ],
+          "gain_margin": 1780.52,
+          "examples": [
+            "Dr. Mario",
+            "Mario & Luigi: Paper Jam",
+            "Mario Bros."
+          ]
+        },
+        {
+          "group": 2015,
+          "latents": [
+            96
+          ],
+          "gain_margin": 1669.04,
+          "examples": [
+            "Daito Giken Koushiki Pachi-Slot Simulator: Ossu! Banchou Portable",
+            "Daito Giken Koushiki Pachi-Slot Simulator: Ossu! Misao + Maguro Densetsu Portable",
+            "Daito Giken Koushiki Pachi-Slot Simulator: Hihouden - Ossu! Banchou - Yoshimune DS"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1209,
+      "n_groups": 1209,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1091,
+      "n_removed": 1091,
+      "var_share_removed": 0.7116,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 1182,
+          "latents": [
+            432
+          ],
+          "gain_margin": 1627.69,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 592,
+          "latents": [
+            347
+          ],
+          "gain_margin": 1371.55,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1108,
+          "latents": [
+            205
+          ],
+          "gain_margin": 1308.66,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 679,
+          "latents": [
+            620
+          ],
+          "gain_margin": 712.92,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1122,
+          "latents": [
+            510
+          ],
+          "gain_margin": 693.32,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23585199256383366,
+  "test_error": 0.23585199256383366,
+  "course_metric": "r2",
+  "course_score": 0.4704792834531766,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 49.15551567077637,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1777,
+      "n_groups": 1777,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1136,
+      "n_removed": 1136,
+      "var_share_removed": 0.5853,
+      "var_share_sae_error": 0.0033,
+      "top": [
+        {
+          "group": 380,
+          "latents": [
+            1376
+          ],
+          "gain_margin": 196.2,
+          "examples": [
+            "The Editors of O the Oprah Magazine",
+            "Editors of Reader's Digest",
+            "American Heritage Editors"
+          ]
+        },
+        {
+          "group": 1381,
+          "latents": [
+            94
+          ],
+          "gain_margin": 175.86,
+          "examples": [
+            "N.D.V. Prasada Rao",
+            "Rajendra Prasad",
+            "Bipan Chandra"
+          ]
+        },
+        {
+          "group": 216,
+          "latents": [
+            1638
+          ],
+          "gain_margin": 126.94,
+          "examples": [
+            "Ronald G. Ehrenberg",
+            "Kelsey Oseid",
+            "Steve Alten"
+          ]
+        },
+        {
+          "group": 739,
+          "latents": [
+            1459
+          ],
+          "gain_margin": 97.71,
+          "examples": [
+            "Iain Spragg",
+            "WWF India",
+            "Radhanath Swami"
+          ]
+        },
+        {
+          "group": 1366,
+          "latents": [
+            130
+          ],
+          "gain_margin": 95.95,
+          "examples": [
+            "Warner Bros",
+            "Warner Bros",
+            "Wizards RPG Team"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 521,
+      "n_groups": 497,
+      "n_multi_groups": 21,
+      "n_groups_dropped": 336,
+      "n_removed": 345,
+      "var_share_removed": 0.3361,
+      "var_share_sae_error": 0.0031,
+      "top": [
+        {
+          "group": 18,
+          "latents": [
+            1159,
+            1270
+          ],
+          "gain_margin": 739.55,
+          "examples": [
+            "Hardcover,\u2013 1 Oct 1997",
+            "Hardcover,\u2013 1 Dec 1991",
+            "Hardcover,\u2013 1 Nov 2000"
+          ]
+        },
+        {
+          "group": 382,
+          "latents": [
+            946
+          ],
+          "gain_margin": 432.2,
+          "examples": [
+            "Hardcover,\u2013 9 Oct 2018",
+            "Hardcover,\u2013 14 Jun 2018",
+            "Hardcover,\u2013 8 Mar 2018"
+          ]
+        },
+        {
+          "group": 146,
+          "latents": [
+            1188
+          ],
+          "gain_margin": 243.51,
+          "examples": [
+            "Hardcover,\u2013 2010",
+            "Hardcover,\u2013 2010",
+            "Hardcover,\u2013 2010"
+          ]
+        },
+        {
+          "group": 113,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 242.82,
+          "examples": [
+            "Paperback,\u2013 2015",
+            "Paperback,\u2013 2015",
+            "Paperback,\u2013 2015"
+          ]
+        },
+        {
+          "group": 396,
+          "latents": [
+            648
+          ],
+          "gain_margin": 221.76,
+          "examples": [
+            "Paperback,\u2013 2008",
+            "Paperback,\u2013 2008",
+            "Paperback,\u2013 2008"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 873,
+      "n_groups": 873,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 654,
+      "n_removed": 654,
+      "var_share_removed": 0.5037,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 220,
+          "latents": [
+            1063
+          ],
+          "gain_margin": 265.17,
+          "examples": [
+            "CSS Programming",
+            "Italian",
+            "Visual C++ Programming"
+          ]
+        },
+        {
+          "group": 777,
+          "latents": [
+            342
+          ],
+          "gain_margin": 181.17,
+          "examples": [
+            "Object-Oriented Software Design",
+            "Programming Algorithms",
+            "Operating Systems Textbooks"
+          ]
+        },
+        {
+          "group": 804,
+          "latents": [
+            35
+          ],
+          "gain_margin": 180.4,
+          "examples": [
+            "CBSE",
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)"
+          ]
+        },
+        {
+          "group": 711,
+          "latents": [
+            976
+          ],
+          "gain_margin": 99.77,
+          "examples": [
+            "Painting Textbooks",
+            "Painting Textbooks",
+            "Photography Textbooks"
+          ]
+        },
+        {
+          "group": 543,
+          "latents": [
+            489
+          ],
+          "gain_margin": 96.36,
+          "examples": [
+            "Visual Arts",
+            "Visual Arts",
+            "Anatomy & Physiology"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1999,
+      "n_groups": 1999,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1283,
+      "n_removed": 1283,
+      "var_share_removed": 0.6812,
+      "var_share_sae_error": 0.0309,
+      "top": [
+        {
+          "group": 482,
+          "latents": [
+            1289
+          ],
+          "gain_margin": 248.83,
+          "examples": [
+            "As a physical therapist, coach, and certified strength and conditioning specialist, Dr. Aaron Horschig began to notice the same patterns in athletes over and ov",
+            "This revolutionary approach to training and conditioning methods will improve function in any sport or activity. Offering strength, endurance, power and sport-s",
+            "The easiest, most inexpensive way to build muscle strength, size, and power turns out to be the best, with this supremely effective guide from the world's large"
+          ]
+        },
+        {
+          "group": 1633,
+          "latents": [
+            66
+          ],
+          "gain_margin": 180.98,
+          "examples": [
+            "If you're new to photography, then The Beginner's Photography Guide is perfect for you. The ideal starting point for digital camera users, this manual explains ",
+            "Take your photography skills and technique to the next level with this inspiring and informative guide for budding photographers looking to improve their photog",
+            "Straightforward and entertaining, this is the ultimate source for people seeking real how-to advice from the editors and photographers of National Geographic. I"
+          ]
+        },
+        {
+          "group": 744,
+          "latents": [
+            1453
+          ],
+          "gain_margin": 161.63,
+          "examples": [
+            "Basic Approach Renowned for its comprehensive coverage, exceptional illustrations and clear instructions, Patternmaking for Fashion Design offers detailed yet e",
+            "To write such a program, which probably runs into a hundred thousand lines or more, knowledge of an object-oriented language like Java or C++ is not enough. Uni",
+            "The definitive book on animation, from the Academy Award-winning animator behind Who Framed Roger Rabbit?\n\nAnimation is one of the hottest areas of filmmaking t"
+          ]
+        },
+        {
+          "group": 1142,
+          "latents": [
+            563
+          ],
+          "gain_margin": 152.37,
+          "examples": [
+            "Struts is the framework for building scalable java applications, and version 2 is not simply an extension to struts 1. It is an architecture designed to support",
+            "Spring Boot and Spring Cloud offer Java developers an easy migration path from traditional monolithic Spring applications to microservice-based applications tha",
+            "How can you bring out MySQLs full power? With High Performance MySQL, you'll learn advanced techniques for everything from designing schemas, indexes and querie"
+          ]
+        },
+        {
+          "group": 1452,
+          "latents": [
+            194
+          ],
+          "gain_margin": 150.29,
+          "examples": [
+            "The Art of Spirited Away collects colour illustrations of Spirited Away for the first time in an English edition! This book includes paintings and designs from ",
+            "The Art of Spirited Away collects colour illustrations of Spirited Away for the first time in an English edition! This book includes paintings and designs from ",
+            "The Cambridge Preparation for the TOEFL Test, Fourth Edition, helps students master the language skills they need to succeed on the TOEFL iBT and communicate ef"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1946,
+      "n_groups": 1946,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1223,
+      "n_removed": 1223,
+      "var_share_removed": 0.6208,
+      "var_share_sae_error": 0.0245,
+      "top": [
+        {
+          "group": 1835,
+          "latents": [
+            261
+          ],
+          "gain_margin": 193.45,
+          "examples": [
+            "Making Faces",
+            "En Plein Air: Watercolor: Expert techniques and simple step-by-step projects for creating dynamic landscapes in the open air with watercolor",
+            "Introductory Lectures on Aesthetics (Penguin Classics)"
+          ]
+        },
+        {
+          "group": 954,
+          "latents": [
+            1840
+          ],
+          "gain_margin": 168.34,
+          "examples": [
+            "Best of the Seventies / Book #1 (Archie Americana Series)",
+            "Dragon Ball (3-in-1 Edition), Vol. 3: Includes vols. 7, 8 & 9",
+            "Tarzan: The Complete Russ Manning Newspaper Strips Volume 1 (1967-1969)"
+          ]
+        },
+        {
+          "group": 616,
+          "latents": [
+            1394
+          ],
+          "gain_margin": 141.14,
+          "examples": [
+            "The Boy is Back",
+            "The Prisoner's Gold (The Hunters 3)",
+            "Harry Potter Talking Sorting Hat and Sticker Book (Miniature Editions)"
+          ]
+        },
+        {
+          "group": 29,
+          "latents": [
+            1992
+          ],
+          "gain_margin": 140.22,
+          "examples": [
+            "Key Words 1c: Read and write",
+            "Key Words 9c: Enjoying Reading",
+            "Key Words 3c: Let me write"
+          ]
+        },
+        {
+          "group": 1384,
+          "latents": [
+            601
+          ],
+          "gain_margin": 137.5,
+          "examples": [
+            "Death Note Box Set (Vol.s 1-13): Volumes 1 - 12",
+            "Death Note Box Set (Vol.s 1-13): Volumes 1 - 12",
+            "Manga Crash Course: Drawing Manga Characters and Scenes from Start to Finish"
+          ]
+        }
+      ]
+    }
+  }
+}

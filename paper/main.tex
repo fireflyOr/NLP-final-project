@@ -32,13 +32,14 @@ In text--tabular learning, each free-text column is embedded and compressed befo
 fine-tunes the encoder on the target so that this compression keeps target-relevant variation. We ask whether one can
 go further by \emph{removing} concepts: we decompose each column's embeddings with a sparse autoencoder (SAE), judge
 every concept jointly with its sibling concepts and the table, subtract the concepts that do not help predict the
-target, and compress what remains. Across the 20 text datasets of MulTaBench, the selection is consistently far
-better than removing the same number of random concepts (\TBD{+x.xxx}, \TBD{n}/20 datasets), and large shares of the
-representation (\TBD{xx\%} of concepts, \TBD{xx\%} of variance) can be removed at little cost. Yet removal does not
-improve on Joint TAR (\TBD{$\Delta$, $p$}), even when the amount removed is chosen by nested cross-fitting so that
-every decision is made on rows the encoder never saw. We argue that this is a property of the problem rather than of
-the selection rule: after target-aware fine-tuning, what is left to remove carries little variance that the
-downstream compression would otherwise waste.
+target, and compress what remains. Across the 20 text datasets of MulTaBench, the selection is far better than
+removing the same number of random concepts ($+0.017$ AUROC/$R^2$, 18/20 datasets, $p<10^{-4}$), and 70\% of the
+concepts (38\% of the embedding variance) can be removed while keeping 80\% of TAR's gain over frozen embeddings.
+Yet removal does not improve on Joint TAR: it is slightly but consistently worse ($-0.0035$, 4/20 datasets,
+$p=0.006$). Choosing the amount by nested cross-fitting, so that every decision is made on rows the encoder never
+saw, makes the method opt out where removal hurts but still yields no gain. Our analysis suggests that after
+target-aware fine-tuning little removable variance is left, and that supervision is better spent on adding
+target-aware signal than on deleting concepts.
 \end{abstract}
 
 % ------------------------------------------------------------------------------------------------------------
@@ -130,7 +131,7 @@ $f=0$ (plain TAR) is a candidate, and a larger removal must lower the loss by mo
 % ------------------------------------------------------------------------------------------------------------
 \section{Experimental setup}\label{sec:setup}
 
-\paragraph{Data and protocol.} All 20 text datasets of MulTaBench (5 binary, 7 multiclass, 8 regression), using the
+\paragraph{Data and protocol.} All 20 text datasets of MulTaBench (3 binary, 7 multiclass, 10 regression), using the
 benchmark's own splits (two repeats of 3-fold cross-validation, 6 folds; training sets capped at 10k rows) and
 metrics: AUROC (one-vs-rest macro for multiclass) and $R^2$. Joint TAR follows the benchmark recipe: LoRA
 \citep{hu2022lora} of rank 16 on the last three E5 layers, a linear head, regression targets binned into 20
@@ -160,15 +161,21 @@ AUROC/$R^2$; $p$: Wilcoxon signed-rank test over datasets.}
 \input{tables/summary.tex}
 \end{table}
 
-\paragraph{Removal does not beat TAR.} Table~\ref{tab:summary} summarises all arms against Joint TAR.
-\TBD{Fill from the final table: TAR+\ours{} $\Delta$, datasets won, $p$. Preliminary (5 datasets): $-0.006$, 0/5,
-2/16 folds.} Choosing the amount on TAR's held-out rows does not help (\TBD{$\Delta$}): on roughly a thousand rows,
-the five candidate amounts differ by less than the selection noise, and the apparent gains do not transfer.
+\paragraph{Removal does not beat TAR.} Table~\ref{tab:summary} summarises all arms against Joint TAR. Concept
+pruning on top of TAR is slightly worse ($-0.0035$, median $-0.0023$; better on 4/20 datasets, $p=0.006$), across all
+task types (binary $-0.0018$, multiclass $-0.0012$, regression $-0.0057$). Every frozen-embedding variant is below
+TAR on average; only stacking is not significantly worse ($p=0.55$).
+Choosing the amount on TAR's early-stopping rows was worse still on the six datasets where we ran it (17 of 23 folds
+lost) and was stopped: on roughly a thousand rows, the candidate amounts differ by less than the selection noise.
+Per-dataset scores are in Appendix~\ref{app:main}.
 
 \paragraph{But the selection is far from random.} Removing the same number of random concepts from the same SAE is
-much worse (\TBD{$\Delta$ vs.\ TAR+\ours{}}, \TBD{n}/20 datasets), so the joint test reliably identifies which
-concepts matter. Table~\ref{tab:removal} shows how much is removed: \TBD{xx\%} of the eligible concepts, carrying
-\TBD{xx\%} of the embedding variance.
+much worse: \ours{} beats it by $+0.0174$ on 18/20 datasets ($p<10^{-4}$); the same holds on frozen embeddings
+for univariate relevance pruning ($+0.0074$, 19/20). The test therefore reliably identifies which concepts matter.
+Table~\ref{tab:removal} shows how much is removed: about 70\% of the eligible concepts, carrying 38\% of the variance
+of TAR embeddings (the SAE leaves only 2\% unexplained). Removing that much costs only $0.0035$, i.e.\ \ours{} keeps
+80\% of TAR's gain over Joint Frozen. Sibling grouping rarely merged concepts (1338 groups for 1348 eligible
+concepts), so the joint LightGBM, not the clustering, carries the ``judged with its siblings'' property.
 
 \begin{table}[t]
 \centering\small
@@ -178,7 +185,10 @@ concepts matter. Table~\ref{tab:removal} shows how much is removed: \TBD{xx\%} o
 \end{table}
 
 \paragraph{Clean decisions do not change the picture.} Table~\ref{tab:xf} reports the cross-fitted variant on five
-datasets. \TBD{Fill: chosen fractions and $\Delta$.}
+datasets ($-0.0006$ vs.\ TAR on average). It behaves sensibly: on Kickstarter and DS salary every removal raises the
+held-out loss, so it chooses 0\% and reproduces TAR exactly; on Baby product prices it chooses varying, moderate
+amounts and gains slightly. On Fake job postings and Jigsaw, however, it consistently chooses 75\%, which lowers the
+held-out log loss of the inner models by 3--10\%, yet the final model is slightly worse than TAR.
 
 \begin{table}[t]
 \centering\small
@@ -188,12 +198,16 @@ saw.}
 \input{tables/xf.tex}
 \end{table}
 
-\paragraph{Why there is no headroom.} Three observations point to the same explanation. First, on frozen embeddings,
-PLS---a supervised \emph{projection}---improves over Joint Frozen (\TBD{$\Delta$, $p$}), while \ours{} followed by PCA
-does not; the useful signal from the target enters through choosing \emph{directions to keep}, not through deleting
-concepts. Second, TAR already performs that steering inside the encoder, so the variance that PCA would waste on
-irrelevant concepts is small after fine-tuning. Third, removing concepts also removes their share of genuinely
-useful variation that is spread thinly across many concepts; random removal makes this cost visible.
+\paragraph{Why there is no headroom.} Three observations are consistent with one explanation. First, removal is
+nearly free but never pays: 38\% of the variance goes for a $0.0035$ loss, so what is removed is mostly irrelevant,
+but PCA-30 on TAR embeddings was not spending much capacity on it either. Second, the cross-fitted runs suggest that
+the benefit shrinks as the encoder improves: removal helps the inner encoders, fine-tuned on two thirds of the rows,
+but not the final encoder fine-tuned on all of them. (The inner criterion is log loss and the reported metric is
+AUROC, which may also contribute.) Third, adding target-aware signal works where deleting does not: stacking a
+text-only model's out-of-fold predictions onto frozen embeddings improves on Joint Frozen on 19/20 datasets
+($+0.0086$, $p<0.001$) and is statistically indistinguishable from TAR ($p=0.55$), whereas \ours{} on frozen
+embeddings is worse than Joint Frozen ($-0.0040$, 4/20). The supervision helps through what it adds or keeps, not
+through what it deletes.
 
 % ------------------------------------------------------------------------------------------------------------
 \section{Limitations and conclusion}
@@ -201,11 +215,13 @@ useful variation that is spread thinly across many concepts; random removal make
 We used a single encoder (E5-small), one SAE size, and LightGBM as the only downstream model. A pilot with TabSTAR
 \citep{arazi2025tabstar} as the backbone was infeasible on our hardware (two epochs within its 10-hour budget on one
 dataset) and is not reported as a result. Held-out rows for choosing the removal amount are few; cross-fitting
-addresses this at three times the fine-tuning cost.
+addresses this at three times the fine-tuning cost and was run on five datasets only. In three multiclass runs
+(stacking on Spotify, folds 1 and 5; held-out pruning on Wine, fold 1) LightGBM diverged (test log loss $>29$, AUROC
+near 0.5); we report them unchanged.
 
 Concept pruning is a principled, interpretable filter that reliably separates relevant from irrelevant concepts, but
 after target-aware fine-tuning it finds little left to remove. For practitioners, the lesson is to spend supervision
-on \emph{what to keep}---fine-tuning or supervised projection---rather than on what to delete.
+on \emph{what to keep or add}---fine-tuning or stacking a supervised text model---rather than on what to delete.
 
 \paragraph{Code.} \TBD{Repository URL}. All results can be regenerated with \texttt{sae\_pilot.py}; tables with
 \texttt{paper/make\_tables.py}.
@@ -216,7 +232,7 @@ on \emph{what to keep}---fine-tuning or supervised projection---rather than on w
 
 \normalsize
 \appendix
-\section{Per-dataset results}
+\section{Per-dataset results}\label{app:main}
 \begin{table}[h]
 \centering\small
 \caption{Mean AUROC (classification) or $R^2$ (regression) over 6 folds, LightGBM. Best per row in bold.

@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -4330.112919891119,
+  "test_error": 4330.112919891119,
+  "course_metric": "r2",
+  "course_score": 0.9778907765903064,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 72.31314063072205,
+  "diagnostics": {
+    "date_first_hired": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 427,
+      "n_kept": 411,
+      "n_removed": 101,
+      "threshold": 0.0504,
+      "passed_test": 49,
+      "removed_norm_ratio": 0.3289,
+      "var_share_kept": 0.655,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 10,
+          "score": 0.1295,
+          "n_active": 360,
+          "examples": [
+            "2016-11-28",
+            "2016-11-28",
+            "2016-11-28"
+          ]
+        },
+        {
+          "latent": 262,
+          "score": 0.1266,
+          "n_active": 172,
+          "examples": [
+            "2016-10-03",
+            "2016-10-03",
+            "2016-10-03"
+          ]
+        },
+        {
+          "latent": 395,
+          "score": 0.1191,
+          "n_active": 331,
+          "examples": [
+            "2016-05-02",
+            "2016-05-02",
+            "2016-05-02"
+          ]
+        },
+        {
+          "latent": 229,
+          "score": 0.1084,
+          "n_active": 239,
+          "examples": [
+            "2016-10-31",
+            "2016-10-31",
+            "2016-10-31"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.1068,
+          "n_active": 446,
+          "examples": [
+            "2016-01-11",
+            "2016-01-11",
+            "2016-01-11"
+          ]
+        }
+      ]
+    },
+    "division": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 391,
+      "n_removed": 121,
+      "threshold": 0.0544,
+      "passed_test": 38,
+      "removed_norm_ratio": 0.4977,
+      "var_share_kept": 0.8402,
+      "var_share_sae_error": 0.002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 101,
+          "score": 0.0898,
+          "n_active": 322,
+          "examples": [
+            "COO Office",
+            "COO Office",
+            "PRRS Assessment and Quality Services"
+          ]
+        },
+        {
+          "latent": 99,
+          "score": 0.0896,
+          "n_active": 86,
+          "examples": [
+            "DO Director",
+            "DO Director",
+            "DO Director"
+          ]
+        },
+        {
+          "latent": 503,
+          "score": 0.0875,
+          "n_active": 654,
+          "examples": [
+            "Director Administration",
+            "Housing Administration",
+            "Housing Administration"
+          ]
+        },
+        {
+          "latent": 128,
+          "score": 0.0833,
+          "n_active": 125,
+          "examples": [
+            "First Battalion - Administration",
+            "First Battalion - Administration",
+            "First Battalion - Administration"
+          ]
+        },
+        {
+          "latent": 426,
+          "score": 0.0803,
+          "n_active": 521,
+          "examples": [
+            "Station 22",
+            "Station 22",
+            "Station 22"
+          ]
+        }
+      ]
+    },
+    "employee_position_title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 498,
+      "n_kept": 419,
+      "n_removed": 93,
+      "threshold": 0.0553,
+      "passed_test": 116,
+      "removed_norm_ratio": 0.2896,
+      "var_share_kept": 0.8111,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 43,
+          "score": 0.1666,
+          "n_active": 141,
+          "examples": [
+            "Chief Special Needs Housing",
+            "Fire/Rescue Battalion Chief",
+            "Fire/Rescue Battalion Chief"
+          ]
+        },
+        {
+          "latent": 386,
+          "score": 0.1636,
+          "n_active": 193,
+          "examples": [
+            "Assistant Chief of Police",
+            "Assistant Chief of Police",
+            "Assistant Chief Administrative Officer"
+          ]
+        },
+        {
+          "latent": 431,
+          "score": 0.1373,
+          "n_active": 221,
+          "examples": [
+            "Fire/Rescue Division Chief",
+            "Fire/Rescue Division Chief",
+            "Fire/Rescue Assistant Chief"
+          ]
+        },
+        {
+          "latent": 265,
+          "score": 0.1367,
+          "n_active": 131,
+          "examples": [
+            "Secretary to Appellate Judge",
+            "Security Officer IV (Lieutenant)",
+            "Security Officer IV (Lieutenant)"
+          ]
+        },
+        {
+          "latent": 306,
+          "score": 0.1273,
+          "n_active": 1205,
+          "examples": [
+            "Animal Care Attendant",
+            "Animal Care Attendant",
+            "Animal Care Attendant"
+          ]
+        }
+      ]
+    },
+    "full_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 287,
+      "n_removed": 225,
+      "threshold": 0.055,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.572,
+      "var_share_kept": 0.4116,
+      "var_share_sae_error": 0.2041,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 177,
+          "score": 0.0423,
+          "n_active": 376,
+          "examples": [
+            "Rosario, Ruben T.",
+            "Gomez, Manuel L.",
+            "Dominguez, Ariel O."
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.0414,
+          "n_active": 295,
+          "examples": [
+            "Noble, Donald B.",
+            "Call, Donald E.",
+            "Uvary, Todd L."
+          ]
+        },
+        {
+          "latent": 388,
+          "score": 0.0378,
+          "n_active": 258,
+          "examples": [
+            "Cupples, Timothy H.",
+            "Herbold, Timothy A.",
+            "Ronaghan, Timothy S."
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.037,
+          "n_active": 259,
+          "examples": [
+            "Hoffman, Margaret H.",
+            "Marra, Bernard",
+            "Christ, Margaret C."
+          ]
+        },
+        {
+          "latent": 477,
+          "score": 0.0354,
+          "n_active": 221,
+          "examples": [
+            "Haggerty, Douglas S.",
+            "Hargrove, Tocarah N.",
+            "Habermann, Elizabeth A."
+          ]
+        }
+      ]
+    }
+  }
+}

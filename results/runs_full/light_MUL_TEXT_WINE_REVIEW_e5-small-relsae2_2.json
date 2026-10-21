@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3978165737243926,
+  "test_error": 1.3978165737243926,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9639733497790336,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 60.7129008769989,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 500,
+      "n_removed": 12,
+      "threshold": 0.0524,
+      "passed_test": 243,
+      "removed_norm_ratio": 0.0475,
+      "var_share_kept": 0.76,
+      "var_share_sae_error": 0.2149,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 411,
+          "score": 0.3524,
+          "n_active": 411,
+          "examples": [
+            "Heavy and fat, this dark-colored ros\u00e9 has a bitter character along with vanilla and spice flavors. The almost-sweet texture is round and soft at the end.",
+            "Pale in color, this is a light, bright style of ros\u00e9. It is clean and crisp, with touches of red fruit that float through the attractive fresh acidity. The afte",
+            "This pale-hued, light-bodied ros\u00e9 is crisp and a bit ungenerous, but does offer refreshing aromas and flavors of passion fruit and citrus rind, turning zesty on"
+          ]
+        },
+        {
+          "latent": 318,
+          "score": 0.3482,
+          "n_active": 738,
+          "examples": [
+            "This Chardonnay is a world-class wine available at a fraction of the cost of other excellent French examples. It boasts soft wood accents to the ripe yellow app",
+            "An effusively fruity, unoaked style of Chardonnay, with bold flavors of pear, apple and citrus and maybe even a touch of mango. Its charms are upfront for all t",
+            "This delicious Chardonnay offers creamy opulence and rich notes of vanilla, honey and peach. It has dense, slightly sweet, fruit flavors lavished over good stru"
+          ]
+        },
+        {
+          "latent": 364,
+          "score": 0.3415,
+          "n_active": 300,
+          "examples": [
+            "Rich, peppery and smooth, this is a nicely developed, elegant Zin. It's leathery on the palate with a finish of rose petals and bittersweet chocolate.",
+            "Here is a tasty, light-bodied Zin with its own style and a great price. It has a minty, eucalyptus aroma and vivid raspberry flavors, almost sweet in balance. M",
+            "Edgy with mountainous berry flavor, Easton's 2010 Shenandoah Valley Zin is full-bodied, generous in savory spices and blackberry flavor and intoxicatingly aroma"
+          ]
+        },
+        {
+          "latent": 40,
+          "score": 0.3395,
+          "n_active": 617,
+          "examples": [
+            "This has everything that many people love about Chardonnay: It's creamy, buttery and toasty, with sweet tropical fruit and pear flavors. It's pretty flashy.",
+            "Pretty standard Chardonnay. Shows the wine's cream, buttered toast and fruit flavors, but in a thin, simple way.",
+            "This is a lovely Chardonnay from Tuscany with a full bouquet of honey and stone fruit aromas. The wine is thick and rich in texture with impressive intensity an"
+          ]
+        },
+        {
+          "latent": 100,
+          "score": 0.3206,
+          "n_active": 721,
+          "examples": [
+            "Smoky, spicy and midweight, this earthy, brooding Pinot maintains layers of minerality amid fresh red berry fruit. The texture opens up into silky waves in the ",
+            "Esterlina's Pinot is very perfumey, light in body and soul at first, as it gathers steam with a tasty backbone of lush red fruit, spice and plenty of staying po",
+            "This light-bodied Pinot has some good raspberry and cherry pie flavors, as well as bright acidity. Decant to let it breathe, and drink now."
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 479,
+      "n_kept": 488,
+      "n_removed": 24,
+      "threshold": 0.0656,
+      "passed_test": 346,
+      "removed_norm_ratio": 0.0476,
+      "var_share_kept": 0.9722,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 68,
+          "score": 0.8044,
+          "n_active": 92,
+          "examples": [
+            "Thermenregion",
+            "Thermenregion",
+            "Weinland \u00d6sterreich"
+          ]
+        },
+        {
+          "latent": 117,
+          "score": 0.7048,
+          "n_active": 120,
+          "examples": [
+            "Martinborough",
+            "Martinborough",
+            "Martinborough"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.671,
+          "n_active": 260,
+          "examples": [
+            "Puente Alto",
+            "Puente Alto",
+            "Iowa"
+          ]
+        },
+        {
+          "latent": 154,
+          "score": 0.6616,
+          "n_active": 267,
+          "examples": [
+            "Chalkidiki",
+            "Rio Claro",
+            "Itata Valley"
+          ]
+        },
+        {
+          "latent": 204,
+          "score": 0.655,
+          "n_active": 271,
+          "examples": [
+            "Hawke's Bay",
+            "Hawke's Bay",
+            "Hawke's Bay"
+          ]
+        }
+      ]
+    }
+  }
+}

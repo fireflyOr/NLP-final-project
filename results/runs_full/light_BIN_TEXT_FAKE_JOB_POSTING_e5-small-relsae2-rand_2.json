@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8726673615094787,
+  "test_error": 0.12733263849052134,
+  "course_metric": "auroc",
+  "course_score": 0.8726673615094788,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 57.47075080871582,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 374,
+      "n_removed": 138,
+      "threshold": 0.0447,
+      "passed_test": 32,
+      "removed_norm_ratio": 0.4008,
+      "var_share_kept": 0.5278,
+      "var_share_sae_error": 0.2594,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 188,
+          "score": 0.0881,
+          "n_active": 353,
+          "examples": [
+            "The Data Entry Specialist is responsible for performing high volume data entry that includes tallying and proofing merchandise order forms.",
+            "The Data Entry Clerk is responsible for verifying and accurately entering information in the computer during her/his assigned duty times. The Data Entry Clerk w",
+            "The Data Entry duties will include data entry, billing, filling, answering phones, and providing exceptional customer service. You may be cross-trained in other"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.0858,
+          "n_active": 470,
+          "examples": [
+            "Seeking full and part-time day janitors and supervisors to clean commercial office buildings in San Francisco. Duties include vacuuming, dusting, cleaning restr",
+            "Seeking PART-TIME day and night janitors to clean commercial office buildings in Antioch, Emeryville, Hayward, Martinez, Oakland, San Francisco and Santa Clara.",
+            "We are seeking a high energy and confident Office Manager for the San Mateo headquartered office.\u00a0 In an Office Manager role, you are the lynchpin of the office"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0769,
+          "n_active": 960,
+          "examples": [
+            "Administrative AssistantEssential Duties and Responsibilities include the following.\u00a0Other duties may be assigned to meet business needs.\u00a0* Administrative Suppo",
+            "Administrative AssistantEssential Job Responsibilities:Answering and routing telephone calls to appropriate peopleScheduling appointmentsMaintain paper and elec",
+            "As an Administrative Assistant\u00a0 you will be responsible for a wide variety of interesting and challenging duties. This is a great opportunity to work closely wi"
+          ]
+        },
+        {
+          "latent": 40,
+          "score": 0.0756,
+          "n_active": 757,
+          "examples": [
+            "The Executive Assistant shall be responsible for providing administrative support services as well as guidance and program supportwithin a variety of administra",
+            "Job BriefWe are currently seeking an Executive Assistant with a professional background and direct experience supporting a senior level company executive. We ar",
+            "On behalf of our client, a\u00a0European strategic communication and marketing company with offices in London and Athens, we are looking for an Executive Assistant t"
+          ]
+        },
+        {
+          "latent": 53,
+          "score": 0.0747,
+          "n_active": 624,
+          "examples": [
+            "Crest Financial is a fun, energetic, successful, established finance, and marketing company that is rapidly growing located in Draper, Utah. We have been conduc",
+            "Crest Financial is a fun, energetic, successful, established finance, and marketing company that is rapidly growing located in Salt Lake City, Utah. We have bee",
+            "Are you a professional, detailed, multi-tasker who is wonderful with patients? Crossroads Treatment Centers is seeking a full-time Counselor for our Weaverville"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 299,
+      "n_kept": 456,
+      "n_removed": 56,
+      "threshold": 0.0521,
+      "passed_test": 64,
+      "removed_norm_ratio": 0.6525,
+      "var_share_kept": 0.6615,
+      "var_share_sae_error": 0.0016,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 282,
+          "score": 0.1128,
+          "n_active": 28,
+          "examples": [
+            "Oct-20",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 254,
+          "score": 0.0929,
+          "n_active": 25,
+          "examples": [
+            "20-3075",
+            "1000-2000",
+            "1000-2000"
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.0913,
+          "n_active": 1310,
+          "examples": [
+            "168000-216000",
+            "168000-216000",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.088,
+          "n_active": 1310,
+          "examples": [
+            "45000-95000",
+            "41000-45000",
+            "41000-45000"
+          ]
+        },
+        {
+          "latent": 3,
+          "score": 0.086,
+          "n_active": 6325,
+          "examples": [
+            "19800-20800",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 381,
+      "n_removed": 131,
+      "threshold": 0.0443,
+      "passed_test": 37,
+      "removed_norm_ratio": 0.4253,
+      "var_share_kept": 0.6561,
+      "var_share_sae_error": 0.1003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 342,
+          "score": 0.1278,
+          "n_active": 365,
+          "examples": [
+            "Part Time Staff Needed, Weekend Cash Job.",
+            "Weekend Cash Jobs Part time & Full time.",
+            "Weekend Caregiver Need ASAP"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.118,
+          "n_active": 674,
+          "examples": [
+            "Administration Assistant",
+            "Administration Assistant",
+            "Administration Assistant"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.1082,
+          "n_active": 381,
+          "examples": [
+            "Cleaning Consultant",
+            "Cleaner Recruitment Associate",
+            "Maid Sailor - Home Cleaner"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.0914,
+          "n_active": 353,
+          "examples": [
+            "Office Manager",
+            "Office Manager",
+            "Office Manager"
+          ]
+        },
+        {
+          "latent": 426,
+          "score": 0.0843,
+          "n_active": 438,
+          "examples": [
+            "Sales Position",
+            "Administrative Positions",
+            "Jobs in Brazil"
+          ]
+        }
+      ]
+    }
+  }
+}

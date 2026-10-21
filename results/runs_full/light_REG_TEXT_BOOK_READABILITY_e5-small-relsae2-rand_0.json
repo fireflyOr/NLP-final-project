@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8695151354104742,
+  "test_error": 0.8695151354104742,
+  "course_metric": "r2",
+  "course_score": 0.7910667048218482,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 84.79675698280334,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 460,
+      "n_kept": 335,
+      "n_removed": 177,
+      "threshold": 0.074,
+      "passed_test": 10,
+      "removed_norm_ratio": 0.522,
+      "var_share_kept": 0.4834,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 325,
+          "score": 0.1077,
+          "n_active": 127,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 34,
+          "score": 0.0938,
+          "n_active": 53,
+          "examples": [
+            "Chambers Elementary Science Reader Book I",
+            "Chambers Elementary Science Reader Book I",
+            "Chambers Elementary Science Reader Book I"
+          ]
+        },
+        {
+          "latent": 357,
+          "score": 0.0904,
+          "n_active": 72,
+          "examples": [
+            "Famous Affinities of History",
+            "The Memoirs of Sherlock Holmes",
+            "The Memoirs of Sherlock Holmes"
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0831,
+          "n_active": 71,
+          "examples": [
+            "THE FAIRY BOOK.",
+            "THE FAIRY BOOK.",
+            "THE FAIRY BOOK."
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.0801,
+          "n_active": 345,
+          "examples": [
+            "THE FAIRY BOOK.",
+            "THE FAIRY BOOK.",
+            "THE FAIRY BOOK."
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 266,
+      "n_removed": 246,
+      "threshold": 0.0721,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.7053,
+      "var_share_kept": 0.5089,
+      "var_share_sae_error": 0.0873,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 173,
+          "score": 0.0775,
+          "n_active": 182,
+          "examples": [
+            "Charles H. Sylvester (author of anthology?)",
+            "Charles H. Sylvester (author of anthology?)",
+            "Letter from The Daily Atlantis of New York dated Constantinople, Aug. 6"
+          ]
+        },
+        {
+          "latent": 103,
+          "score": 0.062,
+          "n_active": 111,
+          "examples": [
+            "PERCY KEESE FITZHUGH",
+            "PERCY KEESE FITZHUGH",
+            "Percy Keese Fitzhugh"
+          ]
+        },
+        {
+          "latent": 482,
+          "score": 0.0564,
+          "n_active": 148,
+          "examples": [
+            "official announcement from the Sublime Porte on Sept. 10",
+            "Arthur Selwyn",
+            "ALFRED SELWYN"
+          ]
+        },
+        {
+          "latent": 316,
+          "score": 0.0515,
+          "n_active": 105,
+          "examples": [
+            "K. H. S.",
+            "K. H. S.",
+            "Valeria Costantino\nGermana Esposito"
+          ]
+        },
+        {
+          "latent": 367,
+          "score": 0.051,
+          "n_active": 95,
+          "examples": [
+            "WASHINGTON IRVING",
+            "Washington Irving",
+            "Washington Irving"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 124,
+      "n_kept": 442,
+      "n_removed": 70,
+      "threshold": 0.0666,
+      "passed_test": 0,
+      "removed_norm_ratio": 1.9028,
+      "var_share_kept": 0.4416,
+      "var_share_sae_error": 0.0077,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 106,
+          "score": 0.0415,
+          "n_active": 41,
+          "examples": [
+            "metres, metres, metres",
+            "metres, metres, metres",
+            "centimetre, centimetres, kilometres"
+          ]
+        },
+        {
+          "latent": 108,
+          "score": 0.0227,
+          "n_active": 23,
+          "examples": [
+            "kilogrammes",
+            "metres",
+            "metres"
+          ]
+        },
+        {
+          "latent": 74,
+          "score": 0.0224,
+          "n_active": 26,
+          "examples": [
+            "grey, disembowelling, harbour",
+            "recognise, mediaeval",
+            "reconnoitred"
+          ]
+        },
+        {
+          "latent": 145,
+          "score": 0.0198,
+          "n_active": 21,
+          "examples": [
+            "humour",
+            "humour",
+            "favourite, favourite"
+          ]
+        },
+        {
+          "latent": 368,
+          "score": 0.0188,
+          "n_active": 25,
+          "examples": [
+            "judgement, judgement",
+            "labelled",
+            "panelled"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 322,
+      "n_removed": 190,
+      "threshold": 0.0701,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.5184,
+      "var_share_kept": 0.4295,
+      "var_share_sae_error": 0.2571,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 430,
+          "score": 0.0783,
+          "n_active": 185,
+          "examples": [
+            "Morning brought awakening to the two friends with the sounding of reveille from bugles, seemingly just outside their window. Together they sprang from bed, race",
+            "The clever Rabbit was awake inside his hutch. He was thinking, \"I want to explore the outside world.\" The other rabbits were dozing. The door to their hutch ope",
+            "Mr. Jacob saw them coming down the road, and was ready for them this time too. He took two pots and filled them with pitch, and over the top of the pitch he spr"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.0687,
+          "n_active": 190,
+          "examples": [
+            "The lecturer then, by means of diagrams which he placed upon the blackboard, showed the forms of various makes of photographic lenses, and explained the influen",
+            "In chemistry, an electron pair or a Lewis pair consists of two electrons that occupy the same orbital but have opposite spins. The electron pair concept was int",
+            "Why do humans feel the need to be creative and enjoy creative material? While creativity is a basic part of human thinking, what counts as creativity and how do"
+          ]
+        },
+        {
+          "latent": 166,
+          "score": 0.0677,
+          "n_active": 221,
+          "examples": [
+            "Whenever the organ man came into the village of Roncole, in Italy (where Verdi was born, October 10, 1813), he could not be kept indoors. But he followed the wo",
+            "It was a sweet summer evening, and my father asked me, as he sometimes did, to take a little ramble with him along that beautiful forest vista which I have ment",
+            "So, we went into the Home of the Street Sweepers. It is a grey house on a narrow street. There is a sundial in its courtyard, by which the Council of the Home c"
+          ]
+        },
+        {
+          "latent": 279,
+          "score": 0.0666,
+          "n_active": 163,
+          "examples": [
+            "The condenso-purifier shown in the accompanying cut operates as follows: Water is caused to flow over a metallic plate perforated with innumerable holes of from",
+            "John Locke, one of the most influential Enlightenment thinkers, based his governance philosophy in social contract theory, a subject that permeated Enlightenmen",
+            "The gas producer is a cylinder of brickwork inclosed in a casing of malleable iron. It is 7 ft. 6 in. deep, and 3 ft. in diameter, which becomes reduced to 20 i"
+          ]
+        },
+        {
+          "latent": 180,
+          "score": 0.0642,
+          "n_active": 152,
+          "examples": [
+            "To this the mason made no objection. So, being hoodwinked, he was led by the stranger through various rough lanes and winding passages until they stopped before",
+            "A Secure Digital card (SD card) is a kind of memory card. Such cards are often used to store images or data in digital cameras. As of 2008, different capacities",
+            "It was a most inviting looking apartment into which the doctor conducted his cousin, tastefully furnished and redolent of the breath of flowers; in pretty vases"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 295,
+      "n_removed": 217,
+      "threshold": 0.0686,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5581,
+      "var_share_kept": 0.4413,
+      "var_share_sae_error": 0.2058,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 209,
+          "score": 0.0625,
+          "n_active": 221,
+          "examples": [
+            "The Battle of New Year's Day",
+            "Battle_of_Waterloo",
+            "Battle_of_Saratoga"
+          ]
+        },
+        {
+          "latent": 279,
+          "score": 0.0581,
+          "n_active": 151,
+          "examples": [
+            "Ways You Can Protect Your Genes From Mutations With a Healthy Lifestyle",
+            "National Morality",
+            "How Can We Help to Prevent Medicines From Polluting the Environment?"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0564,
+          "n_active": 258,
+          "examples": [
+            "LILY AND HER KITTEN",
+            "JESSIE AND HER KITTEN",
+            "THE HARE AND THE HEDGEHOG"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0534,
+          "n_active": 292,
+          "examples": [
+            "Winter Mist",
+            "THE TRIAL-TRIP",
+            "Mirror Stage"
+          ]
+        },
+        {
+          "latent": 166,
+          "score": 0.0503,
+          "n_active": 176,
+          "examples": [
+            "A Fox and a Raven",
+            "Fox and Rooster",
+            "The Fox, the Hen, and the Drum"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 245,
+      "n_removed": 267,
+      "threshold": 0.0741,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6597,
+      "var_share_kept": 0.4318,
+      "var_share_sae_error": 0.0552,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 28,
+          "score": 0.0725,
+          "n_active": 265,
+          "examples": [
+            "http://www.gutenberg.org/files/18561/18561-h/18561-h.htm#Burning",
+            "http://www.gutenberg.org/files/18561/18561-h/18561-h.htm#Dream",
+            "http://www.gutenberg.org/files/18561/18561-h/18561-h.htm#Radisson"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.0564,
+          "n_active": 49,
+          "examples": [
+            "https://www.commonlit.org/texts/charter-of-the-united-nations",
+            "https://www.commonlit.org/texts/general-eisenhower-s-order-of-the-day",
+            "https://en.wikipedia.org/wiki/Compass"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.0563,
+          "n_active": 338,
+          "examples": [
+            "https://www.digitallibrary.io/en/books/read/3718",
+            "https://www.commonlit.org/texts/excerpt-from-bartleby-the-scrivener-a-story-of-wall-street",
+            "https://www.digitallibrary.io/en/books/read/3747/91208"
+          ]
+        },
+        {
+          "latent": 440,
+          "score": 0.0525,
+          "n_active": 294,
+          "examples": [
+            "https://simple.wikipedia.org/wiki/Supernova",
+            "http://www.gutenberg.org/files/16037/16037-h/16037-h.htm#irving",
+            "https://en.wikipedia.org/wiki/Storm_drain"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.0504,
+          "n_active": 195,
+          "examples": [
+            "http://www.gutenberg.org/files/20521/20521-h/20521-h.htm#The_War_in_the_Balkans",
+            "http://www.gutenberg.org/files/20521/20521-h/20521-h.htm#How_Turkey_Went_to_War",
+            "http://www.gutenberg.org/files/20521/20521-h/20521-h.htm#How_Turkey_Went_to_War"
+          ]
+        }
+      ]
+    }
+  }
+}

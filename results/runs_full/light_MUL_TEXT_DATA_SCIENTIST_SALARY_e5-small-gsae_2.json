@@ -1,0 +1,392 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3890040562467485,
+  "test_error": 1.3890040562467485,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7974521393251282,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 171.95023727416992,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 604,
+      "n_groups": 601,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 550,
+      "n_removed": 552,
+      "var_share_removed": 0.6669,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 227,
+          "latents": [
+            1187
+          ],
+          "gain_margin": 3517.76,
+          "examples": [
+            "14-22 yrs",
+            "14-22 yrs",
+            "14-22 yrs"
+          ]
+        },
+        {
+          "group": 271,
+          "latents": [
+            873
+          ],
+          "gain_margin": 3156.61,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 85,
+          "latents": [
+            1519
+          ],
+          "gain_margin": 1631.32,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1461
+          ],
+          "gain_margin": 1600.96,
+          "examples": [
+            "0-2 yrs",
+            "0-2 yrs",
+            "0-2 yrs"
+          ]
+        },
+        {
+          "group": 450,
+          "latents": [
+            36
+          ],
+          "gain_margin": 1129.36,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2033,
+      "n_groups": 2030,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1093,
+      "n_removed": 1094,
+      "var_share_removed": 0.3029,
+      "var_share_sae_error": 0.0427,
+      "top": [
+        {
+          "group": 346,
+          "latents": [
+            1180
+          ],
+          "gain_margin": 1958.25,
+          "examples": [
+            "      Our ...",
+            "  Experience  & ...",
+            "          Experience with the ..."
+          ]
+        },
+        {
+          "group": 674,
+          "latents": [
+            885
+          ],
+          "gain_margin": 1464.04,
+          "examples": [
+            "Under- Graduates(Backlogs): Candidates who have backlogs with 1 year international voice experience can ...",
+            "Under- Graduates(Backlogs): Candidates who have backlogs with 1 year international voice experience can ...",
+            "Under- Graduates(Backlogs): Candidates who have backlogs with 1 year international voice experience can ..."
+          ]
+        },
+        {
+          "group": 246,
+          "latents": [
+            1744
+          ],
+          "gain_margin": 1272.1,
+          "examples": [
+            "About HireaJackal Consulting Pvt. Ltd. HireaJackal is a recruitment technology platform that powers ...",
+            "The email would include a link where you can complete your application - a few short questions on your ...",
+            " If you are comfortable with ..."
+          ]
+        },
+        {
+          "group": 71,
+          "latents": [
+            1934
+          ],
+          "gain_margin": 728.58,
+          "examples": [
+            "-Diploma in Chemical / Electrical / Mechanical Engineering with 10 years corrosion experience;-English ...",
+            "-Diploma in Chemical / Electrical / Mechanical Engineering with 10 years corrosion experience;-English ...",
+            " Binary Semantics Limited (BSL ..."
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            290,
+            1146
+          ],
+          "gain_margin": 639.08,
+          "examples": [
+            "Communication Skills: Good written and oral communication skills with the ability to present and clearly ...",
+            "Prefered Male Candidate with good communication skill in ...",
+            "Strong Communication Skills: Candidate needs to have very good communication skills  both written and ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2010,
+      "n_groups": 1991,
+      "n_multi_groups": 17,
+      "n_groups_dropped": 944,
+      "n_removed": 946,
+      "var_share_removed": 0.2363,
+      "var_share_sae_error": 0.0326,
+      "top": [
+        {
+          "group": 91,
+          "latents": [
+            1983
+          ],
+          "gain_margin": 3107.89,
+          "examples": [
+            "Executive",
+            "Email Support Executive",
+            "Email Support Executive"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            311,
+            1731
+          ],
+          "gain_margin": 2086.71,
+          "examples": [
+            "Manager",
+            "Manager",
+            "Manager"
+          ]
+        },
+        {
+          "group": 958,
+          "latents": [
+            1449
+          ],
+          "gain_margin": 1683.94,
+          "examples": [
+            "Associate Director - Analytics",
+            "Associate Director - Analytics",
+            "Associate Director - Analytics"
+          ]
+        },
+        {
+          "group": 858,
+          "latents": [
+            1148
+          ],
+          "gain_margin": 1567.71,
+          "examples": [
+            "Head Marketing",
+            "Head Supply Chain",
+            "Head SCM"
+          ]
+        },
+        {
+          "group": 450,
+          "latents": [
+            1414
+          ],
+          "gain_margin": 1160.93,
+          "examples": [
+            "Solution Architect-azure(cloud)",
+            "Solution Architect-aws(cloud)",
+            "Technology Architect -  Analytics and Machine Learning-ct-ttt"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1934,
+      "n_groups": 1906,
+      "n_multi_groups": 24,
+      "n_groups_dropped": 922,
+      "n_removed": 927,
+      "var_share_removed": 0.2242,
+      "var_share_sae_error": 0.0277,
+      "top": [
+        {
+          "group": 301,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 1721.21,
+          "examples": [
+            "Outsourcing, Subject Matter Expert, Operations leadership...",
+            "Outsourcing, Operations, advanced analytics, Manager Technology",
+            "Outsourcing, Operations, advanced analytics, Manager Technology"
+          ]
+        },
+        {
+          "group": 1888,
+          "latents": [
+            1497
+          ],
+          "gain_margin": 1239.3,
+          "examples": [
+            "analytics, analytics head, sas, reporting",
+            "data analytics",
+            "Analytics, Head - Analytics, data analytics, Data Science, business process..."
+          ]
+        },
+        {
+          "group": 1439,
+          "latents": [
+            189
+          ],
+          "gain_margin": 1059.96,
+          "examples": [
+            "call monitoring, quality analysis, feedback, Call Audit...",
+            "call monitoring, quality analysis, feedback, call audit...",
+            "call quality, call quality control, call qa, call quality assurance..."
+          ]
+        },
+        {
+          "group": 340,
+          "latents": [
+            1405
+          ],
+          "gain_margin": 759.92,
+          "examples": [
+            "customer support executive, customer support representative",
+            "Business Development Executive",
+            "field executive, Field Work"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            1081,
+            1573
+          ],
+          "gain_margin": 687.6,
+          "examples": [
+            "product manager",
+            "Product Manager, Product Management, operations, analytics...",
+            "Online Marketing Manager"
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 939,
+      "n_groups": 936,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 813,
+      "n_removed": 816,
+      "var_share_removed": 0.8731,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 101,
+          "latents": [
+            1757
+          ],
+          "gain_margin": 326.69,
+          "examples": [
+            "Uganda",
+            "Uganda",
+            "Nigeria"
+          ]
+        },
+        {
+          "group": 757,
+          "latents": [
+            212
+          ],
+          "gain_margin": 183.82,
+          "examples": [
+            "Gurugram",
+            "Gurugram",
+            "Gurgaon, Gurugram"
+          ]
+        },
+        {
+          "group": 342,
+          "latents": [
+            1152
+          ],
+          "gain_margin": 157.69,
+          "examples": [
+            "Vadodara, Gujarat",
+            "Doha, Qatar",
+            "Doha, Qatar"
+          ]
+        },
+        {
+          "group": 497,
+          "latents": [
+            678
+          ],
+          "gain_margin": 152.22,
+          "examples": [
+            "Nagar, Nagpur, Nasik, Neemrana, Nizamabad, Varanasi, Vijayawada, Vasai, Vadodara",
+            "Nasik, Nagpur, Haldwani, Kullu/Manali, Muzaffarpur, Godhra, Srinagar, Ganganagar, Gandhinagar",
+            "Munger, Haridwar, Roorkee, Varanasi, Satna, Rewa, Jabalpur, Kolkata, Bhagalpur"
+          ]
+        },
+        {
+          "group": 23,
+          "latents": [
+            1950
+          ],
+          "gain_margin": 118.85,
+          "examples": [
+            "Singapore",
+            "Singapore",
+            "Singapore"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,396 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.382724688269839,
+  "test_error": 1.382724688269839,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.800205988195513,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 173.18826460838318,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 428,
+      "n_groups": 427,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 397,
+      "n_removed": 398,
+      "var_share_removed": 0.9416,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 73,
+          "latents": [
+            1577
+          ],
+          "gain_margin": 4430.49,
+          "examples": [
+            "14-15 yrs",
+            "14-15 yrs",
+            "15-20 yrs"
+          ]
+        },
+        {
+          "group": 137,
+          "latents": [
+            1519
+          ],
+          "gain_margin": 3523.27,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "group": 53,
+          "latents": [
+            1467
+          ],
+          "gain_margin": 2440.11,
+          "examples": [
+            "1-1 yrs",
+            "1-1 yrs",
+            "1-2 yrs"
+          ]
+        },
+        {
+          "group": 352,
+          "latents": [
+            83
+          ],
+          "gain_margin": 2371.63,
+          "examples": [
+            "15-22 yrs",
+            "15-22 yrs",
+            "15-22 yrs"
+          ]
+        },
+        {
+          "group": 36,
+          "latents": [
+            1776
+          ],
+          "gain_margin": 2284.34,
+          "examples": [
+            "10-20 yrs",
+            "10-20 yrs",
+            "10-20 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2009,
+      "n_groups": 2004,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1275,
+      "n_removed": 1278,
+      "var_share_removed": 0.4795,
+      "var_share_sae_error": 0.0353,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            83,
+            510
+          ],
+          "gain_margin": 11706.01,
+          "examples": [
+            "- 12+ years of experience in finance and/or accounting; FP&A and experience leading a field finance ...",
+            "- 12-20 years experience with a good stint in a design engineering firm;- Should exhibit good ...",
+            "Head - Strategy & Customer Acquisition - Telecom/ Media/ FMCG/ Online (10-12 yrs)  - Shaping ..."
+          ]
+        },
+        {
+          "group": 1917,
+          "latents": [
+            208
+          ],
+          "gain_margin": 8402.38,
+          "examples": [
+            "Prior chat and E-mail skills; both require good written communication skills too;Graduate as minimum ...",
+            "0-1 years practical experience in SEO, WordPress and web design support;Very good English communication ...",
+            "0-1 years practical experience in SEO, WordPress and web design support;Very good English communication ..."
+          ]
+        },
+        {
+          "group": 1977,
+          "latents": [
+            431
+          ],
+          "gain_margin": 1681.4,
+          "examples": [
+            "Experience with trade show & retail floor management;MBA with Minimum 15+years- experience in home ...",
+            "- REO Sales : A national real estate brokerage featuring a combination of traditional and online bidding ...",
+            "Strong negotiation skills with proven track record Procurement & Sourcing technology exposure ..."
+          ]
+        },
+        {
+          "group": 1996,
+          "latents": [
+            232
+          ],
+          "gain_margin": 982.21,
+          "examples": [
+            "Outbound International (US) calling experience in a technology sales 1-3 years. ;Execute cold calls and ...",
+            "Outbound International (US) calling experience in a technology sales 1-3 years. ;Execute cold calls and ...",
+            "Minimum 8 months exp in AR denial / follow up   Call to the insurance companies(US) and follow ..."
+          ]
+        },
+        {
+          "group": 496,
+          "latents": [
+            1121
+          ],
+          "gain_margin": 759.57,
+          "examples": [
+            " 0-2 years of experience in back office operations;Only Male candidates can ...",
+            "0-1 years practical experience in SEO, WordPress and web design support;Very good English communication ...",
+            "0-1 years practical experience in SEO, WordPress and web design support;Very good English communication ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1959,
+      "n_groups": 1951,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1038,
+      "n_removed": 1041,
+      "var_share_removed": 0.3388,
+      "var_share_sae_error": 0.0255,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            83,
+            227
+          ],
+          "gain_margin": 15373.72,
+          "examples": [
+            "Senior Director - Transformation - Insurance",
+            "Delivery Head - Advanced Analytics - Utilities (13-18 Years)",
+            "Delivery Head - Advanced Analytics - Utilities (13-18 Years)"
+          ]
+        },
+        {
+          "group": 1948,
+          "latents": [
+            208
+          ],
+          "gain_margin": 13842.27,
+          "examples": [
+            "We're Hiring: AR Caller & Senior AR Caller",
+            "KPO / Process Associates / Medical Billing Process / Night Shift",
+            "KPO / Process Associates / Medical Billing Process / Night Shift"
+          ]
+        },
+        {
+          "group": 522,
+          "latents": [
+            1007
+          ],
+          "gain_margin": 5947.49,
+          "examples": [
+            "Hiring for Data Analyst/ MIS Excel Experts- On Contract @ Flipkart",
+            "Junior Research Analyst - Biology (contract) - Walk-in Interviews",
+            "Wal-in|| Fresher Any Graduate || Operations Executive Back Office"
+          ]
+        },
+        {
+          "group": 770,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 3447.7,
+          "examples": [
+            "Immediate Requirement for Recruiter",
+            "Medical Coder - ED",
+            "Training Coordinator"
+          ]
+        },
+        {
+          "group": 1933,
+          "latents": [
+            431
+          ],
+          "gain_margin": 2848.66,
+          "examples": [
+            "Delivery Head - Advanced Analytics - Utilities (13-18 Years)",
+            "Delivery Head - Advanced Analytics - Utilities (13-18 Years)",
+            "Delivery Head Banking Business Analytics - Retail (14-18 Years)"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1979,
+      "n_groups": 1959,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 1034,
+      "n_removed": 1038,
+      "var_share_removed": 0.5232,
+      "var_share_sae_error": 0.0298,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            208,
+            1100
+          ],
+          "gain_margin": 15065.87,
+          "examples": [
+            "analytical chemist, analytical lab assistant, analytical lab chemist",
+            "fresher, bpo, calling, customer service, ites, kpo, operations, call center...",
+            "bpo, call center, bpo operations, bpo trainer, Quality Analyst, Fresher..."
+          ]
+        },
+        {
+          "group": 796,
+          "latents": [
+            1308
+          ],
+          "gain_margin": 5351.68,
+          "examples": [
+            "High Frequency Trading, Head - Trading, trading strategies, analytics...",
+            "Analytics, Analytics Head, banking, Life Insurance, SAS, people management",
+            "High Frequency Trading, Trading, Trading Head, Market Making..."
+          ]
+        },
+        {
+          "group": 1944,
+          "latents": [
+            83
+          ],
+          "gain_margin": 2970.95,
+          "examples": [
+            "Retail Analytics, Analytics, clustering, segmentation, ranking, correlation...",
+            "Retail Analytics, Analytics, clustering, segmentation, ranking, correlation...",
+            "Retail Analytics, Analytics, clustering, segmentation, ranking, correlation..."
+          ]
+        },
+        {
+          "group": 1182,
+          "latents": [
+            620
+          ],
+          "gain_margin": 1300.6,
+          "examples": [
+            "international bpo, kpo, non voice, mnc, content analysis, medical analyst...",
+            "recovery, team handling, data analysis, team leader, collection...",
+            "recovery, team handling, data analysis, team leader, collection..."
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            113,
+            144,
+            739,
+            1449
+          ],
+          "gain_margin": 1275.16,
+          "examples": [
+            "data analytics",
+            "HR Analytics, Compensation",
+            "report preparation, analytics, business analytics, data analysis..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 806,
+      "n_groups": 804,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 716,
+      "n_removed": 717,
+      "var_share_removed": 0.7922,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 785,
+          "latents": [
+            208
+          ],
+          "gain_margin": 1257.03,
+          "examples": [
+            "morigaon, nagaon, nalbari, sivasagar, tezpur, tinsukia, udalguri, sankardev nagar, majuli",
+            "kushinagar, lalitpur, maharajganj, mahoba, mainpuri, mau, hapur, raebareli, rampur",
+            "Tezpur, Tarapur, Thane, Thanjavur, Thrissur, Tirunelveli, Tirupati, Trichy, Trivandrum"
+          ]
+        },
+        {
+          "group": 706,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 711.16,
+          "examples": [
+            "Chennai, Karur, Madurai, Pondicherry, Thanjavur, Trichy",
+            "Kolkata, Kochi, Kakinada, Kala, Kalpakkam, Kamalapuram, Kanchipuram, Kandla, Kannur",
+            "Faizabad, Faridabad, Faridkot, Firozpur, Dadra and Nagar Haveli, Dahej, Dalhousie, Dehradun, Dharmasala"
+          ]
+        },
+        {
+          "group": 766,
+          "latents": [
+            535
+          ],
+          "gain_margin": 637.07,
+          "examples": [
+            "hazaribagh, gumla, khunti, koderma, pakur, palamu, ramgarh, chaibasa, sahebganj",
+            "hazaribagh, gumla, khunti, koderma, pakur, palamu, ramgarh, chaibasa, sahebganj",
+            "Agartala, Adilabad, Agra, Ahmednagar, Aizawl, Ajmer, Aligarh, Allahabad, Alwar"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            59,
+            2042
+          ],
+          "gain_margin": 247.66,
+          "examples": [
+            "Canada, Germany",
+            "Australia, Canada",
+            "Australia, Canada"
+          ]
+        },
+        {
+          "group": 738,
+          "latents": [
+            348
+          ],
+          "gain_margin": 135.23,
+          "examples": [
+            "Ajmer, Alwar, Bhilwara, Jaipur, Jodhpur, Udaipur",
+            "jaunpur, azamgarh, pratapgarh, pilibhit, sambhal, chandauli, shamli, bulandshahr, farrukhabad",
+            "Munger, Haridwar, Roorkee, Varanasi, Satna, Rewa, Jabalpur, Kolkata, Bhagalpur"
+          ]
+        }
+      ]
+    }
+  }
+}

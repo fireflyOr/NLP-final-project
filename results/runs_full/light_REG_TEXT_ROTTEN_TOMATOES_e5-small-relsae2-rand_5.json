@@ -1,0 +1,864 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ROTTEN_TOMATOES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8474265817153224,
+  "test_error": 0.8474265817153224,
+  "course_metric": "r2",
+  "course_score": 0.47121098500099,
+  "n_text_cols": 13,
+  "n_text_features": 390,
+  "n_train": 4772,
+  "n_test": 2386,
+  "runtime_s": 250.938734292984,
+  "diagnostics": {
+    "Actors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 300,
+      "n_removed": 212,
+      "threshold": 0.0562,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5621,
+      "var_share_kept": 0.4268,
+      "var_share_sae_error": 0.2233,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 105,
+          "score": 0.0814,
+          "n_active": 153,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 467,
+          "score": 0.0611,
+          "n_active": 228,
+          "examples": [
+            "Cat Power",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 110,
+          "score": 0.0585,
+          "n_active": 250,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 334,
+          "score": 0.0563,
+          "n_active": 257,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 278,
+          "score": 0.055,
+          "n_active": 338,
+          "examples": [
+            "Ryan Reynolds,Jeff Bridges,Mary-Louise Parker",
+            "Jean-Claude Van Damme,Lennie James,Alfred Molina",
+            "Ryan Reynolds,Melissa George,Jimmy Bennett"
+          ]
+        }
+      ]
+    },
+    "Cast": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 309,
+      "n_removed": 203,
+      "threshold": 0.0584,
+      "passed_test": 9,
+      "removed_norm_ratio": 0.5334,
+      "var_share_kept": 0.4249,
+      "var_share_sae_error": 0.272,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 109,
+          "score": 0.1317,
+          "n_active": 149,
+          "examples": [
+            "Dean Jones",
+            "Brewce Martin",
+            "Cat Power"
+          ]
+        },
+        {
+          "latent": 108,
+          "score": 0.0951,
+          "n_active": 217,
+          "examples": [
+            "Cat Power",
+            "Encke King",
+            "Mayf Nutter"
+          ]
+        },
+        {
+          "latent": 119,
+          "score": 0.0628,
+          "n_active": 401,
+          "examples": [
+            "Dwight D. Eisenhower,William Marshall",
+            "Elizabeth Taylor,Richard Burton,George Segal,Sandy Dennis",
+            "Ray Gallagher,Mildred Bracken,Evelyn Selbie,William Stanton"
+          ]
+        },
+        {
+          "latent": 123,
+          "score": 0.0611,
+          "n_active": 360,
+          "examples": [
+            "Jason Patric,Corey Haim,Dianne Wiest,Barnard Hughes,Edward Herrmann,Kiefer Sutherland,Jami Gertz,Corey Feldman,Jamison Newlander,Brooke McCarter,Billy Wirth,Ale",
+            "Evan Peters,Juno Temple,Kevin Alejandro,Meaghan Martin,Christine Lahti,Ariel Winter,Will Peltz,Don Stark,Joel Gretsch,Ever Carradine,Jason Beghe,Matthew Ziff,Ro",
+            "Hayden Panettiere,Glenn Close,Patrick Warburton,Joan Cusack,David Ogden Stiers,Bill Hader,Amy Poehler,Cory Edwards,Martin Short,Brad Garrett,Andy Dick,David Ala"
+          ]
+        },
+        {
+          "latent": 52,
+          "score": 0.055,
+          "n_active": 296,
+          "examples": [
+            "Mark Hamill,Harrison Ford,Carrie Fisher,Peter Cushing,Alec Guinness,Anthony Daniels,Kenny Baker,Peter Mayhew,David Prowse,Phil Brown,Shelagh Fraser,Jack Purvis,",
+            "Ben Stiller,Amy Adams,Owen Wilson,Hank Azaria,Robin Williams,Christopher Guest,Alain Chabat,Steve Coogan,Ricky Gervais,Bill Hader,Jon Bernthal,Patrick Gallagher",
+            "Ben Stiller,Chris Rock,David Schwimmer,Jada Pinkett Smith,Sacha Baron Cohen,Cedric the Entertainer,Andy Richter,Tom McGrath,Frances McDormand,Jessica Chastain,B"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 257,
+      "n_kept": 449,
+      "n_removed": 63,
+      "threshold": 0.0502,
+      "passed_test": 29,
+      "removed_norm_ratio": 0.3386,
+      "var_share_kept": 0.6495,
+      "var_share_sae_error": 0.0012,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 306,
+          "score": 0.0915,
+          "n_active": 321,
+          "examples": [
+            "USA,UK,Afghanistan",
+            "UK,Canada,USA",
+            "UK,USA,United Arab Emirates"
+          ]
+        },
+        {
+          "latent": 135,
+          "score": 0.0913,
+          "n_active": 240,
+          "examples": [
+            "UK,Mexico,USA",
+            "UK,USA,United Arab Emirates",
+            "Austria,UK,USA"
+          ]
+        },
+        {
+          "latent": 126,
+          "score": 0.0873,
+          "n_active": 344,
+          "examples": [
+            "UK,USA,Switzerland",
+            "UK,Germany,USA,China",
+            "UK,Mexico,USA"
+          ]
+        },
+        {
+          "latent": 505,
+          "score": 0.0855,
+          "n_active": 343,
+          "examples": [
+            "UK,Mexico,USA",
+            "UK,Canada,Romania,USA",
+            "UK,USA,France,Canada"
+          ]
+        },
+        {
+          "latent": 455,
+          "score": 0.0845,
+          "n_active": 260,
+          "examples": [
+            "UK,USA",
+            "UK,USA",
+            "UK,USA"
+          ]
+        }
+      ]
+    },
+    "Creator": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 326,
+      "n_removed": 186,
+      "threshold": 0.0612,
+      "passed_test": 33,
+      "removed_norm_ratio": 0.5332,
+      "var_share_kept": 0.527,
+      "var_share_sae_error": 0.1705,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 234,
+          "score": 0.1604,
+          "n_active": 139,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 440,
+          "score": 0.1485,
+          "n_active": 235,
+          "examples": [
+            "Tyler Hisel",
+            "Werner Herzog",
+            "Werner Herzog"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.132,
+          "n_active": 270,
+          "examples": [
+            "Quentin Tarantino",
+            "Quentin Tarantino,Quentin Tarantino",
+            "Quentin Tarantino,Roger Avary"
+          ]
+        },
+        {
+          "latent": 141,
+          "score": 0.1197,
+          "n_active": 239,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 78,
+          "score": 0.1151,
+          "n_active": 329,
+          "examples": [
+            "Charles Brackett,Billy Wilder",
+            "Charles Brackett,Billy Wilder",
+            "Charles Brackett,Billy Wilder"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 327,
+      "n_removed": 185,
+      "threshold": 0.0574,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.5011,
+      "var_share_kept": 0.4411,
+      "var_share_sae_error": 0.2741,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 368,
+          "score": 0.0758,
+          "n_active": 282,
+          "examples": [
+            "Cautionary tale features a fictionalized and highly exaggerated take on the use of marijuana. A trio of drug dealers lead innocent teenagers to become addicted ",
+            "Details the graphic and shocking, yet undeniably tragic story of Rome's most infamous Caesar, Gaius Germanicus Caligula.",
+            "'Don't Be a Menace to South Central While Drinking your Juice in the Hood' is a parody of several U.S. films about being in the 'Hood', for instance 'Boyz n the"
+          ]
+        },
+        {
+          "latent": 6,
+          "score": 0.0644,
+          "n_active": 216,
+          "examples": [
+            "Janie's just trying to get well.",
+            "Some of MGM'S musical stars review the studios history of musicals. From The Hollywood Revue of 1929 (1929) to Brigadoon (1954) , from the first musical talkies",
+            "Lincoln Six-Echo is a resident of a seemingly Utopian but contained facility in the year 2019. Like all of the inhabitants of this carefully controlled environm"
+          ]
+        },
+        {
+          "latent": 106,
+          "score": 0.0593,
+          "n_active": 293,
+          "examples": [
+            "Jack Crabb, looking back from extreme old age, tells of his life being raised by Indians and fighting with General Custer.",
+            "Having faced the confines of the American health care system, a forty year old stroke patient travels to Tianjin, China in search of the rehabilitation he needs",
+            "An older British reporter vies with a young U.S. doctor for the affections of a beautiful Vietnamese woman."
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.0585,
+          "n_active": 414,
+          "examples": [
+            "True story of an innocent man mistaken for a criminal.",
+            "The story of Rubin 'Hurricane' Carter, a boxer wrongly imprisoned for murder, and the people who aided in his fight to prove his innocence.",
+            "Can an over-the-hill journalist uncover the evidence that can prove a death row inmate's innocence just hours before his execution?"
+          ]
+        },
+        {
+          "latent": 410,
+          "score": 0.0532,
+          "n_active": 220,
+          "examples": [
+            "On an asteroid, the Terran Federation's Fort Casey is on top of a bug hive. The Starship Alesia begins to deploy its troops to seize and control the hanger and ",
+            "Rio Grande takes place after the Civil War when the Union turned their attention towards the Apaches. Union officer Kirby Yorke is in charge of an outpost on th",
+            "The life stories of the six men who raised the flag at The Battle of Iwo Jima, a turning point in WWII."
+          ]
+        }
+      ]
+    },
+    "Director": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 328,
+      "n_removed": 184,
+      "threshold": 0.0593,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.589,
+      "var_share_kept": 0.5695,
+      "var_share_sae_error": 0.1256,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 311,
+          "score": 0.0694,
+          "n_active": 306,
+          "examples": [
+            "Billy Wilder",
+            "Billy Wilder",
+            "Billy Wilder"
+          ]
+        },
+        {
+          "latent": 333,
+          "score": 0.0637,
+          "n_active": 454,
+          "examples": [
+            "Andrew L. Stone",
+            "Bernard L. Kowalski",
+            "Irvin S. Yeaworth Jr.,Russell S. Doughten Jr."
+          ]
+        },
+        {
+          "latent": 432,
+          "score": 0.0618,
+          "n_active": 329,
+          "examples": [
+            "Werner Herzog",
+            "Werner Herzog",
+            "Werner Herzog"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.0609,
+          "n_active": 219,
+          "examples": [
+            "Arye Gross,Gregory Gieras",
+            "George A. Romero",
+            "George A. Romero"
+          ]
+        },
+        {
+          "latent": 416,
+          "score": 0.0602,
+          "n_active": 314,
+          "examples": [
+            "Ridley Scott",
+            "Ridley Scott",
+            "Ridley Scott"
+          ]
+        }
+      ]
+    },
+    "Filming Locations": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 327,
+      "n_removed": 185,
+      "threshold": 0.0613,
+      "passed_test": 33,
+      "removed_norm_ratio": 0.5136,
+      "var_share_kept": 0.6154,
+      "var_share_sae_error": 0.0748,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 417,
+          "score": 0.0835,
+          "n_active": 638,
+          "examples": [
+            "City Hall - Broad and 15th Streets, Philadelphia, Pennsylvania, USA",
+            "Broadgate, London, England, UK",
+            "Broadgate, London, England, UK"
+          ]
+        },
+        {
+          "latent": 49,
+          "score": 0.0801,
+          "n_active": 658,
+          "examples": [
+            "Intersection of Washington Street and Water Street, Dumbo, Brooklyn, New York City, New York, USA",
+            "Lebua at State Tower - 1055 Silom Road, Bangrak, Bangkok, Thailand",
+            "Black Park, Iver Heath, Buckinghamshire, England, UK"
+          ]
+        },
+        {
+          "latent": 167,
+          "score": 0.0789,
+          "n_active": 716,
+          "examples": [
+            "Charleston Naval Base, Charleston, South Carolina, USA",
+            "Charleston, South Carolina, USA",
+            "Charleston, South Carolina, USA"
+          ]
+        },
+        {
+          "latent": 221,
+          "score": 0.0777,
+          "n_active": 671,
+          "examples": [
+            "656 Lincoln Avenue, Winnetka, Illinois, USA",
+            "Winsted, Connecticut, USA",
+            "Winamac, Indiana, USA"
+          ]
+        },
+        {
+          "latent": 155,
+          "score": 0.0773,
+          "n_active": 662,
+          "examples": [
+            "Schlitterbahn Waterpark Resort - 400 North Liberty Avenue, New Braunfels, Comal County, Texas, USA",
+            "USA",
+            "USA"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 453,
+      "n_kept": 438,
+      "n_removed": 74,
+      "threshold": 0.0586,
+      "passed_test": 125,
+      "removed_norm_ratio": 0.2599,
+      "var_share_kept": 0.7537,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 100,
+          "score": 0.2779,
+          "n_active": 254,
+          "examples": [
+            "Documentary,Adventure",
+            "Documentary,Family",
+            "Documentary,Family"
+          ]
+        },
+        {
+          "latent": 136,
+          "score": 0.2775,
+          "n_active": 253,
+          "examples": [
+            "Documentary",
+            "Documentary",
+            "Documentary"
+          ]
+        },
+        {
+          "latent": 293,
+          "score": 0.2746,
+          "n_active": 258,
+          "examples": [
+            "Documentary,Fantasy",
+            "Documentary",
+            "Documentary"
+          ]
+        },
+        {
+          "latent": 440,
+          "score": 0.2733,
+          "n_active": 263,
+          "examples": [
+            "Documentary,News",
+            "Documentary,History",
+            "Documentary,History"
+          ]
+        },
+        {
+          "latent": 143,
+          "score": 0.2415,
+          "n_active": 391,
+          "examples": [
+            "Documentary,Adventure,Western",
+            "Documentary,Music",
+            "Documentary,Music"
+          ]
+        }
+      ]
+    },
+    "Language": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 301,
+      "n_kept": 445,
+      "n_removed": 67,
+      "threshold": 0.0551,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.4009,
+      "var_share_kept": 0.6841,
+      "var_share_sae_error": 0.0013,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 348,
+          "score": 0.0818,
+          "n_active": 3326,
+          "examples": [
+            "English,Inuktitut",
+            "English",
+            "English"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.0804,
+          "n_active": 3327,
+          "examples": [
+            "English,Turkish",
+            "English,Turkish",
+            "English"
+          ]
+        },
+        {
+          "latent": 79,
+          "score": 0.0803,
+          "n_active": 3326,
+          "examples": [
+            "English,Algonquin",
+            "English",
+            "English"
+          ]
+        },
+        {
+          "latent": 183,
+          "score": 0.0803,
+          "n_active": 3327,
+          "examples": [
+            "English,Chinese",
+            "English,Chinese",
+            "English"
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0801,
+          "n_active": 3327,
+          "examples": [
+            "English,Creek",
+            "English",
+            "English"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 295,
+      "n_removed": 217,
+      "threshold": 0.0582,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5786,
+      "var_share_kept": 0.4393,
+      "var_share_sae_error": 0.2267,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 314,
+          "score": 0.0817,
+          "n_active": 225,
+          "examples": [
+            "House II: The Second Story",
+            "Scary Movie 2",
+            "Child's Play 2"
+          ]
+        },
+        {
+          "latent": 362,
+          "score": 0.0626,
+          "n_active": 263,
+          "examples": [
+            "Blood Beach",
+            "Blood Mania",
+            "American Ninja 3: Blood Hunt"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0619,
+          "n_active": 318,
+          "examples": [
+            "Che: Part Two",
+            "Che: Part One",
+            "That's Entertainment, Part II"
+          ]
+        },
+        {
+          "latent": 483,
+          "score": 0.0603,
+          "n_active": 316,
+          "examples": [
+            "Summer School",
+            "Night School",
+            "Undercover Kids"
+          ]
+        },
+        {
+          "latent": 271,
+          "score": 0.0543,
+          "n_active": 209,
+          "examples": [
+            "Dr. Jekyll and Mr. Hyde",
+            "Star Trek Secret Voyage: Whose Birth These Triumphs Are",
+            "What's Up, Doc?"
+          ]
+        }
+      ]
+    },
+    "RatingCount": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 307,
+      "n_removed": 205,
+      "threshold": 0.0554,
+      "passed_test": 13,
+      "removed_norm_ratio": 0.5722,
+      "var_share_kept": 0.4805,
+      "var_share_sae_error": 0.015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 319,
+          "score": 0.1284,
+          "n_active": 1046,
+          "examples": [
+            "411",
+            "308",
+            "305"
+          ]
+        },
+        {
+          "latent": 154,
+          "score": 0.1178,
+          "n_active": 809,
+          "examples": [
+            "858",
+            "748",
+            "828"
+          ]
+        },
+        {
+          "latent": 227,
+          "score": 0.0889,
+          "n_active": 224,
+          "examples": [
+            "486,409",
+            "366,029",
+            "436,600"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0669,
+          "n_active": 229,
+          "examples": [
+            "299",
+            "299",
+            "299"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.0656,
+          "n_active": 1263,
+          "examples": [
+            "164,513",
+            "166,833",
+            "232,491"
+          ]
+        }
+      ]
+    },
+    "Release Date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 392,
+      "n_kept": 291,
+      "n_removed": 221,
+      "threshold": 0.06,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.7047,
+      "var_share_kept": 0.2521,
+      "var_share_sae_error": 0.0021,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 16,
+          "score": 0.0891,
+          "n_active": 45,
+          "examples": [
+            "24 August 2012 (Taiwan)",
+            "18 June 2015 (Taiwan)",
+            "5 April 2001 (Singapore)"
+          ]
+        },
+        {
+          "latent": 8,
+          "score": 0.0695,
+          "n_active": 340,
+          "examples": [
+            "1973 (USA)",
+            "1973 (USA)",
+            "1968 (USA)"
+          ]
+        },
+        {
+          "latent": 449,
+          "score": 0.0644,
+          "n_active": 46,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 165,
+          "score": 0.0633,
+          "n_active": 66,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 196,
+          "score": 0.0625,
+          "n_active": 46,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "ReviewCount": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 498,
+      "n_kept": 447,
+      "n_removed": 65,
+      "threshold": 0.0616,
+      "passed_test": 91,
+      "removed_norm_ratio": 0.21,
+      "var_share_kept": 0.826,
+      "var_share_sae_error": 0.0113,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 134,
+          "score": 0.1638,
+          "n_active": 1088,
+          "examples": [
+            "5 user,11 critic",
+            "5 user,4 critic",
+            "5 user,4 critic"
+          ]
+        },
+        {
+          "latent": 397,
+          "score": 0.1384,
+          "n_active": 434,
+          "examples": [
+            "1,467 user,731 critic",
+            "507 user,481 critic",
+            "507 user,361 critic"
+          ]
+        },
+        {
+          "latent": 68,
+          "score": 0.1352,
+          "n_active": 1000,
+          "examples": [
+            "25 user,8 critic",
+            "25 user,8 critic",
+            "25 user,5 critic"
+          ]
+        },
+        {
+          "latent": 393,
+          "score": 0.1248,
+          "n_active": 676,
+          "examples": [
+            "3 user",
+            "3 user",
+            "3 user"
+          ]
+        },
+        {
+          "latent": 230,
+          "score": 0.1238,
+          "n_active": 954,
+          "examples": [
+            "8 user,7 critic",
+            "7 user",
+            "7 user"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5821558216657148,
+  "test_error": 0.5821558216657148,
+  "course_metric": "r2",
+  "course_score": 0.4134570205486243,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 98.84800291061401,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 437,
+      "n_removed": 75,
+      "threshold": 0.0391,
+      "passed_test": 194,
+      "removed_norm_ratio": 0.3869,
+      "var_share_kept": 0.8572,
+      "var_share_sae_error": 0.0073,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 231,
+          "score": 0.1747,
+          "n_active": 3906,
+          "examples": [
+            "FOREVER 21",
+            "FOREVER 21",
+            "FOREVER 21"
+          ]
+        },
+        {
+          "latent": 98,
+          "score": 0.1722,
+          "n_active": 4133,
+          "examples": [
+            "Lime Crime",
+            "Lime Crime",
+            "Lime Crime"
+          ]
+        },
+        {
+          "latent": 3,
+          "score": 0.1651,
+          "n_active": 3946,
+          "examples": [
+            "Logitech",
+            "Logitech",
+            "Dolce & Gabbana"
+          ]
+        },
+        {
+          "latent": 236,
+          "score": 0.1562,
+          "n_active": 3947,
+          "examples": [
+            "Faded Glory",
+            "Faded Glory",
+            "Faded Glory"
+          ]
+        },
+        {
+          "latent": 141,
+          "score": 0.1559,
+          "n_active": 3807,
+          "examples": [
+            "No Boundaries",
+            "No Boundaries",
+            "Nerf"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 496,
+      "n_kept": 411,
+      "n_removed": 101,
+      "threshold": 0.0372,
+      "passed_test": 169,
+      "removed_norm_ratio": 0.3318,
+      "var_share_kept": 0.7345,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.1801,
+          "n_active": 1719,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 457,
+          "score": 0.1401,
+          "n_active": 729,
+          "examples": [
+            "Weddings",
+            "Weddings",
+            "Weddings"
+          ]
+        },
+        {
+          "latent": 71,
+          "score": 0.14,
+          "n_active": 687,
+          "examples": [
+            "Footwear",
+            "Footwear",
+            "Diapering"
+          ]
+        },
+        {
+          "latent": 337,
+          "score": 0.1393,
+          "n_active": 310,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.1388,
+          "n_active": 1446,
+          "examples": [
+            "Tops & Blouses",
+            "Tops & Blouses",
+            "Tops & Blouses"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 452,
+      "n_removed": 60,
+      "threshold": 0.0404,
+      "passed_test": 179,
+      "removed_norm_ratio": 0.3356,
+      "var_share_kept": 0.8907,
+      "var_share_sae_error": 0.0007,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 132,
+          "score": 0.1651,
+          "n_active": 449,
+          "examples": [
+            "Varsity/Baseball",
+            "Varsity/Baseball",
+            "Baseball & Softball"
+          ]
+        },
+        {
+          "latent": 409,
+          "score": 0.127,
+          "n_active": 793,
+          "examples": [
+            "Baby Gyms & Playmats",
+            "Baby",
+            "Baby"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.1229,
+          "n_active": 940,
+          "examples": [
+            "Boot Cut",
+            "Boot Cut",
+            "Boot Cut"
+          ]
+        },
+        {
+          "latent": 462,
+          "score": 0.1145,
+          "n_active": 602,
+          "examples": [
+            "Girls",
+            "Girls",
+            "Animal"
+          ]
+        },
+        {
+          "latent": 100,
+          "score": 0.114,
+          "n_active": 1318,
+          "examples": [
+            "Lanyard",
+            "Lanyard",
+            "Lanyard"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 435,
+      "n_removed": 77,
+      "threshold": 0.0381,
+      "passed_test": 184,
+      "removed_norm_ratio": 0.3487,
+      "var_share_kept": 0.8089,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.1698,
+          "n_active": 766,
+          "examples": [
+            "Handmade/Bags and Purses/Purse",
+            "Handmade/Bags and Purses/Purse",
+            "Handmade/Bags and Purses/Purse"
+          ]
+        },
+        {
+          "latent": 79,
+          "score": 0.1483,
+          "n_active": 1575,
+          "examples": [
+            "Women/Shoes/Slippers",
+            "Women/Shoes/Slippers",
+            "Women/Shoes/Slippers"
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.1352,
+          "n_active": 293,
+          "examples": [
+            "Women/Women's Handbags/Hobo",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "latent": 133,
+          "score": 0.1285,
+          "n_active": 1558,
+          "examples": [
+            "Men/Tops/Button-Front",
+            "Men/Tops/Button-Front",
+            "Men/Tops/Button-Front"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.125,
+          "n_active": 966,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 404,
+      "n_removed": 108,
+      "threshold": 0.0403,
+      "passed_test": 65,
+      "removed_norm_ratio": 0.3257,
+      "var_share_kept": 0.5999,
+      "var_share_sae_error": 0.2301,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 351,
+          "score": 0.0996,
+          "n_active": 3380,
+          "examples": [
+            "Backpack used",
+            "Sunglasses",
+            "Price is Negotiable"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.092,
+          "n_active": 254,
+          "examples": [
+            "Used Space grey 16gb ATT carrier. Phone is unlocked, reset, find my phone is off. Has small chip in screen but not cracked (see picture #2) chip can hardly be s",
+            "Great condition no cracks, few scratches on the screen and everything still works well. This is the 2nd generation iPad with the newest update. It is 64GB so it",
+            "Gently used apple iPhone 6, 64gb, has been reset. I used on att but can be used for any network. I upgraded to new iPhone, nothing wrong besides crack to screen"
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0916,
+          "n_active": 2119,
+          "examples": [
+            "Like new",
+            "Like new",
+            "Like New"
+          ]
+        },
+        {
+          "latent": 397,
+          "score": 0.0856,
+          "n_active": 695,
+          "examples": [
+            "Super cute makeup bag! In new condition. Has spots for brushes also. Also perfect for a play purse for a little one!",
+            "Medium size bag.",
+            "Nike bag that can be a backpack and a duffle bag! 100% authentic. Never used, brand new with tag."
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0832,
+          "n_active": 1782,
+          "examples": [
+            "Good",
+            "New",
+            "New"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 412,
+      "n_removed": 100,
+      "threshold": 0.0408,
+      "passed_test": 74,
+      "removed_norm_ratio": 0.3486,
+      "var_share_kept": 0.6246,
+      "var_share_sae_error": 0.1936,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.1257,
+          "n_active": 1025,
+          "examples": [
+            "Shirt",
+            "Women's shirt",
+            "Women's shirt"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.1148,
+          "n_active": 668,
+          "examples": [
+            "Lularoe",
+            "LulaRoe",
+            "LuLaroe"
+          ]
+        },
+        {
+          "latent": 251,
+          "score": 0.0907,
+          "n_active": 781,
+          "examples": [
+            "Lularoe Amelia L - BNWT",
+            "Lularoe Amelia large",
+            "Lularoe elegant large Amelia"
+          ]
+        },
+        {
+          "latent": 393,
+          "score": 0.0898,
+          "n_active": 1308,
+          "examples": [
+            "Girl pirate costume.",
+            "Tunic",
+            "Wonder Woman Dog Costume"
+          ]
+        },
+        {
+          "latent": 133,
+          "score": 0.0743,
+          "n_active": 589,
+          "examples": [
+            "Womens top",
+            "Top",
+            "Women's Top"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3866470478927464,
+  "test_error": 1.3866470478927464,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7964726942055703,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 81.46413707733154,
+  "diagnostics": {
+    "experience": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 445,
+      "n_kept": 511,
+      "n_removed": 1,
+      "threshold": 0.0436,
+      "passed_test": 424,
+      "removed_norm_ratio": 0.0044,
+      "var_share_kept": 0.9987,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 28,
+          "score": 0.4682,
+          "n_active": 1354,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.4406,
+          "n_active": 757,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 57,
+          "score": 0.4389,
+          "n_active": 757,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 144,
+          "score": 0.4379,
+          "n_active": 757,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.4363,
+          "n_active": 757,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 485,
+      "n_removed": 27,
+      "threshold": 0.0448,
+      "passed_test": 180,
+      "removed_norm_ratio": 0.1264,
+      "var_share_kept": 0.8199,
+      "var_share_sae_error": 0.123,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 23,
+          "score": 0.2598,
+          "n_active": 2120,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 357,
+          "score": 0.2589,
+          "n_active": 2549,
+          "examples": [
+            " Hands-on experience ...",
+            "Stationery industry candidates would be given ...",
+            "Candidates should be available for personal ..."
+          ]
+        },
+        {
+          "latent": 105,
+          "score": 0.2585,
+          "n_active": 2159,
+          "examples": [
+            "Exposure to structured software development methodology (preferably Agile or Iterative development ...",
+            "- Operating budget (capital + expense) can be up to USD 0.1MM depending on projects/initiatives ...",
+            "We are a team of 223,000 passionate people working in 350 sites providing outstanding customer ..."
+          ]
+        },
+        {
+          "latent": 499,
+          "score": 0.2579,
+          "n_active": 2195,
+          "examples": [
+            "- An active student member of the Institute or Faculty of Actuaries and / or Indian Institute of ...",
+            "- An active student member of the Institute or Faculty of Actuaries and / or Indian Institute of ...",
+            "- An active student member of the Institute or Faculty of Actuaries and / or Indian Institute of ..."
+          ]
+        },
+        {
+          "latent": 473,
+          "score": 0.2579,
+          "n_active": 2101,
+          "examples": [
+            "Industry: Multinational BPO  Designation: Manager - FP&A  Location: Mumbai ...",
+            "Greetings...!!!  We are urgently looking for Design & Sales Coordinator for SB Road, Pune ...",
+            "The senior resources in Mumbai FP&A teams will be required to lead the change management effort, ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 469,
+      "n_removed": 43,
+      "threshold": 0.045,
+      "passed_test": 164,
+      "removed_norm_ratio": 0.1992,
+      "var_share_kept": 0.818,
+      "var_share_sae_error": 0.1046,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 437,
+          "score": 0.2024,
+          "n_active": 722,
+          "examples": [
+            "Executive Assistant to President",
+            "Executive Assistant to the President",
+            "Executive Assistant"
+          ]
+        },
+        {
+          "latent": 324,
+          "score": 0.18,
+          "n_active": 817,
+          "examples": [
+            "Tender Executive",
+            "Collection Executive",
+            "Finance Executive"
+          ]
+        },
+        {
+          "latent": 22,
+          "score": 0.1558,
+          "n_active": 396,
+          "examples": [
+            "Network Engineer (cisco, Checkpoint, Juniper, Fortinet, Brocade)",
+            "Network Engineer (cisco, Checkpoint, Juniper, Fortinet, Brocade)",
+            "VP - Marketing"
+          ]
+        },
+        {
+          "latent": 411,
+          "score": 0.1474,
+          "n_active": 349,
+          "examples": [
+            "Freshers (voice)",
+            "Fresher (graphics Designer)",
+            "Walk in for Fresher"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.1396,
+          "n_active": 278,
+          "examples": [
+            "Walkin Drive at Mphasis for MIS",
+            "WALK IN Drive For MNC Investment Banking",
+            "Walk-in Drive for TL Ops on 29th  & 30th Oct-telecom Process"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 467,
+      "n_removed": 45,
+      "threshold": 0.0463,
+      "passed_test": 156,
+      "removed_norm_ratio": 0.1751,
+      "var_share_kept": 0.8311,
+      "var_share_sae_error": 0.0984,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 294,
+          "score": 0.1794,
+          "n_active": 302,
+          "examples": [
+            "call monitoring, quality analysis, feedback, Call Audit...",
+            "call monitoring, quality analysis, feedback, Call Audit...",
+            "call monitoring, quality analysis, feedback, call audit..."
+          ]
+        },
+        {
+          "latent": 39,
+          "score": 0.1457,
+          "n_active": 340,
+          "examples": [
+            "Mba Fresher, Bba Fresher, B Com Fresher, Hr Fresher, Fresher Trainee...",
+            "fresher, graduate, mba fresher, b tech fresher, graduate fresher, trainee...",
+            "ME Fresher, M Tech Fresher"
+          ]
+        },
+        {
+          "latent": 446,
+          "score": 0.1417,
+          "n_active": 778,
+          "examples": [
+            "Communication Skills, Strong Interpersonal Skills, Written Communication...",
+            "Communication Skills, US healthcare, Daniel Management, AR callers, AR...",
+            "communication skills, client communication, trade processing..."
+          ]
+        },
+        {
+          "latent": 256,
+          "score": 0.1406,
+          "n_active": 203,
+          "examples": [
+            "International Voice Process, Night Shift, Analytical Skills, Voice Process,...",
+            "database management, voice",
+            "semi voice process, semi voice, non voice, non voice process, fresher..."
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.1393,
+          "n_active": 618,
+          "examples": [
+            "international call center, international bpo, international voice process...",
+            "international voice process, international calling, voice process...",
+            "rpo, international call center, international bpo..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 502,
+      "n_kept": 482,
+      "n_removed": 30,
+      "threshold": 0.0491,
+      "passed_test": 223,
+      "removed_norm_ratio": 0.1931,
+      "var_share_kept": 0.8763,
+      "var_share_sae_error": 0.0051,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.134,
+          "n_active": 3231,
+          "examples": [
+            "Uganda",
+            "Uganda",
+            "Uganda"
+          ]
+        },
+        {
+          "latent": 35,
+          "score": 0.1234,
+          "n_active": 38,
+          "examples": [
+            "Australia, Canada",
+            "Australia, Canada",
+            "Australia, Canada"
+          ]
+        },
+        {
+          "latent": 65,
+          "score": 0.1208,
+          "n_active": 2252,
+          "examples": [
+            "Bengaluru, Netherlands",
+            "Bengaluru, Netherlands",
+            "Rajkot"
+          ]
+        },
+        {
+          "latent": 147,
+          "score": 0.1207,
+          "n_active": 2745,
+          "examples": [
+            "Mumbai(Mindspace)",
+            "Mumbai(Mindspace)",
+            "Mumbai(Mindspace)"
+          ]
+        },
+        {
+          "latent": 142,
+          "score": 0.1204,
+          "n_active": 2143,
+          "examples": [
+            "Kerala",
+            "Bengaluru(Outer Ring Road South)",
+            "Mauritius"
+          ]
+        }
+      ]
+    }
+  }
+}

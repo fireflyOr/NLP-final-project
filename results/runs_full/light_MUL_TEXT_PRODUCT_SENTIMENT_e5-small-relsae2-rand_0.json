@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6098339670412145,
+  "test_error": 0.6098339670412145,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8576355886992932,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 16.363848447799683,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 364,
+      "n_removed": 148,
+      "threshold": 0.0823,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.4852,
+      "var_share_kept": 0.5835,
+      "var_share_sae_error": 0.1617,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 462,
+          "score": 0.1188,
+          "n_active": 169,
+          "examples": [
+            "The dailies on iPad are going to evolve...they're still impossible to download (20 MB and up downloads) #sxsw",
+            "In Apple #SXSW line for iPad 2. Staff just cleared us as good to go for 32g. Only 16gb white and 64g At&amp;t black out of stock.",
+            "RT @mention Get the OWLE Bubo for iPhone with a $20 off coupon use code SBSW2011  #sxsw #SXSWFilm #SXSWi #almedia"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.0985,
+          "n_active": 133,
+          "examples": [
+            "First up: iPad Design Headaches (2 Tablets, Call in the Morning). #SXSW #tapworthy",
+            "Checking out iPad Design Headaches (2 Tablets, Call in the Morning).\n{link} #SXSW #tapworthy #fb",
+            "dumb blonde {link} Evelyn #sxsw Juwan Howard iPad"
+          ]
+        },
+        {
+          "latent": 170,
+          "score": 0.0859,
+          "n_active": 177,
+          "examples": [
+            "RT @mention #SXSW gear bag: iPad 2, iPhone, Mophie. Traveling light this year! {link}",
+            "Come by Aquent Booth 1413 at #SXSW to learn about internetonlinewebsite.com, meet us &amp; enter to win an iPad 2!",
+            "RT @mention Join leNewz fo free donuts and massage at #SXSW Trade Show (booth #1422 just behind Google's)"
+          ]
+        },
+        {
+          "latent": 92,
+          "score": 0.0851,
+          "n_active": 111,
+          "examples": [
+            "I have my golden tickets f 4sq party Day after the real party #Redbullbpm with Felix da Housecat playing on iPad! #SXSW  {link}",
+            "RT @mention #sxsw #crm #scrm Join me @mention SXSW next Sunday 3/13 at noon at Hilton Austin 4 coffee &amp; chat. Old ACT! users &amp; now can show VIPorbit 4 i",
+            "RT @mention Google spokewoman Nadja Blagojevic e-mail about Google Circle: &quot;We are not announcing anything like this at #SXSW, this is an untrue rumor.&quo"
+          ]
+        },
+        {
+          "latent": 312,
+          "score": 0.0827,
+          "n_active": 208,
+          "examples": [
+            "Agencies push Google in directions they never would have gone otherwise says Creative Lab Strategy Director @mention #SXSW",
+            "RT @mention Agencies push Google in directions they never would have gone otherwise says Creative Lab Strategy Dir  @mention #SXSW",
+            "Google Social Media RT @mention We interrupt your regularly scheduled #sxsw geek programming with big news {link}"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.6881765051699693,
+  "test_error": 0.3118234948300307,
+  "course_metric": "auroc",
+  "course_score": 0.6881765051699692,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 95.8929352760315,
+  "diagnostics": {
+    "created_at": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 400,
+      "n_kept": 339,
+      "n_removed": 173,
+      "threshold": 0.0391,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.6523,
+      "var_share_kept": 0.4775,
+      "var_share_sae_error": 0.0322,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.0673,
+          "n_active": 194,
+          "examples": [
+            "1970-01-01 00:00:01.405308207",
+            "1970-01-01 00:00:01.405250397",
+            "1970-01-01 00:00:01.405101197"
+          ]
+        },
+        {
+          "latent": 320,
+          "score": 0.0622,
+          "n_active": 735,
+          "examples": [
+            "1970-01-01 00:00:01.412054107",
+            "1970-01-01 00:00:01.412023480",
+            "1970-01-01 00:00:01.412352102"
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0539,
+          "n_active": 795,
+          "examples": [
+            "1970-01-01 00:00:01.424113257",
+            "1970-01-01 00:00:01.428014039",
+            "1970-01-01 00:00:01.428028547"
+          ]
+        },
+        {
+          "latent": 292,
+          "score": 0.049,
+          "n_active": 696,
+          "examples": [
+            "1970-01-01 00:00:01.405050040",
+            "1970-01-01 00:00:01.405820080",
+            "1970-01-01 00:00:01.405040102"
+          ]
+        },
+        {
+          "latent": 190,
+          "score": 0.0482,
+          "n_active": 242,
+          "examples": [
+            "1970-01-01 00:00:01.404102617",
+            "1970-01-01 00:00:01.404162620",
+            "1970-01-01 00:00:01.404223580"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 409,
+      "n_kept": 395,
+      "n_removed": 117,
+      "threshold": 0.0403,
+      "passed_test": 25,
+      "removed_norm_ratio": 0.4204,
+      "var_share_kept": 0.6973,
+      "var_share_sae_error": 0.0126,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 469,
+          "score": 0.067,
+          "n_active": 2088,
+          "examples": [
+            "1970-01-01 00:00:01.407368046",
+            "1970-01-01 00:00:01.312005866",
+            "1970-01-01 00:00:01.419363566"
+          ]
+        },
+        {
+          "latent": 416,
+          "score": 0.0663,
+          "n_active": 732,
+          "examples": [
+            "1970-01-01 00:00:01.283313540",
+            "1970-01-01 00:00:01.283193240",
+            "1970-01-01 00:00:01.283921940"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.0646,
+          "n_active": 606,
+          "examples": [
+            "1970-01-01 00:00:01.400039940",
+            "1970-01-01 00:00:01.347152340",
+            "1970-01-01 00:00:01.377302340"
+          ]
+        },
+        {
+          "latent": 97,
+          "score": 0.0615,
+          "n_active": 2449,
+          "examples": [
+            "1970-01-01 00:00:01.353983560",
+            "1970-01-01 00:00:01.326341460",
+            "1970-01-01 00:00:01.367381460"
+          ]
+        },
+        {
+          "latent": 378,
+          "score": 0.0574,
+          "n_active": 683,
+          "examples": [
+            "1970-01-01 00:00:01.416271440",
+            "1970-01-01 00:00:01.418273940",
+            "1970-01-01 00:00:01.377143940"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 373,
+      "n_removed": 139,
+      "threshold": 0.0411,
+      "passed_test": 25,
+      "removed_norm_ratio": 0.4219,
+      "var_share_kept": 0.4439,
+      "var_share_sae_error": 0.3008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 16,
+          "score": 0.0808,
+          "n_active": 1352,
+          "examples": [
+            "\"This will be my first collection of short stories, written from ideas and scraps of ideas that I've had since I was a young child.\"",
+            "\"I am in the process of organizing a series of writings on LOVE & COMPASSION & pairing them with photographs taken on Pilgrimage.\"",
+            "\"I've written more than enough material for my follow-up CD.  I have, also, a couple excitingly new ideas for the final product.\""
+          ]
+        },
+        {
+          "latent": 60,
+          "score": 0.0745,
+          "n_active": 1071,
+          "examples": [
+            "\"We provide a fun and supportive competition and expo that encourages, inspires, rewards and celebrates high school artists statewide!\"",
+            "\"Let's create fun!\"",
+            "\"Painting with Positivity is an opportunity for people of all skill levels and ages to experience the joy of painting and have FUN!\""
+          ]
+        },
+        {
+          "latent": 366,
+          "score": 0.0666,
+          "n_active": 857,
+          "examples": [
+            "\"SPEAK! is a multimedia, symphonic advocacy concert meant to raise awareness on different issues affecting Uganda today.\"",
+            "\"Do you know who is on-scene? Lack of firefighter accountability is one of the top five causes of firefighter deaths each year.\"",
+            "\"Weekly In-depth interview show with thought leaders on the issues shaping the future. Land Claims, pipelines, tankers, LNG and more.\""
+          ]
+        },
+        {
+          "latent": 475,
+          "score": 0.0656,
+          "n_active": 1159,
+          "examples": [
+            "\"Let's break some expensive technology and put the videos on YouTube!  Take that, technology!\"",
+            "\"Check out one of our Music videos with the following link: http://www.youtube.com/watch?v=l0_-ANEOQC4\"",
+            "\"Every up and coming artist needs a music video. How else can people understand the music and get a visual of who you are.\""
+          ]
+        },
+        {
+          "latent": 140,
+          "score": 0.0644,
+          "n_active": 685,
+          "examples": [
+            "\"The PQ MINI is a revolutionary smart-charging device that can fit into the palm of your hand, equipped with 3 USB ports + 2 AC outlets\"",
+            "\"A truly slim wireless charging case for iPhone 6 & the ultimate wireless charging dock for Qi-compatible smartphones & small tablets.\"",
+            "\"A proof of concept leading to a re-chargeable quadcopter for reconnaissance and other rover support operations.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 344,
+      "n_removed": 168,
+      "threshold": 0.0378,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.4663,
+      "var_share_kept": 0.4413,
+      "var_share_sae_error": 0.2723,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 102,
+          "score": 0.086,
+          "n_active": 4444,
+          "examples": [
+            "\"kit\"",
+            "\"crest\"",
+            "\"techtable\""
+          ]
+        },
+        {
+          "latent": 375,
+          "score": 0.0634,
+          "n_active": 611,
+          "examples": [
+            "\"butterfly-bag-italian-plexiglass-and-leather-bags\"",
+            "\"babylon-road-backpack-removable-pocket\"",
+            "\"satchel-and-page-leather-bags-guaranteed-for-life\""
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.0492,
+          "n_active": 553,
+          "examples": [
+            "\"web-weekend\"",
+            "\"sharzet-social-networking-with-no-limits-web-site\"",
+            "\"charlies-the-web-show\""
+          ]
+        },
+        {
+          "latent": 437,
+          "score": 0.0459,
+          "n_active": 958,
+          "examples": [
+            "\"a-desert-rose-feature-film\"",
+            "\"christian-faith-based-feature-film-away\"",
+            "\"a-film-made-by-israelis-arabs-europeans-and-1-amer\""
+          ]
+        },
+        {
+          "latent": 4,
+          "score": 0.0407,
+          "n_active": 1169,
+          "examples": [
+            "\"breakfast-bento\"",
+            "\"happy-little-guy\"",
+            "\"the-lonely-detective\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 320,
+      "n_removed": 192,
+      "threshold": 0.0385,
+      "passed_test": 22,
+      "removed_norm_ratio": 0.5151,
+      "var_share_kept": 0.3746,
+      "var_share_sae_error": 0.2923,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 112,
+          "score": 0.0789,
+          "n_active": 3688,
+          "examples": [
+            "\"Entity\"",
+            "\"Tin\"",
+            "\"Home\""
+          ]
+        },
+        {
+          "latent": 494,
+          "score": 0.0548,
+          "n_active": 1010,
+          "examples": [
+            "\"Politi-Score:  Vote Smarter\"",
+            "\"Mockery of Democracy\"",
+            "\"The 99 - Political Pop Done Right!\""
+          ]
+        },
+        {
+          "latent": 448,
+          "score": 0.0506,
+          "n_active": 512,
+          "examples": [
+            "\"The Clean Cup\u2122- Portable and Automatic Beer Pong Ball Washer\"",
+            "\"Litter Picking Interactive Robots to Clean Up The DirtyBeach\"",
+            "\"ClickerBelt - a ratcheting belt that is ready for action\""
+          ]
+        },
+        {
+          "latent": 470,
+          "score": 0.0459,
+          "n_active": 863,
+          "examples": [
+            "\"Debut Album\"",
+            "\"New Album\"",
+            "\"New Studio Album\""
+          ]
+        },
+        {
+          "latent": 236,
+          "score": 0.0456,
+          "n_active": 899,
+          "examples": [
+            "\"Unhappily Mistaken - I'm not sure of what I need or desire.\"",
+            "\"Should I Stay Or Should I Go?\"",
+            "\"They Need (US)\""
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.3125965839075464,
+  "test_error": 3.3125965839075464,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8982494092488865,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1301.2717266082764,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 455,
+      "n_removed": 455,
+      "var_share_removed": 0.1553,
+      "var_share_sae_error": 0.0957,
+      "top": [
+        {
+          "group": 1852,
+          "latents": [
+            1108
+          ],
+          "gain_margin": 3749.47,
+          "examples": [
+            "\u9996\u9e9f\u5f71\u8996\u6b4c",
+            "\u5982\u679c\u96f2\u77e5\u9053",
+            "\u6d2a\u69ae\u5b8f\u53f0\u8a9e\u7cbe\u9078"
+          ]
+        },
+        {
+          "group": 1936,
+          "latents": [
+            276
+          ],
+          "gain_margin": 2479.72,
+          "examples": [
+            "Estamos de P\u00e9 (Ao Vivo)",
+            "Ao Vivo em Marechal Hermes",
+            "Por Voc\u00ea Ao Vivo"
+          ]
+        },
+        {
+          "group": 1999,
+          "latents": [
+            278
+          ],
+          "gain_margin": 2207.14,
+          "examples": [
+            "Seresta, Vol. 14 (Ao Vivo)",
+            "Ao Vivo no Recife, Vol. 18",
+            "Sobre N\u00f3s (Ao Vivo)"
+          ]
+        },
+        {
+          "group": 1986,
+          "latents": [
+            131
+          ],
+          "gain_margin": 1889.52,
+          "examples": [
+            "Pegao",
+            "Filho de Le\u00e3o",
+            "Aguente, Guerreiro"
+          ]
+        },
+        {
+          "group": 2045,
+          "latents": [
+            94
+          ],
+          "gain_margin": 1699.53,
+          "examples": [
+            "Dharmatma",
+            "Bollywood Love Instrumentals, Vol. 2",
+            "Hindi Slowed Reverb Bollywood Lofi"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 108,
+      "n_removed": 108,
+      "var_share_removed": 0.0448,
+      "var_share_sae_error": 0.0858,
+      "top": [
+        {
+          "group": 1067,
+          "latents": [
+            1373
+          ],
+          "gain_margin": 4010.21,
+          "examples": [
+            "Salim\u2013Sulaiman;Rahat Fateh Ali Khan",
+            "Siavash Amini;Sa\u00e5ad",
+            "Pritam;Rahat Fateh Ali Khan;Tulsi Kumar"
+          ]
+        },
+        {
+          "group": 2045,
+          "latents": [
+            94
+          ],
+          "gain_margin": 1516.95,
+          "examples": [
+            "Ajay-Atul;Vishal Dadlani",
+            "Udit Narayan",
+            "Vishal Chandrashekhar;S.P. Charan;Ramya Behra"
+          ]
+        },
+        {
+          "group": 1306,
+          "latents": [
+            735
+          ],
+          "gain_margin": 1295.6,
+          "examples": [
+            "Hillsong Worship",
+            "Hillsong Worship",
+            "Hillsong Worship"
+          ]
+        },
+        {
+          "group": 1359,
+          "latents": [
+            641
+          ],
+          "gain_margin": 1168.91,
+          "examples": [
+            "Claire Kuo",
+            "Janice Vidal",
+            "Janice Vidal"
+          ]
+        },
+        {
+          "group": 821,
+          "latents": [
+            1082
+          ],
+          "gain_margin": 1153.7,
+          "examples": [
+            "George Jones;Tammy Wynette",
+            "George Jones;Waylon Jennings",
+            "George Strait"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 571,
+      "n_removed": 571,
+      "var_share_removed": 0.1565,
+      "var_share_sae_error": 0.1072,
+      "top": [
+        {
+          "group": 200,
+          "latents": [
+            1710
+          ],
+          "gain_margin": 3513.6,
+          "examples": [
+            "\u4e0d\u5c07\u5c31 (\u96fb\u5f71\"\u4f55\u4ee5\u7b19\u7c2b\u9ed8\"\u7247\u5c3e\u66f2)",
+            "\u6211\u73fe\u5728\u6703\u597d\u597d\u7684 - TVBS\u300c\u5973\u529b\u5831\u5230\u611b\u7684\u6545\u4e8b\u300d\u7247\u5c3e\u66f2",
+            "\u7121\u754f\u7684\u80a9\u818a - \u5287\u96c6 \"\u8df3\u8e8d\u751f\u547d\u7dda\" \u4e3b\u984c\u66f2"
+          ]
+        },
+        {
+          "group": 1982,
+          "latents": [
+            276
+          ],
+          "gain_margin": 3230.19,
+          "examples": [
+            "Se Quer Saber - Ao Vivo",
+            "Sobre N\u00f3s - Ao Vivo",
+            "D\u00ea Um Rol\u00ea - Ao Vivo"
+          ]
+        },
+        {
+          "group": 1869,
+          "latents": [
+            94
+          ],
+          "gain_margin": 2559.19,
+          "examples": [
+            "Maa Par Rakhna Vishwas (From \"Maa Ka Bulawa Aaya Hai\")",
+            "Ek Tukda Dhoop (From \"Thappad\")",
+            "Kho Gaye Hum Kahan"
+          ]
+        },
+        {
+          "group": 976,
+          "latents": [
+            1304
+          ],
+          "gain_margin": 2419.89,
+          "examples": [
+            "\u546a\u3044\u306e\u30b7\u30e3\u30fb\u30ca\u30fb\u30ca\u30fb\u30ca",
+            "\u30d4\u30fc\u30c1\u30fb\u30b7\u30e3\u30fc\u30d9\u30c3\u30c8",
+            "\u30d6\u30e9\u30c3\u30c9\u30b5\u30fc\u30ad\u30e5\u30ec\u30fc\u30bf\u30fc"
+          ]
+        },
+        {
+          "group": 1364,
+          "latents": [
+            131
+          ],
+          "gain_margin": 2091.92,
+          "examples": [
+            "Arranh\u00e3o",
+            "Sexy Popo",
+            "Moro onde n\u00e3o mora ningu\u00e9m"
+          ]
+        }
+      ]
+    }
+  }
+}

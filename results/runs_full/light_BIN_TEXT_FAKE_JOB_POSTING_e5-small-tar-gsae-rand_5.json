@@ -1,0 +1,243 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9167548686127652,
+  "test_error": 0.08324513138723477,
+  "course_metric": "auroc",
+  "course_score": 0.9167548686127651,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 48.68080449104309,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2032,
+      "n_groups": 2031,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1455,
+      "n_removed": 1456,
+      "var_share_removed": 0.658,
+      "var_share_sae_error": 0.0643,
+      "top": [
+        {
+          "group": 1013,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 3690.46,
+          "examples": [
+            "Our company\u00a0\u00a0is seeking applications for a (temporary) full time motivated Data Entry/Receptionist. On a daily basis, the receptionist will be responsible for a",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            480
+          ],
+          "gain_margin": 3398.88,
+          "examples": [
+            "Part Time Students Or Workers Required.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cas",
+            "Weekly PART TIME Cash Job, Staff Required.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest ",
+            "We are a company looking for qualified individuals to help out withwriting tasks such as:- Short stories- Movie scripts- Sales scripts- Articles- News feeds- PR"
+          ]
+        },
+        {
+          "group": 2026,
+          "latents": [
+            294
+          ],
+          "gain_margin": 2482.53,
+          "examples": [
+            "Find more jobs at #URL_1efb08d6a6da1c56afb2d0c686e1ed0dc14d0fbcb22482369e8a69999aa0d278#/Apply using below link#URL_1efb08d6a6da1c56afb2d0c686e1ed0dc14d0fbcb224",
+            "Apply using below link#URL_acc13645508c15bb34a3d8b375e426d8daaa5e816ff9cbbf2e580a9366d886bd#Fayetteville, GAMake an impact, without working weekends and holiday",
+            "Optometric private practice group is seeking a full-time Optician/Lab Technician for our Chickasha, Oklahoma location.\u00a0To apply for this position, please submit"
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            1514
+          ],
+          "gain_margin": 2194.92,
+          "examples": [
+            "Part Time Cash Jobs To Immediate Starts.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra Per ",
+            "Apply using below link#URL_4cce87e142f289388ee47f4f3825ea3b2d7bbe9132f7ac0bc280c8ae8517c3df#Overview - Provides technical and usability support to all users reg",
+            "2178Job Title: Manufacturing Engineer MoldingRole: Engineering or RelatedRelocation Available: YesIndustry: ManufacturingLocation: South CarolinaTown / City: Ga"
+          ]
+        },
+        {
+          "group": 92,
+          "latents": [
+            1912
+          ],
+          "gain_margin": 2050.8,
+          "examples": [
+            "Apply using below link directly#URL_af5a5359031a8a3cc7e8470a968b29cd570f6ae4618d7a0c71c85c549a7db225#The Director of PeriAnesthesia is responsible for directing",
+            "Find more jobs at #URL_1efb08d6a6da1c56afb2d0c686e1ed0dc14d0fbcb22482369e8a69999aa0d278#Apply to this job using below link#URL_1efb08d6a6da1c56afb2d0c686e1ed0dc",
+            "Apply using below link#URL_cf955625ede97e1444d64f9efbdd5c61a812c7444ce84be35525380f7549cf19#Clinical Director - Surgical ServicesPocono Health System (PHS) is u"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 342,
+      "n_groups": 326,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 290,
+      "n_removed": 306,
+      "var_share_removed": 0.7466,
+      "var_share_sae_error": 0.0025,
+      "top": [
+        {
+          "group": 64,
+          "latents": [
+            1185
+          ],
+          "gain_margin": 227.38,
+          "examples": [
+            "20-3075",
+            "29120-37440",
+            "20-25"
+          ]
+        },
+        {
+          "group": 319,
+          "latents": [
+            480
+          ],
+          "gain_margin": 149.5,
+          "examples": [
+            "20-3075",
+            "13-20",
+            "25-30"
+          ]
+        },
+        {
+          "group": 275,
+          "latents": [
+            838
+          ],
+          "gain_margin": 65.83,
+          "examples": [
+            "1000-2000",
+            "1000-2000",
+            "0-2000"
+          ]
+        },
+        {
+          "group": 104,
+          "latents": [
+            1685
+          ],
+          "gain_margin": 34.8,
+          "examples": [
+            "22-28",
+            "25-30",
+            "18-22"
+          ]
+        },
+        {
+          "group": 81,
+          "latents": [
+            1607
+          ],
+          "gain_margin": 14.42,
+          "examples": [
+            "21600-31200",
+            "21600-31200",
+            "21600-31200"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1963,
+      "n_groups": 1957,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1502,
+      "n_removed": 1503,
+      "var_share_removed": 0.7146,
+      "var_share_sae_error": 0.0268,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            227,
+            294,
+            480
+          ],
+          "gain_margin": 4829.69,
+          "examples": [
+            "Data Entry, Clerical Admin, Administrative Assistant, Customer Service, Accounting, payroll Clerk, Book keeping",
+            "RN, SURGERY UNIT DIRECTOR  ",
+            "Operating Room RN "
+          ]
+        },
+        {
+          "group": 466,
+          "latents": [
+            1514
+          ],
+          "gain_margin": 1800.55,
+          "examples": [
+            "Cash Job Opportunity To Immediate Start.",
+            "Well Paid Cash Jobs To Start Immediately. ",
+            "Administrative Assistant/Front Desk Clerk"
+          ]
+        },
+        {
+          "group": 486,
+          "latents": [
+            1773
+          ],
+          "gain_margin": 611.34,
+          "examples": [
+            "Cruise Staff Wanted *URGENT*",
+            "Cruise Staff Wanted *URGENT*",
+            "Account Sales Managers $80-$130,000/yr"
+          ]
+        },
+        {
+          "group": 1688,
+          "latents": [
+            386
+          ],
+          "gain_margin": 332.66,
+          "examples": [
+            "Urgently Required System Administrator for  Bahrain",
+            "Immediate Staff Needed For Cash Positions.",
+            "Immediate Opening : Oracle Developer for  Bahrain"
+          ]
+        },
+        {
+          "group": 777,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 267.29,
+          "examples": [
+            "Weekly PART TIME Cash Job, Staff Required.",
+            "Great Part Time Jobs & Cash In Hand Jobs.",
+            "CASH Paying Vacancies (Apply Today)"
+          ]
+        }
+      ]
+    }
+  }
+}

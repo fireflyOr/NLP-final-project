@@ -1,0 +1,399 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7041479318283657,
+  "test_error": 0.29585206817163434,
+  "course_metric": "auroc",
+  "course_score": 0.7041479318283658,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 89.20984554290771,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 568,
+      "n_groups": 450,
+      "n_multi_groups": 86,
+      "n_groups_dropped": 300,
+      "n_removed": 372,
+      "var_share_removed": 0.5138,
+      "var_share_sae_error": 0.0143,
+      "top": [
+        {
+          "group": 27,
+          "latents": [
+            615,
+            1493,
+            1511
+          ],
+          "gain_margin": 545.06,
+          "examples": [
+            "1970-01-01 00:00:01.405040102",
+            "1970-01-01 00:00:01.405050040",
+            "1970-01-01 00:00:01.405308207"
+          ]
+        },
+        {
+          "group": 55,
+          "latents": [
+            976,
+            1154,
+            1886
+          ],
+          "gain_margin": 413.38,
+          "examples": [
+            "1970-01-01 00:00:01.423020106",
+            "1970-01-01 00:00:01.424021080",
+            "1970-01-01 00:00:01.426201711"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            1023,
+            1334,
+            1996
+          ],
+          "gain_margin": 150.14,
+          "examples": [
+            "1970-01-01 00:00:01.404102617",
+            "1970-01-01 00:00:01.404162620",
+            "1970-01-01 00:00:01.404926320"
+          ]
+        },
+        {
+          "group": 324,
+          "latents": [
+            186
+          ],
+          "gain_margin": 133.08,
+          "examples": [
+            "1970-01-01 00:00:01.364544277",
+            "1970-01-01 00:00:01.363002074",
+            "1970-01-01 00:00:01.361220109"
+          ]
+        },
+        {
+          "group": 369,
+          "latents": [
+            934
+          ],
+          "gain_margin": 120.59,
+          "examples": [
+            "1970-01-01 00:00:01.406170201",
+            "1970-01-01 00:00:01.406075322",
+            "1970-01-01 00:00:01.406810181"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 622,
+      "n_groups": 550,
+      "n_multi_groups": 59,
+      "n_groups_dropped": 358,
+      "n_removed": 386,
+      "var_share_removed": 0.463,
+      "var_share_sae_error": 0.0097,
+      "top": [
+        {
+          "group": 34,
+          "latents": [
+            779,
+            1711
+          ],
+          "gain_margin": 239.86,
+          "examples": [
+            "1970-01-01 00:00:01.374210000",
+            "1970-01-01 00:00:01.373310000",
+            "1970-01-01 00:00:01.343005200"
+          ]
+        },
+        {
+          "group": 414,
+          "latents": [
+            405
+          ],
+          "gain_margin": 236.83,
+          "examples": [
+            "1970-01-01 00:00:01.373562000",
+            "1970-01-01 00:00:01.394179140",
+            "1970-01-01 00:00:01.376377140"
+          ]
+        },
+        {
+          "group": 289,
+          "latents": [
+            1171
+          ],
+          "gain_margin": 215.17,
+          "examples": [
+            "1970-01-01 00:00:01.366919194",
+            "1970-01-01 00:00:01.372019293",
+            "1970-01-01 00:00:01.370196192"
+          ]
+        },
+        {
+          "group": 455,
+          "latents": [
+            101
+          ],
+          "gain_margin": 201.57,
+          "examples": [
+            "1970-01-01 00:00:01.404781200",
+            "1970-01-01 00:00:01.387141200",
+            "1970-01-01 00:00:01.403125500"
+          ]
+        },
+        {
+          "group": 522,
+          "latents": [
+            685
+          ],
+          "gain_margin": 182.87,
+          "examples": [
+            "1970-01-01 00:00:01.356152340",
+            "1970-01-01 00:00:01.356152340",
+            "1970-01-01 00:00:01.341115140"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2044,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1252,
+      "n_removed": 1252,
+      "var_share_removed": 0.3837,
+      "var_share_sae_error": 0.1672,
+      "top": [
+        {
+          "group": 2033,
+          "latents": [
+            785
+          ],
+          "gain_margin": 547.95,
+          "examples": [
+            "\"I would like to travel to japan and get pics of people, places and the great history of Nippon.\"",
+            "\"Would like to start a brand of clothes based off of my facebook page.\"",
+            "\"I want to start a blog that will highlight crowdsourced projects that are actually worth funding.\""
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            271,
+            346
+          ],
+          "gain_margin": 522.61,
+          "examples": [
+            "\"We're raising the funds to make an awesome Holiday ALBUM!\"",
+            "\"We are in the process of releasing our debut album and would love for you to be a part of it!\"",
+            "\"To follow up our debut album, we hope to release another record in 2013, w/your help & w/out a label. Help by Pre-ordering our album!\""
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            355,
+            1664
+          ],
+          "gain_margin": 426.46,
+          "examples": [
+            "\"A film podcast that allows your average, everyday moviegoer the opportunity to gush about their favorite movies.\"",
+            "\"This is a short student film. It's my first year thesis project towards achieving my Masters in Filmmaking.\"",
+            "\"A short film that shows why they don't make teen movies about girls wanting to lose their virginity.\""
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            1588
+          ],
+          "gain_margin": 300.54,
+          "examples": [
+            "\"Epic Fantasy novel seeking publishers and/or funding for promotion.  Paperback and Kindle available.\"",
+            "\"A 28mm scale fantasy dwarven realm terrain set that is modular and can be disassembled for easy storage and transport.\"",
+            "\"Darkest Dungeon is a challenging gothic roguelike RPG about the psychological stresses of adventuring. Descend at your peril!\""
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            664,
+            1482
+          ],
+          "gain_margin": 294.67,
+          "examples": [
+            "\"Mobile app to help not use text features of smart devices to avoid texting while driving which is an increasing danger to road users.\"",
+            "\"The Fire App is an app that turns your cell phone into a Smoke Detector and an Anti -Terrorist Emergency Alert System that saves lives.\"",
+            "\"Sketch iPhone and Android designs on paper, straight on a (slightly) interactive, phone sized, handheld tool.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1235,
+      "n_removed": 1236,
+      "var_share_removed": 0.3916,
+      "var_share_sae_error": 0.1437,
+      "top": [
+        {
+          "group": 2036,
+          "latents": [
+            394
+          ],
+          "gain_margin": 355.62,
+          "examples": [
+            "\"help-generation-maze-release-their-first-album\"",
+            "\"sefiros-dither-new-album-release\"",
+            "\"its-time-for-a-new-jaclyn-falk-album\""
+          ]
+        },
+        {
+          "group": 1388,
+          "latents": [
+            531
+          ],
+          "gain_margin": 199.56,
+          "examples": [
+            "\"the-business-owners-bible-epiphanies\"",
+            "\"building-my-business\"",
+            "\"meo-cleo-and-cat2-adventures-in-business\""
+          ]
+        },
+        {
+          "group": 1960,
+          "latents": [
+            1203
+          ],
+          "gain_margin": 195.89,
+          "examples": [
+            "\"broken-earth-post-apocalyptic-rpg-adventure\"",
+            "\"mobile-geocaching-based-rpg-game-promoting-active\"",
+            "\"the-evolve-narrative-gaming-system\""
+          ]
+        },
+        {
+          "group": 835,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 184.85,
+          "examples": [
+            "\"like-me-a-documentary-about-social-media\"",
+            "\"reflections-on-race-a-personal-documentary\"",
+            "\"gringo-trails-a-documentary\""
+          ]
+        },
+        {
+          "group": 1732,
+          "latents": [
+            72
+          ],
+          "gain_margin": 179.68,
+          "examples": [
+            "\"microview-chip-sized-arduino-with-built-in-oled-di\"",
+            "\"combining-two-ancient-arts-storytelling-and-spinni\"",
+            "\"the-arduino-compatible-4x4-keypad-matrix-processor\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1260,
+      "n_removed": 1261,
+      "var_share_removed": 0.3796,
+      "var_share_sae_error": 0.157,
+      "top": [
+        {
+          "group": 30,
+          "latents": [
+            2029
+          ],
+          "gain_margin": 918.72,
+          "examples": [
+            "\"Skateboard graphic Art Collaboration (Canceled)\"",
+            "\"APEXvj TURBO: Supercharged Music Visualization (Canceled)\"",
+            "\"Graphic Design Studio (Canceled)\""
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            958
+          ],
+          "gain_margin": 893.59,
+          "examples": [
+            "\"X (Canceled)\"",
+            "\"x (Canceled)\"",
+            "\"Canceled (Canceled)\""
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            1643
+          ],
+          "gain_margin": 318.91,
+          "examples": [
+            "\"Keepers of the Sun. (Canceled)\"",
+            "\"The Nerds Haul (Canceled)\"",
+            "\"Desiree's New Baking Endeavor (Canceled)\""
+          ]
+        },
+        {
+          "group": 874,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 219.96,
+          "examples": [
+            "\"Documentary on Korean Education\"",
+            "\"Ma Maison - A Documentary\"",
+            "\"CLOSURE - Adoption Documentary\""
+          ]
+        },
+        {
+          "group": 1566,
+          "latents": [
+            346
+          ],
+          "gain_margin": 193.94,
+          "examples": [
+            "\"Redefining an Album\"",
+            "\"Making the Album\"",
+            "\"My  First  Album\""
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,328 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -4251.011167174512,
+  "test_error": 4251.011167174512,
+  "course_metric": "r2",
+  "course_score": 0.9779711972727488,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 59.09833478927612,
+  "diagnostics": {
+    "date_first_hired": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1065,
+      "n_groups": 859,
+      "n_multi_groups": 115,
+      "n_groups_dropped": 609,
+      "n_removed": 652,
+      "var_share_removed": 0.1063,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 338,
+          "latents": [
+            964
+          ],
+          "gain_margin": 671.28,
+          "examples": [
+            "2016-10-31",
+            "2016-10-31",
+            "2016-10-31"
+          ]
+        },
+        {
+          "group": 171,
+          "latents": [
+            115,
+            126
+          ],
+          "gain_margin": 606.44,
+          "examples": [
+            "1990-09-24",
+            "1990-04-02",
+            "1990-08-27"
+          ]
+        },
+        {
+          "group": 57,
+          "latents": [
+            198,
+            887
+          ],
+          "gain_margin": 403.92,
+          "examples": [
+            "1982-12-20",
+            "1982-12-20",
+            "1982-01-31"
+          ]
+        },
+        {
+          "group": 34,
+          "latents": [
+            496,
+            635,
+            816,
+            841
+          ],
+          "gain_margin": 326.07,
+          "examples": [
+            "2015-06-15",
+            "2015-06-15",
+            "2015-06-15"
+          ]
+        },
+        {
+          "group": 7,
+          "latents": [
+            11,
+            264,
+            440,
+            567,
+            788,
+            1264,
+            1755,
+            1824,
+            1928
+          ],
+          "gain_margin": 303.53,
+          "examples": [
+            "2013-01-31",
+            "2013-01-31",
+            "2013-01-31"
+          ]
+        }
+      ]
+    },
+    "division": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1384,
+      "n_groups": 1384,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 834,
+      "n_removed": 834,
+      "var_share_removed": 0.2623,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 354,
+          "latents": [
+            1491
+          ],
+          "gain_margin": 695.18,
+          "examples": [
+            "FSB Traffic Division School Safety Section",
+            "FSB Traffic Division School Safety Section",
+            "FSB Traffic Division School Safety Section"
+          ]
+        },
+        {
+          "group": 164,
+          "latents": [
+            1600
+          ],
+          "gain_margin": 346.64,
+          "examples": [
+            "Transit Commuter Services Trips",
+            "Transit Commuter Services Trips",
+            "Transit Commuter Services Trips"
+          ]
+        },
+        {
+          "group": 455,
+          "latents": [
+            1402
+          ],
+          "gain_margin": 325.17,
+          "examples": [
+            "Chief Administrative Officer's Office",
+            "Chief Administrative Officer's Office",
+            "Chief Administrative Officer's Office"
+          ]
+        },
+        {
+          "group": 557,
+          "latents": [
+            1268
+          ],
+          "gain_margin": 311.97,
+          "examples": [
+            "Procurement Director",
+            "Director",
+            "Director"
+          ]
+        },
+        {
+          "group": 1006,
+          "latents": [
+            1325
+          ],
+          "gain_margin": 290.09,
+          "examples": [
+            "Director",
+            "Director",
+            "Director"
+          ]
+        }
+      ]
+    },
+    "employee_position_title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1047,
+      "n_groups": 1046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 494,
+      "n_removed": 494,
+      "var_share_removed": 0.1009,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 943,
+          "latents": [
+            1
+          ],
+          "gain_margin": 1850.41,
+          "examples": [
+            "Capital Projects Manager",
+            "Capital Projects Manager",
+            "Capital Projects Manager"
+          ]
+        },
+        {
+          "group": 87,
+          "latents": [
+            1945
+          ],
+          "gain_margin": 863.99,
+          "examples": [
+            "Director Office of Community Partnerships",
+            "Chief Administrative Officer",
+            "Director Department of Housing and Community Affairs"
+          ]
+        },
+        {
+          "group": 119,
+          "latents": [
+            1708
+          ],
+          "gain_margin": 854.88,
+          "examples": [
+            "Fire/Rescue Captain",
+            "Fire/Rescue Captain",
+            "Fire/Rescue Captain"
+          ]
+        },
+        {
+          "group": 775,
+          "latents": [
+            410
+          ],
+          "gain_margin": 779.78,
+          "examples": [
+            "Manager I",
+            "Manager I",
+            "Manager I"
+          ]
+        },
+        {
+          "group": 59,
+          "latents": [
+            1962
+          ],
+          "gain_margin": 737.91,
+          "examples": [
+            "Manager III",
+            "Manager III",
+            "Manager III"
+          ]
+        }
+      ]
+    },
+    "full_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2039,
+      "n_groups": 2035,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1388,
+      "n_removed": 1391,
+      "var_share_removed": 0.5561,
+      "var_share_sae_error": 0.0595,
+      "top": [
+        {
+          "group": 2004,
+          "latents": [
+            382
+          ],
+          "gain_margin": 51.6,
+          "examples": [
+            "David, Gail S.",
+            "Lee, David C.",
+            "Carter, David C."
+          ]
+        },
+        {
+          "group": 1962,
+          "latents": [
+            39
+          ],
+          "gain_margin": 32.82,
+          "examples": [
+            "Woodward, Ervin L.",
+            "Schmuck, Romand B.",
+            "Gasca, Edgard D."
+          ]
+        },
+        {
+          "group": 1730,
+          "latents": [
+            1037
+          ],
+          "gain_margin": 29.62,
+          "examples": [
+            "Stone, Noah F.",
+            "Sanders, Jonathan S.",
+            "Dibble, Bonny J."
+          ]
+        },
+        {
+          "group": 1338,
+          "latents": [
+            1210
+          ],
+          "gain_margin": 27.33,
+          "examples": [
+            "Lewis, Kenneth S.",
+            "Lewis, Anthony R.",
+            "Lewis, Gary W. JR.."
+          ]
+        },
+        {
+          "group": 353,
+          "latents": [
+            1776
+          ],
+          "gain_margin": 24.65,
+          "examples": [
+            "Wu, Shan-Chun",
+            "Baker, Bret A.",
+            "Crabbe, Kingsley A."
+          ]
+        }
+      ]
+    }
+  }
+}

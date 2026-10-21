@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8101615736159391,
+  "test_error": 0.1898384263840609,
+  "course_metric": "auroc",
+  "course_score": 0.8101615736159391,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 41.078062534332275,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 384,
+      "n_removed": 128,
+      "threshold": 0.0414,
+      "passed_test": 29,
+      "removed_norm_ratio": 0.3293,
+      "var_share_kept": 0.5009,
+      "var_share_sae_error": 0.3209,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 3,
+          "score": 0.2145,
+          "n_active": 733,
+          "examples": [
+            "Special kind of stupid, that.",
+            "It is a pretty stupid situation.",
+            "She is such an IDIOT"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1252,
+          "n_active": 824,
+          "examples": [
+            "She is gross.",
+            "This has gone from VERY bad to worse yet to come.",
+            "EUGREEN  is in Horrible trouble."
+          ]
+        },
+        {
+          "latent": 29,
+          "score": 0.1118,
+          "n_active": 1321,
+          "examples": [
+            "LMAO. What a joke.",
+            "No, that makes no sense whatsoever.",
+            "STFU Berkowshitz\n\nYou're a real asshole"
+          ]
+        },
+        {
+          "latent": 458,
+          "score": 0.081,
+          "n_active": 699,
+          "examples": [
+            "For the record, the AFC pre-De Vos invited Rose. It's credibility, through no fault of the other members, went out the window when he joined last year, I believ",
+            "Another head buried in the sand that can't handle the truth.",
+            "So unfair."
+          ]
+        },
+        {
+          "latent": 187,
+          "score": 0.0768,
+          "n_active": 785,
+          "examples": [
+            "\u201cWho alone has immortality, who dwells in unapproachable light, and whom no human being has seen or can see.  To him be honor and eternal power. Amen\u201d (1 Timoth",
+            "Attack the messenger.",
+            "'\nThis is all about Trump teasing Mitt and he will continue to draw him in until he sees the best opportunity to attempt to publicly humiliate him.\n\nMitt is on "
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 327,
+      "n_kept": 334,
+      "n_removed": 178,
+      "threshold": 0.0439,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.8509,
+      "var_share_kept": 0.2412,
+      "var_share_sae_error": 0.0308,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 170,
+          "score": 0.03,
+          "n_active": 22,
+          "examples": [
+            "2017-01-31 16:32:01.501428",
+            "2017-01-26 07:12:21.501036",
+            "2017-04-18 09:50:47.501267"
+          ]
+        },
+        {
+          "latent": 384,
+          "score": 0.0272,
+          "n_active": 102,
+          "examples": [
+            "2016-04-22 08:17:30.841930",
+            "2017-01-30 02:42:19.841671",
+            "2017-05-25 20:00:28.842694"
+          ]
+        },
+        {
+          "latent": 482,
+          "score": 0.0271,
+          "n_active": 230,
+          "examples": [
+            "2017-08-10 14:38:00.887743",
+            "2017-08-24 00:48:43.010717",
+            "2017-01-28 23:19:34.429717"
+          ]
+        },
+        {
+          "latent": 269,
+          "score": 0.026,
+          "n_active": 376,
+          "examples": [
+            "2016-06-18 17:20:25.067741",
+            "2017-06-14 13:33:16.166841",
+            "2017-09-07 22:09:14.358941"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.025,
+          "n_active": 307,
+          "examples": [
+            "2016-11-24 17:35:19.707054",
+            "2017-03-14 13:00:31.703802",
+            "2016-12-09 05:14:31.709514"
+          ]
+        }
+      ]
+    }
+  }
+}

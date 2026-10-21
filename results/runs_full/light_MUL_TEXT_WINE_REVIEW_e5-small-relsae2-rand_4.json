@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4326613125547363,
+  "test_error": 1.4326613125547363,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9641753168844652,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 58.65792179107666,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 503,
+      "n_removed": 9,
+      "threshold": 0.0523,
+      "passed_test": 245,
+      "removed_norm_ratio": 0.0632,
+      "var_share_kept": 0.7536,
+      "var_share_sae_error": 0.2177,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 40,
+          "score": 0.3617,
+          "n_active": 579,
+          "examples": [
+            "Made in the popular style, this Chardonnay features buttered popcorn, pineapple jam and buttered toast flavors. Turns cloyingly sweet on the finish.",
+            "The 2006 Chardonnay is another excellent bottle from this Oregon n\u00e9gociant, offering ripe and luscious fruit flavors of pear, apple, quince and kiwi. As the win",
+            "Made in the modern style of ripe fruit and elaborate oak, this rich, creamy Chardonnay features pineapple jam, peach pie and toasty vanilla flavors. It's a bit "
+          ]
+        },
+        {
+          "latent": 53,
+          "score": 0.3587,
+          "n_active": 458,
+          "examples": [
+            "Made in an off-dry style, this Riesling has honeyed flavors of a fruit juice blend of oranges, peaches and apples. It's simple, but crisp acidity contributes vi",
+            "There's nothing flashy about this dry, delicately framed Riesling. It's quietly elegant, focused on pristine lemon and lime flavors, along with bitter citrus pi",
+            "This broad, mouthfilling dry Riesling features powerful flavors of baked apple and dried spices, uplifted and amplified by oily, minerally accents. It's just a "
+          ]
+        },
+        {
+          "latent": 364,
+          "score": 0.3536,
+          "n_active": 369,
+          "examples": [
+            "This lusty Zin shows the briary, brambly character of Dry Creek Valley that always makes its Zins taste a little rustic, which in no way detracts from its delic",
+            "Textbook Russian River Zin, this is a big, powerful, lusty wine, with a briary, brambly profile. It's enormously complex in flavor, offering notes of fresh summ",
+            "From the folks who invented white Zinfandel, a freshly fruity, soft, slightly sweet wine with high enough acidity to keep it from palling. The color is pale pin"
+          ]
+        },
+        {
+          "latent": 100,
+          "score": 0.3144,
+          "n_active": 780,
+          "examples": [
+            "A pretty good Pinot that, at the equivalent of 10 bucks a bottle, is a nice buy. It's an easy wine, dry, light-bodied and silky, with modest cherry and spice fl",
+            "The ??? Pinot from Ayoub is a true mystery wine, made with fruit sourced from unnameable but exceptionally high-end sources. Flavors are subtle and elegant, wit",
+            "Soft and earthy, this Pinot has good raspberry and cherry fruit and cola flavors, and a nice application of oak. But it lacks the structure to give it livelines"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.2875,
+          "n_active": 1452,
+          "examples": [
+            "This blend is comprised of seven varieties that were sourced from nine vineyards. Despite a hint of green in the tannins and a bit of stem in the fruits, this s",
+            "This Roditis-Sauvignon blend starts with a soft, floral nose of lemon and peach and leads into crisp but rich flavors of citrus and flowers. Simple but a good e",
+            "This Rh\u00f4ne blend is scented with sharp-toned berry, spice, and menthol and it has an herbaceous note that is well-integrated and set against light tannins. Don'"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 486,
+      "n_kept": 494,
+      "n_removed": 18,
+      "threshold": 0.0627,
+      "passed_test": 361,
+      "removed_norm_ratio": 0.0735,
+      "var_share_kept": 0.9599,
+      "var_share_sae_error": 0.0005,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 465,
+          "score": 0.8426,
+          "n_active": 95,
+          "examples": [
+            "Moselle Luxembourgeoise",
+            "Moselle Luxembourgeoise",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.7474,
+          "n_active": 122,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "latent": 256,
+          "score": 0.6727,
+          "n_active": 243,
+          "examples": [
+            "Steiermark",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "latent": 460,
+          "score": 0.6524,
+          "n_active": 259,
+          "examples": [
+            "Lontu\u00e9 Valley",
+            "Loncomilla Valley",
+            "Loncomilla Valley"
+          ]
+        },
+        {
+          "latent": 471,
+          "score": 0.6484,
+          "n_active": 261,
+          "examples": [
+            "Ontario",
+            "Ontario",
+            "Ontario"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8801521953414619,
+  "test_error": 0.11984780465853806,
+  "course_metric": "auroc",
+  "course_score": 0.8801521953414617,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 49.30145978927612,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2041,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1462,
+      "n_removed": 1462,
+      "var_share_removed": 0.6052,
+      "var_share_sae_error": 0.0737,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            315,
+            480,
+            1173
+          ],
+          "gain_margin": 8260.37,
+          "examples": [
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 2039,
+          "latents": [
+            294
+          ],
+          "gain_margin": 1908.0,
+          "examples": [
+            "Advantage xPO is part of the Advantage Resourcing group, which is among the ten largest global staffing firms. Advantage specializes in providing contingent and",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 2018,
+          "latents": [
+            77
+          ],
+          "gain_margin": 548.4,
+          "examples": [
+            "Professionally and courteously answers incoming calls and directs callers as appropriateHandles inquiries from customers and publicGreets and directs visitors u",
+            "Hundreds of Freelance Jobs available every month for freelance designers, developers, writers and bloggers. Part of SaudiLancer - the most popular Freelance Blo",
+            "ResponsibilitiesWork directly with Finance, Legal and Senior Management on processing Ad Hoc requests as neededBe willing to learn and communicate with other de"
+          ]
+        },
+        {
+          "group": 1152,
+          "latents": [
+            227
+          ],
+          "gain_margin": 307.06,
+          "examples": [
+            "People who look good but aren't interested in the position right now",
+            "Let's post here candidates we like but don't have an open position for.",
+            "Place holder for candidates that apply to jobs we do not have listed."
+          ]
+        },
+        {
+          "group": 238,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 288.79,
+          "examples": [
+            "Responsible for all food production including that used for restaurants, banquetfunctions and other outlets. Develop menus, food purchase specifications andreci",
+            "We are a leading outsourced contact solutions provider that specializes in creating personalized call center\u00a0 solutions. We are a trusted business partner with ",
+            "Responsible for all food production including that used for restaurants, banquet functions and other outlets. Develop menus, food purchase specifications and re"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 357,
+      "n_groups": 337,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 276,
+      "n_removed": 295,
+      "var_share_removed": 0.6957,
+      "var_share_sae_error": 0.0025,
+      "top": [
+        {
+          "group": 80,
+          "latents": [
+            1440
+          ],
+          "gain_margin": 230.38,
+          "examples": [
+            "20-25",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "group": 328,
+          "latents": [
+            480
+          ],
+          "gain_margin": 147.77,
+          "examples": [
+            "30000-65000",
+            "22-61000",
+            "21-63000"
+          ]
+        },
+        {
+          "group": 329,
+          "latents": [
+            1605
+          ],
+          "gain_margin": 51.96,
+          "examples": [
+            "750-750",
+            "750-750",
+            "0-95000"
+          ]
+        },
+        {
+          "group": 100,
+          "latents": [
+            1772
+          ],
+          "gain_margin": 49.9,
+          "examples": [
+            "13-20",
+            "13-15",
+            "13-15"
+          ]
+        },
+        {
+          "group": 78,
+          "latents": [
+            1322
+          ],
+          "gain_margin": 46.8,
+          "examples": [
+            "93600-122720",
+            "85-140",
+            "13-20"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1975,
+      "n_groups": 1965,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 1474,
+      "n_removed": 1478,
+      "var_share_removed": 0.6641,
+      "var_share_sae_error": 0.0272,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            227,
+            294,
+            480
+          ],
+          "gain_margin": 5278.98,
+          "examples": [
+            "CASH JOBS, Part Time Workers Needed.",
+            "URGENT Job Full Time & Part Time, Cash Pay.",
+            "Part Time Cash Jobs To Immediate Starts."
+          ]
+        },
+        {
+          "group": 1963,
+          "latents": [
+            315
+          ],
+          "gain_margin": 905.77,
+          "examples": [
+            "Accounting Clerk/ $23",
+            "URGENT Job Full Time & Part Time, Cash Pay.",
+            "Weekly PART TIME Cash Job, Staff Required."
+          ]
+        },
+        {
+          "group": 1768,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 425.6,
+          "examples": [
+            "Great Part Time Jobs & Cash In Hand Jobs.",
+            "Cash In Hand Jobs To Begin This Week.",
+            "Looking for go getters that want to receive weekly P/T pay"
+          ]
+        },
+        {
+          "group": 719,
+          "latents": [
+            1189
+          ],
+          "gain_margin": 286.98,
+          "examples": [
+            "Bar manager in the hotel St. Regis Doha (Qatar)",
+            "Cash In Hand Jobs To Begin This Week.",
+            "Sous Chef - Upscale Restaurant"
+          ]
+        },
+        {
+          "group": 1900,
+          "latents": [
+            386
+          ],
+          "gain_margin": 219.45,
+          "examples": [
+            "Submit Your Resume for Upcoming Positions",
+            "Urgent Jobs (Part Time Workers Needed)",
+            "Hospitalist jobs in USA"
+          ]
+        }
+      ]
+    }
+  }
+}

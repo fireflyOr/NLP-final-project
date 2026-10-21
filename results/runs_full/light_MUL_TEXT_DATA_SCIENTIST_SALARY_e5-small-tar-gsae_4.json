@@ -1,0 +1,392 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4142442372087738,
+  "test_error": 1.4142442372087738,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8011200063283038,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 171.28363943099976,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 424,
+      "n_groups": 421,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 401,
+      "n_removed": 404,
+      "var_share_removed": 0.5471,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 68,
+          "latents": [
+            1768
+          ],
+          "gain_margin": 5573.84,
+          "examples": [
+            "0-3 yrs",
+            "0-3 yrs",
+            "0-3 yrs"
+          ]
+        },
+        {
+          "group": 61,
+          "latents": [
+            1776
+          ],
+          "gain_margin": 3848.22,
+          "examples": [
+            "10-19 yrs",
+            "10-19 yrs",
+            "10-19 yrs"
+          ]
+        },
+        {
+          "group": 264,
+          "latents": [
+            715
+          ],
+          "gain_margin": 2292.57,
+          "examples": [
+            "0-2 yrs",
+            "0-2 yrs",
+            "0-2 yrs"
+          ]
+        },
+        {
+          "group": 249,
+          "latents": [
+            148
+          ],
+          "gain_margin": 1872.78,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "group": 344,
+          "latents": [
+            751
+          ],
+          "gain_margin": 1508.06,
+          "examples": [
+            "1-1 yrs",
+            "1-1 yrs",
+            "0-1 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2003,
+      "n_groups": 2000,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1263,
+      "n_removed": 1265,
+      "var_share_removed": 0.3512,
+      "var_share_sae_error": 0.0378,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            44,
+            83
+          ],
+          "gain_margin": 12403.42,
+          "examples": [
+            "- At least 15+ years of experience in operations with managing multiple insurance Vertical like Life,Gene ...",
+            "Director - Finance, leading ecommerce company (CA + MBA required);- Strong preference for previous work ...",
+            "- 15+ years relevant experience with at least 5+ years as an Architect in a fast paced environment ..."
+          ]
+        },
+        {
+          "group": 1979,
+          "latents": [
+            208
+          ],
+          "gain_margin": 8434.69,
+          "examples": [
+            "Should OK with night shifts;Candidate typing speed should be good;Should be graduate;Requirement:;Should ...",
+            "0-1 years practical experience in SEO, WordPress and web design support;Very good English communication ...",
+            "Should have experience in call taking or call monitoring;Should be comfortable for 6 days of working ..."
+          ]
+        },
+        {
+          "group": 1985,
+          "latents": [
+            431
+          ],
+          "gain_margin": 5110.46,
+          "examples": [
+            "15+ years payment card financial services experience leading payment product and service fee-based ...",
+            "Technical Delivery head with 15 plus years experience;Good experience working with onshore team and ...",
+            " Hiring for  GM  Accounts & Finance     Exp: 15 to 20 years ..."
+          ]
+        },
+        {
+          "group": 527,
+          "latents": [
+            1467
+          ],
+          "gain_margin": 1391.31,
+          "examples": [
+            " 0-2 years of experience in back office operations;Only Male candidates can ...",
+            " 1 Year experience in Credit underwriting, Credit operation, credit officer, credit manager in any loans ...",
+            "0.6 - 4 years of experience in;Prior experience in BPO / KPO , night shifts will be preferred;Previous ..."
+          ]
+        },
+        {
+          "group": 1082,
+          "latents": [
+            232
+          ],
+          "gain_margin": 1326.78,
+          "examples": [
+            " 0-2 years of experience in back office operations;Only Male candidates can ...",
+            "- 0-2 years work experience for Associate;- Preferred (experience with banks or funds or similar ...",
+            "* Proven working experience as a credit analyst is a added advantage; Females only ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1966,
+      "n_groups": 1959,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1134,
+      "n_removed": 1137,
+      "var_share_removed": 0.2186,
+      "var_share_sae_error": 0.0274,
+      "top": [
+        {
+          "group": 10,
+          "latents": [
+            208,
+            1100
+          ],
+          "gain_margin": 23597.11,
+          "examples": [
+            "SEO Trainee, SEO Fresher",
+            "Immediate Hiring - AR Callers/freshers - Night Shift",
+            "KPO / Process Associates / Medical Billing Process / Night Shift"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            83,
+            1308
+          ],
+          "gain_margin": 13381.24,
+          "examples": [
+            "Associate Vice President - Analytics - Property & Casualty - KPO",
+            "Associate Vice President - Analytics - Property & Casualty - KPO",
+            "Associate Vice President - Analytics - Property & Casualty - KPO"
+          ]
+        },
+        {
+          "group": 1954,
+          "latents": [
+            227
+          ],
+          "gain_margin": 3957.65,
+          "examples": [
+            "Project Manager - Enterprise Solutions & Mobility",
+            "Zonal Credit Strategic Head - Wholesale Lending - Infrastructure",
+            "Manager- Lean six Sigma"
+          ]
+        },
+        {
+          "group": 1623,
+          "latents": [
+            431
+          ],
+          "gain_margin": 2931.32,
+          "examples": [
+            "Technical Java Architect, 15-20 Years, Trivandram/cochin",
+            "Delivery Head - Advanced Analytics - Utilities (13-18 Years)",
+            "Delivery Head - Advanced Analytics - Utilities (13-18 Years)"
+          ]
+        },
+        {
+          "group": 1957,
+          "latents": [
+            232
+          ],
+          "gain_margin": 2776.22,
+          "examples": [
+            "Hiring- MBA Freshers for a Reputed Gifting Company, Hyd",
+            "Walk-in for B.com | BBA | M.com| MBA in Finance - Fresher",
+            "Freshers Walk-in for PV on 25th & 26th Oct @ Bioclinica Mysore"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2007,
+      "n_groups": 1994,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 999,
+      "n_removed": 999,
+      "var_share_removed": 0.2342,
+      "var_share_sae_error": 0.0345,
+      "top": [
+        {
+          "group": 1341,
+          "latents": [
+            208
+          ],
+          "gain_margin": 10844.4,
+          "examples": [
+            "data entry operation, typing, excel, notepad, freelancing, content writing,...",
+            "data entry operation, typing, excel, notepad, freelancing, content writing,...",
+            "data entry operation, typing, excel, notepad, freelancing, content writing,..."
+          ]
+        },
+        {
+          "group": 1044,
+          "latents": [
+            83
+          ],
+          "gain_margin": 5821.08,
+          "examples": [
+            "Manager - Insurance Analytics, Analytics, Regression, linear regression...",
+            "Analytics, SAS, people management, P&C analytics, Analytics Head",
+            "Analytics, SAS, people management, P&C analytics, Analytics Head"
+          ]
+        },
+        {
+          "group": 900,
+          "latents": [
+            751
+          ],
+          "gain_margin": 3735.95,
+          "examples": [
+            "kpo, us shift, semi voice, us healthcare, night shift, fresher, biology...",
+            "kpo, us shift, semi voice, us healthcare, night shift, fresher, biology...",
+            "tamil, non voice, bpo, quality analysis, qa, malayalam, kannada, marathi..."
+          ]
+        },
+        {
+          "group": 1955,
+          "latents": [
+            15
+          ],
+          "gain_margin": 3197.5,
+          "examples": [
+            "Operation Head, Operations, Insurance, Insurance broking...",
+            "Trading Head, Trading, post trade analytics, trading strategies, testing...",
+            "Marketing, Consumer Insights, Strategy, Market Intelligence, Marketing Head..."
+          ]
+        },
+        {
+          "group": 787,
+          "latents": [
+            1007
+          ],
+          "gain_margin": 2542.05,
+          "examples": [
+            "Medical Billing, US Shift, Voice Process, Process Associate...",
+            "Process Associate, Senior Process Associate, Bpo Non Voice, Email Support...",
+            "mis, UK Payroll, Payroll, KPO, Advanced Excel"
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 812,
+      "n_groups": 810,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 738,
+      "n_removed": 740,
+      "var_share_removed": 0.8017,
+      "var_share_sae_error": 0.0034,
+      "top": [
+        {
+          "group": 779,
+          "latents": [
+            208
+          ],
+          "gain_margin": 1703.05,
+          "examples": [
+            "Bahraich, Saharanpur, Bhubaneshwar, Nagpur, Jind, Karnal, Mathura, Alwar, Jamshedpur",
+            "Bahraich, Saharanpur, Bhubaneshwar, Nagpur, Jind, Karnal, Mathura, Alwar, Jamshedpur",
+            "ara, siwan, deoria, ghazipur, sitapur, lakhimpur, shahjahanpur, hardoi, mirzapur"
+          ]
+        },
+        {
+          "group": 784,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 938.08,
+          "examples": [
+            "Delhi NCR(Sector-62 Noida+1), Gurgaon(Udyog Vihar Industrial Area Phase VI+1), Noida",
+            "Delhi NCR(Sector-62 Noida), Gurgaon(Udyog Vihar Industrial Area Phase VI+1), Noida",
+            "Gurgaon(Udyog Vihar Industrial Area Phase VI+1), Delhi NCR(Sector-62 Noida), Noida"
+          ]
+        },
+        {
+          "group": 782,
+          "latents": [
+            620
+          ],
+          "gain_margin": 638.57,
+          "examples": [
+            "Lucknow, Aligarh, Kanpur, Allahabad, Jhansi, Ujjain, Gwalior, Moradabad, Gorakhpur",
+            "Delhi NCR, Chandigarh, Dehradun, Jaipur, Lucknow, Vijayawada",
+            "Lakshadweep, Lakhtar, Lucknow, Ludhiana, Hyderabad, Haldia, Haridwar, Hoshiarpur, Hosur"
+          ]
+        },
+        {
+          "group": 393,
+          "latents": [
+            535
+          ],
+          "gain_margin": 528.33,
+          "examples": [
+            "Baddi, Vapi, Chiplun",
+            "ara, siwan, deoria, ghazipur, sitapur, lakhimpur, shahjahanpur, hardoi, mirzapur",
+            "hazaribagh, gumla, khunti, koderma, pakur, palamu, ramgarh, chaibasa, sahebganj"
+          ]
+        },
+        {
+          "group": 806,
+          "latents": [
+            751
+          ],
+          "gain_margin": 457.67,
+          "examples": [
+            "Vijayawada, Visakhapatnam, Indore, Bhiwani, Jammu, Hoshiarpur, Patiala, Pathankot, Port Blair",
+            "Chennai(Vadapalani), Ahmedabad(Makarba)",
+            "Munger, Haridwar, Roorkee, Varanasi, Satna, Rewa, Jabalpur, Kolkata, Bhagalpur"
+          ]
+        }
+      ]
+    }
+  }
+}

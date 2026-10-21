@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7317799272093521,
+  "test_error": 0.7317799272093521,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9027527596460538,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 158.85234594345093,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1782,
+      "n_groups": 1776,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 925,
+      "n_removed": 926,
+      "var_share_removed": 0.0718,
+      "var_share_sae_error": 0.0327,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            83,
+            698
+          ],
+          "gain_margin": 23884.09,
+          "examples": [
+            "I wanted to like this top, as the fabric was nice and thick, but found that it dipped too low beneath the armpits, which would be ok if your lats are in perfect",
+            "The quality of this shirt is great and the colors are pretty. it just made me look super wide. i feel like the waist is too high - not quite empire and not quit",
+            "I wanted to love this sweater but the fit is off slightly. i ordered my regular size xs and the chest/shoulder area fits nice but the waist comes very tight and"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            828,
+            2038
+          ],
+          "gain_margin": 12373.04,
+          "examples": [
+            "I bought this top in the black color and it's great! the lace sleeves are so soft- not itchy at all and it is very flattering.",
+            "I bought this sweater in the gray color and love it! it is so very comfortable, very soft. it looks great with jeans or leggings.",
+            "Tracy reese always pleases. this coat is absolutely awesome. it is gorgeous! the faux fur is soft and cozy. this coat is warm. i love the snap closure. this is "
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            1002,
+            1737
+          ],
+          "gain_margin": 10793.88,
+          "examples": [
+            "The material is horrible, it's heavy and cheap. the skirt does not \"flow\" as it appears in the photo. instead the bottom part of the skirt just stands out like ",
+            "This shirt runs extremely large. looks boxy and unflattering.",
+            "The models pose and description are misleading. this top has absolutely no shape to it. the front of the shirt is kind of like a slub shirt texture, plain black"
+          ]
+        },
+        {
+          "group": 887,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 6024.32,
+          "examples": [
+            "I loved the shirt until i washed it! awful fabric quality. cheaply made.",
+            "I am sooooooo massively disappointed in this purchase. i thought i had found the perfect pant in this style. both more comfortable and more flattering than simi",
+            "This top is quite boxy and i was very disappointed with the color, it looked as if i'd washed it in filthy water. it's a very dingy white, needless to say it we"
+          ]
+        },
+        {
+          "group": 1771,
+          "latents": [
+            531
+          ],
+          "gain_margin": 2864.6,
+          "examples": [
+            "Hei hei is my favorite line. i am a medium in all of the pants i have ever purchased from this brand.\r\ni ordered these in the green and they arrived today. they",
+            "I don't normally write reviews, but i purchased this dress in white in 3 different sizes and each dress had the same flaw. the hems were very uneven on all thre",
+            "I love maeve but this shirt's quality was poor and it was not worth the price. i would not recommend buying this online. you really need to try the blouse on in"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1570,
+      "n_groups": 1564,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 998,
+      "n_removed": 1000,
+      "var_share_removed": 0.2356,
+      "var_share_sae_error": 0.0128,
+      "top": [
+        {
+          "group": 1550,
+          "latents": [
+            698
+          ],
+          "gain_margin": 6182.2,
+          "examples": [
+            "Not for those who are even slightly pear-shaped",
+            "Not so sure about it",
+            "Not as hoped"
+          ]
+        },
+        {
+          "group": 1055,
+          "latents": [
+            437
+          ],
+          "gain_margin": 5701.34,
+          "examples": [
+            "Very thin material",
+            "Ugly shirt",
+            "Horribly scratchy"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            828,
+            2017
+          ],
+          "gain_margin": 4699.38,
+          "examples": [
+            "Flattering, even on my curvy figure",
+            "Flattering and comfy - my perfect jean!",
+            "Super comfortable, stylish jumpsuit"
+          ]
+        },
+        {
+          "group": 1561,
+          "latents": [
+            106
+          ],
+          "gain_margin": 4132.1,
+          "examples": [
+            "Not as described",
+            "Not good quality",
+            "Meh"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            59,
+            83
+          ],
+          "gain_margin": 3688.34,
+          "examples": [
+            "Nice style, but had some issues...",
+            "Nice but stil la tad long in eptite",
+            "Nice design, but loose fit"
+          ]
+        }
+      ]
+    }
+  }
+}

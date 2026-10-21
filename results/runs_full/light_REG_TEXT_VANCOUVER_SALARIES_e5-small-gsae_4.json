@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13492.190751159305,
+  "test_error": 13492.190751159305,
+  "course_metric": "r2",
+  "course_score": 0.7801446108106458,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 38.32437300682068,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2039,
+      "n_groups": 2027,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1235,
+      "n_removed": 1235,
+      "var_share_removed": 0.5212,
+      "var_share_sae_error": 0.0275,
+      "top": [
+        {
+          "group": 1264,
+          "latents": [
+            321
+          ],
+          "gain_margin": 716.39,
+          "examples": [
+            "Reagh, K C",
+            "Reagh, K C",
+            "Reagh, K C"
+          ]
+        },
+        {
+          "group": 1525,
+          "latents": [
+            1279
+          ],
+          "gain_margin": 416.34,
+          "examples": [
+            "Rodukoff, P",
+            "Rodukoff, P",
+            "Rodukoff, P"
+          ]
+        },
+        {
+          "group": 267,
+          "latents": [
+            1873
+          ],
+          "gain_margin": 413.19,
+          "examples": [
+            "Ross, A*",
+            "Borger, R*",
+            "De Castell, C*"
+          ]
+        },
+        {
+          "group": 155,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 224.23,
+          "examples": [
+            "Novak, R",
+            "Novak, R",
+            "Novak, R"
+          ]
+        },
+        {
+          "group": 1081,
+          "latents": [
+            1394
+          ],
+          "gain_margin": 220.85,
+          "examples": [
+            "Jotie, J",
+            "Jotie, J",
+            "Jotie, J"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1439,
+      "n_groups": 1436,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 819,
+      "n_removed": 819,
+      "var_share_removed": 0.2037,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 956,
+          "latents": [
+            1579
+          ],
+          "gain_margin": 3139.17,
+          "examples": [
+            "General Manager - Engineering Services",
+            "GENERAL MANAGER - ENGINEERING SERVICES",
+            "General Manager - Engineering Services"
+          ]
+        },
+        {
+          "group": 19,
+          "latents": [
+            1983
+          ],
+          "gain_margin": 2255.69,
+          "examples": [
+            "Director Communications",
+            "Director Communications",
+            "Director Collections & Technology"
+          ]
+        },
+        {
+          "group": 66,
+          "latents": [
+            1862
+          ],
+          "gain_margin": 2114.82,
+          "examples": [
+            "General Manager Dbl",
+            "General Manager Dbl",
+            "General Manager-Parks & Recreation"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            1415,
+            1863
+          ],
+          "gain_margin": 1686.74,
+          "examples": [
+            "Manager",
+            "Manager",
+            "Manager"
+          ]
+        },
+        {
+          "group": 1414,
+          "latents": [
+            771
+          ],
+          "gain_margin": 1650.76,
+          "examples": [
+            "Director Development Services",
+            "Director Development Services",
+            "Director Development Services"
+          ]
+        }
+      ]
+    }
+  }
+}

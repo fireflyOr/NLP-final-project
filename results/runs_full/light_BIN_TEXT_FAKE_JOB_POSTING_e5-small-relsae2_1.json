@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9018377547303233,
+  "test_error": 0.09816224526967665,
+  "course_metric": "auroc",
+  "course_score": 0.9018377547303233,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 58.29733490943909,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 384,
+      "n_removed": 128,
+      "threshold": 0.0482,
+      "passed_test": 27,
+      "removed_norm_ratio": 0.3868,
+      "var_share_kept": 0.543,
+      "var_share_sae_error": 0.2605,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 507,
+          "score": 0.1134,
+          "n_active": 716,
+          "examples": [
+            "The Producer shall properly complete all daily tasks. These daily tasks include but are not limited to: properly creating line-ups and logs (fails not more than",
+            "The Producer shall properly complete all daily tasks. These daily tasks include but are not limited to: properly creating line-ups and logs (fails not more than",
+            "The Producer shall properly complete all daily tasks. These daily tasks include but are not limited to: properly creating line-ups and logs (fails not more than"
+          ]
+        },
+        {
+          "latent": 164,
+          "score": 0.1096,
+          "n_active": 528,
+          "examples": [
+            "$1000 Signing bonusFastest Growing Hyundai Dealership in MassExtensive New Car Inventory$1 Million Dollar used car InventoryImmediate Positions AvailableAnticip",
+            "--Salary ranges to $95K. (Full-time position with competitive benefits package)--Currently Fifty percent travel/50% work from home..--Train hospital, clinic and",
+            "Salary ranges to approximately $110+Lawson System Administration includes system upgrades, apply cyclic and Regulatory updates with Lawson Security 9 administra"
+          ]
+        },
+        {
+          "latent": 253,
+          "score": 0.0945,
+          "n_active": 405,
+          "examples": [
+            "Centra Construction Group, a well established, employee owned construction company is seeking a team player interested in moving into a challenging and rewardin",
+            "(We have more than 1500+ Job openings in our website and some of them are relevant to this job. Feel free to search it in the website and apply directly. Just C",
+            "(We have more than 1500+ Job openings in our website and some of them are relevant to this job. Feel free to search it in the website and apply directly. Just C"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.09,
+          "n_active": 599,
+          "examples": [
+            "We are currently seeking a General Clerk I. The right candidate will be an integral part of our talented team, supporting our continued growth. This position wi",
+            "We are currently seeking a General Clerk I. The right candidate will be an integral part of our talented team, supporting our continued growth. This position wi",
+            "We are currently seeking General Clerk to sit in our London, KY client location and work in a high volume production environment handling applicant/enrollee ver"
+          ]
+        },
+        {
+          "latent": 426,
+          "score": 0.0869,
+          "n_active": 446,
+          "examples": [
+            "PART TIMERS Required For Cash Pay Jobs.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cas",
+            "Weekly PART TIME Cash Job, Staff Required.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest ",
+            "Urgent Jobs (Part Time Workers Needed)You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cash"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 301,
+      "n_kept": 433,
+      "n_removed": 79,
+      "threshold": 0.0539,
+      "passed_test": 49,
+      "removed_norm_ratio": 0.0892,
+      "var_share_kept": 0.9027,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 402,
+          "score": 0.1069,
+          "n_active": 25,
+          "examples": [
+            "21-63000",
+            "21-63000",
+            "21-63000"
+          ]
+        },
+        {
+          "latent": 271,
+          "score": 0.1003,
+          "n_active": 22,
+          "examples": [
+            "20-25",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 333,
+          "score": 0.0893,
+          "n_active": 38,
+          "examples": [
+            "1920-2000",
+            "110-140",
+            "100-200"
+          ]
+        },
+        {
+          "latent": 169,
+          "score": 0.0844,
+          "n_active": 40,
+          "examples": [
+            "20-3075",
+            "15-19",
+            "21-63000"
+          ]
+        },
+        {
+          "latent": 232,
+          "score": 0.0788,
+          "n_active": 134,
+          "examples": [
+            "13-20",
+            "13-20",
+            "1920-2000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 390,
+      "n_removed": 122,
+      "threshold": 0.0458,
+      "passed_test": 38,
+      "removed_norm_ratio": 0.3579,
+      "var_share_kept": 0.718,
+      "var_share_sae_error": 0.1008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 388,
+          "score": 0.095,
+          "n_active": 213,
+          "examples": [
+            "Delivery Manager",
+            "Delivery Services Manager",
+            "Delivery Drivers - Food"
+          ]
+        },
+        {
+          "latent": 342,
+          "score": 0.0907,
+          "n_active": 500,
+          "examples": [
+            "Earn the Income You Deserve",
+            "Make Easy Money at Home ",
+            "Sales hungry? Join us! "
+          ]
+        },
+        {
+          "latent": 244,
+          "score": 0.087,
+          "n_active": 443,
+          "examples": [
+            "Administrative/Clerical",
+            "Administrative Support",
+            "Administrative Assistant"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.0822,
+          "n_active": 297,
+          "examples": [
+            "Administrative Assistant ",
+            "Administrative Assistant",
+            "Administrative Assistant"
+          ]
+        },
+        {
+          "latent": 465,
+          "score": 0.0795,
+          "n_active": 173,
+          "examples": [
+            "Receptionist ",
+            "Receptionist",
+            "Receptionist"
+          ]
+        }
+      ]
+    }
+  }
+}

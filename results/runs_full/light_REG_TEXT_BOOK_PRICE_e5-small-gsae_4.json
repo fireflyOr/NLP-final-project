@@ -1,0 +1,391 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.24598202039205777,
+  "test_error": 0.24598202039205777,
+  "course_metric": "r2",
+  "course_score": 0.4690854452433475,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 49.27650856971741,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1765,
+      "n_groups": 1765,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1126,
+      "n_removed": 1126,
+      "var_share_removed": 0.5824,
+      "var_share_sae_error": 0.0038,
+      "top": [
+        {
+          "group": 277,
+          "latents": [
+            1338
+          ],
+          "gain_margin": 197.13,
+          "examples": [
+            "Ladybird",
+            "Ladybird",
+            "Ladybird"
+          ]
+        },
+        {
+          "group": 1486,
+          "latents": [
+            94
+          ],
+          "gain_margin": 149.11,
+          "examples": [
+            "Maitreyee Bhattacharjee Chowdhury",
+            "Hari Kumar K",
+            "Dinesh Prasad"
+          ]
+        },
+        {
+          "group": 1263,
+          "latents": [
+            252
+          ],
+          "gain_margin": 125.23,
+          "examples": [
+            "Guinness World Records",
+            "Shutapa Paul",
+            "Fitikides"
+          ]
+        },
+        {
+          "group": 314,
+          "latents": [
+            1376
+          ],
+          "gain_margin": 117.57,
+          "examples": [
+            "Guinness World Records",
+            "Men's Health Magazine",
+            "Rekha Diwakar"
+          ]
+        },
+        {
+          "group": 1017,
+          "latents": [
+            1059
+          ],
+          "gain_margin": 108.85,
+          "examples": [
+            "Dreamland Publications",
+            "Dreamland Publications",
+            "Dreamland Publications"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 529,
+      "n_groups": 493,
+      "n_multi_groups": 27,
+      "n_groups_dropped": 345,
+      "n_removed": 358,
+      "var_share_removed": 0.4192,
+      "var_share_sae_error": 0.0026,
+      "top": [
+        {
+          "group": 19,
+          "latents": [
+            765,
+            1091
+          ],
+          "gain_margin": 853.88,
+          "examples": [
+            "Hardcover,\u2013 1 Oct 1997",
+            "Hardcover,\u2013 1 Dec 1991",
+            "Hardcover,\u2013 20 May 1993"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            1093,
+            1270
+          ],
+          "gain_margin": 739.07,
+          "examples": [
+            "Hardcover,\u2013 18 May 2012",
+            "Hardcover,\u2013 22 Nov 2013",
+            "Hardcover,\u2013 22 Jul 2014"
+          ]
+        },
+        {
+          "group": 65,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 198.7,
+          "examples": [
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017"
+          ]
+        },
+        {
+          "group": 315,
+          "latents": [
+            648
+          ],
+          "gain_margin": 191.83,
+          "examples": [
+            "Paperback,\u2013 2014",
+            "Paperback,\u2013 2014",
+            "Paperback,\u2013 2014"
+          ]
+        },
+        {
+          "group": 324,
+          "latents": [
+            184
+          ],
+          "gain_margin": 138.36,
+          "examples": [
+            "Paperback,\u2013 1975",
+            "Paperback,\u2013 1996",
+            "Paperback,\u2013 2004"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 899,
+      "n_groups": 899,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 695,
+      "n_removed": 695,
+      "var_share_removed": 0.5374,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 740,
+          "latents": [
+            35
+          ],
+          "gain_margin": 347.12,
+          "examples": [
+            "Exam Preparation (Books)",
+            "Exam Preparation (Books)",
+            "Exam Preparation (Books)"
+          ]
+        },
+        {
+          "group": 267,
+          "latents": [
+            1358
+          ],
+          "gain_margin": 137.0,
+          "examples": [
+            "Calculus",
+            "GATE Exams",
+            "GATE Exams"
+          ]
+        },
+        {
+          "group": 158,
+          "latents": [
+            1661
+          ],
+          "gain_margin": 123.79,
+          "examples": [
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)"
+          ]
+        },
+        {
+          "group": 544,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 110.76,
+          "examples": [
+            "Children's Picture Books (Books)",
+            "Children's Picture Books (Books)",
+            "Children's Picture Books (Books)"
+          ]
+        },
+        {
+          "group": 841,
+          "latents": [
+            310
+          ],
+          "gain_margin": 105.3,
+          "examples": [
+            "Mangas",
+            "Mangas",
+            "Mangas"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1982,
+      "n_groups": 1982,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1211,
+      "n_removed": 1211,
+      "var_share_removed": 0.6534,
+      "var_share_sae_error": 0.0299,
+      "top": [
+        {
+          "group": 504,
+          "latents": [
+            1453
+          ],
+          "gain_margin": 253.85,
+          "examples": [
+            "The definitive book on animation, from the Academy Award-winning animator behind Who Framed Roger Rabbit?\n\nAnimation is one of the hottest areas of filmmaking t",
+            "The definitive book on animation, from the Academy Award-winning animator behind Who Framed Roger Rabbit?\n\nAnimation is one of the hottest areas of filmmaking t",
+            "This is a comprehensive tutorial on how to draw an array of cartoon faces. This is the latest in the bestselling 'How to Draw' series, from master cartoonist an"
+          ]
+        },
+        {
+          "group": 58,
+          "latents": [
+            1997
+          ],
+          "gain_margin": 215.55,
+          "examples": [
+            "In the final chapter of this series, Bruce Wayne completes his improbable recovery from his broken back and is ready to resume his role as Gotham's protector. B",
+            "Something sinister is stirring in the veins if Arkham Asylum's inmates.  Psychotic and frothing with fiendish strenght, they are unleashed onto the streets of G",
+            "Something sinister is stirring in the veins if Arkham Asylum's inmates.  Psychotic and frothing with fiendish strenght, they are unleashed onto the streets of G"
+          ]
+        },
+        {
+          "group": 176,
+          "latents": [
+            1913
+          ],
+          "gain_margin": 207.61,
+          "examples": [
+            "Python for Everybody is designed to introduce students to programming and software development through the lens of exploring data.You can think of the Python pr",
+            "For Kids Aged 10+ (And Their Parents)\n\nThe code in this book runs on almost anything: Windows, Mac, Linux, even an OLPC laptop or Raspberry Pi!\nPython is a powe",
+            "Unlock modern machine learning and deep learning techniques with Python by using the latest cutting-edge open source Python libraries. About This Book * Second "
+          ]
+        },
+        {
+          "group": 231,
+          "latents": [
+            1710
+          ],
+          "gain_margin": 155.57,
+          "examples": [
+            "This is an essential book for anyone learning to draw, or wishing to improve their drawing. Starting with the basics of drawing techniques, Civardi gives expert",
+            "Nature provides a myriad of beautiful objects. Both landscape and still life drawings give the opportunity to present diversities of nature like tree, mountain,",
+            "A classic of simplicity! Portrait Drawing has guided and inspired a generation of artists to create beautiful, realistic portraits. In just eighty pages, author"
+          ]
+        },
+        {
+          "group": 291,
+          "latents": [
+            1517
+          ],
+          "gain_margin": 155.43,
+          "examples": [
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1939,
+      "n_groups": 1939,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1237,
+      "n_removed": 1237,
+      "var_share_removed": 0.6227,
+      "var_share_sae_error": 0.0239,
+      "top": [
+        {
+          "group": 385,
+          "latents": [
+            1664
+          ],
+          "gain_margin": 208.94,
+          "examples": [
+            "The Buddha Box Set",
+            "Neil Gaiman & Chris Riddell Box Set",
+            "The Hating Game: 'Warm, witty and wise' The Daily Mail"
+          ]
+        },
+        {
+          "group": 978,
+          "latents": [
+            261
+          ],
+          "gain_margin": 200.04,
+          "examples": [
+            "Creative Lettering and Beyond: Inspiring tips, techniques, and ideas for hand lettering your way to beautiful works of art (Creative...and Beyond)",
+            "Digital Cinematography: Fundamentals, Tools, Techniques, and Workflows",
+            "Digital Photography an Introduction"
+          ]
+        },
+        {
+          "group": 175,
+          "latents": [
+            1840
+          ],
+          "gain_margin": 152.87,
+          "examples": [
+            "Handwriting Made Easy Ages 5-7 Key Stage 1 Printed Writing (Made Easy Workbooks)",
+            "The Pocket Universal Principles of Design: 150 Essential Tools for Architects, Artists, Designers, Developers, Engineers, Inventors, and Makers",
+            "Handwriting Made Easy Ages 7-11 Key Stage 2 Confident Writing (Made Easy Workbooks)"
+          ]
+        },
+        {
+          "group": 1118,
+          "latents": [
+            874
+          ],
+          "gain_margin": 147.82,
+          "examples": [
+            "Hickory Dickory Dock (Poirot)",
+            "Mrs McGinty\u2019s Dead (Poirot)",
+            "Black Coffee (Poirot)"
+          ]
+        },
+        {
+          "group": 378,
+          "latents": [
+            1544
+          ],
+          "gain_margin": 143.32,
+          "examples": [
+            "Key Words 2b: Have a go",
+            "Key Words 9c: Enjoying Reading",
+            "Key Words 3c: Let me write"
+          ]
+        }
+      ]
+    }
+  }
+}

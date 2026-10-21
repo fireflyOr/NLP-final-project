@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.3016100049729458,
+  "test_error": 3.3016100049729458,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8975054962594116,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1307.0073719024658,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2047,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 472,
+      "n_removed": 472,
+      "var_share_removed": 0.1508,
+      "var_share_sae_error": 0.0965,
+      "top": [
+        {
+          "group": 602,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 4080.06,
+          "examples": [
+            "\u0415\u0449\u0451 \u043d\u0435 \u0440\u0430\u0437 \u0432\u044b \u0432\u0441\u043f\u043e\u043c\u043d\u0438\u0442\u0435 \u043c\u0435\u043d\u044f",
+            "\u041b\u0435\u0433\u0435\u043d\u0434\u044b \u0440\u0443\u0441\u0441\u043a\u043e\u0439 \u044d\u0441\u0442\u0440\u0430\u0434\u044b. \u0421\u0435\u0440\u0433\u0435\u0439 \u041b\u0435\u043c\u0435\u0448\u0435\u0432. \u0427\u0430\u0441\u0442\u044c \u043f\u0435\u0440\u0432\u0430\u044f",
+            "\u0428\u0435\u0434\u0435\u0432\u0440\u044b \u0446\u044b\u0433\u0430\u043d\u0441\u043a\u043e\u0439 \u043f\u0435\u0441\u043d\u0438. \u0417\u043d\u0430\u043c\u0435\u043d\u0438\u0442\u044b\u0435 \u0446\u044b\u0433\u0430\u043d\u0441\u043a\u0438\u0435 \u043f\u0435\u0441\u043d\u0438"
+          ]
+        },
+        {
+          "group": 990,
+          "latents": [
+            1108
+          ],
+          "gain_margin": 2566.47,
+          "examples": [
+            "\u904b\u6c23\u4f86\u5f97\u82e5\u6709\u4f3c\u7121",
+            "\u6211\u5011\u7684\u8349\u8722\u6f14\u5531\u6703",
+            "\u6700\u5049\u5927\u7684\u4f5c\u54c1"
+          ]
+        },
+        {
+          "group": 1896,
+          "latents": [
+            276
+          ],
+          "gain_margin": 1696.17,
+          "examples": [
+            "Estamos de P\u00e9 (Ao Vivo)",
+            "RDN Ao Vivo, Vol. 1",
+            "Santo (ao Vivo)"
+          ]
+        },
+        {
+          "group": 909,
+          "latents": [
+            1124
+          ],
+          "gain_margin": 1657.78,
+          "examples": [
+            "Mozart - All Day Classics",
+            "Mozart - All Day Classics",
+            "Mozart - All Day Classics"
+          ]
+        },
+        {
+          "group": 1792,
+          "latents": [
+            278
+          ],
+          "gain_margin": 1366.49,
+          "examples": [
+            "Calcinha Preta, Vol. 13 (Ao Vivo)",
+            "Sou do Interior (Ao Vivo) [Deluxe]",
+            "Ao Vivo"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 112,
+      "n_removed": 112,
+      "var_share_removed": 0.0441,
+      "var_share_sae_error": 0.0852,
+      "top": [
+        {
+          "group": 475,
+          "latents": [
+            1373
+          ],
+          "gain_margin": 4617.54,
+          "examples": [
+            "Nusrat Fateh Ali Khan",
+            "Nusrat Fateh Ali Khan",
+            "Nusrat Fateh Ali Khan"
+          ]
+        },
+        {
+          "group": 2041,
+          "latents": [
+            94
+          ],
+          "gain_margin": 1774.62,
+          "examples": [
+            "Tulsi Kumar;Darshan Raval;Sachet-Parampara",
+            "Rochak Kohli;Jubin Nautiyal;Neeti Mohan",
+            "Pritam;Shilpa Rao;Darshan Raval;Charan"
+          ]
+        },
+        {
+          "group": 1733,
+          "latents": [
+            820
+          ],
+          "gain_margin": 1552.18,
+          "examples": [
+            "Wolfgang Amadeus Mozart;Ingrid Haebler;Ludwig Hoffmann",
+            "Wolfgang Amadeus Mozart;Ingrid Haebler",
+            "Wolfgang Amadeus Mozart;Ren\u00e9e Fleming;Anne Sofie von Otter;Michele Pertusi;David Syrus;Chamber Orchestra of Europe;Sir Georg Solti"
+          ]
+        },
+        {
+          "group": 543,
+          "latents": [
+            1532
+          ],
+          "gain_margin": 1059.1,
+          "examples": [
+            "Charles Gounod;Orchestra of the Royal Opera House, Covent Garden;Sir Alexander Gibson",
+            "Giuseppe Verdi;Riccardo Muti;Chorus of the Royal Opera House, Covent Garden;Fiorenza Cossotto;Montserrat Caball\u00e9;Pl\u00e1cido Domingo;New Philharmonia Orchestra",
+            "Gaetano Donizetti;Luciano Pavarotti;Orchestra of the Royal Opera House, Covent Garden;Richard Bonynge"
+          ]
+        },
+        {
+          "group": 676,
+          "latents": [
+            860
+          ],
+          "gain_margin": 1051.84,
+          "examples": [
+            "Gian & Giovani",
+            "Gian & Giovani",
+            "Antony & Gabriel"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 616,
+      "n_removed": 616,
+      "var_share_removed": 0.1671,
+      "var_share_sae_error": 0.1089,
+      "top": [
+        {
+          "group": 171,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 4738.79,
+          "examples": [
+            "El Baile De Los Que Sobran",
+            "El Baile De Los Que Sobran",
+            "Lo Que Yo Quiero"
+          ]
+        },
+        {
+          "group": 1712,
+          "latents": [
+            94
+          ],
+          "gain_margin": 4538.04,
+          "examples": [
+            "Mera Dil Bhi Kitna Pagal Hai",
+            "Dil Pe Zakham Khate Hain",
+            "\u00cdndia"
+          ]
+        },
+        {
+          "group": 193,
+          "latents": [
+            1710
+          ],
+          "gain_margin": 4325.4,
+          "examples": [
+            "\u9b54\u9b3c\u4e2d\u7684\u5929\u4f7f",
+            "\u518d\u4e5f\u6c92\u6709\u4f60",
+            "\u795e\u5947\u7684\u7cca\u5857\u9b54\u85e5"
+          ]
+        },
+        {
+          "group": 1984,
+          "latents": [
+            276
+          ],
+          "gain_margin": 2933.71,
+          "examples": [
+            "Tudo Que Eu Sou - Ao Vivo",
+            "Agora Viu Que Perdeu e Chora (feat. Reinaldo) - Ao Vivo",
+            "Estamos de P\u00e9 - Ao Vivo"
+          ]
+        },
+        {
+          "group": 994,
+          "latents": [
+            1349
+          ],
+          "gain_margin": 2810.44,
+          "examples": [
+            "\u30ea\u30d0\u30a4\u30d6",
+            "\u51fa\u9022\u3044\u306e\u7d9a\u304d",
+            "\u661f\u304c\u6cf3\u3050"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -18.064141686354475,
+  "test_error": 18.064141686354475,
+  "course_metric": "r2",
+  "course_score": 0.8042741474194077,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 62.12265491485596,
+  "diagnostics": {
+    "colors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 261,
+      "n_kept": 445,
+      "n_removed": 67,
+      "threshold": 0.0591,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.2104,
+      "var_share_kept": 0.7415,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 326,
+          "score": 0.0928,
+          "n_active": 66,
+          "examples": [
+            "cream / black",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 184,
+          "score": 0.0645,
+          "n_active": 21,
+          "examples": [
+            "espresso",
+            "espresso",
+            "espresso"
+          ]
+        },
+        {
+          "latent": 394,
+          "score": 0.0638,
+          "n_active": 91,
+          "examples": [
+            "red / blue / black",
+            "red / blue / black",
+            "pink / black / purple"
+          ]
+        },
+        {
+          "latent": 271,
+          "score": 0.0582,
+          "n_active": 23,
+          "examples": [
+            "beige",
+            "beige",
+            "beige"
+          ]
+        },
+        {
+          "latent": 14,
+          "score": 0.0581,
+          "n_active": 113,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 299,
+      "n_kept": 452,
+      "n_removed": 60,
+      "threshold": 0.079,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.17,
+      "var_share_kept": 0.8246,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 263,
+          "score": 0.0977,
+          "n_active": 44,
+          "examples": [
+            "Glenna Jean Heaven",
+            "Glenna Jean, Diaper",
+            "Glenna Jean, Pillow"
+          ]
+        },
+        {
+          "latent": 370,
+          "score": 0.0961,
+          "n_active": 35,
+          "examples": [
+            "Glenna Jean, Pillow",
+            "Glenna Jean, Pillow",
+            "Glenna Jean Lulu"
+          ]
+        },
+        {
+          "latent": 226,
+          "score": 0.0906,
+          "n_active": 30,
+          "examples": [
+            "Kate Mawdsley",
+            "Kate Mawdsley",
+            "Glenna Jean, Diaper"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0896,
+          "n_active": 56,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Swizzle",
+            "Johannes Brahms."
+          ]
+        },
+        {
+          "latent": 81,
+          "score": 0.083,
+          "n_active": 47,
+          "examples": [
+            "Glenna Jean Happy",
+            "Glenna Jean Happy",
+            "Glenna Jean Happy"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 485,
+      "n_kept": 426,
+      "n_removed": 86,
+      "threshold": 0.0758,
+      "passed_test": 99,
+      "removed_norm_ratio": 0.3334,
+      "var_share_kept": 0.8071,
+      "var_share_sae_error": 0.0,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 366,
+          "score": 0.2765,
+          "n_active": 219,
+          "examples": [
+            "Uncle Milton",
+            "Uncle Milton",
+            "RiverRidge Kids"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.2428,
+          "n_active": 161,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.2376,
+          "n_active": 58,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.2309,
+          "n_active": 32,
+          "examples": [
+            "Learning Carpets",
+            "Learning Carpets",
+            "Learning Carpets"
+          ]
+        },
+        {
+          "latent": 509,
+          "score": 0.2231,
+          "n_active": 58,
+          "examples": [
+            "Nautica Kids",
+            "Nautica Kids",
+            "Nautica Kids"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 398,
+      "n_removed": 114,
+      "threshold": 0.0724,
+      "passed_test": 63,
+      "removed_norm_ratio": 0.4266,
+      "var_share_kept": 0.7529,
+      "var_share_sae_error": 0.0773,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 414,
+          "score": 0.222,
+          "n_active": 378,
+          "examples": [
+            "Lambs & Ivy Safari Express 9 Piece Bedding Set",
+            "Pam Grace Creations 10 Piece Crib Bedding Set - Mr. & Mrs. Pond",
+            "Just Born Antique Chic 7-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "latent": 398,
+          "score": 0.1797,
+          "n_active": 129,
+          "examples": [
+            "Woombie Cuddle Cape - Brown - Small",
+            "Woombie Cuddle Cape - Blue - Large",
+            "Woombie Cuddle Cape - White - Small"
+          ]
+        },
+        {
+          "latent": 342,
+          "score": 0.1766,
+          "n_active": 124,
+          "examples": [
+            "Manam Kids Shaggy Raggy Black Rug - 2.8x4.8",
+            "Manam Kids Old Mcdonald Rug - 8x4.8",
+            "Manam Kids Shaggy Raggy Grey Rug - Size 2.8 x 4.8"
+          ]
+        },
+        {
+          "latent": 278,
+          "score": 0.173,
+          "n_active": 83,
+          "examples": [
+            "Manam Kids Retro Ball Rug - Size 2.8 x 4.8",
+            "Manam Kids Labyrinth Rug - Size 2.8 x 4.8",
+            "Manam Kids Lion Rug - Size 2.8 x 4.8"
+          ]
+        },
+        {
+          "latent": 38,
+          "score": 0.1699,
+          "n_active": 232,
+          "examples": [
+            "Gallery Wrought Iron & Crystal Swag Plug In White Chandelier Pendant",
+            "Gallery Wrought Iron and Crystal 5 Light Chandelier with 40mm Faceted Crystal Balls",
+            "Gallery Wrought Iron & Crystal 4 Light Floral Swag Plug In White Chandelier"
+          ]
+        }
+      ]
+    }
+  }
+}

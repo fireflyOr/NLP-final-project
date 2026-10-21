@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3868587755063064,
+  "test_error": 1.3868587755063064,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9646301219488502,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 59.75747895240784,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 503,
+      "n_removed": 9,
+      "threshold": 0.0556,
+      "passed_test": 240,
+      "removed_norm_ratio": 0.0576,
+      "var_share_kept": 0.759,
+      "var_share_sae_error": 0.2167,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 432,
+          "score": 0.3745,
+          "n_active": 290,
+          "examples": [
+            "The producer's most popular and widely made Zin has a loyal following, and this vintage merits further admiration, offering soft, plummy juiciness on the palate",
+            "This Zin has candied, fruit punch flavors of cherries, licorice, raisins, brown sugar and cinnamon. It's a robust wine, mouthfilling and heady, that's best pair",
+            "This Zin is rich with flavors of liqueur and spice with a suggestion of Dr. Pepper. Let this Zin open a bit in the glass. It's softly textured on the finish wit"
+          ]
+        },
+        {
+          "latent": 40,
+          "score": 0.3697,
+          "n_active": 624,
+          "examples": [
+            "Fresh Chardonnay, lightly warm but also tinged with acidity, citrus and pear flavors. Soft, creamy and friendly. Drink now.",
+            "Delicately structured, this Chardonnay has simple citrus peach flavors, with an undertow of green herbs. It's dry and tart with acidity.",
+            "A tropically oriented Chardonnay, this has aromatic hints of corn nuts and apricot fuzz, finishing with a taste of sour lemon."
+          ]
+        },
+        {
+          "latent": 504,
+          "score": 0.3267,
+          "n_active": 401,
+          "examples": [
+            "This 95% Grenache ros\u00e9 is a pale salmon hue. Subtle melon and berry fruit marks the nose, while the palate is medium in body and silky in texture, finishing wit",
+            "Made entirely from Grenache, this wine is a pretty pale-salmon color. It drinks off dry, with strawberry flavors and well-balanced acidity, showing some warmth ",
+            "Grenache makes up over half of this wine, with the rest Mourv\u00e8dre, Counoise and Cinsault. Fresh fruit, raspberry and herb aromas are followed by sweet ripe red-"
+          ]
+        },
+        {
+          "latent": 100,
+          "score": 0.3054,
+          "n_active": 792,
+          "examples": [
+            "Esterlina's Pinot is very perfumey, light in body and soul at first, as it gathers steam with a tasty backbone of lush red fruit, spice and plenty of staying po",
+            "Here's a friendly, fairly sophisticated Pinot for drinking now. It's dry, silky and crisp in acidity, with flavors of rich raspberry, cherry pie, vanilla and to",
+            "Delicately floral in aroma, this soft, earthy Pinot offers blue and red berry fruit that are layered and generous on the finish. Food-friendly, it has the heft "
+          ]
+        },
+        {
+          "latent": 301,
+          "score": 0.2865,
+          "n_active": 382,
+          "examples": [
+            "With some good maturity, this is a rich, fruity Champagne. It comes from the southern Aube region, which endows a more tropical feel, bringing out melon and apr",
+            "A fine, crisp and balanced Champagne, that has fresh red currant and red apple fruits, a tight texture and light tannins. Fruity, very lively.",
+            "One of the most familiar of Champagnes, the Yellow Label is finely made\u2014a fruity while structured wine. It has both fresh and fragrant fruit as well as richness"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 469,
+      "n_kept": 491,
+      "n_removed": 21,
+      "threshold": 0.0669,
+      "passed_test": 341,
+      "removed_norm_ratio": 0.1037,
+      "var_share_kept": 0.952,
+      "var_share_sae_error": 0.0006,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 336,
+          "score": 0.7777,
+          "n_active": 109,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "latent": 256,
+          "score": 0.6525,
+          "n_active": 240,
+          "examples": [
+            "Beira Atlantico",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "latent": 154,
+          "score": 0.6524,
+          "n_active": 240,
+          "examples": [
+            "Puente Alto",
+            "Puente Alto",
+            "Piedmont"
+          ]
+        },
+        {
+          "latent": 29,
+          "score": 0.6283,
+          "n_active": 139,
+          "examples": [
+            "Portuguese Table Wine",
+            "Champagne",
+            "Champagne"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.6192,
+          "n_active": 268,
+          "examples": [
+            "Kakheti",
+            "Tokaji",
+            "Wagram-Donauland"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.746351048265243,
+  "test_error": 0.746351048265243,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8923410533724742,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.438018798828125,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 408,
+      "n_removed": 104,
+      "threshold": 0.0482,
+      "passed_test": 73,
+      "removed_norm_ratio": 0.3211,
+      "var_share_kept": 0.622,
+      "var_share_sae_error": 0.1953,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 18,
+          "score": 0.2794,
+          "n_active": 4091,
+          "examples": [
+            "What a disappointment and for the price, it's outrageous!",
+            "Poor quality. i expected much more from the material.",
+            "I had high hopes for this top but it was too big and too much fabric."
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.1962,
+          "n_active": 3378,
+          "examples": [
+            "I love this shirt. it is great quality and hangs perfectly! please make more colors in this one. i would buy all of them!!",
+            "I absolutely love this dress. i have received so many compliments. the quality is incredible.",
+            "Love love love this sweater! lots of compliments as well :))"
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.1531,
+          "n_active": 997,
+          "examples": [
+            "The high neck and \"square-ness\" did not work for me .. but might for someone else.",
+            "The colors and textures on this top are fun. however, the boxy shape isn't very flattering and poofs out a bit around the belly. maybe it would look a bit more ",
+            "I am a huge pilcro fan. however, these were beyond large. i am not even sure that the next size down would work. keep this in mind if you attempt these pants."
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.1505,
+          "n_active": 1071,
+          "examples": [
+            "I was surprised at the high quality of fabric; however, the dress looked like a muumuu on. maybe with a belt it would be cuter...",
+            "This is a beautiful dress except i expected it to be more flowy. the fabric is much more stuff than i thought it would be.",
+            "I received these pants, but they are not as pictured, see the photo of the back pockets, there is a detail there that was not on the pants that i received. i'm "
+          ]
+        },
+        {
+          "latent": 24,
+          "score": 0.1363,
+          "n_active": 805,
+          "examples": [
+            "My favorite for work or going out. the perfect black shirt.",
+            "I got the shirt, the cami, and the shorts and they are all great. super comfortable fabric, really well made, and really cute. love them all!",
+            "This shirt is wonderful! i totally recommend it for everyone."
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 440,
+      "n_removed": 72,
+      "threshold": 0.046,
+      "passed_test": 155,
+      "removed_norm_ratio": 0.2904,
+      "var_share_kept": 0.7298,
+      "var_share_sae_error": 0.0653,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 56,
+          "score": 0.2124,
+          "n_active": 3181,
+          "examples": [
+            "Close, but not quite...",
+            "Almost, but not quite",
+            "Close but not quite right"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.1899,
+          "n_active": 1271,
+          "examples": [
+            "Not as pictured!",
+            "Not as pictured",
+            "Not as pictured"
+          ]
+        },
+        {
+          "latent": 154,
+          "score": 0.1725,
+          "n_active": 1902,
+          "examples": [
+            "Perfect poncho",
+            "Perfect poncho!",
+            "Amazing poncho"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.1651,
+          "n_active": 1304,
+          "examples": [
+            "Not that great",
+            "Not so great",
+            "Not so great"
+          ]
+        },
+        {
+          "latent": 72,
+          "score": 0.1641,
+          "n_active": 961,
+          "examples": [
+            "Why is it so big?",
+            "Large and wide",
+            "Cute idea but so big and long even in petite"
+          ]
+        }
+      ]
+    }
+  }
+}

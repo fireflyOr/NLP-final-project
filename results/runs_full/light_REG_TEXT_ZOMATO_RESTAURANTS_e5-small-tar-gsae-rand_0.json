@@ -1,0 +1,547 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2042253947930852,
+  "test_error": 0.2042253947930852,
+  "course_metric": "r2",
+  "course_score": 0.7837073887684421,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 120.1384642124176,
+  "diagnostics": {
+    "address": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2027,
+      "n_groups": 2021,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1055,
+      "n_removed": 1055,
+      "var_share_removed": 0.4424,
+      "var_share_sae_error": 0.0313,
+      "top": [
+        {
+          "group": 9,
+          "latents": [
+            318,
+            1595
+          ],
+          "gain_margin": 5922.04,
+          "examples": [
+            "139, Jyoti Nivas College Road, Ground Floor, Terra Tree Service Apartments, 1st Cross, Koramangala 5th Block, Bangalore",
+            "139, Jyoti Nivas College Road, Ground Floor, Terra Tree Service Apartments, 1st Cross, Koramangala 5th Block, Bangalore",
+            "139, Jyoti Nivas College Road, Ground Floor, Terra Tree Service Apartments, 1st Cross, Koramangala 5th Block, Bangalore"
+          ]
+        },
+        {
+          "group": 1001,
+          "latents": [
+            753
+          ],
+          "gain_margin": 1310.54,
+          "examples": [
+            "No 173, Munivenkatappa Layout, Bilekahalli, Opp Ranka Colony, Bannerghatta Road",
+            "No 173, Munivenkatappa Layout, Bilekahalli, Opp Ranka Colony, Bannerghatta Road",
+            "Near Ganesh Temple, Bellandur, Bangalore"
+          ]
+        },
+        {
+          "group": 1998,
+          "latents": [
+            226
+          ],
+          "gain_margin": 590.63,
+          "examples": [
+            "18/3, Ali Askar Road, Off Cunningham Road, Cunningham Road, Bangalore",
+            "18, Ali Askar Road, Cunningham Road, Bangalore",
+            "18, Ali Askar Road, Cunningham Road, Bangalore"
+          ]
+        },
+        {
+          "group": 1754,
+          "latents": [
+            305
+          ],
+          "gain_margin": 369.02,
+          "examples": [
+            "Shop 55, 1st Floor, 5th Cross Road, Koramangala 6th Block, Bangalore",
+            "Shop 55, 1st Floor, 5th Cross Road, Koramangala 6th Block, Bangalore",
+            "6, Z1 Construction Building, 5th Floor, Next To Sapna Book House, 20th Main Road, Koramangala 7th Block, Bangalore"
+          ]
+        },
+        {
+          "group": 1261,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 343.44,
+          "examples": [
+            "Shop 35, 100 Feet Ring Road, 4th Cross, Muniyappa Layout, Srinivagilu, Vivek Nagar Post, Ejipura, Bangalore",
+            "Shop 35, 100 Feet Ring Road, 4th Cross, Muniyappa Layout, Srinivagilu, Vivek Nagar Post, Ejipura, Bangalore",
+            "25, Shanthi Sadhan, Kaggadasapura Main Road, Near Malleshpalaya New Bus Stand, Kaggadasapura, Bangalore"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1103,
+      "n_groups": 1093,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 635,
+      "n_removed": 636,
+      "var_share_removed": 0.4378,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 1092,
+          "latents": [
+            318
+          ],
+          "gain_margin": 2855.36,
+          "examples": [
+            "Asian, Japanese, Korean, Indonesian, Malaysian, Singaporean",
+            "Asian, Japanese, Korean, Indonesian, Malaysian, Singaporean",
+            "Continental, Mediterranean, Italian, North Indian, Finger Food, Asian, Momos"
+          ]
+        },
+        {
+          "group": 223,
+          "latents": [
+            1838
+          ],
+          "gain_margin": 2269.31,
+          "examples": [
+            "Mediterranean, European, Salad",
+            "Mediterranean, European, Salad",
+            "Modern Indian, European, Asian"
+          ]
+        },
+        {
+          "group": 1046,
+          "latents": [
+            822
+          ],
+          "gain_margin": 977.75,
+          "examples": [
+            "Modern Indian",
+            "Modern Indian",
+            "Modern Indian"
+          ]
+        },
+        {
+          "group": 978,
+          "latents": [
+            102
+          ],
+          "gain_margin": 569.55,
+          "examples": [
+            "European, Continental",
+            "European, Continental",
+            "European, Continental"
+          ]
+        },
+        {
+          "group": 1051,
+          "latents": [
+            361
+          ],
+          "gain_margin": 490.72,
+          "examples": [
+            "North Indian, Chinese, Kerala, Arabian",
+            "Arabian, North Indian, Chinese, Kerala",
+            "Arabian, Chinese, Hyderabadi, Kerala"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1561,
+      "n_groups": 1557,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1066,
+      "n_removed": 1068,
+      "var_share_removed": 0.6773,
+      "var_share_sae_error": 0.0041,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            750,
+            832
+          ],
+          "gain_margin": 8941.38,
+          "examples": [
+            "Roti, Vegetable Biryani, Chicken Biryani",
+            "Chicken Biryani, Vegetable Biryani, Raita",
+            "Chicken Biryani, Vegetable Biryani, Raita"
+          ]
+        },
+        {
+          "group": 1186,
+          "latents": [
+            318
+          ],
+          "gain_margin": 7347.69,
+          "examples": [
+            "Chocolate Lollipop, Chocolate Biscuit, Fire Shots, Sangria, Chocolate Ganache, Paneer Makhani, Corn Fry",
+            "Chocolate Lollipop, Chocolate Biscuit, Fire Shots, Sangria, Chocolate Ganache, Paneer Makhani, Corn Fry",
+            "Chocolate Lollipop, Chocolate Biscuit, Fire Shots, Sangria, Chocolate Ganache, Paneer Makhani, Corn Fry"
+          ]
+        },
+        {
+          "group": 381,
+          "latents": [
+            1595
+          ],
+          "gain_margin": 5578.67,
+          "examples": [
+            "Lunch Buffet, Millet Pizza, Salads, Beetroot Payasam, Banana Pudding, Thali, Tikki",
+            "Penne Arrabiata Pasta, Craft Beer, Bruschettas, Cocktails, Peri Peri Chicken, Pizza, Mocktails",
+            "Cocktails, Tom Yum Soup, Lobster Bisque, Lobster Risotto, Pulled Pork, Lamb, Asparagus Risotto"
+          ]
+        },
+        {
+          "group": 137,
+          "latents": [
+            1537
+          ],
+          "gain_margin": 4046.67,
+          "examples": [
+            "Khau Suey, Ravioli, Pork Ribs, Basil Pannacotta, Tender Coconut Ice Cream, Mocktails, Sushi",
+            "Cocktails, Mocktails, Long Island Iced Tea, Beer, Tom Yum Soup, Fish, Sangria",
+            "Crispy Corn, Sangria, Chicken Satay, Masala Fries, Wood Fire Pizza, Pesto Pasta, Cocktails"
+          ]
+        },
+        {
+          "group": 1537,
+          "latents": [
+            25
+          ],
+          "gain_margin": 2147.97,
+          "examples": [
+            "Salads, Healthy Breakfast, Quinoa Salad, Frittata, Pancakes, Smoothie Chocolate, Wheat Roll",
+            "Coffee, Fruit Tart, Croissants, Eclair, Sandwich, Nachos, Tiramisu",
+            "Coffee, Fruit Tart, Croissants, Eclair, Sandwich, Nachos, Tiramisu"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1037,
+      "n_groups": 1037,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 838,
+      "n_removed": 838,
+      "var_share_removed": 0.6318,
+      "var_share_sae_error": 0.0063,
+      "top": [
+        {
+          "group": 1036,
+          "latents": [
+            25
+          ],
+          "gain_margin": 915.35,
+          "examples": [
+            "['Almond Milk Thandai', 'Thukpa Twist', 'Ragi Flour Momo', 'Beetroot Dough Momo', 'Grilled Veggie and Basil Mayo Sandwich', 'Cracker Platter', 'Oven Roasted Nac",
+            "['Black Rice Salad', 'Mixed Green Salad', 'Sriracha and Sesame Chicken Salad', 'Pita Pocket Sandwich', 'Peri Peri Chicken Steak', 'BBQ Chicken Steak', 'Grilled ",
+            "['Non Veg Maki Platter [16 Pieces]', 'Scottish Salmon Sushi [5 Pieces]', 'Crispy Spicy Avocado', 'California Maki [8 Pieces]', 'Dyna Maki [8 Pieces]', 'Veg Maki"
+          ]
+        },
+        {
+          "group": 811,
+          "latents": [
+            318
+          ],
+          "gain_margin": 679.3,
+          "examples": [
+            "['Tri Chili N Cheese Pizza [14 inches]', 'Mediterranean Pizza [14 inches]', 'Pesto Pollo Margherita Pizza [14 inches]', 'Tri Chicken Pizza [14 inches]', 'Grille",
+            "['Smoked Barbeque Chicken Pizza', 'Cajun Creole Chicken Pizza', 'Baconator Pizza', 'Lemon Pepper Basa', 'Crab Shrimp and Avocado Salad', 'Florets Grana Padano S",
+            "['Butter Chicken Pizza', 'Bombay Veggie Burger', 'Tawa Paneer Burger', 'Oh So Cheesy Burger', 'Barbecue Chicken Burger', 'Peri Peri Chicken Burger', 'BBQ Lamb',"
+          ]
+        },
+        {
+          "group": 516,
+          "latents": [
+            750
+          ],
+          "gain_margin": 334.39,
+          "examples": [
+            "['Veg Caesar Salad', 'Chicken Caesar Salad', 'Cheese Loaded Sauted Green Salad', 'Veg Fried Rice', 'Cheese Maggi', 'Masala Maggi', 'Fruit Salad', 'Red Bull 250 ",
+            "['High Protein Thali', 'Kulcha Combo', 'Punjabi Chicken Masala', 'Chicken Biryani', 'Chicken Thali', 'High Protein Thali', 'Dal Makhani', 'Paneer Butter Masala'",
+            "['Veg Caesar Salad', 'Chicken Caesar Salad', 'Cheese Loaded Sauted Green Salad', 'Cheese Maggi', 'Masala Maggi', 'Fruit Salad', 'Red Bull 250 Ml', 'Cold Coffee'"
+          ]
+        },
+        {
+          "group": 1030,
+          "latents": [
+            1366
+          ],
+          "gain_margin": 248.51,
+          "examples": [
+            "['Bamboo Veg Biryani', 'Stuffed Mushroom', 'Thai Green Chicken Curry', 'California Maki [8 Pieces]', 'Crunchy California Maki [8 Pieces]', 'Spicy Spinach Shorba",
+            "['Garlic Bread', 'Veg Mexcian Nachos', 'Thai Style Mini Spring Rolls', 'Stuffed Chilly Bhajis', 'Panko Crumbed Stuffed Mushroom', 'Miso Popcorn Chicken', 'Spicy",
+            "['Veg Ramen Noodles Tom Yum', 'Veg Thupka with Momos', 'Chicken Thupka with Momos', 'Chicken Ramen Noodles Tom Yum', 'Chicken Thai Kao Suey', 'Chicken Nasi Gore"
+          ]
+        },
+        {
+          "group": 312,
+          "latents": [
+            822
+          ],
+          "gain_margin": 227.03,
+          "examples": [
+            "['Masala Egg Curry & Vegetable Pulao', 'Nutty Dates Pudding', 'Spicy Arrabbiata-Stuffed Chicken & Rice', 'Chilli Tofu Hakka Noodles', 'Light: 2 Rotis, Nilgiri C",
+            "[\"Chef'S Special Veg Thali\", 'Chicken Chettinad & Lachha Paranthas Meal', 'Dal Makhani & Lachha Paranthas Meal', \"Chef'S Special Chicken Thali\", 'Lucknowi Chick",
+            "['Chicken Keema Parantha Wrap', 'Lucknowi Chicken Biryani', 'Tofu Keema Parantha Wrap', 'Lucknowi Veg Biryani', 'Fruit Pop Oatmeal Bowl', 'Masala Egg Curry & Ve"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2040,
+      "n_groups": 2038,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1027,
+      "n_removed": 1027,
+      "var_share_removed": 0.4714,
+      "var_share_sae_error": 0.029,
+      "top": [
+        {
+          "group": 1774,
+          "latents": [
+            822
+          ],
+          "gain_margin": 2895.42,
+          "examples": [
+            "Myu Bar at Gilly's Redefined",
+            "Myu Bar at Gilly's Redefined",
+            "Myu Bar at Gilly's Redefined"
+          ]
+        },
+        {
+          "group": 2021,
+          "latents": [
+            753
+          ],
+          "gain_margin": 2127.9,
+          "examples": [
+            "Bhaiyaji Food Court",
+            "Bhaiyaji Food Court",
+            "Bhaiyaji Food Court"
+          ]
+        },
+        {
+          "group": 2023,
+          "latents": [
+            102
+          ],
+          "gain_margin": 1860.38,
+          "examples": [
+            "A Hole Lotta Love Cafe",
+            "A Hole Lotta Love Cafe",
+            "A Hole Lotta Love Cafe"
+          ]
+        },
+        {
+          "group": 820,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1161.93,
+          "examples": [
+            "Sri Lakshmi Hotel",
+            "VRS Food Zone",
+            "VRS Food Zone"
+          ]
+        },
+        {
+          "group": 292,
+          "latents": [
+            1706
+          ],
+          "gain_margin": 912.72,
+          "examples": [
+            "Gilly's Restobar",
+            "Gilly's Restobar",
+            "Gilly's Restobar"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1565,
+      "n_groups": 1518,
+      "n_multi_groups": 42,
+      "n_groups_dropped": 820,
+      "n_removed": 823,
+      "var_share_removed": 0.3837,
+      "var_share_sae_error": 0.0075,
+      "top": [
+        {
+          "group": 16,
+          "latents": [
+            226,
+            377,
+            696
+          ],
+          "gain_margin": 975.63,
+          "examples": [
+            "080 45128604",
+            "080 45128604",
+            "080 45128604"
+          ]
+        },
+        {
+          "group": 48,
+          "latents": [
+            877,
+            1889
+          ],
+          "gain_margin": 491.09,
+          "examples": [
+            "+91 9319970404",
+            "+91 9319970404",
+            "+91 9319970404"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            404,
+            417,
+            543
+          ],
+          "gain_margin": 433.38,
+          "examples": [
+            "080 41116879\n+91 9591506572",
+            "080 67716772\n+91 9900066965",
+            "080 41715878\n+91 9538612243"
+          ]
+        },
+        {
+          "group": 1503,
+          "latents": [
+            188
+          ],
+          "gain_margin": 398.69,
+          "examples": [
+            "080 42197999",
+            "080 42005111",
+            "080 42005111"
+          ]
+        },
+        {
+          "group": 1452,
+          "latents": [
+            835
+          ],
+          "gain_margin": 332.78,
+          "examples": [
+            "080 49653345",
+            "080 49653345",
+            "080 49653345"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1995,
+      "n_groups": 1989,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1216,
+      "n_removed": 1216,
+      "var_share_removed": 0.4132,
+      "var_share_sae_error": 0.0436,
+      "top": [
+        {
+          "group": 5,
+          "latents": [
+            318,
+            1838
+          ],
+          "gain_margin": 17047.46,
+          "examples": [
+            "[('Rated 4.0', 'RATED\\n  Food is the finest form of art that soothes your eye and your taste buds... and its the one art form that makes you feel happy and full",
+            "[('Rated 4.0', 'RATED\\n  Mind-blowing experience! Who knew there would be a vegetarian version of sushi SPICY TOFU AVOCADO MAKI and it could taste so good (alth",
+            "[('Rated 4.0', 'RATED\\n  Arbor beers are always something else and they definitely deserve a 5* for that. The food is decent enough , apart from one time when i"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            753,
+            967
+          ],
+          "gain_margin": 6201.97,
+          "examples": [
+            "[('Rated 3.0', 'RATED\\n  My regular place to order dinner from due to really less delivery time and good food. Have tried their Special Veg Thali which is good ",
+            "[('Rated 3.0', 'RATED\\n  My regular place to order dinner from due to really less delivery time and good food. Have tried their Special Veg Thali which is good ",
+            "[('Rated 3.0', 'RATED\\n  My regular place to order dinner from due to really less delivery time and good food. Have tried their Special Veg Thali which is good "
+          ]
+        },
+        {
+          "group": 665,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 5471.68,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  It's waste of money\"), ('Rated 1.0', 'RATED\\n  very bad'), ('Rated 1.0', 'RATED\\n  no taste'), ('Rated 4.0', 'RATED\\n  Good'), ('Rated ",
+            "[('Rated 1.0', \"RATED\\n  I have not received my order yet and it's showing that the order is being delivered? I really don't understand like what's going wrong ",
+            "[('Rated 1.0', \"RATED\\n  I have not received my order yet and it's showing that the order is being delivered? I really don't understand like what's going wrong "
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            157,
+            221
+          ],
+          "gain_margin": 4214.14,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  Ordered the chicken sandwich, which was stale! Quality of food is super disappointing and super overpriced. Not making another mistake ",
+            "[('Rated 1.0', 'RATED\\n  Ordered the chicken sandwich, which was stale! Quality of food is super disappointing and super overpriced. Not making another mistake ",
+            "[('Rated 2.0', \"RATED\\n  the fruits were half frozen and by the time the order reached me, the ice had half melted and the fruits were swimming in water..they h"
+          ]
+        },
+        {
+          "group": 1971,
+          "latents": [
+            757
+          ],
+          "gain_margin": 2592.26,
+          "examples": [
+            "[('Rated 5.0', 'RATED\\n  Well if are a waffle lover , then this is the place ..great waffles . Crunchy , proper fillings not over doing with sprinkles or artifi",
+            "[('Rated 5.0', 'RATED\\n  Nice place, good ambience. The drinks are dirt cheap and whenever I come down Anil helps me get a table and his service is always the b",
+            "[('Rated 3.0', \"RATED\\n  I literally live 50-60m away from this place. It was my go-to place to satisfy thai cravings almost thrice a month.\\n\\nThe food was del"
+          ]
+        }
+      ]
+    }
+  }
+}

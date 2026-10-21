@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8633525762562116,
+  "test_error": 0.8633525762562116,
+  "course_metric": "r2",
+  "course_score": 0.80575493418793,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 81.62464380264282,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 462,
+      "n_kept": 340,
+      "n_removed": 172,
+      "threshold": 0.0711,
+      "passed_test": 11,
+      "removed_norm_ratio": 0.3541,
+      "var_share_kept": 0.6208,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 325,
+          "score": 0.1102,
+          "n_active": 127,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 383,
+          "score": 0.0866,
+          "n_active": 420,
+          "examples": [
+            "The Orange Fairy Book",
+            "The Violet Fairy Book",
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers"
+          ]
+        },
+        {
+          "latent": 357,
+          "score": 0.0851,
+          "n_active": 57,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.0821,
+          "n_active": 48,
+          "examples": [
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm"
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0804,
+          "n_active": 48,
+          "examples": [
+            "The Mysterious Stranger and Other Stories\n",
+            "The Mysterious Stranger and Other Stories\n",
+            "The Mantle and Other Stories"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 232,
+      "n_removed": 280,
+      "threshold": 0.0733,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7536,
+      "var_share_kept": 0.4438,
+      "var_share_sae_error": 0.087,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 293,
+          "score": 0.0537,
+          "n_active": 104,
+          "examples": [
+            "Little Zebra Books",
+            "Little Zebra Books",
+            "Basilio Gimo and Little Zebra Books"
+          ]
+        },
+        {
+          "latent": 200,
+          "score": 0.0533,
+          "n_active": 141,
+          "examples": [
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes"
+          ]
+        },
+        {
+          "latent": 493,
+          "score": 0.0531,
+          "n_active": 81,
+          "examples": [
+            "A report issued by the British War Cabinet on March 18, 1918, in the form of a Blue Book of 200 pages or more... As the introductory chapter is in itself a comp",
+            "Upton Sinclair",
+            "Upton Sinclair"
+          ]
+        },
+        {
+          "latent": 452,
+          "score": 0.0527,
+          "n_active": 192,
+          "examples": [
+            "Anton Chekhov",
+            "Ursula Nafula, Rob Owen",
+            "Ursula Nafula"
+          ]
+        },
+        {
+          "latent": 478,
+          "score": 0.0525,
+          "n_active": 282,
+          "examples": [
+            "Charles Dickens.",
+            "Charles Dickens",
+            "Charles Dickens"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 146,
+      "n_kept": 412,
+      "n_removed": 100,
+      "threshold": 0.0638,
+      "passed_test": 0,
+      "removed_norm_ratio": 3.0798,
+      "var_share_kept": 0.332,
+      "var_share_sae_error": 0.0013,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 115,
+          "score": 0.0421,
+          "n_active": 48,
+          "examples": [
+            "sulphide, sulphides, sulphide, sulphide, sulphide, sulphate",
+            "amphitheatre, metres, metres, metres, amphitheatre",
+            "plough, ploughing, ploughed, plough, ploughed"
+          ]
+        },
+        {
+          "latent": 137,
+          "score": 0.0394,
+          "n_active": 38,
+          "examples": [
+            "traveller, travelled",
+            "traveller",
+            "traveller"
+          ]
+        },
+        {
+          "latent": 467,
+          "score": 0.0392,
+          "n_active": 27,
+          "examples": [
+            "armour, travelled",
+            "travellers",
+            "travellers"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.0391,
+          "n_active": 21,
+          "examples": [
+            "analyses, analyses",
+            "analyses",
+            "jewellery"
+          ]
+        },
+        {
+          "latent": 352,
+          "score": 0.0356,
+          "n_active": 90,
+          "examples": [
+            "kilogrammes, kilogrammes",
+            "milligrammes",
+            "centimetre, centimetres, kilometres"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 292,
+      "n_removed": 220,
+      "threshold": 0.0765,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5553,
+      "var_share_kept": 0.3989,
+      "var_share_sae_error": 0.2565,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 454,
+          "score": 0.1042,
+          "n_active": 324,
+          "examples": [
+            "There was a terrible hubbub in the henhouse. The Rooster squalled so loudly that he waked up every hen in the place. And when they heard him crying that a skunk",
+            "Mrs. F., a lady living not far from Boston, has a bantam hen, who, every spring morning, walks into the house, and lays an egg in a rocking-chair.\nAfter laying ",
+            "The new model which I inspected had a monoplane body, observer and pilot sitting tandem fashion, the Mercedes motor (several cylinders) being in front. It was d"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0983,
+          "n_active": 189,
+          "examples": [
+            "There are some birds that can take care of themselves almost as soon as they are born; but Mrs. Cuckoo never leaves her eggs in their nests. Oh, no! she chooses",
+            "The catbird belongs to the family of thrushes, and is one of the most peculiar of our American birds. It is dark colored, with brown head and neck, and greenish",
+            "Many young sparrows have been born to us. They are proud of being Americans. They think they are cleverer than their parents, because their parents, you see, ar"
+          ]
+        },
+        {
+          "latent": 289,
+          "score": 0.0975,
+          "n_active": 178,
+          "examples": [
+            "Once upon a time there was a little red hen. She lived in a little white house and she had a little green garden. Every day she worked in the house and garden.\n",
+            "Once upon a time Eagle and Hen were best friends. The two of them were together and chatted from morning till dusk. Eagle's chickens couldn't wait to visit Hen'",
+            "Once upon a time there lived a huntsman. He would go every day in search of game, but it often happened that he killed nothing, and so was obliged to return hom"
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.0926,
+          "n_active": 198,
+          "examples": [
+            "Because grammar is so difficult for people that are learning a foreign language, we tried to find ways to help people learn grammar. We first thought about how ",
+            "Have you heard of the World Wide Web? No? Never mind. Now, have you heard of the Internet? Yes? Great! But what IS the Internet? Did you say \"I am not quite sur",
+            "Imagine that you are 7 years old and need to read four sentences from a book to do your homework. The first two sentences are on a page full of text, while the "
+          ]
+        },
+        {
+          "latent": 260,
+          "score": 0.08,
+          "n_active": 159,
+          "examples": [
+            "The old laws and customs, varying in different provinces, had been swept away, so that the field was clear; and the system of government which Napoleon devised ",
+            "The Imperial Chancellor has declared that there was irrefutable proof that if Germany did not march through Belgium, her enemies would. This proof, as now being",
+            "The children had explored the gardens and the outhouses thoroughly before they were caught and cleaned for tea, and they saw quite well that they were certain t"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 260,
+      "n_removed": 252,
+      "threshold": 0.0786,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6233,
+      "var_share_kept": 0.3743,
+      "var_share_sae_error": 0.2076,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 212,
+          "score": 0.0918,
+          "n_active": 145,
+          "examples": [
+            "Fox and Rooster",
+            "THE FOX AND THE LITTLE RED HEN",
+            "The Thief and the Fox"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.066,
+          "n_active": 179,
+          "examples": [
+            "Sweat",
+            "MY PETS",
+            "Sun and Rain"
+          ]
+        },
+        {
+          "latent": 21,
+          "score": 0.0607,
+          "n_active": 144,
+          "examples": [
+            "THE GRATEFUL FOXES",
+            "The Grateful Foxes",
+            "The happy revival"
+          ]
+        },
+        {
+          "latent": 166,
+          "score": 0.0569,
+          "n_active": 154,
+          "examples": [
+            "The Skipping Shoes",
+            "Walden, and On The Duty Of Civil Disobedience",
+            "Boycotted\n"
+          ]
+        },
+        {
+          "latent": 454,
+          "score": 0.0564,
+          "n_active": 160,
+          "examples": [
+            "The Rain Bird",
+            "The Clouds Outside my Window",
+            "His Last Bow: An Epilogue of Sherlock Holmes"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 255,
+      "n_removed": 257,
+      "threshold": 0.0735,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6862,
+      "var_share_kept": 0.3959,
+      "var_share_sae_error": 0.0579,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 140,
+          "score": 0.0841,
+          "n_active": 119,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Free_drift",
+            "http://www.gutenberg.org/files/18880/18880-h/18880-h.htm#Seeing_Nieuport_Under_Shell_Fire",
+            "http://www.gutenberg.org/files/20521/20521-h/20521-h.htm#Seizures_of_American_Cargoes"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.0684,
+          "n_active": 78,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Watergate_scandal",
+            "https://simple.wikipedia.org/wiki/Trojan_War",
+            "https://en.wikipedia.org/wiki/Plague_of_Athens"
+          ]
+        },
+        {
+          "latent": 14,
+          "score": 0.0637,
+          "n_active": 101,
+          "examples": [
+            "http://www.gutenberg.org/files/19821/19821-h/19821-h.htm#parrot",
+            "http://www.gutenberg.org/files/16540/16540-h/16540-h.htm#THE_BLACKBIRDS_NEST",
+            "http://www.gutenberg.org/files/19821/19821-h/19821-h.htm#keeper"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.063,
+          "n_active": 82,
+          "examples": [
+            "https://www.commonlit.org/texts/greek-government",
+            "https://en.wikipedia.org/wiki/Limited_government",
+            "https://www.commonlit.org/texts/on-various-kinds-of-thinking"
+          ]
+        },
+        {
+          "latent": 124,
+          "score": 0.062,
+          "n_active": 76,
+          "examples": [
+            "https://www.commonlit.org/texts/lobo-the-king-of-currumpaw",
+            "https://en.wikipedia.org/wiki/Storm_drain",
+            "http://www.gutenberg.org/files/21047/21047-h/21047-h.htm#POMPEY_GUARDING_BABY"
+          ]
+        }
+      ]
+    }
+  }
+}

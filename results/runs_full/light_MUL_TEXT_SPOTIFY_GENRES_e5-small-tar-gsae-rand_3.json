@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.2840112625995403,
+  "test_error": 3.2840112625995403,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9060213754223918,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1334.1218082904816,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1912,
+      "n_groups": 1911,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 305,
+      "n_removed": 305,
+      "var_share_removed": 0.0726,
+      "var_share_sae_error": 0.0381,
+      "top": [
+        {
+          "group": 491,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 4156.34,
+          "examples": [
+            "Nico Santos",
+            "Aponte",
+            "Apaixonado"
+          ]
+        },
+        {
+          "group": 1907,
+          "latents": [
+            516
+          ],
+          "gain_margin": 4121.94,
+          "examples": [
+            "Donde Nadas",
+            "Tua Gra\u00e7a (feat. Priscilla Alcantara)",
+            "Goetia"
+          ]
+        },
+        {
+          "group": 364,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 3672.51,
+          "examples": [
+            "Primera Clase",
+            "Contigo y Aqu\u00ed",
+            "No me rompas las bolas"
+          ]
+        },
+        {
+          "group": 30,
+          "latents": [
+            2029
+          ],
+          "gain_margin": 3543.32,
+          "examples": [
+            "A Divina Com\u00e9dia 2",
+            "S\u00f3 Trio Parada Dura",
+            "Sequ\u00eancia Animalesca De Bicudas E Girat\u00f3rias"
+          ]
+        },
+        {
+          "group": 921,
+          "latents": [
+            771
+          ],
+          "gain_margin": 3475.57,
+          "examples": [
+            "Arrocha o N\u00f3 - ll",
+            "Balan\u00e7a o Povo",
+            "Apaixonado"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1897,
+      "n_groups": 1897,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 108,
+      "n_removed": 108,
+      "var_share_removed": 0.0226,
+      "var_share_sae_error": 0.0347,
+      "top": [
+        {
+          "group": 288,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 4712.06,
+          "examples": [
+            "Samba De Dom",
+            "Henrique Camacho;Zigma",
+            "Mavado"
+          ]
+        },
+        {
+          "group": 1891,
+          "latents": [
+            516
+          ],
+          "gain_margin": 4148.41,
+          "examples": [
+            "Sebastian Yatra;Guaynaa",
+            "Danna Paola",
+            "Danna Paola"
+          ]
+        },
+        {
+          "group": 1640,
+          "latents": [
+            718
+          ],
+          "gain_margin": 3978.91,
+          "examples": [
+            "Kelvin Kwan",
+            "Miriam Yeung",
+            "See Siang Wong"
+          ]
+        },
+        {
+          "group": 315,
+          "latents": [
+            1686
+          ],
+          "gain_margin": 3472.15,
+          "examples": [
+            "Harris Jayaraj;Sudha Ragunathan",
+            "Mahesh Raghvan;Sharanya Srinivas",
+            "Thaman S;Srivardhini;Aditi Bhavaraju;Satya Yamini;Roshini JKV;Tejaswini"
+          ]
+        },
+        {
+          "group": 280,
+          "latents": [
+            1689
+          ],
+          "gain_margin": 3451.64,
+          "examples": [
+            "Faithless;Suli Breaks;Jazzie B.;MEDUZA",
+            "James Hype;Ayak;Dots Per Inch;TS7",
+            "Anthony Hamilton;Jaheim;Musiq Soulchild"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1930,
+      "n_groups": 1927,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 438,
+      "n_removed": 438,
+      "var_share_removed": 0.1122,
+      "var_share_sae_error": 0.0441,
+      "top": [
+        {
+          "group": 1919,
+          "latents": [
+            516
+          ],
+          "gain_margin": 5117.59,
+          "examples": [
+            "Hasta Abajo",
+            "Hasta Abajo",
+            "Hasta Abajo"
+          ]
+        },
+        {
+          "group": 65,
+          "latents": [
+            2029
+          ],
+          "gain_margin": 4384.55,
+          "examples": [
+            "Lindo, Leve E Pleno",
+            "Vai Vendo - Vers\u00e3o \"O Destino\"",
+            "Filmes e Hist\u00f3rias"
+          ]
+        },
+        {
+          "group": 847,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 4144.34,
+          "examples": [
+            "Pool, Averna y Papusa",
+            "Si Estuvieras Aqu\u00ed",
+            "Llegamos a la Disco"
+          ]
+        },
+        {
+          "group": 896,
+          "latents": [
+            1722
+          ],
+          "gain_margin": 3669.32,
+          "examples": [
+            "O Vento",
+            "O Resgate",
+            "O Resgate"
+          ]
+        },
+        {
+          "group": 1914,
+          "latents": [
+            577
+          ],
+          "gain_margin": 3134.58,
+          "examples": [
+            "Suno- Na Sangemarmar (From \"Youngistaan)",
+            "Je Kawta Din Reprise(Male)",
+            "Heer Raanjhana (From \"Bachchhan Paandey\")"
+          ]
+        }
+      ]
+    }
+  }
+}

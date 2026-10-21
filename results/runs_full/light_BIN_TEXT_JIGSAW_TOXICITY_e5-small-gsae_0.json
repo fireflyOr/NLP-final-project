@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7989830814296066,
+  "test_error": 0.2010169185703934,
+  "course_metric": "auroc",
+  "course_score": 0.7989830814296065,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 36.63089156150818,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1360,
+      "n_removed": 1360,
+      "var_share_removed": 0.4428,
+      "var_share_sae_error": 0.1731,
+      "top": [
+        {
+          "group": 1398,
+          "latents": [
+            599
+          ],
+          "gain_margin": 722.99,
+          "examples": [
+            "Very Funny.",
+            "Too funny!",
+            "Silly."
+          ]
+        },
+        {
+          "group": 2042,
+          "latents": [
+            376
+          ],
+          "gain_margin": 500.85,
+          "examples": [
+            "That's right.  Trump is nothing but a big pussy bag liar.  Come November, rational voters will lance the puss bag.",
+            "Or else the very things that make \"America great\" will turn to dust. Trump is proving to be a President who is only out for his supporters. This is short sighte",
+            "Another blah, blah, blah, blah summit.  Yet the real women who  actually have a job and work are to busy to have anything to do with this summit.  Who is their "
+          ]
+        },
+        {
+          "group": 1606,
+          "latents": [
+            866
+          ],
+          "gain_margin": 382.59,
+          "examples": [
+            "This is ridiculous.",
+            "That's a really bizarre revisionist interpretation.",
+            "You're an ill informed bigot."
+          ]
+        },
+        {
+          "group": 1110,
+          "latents": [
+            121
+          ],
+          "gain_margin": 311.91,
+          "examples": [
+            "JimJohnson:\n\"Why is the City abdicating its responsibilities here\"?\nThey are 'trapped' between Reason & Logic, and their own Liberal extremism....It paralyzes t",
+            "If you believe what the scumbag says that this was because David supposedly smoked all his pot, then you need to pull your head out of the sand.  There had to h",
+            "It's also a fact that many of the alleged abuses came after the accused was dead, or so old as to not be able to defend oneself."
+          ]
+        },
+        {
+          "group": 1226,
+          "latents": [
+            473
+          ],
+          "gain_margin": 279.87,
+          "examples": [
+            "Which God? Must be more then one, eh? When you're dead, she's going to hold you accountable for the hate, racism, misogyny, and trash talk you've written the RG",
+            "Too late I threw the card away.",
+            "45, not having even a single clue as to what it means to be a leader in America, responds to such a disaster by trying his tiny best to gin up more anger and ha"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 820,
+      "n_groups": 769,
+      "n_multi_groups": 45,
+      "n_groups_dropped": 558,
+      "n_removed": 585,
+      "var_share_removed": 0.5704,
+      "var_share_sae_error": 0.0155,
+      "top": [
+        {
+          "group": 96,
+          "latents": [
+            1771
+          ],
+          "gain_margin": 106.06,
+          "examples": [
+            "2016-10-25 23:30:14.979910",
+            "2017-10-24 17:30:41.200727",
+            "2017-08-22 19:25:20.178528"
+          ]
+        },
+        {
+          "group": 741,
+          "latents": [
+            362
+          ],
+          "gain_margin": 101.49,
+          "examples": [
+            "2017-08-01 23:40:04.011358",
+            "2017-04-28 20:06:52.701355",
+            "2017-09-24 04:30:20.091757"
+          ]
+        },
+        {
+          "group": 424,
+          "latents": [
+            18
+          ],
+          "gain_margin": 97.46,
+          "examples": [
+            "2017-01-25 15:10:35.428007",
+            "2017-06-25 20:35:35.679327",
+            "2016-03-25 00:35:00.376487"
+          ]
+        },
+        {
+          "group": 311,
+          "latents": [
+            1068
+          ],
+          "gain_margin": 94.86,
+          "examples": [
+            "2017-01-09 18:31:14.199015",
+            "2017-05-08 03:06:24.198172",
+            "2017-08-05 18:17:07.200701"
+          ]
+        },
+        {
+          "group": 167,
+          "latents": [
+            2003
+          ],
+          "gain_margin": 93.71,
+          "examples": [
+            "2016-10-03 16:20:13.658884",
+            "2016-12-22 03:23:16.888881",
+            "2017-01-24 00:20:50.718888"
+          ]
+        }
+      ]
+    }
+  }
+}

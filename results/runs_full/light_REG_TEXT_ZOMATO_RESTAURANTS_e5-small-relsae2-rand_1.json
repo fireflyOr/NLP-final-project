@@ -1,0 +1,474 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.21230838338219174,
+  "test_error": 0.21230838338219174,
+  "course_metric": "r2",
+  "course_score": 0.771128335906851,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 123.07192420959473,
+  "diagnostics": {
+    "address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 303,
+      "n_removed": 209,
+      "threshold": 0.0436,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.5918,
+      "var_share_kept": 0.4982,
+      "var_share_sae_error": 0.1254,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 53,
+          "score": 0.0461,
+          "n_active": 356,
+          "examples": [
+            "2, RR Chambers,11th Main Road, Opposite Munieshwara Temple, Vasanth Nagar, Bangalore",
+            "2, RR Chambers,11th Main Road, Opposite Munieshwara Temple, Vasanth Nagar, Bangalore",
+            "2, RR Chambers,11th Main Road, Opposite Munieshwara Temple, Vasanth Nagar, Bangalore"
+          ]
+        },
+        {
+          "latent": 239,
+          "score": 0.0402,
+          "n_active": 357,
+          "examples": [
+            "421/A, 80 Feet Rd, 6th Block, Koramangala, Bengaluru",
+            "Address: Block 1st, 770, 59th Cross Rd, Block 1st, 3rd Block, Rajaji Nagar, Bengaluru, Karnataka",
+            "417/1&417/2, 100 Feet Road, 4th Block, Koramangala, Bengaluru"
+          ]
+        },
+        {
+          "latent": 340,
+          "score": 0.0366,
+          "n_active": 695,
+          "examples": [
+            "343, 8th A Main Road, Milk Colony, Subramanyanagar, 17th Cross, Malleshwaram, Bangalore",
+            "343, 8th A Main Road, Milk Colony, Subramanyanagar, 17th Cross, Malleshwaram, Bangalore",
+            "117, Neelasandra Bazar Street, Rose Garden Bus Stop"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.0342,
+          "n_active": 405,
+          "examples": [
+            "167, Green Glen Layout, Near HDFC Bank ATM, Bellandur, Bangalore",
+            "167, Green Glen Layout, Near HDFC Bank ATM, Bellandur, Bangalore",
+            "167, Green Glen Layout, Near HDFC Bank ATM, Bellandur, Bangalore"
+          ]
+        },
+        {
+          "latent": 72,
+          "score": 0.0334,
+          "n_active": 341,
+          "examples": [
+            "No 3,SR Street,4th Cross, RMV 2nd Stage, Devsandra, New BEL Road, Bangalore",
+            "No 3,SR Street,4th Cross, RMV 2nd Stage, Devsandra, New BEL Road, Bangalore",
+            "80 Ft Road, RMV 2nd Stage, New BEL Road, Bangalore"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 492,
+      "n_kept": 411,
+      "n_removed": 101,
+      "threshold": 0.0417,
+      "passed_test": 71,
+      "removed_norm_ratio": 0.3027,
+      "var_share_kept": 0.7505,
+      "var_share_sae_error": 0.0025,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 440,
+          "score": 0.1125,
+          "n_active": 1309,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 66,
+          "score": 0.0979,
+          "n_active": 3854,
+          "examples": [
+            "North Indian",
+            "North Indian",
+            "North Indian"
+          ]
+        },
+        {
+          "latent": 262,
+          "score": 0.0953,
+          "n_active": 3696,
+          "examples": [
+            "Cafe, French, North Indian",
+            "North Indian",
+            "North Indian"
+          ]
+        },
+        {
+          "latent": 191,
+          "score": 0.0952,
+          "n_active": 1445,
+          "examples": [
+            "Parsi, North Indian",
+            "Parsi, North Indian",
+            "Kashmiri"
+          ]
+        },
+        {
+          "latent": 387,
+          "score": 0.0883,
+          "n_active": 1895,
+          "examples": [
+            "North Indian, American, Italian",
+            "North Indian, Chinese, European",
+            "American, North Indian, Chinese"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 403,
+      "n_removed": 109,
+      "threshold": 0.0412,
+      "passed_test": 45,
+      "removed_norm_ratio": 0.4404,
+      "var_share_kept": 0.6052,
+      "var_share_sae_error": 0.0242,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 109,
+          "score": 0.0897,
+          "n_active": 5373,
+          "examples": [
+            "Dance Floor, Dj",
+            "Dance Floor, Dj",
+            "Dance Floor, Dj"
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0679,
+          "n_active": 4495,
+          "examples": [
+            "Obbattu",
+            "Pool Table",
+            "Pool Table"
+          ]
+        },
+        {
+          "latent": 69,
+          "score": 0.0666,
+          "n_active": 645,
+          "examples": [
+            "Indian Sweets",
+            "Sushi, Noodles",
+            "Sushi, Sea Food"
+          ]
+        },
+        {
+          "latent": 32,
+          "score": 0.0642,
+          "n_active": 974,
+          "examples": [
+            "Pasta, Caesar Salad, Wood Fire Pizza, Chocolate Bomb, Ravioli, Cocktails, Mocktails",
+            "Pasta, Macaroni, Caesar Salad, Wood Fire Pizza, Ravioli, Chocolate Bomb, Cocktails",
+            "Salads, Chicken Sandwich, Brownie, Spaghetti, Arugula Salad, Cheesecake, Cheese Chilli Toast"
+          ]
+        },
+        {
+          "latent": 95,
+          "score": 0.0621,
+          "n_active": 403,
+          "examples": [
+            "Pool Table",
+            "Pool Table",
+            "Italian Wonder"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 373,
+      "n_removed": 139,
+      "threshold": 0.0408,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.875,
+      "var_share_kept": 0.4061,
+      "var_share_sae_error": 0.0353,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 388,
+          "score": 0.0576,
+          "n_active": 309,
+          "examples": [
+            "['Chicken Wings (full)', 'Egg Omlet', 'Andhra Chilly Chicken (full)', 'Andhra Chicken Lolypop (full)', 'Andhra Chicken 65 (full)', 'Andhra Pepper Chicken (full)",
+            "['Chicken Lollipop', 'Tandoori Chicken', 'Hyderabadi Chicken Dum Biriyani', 'Hyderabadi Mutton Dum Biriyani', 'Hyderabadi Chicken Dum Biriyani Family Pack', 'Bo",
+            "['Hyderabadi Chicken Dum Biryani..', 'Egg Biriyani(Non Veg Rice)..', 'Veg Biriyani ( Hyd Style)..', 'Hyderabadi Chicken Dum Biryani Family Pack..', 'Boneless Ch"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0498,
+          "n_active": 263,
+          "examples": [
+            "['Chilly Paneer', 'Paneer Manchurian', 'Egg 65', 'Chilly Chicken', 'Chicken Manchurian', 'Chicken 65', 'Crispy Chicken Dry', 'Veg Fried Rice', 'Chicken Fried Ri",
+            "['Butter Chicken Gravy [4 Pieces]', 'Special Offer Combo', 'Magic Special Combo', 'Magic Thali', 'Special Offer Combo', 'Special Thali', 'Dum Biryani Combo', 'M",
+            "['Roti Thali', 'Paratha Thali', 'Special Thali', 'Executive Thali', 'Egg Thali', 'Chicken Thali', 'Royal Thali', 'Special Apna Punjab Thali', 'Paneer Masala Com"
+          ]
+        },
+        {
+          "latent": 34,
+          "score": 0.0442,
+          "n_active": 184,
+          "examples": [
+            "['Thai Chili Beef', 'Stir Fried Bok Choy and Mushroom', 'Chicken Green Curry', 'Vegetables Basil Fried Rice', 'Non Veg Regular Meal Box', 'Non Veg Large Meal Bo",
+            "['Non Veg Regular Meal Box', 'Orange Chicken', 'Crispy Beef', 'Chicken Basil Fried Rice', 'Chicken Pad Thai', '3 Steamed Bao with Singapore Chilli Gravy Combo',",
+            "['Mongolian Lamb [120 grams]', 'Mushroom Hibachi Rice', 'Pork Char Sui Bun [4 Pieces]', 'Red Chilli Chicken [120 grams]', 'Asian Green Soup [200 ml]', 'Tom Yum "
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.0427,
+          "n_active": 125,
+          "examples": [
+            "['Butter Chicken and Cheese Momos', 'Butter Paneer Momos', 'Butter Corn Cheese Momo', 'Heart Shaped Truffle Chocolate Momo', 'Butter Chicken Momos', 'Butter Chi",
+            "['Chicken Hot Dog', 'Chicken Cheese Hot Dog', 'Mini Chicken Hot Dog Box [Box of 3]', 'Mini Chicken Cheese Hot Dog Box [Box of 3]', 'Chicken Sausage', 'Chicken c",
+            "['Mini Meals', 'Curd Rice', 'Mini Meals', 'Curd Rice', 'Rice Bhath', 'Uddina Vada']"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.042,
+          "n_active": 203,
+          "examples": [
+            "['Butterscotch Cake [500 grams]', 'Black Forest Cake [500 grams]', 'Chocolate Truffle Cake [500 grams]', 'Red Velvet Cake [500 grams]', 'Chocolate Truffle Pastr",
+            "['Chocolate Fantasy (Pack Of 5)', 'Pan Cake (Pack Of 6)', 'Gulab Jamun (Pack Of 10)', 'Raspberry Cheesecake Shot (Pack Of 5)', 'Gulkand Shot (Pack Of 5)', 'Rasp",
+            "['Chocolate Fantasy (Pack Of 5)', 'Pan Cake (Pack Of 6)', 'Gulab Jamun (Pack Of 10)', 'Red Velvet Cake With Butter Cream Frosting (750 Gm)', 'Chocolate Fantasy'"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 344,
+      "n_removed": 168,
+      "threshold": 0.042,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.5276,
+      "var_share_kept": 0.5621,
+      "var_share_sae_error": 0.1555,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 453,
+          "score": 0.0592,
+          "n_active": 552,
+          "examples": [
+            "Ramana's",
+            "Ramana's",
+            "Ramana's"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.0565,
+          "n_active": 1269,
+          "examples": [
+            "Savji's Roll 'N' Biryani",
+            "Sultan's Biryani",
+            "Sultan's Biryani"
+          ]
+        },
+        {
+          "latent": 364,
+          "score": 0.0517,
+          "n_active": 353,
+          "examples": [
+            "Northern Route",
+            "Northern Route",
+            "Northern Route"
+          ]
+        },
+        {
+          "latent": 431,
+          "score": 0.0513,
+          "n_active": 407,
+          "examples": [
+            "Guns N Roses",
+            "Guns N Roses",
+            "As On Fire"
+          ]
+        },
+        {
+          "latent": 6,
+          "score": 0.048,
+          "n_active": 347,
+          "examples": [
+            "Ideal Kitchen",
+            "Ideal Kitchen",
+            "Ideal Kitchen"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 486,
+      "n_kept": 347,
+      "n_removed": 165,
+      "threshold": 0.0396,
+      "passed_test": 32,
+      "removed_norm_ratio": 0.4581,
+      "var_share_kept": 0.6325,
+      "var_share_sae_error": 0.0131,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 242,
+          "score": 0.0883,
+          "n_active": 305,
+          "examples": [
+            "080 41487000",
+            "080 41471383",
+            "080 41654693"
+          ]
+        },
+        {
+          "latent": 177,
+          "score": 0.0671,
+          "n_active": 88,
+          "examples": [
+            "080 39854710",
+            "080 39457777",
+            "080 39457777"
+          ]
+        },
+        {
+          "latent": 340,
+          "score": 0.0601,
+          "n_active": 341,
+          "examples": [
+            "080 25001700",
+            "080 25001700",
+            "080 25001700"
+          ]
+        },
+        {
+          "latent": 193,
+          "score": 0.0598,
+          "n_active": 778,
+          "examples": [
+            "080 49653529",
+            "080 49653529",
+            "080 49653529"
+          ]
+        },
+        {
+          "latent": 99,
+          "score": 0.0561,
+          "n_active": 571,
+          "examples": [
+            "080 22960608\n080 41744427",
+            "080 42053331\n080 28476532",
+            "080 22960634\r\r\n080 41744131"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 381,
+      "n_removed": 131,
+      "threshold": 0.0425,
+      "passed_test": 69,
+      "removed_norm_ratio": 0.4071,
+      "var_share_kept": 0.5231,
+      "var_share_sae_error": 0.2318,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 334,
+          "score": 0.2042,
+          "n_active": 915,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  Half of the food - main course not delivered and no way of getting it your money back too. On top of it Zomato will penalise you only. ",
+            "[('Rated 1.0', 'RATED\\n  this is a worst restaurant due to suppliers like ramesh.')]",
+            "[('Rated 2.0', 'RATED\\n  Not good at all. Had a bad experience after ordering food. Biriyani tastes awful. So bad experience that I forgot to click a pic also. "
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1575,
+          "n_active": 1040,
+          "examples": [
+            "[('Rated 3.0', 'RATED\\n  average'), ('Rated 1.0', \"RATED\\n  The burger was very bad . It's cold and stale . It tasted really bad . The fries are also cold . The",
+            "[('Rated 3.0', 'RATED\\n  average'), ('Rated 1.0', \"RATED\\n  The burger was very bad . It's cold and stale . It tasted really bad . The fries are also cold . The",
+            "[('Rated 1.0', 'RATED\\n  Food is extremely average everything is way too spicy and taste s stale pad thai noodles were not upto the mark schegwan chicken is wor"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.0947,
+          "n_active": 1577,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  I have been waiting for the food from last 30 mins, but no success as if yet. Also, one of the items (biryani) was cancelled 20 mins af",
+            "[('Rated 3.0', 'RATED\\n  Well, I just loved the Pineapple BBQ here. It was just awesome in taste. Rest were good too. In buffet menu was normal. In rice, biryan",
+            "[('Rated 3.0', \"RATED\\n  Have been wanting to try this place for quite some time now. The place looks decent, But does not give you a restaurant feel. The decor"
+          ]
+        },
+        {
+          "latent": 298,
+          "score": 0.0906,
+          "n_active": 769,
+          "examples": [
+            "[('Rated 4.0', 'RATED\\n  Had ordered pasta from here. The taste was somewhat bland with no cheese. However garlic bread was really nice. The four stars are actu",
+            "[('Rated 4.0', 'RATED\\n  Had ordered pasta from here. The taste was somewhat bland with no cheese. However garlic bread was really nice. The four stars are actu",
+            "[('Rated 4.0', 'RATED\\n  Had ordered pasta from here. The taste was somewhat bland with no cheese. However garlic bread was really nice. The four stars are actu"
+          ]
+        },
+        {
+          "latent": 352,
+          "score": 0.086,
+          "n_active": 859,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  I have been ordering from Mealer since a long time but lately their food quality has degraded a lot. I have fallen sick twice recently ",
+            "[('Rated 4.0', 'RATED\\n  Superb Coffee and Food.\\nOne of the best and cheap in Shanti nagar area.\\nLoved their Dahi Puri.\\nThe restaurant is kept clean and tidy",
+            "[('Rated 4.0', 'RATED\\n  Superb Coffee and Food.\\nOne of the best and cheap in Shanti nagar area.\\nLoved their Dahi Puri.\\nThe restaurant is kept clean and tidy"
+          ]
+        }
+      ]
+    }
+  }
+}

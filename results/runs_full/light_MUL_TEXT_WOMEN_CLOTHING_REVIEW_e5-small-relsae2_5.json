@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.743138931746628,
+  "test_error": 0.743138931746628,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8963999572449151,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.49190354347229,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 415,
+      "n_removed": 97,
+      "threshold": 0.047,
+      "passed_test": 76,
+      "removed_norm_ratio": 0.2901,
+      "var_share_kept": 0.6599,
+      "var_share_sae_error": 0.1966,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 18,
+          "score": 0.2091,
+          "n_active": 2316,
+          "examples": [
+            "This dress was adorable & fit great! regrettably, i had to return it since it wasn't lined.",
+            "The sweater is beautiful. i loved the tweed design. but the fit was boxy and the collar sat funny. so i had to send it back.",
+            "The material is awesome and it's a super pretty dress it just didn't work on my body."
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.1628,
+          "n_active": 2837,
+          "examples": [
+            "I love this shirt. it is great quality and hangs perfectly! please make more colors in this one. i would buy all of them!!",
+            "I don't know that there needs to be more reviews, but here goes. \r\n\r\nthe dress is gorgeous! i have never received so many compliments on a dress of mine, and i ",
+            "I absolutely love this skirt! the picture does not do it justice. it is absolutely beautiful and fits perfectly. i received so many compliments when i wore it!"
+          ]
+        },
+        {
+          "latent": 196,
+          "score": 0.1592,
+          "n_active": 1008,
+          "examples": [
+            "I've gotten so many compliments. i'll never buy a bathing suit anywhere else. i buy all my suits from here now!",
+            "This is my first time purchasing a bra from this brand and i am in love. the style and quality are amazing. it is the most comfortable bra i owned to date and i",
+            "I could wear this every day, it is stylish and comfortable"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.1552,
+          "n_active": 2783,
+          "examples": [
+            "Awful color, horribly wrinkled and just a mess...so disappointed",
+            "Poor quality, material looks much thinner and cheaper than pictured.",
+            "Cut out design, no seems or hems.\r\n very disappointed in retailer"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.1542,
+          "n_active": 976,
+          "examples": [
+            "I love the fabric however the overall fit did not work for me. \r\ni think the arms are much smaller than the overall shirt.",
+            "I saw that there was metallic detail when i ordered it, but i wasn't prepared for the entire thing to be metallic. it fit tts, but wasn't what i was looking for",
+            "The bra is comfortable and the design is good. however, the sizing is way off. i am a 34c and the small fits well with minimal support. not sure about quality. "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 434,
+      "n_removed": 78,
+      "threshold": 0.0439,
+      "passed_test": 154,
+      "removed_norm_ratio": 0.1919,
+      "var_share_kept": 0.8412,
+      "var_share_sae_error": 0.0647,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 217,
+          "score": 0.2229,
+          "n_active": 886,
+          "examples": [
+            "Gorgeous, but.",
+            "Gorgeous, but...",
+            "Great quality but..."
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1744,
+          "n_active": 1561,
+          "examples": [
+            "Cheap fabric and terrible fit",
+            "Great shape, poor condition",
+            "Bad fit and bad construction"
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.1737,
+          "n_active": 1916,
+          "examples": [
+            "Maybe for some...",
+            "Good? maybe...",
+            "Almost, but not quite"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.1724,
+          "n_active": 1049,
+          "examples": [
+            "Not quite as pictured",
+            "Not quite the right fit",
+            "Silhouette not as great as pictured"
+          ]
+        },
+        {
+          "latent": 72,
+          "score": 0.1712,
+          "n_active": 993,
+          "examples": [
+            "Why is it so big?",
+            "Large and very wide!",
+            "Cups size too big!"
+          ]
+        }
+      ]
+    }
+  }
+}

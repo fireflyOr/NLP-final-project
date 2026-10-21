@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.1392819197517727,
+  "test_error": 1.1392819197517727,
+  "course_metric": "r2",
+  "course_score": 0.4119534595290827,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.26130557060242,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2045,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1648,
+      "n_removed": 1649,
+      "var_share_removed": 0.5263,
+      "var_share_sae_error": 0.0531,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            1233
+          ],
+          "gain_margin": 12989.87,
+          "examples": [
+            "Super Mario 64",
+            "Super Mario 64",
+            "Super Mario Bros."
+          ]
+        },
+        {
+          "group": 1015,
+          "latents": [
+            935
+          ],
+          "gain_margin": 3675.46,
+          "examples": [
+            "Nintendo World Cup",
+            "Mario Golf: World Tour",
+            "Mario Golf: Advance Tour"
+          ]
+        },
+        {
+          "group": 175,
+          "latents": [
+            1865
+          ],
+          "gain_margin": 3236.83,
+          "examples": [
+            "Fire Emblem: Seisen no Keifu",
+            "Fire Emblem: Awakening",
+            "Fire Emblem: Fuuin no Tsurugi"
+          ]
+        },
+        {
+          "group": 1618,
+          "latents": [
+            492
+          ],
+          "gain_margin": 3134.52,
+          "examples": [
+            "Tennis",
+            "Grand Slam Tennis 2",
+            "G1 Jockey Wii"
+          ]
+        },
+        {
+          "group": 1010,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 2823.96,
+          "examples": [
+            "Halo 2 Multiplayer Map Pack",
+            "The Walking Dead: Season Two",
+            "The Walking Dead: Season Two"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1015,
+      "n_groups": 1015,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 959,
+      "n_removed": 959,
+      "var_share_removed": 0.703,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 943,
+          "latents": [
+            168
+          ],
+          "gain_margin": 1636.73,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 876,
+          "latents": [
+            200
+          ],
+          "gain_margin": 1160.9,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 985,
+          "latents": [
+            305
+          ],
+          "gain_margin": 764.44,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 815,
+          "latents": [
+            1085
+          ],
+          "gain_margin": 516.55,
+          "examples": [
+            "Gathering of Developers",
+            "Gathering of Developers",
+            "Gathering of Developers"
+          ]
+        },
+        {
+          "group": 802,
+          "latents": [
+            957
+          ],
+          "gain_margin": 338.27,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

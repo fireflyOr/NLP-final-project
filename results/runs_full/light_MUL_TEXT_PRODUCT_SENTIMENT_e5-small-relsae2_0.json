@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.5808796745391471,
+  "test_error": 0.5808796745391471,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.850191299777166,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 15.923286199569702,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 364,
+      "n_removed": 148,
+      "threshold": 0.0823,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.4713,
+      "var_share_kept": 0.5975,
+      "var_share_sae_error": 0.1617,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 18,
+          "score": 0.2052,
+          "n_active": 239,
+          "examples": [
+            "@sxsw I hope this year's festival isn't as crashy as this year's iPhone app. #sxsw",
+            "Apple ehPhone. Now available. Only in Canada. #SXSW #Apple #aPhone #Canada",
+            "Google seems to have sabotaged my YouTube account - WTF? Are they trying to OWN the entire online ecosystem?  VERY BAD FORM #SXSW"
+          ]
+        },
+        {
+          "latent": 141,
+          "score": 0.1577,
+          "n_active": 362,
+          "examples": [
+            "Google will not launch Facebook competitor Circles @mention #sxsw today as thought, creeper half-friends the world over disappointed.",
+            "No launch imminent apparently, so Google Circles probably won't d\u00cc\u00a9but at #SXSW this evening.",
+            "Google Circles : won't be launched at #SXSW. Google even denies working on such a project : {link} #Facebook"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.1274,
+          "n_active": 224,
+          "examples": [
+            "This double buzzing issue with iPhone iOS 4.3 is getting annoying. In other news, an iPhone may fly across the room at #GR2L2 #SXSW",
+            "As I understand, this is buzzing from #SXSW : group texting, groupme, iPad 2, Apple, Denis Crowley...More ?",
+            "Since I'm listening to Google's Marissa Mayer, but engaging on Twitter I'm wondering what the heck happened to Google Buzz. #SXSW"
+          ]
+        },
+        {
+          "latent": 462,
+          "score": 0.1188,
+          "n_active": 169,
+          "examples": [
+            "The dailies on iPad are going to evolve...they're still impossible to download (20 MB and up downloads) #sxsw",
+            "In Apple #SXSW line for iPad 2. Staff just cleared us as good to go for 32g. Only 16gb white and 64g At&amp;t black out of stock.",
+            "RT @mention Get the OWLE Bubo for iPhone with a $20 off coupon use code SBSW2011  #sxsw #SXSWFilm #SXSWi #almedia"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.0985,
+          "n_active": 133,
+          "examples": [
+            "First up: iPad Design Headaches (2 Tablets, Call in the Morning). #SXSW #tapworthy",
+            "Checking out iPad Design Headaches (2 Tablets, Call in the Morning).\n{link} #SXSW #tapworthy #fb",
+            "dumb blonde {link} Evelyn #sxsw Juwan Howard iPad"
+          ]
+        }
+      ]
+    }
+  }
+}

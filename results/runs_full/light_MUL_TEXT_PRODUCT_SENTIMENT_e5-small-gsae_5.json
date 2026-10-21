@@ -1,0 +1,93 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.606514625753508,
+  "test_error": 0.606514625753508,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8855358018254675,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 18.641433715820312,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1837,
+      "n_groups": 1833,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 881,
+      "n_removed": 881,
+      "var_share_removed": 0.4721,
+      "var_share_sae_error": 0.0195,
+      "top": [
+        {
+          "group": 107,
+          "latents": [
+            1972
+          ],
+          "gain_margin": 265.6,
+          "examples": [
+            "I just noticed DST is coming this weekend. How many iPhone users will be an hour late at SXSW come Sunday morning? #SXSW #iPhone",
+            "Serious iPad envy. Toting around one's Macbook Pro + cord will do that to a girl. #sxsw :(",
+            "Apple likes it when you pay them. As long as the gadget will be liked by many, this closed system will work. #pnid #sxsw"
+          ]
+        },
+        {
+          "group": 1791,
+          "latents": [
+            918
+          ],
+          "gain_margin": 168.05,
+          "examples": [
+            "over 1k views! RT @mention What does an Apple security guy after he locks up the store..... #sxsw - {link}",
+            "What does an Apple security guy after he locks up the store..... #sxsw - The Realtime SXSW S... {link} curated by @mention",
+            "this is not how I want 2 B spending my  time during #sxsw :( (@mention Apple Store w/ 2 others) {link}"
+          ]
+        },
+        {
+          "group": 1663,
+          "latents": [
+            76
+          ],
+          "gain_margin": 163.72,
+          "examples": [
+            "1 of the most important things needed when designing for the iPad: gesturing -the ability to talk with your hands. That and listening #sxsw",
+            "Panels on PR, cloud computing, Android design, iPhone design today. Hope to redeem my panel experience in one fell swoop #sxsw",
+            "#blackberry users must feel like such losers here at #sxsw. clearly. #iphone crowd, baby."
+          ]
+        },
+        {
+          "group": 1506,
+          "latents": [
+            707
+          ],
+          "gain_margin": 162.26,
+          "examples": [
+            "RT @mention New Iphone autocorrect already tried to change &quot;coworkers&quot; to &quot;visigoths.&quot; Its going to be a long five days of #sxsw",
+            "Apple autocorrect is so weird. Ogilvy autocorrects to idiocy. #ogilvynotes #sxsw :)",
+            "RT @mention Apple autocorrect is so weird. Ogilvy autocorrects to idiocy. #ogilvynotes #sxsw :)"
+          ]
+        },
+        {
+          "group": 1234,
+          "latents": [
+            794
+          ],
+          "gain_margin": 162.12,
+          "examples": [
+            "BREAKING: Apple announces partnership w/porn industry for new #ipad2 video chat app called, &quot;O-FaceTime&quot;. #sxsw",
+            "@mention NFC chips will be one of the big technology enablers of 2011. Nexus S already has it, and iPhone 5 probably will too. #sxsw",
+            "@mention Hey! Y'all have anyway to get text updates?? I don't have a cool pocket google machine phone #sxsw"
+          ]
+        }
+      ]
+    }
+  }
+}

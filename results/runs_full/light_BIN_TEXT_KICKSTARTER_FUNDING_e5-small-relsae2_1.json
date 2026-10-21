@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7110429409483784,
+  "test_error": 0.2889570590516216,
+  "course_metric": "auroc",
+  "course_score": 0.7110429409483783,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 97.12970876693726,
+  "diagnostics": {
+    "created_at": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 381,
+      "n_kept": 337,
+      "n_removed": 175,
+      "threshold": 0.0396,
+      "passed_test": 13,
+      "removed_norm_ratio": 0.6362,
+      "var_share_kept": 0.4941,
+      "var_share_sae_error": 0.0115,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 488,
+          "score": 0.0607,
+          "n_active": 240,
+          "examples": [
+            "1970-01-01 00:00:01.404322454",
+            "1970-01-01 00:00:01.404352320",
+            "1970-01-01 00:00:01.404863223"
+          ]
+        },
+        {
+          "latent": 158,
+          "score": 0.0589,
+          "n_active": 228,
+          "examples": [
+            "1970-01-01 00:00:01.404149673",
+            "1970-01-01 00:00:01.404697100",
+            "1970-01-01 00:00:01.404321582"
+          ]
+        },
+        {
+          "latent": 265,
+          "score": 0.0559,
+          "n_active": 676,
+          "examples": [
+            "1970-01-01 00:00:01.428008141",
+            "1970-01-01 00:00:01.423214861",
+            "1970-01-01 00:00:01.427172016"
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0554,
+          "n_active": 958,
+          "examples": [
+            "1970-01-01 00:00:01.424003514",
+            "1970-01-01 00:00:01.428014039",
+            "1970-01-01 00:00:01.428008141"
+          ]
+        },
+        {
+          "latent": 398,
+          "score": 0.0547,
+          "n_active": 667,
+          "examples": [
+            "1970-01-01 00:00:01.426201809",
+            "1970-01-01 00:00:01.428162010",
+            "1970-01-01 00:00:01.429820193"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 414,
+      "n_kept": 385,
+      "n_removed": 127,
+      "threshold": 0.0408,
+      "passed_test": 27,
+      "removed_norm_ratio": 0.5032,
+      "var_share_kept": 0.6932,
+      "var_share_sae_error": 0.0105,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 350,
+          "score": 0.0782,
+          "n_active": 837,
+          "examples": [
+            "1970-01-01 00:00:01.360137540",
+            "1970-01-01 00:00:01.357251340",
+            "1970-01-01 00:00:01.332475140"
+          ]
+        },
+        {
+          "latent": 341,
+          "score": 0.0686,
+          "n_active": 574,
+          "examples": [
+            "1970-01-01 00:00:01.360137540",
+            "1970-01-01 00:00:01.365652740",
+            "1970-01-01 00:00:01.276192740"
+          ]
+        },
+        {
+          "latent": 426,
+          "score": 0.0683,
+          "n_active": 556,
+          "examples": [
+            "1970-01-01 00:00:01.330532040",
+            "1970-01-01 00:00:01.276811040",
+            "1970-01-01 00:00:01.426500040"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.0674,
+          "n_active": 566,
+          "examples": [
+            "1970-01-01 00:00:01.361902450",
+            "1970-01-01 00:00:01.432018740",
+            "1970-01-01 00:00:01.432018740"
+          ]
+        },
+        {
+          "latent": 253,
+          "score": 0.0646,
+          "n_active": 1000,
+          "examples": [
+            "1970-01-01 00:00:01.427204021",
+            "1970-01-01 00:00:01.424502000",
+            "1970-01-01 00:00:01.427515620"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 367,
+      "n_removed": 145,
+      "threshold": 0.0409,
+      "passed_test": 23,
+      "removed_norm_ratio": 0.3793,
+      "var_share_kept": 0.4859,
+      "var_share_sae_error": 0.2992,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 16,
+          "score": 0.1066,
+          "n_active": 1875,
+          "examples": [
+            "\"I just completed a draft of my autobiography. I want to refine my message, publish it and share my story to help others.\"",
+            "\"I am trying to complete a trilogy of fantasy-fiction novels I began more than 10 years ago.\"",
+            "\"I have been putting some thoughts on paper for a few years now.\""
+          ]
+        },
+        {
+          "latent": 321,
+          "score": 0.0732,
+          "n_active": 774,
+          "examples": [
+            "\"The Atlanta Insiders your best online source for a inside look at sports, entertainment, and events in and around Atlanta.\"",
+            "\"www.TheMarketPlaceatAuroraIN.com is a community website designed to bring the people of Aurora, In together!\"",
+            "\"I want to create a free website for all types of Christians and those looking for the right place to worship.\""
+          ]
+        },
+        {
+          "latent": 270,
+          "score": 0.0722,
+          "n_active": 1320,
+          "examples": [
+            "\"The California Museum is seeking funding to research and produce an exhibit celebrating Ray Eames' centennial.\"",
+            "\"The fans have requested them and we want to meet their demands.  We want to have a run of shirts for the fans.\"",
+            "\"We want to conduct a Canada-wide software competition to further the education of secondary school students.\""
+          ]
+        },
+        {
+          "latent": 63,
+          "score": 0.0721,
+          "n_active": 1248,
+          "examples": [
+            "\"I am trying to start a business called Lio Brothers & Company selling my beard oil and beard accessories.\"",
+            "\"We will provide an easier way for retailers to find new products, supplies and services all in a simple and cost effective way.\"",
+            "\"Trying to move into a brick and mortar store that will provide the greatest experience ever to comic book, gaming, and hobby fans.\""
+          ]
+        },
+        {
+          "latent": 426,
+          "score": 0.0698,
+          "n_active": 571,
+          "examples": [
+            "\"The best compact, high brightness, long battery life LED flashlight in the industry in a durable aluminum housing.\"",
+            "\"Phoenixwallets: The two leather wallet designs you\u2019ve longed for have returned! Just as safe as before, with RFID protective coating,\"",
+            "\"A 45 LED light that you can hang, strap, stick, & bend. 260 Lumen, multiple modes & USB rechargeable.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 328,
+      "n_removed": 184,
+      "threshold": 0.0396,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.4554,
+      "var_share_kept": 0.4542,
+      "var_share_sae_error": 0.2733,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 112,
+          "score": 0.0644,
+          "n_active": 3125,
+          "examples": [
+            "\"mndt\"",
+            "\"buck\"",
+            "\"sc25\""
+          ]
+        },
+        {
+          "latent": 238,
+          "score": 0.0547,
+          "n_active": 695,
+          "examples": [
+            "\"ice1-and-ice9-the-first-low-budget-sls-3d-printers\"",
+            "\"navdive-gps-based-navigation-for-scuba-divers\"",
+            "\"chocolate-printhead-for-open-source-3d-printer\""
+          ]
+        },
+        {
+          "latent": 103,
+          "score": 0.0505,
+          "n_active": 438,
+          "examples": [
+            "\"backpack-new-ez-flip-bag-perfect-for-a-laptop-and\"",
+            "\"flex-versatility-kit-for-ipad-2\"",
+            "\"spoke-mechanical-pencil\""
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.0464,
+          "n_active": 490,
+          "examples": [
+            "\"a-complete-overhaul-of-how-websites-work\"",
+            "\"get-lucky-the-webseries\"",
+            "\"dancing-in-my-heels-new-blogazine-website\""
+          ]
+        },
+        {
+          "latent": 16,
+          "score": 0.0439,
+          "n_active": 623,
+          "examples": [
+            "\"this-is-my-testimony\"",
+            "\"memoir-i-am-my-own-cousin\"",
+            "\"my-very-own-translation\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 332,
+      "n_removed": 180,
+      "threshold": 0.0401,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.4234,
+      "var_share_kept": 0.4775,
+      "var_share_sae_error": 0.2914,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 449,
+          "score": 0.093,
+          "n_active": 873,
+          "examples": [
+            "\"The Barking Buffalo Cafe (Canceled)\"",
+            "\"A Mother And Daughter In Action (Canceled)\"",
+            "\"Show Off (Canceled)\""
+          ]
+        },
+        {
+          "latent": 317,
+          "score": 0.0814,
+          "n_active": 1017,
+          "examples": [
+            "\"For The Love Of It (Canceled)\"",
+            "\"The Leonardo Bridge Project (Canceled)\"",
+            "\"The Face Book (Canceled)\""
+          ]
+        },
+        {
+          "latent": 238,
+          "score": 0.0759,
+          "n_active": 713,
+          "examples": [
+            "\"Pi Crust - Easily Connect Electronics To Your Raspberry Pi\"",
+            "\"RAPIRO: The Humanoid Robot Kit for your Raspberry Pi\"",
+            "\"pedalsense - a gadget to turn your exercise bike into a video game controller (Canceled)\""
+          ]
+        },
+        {
+          "latent": 172,
+          "score": 0.0755,
+          "n_active": 1013,
+          "examples": [
+            "\"M.I.A. (Missing In America) (Canceled)\"",
+            "\"Social Media Website (Canceled)\"",
+            "\"U-P.E.E.R. (Canceled)\""
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0721,
+          "n_active": 3581,
+          "examples": [
+            "\"Red\"",
+            "\"REUNION\"",
+            "\"buck\""
+          ]
+        }
+      ]
+    }
+  }
+}

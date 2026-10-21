@@ -1,0 +1,464 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5616442116602071,
+  "test_error": 0.5616442116602071,
+  "course_metric": "r2",
+  "course_score": 0.43038454231193446,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 98.57182312011719,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1215,
+      "n_groups": 1215,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 870,
+      "n_removed": 870,
+      "var_share_removed": 0.4953,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 1158,
+          "latents": [
+            756
+          ],
+          "gain_margin": 498.33,
+          "examples": [
+            "Lime Crime",
+            "Lime Crime",
+            "Lime Crime"
+          ]
+        },
+        {
+          "group": 1185,
+          "latents": [
+            8
+          ],
+          "gain_margin": 401.2,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 956,
+          "latents": [
+            927
+          ],
+          "gain_margin": 358.48,
+          "examples": [
+            "Lands' End",
+            "Tripp NYC",
+            "Tripp NYC"
+          ]
+        },
+        {
+          "group": 711,
+          "latents": [
+            453
+          ],
+          "gain_margin": 315.65,
+          "examples": [
+            "G.H. Bass & Co.",
+            "Elie Tahari",
+            "Charming Charlie"
+          ]
+        },
+        {
+          "group": 706,
+          "latents": [
+            532
+          ],
+          "gain_margin": 308.76,
+          "examples": [
+            "Speedo",
+            "HUGO",
+            "Bravado Designs"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 830,
+      "n_groups": 830,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 704,
+      "n_removed": 704,
+      "var_share_removed": 0.661,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 395,
+          "latents": [
+            534
+          ],
+          "gain_margin": 408.74,
+          "examples": [
+            "Strollers",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "group": 292,
+          "latents": [
+            1508
+          ],
+          "gain_margin": 402.69,
+          "examples": [
+            "Kitchen & Dining",
+            "Kitchen & Dining",
+            "Kitchen & Dining"
+          ]
+        },
+        {
+          "group": 370,
+          "latents": [
+            1289
+          ],
+          "gain_margin": 379.86,
+          "examples": [
+            "Exercise",
+            "Exercise",
+            "Exercise"
+          ]
+        },
+        {
+          "group": 800,
+          "latents": [
+            109
+          ],
+          "gain_margin": 375.75,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 48,
+          "latents": [
+            1985
+          ],
+          "gain_margin": 298.84,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1452,
+      "n_groups": 1452,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1087,
+      "n_removed": 1087,
+      "var_share_removed": 0.5122,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 526,
+          "latents": [
+            1296
+          ],
+          "gain_margin": 539.08,
+          "examples": [
+            "Shoulder Bag",
+            "Shoulder Bag",
+            "Shoulder Bag"
+          ]
+        },
+        {
+          "group": 267,
+          "latents": [
+            1622
+          ],
+          "gain_margin": 376.48,
+          "examples": [
+            "Digital Cameras",
+            "Digital Cameras",
+            "Digital Cameras"
+          ]
+        },
+        {
+          "group": 888,
+          "latents": [
+            664
+          ],
+          "gain_margin": 346.23,
+          "examples": [
+            "Digital Cameras",
+            "Digital Cameras",
+            "Digital Cameras"
+          ]
+        },
+        {
+          "group": 726,
+          "latents": [
+            599
+          ],
+          "gain_margin": 324.54,
+          "examples": [
+            "Action, Adventure",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 395,
+          "latents": [
+            1909
+          ],
+          "gain_margin": 264.66,
+          "examples": [
+            "Bead",
+            "Athletic",
+            "Athletic"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1424,
+      "n_groups": 1421,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1058,
+      "n_removed": 1061,
+      "var_share_removed": 0.4803,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 1371,
+          "latents": [
+            467
+          ],
+          "gain_margin": 545.27,
+          "examples": [
+            "Women/Shoes/Fashion Sneakers",
+            "Women/Shoes/Fashion Sneakers",
+            "Women/Shoes/Fashion Sneakers"
+          ]
+        },
+        {
+          "group": 413,
+          "latents": [
+            1296
+          ],
+          "gain_margin": 482.18,
+          "examples": [
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        },
+        {
+          "group": 309,
+          "latents": [
+            1840
+          ],
+          "gain_margin": 444.67,
+          "examples": [
+            "Handmade/Bags and Purses/Hip Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        },
+        {
+          "group": 387,
+          "latents": [
+            1648
+          ],
+          "gain_margin": 431.92,
+          "examples": [
+            "Vintage & Collectibles/Paper Ephemera/Stamps",
+            "Electronics/Computers & Tablets/iPad/Tablet/eBook Access",
+            "Electronics/Computers & Tablets/iPad/Tablet/eBook Access"
+          ]
+        },
+        {
+          "group": 1396,
+          "latents": [
+            1287
+          ],
+          "gain_margin": 392.83,
+          "examples": [
+            "Women/Shoes/Fashion Sneakers",
+            "Women/Shoes/Fashion Sneakers",
+            "Women/Shoes/Fashion Sneakers"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1210,
+      "n_removed": 1213,
+      "var_share_removed": 0.3604,
+      "var_share_sae_error": 0.1149,
+      "top": [
+        {
+          "group": 12,
+          "latents": [
+            1025,
+            1085
+          ],
+          "gain_margin": 835.58,
+          "examples": [
+            "Authentic",
+            "New ! Authentic!",
+            "New in box. Authentic"
+          ]
+        },
+        {
+          "group": 417,
+          "latents": [
+            1716
+          ],
+          "gain_margin": 561.93,
+          "examples": [
+            "Never worn! Comes with box",
+            "Only worn once! Comes with box",
+            "Brand new in box"
+          ]
+        },
+        {
+          "group": 1123,
+          "latents": [
+            391
+          ],
+          "gain_margin": 529.67,
+          "examples": [
+            "For sprint cracked screen few scratches on side still a Sold phone just need some work",
+            "Gold. Phone works great and is in great shape. T mobile/AT&T carrier. Comes with box, brand new never used headphones and cord and plug. A few small scratches a",
+            "In perfect condition no scratches or damage of any kind. It's not iCloud locked it's all ready for you to set up with your own accounts just as if you bought it"
+          ]
+        },
+        {
+          "group": 856,
+          "latents": [
+            734
+          ],
+          "gain_margin": 323.7,
+          "examples": [
+            "Gorgeous new HTF unicorn print: fall floral paisley! Background is black, flowers and paisley are jewel tones of pink, orange, purple, and white, vines are gree",
+            "Htf unicorn!!! Bnwt",
+            "Lularoe *unicorn* htf donuts. Os bnwt black background. Never tried on. Just wasn't love for me. Smoke free and pet friendly home"
+          ]
+        },
+        {
+          "group": 692,
+          "latents": [
+            1044
+          ],
+          "gain_margin": 237.59,
+          "examples": [
+            "print pictures from camera.",
+            "50 assorted Envelopes from various stationary sets! You will receive 50 from pictures Destash of my office items so these are unused and would be great for card",
+            "This is a brand new camera with extras have had about 5months but never used so must sell. Camera new 75 extras 30 bag 15 total 120."
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2039,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 1136,
+      "n_removed": 1136,
+      "var_share_removed": 0.3531,
+      "var_share_sae_error": 0.0795,
+      "top": [
+        {
+          "group": 1827,
+          "latents": [
+            166
+          ],
+          "gain_margin": 987.97,
+          "examples": [
+            "Lularoe outfit",
+            "Lularoe tc storks",
+            "LuLaRoe Disney"
+          ]
+        },
+        {
+          "group": 350,
+          "latents": [
+            1862
+          ],
+          "gain_margin": 499.03,
+          "examples": [
+            "Louis Vuitton",
+            "Louis Vuitton Belt",
+            "Louis Vuitton purse"
+          ]
+        },
+        {
+          "group": 1791,
+          "latents": [
+            362
+          ],
+          "gain_margin": 474.67,
+          "examples": [
+            "Kendra Scott",
+            "Kendra Scott set",
+            "Kendra Scott Iridescent Drusy Elisa"
+          ]
+        },
+        {
+          "group": 844,
+          "latents": [
+            664
+          ],
+          "gain_margin": 423.52,
+          "examples": [
+            "Mk Bag",
+            "Tales of the Teen Titans 42 (1984)",
+            "MK watch"
+          ]
+        },
+        {
+          "group": 1018,
+          "latents": [
+            1308
+          ],
+          "gain_margin": 411.53,
+          "examples": [
+            "Cute Panda T-Shirt",
+            "Holy T-shirt",
+            "disney t-shirt"
+          ]
+        }
+      ]
+    }
+  }
+}

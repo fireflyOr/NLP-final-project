@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4361054953186987,
+  "test_error": 1.4361054953186987,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9634384401231805,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 198.63718366622925,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2039,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 324,
+      "n_removed": 324,
+      "var_share_removed": 0.0632,
+      "var_share_sae_error": 0.1216,
+      "top": [
+        {
+          "group": 560,
+          "latents": [
+            1812
+          ],
+          "gain_margin": 5903.09,
+          "examples": [
+            "An effusively fruity, unoaked style of Chardonnay, with bold flavors of pear, apple and citrus and maybe even a touch of mango. Its charms are upfront for all t",
+            "This has everything that many people love about Chardonnay: It's creamy, buttery and toasty, with sweet tropical fruit and pear flavors. It's pretty flashy.",
+            "While savory on the nose with pungent whiffs of smoke and dried herb, this full-bodied Chardonnay is surprisingly forward with ripe, sunny peach and apricot fla"
+          ]
+        },
+        {
+          "group": 1835,
+          "latents": [
+            74
+          ],
+          "gain_margin": 5784.75,
+          "examples": [
+            "Here's a pretty Pinot, direct and appealing for its range of fruit. Shows raspberry, cherry and persimmon flavors, uplifted by bright acidity. Drink it now.",
+            "This is a lovely Pinot to drink over the next several years with steak, lamb or a wild mushroom risotto. It's dry, silky and racy in acidity, with a cleansing m",
+            "This is a full-bodied Pinot, packed with ripe cherry and strawberry flavors and framed in spicy nuance. A shade hot on the finish, ending with an unusually brig"
+          ]
+        },
+        {
+          "group": 299,
+          "latents": [
+            1782
+          ],
+          "gain_margin": 5380.71,
+          "examples": [
+            "This subtle, graceful Syrah acknowledges the cool vintage and takes full advantage of what it has to offer. It's based upon elegantly-layered citrus and sappy b",
+            "A polished, pretty Syrah. It's black in color and very soft, and tastes like a blackberry- and blueberry-infused chocolate drink, with hints of bacon. Luscious ",
+            "Power marks this gigantic Syrah. What it lacks in subtlety, it makes up for with its sheer size. Syrah doesn't get much riper in blackberry, cherry and chocolat"
+          ]
+        },
+        {
+          "group": 1104,
+          "latents": [
+            270
+          ],
+          "gain_margin": 4614.74,
+          "examples": [
+            "While a bit restrained in style, this dry easy-going Riesling offers delicate shades of tangerine and yellow-apple flavor augmented by zesty lime and lemon acid",
+            "This off-dry (11.5% alcohol) Riesling is a fruit-driven wine, with a tangy sweet/tart mouthfeel reminiscent of Vouvray. Meyer lemon, apricot, lime and candied p",
+            "This lemon-scented Riesling has a bright apple character and hints of peach. It is also delightfully fragrant, while the finish is bright."
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            536,
+            1519
+          ],
+          "gain_margin": 4550.35,
+          "examples": [
+            "Some attractive bottle age to this bone-dry wine gives a touch of toast over the fresh apple fruit. It is crisp and ripe, with a hint of austere, structured min",
+            "This wine is slightly spritzy and sugary, with simple yet clean apple flavors. The finish is sweet, quick and pleasantly quaffable. Best to chill it down before",
+            "This wine has a lighter-than-usual color, fresh aromas like cucumbers and jicama, and clean, straightforward apple flavors backed by good, crisp acidity. It's s"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 885,
+      "n_groups": 884,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 741,
+      "n_removed": 742,
+      "var_share_removed": 0.6832,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 824,
+          "latents": [
+            237
+          ],
+          "gain_margin": 4638.09,
+          "examples": [
+            "Champagne",
+            "Champagne",
+            "Champagne"
+          ]
+        },
+        {
+          "group": 796,
+          "latents": [
+            204
+          ],
+          "gain_margin": 3035.06,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 690,
+          "latents": [
+            698
+          ],
+          "gain_margin": 2928.39,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 418,
+          "latents": [
+            349
+          ],
+          "gain_margin": 2775.72,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 860,
+          "latents": [
+            838
+          ],
+          "gain_margin": 2530.38,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7249870957735463,
+  "test_error": 0.7249870957735463,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8912234431842023,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 102.9703917503357,
+  "diagnostics": {
+    "Address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 213,
+      "n_removed": 299,
+      "threshold": 0.0462,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7173,
+      "var_share_kept": 0.225,
+      "var_share_sae_error": 0.2305,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 462,
+          "score": 0.0354,
+          "n_active": 407,
+          "examples": [
+            "228 Merton Road, Merton, London, SW19 1EQ, United Kingdom",
+            "Plat\u00e1n Manor, Kast\u00e9ly t\u00e9r 6, Tata, 2890, Hungary",
+            "Plat\u00e1n Manor, Kast\u00e9ly t\u00e9r 6, Tata, 2890, Hungary"
+          ]
+        },
+        {
+          "latent": 409,
+          "score": 0.0326,
+          "n_active": 492,
+          "examples": [
+            "Place du Casino, Monaco, 98000, Principality of Monaco",
+            "Place du Casino, Monaco, 98000, Principality of Monaco",
+            "3 place Bouchard, L'Ile-Bouchard, 37220, France"
+          ]
+        },
+        {
+          "latent": 222,
+          "score": 0.0296,
+          "n_active": 348,
+          "examples": [
+            "Newton Food Centre, #01-37, 500 Clemenceau Avenue North, 229495, Singapore",
+            "5720 Commerce St., St. Francisville, LA, 70775, USA",
+            "Newton Food Centre, #01-13, 500 Clemenceau Avenue North, 229495, Singapore"
+          ]
+        },
+        {
+          "latent": 424,
+          "score": 0.0295,
+          "n_active": 324,
+          "examples": [
+            "1 place du G\u00e9n\u00e9ral-Leclerc, Limoux, 11300, France",
+            "16 cours du G\u00e9n\u00e9ral-Leclerc, Ajaccio, 20000, France",
+            "95 cours du G\u00e9n\u00e9ral-Leclerc, Langon, 33210, France"
+          ]
+        },
+        {
+          "latent": 184,
+          "score": 0.0285,
+          "n_active": 589,
+          "examples": [
+            "Padre Dami\u00e1n 23, Madrid, 28036, Spain",
+            "426 W. Plant St., Winter Garden, FL, 34787, USA",
+            "39 boulevard Carnot, Limoges, 87000, France"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 497,
+      "n_kept": 395,
+      "n_removed": 117,
+      "threshold": 0.0478,
+      "passed_test": 39,
+      "removed_norm_ratio": 0.2713,
+      "var_share_kept": 0.8032,
+      "var_share_sae_error": 0.0029,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 309,
+          "score": 0.1054,
+          "n_active": 860,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.098,
+          "n_active": 861,
+          "examples": [
+            "Creative, Seafood",
+            "Creative, Seafood",
+            "Creative, Seafood"
+          ]
+        },
+        {
+          "latent": 206,
+          "score": 0.0953,
+          "n_active": 694,
+          "examples": [
+            "Creative, Contemporary",
+            "Creative, Contemporary",
+            "Creative, Contemporary"
+          ]
+        },
+        {
+          "latent": 163,
+          "score": 0.0944,
+          "n_active": 1120,
+          "examples": [
+            "Innovative",
+            "Innovative",
+            "Innovative"
+          ]
+        },
+        {
+          "latent": 201,
+          "score": 0.0881,
+          "n_active": 1142,
+          "examples": [
+            "Creative, Fusion",
+            "Creative, Fusion",
+            "Creative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 343,
+      "n_removed": 169,
+      "threshold": 0.0456,
+      "passed_test": 9,
+      "removed_norm_ratio": 0.435,
+      "var_share_kept": 0.3819,
+      "var_share_sae_error": 0.3721,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 115,
+          "score": 0.0692,
+          "n_active": 916,
+          "examples": [
+            "This charming, deservedly popular restaurant is smartly laid out and run by a delightful team, whose attentive and personable service will make you want to beco",
+            "Hard at work in the kitchens, the chef makes it a point of honour to use great seasonal ingredients. The dishes are a taste sensation, for example, the chicken ",
+            "This restaurant has long been one of the most interesting in the area. It has a pleasing combination of traditional and modern cuisine created by the expert che"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0638,
+          "n_active": 1032,
+          "examples": [
+            "In the small historic center of town, a couple with comprehensive management experience operates this well maintained, modest restaurant offering eclectic cuisi",
+            "Situated on Giarre\u2019s main street, this small, simple restaurant has just a few tables and an informal atmosphere. The menu offers a small selection of reasonabl",
+            "An attractively furnished restaurant on the seafront with a small dining room and a veranda offering partial views of the sea. Fish takes pride of place on the "
+          ]
+        },
+        {
+          "latent": 379,
+          "score": 0.0579,
+          "n_active": 713,
+          "examples": [
+            "As the Florentine lily on the glass at the entrance implies, the specialities of this place are Tuscan in origin as well as seafood. Friendly atmosphere, ample ",
+            "Situated in Arezzo\u2019s historic centre, this restaurant boasts an original, minimalist ambience with an elegant wood decor. The main focus here is on the cuisine,",
+            "Located in the slightly more secret part of Venice, this is a place we can highly recommend. It has a relaxed and informal atmosphere reminiscent of a wine bar,"
+          ]
+        },
+        {
+          "latent": 170,
+          "score": 0.0509,
+          "n_active": 888,
+          "examples": [
+            "This restaurant close to the port of Vino Marina is a long-established favourite in the area and is renowned for its seafood cuisine which showcases traditional",
+            "Overlooking the port, this restaurant serves top-quality fish and seafood with interesting and personalised touches added by its young chef. We recommend starti",
+            "Situated in a charming small town criss-crossed by canals, this restaurant serves traditionally inspired fish-based dishes. The restaurant stands on the port fa"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.05,
+          "n_active": 483,
+          "examples": [
+            "Offering one of the city\u2019s most original dining experiences, Niklas Ekstedt uses no electricity in his cooking; instead, everything is prepared over fire. Your ",
+            "Chef Jean-Fran\u00e7ois Bury, with stints at the George V and the Shangri-La under his belt, is masterfully regaling Nanterre with modern, bistronomic nosh. Examples",
+            "Following stints at some prestigious restaurants, Philipp Heid has been head chef at the Pinus restaurant at Seegut Zeppelin hotel since May 2024. Here, he has "
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 424,
+      "n_kept": 428,
+      "n_removed": 84,
+      "threshold": 0.0482,
+      "passed_test": 43,
+      "removed_norm_ratio": 0.1338,
+      "var_share_kept": 0.864,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 326,
+          "score": 0.12,
+          "n_active": 1724,
+          "examples": [
+            "Garden or park,Interesting wine list",
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 377,
+          "score": 0.116,
+          "n_active": 1708,
+          "examples": [
+            "Interesting wine list,Valet parking",
+            "Interesting wine list,Terrace,Valet parking",
+            "Interesting wine list,Terrace"
+          ]
+        },
+        {
+          "latent": 127,
+          "score": 0.116,
+          "n_active": 1655,
+          "examples": [
+            "Interesting wine list",
+            "Interesting wine list",
+            "Interesting wine list"
+          ]
+        },
+        {
+          "latent": 363,
+          "score": 0.1122,
+          "n_active": 1355,
+          "examples": [
+            "Air conditioning,Credit cards not accepted,Interesting wine list",
+            "Air conditioning,Credit cards not accepted,Interesting wine list",
+            "Air conditioning,Credit cards not accepted,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 389,
+          "score": 0.1088,
+          "n_active": 841,
+          "examples": [
+            "Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Car park,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 117,
+      "n_removed": 395,
+      "threshold": 0.0444,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.8983,
+      "var_share_kept": 0.1613,
+      "var_share_sae_error": 0.0834,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 1,
+          "score": 0.0437,
+          "n_active": 617,
+          "examples": [
+            "Montichiari, Italy",
+            "Montichiari, Italy",
+            "Montner, France"
+          ]
+        },
+        {
+          "latent": 20,
+          "score": 0.0355,
+          "n_active": 643,
+          "examples": [
+            "Loches, France",
+            "Baden, France",
+            "Munster, France"
+          ]
+        },
+        {
+          "latent": 37,
+          "score": 0.0336,
+          "n_active": 327,
+          "examples": [
+            "Beijing, China Mainland",
+            "Beijing, China Mainland",
+            "Beijing, China Mainland"
+          ]
+        },
+        {
+          "latent": 311,
+          "score": 0.0325,
+          "n_active": 593,
+          "examples": [
+            "Canazei, Italy",
+            "Costa Teguise, Spain",
+            "Tegueste, Spain"
+          ]
+        },
+        {
+          "latent": 340,
+          "score": 0.0316,
+          "n_active": 574,
+          "examples": [
+            "Lucera, Italy",
+            "Winter Park, FL, USA",
+            "Winter Park, FL, USA"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 269,
+      "n_removed": 243,
+      "threshold": 0.0485,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5561,
+      "var_share_kept": 0.4027,
+      "var_share_sae_error": 0.2369,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 433,
+          "score": 0.0395,
+          "n_active": 429,
+          "examples": [
+            "The Restaurant",
+            "Mountain Restaurant",
+            "Restaurant Max'es"
+          ]
+        },
+        {
+          "latent": 77,
+          "score": 0.0383,
+          "n_active": 383,
+          "examples": [
+            "Watergang",
+            "28 Posti",
+            "Eleven"
+          ]
+        },
+        {
+          "latent": 125,
+          "score": 0.0372,
+          "n_active": 743,
+          "examples": [
+            "Quintonil",
+            "Szaletly",
+            "SkyLounge"
+          ]
+        },
+        {
+          "latent": 222,
+          "score": 0.0364,
+          "n_active": 888,
+          "examples": [
+            "Fried Banana Rama 5 (Bang Kruai - Sai Noi Road)",
+            "Poetry\u2027Wine (Dongsanhuan Middle Road)",
+            "Rongjia Noodles Soup with Yellow Croaker (Jingan)"
+          ]
+        },
+        {
+          "latent": 356,
+          "score": 0.0339,
+          "n_active": 838,
+          "examples": [
+            "Zi Jing Cheng Hainanese Boneless Chicken Rice",
+            "Zhong Ji Yan Shao Fan Ya",
+            "Zhu Zai Ji Shi Fu (Jiangnan Avenue)"
+          ]
+        }
+      ]
+    }
+  }
+}

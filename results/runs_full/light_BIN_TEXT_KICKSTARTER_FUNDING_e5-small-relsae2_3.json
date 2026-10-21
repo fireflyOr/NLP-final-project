@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7281840763623548,
+  "test_error": 0.2718159236376452,
+  "course_metric": "auroc",
+  "course_score": 0.7281840763623548,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 97.56189274787903,
+  "diagnostics": {
+    "created_at": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 390,
+      "n_kept": 357,
+      "n_removed": 155,
+      "threshold": 0.0391,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.6149,
+      "var_share_kept": 0.5582,
+      "var_share_sae_error": 0.0113,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 488,
+          "score": 0.0654,
+          "n_active": 232,
+          "examples": [
+            "1970-01-01 00:00:01.404824459",
+            "1970-01-01 00:00:01.404863223",
+            "1970-01-01 00:00:01.404820551"
+          ]
+        },
+        {
+          "latent": 158,
+          "score": 0.0652,
+          "n_active": 236,
+          "examples": [
+            "1970-01-01 00:00:01.404825112",
+            "1970-01-01 00:00:01.404826105",
+            "1970-01-01 00:00:01.404612161"
+          ]
+        },
+        {
+          "latent": 20,
+          "score": 0.0651,
+          "n_active": 248,
+          "examples": [
+            "1970-01-01 00:00:01.404590774",
+            "1970-01-01 00:00:01.404072394",
+            "1970-01-01 00:00:01.404808677"
+          ]
+        },
+        {
+          "latent": 470,
+          "score": 0.0617,
+          "n_active": 250,
+          "examples": [
+            "1970-01-01 00:00:01.404753719",
+            "1970-01-01 00:00:01.404653235",
+            "1970-01-01 00:00:01.404753267"
+          ]
+        },
+        {
+          "latent": 19,
+          "score": 0.0616,
+          "n_active": 691,
+          "examples": [
+            "1970-01-01 00:00:01.423075397",
+            "1970-01-01 00:00:01.427135121",
+            "1970-01-01 00:00:01.427131337"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 410,
+      "n_kept": 387,
+      "n_removed": 125,
+      "threshold": 0.0424,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.3983,
+      "var_share_kept": 0.7582,
+      "var_share_sae_error": 0.0101,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 97,
+          "score": 0.0723,
+          "n_active": 2606,
+          "examples": [
+            "1970-01-01 00:00:01.363703460",
+            "1970-01-01 00:00:01.361726130",
+            "1970-01-01 00:00:01.387663560"
+          ]
+        },
+        {
+          "latent": 99,
+          "score": 0.0641,
+          "n_active": 5736,
+          "examples": [
+            "1970-01-01 00:00:01.333260000",
+            "1970-01-01 00:00:01.270008000",
+            "1970-01-01 00:00:01.411002000"
+          ]
+        },
+        {
+          "latent": 265,
+          "score": 0.0618,
+          "n_active": 1538,
+          "examples": [
+            "1970-01-01 00:00:01.423375140",
+            "1970-01-01 00:00:01.426651140",
+            "1970-01-01 00:00:01.427200148"
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0504,
+          "n_active": 924,
+          "examples": [
+            "1970-01-01 00:00:01.428302017",
+            "1970-01-01 00:00:01.423375140",
+            "1970-01-01 00:00:01.427515200"
+          ]
+        },
+        {
+          "latent": 398,
+          "score": 0.0487,
+          "n_active": 1353,
+          "examples": [
+            "1970-01-01 00:00:01.427306520",
+            "1970-01-01 00:00:01.427100406",
+            "1970-01-01 00:00:01.427300377"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 389,
+      "n_removed": 123,
+      "threshold": 0.0415,
+      "passed_test": 34,
+      "removed_norm_ratio": 0.3318,
+      "var_share_kept": 0.5239,
+      "var_share_sae_error": 0.3001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 73,
+          "score": 0.1013,
+          "n_active": 1943,
+          "examples": [
+            "\"I love creating content on YouTube, but now I want to do more. I have so many great ideas which, with your help, I can bring to life!\"",
+            "\"So I have been writing fiction (both short stories and novels) for a while now, and think it's time to take the plunge and publish!\"",
+            "\"I have always dreamt of writing my own songs for a band project, and after years of playing for other people, I'm ready to prove myself\""
+          ]
+        },
+        {
+          "latent": 270,
+          "score": 0.0919,
+          "n_active": 1242,
+          "examples": [
+            "\"I want to illustrate a book, then I got to thinking, why not get backers come up with fun pages of their ideas within my theme.\"",
+            "\"I want to make posters of 16th Century city maps of London, Paris, and Rome that will also include a simple Matrix game.\"",
+            "\"I want to create affordable, original prints from my photographs using historic Platinum and Palladium printing processes.\""
+          ]
+        },
+        {
+          "latent": 433,
+          "score": 0.081,
+          "n_active": 1116,
+          "examples": [
+            "\"It is an online network security website, that would show you how protected your connection actually was.\"",
+            "\"www.theimpossiblegirl.com\"",
+            "\"www.facebook.com/MC CHUCK T original hotspitter\""
+          ]
+        },
+        {
+          "latent": 191,
+          "score": 0.0802,
+          "n_active": 1320,
+          "examples": [
+            "\"Change world of payments, choose freedom, sell, buy and pay everywhere using the same method. no delivery=money return + ensure income\"",
+            "\"Imagine all of the Power Players in the entire world losing their vast wealth and the poor gaining it. While this sounds like a dream, it could happen\"",
+            "\"Say where you're from! Rep your neighborhood/region and support locals only and give back to the community! Major cities!\""
+          ]
+        },
+        {
+          "latent": 217,
+          "score": 0.0778,
+          "n_active": 384,
+          "examples": [
+            "\"Masterwork Quality Solid Hardwood Dice Display Box with removable lid that works as a felt-lined Rolling Tray. Holds 100 16mm dice.\"",
+            "\"U-DICE is an universal electronic dice for any game needs 1-6 dice with each die be any of the 2, 3, 4, 6, 8, 10, 12, 20 or 100 faces.\"",
+            "\"These are unique dice, crafted in the USA by a skilled Tool & Die Maker, using the latest CNC technology along with years of expertise.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 324,
+      "n_removed": 188,
+      "threshold": 0.0415,
+      "passed_test": 9,
+      "removed_norm_ratio": 0.4555,
+      "var_share_kept": 0.4635,
+      "var_share_sae_error": 0.2709,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 429,
+          "score": 0.0797,
+          "n_active": 861,
+          "examples": [
+            "\"aftermath-post-apocalyptic-rpg-survival-game\"",
+            "\"last-life-true-cross-platform-rpg\"",
+            "\"mmorpg-games\""
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0741,
+          "n_active": 4802,
+          "examples": [
+            "\"laces\"",
+            "\"boyband\"",
+            "\"perch\""
+          ]
+        },
+        {
+          "latent": 239,
+          "score": 0.0501,
+          "n_active": 728,
+          "examples": [
+            "\"portable-lap-desk-installation-no1-a-desk-and-more\"",
+            "\"bnr-technix-llc-custom-multi-boot-usb-drives\"",
+            "\"a-new-way-to-carry-keys-keydisk-2\""
+          ]
+        },
+        {
+          "latent": 135,
+          "score": 0.0487,
+          "n_active": 528,
+          "examples": [
+            "\"the-gorilla-deck-of-playing-cards\"",
+            "\"kill-the-overlord-party-card-game\"",
+            "\"mardi-gras-playing-cards\""
+          ]
+        },
+        {
+          "latent": 94,
+          "score": 0.0457,
+          "n_active": 555,
+          "examples": [
+            "\"life-events\"",
+            "\"the-meaning-of-life-film\"",
+            "\"life-in-code-series-1\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 352,
+      "n_removed": 160,
+      "threshold": 0.0417,
+      "passed_test": 18,
+      "removed_norm_ratio": 0.4087,
+      "var_share_kept": 0.4833,
+      "var_share_sae_error": 0.2912,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 58,
+          "score": 0.1058,
+          "n_active": 884,
+          "examples": [
+            "\"meBooks (Canceled)\"",
+            "\"CD (Canceled)\"",
+            "\"CANCELLED\""
+          ]
+        },
+        {
+          "latent": 172,
+          "score": 0.0884,
+          "n_active": 1098,
+          "examples": [
+            "\"project cancelled (Canceled)\"",
+            "\"Project Cancelled (Canceled)\"",
+            "\"CANCELLED\""
+          ]
+        },
+        {
+          "latent": 309,
+          "score": 0.0776,
+          "n_active": 608,
+          "examples": [
+            "\"Follow Me - A Biblically Inspired Game in a Western Setting\"",
+            "\"Untitled Indie Game\"",
+            "\"U.O.Me. - an online game about the national debt\""
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0669,
+          "n_active": 2651,
+          "examples": [
+            "\"Entity\"",
+            "\"Nature\"",
+            "\"Ben\""
+          ]
+        },
+        {
+          "latent": 137,
+          "score": 0.0661,
+          "n_active": 624,
+          "examples": [
+            "\"GeoDice(1/2\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\" x 1/2\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
+            "\"Wynne Leathercraft: Notebook covers for Veterans.\"",
+            "\"Precision Metal Dice - Floating Face Design, d6, and Fudge\""
+          ]
+        }
+      ]
+    }
+  }
+}

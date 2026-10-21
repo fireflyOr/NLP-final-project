@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8565182647136687,
+  "test_error": 0.8565182647136687,
+  "course_metric": "r2",
+  "course_score": 0.8068021372799139,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 55.76213836669922,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 593,
+      "n_groups": 591,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 458,
+      "n_removed": 460,
+      "var_share_removed": 0.4341,
+      "var_share_sae_error": 0.0029,
+      "top": [
+        {
+          "group": 524,
+          "latents": [
+            658
+          ],
+          "gain_margin": 102.05,
+          "examples": [
+            "The Nursery, October 1873, Vol. XIV. No. 4",
+            "The Nursery, October 1873, Vol. XIV. No. 4",
+            "The Nursery, October 1873, Vol. XIV. No. 4"
+          ]
+        },
+        {
+          "group": 409,
+          "latents": [
+            201
+          ],
+          "gain_margin": 57.24,
+          "examples": [
+            "African Storybook Level 1",
+            "Children's Edition\n\nof\n\nTOUCHING INCIDENTS and REMARKABLE ANSWERS TO PRAYER",
+            "African Storybook Level 2"
+          ]
+        },
+        {
+          "group": 374,
+          "latents": [
+            905
+          ],
+          "gain_margin": 52.56,
+          "examples": [
+            "The Blue Fairy Book",
+            "The Brown Fairy Book",
+            "THE FAIRY BOOK."
+          ]
+        },
+        {
+          "group": 557,
+          "latents": [
+            8
+          ],
+          "gain_margin": 48.57,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 183,
+          "latents": [
+            1415
+          ],
+          "gain_margin": 41.03,
+          "examples": [
+            "Red Cap Tales\nStolen from the Treasure Chest of the Wizard of the North",
+            "The Oriental Story Book\nA Collection of Tales",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1535,
+      "n_groups": 1535,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1239,
+      "n_removed": 1239,
+      "var_share_removed": 0.575,
+      "var_share_sae_error": 0.0026,
+      "top": [
+        {
+          "group": 1187,
+          "latents": [
+            432
+          ],
+          "gain_margin": 206.61,
+          "examples": [
+            "NOAA",
+            "Digital Public Library of America",
+            "P."
+          ]
+        },
+        {
+          "group": 1418,
+          "latents": [
+            239
+          ],
+          "gain_margin": 150.33,
+          "examples": [
+            "Wikibooks",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 789,
+          "latents": [
+            582
+          ],
+          "gain_margin": 78.84,
+          "examples": [
+            "Official Report of the Irish Convention",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 560,
+          "latents": [
+            963
+          ],
+          "gain_margin": 64.84,
+          "examples": [
+            "simple wiki",
+            "simple wiki",
+            "simple wiki"
+          ]
+        },
+        {
+          "group": 56,
+          "latents": [
+            1818
+          ],
+          "gain_margin": 54.42,
+          "examples": [
+            "The following is a literal translation of a letter just received in New York by a French lady's maid from her sister at Rouen, and gives the point of view of th",
+            "Nora Turoman, Rebecca Merkley, Gaia Scerif, and Pawel J. Matusz",
+            "Riva Anne Bruenn; Valerie Lavenburg; Shayla Salzman"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 100,
+      "n_groups": 97,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 95,
+      "n_removed": 98,
+      "var_share_removed": 0.4153,
+      "var_share_sae_error": 0.0036,
+      "top": [
+        {
+          "group": 57,
+          "latents": [
+            536
+          ],
+          "gain_margin": 2.72,
+          "examples": [
+            "mitres",
+            "gramme",
+            "mouldy"
+          ]
+        },
+        {
+          "group": 71,
+          "latents": [
+            142
+          ],
+          "gain_margin": 0.16,
+          "examples": [
+            "kilometres",
+            "kilometres",
+            "neighbour, kilometres"
+          ]
+        },
+        {
+          "group": 26,
+          "latents": [
+            1413
+          ],
+          "gain_margin": 0.15,
+          "examples": [
+            "disc",
+            "discs",
+            "baptised"
+          ]
+        },
+        {
+          "group": 94,
+          "latents": [
+            1229
+          ],
+          "gain_margin": 0.11,
+          "examples": [
+            "woollen",
+            "sulphurous",
+            "pretence, marvelled"
+          ]
+        },
+        {
+          "group": 15,
+          "latents": [
+            1790
+          ],
+          "gain_margin": 0.03,
+          "examples": [
+            "labouring, colour",
+            "programme",
+            "programme"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1973,
+      "n_groups": 1973,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1458,
+      "n_removed": 1458,
+      "var_share_removed": 0.6762,
+      "var_share_sae_error": 0.0425,
+      "top": [
+        {
+          "group": 334,
+          "latents": [
+            1666
+          ],
+          "gain_margin": 47.62,
+          "examples": [
+            "The Norse peoples believed that their gods lived above the earth in a wonderful city named Asgard. From this city they crossed to the earth on a bridge, which b",
+            "The Colosseum, originally known as the Flavian Amphitheatre, is a large amphitheatre in the city of Rome. The construction of the Colosseum started around 70\u201372",
+            "There was in Athens (and several other city-states) a smaller body, called the boule, which decided or prioritized the topics that were discussed in the assembl"
+          ]
+        },
+        {
+          "group": 792,
+          "latents": [
+            966
+          ],
+          "gain_margin": 42.67,
+          "examples": [
+            "Clouds, whether they are big gray layers, fluffy white lumps, or streaks in the sky from aeroplanes, all have a few things in common. Most importantly, they are",
+            "Tornadoes usually form from large thunderstorms. When the winds beneath a storm are unstable, they blow at different speeds. These unstable winds underneath the",
+            "Whenever Lightning was angry he used to go around burning houses and knocking down trees. He made a frightening noise, \"Pia-la-la-la, pia-lala-la!\" He damaged f"
+          ]
+        },
+        {
+          "group": 1108,
+          "latents": [
+            157
+          ],
+          "gain_margin": 41.09,
+          "examples": [
+            "Once upon a time there were three bears who lived in a castle in a great wood. One of them was a great big bear, and one was a middling bear, and one was a litt",
+            "Once upon a time there lived in a certain village in a province of Spain called the Mancha, a gentleman named Quixada or Queseda, whose house was full of old la",
+            "Once upon a time, a long while ago, there was a Beast.\nHe was a Great Beast, and lived in a Great Castle that stood in the middle of a Great Park, and everybody"
+          ]
+        },
+        {
+          "group": 1780,
+          "latents": [
+            111
+          ],
+          "gain_margin": 34.34,
+          "examples": [
+            "The forests were bright with birds of many colors, and the sea was the home of wonderful sea-creatures. \"My children will love the prairies, the forests, and th",
+            "Then, clear, I heard a Voice call: \"Brothers! The dike is breaking! The River comes! Link arms, brothers; with the dike of our bodies we will save our home! Sis",
+            "The Old Lady lived \"away back at the old Lloyd place,\" as it was always called. It was a quaint, low-eaved house, with big chimneys and square windows and with "
+          ]
+        },
+        {
+          "group": 1427,
+          "latents": [
+            602
+          ],
+          "gain_margin": 34.08,
+          "examples": [
+            "The name Monarch means \u201cking\u201d. An adult Monarch Butterfly is about 1 \u00bd inches long. Its body is black with white markings. There are white spots on the head and",
+            "Once upon a time a young husband and wife named Giles and Phyllida lived in a cottage in the heart of a great plain. League upon league, the rich land fell away",
+            "Then the king said to the young princess, \u2018As you have given your word you must keep it; so go and let him in.' She did so, and the frog hopped into the room, a"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1949,
+      "n_groups": 1949,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1488,
+      "n_removed": 1488,
+      "var_share_removed": 0.6712,
+      "var_share_sae_error": 0.0324,
+      "top": [
+        {
+          "group": 486,
+          "latents": [
+            1748
+          ],
+          "gain_margin": 88.21,
+          "examples": [
+            "Internet_Protocol",
+            "Optical_fiber",
+            "Electrical_cable"
+          ]
+        },
+        {
+          "group": 101,
+          "latents": [
+            1904
+          ],
+          "gain_margin": 48.81,
+          "examples": [
+            "OUR DOG TASSO",
+            "WALTER'S DOG",
+            "JOHN RAY'S PERFORMING DOGS"
+          ]
+        },
+        {
+          "group": 271,
+          "latents": [
+            1687
+          ],
+          "gain_margin": 33.71,
+          "examples": [
+            "The Story of the Sparrow",
+            "THE STORY OF THE FIRST BUTTERFLIES.",
+            "A Story of Bird Life"
+          ]
+        },
+        {
+          "group": 1947,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 30.93,
+          "examples": [
+            "Rosetta_Stone",
+            "Black_hole",
+            "Mobile_app"
+          ]
+        },
+        {
+          "group": 1175,
+          "latents": [
+            1649
+          ],
+          "gain_margin": 28.22,
+          "examples": [
+            "The Boy Scouts on the Trail",
+            "The Boy Scouts of the Geological Survey",
+            "Boy Scouts in Northern Wilds"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 970,
+      "n_groups": 969,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 751,
+      "n_removed": 752,
+      "var_share_removed": 0.3723,
+      "var_share_sae_error": 0.0061,
+      "top": [
+        {
+          "group": 528,
+          "latents": [
+            719
+          ],
+          "gain_margin": 135.88,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Moon",
+            "https://en.wikipedia.org/wiki/Humidity",
+            "https://en.wikipedia.org/wiki/Mercury_(planet)"
+          ]
+        },
+        {
+          "group": 788,
+          "latents": [
+            155
+          ],
+          "gain_margin": 100.94,
+          "examples": [
+            "http://www.gutenberg.org/files/28143/28143-h/28143-h.htm#Page_120",
+            "http://www.gutenberg.org/files/28143/28143-h/28143-h.htm#Page_109",
+            "http://www.gutenberg.org/files/28130/28130-h/28130-h.htm#Page_42"
+          ]
+        },
+        {
+          "group": 496,
+          "latents": [
+            383
+          ],
+          "gain_margin": 95.49,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Civic_technology",
+            "https://en.wikipedia.org/wiki/Mobile_app",
+            "https://en.wikipedia.org/wiki/Computer_hardware"
+          ]
+        },
+        {
+          "group": 871,
+          "latents": [
+            255
+          ],
+          "gain_margin": 62.25,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_100",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#BREADBOY",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_306"
+          ]
+        },
+        {
+          "group": 369,
+          "latents": [
+            1312
+          ],
+          "gain_margin": 56.74,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Diaspora",
+            "http://www.gutenberg.org/files/236/236-h/236-h.htm",
+            "https://en.wikipedia.org/wiki/Byzantine_Empire"
+          ]
+        }
+      ]
+    }
+  }
+}

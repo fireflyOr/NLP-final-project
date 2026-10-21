@@ -1,0 +1,317 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -18.443666413507188,
+  "test_error": 18.443666413507188,
+  "course_metric": "r2",
+  "course_score": 0.8188577359292077,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 147.1427025794983,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 234,
+      "n_groups": 232,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 224,
+      "n_removed": 225,
+      "var_share_removed": 0.9619,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 18,
+          "latents": [
+            1935
+          ],
+          "gain_margin": 50.71,
+          "examples": [
+            "espresso",
+            "espresso",
+            "espresso"
+          ]
+        },
+        {
+          "group": 229,
+          "latents": [
+            42
+          ],
+          "gain_margin": 20.47,
+          "examples": [
+            "cream / green",
+            "orange / cream",
+            "mauve / cream"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            999,
+            1393
+          ],
+          "gain_margin": 19.29,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            1964
+          ],
+          "gain_margin": 8.99,
+          "examples": [
+            "cream / gray",
+            "cream / gray",
+            "cream / gray"
+          ]
+        },
+        {
+          "group": 117,
+          "latents": [
+            855
+          ],
+          "gain_margin": 6.95,
+          "examples": [
+            "espresso",
+            "espresso",
+            "espresso"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 257,
+      "n_groups": 254,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 240,
+      "n_removed": 243,
+      "var_share_removed": 0.6626,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 41,
+          "latents": [
+            1652
+          ],
+          "gain_margin": 48.32,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs."
+          ]
+        },
+        {
+          "group": 65,
+          "latents": [
+            1380
+          ],
+          "gain_margin": 19.92,
+          "examples": [
+            "Glenna Jean, Rhythm",
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Diaper"
+          ]
+        },
+        {
+          "group": 141,
+          "latents": [
+            81
+          ],
+          "gain_margin": 19.03,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs."
+          ]
+        },
+        {
+          "group": 64,
+          "latents": [
+            1646
+          ],
+          "gain_margin": 17.41,
+          "examples": [
+            "Glenna Jean Happy",
+            "Glenna Jean Happy",
+            "Glenna Jean Happy"
+          ]
+        },
+        {
+          "group": 124,
+          "latents": [
+            1180
+          ],
+          "gain_margin": 11.59,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs."
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 923,
+      "n_groups": 923,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 589,
+      "n_removed": 589,
+      "var_share_removed": 0.3675,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 290,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 1206.49,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 89,
+          "latents": [
+            1754
+          ],
+          "gain_margin": 582.91,
+          "examples": [
+            "Olive Kids",
+            "Olive Kids",
+            "Olive Kids"
+          ]
+        },
+        {
+          "group": 595,
+          "latents": [
+            742
+          ],
+          "gain_margin": 489.24,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 395,
+          "latents": [
+            351
+          ],
+          "gain_margin": 411.2,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 899,
+          "latents": [
+            36
+          ],
+          "gain_margin": 346.66,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1767,
+      "n_groups": 1760,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1072,
+      "n_removed": 1077,
+      "var_share_removed": 0.4013,
+      "var_share_sae_error": 0.0089,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            315,
+            1200
+          ],
+          "gain_margin": 1335.87,
+          "examples": [
+            "Hello Kitty 4-Piece Toddler Bedding Set",
+            "Trend Lab Lily 3 Piece Crib Bedding Set",
+            "Trend Lab Lucy 3 Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 491,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 999.86,
+          "examples": [
+            "Atlanta Falcons, Matt Ryan Biggshots Twin Comforter Set",
+            "Pittsburgh Steelers, Troy Polamalu Biggshots Twin Comforter Set",
+            "Dallas Cowboys, Tony Romo Biggshots Twin Comforter Set"
+          ]
+        },
+        {
+          "group": 297,
+          "latents": [
+            1667
+          ],
+          "gain_margin": 824.08,
+          "examples": [
+            "Gallery Wrought Iron and Crystal Chandelier",
+            "Gallery Empire 3 Light Crystal Chandelier",
+            "Gallery Contemporary Crystal 3 Light Chandelier with Black Shade"
+          ]
+        },
+        {
+          "group": 310,
+          "latents": [
+            1947
+          ],
+          "gain_margin": 740.82,
+          "examples": [
+            "39 x 58 inch Camp Fire Friends Fun Rug",
+            "Pem America Anna's Ruffle Pillow",
+            "Sweet Jojo Designs Frankie's Fire Truck Collection Children's Bedding - 4-Piece Twin Set"
+          ]
+        },
+        {
+          "group": 47,
+          "latents": [
+            2014
+          ],
+          "gain_margin": 645.2,
+          "examples": [
+            "Gallery All Crystal 10 Light Chandelier with 40mm Faceted Crystal Balls",
+            "Gallery All Crystal 4 Light Chandelier with Swarovski Crystal",
+            "Gallery Venetian Style All Crystal 5 Light Chandelier with Pink Crystal Hearts"
+          ]
+        }
+      ]
+    }
+  }
+}

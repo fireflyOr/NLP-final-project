@@ -1,0 +1,474 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.20733903201250914,
+  "test_error": 0.20733903201250914,
+  "course_metric": "r2",
+  "course_score": 0.7834747663378356,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 108.17242121696472,
+  "diagnostics": {
+    "address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 305,
+      "n_removed": 207,
+      "threshold": 0.0396,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.5816,
+      "var_share_kept": 0.5139,
+      "var_share_sae_error": 0.1272,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 108,
+          "score": 0.0413,
+          "n_active": 1067,
+          "examples": [
+            "897, Near Indoor Stadium, 6th Block, 80 Feet Peripheral Road, Koramangala, Koramangala 6th Block, Bangalore",
+            "897, Near Indoor Stadium, 6th Block, 80 Feet Peripheral Road, Koramangala, Koramangala 6th Block, Bangalore",
+            "897, Near Indoor Stadium, 6th Block, 80 Feet Peripheral Road, Koramangala, Koramangala 6th Block, Bangalore"
+          ]
+        },
+        {
+          "latent": 89,
+          "score": 0.0362,
+          "n_active": 378,
+          "examples": [
+            "Best Of Bengal",
+            "Best Of Bengal",
+            "897/B, 1st Floor, Above Bata Shoe Shop, Opposite Indianoil Petrol Bunk, 80 Feet Peripheral Road, Koramangala 6th Block, Bangalore"
+          ]
+        },
+        {
+          "latent": 386,
+          "score": 0.0343,
+          "n_active": 512,
+          "examples": [
+            "505, 1st Floor, CMH Road, Near M K Retail Building, Indiranagar, Bangalore",
+            "Next to CMH Metro Station, CMH Road, Indiranagar, Bangalore",
+            "Next to CMH Metro Station, CMH Road, Indiranagar, Bangalore"
+          ]
+        },
+        {
+          "latent": 226,
+          "score": 0.0341,
+          "n_active": 470,
+          "examples": [
+            "Vijayawada Heights, Villa A 012, Opposite Thubarahalli Bus Stop, Thubarahalli, Whitefield",
+            "Vijayawada Heights, Villa A 012, Opposite Thubarahalli Bus Stop, Thubarahalli, Whitefield",
+            "Vijayawada Heights, Villa A 012, Opposite Thubarahalli Bus Stop, Thubarahalli, Whitefield"
+          ]
+        },
+        {
+          "latent": 286,
+          "score": 0.0337,
+          "n_active": 568,
+          "examples": [
+            "3, Industrial Suburb, Opposite To Sheraton Hotel, Near Orion Mall, Rajajinagar, Bangalore",
+            "3, Industrial Suburb, Opposite To Sheraton Hotel, Near Orion Mall, Rajajinagar, Bangalore",
+            "3, Industrial Suburb, Opposite To Sheraton Hotel, Near Orion Mall, Rajajinagar, Bangalore"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 488,
+      "n_kept": 446,
+      "n_removed": 66,
+      "threshold": 0.0401,
+      "passed_test": 69,
+      "removed_norm_ratio": 0.2006,
+      "var_share_kept": 0.8456,
+      "var_share_sae_error": 0.0026,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 228,
+          "score": 0.0994,
+          "n_active": 3420,
+          "examples": [
+            "Roast Chicken, Burger",
+            "Roast Chicken, Burger",
+            "Roast Chicken, Burger"
+          ]
+        },
+        {
+          "latent": 262,
+          "score": 0.0961,
+          "n_active": 3781,
+          "examples": [
+            "North Indian, BBQ",
+            "North Indian, BBQ",
+            "BBQ, North Indian"
+          ]
+        },
+        {
+          "latent": 67,
+          "score": 0.0956,
+          "n_active": 1851,
+          "examples": [
+            "North Indian, Chinese, Bengali",
+            "North Indian, Chinese, Hyderabadi, Biryani",
+            "North Indian, Chinese, Hyderabadi, Biryani"
+          ]
+        },
+        {
+          "latent": 66,
+          "score": 0.0929,
+          "n_active": 4018,
+          "examples": [
+            "North Indian",
+            "North Indian",
+            "North Indian"
+          ]
+        },
+        {
+          "latent": 161,
+          "score": 0.0879,
+          "n_active": 1160,
+          "examples": [
+            "Chinese, European",
+            "Chinese, European",
+            "Chinese, European"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 400,
+      "n_removed": 112,
+      "threshold": 0.0416,
+      "passed_test": 47,
+      "removed_norm_ratio": 0.3575,
+      "var_share_kept": 0.7212,
+      "var_share_sae_error": 0.0249,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 95,
+          "score": 0.0682,
+          "n_active": 4281,
+          "examples": [
+            "English Breakfast, Sandwiches",
+            "English Breakfast, Sandwiches",
+            "Rooftop Ambience"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.0569,
+          "n_active": 423,
+          "examples": [
+            "Nutella Waffle",
+            "Nutella Waffle",
+            "Chocolate Waffles, Hot Chocolate, Nutella Waffle"
+          ]
+        },
+        {
+          "latent": 272,
+          "score": 0.054,
+          "n_active": 489,
+          "examples": [
+            "Churros, Empanadas, Hot Chocolate, Chocolate Banana, Salad, Chocolate Shake, Patata Bravas",
+            "Churros, Empanadas",
+            "Churros, Empanadas"
+          ]
+        },
+        {
+          "latent": 254,
+          "score": 0.054,
+          "n_active": 4114,
+          "examples": [
+            "Cake Jar",
+            "Cake Jar",
+            "Decor"
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.0518,
+          "n_active": 3928,
+          "examples": [
+            "Chocolate Devotion, Pomegranate Sorbet, Waffles, Brownie, Apple Pie, Cheesecake Ice Cream, Coffee",
+            "Chocolate Devotion, Pomegranate Sorbet, Waffles, Brownie, Apple Pie, Cheesecake Ice Cream, Coffee",
+            "Afghan Chicken"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 330,
+      "n_removed": 182,
+      "threshold": 0.0398,
+      "passed_test": 20,
+      "removed_norm_ratio": 0.7558,
+      "var_share_kept": 0.4771,
+      "var_share_sae_error": 0.0348,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 225,
+          "score": 0.0549,
+          "n_active": 552,
+          "examples": [
+            "['Kadai Paneer', 'Paneer Butter Masala', 'Chana Masala', 'Aloo Matar', 'Dal Makhani', 'Yellow Dal', 'Egg Masala', 'Butter Chicken', 'Kadai Chicken', 'Chicken Ti",
+            "['Kadai Paneer', 'Paneer Butter Masala', 'Chana Masala', 'Aloo Matar', 'Dal Makhani', 'Yellow Dal', 'Egg Masala', 'Butter Chicken', 'Kadai Chicken', 'Chicken Ti",
+            "['Kalmi Kebab', 'Grill Chicken', 'Ghee Rice', 'Gobi Manchurian', 'Chilly Chicken Dry', 'Hot N Sour Veg Soup', 'Sweet Corn Veg Soup', 'Hot N Sour Chicken Soup', "
+          ]
+        },
+        {
+          "latent": 71,
+          "score": 0.0526,
+          "n_active": 143,
+          "examples": [
+            "['Students Veg Combo', 'Office Veg Combo', 'Students Non Veg Combo', 'Office Non Veg Combo', 'Mughlai Non Veg Combo', 'Aloo Paratha Combo', 'Poori Aloo Jeera Co",
+            "['Students Veg Combo', 'Office Veg Combo', 'Students Non Veg Combo', 'Office Non Veg Combo', 'Mughlai Non Veg Combo', 'Aloo Paratha Combo', 'Poori Aloo Jeera Co",
+            "['Students Veg Combo', 'Office Veg Combo', 'Students Non Veg Combo', 'Office Non Veg Combo', 'Mughlai Non Veg Combo', 'Aloo Paratha Combo', 'Poori Aloo Jeera Co"
+          ]
+        },
+        {
+          "latent": 353,
+          "score": 0.0511,
+          "n_active": 208,
+          "examples": [
+            "['Veg Bundled Meal', 'Non Veg Bundled Meal', 'Veg Exclusive Bundled Meal', 'Non Veg Exclusive Bundled Meal', 'Chicken with 2 Regular Sides', 'No Bones Platter',",
+            "['Chicken Steak [200-250 grams]', 'Beef Tenderloin Steak [200-250 grams]', 'Very Veggie Pizza', 'Barbecue Chicken Pizza', 'Pepperoni Pizza', 'Monkey Business', ",
+            "['Chicken Vietnamese Steamed Rice Roll', 'Veg Pho', 'Chicken Pho', 'Beef Pho', 'Chicken Stir Fried Noodles', 'Pumpkin Cream Soup', 'Veg Sweet and Sour Soup', 'T"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.0498,
+          "n_active": 275,
+          "examples": [
+            "['Chicken Tangri Kebab', 'Chicken Chaap [2 Pieces]', 'Boneless Chicken Bharta', 'Khushka Biryani', 'Egg Biryani', 'Chicken Biryani', 'Mughlai Chicken Biryani [4",
+            "['Chicken Seekh Kabab [6 Pieces]', 'Al Faham', 'Grilled Chicken', 'Tandoori Chicken', 'BBQ Chicken', 'Boneless Chicken Tikka', 'Kalmi Kabab [2 Pieces]', 'Chicke",
+            "['Crispy Chicken', 'Grilled Chicken', 'Chicken Kabab Oil Fried', 'Boneless Malai Tikka [5 Pieces]', 'Tandoori Chicken', 'Kalmi Kabab', 'Chicken Tandoori Kabab ["
+          ]
+        },
+        {
+          "latent": 237,
+          "score": 0.0469,
+          "n_active": 220,
+          "examples": [
+            "['Millet Pulao', 'Millet Puliogre', 'Millet Lemon Rice', 'Pan Fried Vegetable Cutlet', 'Millet Paddu', 'Millet Curd Rice', 'Millet Pulao', 'Millet Puliogre', 'M",
+            "['Matar Masala Poha', 'Vegetable Poha', 'Paneer Bhurji Poha', 'Egg Bhurji Poha', 'Egg Chilli Poha', 'Plain Poha', 'Aloo Masala Poha', 'Chilli Poha', 'Jain Poha'",
+            "['Matar Masala Poha', 'Vegetable Poha', 'Paneer Bhurji Poha', 'Achari Poha', 'Egg Bhurji Poha', 'Egg Chilli Poha', 'Plain Poha', 'Aloo Masala Poha', 'Chilli Poh"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 362,
+      "n_removed": 150,
+      "threshold": 0.0395,
+      "passed_test": 20,
+      "removed_norm_ratio": 0.4981,
+      "var_share_kept": 0.5872,
+      "var_share_sae_error": 0.1571,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.0517,
+          "n_active": 390,
+          "examples": [
+            "Kanti's",
+            "Kanti's",
+            "Kanti Sweets"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.051,
+          "n_active": 1143,
+          "examples": [
+            "Biryani Rooh-e-Khaas",
+            "Biryani Feast",
+            "Biryani Feast"
+          ]
+        },
+        {
+          "latent": 460,
+          "score": 0.0469,
+          "n_active": 532,
+          "examples": [
+            "Domino's Pizza",
+            "Domino's Pizza",
+            "Domino's Pizza"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0455,
+          "n_active": 924,
+          "examples": [
+            "Reddy's Restaurant",
+            "Reddy's Restaurant",
+            "Reddy's Restaurant"
+          ]
+        },
+        {
+          "latent": 406,
+          "score": 0.0451,
+          "n_active": 519,
+          "examples": [
+            "Delight Food",
+            "Delight Food",
+            "Delight food"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 480,
+      "n_kept": 358,
+      "n_removed": 154,
+      "threshold": 0.0402,
+      "passed_test": 42,
+      "removed_norm_ratio": 0.4696,
+      "var_share_kept": 0.6639,
+      "var_share_sae_error": 0.0134,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.0621,
+          "n_active": 1831,
+          "examples": [
+            "080 42242288",
+            "080 42242288",
+            "080 40222999"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.0577,
+          "n_active": 926,
+          "examples": [
+            "080 49652814",
+            "080 49652814",
+            "080 49652848"
+          ]
+        },
+        {
+          "latent": 242,
+          "score": 0.0567,
+          "n_active": 370,
+          "examples": [
+            "080 39658868",
+            "080 39457777",
+            "080 39457777"
+          ]
+        },
+        {
+          "latent": 475,
+          "score": 0.0566,
+          "n_active": 1588,
+          "examples": [
+            "080 40001234\n+91 9008001193",
+            "00 08048664512\r\r\n+91 7829278585",
+            "00 08048664512\r\n+91 7829278585"
+          ]
+        },
+        {
+          "latent": 505,
+          "score": 0.0555,
+          "n_active": 79,
+          "examples": [
+            "080 28419555\n18602100000",
+            "080 28440901\r\n18602100000",
+            "080 41534484\r\n18602100000"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 413,
+      "n_removed": 99,
+      "threshold": 0.044,
+      "passed_test": 73,
+      "removed_norm_ratio": 0.3312,
+      "var_share_kept": 0.5823,
+      "var_share_sae_error": 0.2327,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 334,
+          "score": 0.1725,
+          "n_active": 776,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  Don't order here we have ordered momos and veg soup but they hasn't given chutney for momos. And soup is not good ,even packing also no",
+            "[('Rated 1.0', \"RATED\\n  Don't order here we have ordered momos and veg soup but they hasn't given chutney for momos. And soup is not good ,even packing also no",
+            "[('Rated 1.0', 'RATED\\n  Wrong item, wastage food, worst management along with worst Zomato support. Provide me wrong food and Zomato support member is behaving"
+          ]
+        },
+        {
+          "latent": 298,
+          "score": 0.1704,
+          "n_active": 877,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  I wish there was a lower rating than one star. This place is the biggest robber I have ever seen. Rude and unprofessional. They have ro",
+            "[('Rated 1.0', \"RATED\\n  This place doesn't understand the meaning of the word vegan. They are using the word just to pull crows I guess. I demand that they imm",
+            "[('Rated 1.0', \"RATED\\n  This place doesn't understand the meaning of the word vegan. They are using the word just to pull crows I guess. I demand that they imm"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.1259,
+          "n_active": 1465,
+          "examples": [
+            "[('Rated 2.0', 'RATED\\n  Visited this place when it had just opened. As a college-goer with limited money, their cakes, which were priced reasonably were good e",
+            "[('Rated 1.0', 'RATED\\n  Nothing more than a local bar..Dark ambience and very loud music...Localities shouting and dancing with their shirts off is a norm here",
+            "[('Rated 1.0', 'RATED\\n  Nothing more than a local bar..Dark ambience and very loud music...Localities shouting and dancing with their shirts off is a norm here"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.1126,
+          "n_active": 1099,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  food was not at all good no taste and having some stomach issue after eating'), ('Rated 4.0', \"RATED\\n  Food was amazing and delivery o",
+            "[('Rated 1.0', \"RATED\\n  I ordered 1 south meals and 1north meal but got both south meals.....\\nnot even fresh... it's lyk morning food....\"), ('Rated 5.0', 'RA",
+            "[('Rated 5.0', 'RATED\\n  Food is verry good .I went to Friday night.i order 2 chicken biryani ,raita and butter chicken .staff was verry energetic I love this p"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.0935,
+          "n_active": 718,
+          "examples": [
+            "[('Rated 4.0', 'RATED\\n  Habbits is a new restro-cafe in BTM away from the hustle and bustle of the city serving continental food with Indian tadka at a dirt ch",
+            "[('Rated 4.0', 'RATED\\n  Habbits is a new restro-cafe in BTM away from the hustle and bustle of the city serving continental food with Indian tadka at a dirt ch",
+            "[('Rated 1.0', 'RATED\\n  Usually Tibbs Frankie is very good, but this outlet is below average. Usually all chicken frankies have egg in it. But this guy charged"
+          ]
+        }
+      ]
+    }
+  }
+}

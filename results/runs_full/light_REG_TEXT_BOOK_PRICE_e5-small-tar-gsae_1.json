@@ -1,0 +1,390 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23252078754980005,
+  "test_error": 0.23252078754980005,
+  "course_metric": "r2",
+  "course_score": 0.5173170500760935,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 50.8879930973053,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1634,
+      "n_groups": 1634,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1094,
+      "n_removed": 1094,
+      "var_share_removed": 0.4736,
+      "var_share_sae_error": 0.0034,
+      "top": [
+        {
+          "group": 1631,
+          "latents": [
+            477
+          ],
+          "gain_margin": 1004.15,
+          "examples": [
+            "Saumya Sharma",
+            "Sandhya Menon",
+            "Priyanka Menon"
+          ]
+        },
+        {
+          "group": 1633,
+          "latents": [
+            305
+          ],
+          "gain_margin": 943.49,
+          "examples": [
+            "Wizards RPG Team",
+            "Warner Bros",
+            "Brian Weiss"
+          ]
+        },
+        {
+          "group": 273,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 378.14,
+          "examples": [
+            "Lawrence Weinstein",
+            "Geoff Johns",
+            "Geoff Johns"
+          ]
+        },
+        {
+          "group": 755,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 247.55,
+          "examples": [
+            "S. Bashir S. and Hashmi M. Saran",
+            "Chandramouli",
+            "Chandra S.S.V"
+          ]
+        },
+        {
+          "group": 18,
+          "latents": [
+            2020
+          ],
+          "gain_margin": 197.19,
+          "examples": [
+            "Arjun Shekhar Mahamaya Navlakha",
+            "MANOHAR SINGH GILL",
+            "Krishnamurthy Srinivasan"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 790,
+      "n_groups": 752,
+      "n_multi_groups": 33,
+      "n_groups_dropped": 537,
+      "n_removed": 561,
+      "var_share_removed": 0.3142,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 516,
+          "latents": [
+            305
+          ],
+          "gain_margin": 956.04,
+          "examples": [
+            "Tankobon Softcover,\u2013 2016",
+            "Hardcover,\u2013 Abridged, Audiobook, Box set",
+            "Flexibound,\u2013 18 Oct 2016"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            258,
+            2028
+          ],
+          "gain_margin": 356.24,
+          "examples": [
+            "Paperback,\u2013 Large Print, Import",
+            "Plastic Comb,\u2013 DVD, NTSC",
+            "Hardcover,\u2013 Import, 31 May 2016"
+          ]
+        },
+        {
+          "group": 146,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 313.99,
+          "examples": [
+            "Hardcover,\u2013 Abridged, Audiobook, Box set",
+            "Sheet music,\u2013 6 Jun 2017",
+            "Sheet music,\u2013 6 Jun 2017"
+          ]
+        },
+        {
+          "group": 174,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 237.92,
+          "examples": [
+            "Hardcover,\u2013 31 Dec 2000",
+            "Hardcover,\u2013 21 Jun 2010",
+            "Hardcover,\u2013 24 Apr 2012"
+          ]
+        },
+        {
+          "group": 155,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 224.35,
+          "examples": [
+            "Mass Market Paperback,\u2013 10 Jan 2018",
+            "Mass Market Paperback,\u2013 10 Jan 2018",
+            "Mass Market Paperback,\u2013 28 Nov 2017"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 738,
+      "n_groups": 738,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 617,
+      "n_removed": 617,
+      "var_share_removed": 0.5657,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 723,
+          "latents": [
+            529
+          ],
+          "gain_margin": 486.35,
+          "examples": [
+            "Sports Training & Coaching (Books)",
+            "Sports Training & Coaching (Books)",
+            "Sports Training & Coaching (Books)"
+          ]
+        },
+        {
+          "group": 282,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 414.28,
+          "examples": [
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)"
+          ]
+        },
+        {
+          "group": 368,
+          "latents": [
+            1226
+          ],
+          "gain_margin": 182.13,
+          "examples": [
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)"
+          ]
+        },
+        {
+          "group": 506,
+          "latents": [
+            1072
+          ],
+          "gain_margin": 161.07,
+          "examples": [
+            "Photography Textbooks",
+            "Photography Textbooks",
+            "Photography Textbooks"
+          ]
+        },
+        {
+          "group": 678,
+          "latents": [
+            72
+          ],
+          "gain_margin": 154.22,
+          "examples": [
+            "Graphics & Visualization",
+            "Graphics & Visualization",
+            "Graphics & Visualization"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1764,
+      "n_groups": 1764,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1267,
+      "n_removed": 1267,
+      "var_share_removed": 0.4426,
+      "var_share_sae_error": 0.0197,
+      "top": [
+        {
+          "group": 999,
+          "latents": [
+            529
+          ],
+          "gain_margin": 2738.7,
+          "examples": [
+            "If you want to build as much muscle as naturally possible...be able to bench press, squat, and deadlift gargantuan amounts of weight...and maintain a ripped, be",
+            "Following in the footsteps of the all-time best-selling The Big Book of Logos, this deluxe, full-color volume is packed with 2,500 superior new logo designs, cu",
+            "The multiple stresses of contemporary life\u2014whether from excessive sports play, overwork, or overuse of technology\u2014are increasingly taking a toll on the body. Sy"
+          ]
+        },
+        {
+          "group": 1762,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2455.91,
+          "examples": [
+            "The perfect one-on-one photography course, this week-by-week tutorial develops your photography skills - from how to focus to using lenses and flash effectively",
+            "In Stan Lee's How to Draw Comics, Stan Lee reveals his secrets for:\n \n* Costumes * Penciling, Inking & Coloring * Lettering & Word Balloons\n* Digital Advances *",
+            "A New York Times, Wall Street Journal, Publishers Weekly, and USA Today bestseller\n\n\"Newport is making a bid to be the Marie Kondo of technology: someone with a"
+          ]
+        },
+        {
+          "group": 109,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 1734.35,
+          "examples": [
+            "Here\u0092s what started the phenomenon: the best seller, for over 15 years, that\u0092s been used by screenwriters around the world! Blake Snyder tells all in this fast,",
+            "While other books give you tips on how to \u0093write funny,\u0094 this book offers a paradigm shift in understanding the mechanics and art of comedy, and the proven, pra",
+            "\u201cA clear and crisply written account of machine intelligence, big data and the sharing economy. But McAfee and Brynjolfsson also wisely acknowledge the limitati"
+          ]
+        },
+        {
+          "group": 1166,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1140.07,
+          "examples": [
+            "Ace detective Avinash Roy arrives at a sleepy hill station in Sikkim in the fervent hope that holidaying at a secluded Buddhist monastery up in the mountains wi",
+            "A single betrayal can cost you everything... 1998. Twenty-two-year-old Mina is moving to the US from Bangalore to begin a new life with her husband. Then there\u2019",
+            "Bestselling romance writer Revati Krishna had everything that a girl could wish for \u2013 A sparkling career, a thriving fan-base and a perfect love life. However, "
+          ]
+        },
+        {
+          "group": 880,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1045.46,
+          "examples": [
+            "Explore the treasures of the Earth with this guide to rocks and minerals, including crystals, gemstones, and fossils - ideal for every rockhound and budding gem",
+            "Improve your physique, posture and power with this practical, no-nonsense guide to building a stronger core - whether you're a complete beginner or a fitness fa",
+            "Excel at Excel with the help of this bestselling spreadsheet guide John Walkenbach's name is synonymous with excellence in computer books that decipher the comp"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1819,
+      "n_groups": 1819,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1275,
+      "n_removed": 1275,
+      "var_share_removed": 0.4836,
+      "var_share_sae_error": 0.019,
+      "top": [
+        {
+          "group": 1818,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2952.81,
+          "examples": [
+            "J.K. Rowling's Wizarding World - A Pop-Up Gallery of Curiosities",
+            "Dr. Brian Weiss Collection (Set of 5 Volumes)",
+            "Harry Potter: Collectible Quidditch Set"
+          ]
+        },
+        {
+          "group": 842,
+          "latents": [
+            529
+          ],
+          "gain_margin": 1050.43,
+          "examples": [
+            "Design of Cities: Revised Edition",
+            "Bodyweight Strength Training Anatomy",
+            "Tomie: Complete Deluxe Edition"
+          ]
+        },
+        {
+          "group": 226,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 982.45,
+          "examples": [
+            "Cartooning: Animation 1 with Preston Blair: Learn to animate cartoons step by step (How to Draw & Paint)",
+            "Beginner's Guide to Digital Painting: Characters",
+            "The Complete Guide to Self-Publishing Comics: How to Create and Sell Comic Books, Manga, and Webcomics"
+          ]
+        },
+        {
+          "group": 804,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 831.32,
+          "examples": [
+            "After Anna",
+            "The Adventures Of Suppandi \u2013 1 (Tinkle)",
+            "Kommandant's Girl"
+          ]
+        },
+        {
+          "group": 225,
+          "latents": [
+            1881
+          ],
+          "gain_margin": 469.76,
+          "examples": [
+            "Alfred's Basic Chord Approach to Electronic Keyboards, Lesson Book 1: A Beginning Method for All Instruments With Automatic Rhythms & Chords (Alfred's Basic Pia",
+            "Communication Systems",
+            "internet of Things: A Hands-On Approach"
+          ]
+        }
+      ]
+    }
+  }
+}

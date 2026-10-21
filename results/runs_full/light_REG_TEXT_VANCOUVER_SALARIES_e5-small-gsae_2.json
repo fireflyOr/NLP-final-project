@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13199.141751549661,
+  "test_error": 13199.141751549661,
+  "course_metric": "r2",
+  "course_score": 0.7615759901684109,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 35.1735737323761,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2038,
+      "n_groups": 2031,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1263,
+      "n_removed": 1263,
+      "var_share_removed": 0.5508,
+      "var_share_sae_error": 0.0278,
+      "top": [
+        {
+          "group": 690,
+          "latents": [
+            891
+          ],
+          "gain_margin": 430.59,
+          "examples": [
+            "Connelly, T",
+            "Connelly, T",
+            "Connelly, T"
+          ]
+        },
+        {
+          "group": 881,
+          "latents": [
+            1636
+          ],
+          "gain_margin": 364.56,
+          "examples": [
+            "Jackson, O*",
+            "The, R*",
+            "Borger, R*"
+          ]
+        },
+        {
+          "group": 356,
+          "latents": [
+            1315
+          ],
+          "gain_margin": 307.55,
+          "examples": [
+            "McDermott, J*",
+            "Karlsson, P S*",
+            "Siemens, R P"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            2033
+          ],
+          "gain_margin": 238.71,
+          "examples": [
+            "Barnes, D",
+            "Barnes, D",
+            "Barnes, D"
+          ]
+        },
+        {
+          "group": 825,
+          "latents": [
+            1190
+          ],
+          "gain_margin": 230.77,
+          "examples": [
+            "Chamberland, J",
+            "Chamberland, J",
+            "Chamberland, J"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1481,
+      "n_groups": 1479,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 835,
+      "n_removed": 835,
+      "var_share_removed": 0.186,
+      "var_share_sae_error": 0.0021,
+      "top": [
+        {
+          "group": 205,
+          "latents": [
+            1862
+          ],
+          "gain_margin": 3832.02,
+          "examples": [
+            "General Manager Dbl",
+            "General Manager Dbl",
+            "General Manager, DBL"
+          ]
+        },
+        {
+          "group": 121,
+          "latents": [
+            1983
+          ],
+          "gain_margin": 2692.72,
+          "examples": [
+            "Director Planning",
+            "Director Operations",
+            "Director Communications"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1415,
+            1985
+          ],
+          "gain_margin": 2201.99,
+          "examples": [
+            "Manager",
+            "Manager, Park Development",
+            "Manager, Emergency Management"
+          ]
+        },
+        {
+          "group": 514,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 1681.04,
+          "examples": [
+            "General Manager - Engineering Services",
+            "General Manager - Engineering Services",
+            "General Manager - Engineering Services"
+          ]
+        },
+        {
+          "group": 318,
+          "latents": [
+            1679
+          ],
+          "gain_margin": 1478.78,
+          "examples": [
+            "City Manager",
+            "City Manager",
+            "City Manager"
+          ]
+        }
+      ]
+    }
+  }
+}

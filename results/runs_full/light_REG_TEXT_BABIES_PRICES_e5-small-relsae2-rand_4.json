@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -22.593892401119195,
+  "test_error": 22.593892401119195,
+  "course_metric": "r2",
+  "course_score": 0.7805690747037501,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 72.06648135185242,
+  "diagnostics": {
+    "colors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 277,
+      "n_kept": 406,
+      "n_removed": 106,
+      "threshold": 0.0862,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5329,
+      "var_share_kept": 0.495,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 326,
+          "score": 0.0801,
+          "n_active": 60,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 247,
+          "score": 0.0646,
+          "n_active": 50,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 24,
+          "score": 0.0554,
+          "n_active": 41,
+          "examples": [
+            "cream / gray",
+            "cream / green",
+            "cream / green"
+          ]
+        },
+        {
+          "latent": 287,
+          "score": 0.0491,
+          "n_active": 23,
+          "examples": [
+            "cream / green",
+            "cream / green",
+            "gold / blue"
+          ]
+        },
+        {
+          "latent": 117,
+          "score": 0.0442,
+          "n_active": 417,
+          "examples": [
+            "gold",
+            "gold",
+            "gold"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 299,
+      "n_kept": 447,
+      "n_removed": 65,
+      "threshold": 0.0758,
+      "passed_test": 4,
+      "removed_norm_ratio": 0.4915,
+      "var_share_kept": 0.6922,
+      "var_share_sae_error": 0.0012,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 86,
+          "score": 0.0795,
+          "n_active": 46,
+          "examples": [
+            "Nature Organic Muslin",
+            "Nature Organic Muslin",
+            "Nature Organic Muslin"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.0792,
+          "n_active": 41,
+          "examples": [
+            "Peru",
+            "Peru",
+            "Glenna Jean Cacti,"
+          ]
+        },
+        {
+          "latent": 9,
+          "score": 0.0779,
+          "n_active": 252,
+          "examples": [
+            "Trend Lab Rise",
+            "Trend Lab Rise",
+            "Trend Lab Rise"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0742,
+          "n_active": 59,
+          "examples": [
+            "Johannes Brahms.",
+            "Johannes Brahms.",
+            "Glenna Jean, Swizzle"
+          ]
+        },
+        {
+          "latent": 226,
+          "score": 0.0739,
+          "n_active": 26,
+          "examples": [
+            "Kate Mawdsley",
+            "Glenna Jean Addison",
+            "Glenna Jean Addison"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 495,
+      "n_kept": 426,
+      "n_removed": 86,
+      "threshold": 0.0755,
+      "passed_test": 91,
+      "removed_norm_ratio": 0.3619,
+      "var_share_kept": 0.7692,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 115,
+          "score": 0.2897,
+          "n_active": 32,
+          "examples": [
+            "Candide",
+            "Candide",
+            "Candide"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.2567,
+          "n_active": 170,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.2319,
+          "n_active": 74,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 32,
+          "score": 0.2018,
+          "n_active": 44,
+          "examples": [
+            "Heidi Klum",
+            "Heidi Klum",
+            "Disney Baby Classic Pooh"
+          ]
+        },
+        {
+          "latent": 370,
+          "score": 0.1958,
+          "n_active": 193,
+          "examples": [
+            "Marmont Hill",
+            "Marmont Hill",
+            "Marmont Hill"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 388,
+      "n_removed": 124,
+      "threshold": 0.07,
+      "passed_test": 72,
+      "removed_norm_ratio": 0.4733,
+      "var_share_kept": 0.7123,
+      "var_share_sae_error": 0.0783,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 469,
+          "score": 0.2079,
+          "n_active": 93,
+          "examples": [
+            "Gallery Wrought Iron & Crystal White 3 Light Swag Plug in Chandelier with Pink Crystal Hearts",
+            "Gallery Wrought Iron & Crystal 3 Light Swag Plug in Chandelier with Pink Crystal Hearts",
+            "Gallery Wrought Iron & Crystal Swag Plug In White 3 Light Chandelier"
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.1977,
+          "n_active": 310,
+          "examples": [
+            "babyletto In Bloom 4-Piece Set",
+            "Koala Baby Canvas Closet Set - 4 Piece",
+            "Simplicity Hot Pink Toddler 4 Piece Set"
+          ]
+        },
+        {
+          "latent": 445,
+          "score": 0.1891,
+          "n_active": 93,
+          "examples": [
+            "babyletto Alphabets 5-Piece Set",
+            "babyletto In Bloom 5-Piece Set",
+            "Trend Lab Serena 5 Piece Gift Set"
+          ]
+        },
+        {
+          "latent": 474,
+          "score": 0.1586,
+          "n_active": 160,
+          "examples": [
+            "Sozo Caterpillar Bunting and Cap Set",
+            "Sozo Boys Football Bunting & Cap Set - Brown",
+            "Ace Baby Furniture Kids Rabbit Mobile Dress-Up Closet - White"
+          ]
+        },
+        {
+          "latent": 398,
+          "score": 0.1564,
+          "n_active": 146,
+          "examples": [
+            "Gallery Venetian Style All Crystal 5 Light Chandelier with White Shade",
+            "Venetian Style All Crystal 4 Light Chandelier",
+            "Venetian Style All Crystal 5 Light Chandelier"
+          ]
+        }
+      ]
+    }
+  }
+}

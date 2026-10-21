@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3264180738967226,
+  "test_error": 1.3264180738967226,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9694751363342234,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 119.61101794242859,
+  "diagnostics": {}
+}

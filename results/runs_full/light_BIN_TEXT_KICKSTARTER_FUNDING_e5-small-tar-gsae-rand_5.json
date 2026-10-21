@@ -1,0 +1,389 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.700652417520725,
+  "test_error": 0.29934758247927495,
+  "course_metric": "auroc",
+  "course_score": 0.7006524175207252,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 92.47522234916687,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 863,
+      "n_groups": 848,
+      "n_multi_groups": 15,
+      "n_groups_dropped": 595,
+      "n_removed": 602,
+      "var_share_removed": 0.5175,
+      "var_share_sae_error": 0.0056,
+      "top": [
+        {
+          "group": 211,
+          "latents": [
+            1605
+          ],
+          "gain_margin": 189.15,
+          "examples": [
+            "1970-01-01 00:00:01.404663717",
+            "1970-01-01 00:00:01.404944797",
+            "1970-01-01 00:00:01.404139397"
+          ]
+        },
+        {
+          "group": 42,
+          "latents": [
+            1963
+          ],
+          "gain_margin": 177.38,
+          "examples": [
+            "1970-01-01 00:00:01.374675446",
+            "1970-01-01 00:00:01.374435996",
+            "1970-01-01 00:00:01.371765547"
+          ]
+        },
+        {
+          "group": 260,
+          "latents": [
+            1413
+          ],
+          "gain_margin": 165.31,
+          "examples": [
+            "1970-01-01 00:00:01.400100238",
+            "1970-01-01 00:00:01.317091798",
+            "1970-01-01 00:00:01.361126698"
+          ]
+        },
+        {
+          "group": 289,
+          "latents": [
+            1347
+          ],
+          "gain_margin": 162.92,
+          "examples": [
+            "1970-01-01 00:00:01.300035532",
+            "1970-01-01 00:00:01.284514385",
+            "1970-01-01 00:00:01.353364735"
+          ]
+        },
+        {
+          "group": 680,
+          "latents": [
+            467
+          ],
+          "gain_margin": 145.21,
+          "examples": [
+            "1970-01-01 00:00:01.404266509",
+            "1970-01-01 00:00:01.404501304",
+            "1970-01-01 00:00:01.404817017"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 834,
+      "n_groups": 815,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 536,
+      "n_removed": 549,
+      "var_share_removed": 0.4905,
+      "var_share_sae_error": 0.0056,
+      "top": [
+        {
+          "group": 309,
+          "latents": [
+            1145
+          ],
+          "gain_margin": 351.5,
+          "examples": [
+            "1970-01-01 00:00:01.431972000",
+            "1970-01-01 00:00:01.409202000",
+            "1970-01-01 00:00:01.352502000"
+          ]
+        },
+        {
+          "group": 790,
+          "latents": [
+            508
+          ],
+          "gain_margin": 306.0,
+          "examples": [
+            "1970-01-01 00:00:01.427904823",
+            "1970-01-01 00:00:01.426057294",
+            "1970-01-01 00:00:01.427307194"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1663
+          ],
+          "gain_margin": 144.0,
+          "examples": [
+            "1970-01-01 00:00:01.401469200",
+            "1970-01-01 00:00:01.366477200",
+            "1970-01-01 00:00:01.421656200"
+          ]
+        },
+        {
+          "group": 659,
+          "latents": [
+            1738
+          ],
+          "gain_margin": 135.29,
+          "examples": [
+            "1970-01-01 00:00:01.289715499",
+            "1970-01-01 00:00:01.289455200",
+            "1970-01-01 00:00:01.289060123"
+          ]
+        },
+        {
+          "group": 783,
+          "latents": [
+            305
+          ],
+          "gain_margin": 133.78,
+          "examples": [
+            "1970-01-01 00:00:01.408646111",
+            "1970-01-01 00:00:01.409371229",
+            "1970-01-01 00:00:01.408374791"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1247,
+      "n_removed": 1247,
+      "var_share_removed": 0.4636,
+      "var_share_sae_error": 0.1451,
+      "top": [
+        {
+          "group": 1958,
+          "latents": [
+            67
+          ],
+          "gain_margin": 323.04,
+          "examples": [
+            "\"Project\"",
+            "\"1\"",
+            "\"DELETED\""
+          ]
+        },
+        {
+          "group": 534,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 314.41,
+          "examples": [
+            "\"Viking Poker is a playing card deck that offers a new level of strategy to poker games by adding abilities to normal playing cards.\"",
+            "\"A beautiful colorful deck of flat design playing cards. Minimalist deck with perfect mix of colors, typography & traditional layout\"",
+            "\"Workout Decks - Bodyweight Series is a custom deck of cards that generates dynamic & highly effective HIIT, circuit & pyramid workouts.\""
+          ]
+        },
+        {
+          "group": 2005,
+          "latents": [
+            978
+          ],
+          "gain_margin": 306.04,
+          "examples": [
+            "\"There are lots of Bible study apps, but not for the visually impaired.  I want to build an audio-based bible study app.\"",
+            "\"This app will allow users to notify friends & followers from all social media platforms of you're most recent posts with one click\"",
+            "\"Peerless Tutor will be an app used for finding local study groups around your college area! Beneficial for those without free tutoring!\""
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            250
+          ],
+          "gain_margin": 302.45,
+          "examples": [
+            "\"Infinite Stylez and Moscow Mark's amazing follow up to the Double Duty album!  We're ushering in a new age of Hip Hop!\"",
+            "\"it's a fly on the wall experience of two best friends, in the quiet and funny moments that only happen when no one's watching.\"",
+            "\"The Atlantis by Smith & Bradley is a fully-automatic dive watch totally designed and assembled in Sidney, Illinois.\""
+          ]
+        },
+        {
+          "group": 1000,
+          "latents": [
+            844
+          ],
+          "gain_margin": 294.39,
+          "examples": [
+            "\"The IceMule is the world's most portable high-performance cooler.  Because wherever you go, your cooler should go.\"",
+            "\"The Lume Cube is a revolutionary little light. 1,500 Lumens Powerful in a 1.5\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
+            "\"An ultra-portable amplifier for your iPhone 5. Enjoy clearer sound even at the loudest environments.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1265,
+      "n_removed": 1266,
+      "var_share_removed": 0.4635,
+      "var_share_sae_error": 0.1271,
+      "top": [
+        {
+          "group": 1997,
+          "latents": [
+            250
+          ],
+          "gain_margin": 614.34,
+          "examples": [
+            "\"the-efeet-collection-taking-a-stand-against-boring\"",
+            "\"the-last-of-the-pagan-babies-a-feature-documentary\"",
+            "\"one-the-first-volume-of-the-godslayer-cycle\""
+          ]
+        },
+        {
+          "group": 214,
+          "latents": [
+            1754
+          ],
+          "gain_margin": 256.25,
+          "examples": [
+            "\"max-adventure\"",
+            "\"max-and-the-reaper\"",
+            "\"relentless-the-zombie-game-thats-back-from-the-dea\""
+          ]
+        },
+        {
+          "group": 1956,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 247.32,
+          "examples": [
+            "\"the-fingerboard-deck-a-new-way-to-play-skate\"",
+            "\"the-hedge-bicycle-playing-card-deck\"",
+            "\"bicycle-occults-playing-cards-deck\""
+          ]
+        },
+        {
+          "group": 997,
+          "latents": [
+            978
+          ],
+          "gain_margin": 211.1,
+          "examples": [
+            "\"online-event-management-and-ticketing-software\"",
+            "\"infoactive-drop-live-data-into-interactive-infogra\"",
+            "\"feeling-inspired-app\""
+          ]
+        },
+        {
+          "group": 1989,
+          "latents": [
+            77
+          ],
+          "gain_margin": 210.28,
+          "examples": [
+            "\"new-social-network\"",
+            "\"a-new-guide-to-charleston\"",
+            "\"deco-a-new-web-series\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1242,
+      "n_removed": 1242,
+      "var_share_removed": 0.4583,
+      "var_share_sae_error": 0.1358,
+      "top": [
+        {
+          "group": 2010,
+          "latents": [
+            23
+          ],
+          "gain_margin": 858.78,
+          "examples": [
+            "\"The Reprap Printed Belt System. (Canceled)\"",
+            "\"The Wrong Time To Be Alone... (Canceled)\"",
+            "\"UNIVERSAL (Canceled)\""
+          ]
+        },
+        {
+          "group": 1946,
+          "latents": [
+            732
+          ],
+          "gain_margin": 808.71,
+          "examples": [
+            "\"CNC Coil Winding Machine (Canceled)\"",
+            "\"L3D Bulb - (Filament LED) (Canceled)\"",
+            "\"Detroit Fanfare Comic Con 2015- February 6th-8th (Canceled)\""
+          ]
+        },
+        {
+          "group": 1950,
+          "latents": [
+            510
+          ],
+          "gain_margin": 445.79,
+          "examples": [
+            "\"Railroads, a boutique wooden board game\"",
+            "\"Aztec Coffee & Games - Board Game Cafe\"",
+            "\"Deck100 \u2014 100 cards to replace dice & enhance your RPG\""
+          ]
+        },
+        {
+          "group": 1960,
+          "latents": [
+            250
+          ],
+          "gain_margin": 374.25,
+          "examples": [
+            "\"Dream with Me--A documentary about one year in America's Public Schools\"",
+            "\"Out of Service -  a documentary\"",
+            "\"The Documentary to end Captivity for Whales and Dolphins\""
+          ]
+        },
+        {
+          "group": 2036,
+          "latents": [
+            454
+          ],
+          "gain_margin": 253.83,
+          "examples": [
+            "\"HUNT FOR ME (Canceled)\"",
+            "\"Out of the Sea Fish Restaurant (Canceled)\"",
+            "\"Research Study (Canceled)\""
+          ]
+        }
+      ]
+    }
+  }
+}

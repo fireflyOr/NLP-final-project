@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6160163602627159,
+  "test_error": 0.6160163602627159,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8627134429050465,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 14.732991695404053,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 357,
+      "n_removed": 155,
+      "threshold": 0.0848,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.5044,
+      "var_share_kept": 0.5577,
+      "var_share_sae_error": 0.1635,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 141,
+          "score": 0.1943,
+          "n_active": 378,
+          "examples": [
+            "Google has now officially denied that Circles will launch at #SXSW, but not that it exists! {link} (cont) {link}",
+            "Google Circles : won't be launched at #SXSW. Google even denies working on such a project : {link} #Facebook",
+            "The iPhone battery was not made for @mention #sxsw"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1422,
+          "n_active": 201,
+          "examples": [
+            "RT @mention #killing #sxsw &quot;you can google a canadian tuxedo and lose yourself for hours&quot;",
+            "&quot;You can Google Canadian Tuxedo and lose yourself for hours&quot; #sxsw",
+            "RT @mention &quot;You can Google Canadian Tuxedo and lose yourself for hours&quot; #sxsw"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.1128,
+          "n_active": 152,
+          "examples": [
+            "Did... what my mom might call The Big at #SXSW. Power plant, CNN, Google, and offchain set by Trombone Shorty at PBS. So sad missed Rye Rey",
+            "RT @mention Diller on Google TV: &quot;The first product wasn't good. It wasn't a consumer product, basically.&quot; #sxsw #diller",
+            "Sweet tea vodka out of a glowstick cup doesn't scream &quot;Google&quot; to me, but it is baller.  #SXSW"
+          ]
+        },
+        {
+          "latent": 8,
+          "score": 0.0885,
+          "n_active": 142,
+          "examples": [
+            "RT @mention &quot;She's the iPad DJ working the Etsy party.&quot; #realtalk #sxsw",
+            "Music: Artist: duckett Song name: Another girl Instrumental Source: Creative Commons, via ...  #ipad #sxsw #gadgets {link}",
+            "Mayer: Google will hire 6,000 people this year in response to audience question of &quot;Are you hiring?&quot; #SXSW ^JR"
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.0884,
+          "n_active": 265,
+          "examples": [
+            "RT @mention Google party broke up. At the Tumblr / Funny or Die party. Fun! #sxsw",
+            "RT @mention Download the official Featured Artists of #SXSW playlist via iTunes - 22 songs for absolutley #free - {link}",
+            "New post: Per this rumor, Google may preview its big social strategy at an '80s-themed costume party at #SXSW. Yep {link}"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13447.03081343731,
+  "test_error": 13447.03081343731,
+  "course_metric": "r2",
+  "course_score": 0.7306983201847015,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.673738956451416,
+  "diagnostics": {
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 345,
+      "n_removed": 167,
+      "threshold": 0.0413,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.4866,
+      "var_share_kept": 0.5998,
+      "var_share_sae_error": 0.1527,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 55,
+          "score": 0.054,
+          "n_active": 370,
+          "examples": [
+            "Dulko, R J",
+            "Dulko, R J",
+            "Dulko, R J"
+          ]
+        },
+        {
+          "latent": 207,
+          "score": 0.0539,
+          "n_active": 128,
+          "examples": [
+            "The, R*",
+            "Van Fraassen, B*",
+            "Kapoor, S*"
+          ]
+        },
+        {
+          "latent": 14,
+          "score": 0.0504,
+          "n_active": 894,
+          "examples": [
+            "Archila Quiroa, D",
+            "Archila Quiroa, D",
+            "Magana Gonzalez, J"
+          ]
+        },
+        {
+          "latent": 432,
+          "score": 0.0474,
+          "n_active": 635,
+          "examples": [
+            "Walls, J A.",
+            "Walls, J A.",
+            "Walls, J A."
+          ]
+        },
+        {
+          "latent": 422,
+          "score": 0.0464,
+          "n_active": 558,
+          "examples": [
+            "Day, D L",
+            "Day, D L",
+            "Day, D L"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 458,
+      "n_removed": 54,
+      "threshold": 0.0391,
+      "passed_test": 250,
+      "removed_norm_ratio": 0.2204,
+      "var_share_kept": 0.9289,
+      "var_share_sae_error": 0.0082,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 338,
+          "score": 0.2575,
+          "n_active": 398,
+          "examples": [
+            "A/Director Civic Theatres",
+            "A/Director Civic Theatres",
+            "Director Parks"
+          ]
+        },
+        {
+          "latent": 399,
+          "score": 0.2559,
+          "n_active": 789,
+          "examples": [
+            "Manager - Finance & Performance Measurement",
+            "Manager Sustainable & Ethical Procuremnt",
+            "Manager Sustainable & Ethical Procuremnt"
+          ]
+        },
+        {
+          "latent": 238,
+          "score": 0.2444,
+          "n_active": 469,
+          "examples": [
+            "Manager Gis Data Services",
+            "Manager GIS Data Services",
+            "Manager, Gis Projects"
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.2376,
+          "n_active": 336,
+          "examples": [
+            "Deputy General Manager",
+            "Deputy General Manager",
+            "DEPUTY GENERAL MANAGER"
+          ]
+        },
+        {
+          "latent": 126,
+          "score": 0.219,
+          "n_active": 472,
+          "examples": [
+            "Managing Director Of Social Development",
+            "Managing Director of Social Development",
+            "Manager Animal Control"
+          ]
+        }
+      ]
+    }
+  }
+}

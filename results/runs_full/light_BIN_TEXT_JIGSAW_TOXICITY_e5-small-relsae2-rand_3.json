@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8154054564574471,
+  "test_error": 0.1845945435425529,
+  "course_metric": "auroc",
+  "course_score": 0.8154054564574471,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 44.04495024681091,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 399,
+      "n_removed": 113,
+      "threshold": 0.0454,
+      "passed_test": 26,
+      "removed_norm_ratio": 0.3558,
+      "var_share_kept": 0.4737,
+      "var_share_sae_error": 0.3196,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 29,
+          "score": 0.1475,
+          "n_active": 1215,
+          "examples": [
+            "This is ridiculous.",
+            "That's just silly.",
+            "This comment is so irrelevant."
+          ]
+        },
+        {
+          "latent": 371,
+          "score": 0.1245,
+          "n_active": 508,
+          "examples": [
+            "This is ridiculous.",
+            "What a bunch of hysterical nonsense.",
+            "What an utter buffoon."
+          ]
+        },
+        {
+          "latent": 329,
+          "score": 0.124,
+          "n_active": 1020,
+          "examples": [
+            "I wasn't aware that cardinals wore pearls.",
+            "Trudeau has no clue.",
+            "I had no idea that President Bruce Benson was this slimy."
+          ]
+        },
+        {
+          "latent": 417,
+          "score": 0.1077,
+          "n_active": 846,
+          "examples": [
+            "I wouldn't do that to a dog.",
+            "haha never say never",
+            "Never trust a shifty eyed Norwegian."
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.1021,
+          "n_active": 523,
+          "examples": [
+            "Then this Canadian woman wonders why Mr. Trudeau's government honoured Gerald Regan just a few months ago in the House of Commons. Sunny ways, Mr. Trudeau? No. ",
+            "Time for old-fashioned, grease-the-palm politicians to retire. A new generation has different priorities and better ideas.",
+            "Developers complain that there is no land to build new homes. Greenbelt is a noose around Toronto, not allowing any new land to be included for the building of "
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 341,
+      "n_kept": 343,
+      "n_removed": 169,
+      "threshold": 0.0469,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7068,
+      "var_share_kept": 0.359,
+      "var_share_sae_error": 0.0301,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 333,
+          "score": 0.0377,
+          "n_active": 311,
+          "examples": [
+            "2016-05-13 10:23:04.577292",
+            "2016-03-27 11:17:30.572798",
+            "2017-09-21 14:18:00.575042"
+          ]
+        },
+        {
+          "latent": 290,
+          "score": 0.0318,
+          "n_active": 977,
+          "examples": [
+            "2016-04-03 05:00:29.405776",
+            "2016-04-05 00:22:00.098456",
+            "2016-03-10 01:41:41.202096"
+          ]
+        },
+        {
+          "latent": 33,
+          "score": 0.0305,
+          "n_active": 4617,
+          "examples": [
+            "2017-10-31 07:40:04.299204",
+            "2017-05-13 04:20:00.610736",
+            "2017-03-08 16:17:09.978020"
+          ]
+        },
+        {
+          "latent": 140,
+          "score": 0.0301,
+          "n_active": 172,
+          "examples": [
+            "2016-05-12 19:37:30.779632",
+            "2016-05-11 16:05:30.596032",
+            "2017-07-15 05:10:50.220032"
+          ]
+        },
+        {
+          "latent": 473,
+          "score": 0.0271,
+          "n_active": 1736,
+          "examples": [
+            "2017-01-11 20:00:51.070965",
+            "2017-03-02 23:00:51.728124",
+            "2016-04-07 07:00:51.697213"
+          ]
+        }
+      ]
+    }
+  }
+}

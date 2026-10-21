@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8820155070210356,
+  "test_error": 0.8820155070210356,
+  "course_metric": "r2",
+  "course_score": 0.7850161663722568,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 55.99884605407715,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 554,
+      "n_groups": 554,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 443,
+      "n_removed": 443,
+      "var_share_removed": 0.5228,
+      "var_share_sae_error": 0.0039,
+      "top": [
+        {
+          "group": 140,
+          "latents": [
+            1641
+          ],
+          "gain_margin": 77.47,
+          "examples": [
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 50,
+          "latents": [
+            1416
+          ],
+          "gain_margin": 66.14,
+          "examples": [
+            "The Ontario Readers: The High School Reader, 1886",
+            "The Ontario Readers: The High School Reader, 1886",
+            "The Ontario Readers: The High School Reader, 1886"
+          ]
+        },
+        {
+          "group": 541,
+          "latents": [
+            232
+          ],
+          "gain_margin": 66.06,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 544,
+          "latents": [
+            617
+          ],
+          "gain_margin": 59.49,
+          "examples": [
+            "A Primary Reader\nOld-time Stories, Fairy Tales and Myths Retold by Children",
+            "A Primary Reader\nOld-time Stories, Fairy Tales and Myths Retold by Children",
+            "A Primary Reader\nOld-time Stories, Fairy Tales and Myths Retold by Children"
+          ]
+        },
+        {
+          "group": 141,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 53.91,
+          "examples": [
+            "The Nursery, August 1877, Vol. XXII, No. 2\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, August 1877, Vol. XXII, No. 2\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, August 1877, Vol. XXII, No. 2\nA Monthly Magazine for Youngest Readers"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1522,
+      "n_groups": 1522,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1194,
+      "n_removed": 1194,
+      "var_share_removed": 0.5695,
+      "var_share_sae_error": 0.003,
+      "top": [
+        {
+          "group": 1013,
+          "latents": [
+            381
+          ],
+          "gain_margin": 248.84,
+          "examples": [
+            "A Medical Record?",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 44,
+          "latents": [
+            1996
+          ],
+          "gain_margin": 148.1,
+          "examples": [
+            "Core Knowledge Foundation",
+            "Lindiwe Tshabalala and African Storybook",
+            "Lindiwe Tshabalala and African Storybook"
+          ]
+        },
+        {
+          "group": 331,
+          "latents": [
+            1632
+          ],
+          "gain_margin": 98.26,
+          "examples": [
+            "The Center for Computer Assisted Legal",
+            "Nina Weishaupt and Angela Zhang",
+            "Count du Moncel"
+          ]
+        },
+        {
+          "group": 535,
+          "latents": [
+            1055
+          ],
+          "gain_margin": 97.74,
+          "examples": [
+            "America's Library",
+            "National Park Service, US Department of the Interior",
+            "Special Cable to The New York Times"
+          ]
+        },
+        {
+          "group": 744,
+          "latents": [
+            549
+          ],
+          "gain_margin": 55.85,
+          "examples": [
+            "Myla Jo Closser",
+            "Alexandrea Kilgore-Gomez, Hector Arciniega, & Marian E. Berryhill\n",
+            "Greayer Clover"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 107,
+      "n_groups": 104,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 100,
+      "n_removed": 103,
+      "var_share_removed": 0.405,
+      "var_share_sae_error": 0.0043,
+      "top": [
+        {
+          "group": 51,
+          "latents": [
+            1482
+          ],
+          "gain_margin": 0.78,
+          "examples": [
+            "colourful",
+            "recognised",
+            "recognise"
+          ]
+        },
+        {
+          "group": 48,
+          "latents": [
+            1282
+          ],
+          "gain_margin": 0.57,
+          "examples": [
+            "realised, realising",
+            "favourite, favourite",
+            "dialogues, dialogues"
+          ]
+        },
+        {
+          "group": 96,
+          "latents": [
+            1299
+          ],
+          "gain_margin": 0.13,
+          "examples": [
+            "labourer",
+            "labour",
+            "labour"
+          ]
+        },
+        {
+          "group": 19,
+          "latents": [
+            892
+          ],
+          "gain_margin": 0.08,
+          "examples": [
+            "cosy",
+            "sombre, colour, odours",
+            "marvellous"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 0.06,
+          "examples": [
+            "reconnoitred",
+            "panelled",
+            "sulphurous"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1957,
+      "n_groups": 1957,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1439,
+      "n_removed": 1439,
+      "var_share_removed": 0.681,
+      "var_share_sae_error": 0.0424,
+      "top": [
+        {
+          "group": 1249,
+          "latents": [
+            372
+          ],
+          "gain_margin": 90.25,
+          "examples": [
+            "Allusion has already been made to the eclipses mentioned in Confucius' history as a means by which the probability of his general truth as a historian may in a ",
+            "Long time ago, Hyena and Hare were great friends. They were both poor but Hare owned a donkey. He also had a very small basin, which he used to feed the donkey.",
+            "This is Cat. This is Dog. Cat and Dog live in a house. A house with a door. A house with a roof. Cat and Dog have a ball. The ball is red and blue and green. Ca"
+          ]
+        },
+        {
+          "group": 1784,
+          "latents": [
+            111
+          ],
+          "gain_margin": 66.79,
+          "examples": [
+            "Her husband gasped at the audacity of the idea. Erley Chase! The finest place around, one of the largest properties in the county, and Marianne suggested that h",
+            "Who loves splashing? The Irrawaddy Dolphin loves splashing in Chilika Lake.\nWho loves dust baths? The Malabar Pied Hornbill loves a dust bath in the forest in D",
+            "The forests were bright with birds of many colors, and the sea was the home of wonderful sea-creatures. \"My children will love the prairies, the forests, and th"
+          ]
+        },
+        {
+          "group": 1336,
+          "latents": [
+            1355
+          ],
+          "gain_margin": 53.93,
+          "examples": [
+            "Buster Bear yawned as he lay on his comfortable bed of leaves and watched the first early morning sunbeams creeping through the Green Forest to chase out the Bl",
+            "Immediately Brownie changed himself into the smallest mouse possible; and, taking care not to make the least noise, gnawed a hole in the door, and squeezed hims",
+            "One summer afternoon, when the grassy slope before the house was untidy with fallen leaves, and sticks, and withered flowers, I asked Garry to go and bring the "
+          ]
+        },
+        {
+          "group": 251,
+          "latents": [
+            1775
+          ],
+          "gain_margin": 52.36,
+          "examples": [
+            "This conception of repression once fixed, together with the distortion of the dream in relation to repressed psychical matter, we are in a position to give a ge",
+            "Now, it happened a long time ago, in the year \u2014\u2014, but the exact year does not matter, because you will not find this story written in the history of any of the ",
+            "For a long time I used to go to bed early. Sometimes, when I had put out my candle, my eyes would close so quickly that I had not even time to say \"I'm going to"
+          ]
+        },
+        {
+          "group": 120,
+          "latents": [
+            1828
+          ],
+          "gain_margin": 49.4,
+          "examples": [
+            "The National Sleep Foundation recommends that school-aged kids (6\u201313 years) sleep between 9 and 11 h a night. Teens are recommended to get 8\u201310 h a night and ad",
+            "The balsam bed is made of the small twigs of balsam-trees. In gathering these, collect twigs of different lengths, from eighteen inches long (to be used as the ",
+            "The forests were now painted in all the glories of autumn. All the creatures of the woodlands shook off the drowsy laziness of summer and came down from the upl"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1954,
+      "n_groups": 1954,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1492,
+      "n_removed": 1492,
+      "var_share_removed": 0.669,
+      "var_share_sae_error": 0.0324,
+      "top": [
+        {
+          "group": 1399,
+          "latents": [
+            827
+          ],
+          "gain_margin": 43.55,
+          "examples": [
+            "The Land We Live In",
+            "The Land of the Blue Flower",
+            "Sharing Your Home With Arthropods"
+          ]
+        },
+        {
+          "group": 1322,
+          "latents": [
+            372
+          ],
+          "gain_margin": 37.05,
+          "examples": [
+            "The Wild Dog of Caucomgomoc",
+            "CARLO, THE SOLDIERS' DOG",
+            "The Story of the Second Old Man, and of the Two Black Dogs"
+          ]
+        },
+        {
+          "group": 1872,
+          "latents": [
+            88
+          ],
+          "gain_margin": 35.7,
+          "examples": [
+            "TELLING A STORY",
+            "PAPA'S STORY",
+            "GRANDMOTHER'S STORY"
+          ]
+        },
+        {
+          "group": 1945,
+          "latents": [
+            645
+          ],
+          "gain_margin": 24.87,
+          "examples": [
+            "A KNOWING DOG",
+            "A Visit to a London Dog-show",
+            "THE LADY WITH THE DOG"
+          ]
+        },
+        {
+          "group": 1728,
+          "latents": [
+            50
+          ],
+          "gain_margin": 21.95,
+          "examples": [
+            "Peck's Uncle Ike and The Red Headed",
+            "LILY AND HER KITTEN",
+            "The boy and the jackal"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 942,
+      "n_groups": 939,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 728,
+      "n_removed": 731,
+      "var_share_removed": 0.4065,
+      "var_share_sae_error": 0.0059,
+      "top": [
+        {
+          "group": 846,
+          "latents": [
+            941
+          ],
+          "gain_margin": 79.06,
+          "examples": [
+            "http://www.gutenberg.org/files/8195/8195-h/8195-h.htm#13",
+            "http://www.gutenberg.org/files/7766/7766-h/7766-h.htm",
+            "http://www.gutenberg.org/files/419/419-h/419-h.htm"
+          ]
+        },
+        {
+          "group": 286,
+          "latents": [
+            719
+          ],
+          "gain_margin": 77.03,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Moon",
+            "https://en.wikipedia.org/wiki/Mercury_(planet)",
+            "https://en.wikipedia.org/wiki/Information_privacy"
+          ]
+        },
+        {
+          "group": 733,
+          "latents": [
+            255
+          ],
+          "gain_margin": 53.42,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_316",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_306",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_204"
+          ]
+        },
+        {
+          "group": 489,
+          "latents": [
+            383
+          ],
+          "gain_margin": 52.97,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Implantable_cardioverter-defibrillator",
+            "https://en.wikipedia.org/wiki/Nanomedicine",
+            "https://en.wikipedia.org/wiki/Artificial_cardiac_pacemaker"
+          ]
+        },
+        {
+          "group": 458,
+          "latents": [
+            750
+          ],
+          "gain_margin": 38.45,
+          "examples": [
+            "http://www.gutenberg.org/files/16331/16331-h/16331-h.htm#SPEECH_FROM_THE_THRONE",
+            "http://www.gutenberg.org/files/42159/42159-h/42159-h.htm#Page_314",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#UPSTORY"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,543 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.20068786042975356,
+  "test_error": 0.20068786042975356,
+  "course_metric": "r2",
+  "course_score": 0.7925576533481784,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 113.23948836326599,
+  "diagnostics": {
+    "address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2030,
+      "n_groups": 2018,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 1010,
+      "n_removed": 1010,
+      "var_share_removed": 0.3322,
+      "var_share_sae_error": 0.0372,
+      "top": [
+        {
+          "group": 4,
+          "latents": [
+            1136,
+            1850
+          ],
+          "gain_margin": 434.92,
+          "examples": [
+            "55, 5th Cross, Koramangala 6th Block, Bangalore",
+            "55, 5th Cross, Koramangala 6th Block, Bangalore",
+            "511, 6th Block, Koramangala 6th Block Club Road, Koramangala 6th Block, Bangalore"
+          ]
+        },
+        {
+          "group": 390,
+          "latents": [
+            1658
+          ],
+          "gain_margin": 230.55,
+          "examples": [
+            "4, Sai Arcade,1st Floor, Wilson Garden Society, Kothnur Main Road, 7th Phase, JP Nagar, Bangalore",
+            "4, Sai Arcade,1st Floor, Wilson Garden Society, Kothnur Main Road, 7th Phase, JP Nagar, Bangalore",
+            "4, Sai Arcade,1st Floor, Wilson Garden Society, Kothnur Main Road, 7th Phase, JP Nagar, Bangalore"
+          ]
+        },
+        {
+          "group": 203,
+          "latents": [
+            1688
+          ],
+          "gain_margin": 220.16,
+          "examples": [
+            "934, Near to Udupi Garden Signal, 16th Main Road, Second Stage, BTM, Bangalore",
+            "934, Near to Udupi Garden Signal, 16th Main Road, Second Stage, BTM, Bangalore",
+            "934, Near to Udupi Garden Signal, 16th Main Road, Second Stage, BTM, Bangalore"
+          ]
+        },
+        {
+          "group": 1778,
+          "latents": [
+            383
+          ],
+          "gain_margin": 205.76,
+          "examples": [
+            "17, Chikkalakshmahia Layout, Opposite Royal Enfield Showroom, Near Christ College, Hosur Road",
+            "17, Chikkalakshmahia Layout, Opposite Royal Enfield Showroom, Near Christ College, Hosur Road",
+            "17, Chikkalakshmahia Layout, Opposite Royal Enfield Showroom, Near Christ College, Hosur Road"
+          ]
+        },
+        {
+          "group": 489,
+          "latents": [
+            1693
+          ],
+          "gain_margin": 203.49,
+          "examples": [
+            "139, Jyoti Nivas College Road, Ground Floor, Terra Tree Service Apartments, 1st Cross, Koramangala 5th Block, Bangalore",
+            "139, Jyoti Nivas College Road, Ground Floor, Terra Tree Service Apartments, 1st Cross, Koramangala 5th Block, Bangalore",
+            "Jyoti Nivas College Road, Koramangala 5th Block, Bangalore"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1168,
+      "n_groups": 1148,
+      "n_multi_groups": 18,
+      "n_groups_dropped": 699,
+      "n_removed": 701,
+      "var_share_removed": 0.0953,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 12,
+          "latents": [
+            266,
+            1145
+          ],
+          "gain_margin": 816.51,
+          "examples": [
+            "North Indian",
+            "North Indian",
+            "North Indian"
+          ]
+        },
+        {
+          "group": 571,
+          "latents": [
+            555
+          ],
+          "gain_margin": 539.86,
+          "examples": [
+            "Bar Food, North Indian",
+            "Bar Food, North Indian",
+            "Bar Food, North Indian"
+          ]
+        },
+        {
+          "group": 1036,
+          "latents": [
+            79
+          ],
+          "gain_margin": 507.84,
+          "examples": [
+            "Korean, Sushi",
+            "Korean, Sushi",
+            "Japanese, Sushi, Asian"
+          ]
+        },
+        {
+          "group": 57,
+          "latents": [
+            1984
+          ],
+          "gain_margin": 470.63,
+          "examples": [
+            "Cafe, Italian, Coffee",
+            "Cafe, Italian, Pizza",
+            "Cafe, Italian, Pizza"
+          ]
+        },
+        {
+          "group": 1115,
+          "latents": [
+            200
+          ],
+          "gain_margin": 390.6,
+          "examples": [
+            "Chinese",
+            "Chinese",
+            "Chinese"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1733,
+      "n_groups": 1704,
+      "n_multi_groups": 24,
+      "n_groups_dropped": 1186,
+      "n_removed": 1190,
+      "var_share_removed": 0.1859,
+      "var_share_sae_error": 0.0043,
+      "top": [
+        {
+          "group": 847,
+          "latents": [
+            1141
+          ],
+          "gain_margin": 5075.23,
+          "examples": [
+            "Pandi Curry, Tender Coconut Pudding, Chocolate Mousse, Ghee Rice, Pork Curry, Bella Coffee, Chicken Curry",
+            "Cocktails, Pie, Rolls, Mezze Platter, Schnitzel, Pancakes, Eggs Benedict",
+            "Paneer Tikka, Dal Kichadi, French Fries"
+          ]
+        },
+        {
+          "group": 584,
+          "latents": [
+            891
+          ],
+          "gain_margin": 1932.68,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 1310,
+          "latents": [
+            571
+          ],
+          "gain_margin": 1848.53,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 450,
+          "latents": [
+            1666
+          ],
+          "gain_margin": 1608.05,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 1246,
+          "latents": [
+            84
+          ],
+          "gain_margin": 1551.99,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1387,
+      "n_groups": 1387,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1145,
+      "n_removed": 1145,
+      "var_share_removed": 0.6913,
+      "var_share_sae_error": 0.0055,
+      "top": [
+        {
+          "group": 1320,
+          "latents": [
+            755
+          ],
+          "gain_margin": 147.19,
+          "examples": [
+            "['Paneer Tikka Biryani', 'Biryani Combo', 'Jumbo Combo', 'Grilled Chicken Biryani', 'Chicken Platter', 'Mixed Non Veg Platter', 'Paneer Tikka', 'Tandoori Chicke",
+            "['Biryani Rice Combo', 'Ghee Rice Combo', 'Chicken Biryani Combo', 'Mutton Biryani Combo', 'Veg Meal', 'Non Veg Meal', 'Gobi Manchurian', 'Chicken Kebab', 'Gril",
+            "['Biryani Rice Combo', 'Ghee Rice Combo', 'Chicken Biryani Combo', 'Mutton Biryani Combo', 'Veg Meal', 'Non Veg Meal', 'Gobi Manchurian', 'Chicken Kebab', 'Bone"
+          ]
+        },
+        {
+          "group": 1379,
+          "latents": [
+            289
+          ],
+          "gain_margin": 96.47,
+          "examples": [
+            "['Cheese Garlic Bread', 'BBQ Chicken Wings [10 Pieces]', 'Honey BBQ Chicken Wings [10 Pieces]', 'Veg Arrabiata Sauce Pasta', 'Veg Alfredo Sauce Pasta', 'Veg Las",
+            "['Chicken Steak In Pepper sauce', 'Gentleman Jack Steak Chicken', 'Twice Marinated Beef Steak', 'Jager Beef Steak', 'Monk Beef Steak', 'Beef Tornade', 'Pesto Pi",
+            "['Veg Pizza Combo', 'Non Veg Pizza Combo', 'Veg Pizza Combo', 'Non Veg Pizza Combo', 'Chicken Club Grilled Sandwich', 'Margherita Pizza', 'Mexican Veg', 'Veg Pi"
+          ]
+        },
+        {
+          "group": 1381,
+          "latents": [
+            301
+          ],
+          "gain_margin": 87.37,
+          "examples": [
+            "['Mehal Regular Thali', 'Mehal Special Mini Thali', 'Chicken Kabab', 'Boneless Kabab [5 Pieces]', 'Chicken Lollipop', 'Chicken Wings Fry', 'Chilly Chicken', 'Bo",
+            "['Black Pepper Chicken Boneless', 'Black Pepper Chicken', 'Chicken 65', 'Thalappakatti Chicken Kulambu', 'Veg Mushroom Milagu Soup', 'Tomato Soup', 'Chicken Cle",
+            "['Boneless Chicken Tikka', 'Drums of Heaven', 'Chicken Chilly', 'Chicken Kabab [8 Pieces]', 'Tandoori Roti', 'Butter Naan', 'Kerala Paratha', 'Paneer Butter Mas"
+          ]
+        },
+        {
+          "group": 209,
+          "latents": [
+            1861
+          ],
+          "gain_margin": 83.9,
+          "examples": [
+            "['Veg Fried Rice', 'Egg Fried Rice', 'Chicken Fried Rice', 'Chicken Noodles', 'Chicken Roll', 'Tawa Roti', 'Aloo Paratha', 'Chola Bhatura', 'Jeera Rice', 'Panee",
+            "['Chicken 65', 'Boneless Chicken Chilli', 'Chicken Tandoori Fry with Schezwan', 'Chicken Fried Rice', 'Gobi Chilli', 'Gobi Manchurian', 'Green Peas Masala Dry',",
+            "['Palak Paneer', 'Paneer Butter Masala', 'Kadai Paneer', 'Dal Tadka', 'Egg Masala', 'Chicken Butter Masala', 'Boneless Chicken Butter Masala', 'Chicken Hyderaba"
+          ]
+        },
+        {
+          "group": 558,
+          "latents": [
+            1054
+          ],
+          "gain_margin": 66.01,
+          "examples": [
+            "['Egg Biryani', 'Chicken Biryani', 'Egg Fried Rice', 'Egg 65', 'Chicken Kabab', 'Veg Clear Soup', 'Veg Hot and Sour Soup', 'Veg Sweet Corn Soup', 'Veg Manchow S",
+            "['Egg Biryani', 'Chicken Biryani', 'Egg Fried Rice', 'Egg 65', 'Chicken Kabab', 'Veg Clear Soup', 'Veg Hot and Sour Soup', 'Veg Sweet Corn Soup', 'Veg Manchow S",
+            "['Tandoori Chicken', 'Rumali with Paneer Chilly Combo', 'Tandoori with 2 Rumali Combo', 'Rumali with Biryani Combo', 'Veg Fried Rice with Chilly Chicken Combo',"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2043,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 956,
+      "n_removed": 956,
+      "var_share_removed": 0.385,
+      "var_share_sae_error": 0.0299,
+      "top": [
+        {
+          "group": 1367,
+          "latents": [
+            1213
+          ],
+          "gain_margin": 418.04,
+          "examples": [
+            "The Restaurant",
+            "Nature's Restaurant",
+            "Village Restaurant"
+          ]
+        },
+        {
+          "group": 609,
+          "latents": [
+            730
+          ],
+          "gain_margin": 272.87,
+          "examples": [
+            "The Trundle",
+            "The Trundle",
+            "Kuttanad"
+          ]
+        },
+        {
+          "group": 1219,
+          "latents": [
+            355
+          ],
+          "gain_margin": 249.63,
+          "examples": [
+            "Bulls N Bears - Bar Trade Xchange",
+            "Bulls N Bears - Bar Trade Xchange",
+            "Bulls N Bears - Bar Trade Xchange"
+          ]
+        },
+        {
+          "group": 833,
+          "latents": [
+            1178
+          ],
+          "gain_margin": 231.26,
+          "examples": [
+            "Kapoor's Biriyani",
+            "Kapoor's Biriyani",
+            "Nizam's Biryani House"
+          ]
+        },
+        {
+          "group": 1788,
+          "latents": [
+            146
+          ],
+          "gain_margin": 199.0,
+          "examples": [
+            "Woodee Pizza",
+            "Woodee Pizza",
+            "Woodee Pizza"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1287,
+      "n_groups": 1215,
+      "n_multi_groups": 65,
+      "n_groups_dropped": 638,
+      "n_removed": 646,
+      "var_share_removed": 0.0919,
+      "var_share_sae_error": 0.0059,
+      "top": [
+        {
+          "group": 7,
+          "latents": [
+            1554,
+            1778
+          ],
+          "gain_margin": 468.01,
+          "examples": [
+            "080 49994999\r\r\r\n080 49994999",
+            "080 69999009\n080 69999007",
+            "080 69999009\n080 69999007"
+          ]
+        },
+        {
+          "group": 18,
+          "latents": [
+            537,
+            1404
+          ],
+          "gain_margin": 376.56,
+          "examples": [
+            "080 42017174\r\r\r\n080 42021219",
+            "080 42053331\n080 28476532",
+            "080 25299333\n080 42005566"
+          ]
+        },
+        {
+          "group": 16,
+          "latents": [
+            359,
+            914
+          ],
+          "gain_margin": 327.76,
+          "examples": [
+            "+91 9980050505",
+            "+91 8050765508",
+            "+91 8050765508"
+          ]
+        },
+        {
+          "group": 46,
+          "latents": [
+            471,
+            1253
+          ],
+          "gain_margin": 273.76,
+          "examples": [
+            "+91 8197399958",
+            "+91 8197399958",
+            "+91 8197974667"
+          ]
+        },
+        {
+          "group": 1069,
+          "latents": [
+            1091
+          ],
+          "gain_margin": 255.87,
+          "examples": [
+            "080 49653044",
+            "080 49653044",
+            "080 49653044"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2044,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1067,
+      "n_removed": 1067,
+      "var_share_removed": 0.3302,
+      "var_share_sae_error": 0.0927,
+      "top": [
+        {
+          "group": 2021,
+          "latents": [
+            514
+          ],
+          "gain_margin": 737.82,
+          "examples": [
+            "[('Rated 5.0', 'RATED\\n  Food is verry good .I went to Friday night.i order 2 chicken biryani ,raita and butter chicken .staff was verry energetic I love this p",
+            "[('Rated 4.0', 'RATED\\n  Products are liable to order based on price but quality can be more improved..biryani is good there..upto mark ! Last time i really enj",
+            "[('Rated 4.0', 'RATED\\n  Products are liable to order based on price but quality can be more improved..biryani is good there..upto mark ! Last time i really enj"
+          ]
+        },
+        {
+          "group": 1986,
+          "latents": [
+            771
+          ],
+          "gain_margin": 543.79,
+          "examples": [
+            "[('Rated 3.0', \"RATED\\n  Used to be great when they first opened out.... But the quality of staff here isn't all that appealing. The ingredients can sometimes b",
+            "[('Rated 3.0', \"RATED\\n  Used to be great when they first opened out.... But the quality of staff here isn't all that appealing. The ingredients can sometimes b",
+            "[('Rated 3.0', 'RATED\\n  We had been frequenting this place for our lunch. But over the time the quality has gone down a little. Too much oil in the biriyani an"
+          ]
+        },
+        {
+          "group": 2007,
+          "latents": [
+            873
+          ],
+          "gain_margin": 445.8,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  This is the worst place to get cakes,had ordered a chocolate truffle 1 kg cake from here and that was the worst cake I ever ate. The ca",
+            "[('Rated 3.0', 'RATED\\n  Here it was good not better, quantity also very less \\U0001f967 packing was better plz improve some quantity compared to post....\\nBut ",
+            "[('Rated 2.0', \"RATED\\n  The pizzas were good and loved the white sauce pizza but I don't see a mention of what crust we are getting. For first timer, atleast w"
+          ]
+        },
+        {
+          "group": 1373,
+          "latents": [
+            1307
+          ],
+          "gain_margin": 366.4,
+          "examples": [
+            "[('Rated 2.0', \"RATED\\n  Had to taste food cos it was a new 1 n idea of give a try....\\nBut it took too long to prepare...\\nBurger was so horrible tat inside st",
+            "[('Rated 2.0', \"RATED\\n  Had to taste food cos it was a new 1 n idea of give a try....\\nBut it took too long to prepare...\\nBurger was so horrible tat inside st",
+            "[('Rated 2.0', \"RATED\\n  Had to taste food cos it was a new 1 n idea of give a try....\\nBut it took too long to prepare...\\nBurger was so horrible tat inside st"
+          ]
+        },
+        {
+          "group": 816,
+          "latents": [
+            776
+          ],
+          "gain_margin": 346.86,
+          "examples": [
+            "[('Rated 5.0', 'RATED\\n  Well had been visit there yesterday tried their potato basket and vodka shots also draught beer of bud and kf..., value of money i must",
+            "[('Rated 5.0', 'RATED\\n  Well had been visit there yesterday tried their potato basket and vodka shots also draught beer of bud and kf..., value of money i must",
+            "[('Rated 5.0', 'RATED\\n  Well had been visit there yesterday tried their potato basket and vodka shots also draught beer of bud and kf..., value of money i must"
+          ]
+        }
+      ]
+    }
+  }
+}

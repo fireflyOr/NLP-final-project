@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.507201758426884,
+  "test_error": 1.507201758426884,
+  "course_metric": "r2",
+  "course_score": 0.2904349093932138,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 31.98414945602417,
+  "diagnostics": {
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 412,
+      "n_removed": 100,
+      "threshold": 0.0459,
+      "passed_test": 34,
+      "removed_norm_ratio": 0.357,
+      "var_share_kept": 0.6002,
+      "var_share_sae_error": 0.2145,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 283,
+          "score": 0.1771,
+          "n_active": 749,
+          "examples": [
+            "Kirby's Epic Yarn",
+            "Kirby's Dream Land",
+            "Kirby Tilt 'n' Tumble"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.1722,
+          "n_active": 798,
+          "examples": [
+            "Tom Clancy's Rainbow Six",
+            "Tom Clancy's Rainbow Six",
+            "Assassin's Creed"
+          ]
+        },
+        {
+          "latent": 450,
+          "score": 0.1398,
+          "n_active": 430,
+          "examples": [
+            "Mario Paint",
+            "Dr. Mario",
+            "Super Mario Bros."
+          ]
+        },
+        {
+          "latent": 212,
+          "score": 0.118,
+          "n_active": 782,
+          "examples": [
+            "Lara Croft and the Temple of Osiris",
+            "Ragnarok Odyssey",
+            "Ragnarok DS"
+          ]
+        },
+        {
+          "latent": 423,
+          "score": 0.1161,
+          "n_active": 640,
+          "examples": [
+            "Final Fantasy XI: Chains of Promathia",
+            "Final Fantasy VIII",
+            "Final Fantasy XI"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 501,
+      "n_kept": 487,
+      "n_removed": 25,
+      "threshold": 0.0603,
+      "passed_test": 37,
+      "removed_norm_ratio": 0.1979,
+      "var_share_kept": 0.9492,
+      "var_share_sae_error": 0.0008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 264,
+          "score": 0.2259,
+          "n_active": 404,
+          "examples": [
+            "KID",
+            "Data Age",
+            "Data Age"
+          ]
+        },
+        {
+          "latent": 254,
+          "score": 0.2157,
+          "n_active": 428,
+          "examples": [
+            "Marvelous Interactive",
+            "Marvelous Interactive",
+            "Marvelous Interactive"
+          ]
+        },
+        {
+          "latent": 150,
+          "score": 0.2039,
+          "n_active": 731,
+          "examples": [
+            "Sony Online Entertainment",
+            "Sony Online Entertainment",
+            "Sony Online Entertainment"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.1913,
+          "n_active": 506,
+          "examples": [
+            "Big Ben Interactive",
+            "Big Ben Interactive",
+            "Big Ben Interactive"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1912,
+          "n_active": 527,
+          "examples": [
+            "Valve Software",
+            "Valve Software",
+            "Metro 3D"
+          ]
+        }
+      ]
+    }
+  }
+}

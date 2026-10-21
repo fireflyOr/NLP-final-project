@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2410497076246035,
+  "test_error": 0.2410497076246035,
+  "course_metric": "r2",
+  "course_score": 0.446882913592044,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 75.11288642883301,
+  "diagnostics": {
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 347,
+      "n_removed": 165,
+      "threshold": 0.0692,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.576,
+      "var_share_kept": 0.6338,
+      "var_share_sae_error": 0.1219,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 163,
+          "score": 0.1025,
+          "n_active": 132,
+          "examples": [
+            "Lonely Planet",
+            "Lonely Planet",
+            "Lonely Planet"
+          ]
+        },
+        {
+          "latent": 504,
+          "score": 0.0893,
+          "n_active": 187,
+          "examples": [
+            "Robert Louis Stevenson",
+            "Robert Louis Stevenson",
+            "Agatha Christie"
+          ]
+        },
+        {
+          "latent": 328,
+          "score": 0.0862,
+          "n_active": 238,
+          "examples": [
+            "Warner Bros",
+            "Warner Bros",
+            "Howard Gardner"
+          ]
+        },
+        {
+          "latent": 0,
+          "score": 0.08,
+          "n_active": 233,
+          "examples": [
+            "P.G. Wodehouse",
+            "P.G. Wodehouse",
+            "P.G. Wodehouse"
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.0784,
+          "n_active": 292,
+          "examples": [
+            "Pradeep Chakravarthy, Anil Choudhry, Jayashree Kumar, Girija Viraraghavan",
+            "Pradeep Kapoor",
+            "Prachi Gupta"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 310,
+      "n_kept": 437,
+      "n_removed": 75,
+      "threshold": 0.0685,
+      "passed_test": 26,
+      "removed_norm_ratio": 0.3948,
+      "var_share_kept": 0.6726,
+      "var_share_sae_error": 0.0027,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 161,
+          "score": 0.1623,
+          "n_active": 219,
+          "examples": [
+            "Paperback,\u2013 Illustrated, 2001",
+            "Paperback,\u2013 2002",
+            "Paperback,\u2013 2002"
+          ]
+        },
+        {
+          "latent": 314,
+          "score": 0.1237,
+          "n_active": 121,
+          "examples": [
+            "Paperback,\u2013 2018",
+            "Paperback,\u2013 2018",
+            "Paperback,\u2013 2018"
+          ]
+        },
+        {
+          "latent": 275,
+          "score": 0.1164,
+          "n_active": 1149,
+          "examples": [
+            "(Kannada),Paperback,\u2013 2014",
+            "Paperback,\u2013 Student Edition, 2014",
+            "Paperback,\u2013 2017"
+          ]
+        },
+        {
+          "latent": 108,
+          "score": 0.1057,
+          "n_active": 112,
+          "examples": [
+            "Flexibound,\u2013 23 May 2013",
+            "Flexibound,\u2013 27 Sep 2011",
+            "Flexibound,\u2013 21 Oct 2014"
+          ]
+        },
+        {
+          "latent": 295,
+          "score": 0.0968,
+          "n_active": 69,
+          "examples": [
+            "Mass Market Paperback,\u2013 2015",
+            "Mass Market Paperback,\u2013 2015",
+            "Paperback,\u2013 2008"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 487,
+      "n_kept": 356,
+      "n_removed": 156,
+      "threshold": 0.0713,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.4772,
+      "var_share_kept": 0.6251,
+      "var_share_sae_error": 0.0005,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 88,
+          "score": 0.1191,
+          "n_active": 238,
+          "examples": [
+            "Sikhism (Books)",
+            "Language, Linguistics & Writing (Books)",
+            "Language, Linguistics & Writing (Books)"
+          ]
+        },
+        {
+          "latent": 349,
+          "score": 0.1099,
+          "n_active": 116,
+          "examples": [
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)"
+          ]
+        },
+        {
+          "latent": 8,
+          "score": 0.0993,
+          "n_active": 122,
+          "examples": [
+            "Public Affairs",
+            "Society & Culture (Books)",
+            "Society & Culture (Books)"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.0988,
+          "n_active": 201,
+          "examples": [
+            "Operating Systems Textbooks",
+            "Operating Systems Textbooks",
+            "Political Structure & Processes (Books)"
+          ]
+        },
+        {
+          "latent": 480,
+          "score": 0.0965,
+          "n_active": 120,
+          "examples": [
+            "Handicrafts, Decorative Arts & Crafts (Books)",
+            "Handicrafts, Decorative Arts & Crafts (Books)",
+            "Handicrafts, Decorative Arts & Crafts (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 362,
+      "n_removed": 150,
+      "threshold": 0.0685,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.4718,
+      "var_share_kept": 0.5273,
+      "var_share_sae_error": 0.2531,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 450,
+          "score": 0.0837,
+          "n_active": 189,
+          "examples": [
+            "MARIO PUZO'S FIRST ACCLAIMED NOVEL, BEFORE HIS CREATION OF THE INTERNATIONAL BESTSELLER, THE GODFATHER. AN ASTOUNDING STORY OF CORRUPTION AND BETRAYAL.\n\nHardene",
+            "MARIO PUZO'S FIRST ACCLAIMED NOVEL, BEFORE HIS CREATION OF THE INTERNATIONAL BESTSELLER, THE GODFATHER. AN ASTOUNDING STORY OF CORRUPTION AND BETRAYAL.\n\nHardene",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. "
+          ]
+        },
+        {
+          "latent": 460,
+          "score": 0.0836,
+          "n_active": 206,
+          "examples": [
+            "All selected pieces for the grade 2 examination for the Trinity College London Guitar syllabus 2016-2019.",
+            "All selected pieces for the grade 1 examination for the Trinity College London Guitar syllabus 2016-2019.",
+            "This book contains everything needed to prepare for the performance and technical work components of a Trinity Electronic Keyboard Grade 3 exam in 2019-2022. Al"
+          ]
+        },
+        {
+          "latent": 338,
+          "score": 0.0785,
+          "n_active": 213,
+          "examples": [
+            "A beautiful new clothbound edition of Alexandre Dumas' classic novel of wrongful imprisonment, adventure and revenge. Thrown in prison for a crime he has not co",
+            "A SUNDAY TIMES BESTSELLER\n'Cussler is hard to beat' Daily Mail\nThe page-turning Dirk Pitt classic from multi-million-copy king of the adventure novel, Clive Cus",
+            "A SUNDAY TIMES BESTSELLER\n'Cussler is hard to beat' Daily Mail\nThe page-turning Dirk Pitt classic from multi-million-copy king of the adventure novel, Clive Cus"
+          ]
+        },
+        {
+          "latent": 65,
+          "score": 0.0784,
+          "n_active": 266,
+          "examples": [
+            "The year was 1983 and Team India was in its first-ever World Cup final. They were the minnows of the cricketing world - so much so that the bookmakers were offe",
+            "When Namita is ten, her mother takes her to Dhondutai, a respected Mumbai music teacher from the great Jaipur Gharana. Dhondutai has dedicated herself to music ",
+            "When Namita is ten, her mother takes her to Dhondutai, a respected Mumbai music teacher from the great Jaipur Gharana. Dhondutai has dedicated herself to music "
+          ]
+        },
+        {
+          "latent": 214,
+          "score": 0.0778,
+          "n_active": 155,
+          "examples": [
+            "Mikhail Tal, the 'magician from Riga, ' was the greatest attacking World Champion of them all, and this enchanting autobiography chronicles his extraordinary ca",
+            "The industry Bible. Programming Microsoft Visual C++, Fifth edition, is the newest edition of the book that has become the industry's most trusted text (previou",
+            "Mayada was born into a powerful Iraqi family. One grandfather fought alongside Lawrence of Arabia. The other is acclaimed as the first true Arab nationalist. He"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 325,
+      "n_removed": 187,
+      "threshold": 0.0746,
+      "passed_test": 6,
+      "removed_norm_ratio": 0.5334,
+      "var_share_kept": 0.4971,
+      "var_share_sae_error": 0.1966,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 213,
+          "score": 0.107,
+          "n_active": 505,
+          "examples": [
+            "How to Play Guitar Step by Step: The Complete Guide to Mastering the Guitar (Step By Step Book & DVD)",
+            "C & C++ Interview Questions You'll Most Likely Be Asked: 4 (Job Interview Questions)",
+            "Runner\u2019s World Race Everything: How to Conquer Any Race at Any Distance in Any Environment and Have Fun Doing It"
+          ]
+        },
+        {
+          "latent": 338,
+          "score": 0.0998,
+          "n_active": 228,
+          "examples": [
+            "The Complete Novels of Sherlock Holmes (Deluxe Hardbound Edition)",
+            "The Memoirs of Sherlock Holmes",
+            "The Adventures of Sherlock Holmes and the Memoirs of Sherlock Holmes (Penguin Classics)"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0907,
+          "n_active": 208,
+          "examples": [
+            "Python Crash Course, 2nd Edition: A Hands-On, Project-Based Introduction to Programming",
+            "The Official Cambridge Guide to IELTS Student's Book with Answers with DVD-ROM (Cambridge English)",
+            "The Archie Wedding: Archie in Will You Marry Me? (The Married Life Series)"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0883,
+          "n_active": 229,
+          "examples": [
+            "The Complete MAUS",
+            "Complete ABAP",
+            "The Complete Novels (Penguin Classics Deluxe editions)"
+          ]
+        },
+        {
+          "latent": 212,
+          "score": 0.0816,
+          "n_active": 200,
+          "examples": [
+            "Red War",
+            "Red Notice",
+            "Blood Red River"
+          ]
+        }
+      ]
+    }
+  }
+}

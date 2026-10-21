@@ -1,0 +1,864 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ROTTEN_TOMATOES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8482876764176012,
+  "test_error": 0.8482876764176012,
+  "course_metric": "r2",
+  "course_score": 0.46361280662487936,
+  "n_text_cols": 13,
+  "n_text_features": 390,
+  "n_train": 4772,
+  "n_test": 2386,
+  "runtime_s": 246.17848181724548,
+  "diagnostics": {
+    "Actors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 324,
+      "n_removed": 188,
+      "threshold": 0.0592,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.5285,
+      "var_share_kept": 0.4642,
+      "var_share_sae_error": 0.2225,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 189,
+          "score": 0.0697,
+          "n_active": 260,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 105,
+          "score": 0.0658,
+          "n_active": 200,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.0634,
+          "n_active": 285,
+          "examples": [
+            "Jodi Carlisle,Lacey Chabert,Tim Curry",
+            "Justin Long,Jesse McCartney,Jason Lee",
+            "Josh Lucas,Derek Luke,Austin Nichols"
+          ]
+        },
+        {
+          "latent": 7,
+          "score": 0.06,
+          "n_active": 294,
+          "examples": [
+            "Toni Rakkaen,Ingkarat Damrongsakkul,Thira Chutikul",
+            "Derek Brandon,Francesca Derosa,Patrika Darbo",
+            "Tiger Hu Chen,Keanu Reeves,Karen Mok"
+          ]
+        },
+        {
+          "latent": 467,
+          "score": 0.0577,
+          "n_active": 262,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "Cast": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 343,
+      "n_removed": 169,
+      "threshold": 0.0605,
+      "passed_test": 9,
+      "removed_norm_ratio": 0.4804,
+      "var_share_kept": 0.4756,
+      "var_share_sae_error": 0.2721,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 132,
+          "score": 0.1209,
+          "n_active": 175,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 49,
+          "score": 0.0888,
+          "n_active": 227,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 308,
+          "score": 0.0853,
+          "n_active": 428,
+          "examples": [
+            "Michael Harring,Mark Duplass,Mike Birbiglia,Emily Blunt,Jason Dodson,Pete Erickson,Kathryn Lebo,Evan Mosher,Jennifer Maas,Jeanette Maus,Dori Hana Scherer,Steve ",
+            "Leonardo DiCaprio,Kenny Ausubel,Thom Hartmann,Wangari Maathai,Sandra Postel,Paul Stamets,David Orr,Stephen Hawking,Oren Lyons,Andrew C. Revkin,Sylvia Earle,Paul",
+            "Olivia de Havilland,Montgomery Clift,Ralph Richardson,Miriam Hopkins,Vanessa Brown,Betty Linley,Ray Collins,Mona Freeman,Selena Royle,Paul Lees,Harry Antrim,Rus"
+          ]
+        },
+        {
+          "latent": 109,
+          "score": 0.0842,
+          "n_active": 176,
+          "examples": [
+            "Cat Power",
+            "Dean Jones",
+            "Johnny Cash"
+          ]
+        },
+        {
+          "latent": 119,
+          "score": 0.0678,
+          "n_active": 407,
+          "examples": [
+            "Ginger Fish,John 5,Rob Zombie",
+            "Dead Can Dance,Lisa Gerrard,Brendan Perry",
+            "Kelly McCormick,Tiffany,Jeff Turner"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 240,
+      "n_kept": 433,
+      "n_removed": 79,
+      "threshold": 0.0557,
+      "passed_test": 18,
+      "removed_norm_ratio": 0.6478,
+      "var_share_kept": 0.5165,
+      "var_share_sae_error": 0.0007,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 135,
+          "score": 0.0758,
+          "n_active": 191,
+          "examples": [
+            "USA,Botswana",
+            "USA,UK,Argentina",
+            "USA,UK"
+          ]
+        },
+        {
+          "latent": 437,
+          "score": 0.0747,
+          "n_active": 275,
+          "examples": [
+            "UK,USA",
+            "UK,USA",
+            "UK,USA"
+          ]
+        },
+        {
+          "latent": 68,
+          "score": 0.0735,
+          "n_active": 337,
+          "examples": [
+            "USA,UK,Afghanistan",
+            "USA,UK,Argentina",
+            "USA,China,UK"
+          ]
+        },
+        {
+          "latent": 89,
+          "score": 0.0733,
+          "n_active": 190,
+          "examples": [
+            "USA,Malta,UK",
+            "Cyprus,USA",
+            "UK,USA"
+          ]
+        },
+        {
+          "latent": 407,
+          "score": 0.0731,
+          "n_active": 189,
+          "examples": [
+            "UK,USA,United Arab Emirates",
+            "UK,USA",
+            "UK,USA"
+          ]
+        }
+      ]
+    },
+    "Creator": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 327,
+      "n_removed": 185,
+      "threshold": 0.0605,
+      "passed_test": 30,
+      "removed_norm_ratio": 0.5466,
+      "var_share_kept": 0.5185,
+      "var_share_sae_error": 0.1699,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 78,
+          "score": 0.1458,
+          "n_active": 291,
+          "examples": [
+            "Charles Brackett,Billy Wilder",
+            "Charles Brackett,Billy Wilder",
+            "Charles Brackett,Billy Wilder"
+          ]
+        },
+        {
+          "latent": 189,
+          "score": 0.1409,
+          "n_active": 299,
+          "examples": [
+            "John Fusco",
+            "John Fusco",
+            "John Fusco"
+          ]
+        },
+        {
+          "latent": 442,
+          "score": 0.1394,
+          "n_active": 166,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 234,
+          "score": 0.1389,
+          "n_active": 193,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 446,
+          "score": 0.1342,
+          "n_active": 245,
+          "examples": [
+            "Edith Wharton,Jay Cocks",
+            "Susannah Grant",
+            "Edith Maude Hull,Monte M. Katterjohn"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 315,
+      "n_removed": 197,
+      "threshold": 0.0586,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5194,
+      "var_share_kept": 0.4305,
+      "var_share_sae_error": 0.2724,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 100,
+          "score": 0.1034,
+          "n_active": 200,
+          "examples": [
+            "An authorized documentary on the late musician Kurt Cobain, from his early days in Aberdeen, Washington to his success and downfall with the grunge band Nirvana",
+            "A documentary about the discovery of the largest Tyrannosaurus Rex fossil ever found.",
+            "A documentary about branding, advertising and product placement that is financed and made possible by brands, advertising and product placement."
+          ]
+        },
+        {
+          "latent": 295,
+          "score": 0.0872,
+          "n_active": 201,
+          "examples": [
+            "Brooks Caldwell, (Cary Elwes) an erudite and handsome lawyer, seems to have it all: wealth, social status and a red hot career. His success is, in reality, a pr",
+            "Jimmy the Tulip's (Willis) quiet new life is shaken up by his old pal Oz (Perry), whose wife (Henstridge) has been kidnapped by a Hungarian mob. The Tulip and h",
+            "Doug is a young man who works all day as a concierge at a luxurious hotel, saving money to make his own business. Unfortunately, when he finds the financial sup"
+          ]
+        },
+        {
+          "latent": 320,
+          "score": 0.0693,
+          "n_active": 237,
+          "examples": [
+            "Sonny Steele used to be a rodeo star, but his next appearance is to be on a Las Vegas stage, wearing a suit covered in lights, advertising a breakfast cereal. W",
+            "Charlie Reader is a successful theater agent. He is also successful with young ladies. One day he is visited by his old friend Joe, married with three children.",
+            "A wicked king has taken over the Emerald City, and wants his daughter, Princess Gloria, to marry the horrid courtier Googly-Goo, though she loves Pon, the Garde"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.0688,
+          "n_active": 271,
+          "examples": [
+            "In 1858 France, Bernadette, an adolescent peasant girl, has a vision of 'a beautiful lady' in the city dump. She never claims it to be anything other than this,",
+            "The Walking Dead Girls is a behind-the-scenes look into zombie culture in the United States and the obsession into ''Sexy Female Zombies''. What is it about Zom",
+            "A Disney animated version of 'Treasure Island'. The only difference is that the film is set in outer space with alien worlds and other galactic wonders."
+          ]
+        },
+        {
+          "latent": 178,
+          "score": 0.0653,
+          "n_active": 267,
+          "examples": [
+            "Mia Thermopolis has just found out that she is the heir apparent to the throne of Genovia. With her friends Lilly and Michael Moscovitz in tow, she tries to nav",
+            "Chuck (Brad Dourif) and Tiff (Jennifer Tilly) return, resurrected by their son (Billy Boyd), and hit Hollywood in the fifth film of the CHILD'S PLAY series.",
+            "The life and friendship between the icons of the Beat Generation - Neal Cassady, Carloyn Cassady and Jack Kerouac."
+          ]
+        }
+      ]
+    },
+    "Director": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 323,
+      "n_removed": 189,
+      "threshold": 0.0578,
+      "passed_test": 11,
+      "removed_norm_ratio": 0.5931,
+      "var_share_kept": 0.5736,
+      "var_share_sae_error": 0.1261,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 481,
+          "score": 0.1016,
+          "n_active": 485,
+          "examples": [
+            "Tim Burton",
+            "Tim Burton",
+            "Tim Burton"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.0726,
+          "n_active": 180,
+          "examples": [
+            "Woody Allen",
+            "Woody Allen",
+            "Woody Allen"
+          ]
+        },
+        {
+          "latent": 504,
+          "score": 0.0684,
+          "n_active": 317,
+          "examples": [
+            "Clint Eastwood",
+            "Clint Eastwood",
+            "Clint Eastwood"
+          ]
+        },
+        {
+          "latent": 106,
+          "score": 0.0649,
+          "n_active": 222,
+          "examples": [
+            "Alfred Hitchcock",
+            "Alfred Hitchcock",
+            "Alfred Hitchcock"
+          ]
+        },
+        {
+          "latent": 384,
+          "score": 0.0569,
+          "n_active": 362,
+          "examples": [
+            "Harold Young",
+            "Harold Young",
+            "Burr Steers"
+          ]
+        }
+      ]
+    },
+    "Filming Locations": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 328,
+      "n_removed": 184,
+      "threshold": 0.0615,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.5653,
+      "var_share_kept": 0.5284,
+      "var_share_sae_error": 0.0762,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 416,
+          "score": 0.08,
+          "n_active": 422,
+          "examples": [
+            "Spain",
+            "Almer\u00eda, Andaluc\u00eda, Spain",
+            "Almer\u00eda, Andaluc\u00eda, Spain"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.079,
+          "n_active": 522,
+          "examples": [
+            "Vermont Avenue Tunnel, Griffith Park - 4730 Crystal Springs Drive, Los Angeles, California, USA",
+            "Griffith Park - 4730 Crystal Springs Drive, Los Angeles, California, USA",
+            "Griffith Park - 4730 Crystal Springs Drive, Los Angeles, California, USA"
+          ]
+        },
+        {
+          "latent": 407,
+          "score": 0.0762,
+          "n_active": 910,
+          "examples": [
+            "Molly's Reach, 647 School Road, Gibsons, British Columbia, Canada",
+            "Molly Malone's Irish Pub - 575 South Fairfax Avenue, Los Angeles, California, USA",
+            "Red Carpet Wine & Spirits - 400 East Glenoaks Boulevard, Glendale, California, USA"
+          ]
+        },
+        {
+          "latent": 221,
+          "score": 0.0759,
+          "n_active": 661,
+          "examples": [
+            "Koi, former L'Ermitage Restaurant - 730 North La Cienega Boulevard, Los Angeles, California, USA",
+            "656 Lincoln Avenue, Winnetka, Illinois, USA",
+            "Bosse Field - 1701 N. Main Street, Evansville, Indiana, USA"
+          ]
+        },
+        {
+          "latent": 377,
+          "score": 0.0753,
+          "n_active": 847,
+          "examples": [
+            "Lost Dutchman State Park - 6109 N. Apache Trail, Apache Junction, Arizona, USA",
+            "Jolly Roger Drive-In Theatre, Taylor, Michigan, USA",
+            "Jurassic Kahili Ranch, Kilauea, Kauai, Hawaii, USA"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 446,
+      "n_kept": 439,
+      "n_removed": 73,
+      "threshold": 0.0565,
+      "passed_test": 122,
+      "removed_norm_ratio": 0.2287,
+      "var_share_kept": 0.7757,
+      "var_share_sae_error": 0.0005,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 100,
+          "score": 0.2741,
+          "n_active": 274,
+          "examples": [
+            "Documentary,War",
+            "Documentary,War",
+            "Documentary,War"
+          ]
+        },
+        {
+          "latent": 408,
+          "score": 0.274,
+          "n_active": 274,
+          "examples": [
+            "Documentary,News",
+            "Documentary,News",
+            "Documentary,Crime,News"
+          ]
+        },
+        {
+          "latent": 248,
+          "score": 0.2739,
+          "n_active": 274,
+          "examples": [
+            "Documentary,News",
+            "Documentary,News",
+            "Documentary,History,News"
+          ]
+        },
+        {
+          "latent": 136,
+          "score": 0.2703,
+          "n_active": 275,
+          "examples": [
+            "Documentary,News",
+            "Documentary,News",
+            "Documentary"
+          ]
+        },
+        {
+          "latent": 440,
+          "score": 0.2653,
+          "n_active": 283,
+          "examples": [
+            "Documentary",
+            "Documentary",
+            "Documentary"
+          ]
+        }
+      ]
+    },
+    "Language": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 254,
+      "n_kept": 470,
+      "n_removed": 42,
+      "threshold": 0.0595,
+      "passed_test": 36,
+      "removed_norm_ratio": 0.2719,
+      "var_share_kept": 0.741,
+      "var_share_sae_error": 0.0021,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 9,
+          "score": 0.0971,
+          "n_active": 3386,
+          "examples": [
+            "Bengali,English",
+            "Hindi,English",
+            "English,Hindi"
+          ]
+        },
+        {
+          "latent": 95,
+          "score": 0.0928,
+          "n_active": 4295,
+          "examples": [
+            "English,Norse, Old,Latin",
+            "English,Greek, Ancient (to 1453)",
+            "English,Sindarin,Old English"
+          ]
+        },
+        {
+          "latent": 137,
+          "score": 0.0904,
+          "n_active": 700,
+          "examples": [
+            "English,Berber languages,French",
+            "English,Vietnamese,French",
+            "English,Vietnamese,French"
+          ]
+        },
+        {
+          "latent": 120,
+          "score": 0.0891,
+          "n_active": 3323,
+          "examples": [
+            "English,Aboriginal",
+            "English",
+            "English"
+          ]
+        },
+        {
+          "latent": 459,
+          "score": 0.089,
+          "n_active": 3323,
+          "examples": [
+            "English",
+            "English",
+            "English"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 270,
+      "n_removed": 242,
+      "threshold": 0.0554,
+      "passed_test": 4,
+      "removed_norm_ratio": 0.6152,
+      "var_share_kept": 0.3949,
+      "var_share_sae_error": 0.2281,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 314,
+          "score": 0.076,
+          "n_active": 234,
+          "examples": [
+            "House II: The Second Story",
+            "Scary Movie 2",
+            "The Raid 2"
+          ]
+        },
+        {
+          "latent": 479,
+          "score": 0.058,
+          "n_active": 182,
+          "examples": [
+            "Child's Play 3",
+            "Toy Story 3",
+            "Spider-Man 3"
+          ]
+        },
+        {
+          "latent": 366,
+          "score": 0.0435,
+          "n_active": 266,
+          "examples": [
+            "Undercover Kids",
+            "The Undercover Kid",
+            "The Kids Are All Right"
+          ]
+        },
+        {
+          "latent": 209,
+          "score": 0.04,
+          "n_active": 255,
+          "examples": [
+            "Men of the Fighting Lady",
+            "Foodfight!",
+            "Street Fight"
+          ]
+        },
+        {
+          "latent": 256,
+          "score": 0.0398,
+          "n_active": 332,
+          "examples": [
+            "Frankenstein",
+            "Frankenstein",
+            "Prizzi's Honor"
+          ]
+        }
+      ]
+    },
+    "RatingCount": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 328,
+      "n_removed": 184,
+      "threshold": 0.0593,
+      "passed_test": 13,
+      "removed_norm_ratio": 0.5278,
+      "var_share_kept": 0.5209,
+      "var_share_sae_error": 0.0153,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 319,
+          "score": 0.1619,
+          "n_active": 1100,
+          "examples": [
+            "306",
+            "307",
+            "307"
+          ]
+        },
+        {
+          "latent": 243,
+          "score": 0.1408,
+          "n_active": 479,
+          "examples": [
+            "409",
+            "409",
+            "789"
+          ]
+        },
+        {
+          "latent": 10,
+          "score": 0.0953,
+          "n_active": 279,
+          "examples": [
+            "275,450",
+            "215,340",
+            "275,476"
+          ]
+        },
+        {
+          "latent": 440,
+          "score": 0.0895,
+          "n_active": 857,
+          "examples": [
+            "1,069",
+            "1,060",
+            "1,068"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.0698,
+          "n_active": 531,
+          "examples": [
+            "2,978",
+            "2,001",
+            "2,100"
+          ]
+        }
+      ]
+    },
+    "Release Date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 395,
+      "n_kept": 288,
+      "n_removed": 224,
+      "threshold": 0.0574,
+      "passed_test": 4,
+      "removed_norm_ratio": 0.6394,
+      "var_share_kept": 0.3176,
+      "var_share_sae_error": 0.0019,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 373,
+          "score": 0.0585,
+          "n_active": 3009,
+          "examples": [
+            "22 March 2002 (UK)",
+            "2 October 2015 (UK)",
+            "2 November 2011 (UK)"
+          ]
+        },
+        {
+          "latent": 165,
+          "score": 0.0463,
+          "n_active": 59,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.0429,
+          "n_active": 847,
+          "examples": [
+            "18 September 2012 (USA)",
+            "18 September 2013 (USA)",
+            "18 September 2015 (USA)"
+          ]
+        },
+        {
+          "latent": 175,
+          "score": 0.0421,
+          "n_active": 20,
+          "examples": [
+            "20 July 2006 (Singapore)",
+            "25 June 2009 (Singapore)",
+            "6 November 2014 (Singapore)"
+          ]
+        },
+        {
+          "latent": 275,
+          "score": 0.0415,
+          "n_active": 86,
+          "examples": [
+            "27 May 1994 (Japan)",
+            "11 January 2014 (Japan)",
+            "25 January 2014 (Japan)"
+          ]
+        }
+      ]
+    },
+    "ReviewCount": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 498,
+      "n_kept": 443,
+      "n_removed": 69,
+      "threshold": 0.061,
+      "passed_test": 126,
+      "removed_norm_ratio": 0.2386,
+      "var_share_kept": 0.807,
+      "var_share_sae_error": 0.0113,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 68,
+          "score": 0.1652,
+          "n_active": 906,
+          "examples": [
+            "25 user,5 critic",
+            "25 user,5 critic",
+            "25 user,6 critic"
+          ]
+        },
+        {
+          "latent": 412,
+          "score": 0.1577,
+          "n_active": 1265,
+          "examples": [
+            "3 user",
+            "3 user",
+            "3 user"
+          ]
+        },
+        {
+          "latent": 327,
+          "score": 0.1551,
+          "n_active": 470,
+          "examples": [
+            "9 user,14 critic",
+            "9 user,14 critic",
+            "7 user,9 critic"
+          ]
+        },
+        {
+          "latent": 393,
+          "score": 0.1483,
+          "n_active": 699,
+          "examples": [
+            "3 user",
+            "3 user",
+            "3 user"
+          ]
+        },
+        {
+          "latent": 397,
+          "score": 0.1482,
+          "n_active": 363,
+          "examples": [
+            "545 user,388 critic",
+            "1,069 user,378 critic",
+            "705 user,445 critic"
+          ]
+        }
+      ]
+    }
+  }
+}

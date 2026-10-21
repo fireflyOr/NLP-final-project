@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7256473074906165,
+  "test_error": 0.7256473074906165,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8891858222262619,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 100.87776947021484,
+  "diagnostics": {
+    "Address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 202,
+      "n_removed": 310,
+      "threshold": 0.0505,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7086,
+      "var_share_kept": 0.2402,
+      "var_share_sae_error": 0.2327,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 339,
+          "score": 0.03,
+          "n_active": 476,
+          "examples": [
+            "Jurong West 505 Market & Food Centre, #01-27, Blk 505, Jurong West Street 52, 640505, Singapore",
+            "Taman Jurong Market & Food Centre, #02-66, 3 Yung Sheng Road, Jurong West, 618499, Singapore",
+            "Taman Jurong Market & Food Centre, #02-78, 3 Yung Sheng Road, Jurong West, 618499, Singapore"
+          ]
+        },
+        {
+          "latent": 0,
+          "score": 0.0299,
+          "n_active": 559,
+          "examples": [
+            "Fernando Mac\u00edas 28, A Coru\u00f1a, 15004, Spain",
+            "139 rue Sainte, Marseille, 13007, France",
+            "36 boulevard Charles-Livon, Marseille, 13007, France"
+          ]
+        },
+        {
+          "latent": 221,
+          "score": 0.0291,
+          "n_active": 685,
+          "examples": [
+            "125 First Ave., New York, NY, 10003, USA",
+            "41 Fore Street, Topsham, EX3 0HU, United Kingdom",
+            "328 Yaowarat Road, Chakkrawat, Samphanthawong, Bangkok, 10100, Thailand"
+          ]
+        },
+        {
+          "latent": 430,
+          "score": 0.0279,
+          "n_active": 1365,
+          "examples": [
+            "250 Fifth Ave., New York, NY, 10001, USA",
+            "239 Fifth Ave., Brooklyn, NY, 11215, USA",
+            "1048 Fifth Ave., New York, NY, 10028, USA"
+          ]
+        },
+        {
+          "latent": 120,
+          "score": 0.0275,
+          "n_active": 320,
+          "examples": [
+            "JW Marriott Orlando, Grande Lakes, 4040 Central Florida Pkwy., Orlando, FL, 32837, USA",
+            "NIPPONIA HOTEL Nara Naramachi, 4 Nishijodocho, Nara, Nara, 630-8345, Japan",
+            "The Ritz-Carlton Orlando, Grande Lakes, 4012 Central Florida Pkwy., Orlando, FL, 32837, USA"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 502,
+      "n_kept": 373,
+      "n_removed": 139,
+      "threshold": 0.0532,
+      "passed_test": 27,
+      "removed_norm_ratio": 0.4522,
+      "var_share_kept": 0.6145,
+      "var_share_sae_error": 0.0027,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 309,
+          "score": 0.1397,
+          "n_active": 781,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "latent": 206,
+          "score": 0.1102,
+          "n_active": 758,
+          "examples": [
+            "Creative, Contemporary",
+            "Creative, Contemporary",
+            "Creative, Contemporary"
+          ]
+        },
+        {
+          "latent": 413,
+          "score": 0.1044,
+          "n_active": 1287,
+          "examples": [
+            "Creative, Swiss",
+            "Creative French, Belgian",
+            "Alpine, Creative"
+          ]
+        },
+        {
+          "latent": 478,
+          "score": 0.0962,
+          "n_active": 407,
+          "examples": [
+            "Pork",
+            "Pork, Regional Cuisine",
+            "Southern"
+          ]
+        },
+        {
+          "latent": 319,
+          "score": 0.0901,
+          "n_active": 1212,
+          "examples": [
+            "Udon",
+            "Udon",
+            "Udon"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 343,
+      "n_removed": 169,
+      "threshold": 0.0539,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.4262,
+      "var_share_kept": 0.3814,
+      "var_share_sae_error": 0.3697,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 348,
+          "score": 0.0741,
+          "n_active": 1280,
+          "examples": [
+            "An elegant residence with gardens sloping down to the lake. The charming terrace, where meals are served in summer, offers superb views of the lake, while the c",
+            "Following in the footsteps of its London namesake, Benares\u2019 major selling points are its modern take on classic Indian cuisine and its pleasant terrace-garden w",
+            "Epicureans will be delighted by the elegant, refined interior and charming rear terrace. Diners can choose between a classical or a more creative menu, both equ"
+          ]
+        },
+        {
+          "latent": 115,
+          "score": 0.068,
+          "n_active": 965,
+          "examples": [
+            "A restaurant not to be missed if you are in the area. The moment you walk through the door, the rooms overflowing with decorations will surprise you, but then i",
+            "This taverna could almost be described as a tapas museum! Huge choice of tapas on display, all prepared using high quality ingredients, as well as an extensive ",
+            "The bright, hip, relaxed vibe of this restaurant immediately sets everyone at ease. This enthusiasm is further enhanced when you take a glance at the menu which"
+          ]
+        },
+        {
+          "latent": 368,
+          "score": 0.0591,
+          "n_active": 670,
+          "examples": [
+            "Creative courses channel the free spirit the chef cultivated in Paris. Venturing into new domains of French cooking, le sputnik dives deep into techniques such ",
+            "The chef\u2019s love for Mesoamerican jewellery made him a fan of cowboy culture. As he travelled the American Southwest, Tex-Mex cuisine won him over. In Oaxaca and",
+            "Tomoya Kawada sees cooking as a reconciliation between nature and humanity. He names his approach Sazenka, which literally means \u2018tea-Zen-Chinese\u2019, out of a des"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.0541,
+          "n_active": 640,
+          "examples": [
+            "Elegant, Art Deco cruise liner - inspired decor. Enjoy refined cuisine and superb views of the Bay of Angels and the Est\u00e9rel mountains.",
+            "This wonderful castle estate, steeped in history and boasting superb grounds, now also accommodates not only a stylish spa hotel but also an appealing dining op",
+            "Classic French cooking yields plenty of flavour at this appealing bistro de luxe with distressed d\u00e9cor and plenty of rustic charm. Despite some seasonal Mediter"
+          ]
+        },
+        {
+          "latent": 311,
+          "score": 0.0538,
+          "n_active": 774,
+          "examples": [
+            "A restaurant with a somewhat surprising location on the second floor of the Mercat de la Carn, hence the guaranteed quality and freshness of its ingredients and",
+            "The Cantabrian flavours of award-winning chef Jes\u00fas S\u00e1nchez in the Spanish capital. Choose between the Memoria menu (including dishes chosen from the \u00e0 la carte",
+            "This minimalist restaurant with a natural feel to its decor is located opposite the city\u2019s Guggenheim Museum where it exudes plenty of culinary passion in its q"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 448,
+      "n_kept": 418,
+      "n_removed": 94,
+      "threshold": 0.049,
+      "passed_test": 39,
+      "removed_norm_ratio": 0.345,
+      "var_share_kept": 0.6219,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 242,
+          "score": 0.1542,
+          "n_active": 900,
+          "examples": [
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.1539,
+          "n_active": 998,
+          "examples": [
+            "Garden or park,Interesting wine list",
+            "Air conditioning,Garden or park,Interesting wine list",
+            "Air conditioning,Garden or park,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 389,
+          "score": 0.14,
+          "n_active": 777,
+          "examples": [
+            "Interesting wine list,Valet parking,Wheelchair access",
+            "Interesting wine list,Valet parking,Wheelchair access",
+            "Interesting wine list,Terrace,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 377,
+          "score": 0.1346,
+          "n_active": 1734,
+          "examples": [
+            "Interesting wine list,Terrace",
+            "Interesting wine list,Terrace",
+            "Interesting wine list,Terrace"
+          ]
+        },
+        {
+          "latent": 363,
+          "score": 0.1311,
+          "n_active": 1702,
+          "examples": [
+            "Credit cards not accepted,Interesting wine list",
+            "Air conditioning,Credit cards not accepted,Interesting wine list",
+            "Air conditioning,Credit cards not accepted,Interesting wine list"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 116,
+      "n_removed": 396,
+      "threshold": 0.046,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.887,
+      "var_share_kept": 0.1932,
+      "var_share_sae_error": 0.0838,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 509,
+          "score": 0.0338,
+          "n_active": 737,
+          "examples": [
+            "Breuil Cervinia, Italy",
+            "Saint-Brieuc, France",
+            "Saint-Brieuc, France"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.025,
+          "n_active": 457,
+          "examples": [
+            "\u00dcrg\u00fcp, T\u00fcrkiye",
+            "\u00dcrg\u00fcp, T\u00fcrkiye",
+            "\u00dcrg\u00fcp, T\u00fcrkiye"
+          ]
+        },
+        {
+          "latent": 36,
+          "score": 0.0248,
+          "n_active": 418,
+          "examples": [
+            "Athens, Greece",
+            "Athens, Greece",
+            "Athens, Greece"
+          ]
+        },
+        {
+          "latent": 20,
+          "score": 0.0228,
+          "n_active": 476,
+          "examples": [
+            "Ponte de Lima, Portugal",
+            "Pont-du-Ch\u00e2teau, France",
+            "Pontoise, France"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0217,
+          "n_active": 371,
+          "examples": [
+            "Angers, France",
+            "Angers, France",
+            "Angers, France"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 240,
+      "n_removed": 272,
+      "threshold": 0.046,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6348,
+      "var_share_kept": 0.3126,
+      "var_share_sae_error": 0.2367,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 492,
+          "score": 0.0434,
+          "n_active": 341,
+          "examples": [
+            "Le Pavillon - H\u00f4tel Westminster",
+            "Hostellerie de la Pointe Saint-Mathieu",
+            "Hostellerie Les Gorges de Pennafort"
+          ]
+        },
+        {
+          "latent": 475,
+          "score": 0.0416,
+          "n_active": 286,
+          "examples": [
+            "Fu Tai Table Third Generation",
+            "Les Trois Forts",
+            "3 Chefs"
+          ]
+        },
+        {
+          "latent": 296,
+          "score": 0.0372,
+          "n_active": 332,
+          "examples": [
+            "Ezia",
+            "East Room Restaurant",
+            "Ebisu"
+          ]
+        },
+        {
+          "latent": 391,
+          "score": 0.0341,
+          "n_active": 428,
+          "examples": [
+            "BRU",
+            "Bruut",
+            "brut."
+          ]
+        },
+        {
+          "latent": 0,
+          "score": 0.0336,
+          "n_active": 648,
+          "examples": [
+            "Go La",
+            "Goli",
+            "Gorjan"
+          ]
+        }
+      ]
+    }
+  }
+}

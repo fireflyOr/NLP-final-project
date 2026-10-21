@@ -1,0 +1,708 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.26091231786391217,
+  "test_error": 0.26091231786391217,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9730285497129747,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 659.1308860778809,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1734,
+      "n_groups": 1731,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1271,
+      "n_removed": 1272,
+      "var_share_removed": 0.6094,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 481,
+          "latents": [
+            1191
+          ],
+          "gain_margin": 126.66,
+          "examples": [
+            "KVVG",
+            "KVVG",
+            "KVVG"
+          ]
+        },
+        {
+          "group": 822,
+          "latents": [
+            1124
+          ],
+          "gain_margin": 98.12,
+          "examples": [
+            "KNFJ",
+            "KNFJ",
+            "KNFJ"
+          ]
+        },
+        {
+          "group": 49,
+          "latents": [
+            1972
+          ],
+          "gain_margin": 89.98,
+          "examples": [
+            "KALB",
+            "KALB",
+            "KALB"
+          ]
+        },
+        {
+          "group": 825,
+          "latents": [
+            934
+          ],
+          "gain_margin": 88.36,
+          "examples": [
+            "KHDC",
+            "KHDC",
+            "KHDC"
+          ]
+        },
+        {
+          "group": 525,
+          "latents": [
+            573
+          ],
+          "gain_margin": 85.56,
+          "examples": [
+            "KSPA",
+            "KSPA",
+            "KSPA"
+          ]
+        }
+      ]
+    },
+    "City": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1970,
+      "n_groups": 1970,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1262,
+      "n_removed": 1262,
+      "var_share_removed": 0.612,
+      "var_share_sae_error": 0.0049,
+      "top": [
+        {
+          "group": 623,
+          "latents": [
+            1322
+          ],
+          "gain_margin": 151.94,
+          "examples": [
+            "San Bernardino",
+            "San Bernardino",
+            "San Bernardino"
+          ]
+        },
+        {
+          "group": 314,
+          "latents": [
+            1669
+          ],
+          "gain_margin": 134.13,
+          "examples": [
+            "North Tonawanda",
+            "North Tonawanda",
+            "Tonawanda"
+          ]
+        },
+        {
+          "group": 1586,
+          "latents": [
+            12
+          ],
+          "gain_margin": 117.74,
+          "examples": [
+            "Columbus",
+            "Columbus",
+            "Columbus"
+          ]
+        },
+        {
+          "group": 412,
+          "latents": [
+            1637
+          ],
+          "gain_margin": 115.74,
+          "examples": [
+            "Sterling",
+            "Sterling",
+            "Sterling"
+          ]
+        },
+        {
+          "group": 1492,
+          "latents": [
+            925
+          ],
+          "gain_margin": 97.01,
+          "examples": [
+            "Valhalla",
+            "Valhalla",
+            "La Crescenta"
+          ]
+        }
+      ]
+    },
+    "County": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1615,
+      "n_groups": 1615,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1182,
+      "n_removed": 1182,
+      "var_share_removed": 0.5985,
+      "var_share_sae_error": 0.0018,
+      "top": [
+        {
+          "group": 103,
+          "latents": [
+            1925
+          ],
+          "gain_margin": 121.05,
+          "examples": [
+            "Macon",
+            "Macon",
+            "Navajo"
+          ]
+        },
+        {
+          "group": 418,
+          "latents": [
+            1612
+          ],
+          "gain_margin": 117.62,
+          "examples": [
+            "Dutchess",
+            "Dutchess",
+            "Dutchess"
+          ]
+        },
+        {
+          "group": 1179,
+          "latents": [
+            569
+          ],
+          "gain_margin": 109.96,
+          "examples": [
+            "Lucas",
+            "Lucas",
+            "Lucas"
+          ]
+        },
+        {
+          "group": 1009,
+          "latents": [
+            506
+          ],
+          "gain_margin": 106.99,
+          "examples": [
+            "Mecklenburg",
+            "Mecklenburg",
+            "Mecklenburg"
+          ]
+        },
+        {
+          "group": 944,
+          "latents": [
+            1105
+          ],
+          "gain_margin": 93.59,
+          "examples": [
+            "Jefferson",
+            "Jefferson",
+            "Jefferson"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2041,
+      "n_groups": 2007,
+      "n_multi_groups": 25,
+      "n_groups_dropped": 950,
+      "n_removed": 959,
+      "var_share_removed": 0.2197,
+      "var_share_sae_error": 0.0728,
+      "top": [
+        {
+          "group": 29,
+          "latents": [
+            1535,
+            1594
+          ],
+          "gain_margin": 5418.2,
+          "examples": [
+            "Construction on I-40 EB near I-40-BL Road closed. Take alternate route.",
+            "Incident on I-10 EB near US-95 Road closed. Take alternate route.",
+            "Incident on I-64 EB near I-64 Road closed. Take alternate route."
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            212,
+            975,
+            1347
+          ],
+          "gain_margin": 4155.73,
+          "examples": [
+            "Right lane blocked due to accident on I-780 Westbound after I-680.",
+            "Right lane blocked due to accident on NJ-42 Northbound near Exit 13 NJ-55.",
+            "Left lane blocked due to accident on I-10 Eastbound at I-17."
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            559,
+            905
+          ],
+          "gain_margin": 4109.0,
+          "examples": [
+            "At Fargo Ave - Accident.",
+            "At Dublin Blvd - Accident.",
+            "At Echo Park Ave - Accident."
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            43,
+            182,
+            1058
+          ],
+          "gain_margin": 2605.92,
+          "examples": [
+            "At Exit 81 - Accident.",
+            "At Exit 125 - Accident.",
+            "At Exit 92 - Accident."
+          ]
+        },
+        {
+          "group": 1358,
+          "latents": [
+            1250
+          ],
+          "gain_margin": 1494.73,
+          "examples": [
+            "Crash on SC-9 at Candlenut Ln.",
+            "Crash on 3rd Ave near CA-165.",
+            "Crash on US-74 near Hawthorne Lane."
+          ]
+        }
+      ]
+    },
+    "End_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 344,
+      "n_groups": 313,
+      "n_multi_groups": 27,
+      "n_groups_dropped": 162,
+      "n_removed": 174,
+      "var_share_removed": 0.2539,
+      "var_share_sae_error": 0.0056,
+      "top": [
+        {
+          "group": 243,
+          "latents": [
+            862
+          ],
+          "gain_margin": 593.87,
+          "examples": [
+            "2018-04-30 18:30:00",
+            "2018-01-03 13:30:00",
+            "2018-01-30 03:50:00"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1380
+          ],
+          "gain_margin": 568.65,
+          "examples": [
+            "2023-01-01 09:02:00",
+            "2022-04-30 11:08:30",
+            "2023-01-24 19:30:30"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            295,
+            956
+          ],
+          "gain_margin": 435.42,
+          "examples": [
+            "2017-03-09 08:26:32",
+            "2017-02-09 21:27:18",
+            "2017-04-03 11:08:43"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            611,
+            1363
+          ],
+          "gain_margin": 348.41,
+          "examples": [
+            "2020-03-05 00:09:27",
+            "2020-01-12 10:05:00",
+            "2020-05-06 18:03:00"
+          ]
+        },
+        {
+          "group": 276,
+          "latents": [
+            159
+          ],
+          "gain_margin": 336.63,
+          "examples": [
+            "2020-04-21 14:30:00",
+            "2018-04-30 18:30:00",
+            "2020-04-21 13:12:00"
+          ]
+        }
+      ]
+    },
+    "Start_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 332,
+      "n_groups": 310,
+      "n_multi_groups": 20,
+      "n_groups_dropped": 166,
+      "n_removed": 172,
+      "var_share_removed": 0.251,
+      "var_share_sae_error": 0.0052,
+      "top": [
+        {
+          "group": 88,
+          "latents": [
+            1863
+          ],
+          "gain_margin": 743.36,
+          "examples": [
+            "2019-10-17 10:00:00",
+            "2019-09-14 12:00:00",
+            "2020-11-23 18:00:00"
+          ]
+        },
+        {
+          "group": 232,
+          "latents": [
+            977
+          ],
+          "gain_margin": 546.26,
+          "examples": [
+            "2021-01-09 02:32:55",
+            "2021-03-05 19:35:39",
+            "2021-05-28 05:35:49"
+          ]
+        },
+        {
+          "group": 84,
+          "latents": [
+            862
+          ],
+          "gain_margin": 519.83,
+          "examples": [
+            "2018-02-27 16:17:05",
+            "2018-02-13 00:05:27",
+            "2018-02-08 13:04:13"
+          ]
+        },
+        {
+          "group": 11,
+          "latents": [
+            1675,
+            2044
+          ],
+          "gain_margin": 506.66,
+          "examples": [
+            "2021-03-18 08:51:33",
+            "2021-09-29 07:47:57",
+            "2021-02-26 19:56:41"
+          ]
+        },
+        {
+          "group": 196,
+          "latents": [
+            940
+          ],
+          "gain_margin": 473.59,
+          "examples": [
+            "2018-11-30 11:09:05",
+            "2017-01-30 09:32:18",
+            "2017-02-11 18:34:00"
+          ]
+        }
+      ]
+    },
+    "Street": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2020,
+      "n_groups": 2012,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1186,
+      "n_removed": 1186,
+      "var_share_removed": 0.4046,
+      "var_share_sae_error": 0.0212,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            670,
+            1836,
+            1981
+          ],
+          "gain_margin": 4881.73,
+          "examples": [
+            "I-12 W",
+            "I-10 W",
+            "I-10 W"
+          ]
+        },
+        {
+          "group": 1002,
+          "latents": [
+            1166
+          ],
+          "gain_margin": 641.07,
+          "examples": [
+            "I-278",
+            "I-278",
+            "I-238 S"
+          ]
+        },
+        {
+          "group": 1996,
+          "latents": [
+            713
+          ],
+          "gain_margin": 453.68,
+          "examples": [
+            "I-66",
+            "I-66 E",
+            "I-66 E"
+          ]
+        },
+        {
+          "group": 998,
+          "latents": [
+            1033
+          ],
+          "gain_margin": 357.56,
+          "examples": [
+            "River Rd",
+            "River Rd",
+            "River Rd"
+          ]
+        },
+        {
+          "group": 563,
+          "latents": [
+            866
+          ],
+          "gain_margin": 266.73,
+          "examples": [
+            " Bluebonnet Blvd",
+            "Bluebonnet Blvd",
+            "Bluebonnet Blvd"
+          ]
+        }
+      ]
+    },
+    "Weather_Timestamp": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 275,
+      "n_groups": 232,
+      "n_multi_groups": 30,
+      "n_groups_dropped": 114,
+      "n_removed": 127,
+      "var_share_removed": 0.2183,
+      "var_share_sae_error": 0.0042,
+      "top": [
+        {
+          "group": 9,
+          "latents": [
+            285,
+            727,
+            1402,
+            1811
+          ],
+          "gain_margin": 825.02,
+          "examples": [
+            "2021-05-05 08:54:00",
+            "2021-02-06 01:55:00",
+            "2021-01-02 03:06:00"
+          ]
+        },
+        {
+          "group": 15,
+          "latents": [
+            292,
+            295
+          ],
+          "gain_margin": 512.51,
+          "examples": [
+            "2016-11-06 05:47:00",
+            "2016-06-06 04:47:00",
+            "2016-10-05 06:47:00"
+          ]
+        },
+        {
+          "group": 81,
+          "latents": [
+            883
+          ],
+          "gain_margin": 487.33,
+          "examples": [
+            "2022-10-14 15:53:00",
+            "2022-10-14 15:53:00",
+            "2022-10-15 20:53:00"
+          ]
+        },
+        {
+          "group": 210,
+          "latents": [
+            862
+          ],
+          "gain_margin": 389.57,
+          "examples": [
+            "2018-10-18 05:15:00",
+            "2018-10-18 08:53:00",
+            "2018-10-02 05:38:00"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            168,
+            1128,
+            1605,
+            1925
+          ],
+          "gain_margin": 325.01,
+          "examples": [
+            "2017-05-20 12:45:00",
+            "2019-05-20 17:35:00",
+            "2017-05-17 12:56:00"
+          ]
+        }
+      ]
+    },
+    "Zipcode": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1410,
+      "n_groups": 1299,
+      "n_multi_groups": 93,
+      "n_groups_dropped": 779,
+      "n_removed": 829,
+      "var_share_removed": 0.3295,
+      "var_share_sae_error": 0.006,
+      "top": [
+        {
+          "group": 584,
+          "latents": [
+            1404
+          ],
+          "gain_margin": 3493.51,
+          "examples": [
+            "77006-3303",
+            "29108-4703",
+            "33030-2555"
+          ]
+        },
+        {
+          "group": 1023,
+          "latents": [
+            410
+          ],
+          "gain_margin": 498.12,
+          "examples": [
+            "97910-9710",
+            "93706-9376",
+            "37013-3701"
+          ]
+        },
+        {
+          "group": 33,
+          "latents": [
+            311,
+            1595,
+            1864
+          ],
+          "gain_margin": 262.16,
+          "examples": [
+            "92067",
+            "10607",
+            "85007"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            207,
+            327,
+            1975
+          ],
+          "gain_margin": 197.04,
+          "examples": [
+            "29611",
+            "29611",
+            "29611"
+          ]
+        },
+        {
+          "group": 92,
+          "latents": [
+            331,
+            673
+          ],
+          "gain_margin": 157.3,
+          "examples": [
+            "01879",
+            "02169",
+            "14609"
+          ]
+        }
+      ]
+    }
+  }
+}

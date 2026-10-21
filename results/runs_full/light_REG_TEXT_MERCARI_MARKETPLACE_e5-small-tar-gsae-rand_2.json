@@ -1,0 +1,465 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5675981178504962,
+  "test_error": 0.5675981178504962,
+  "course_metric": "r2",
+  "course_score": 0.39689404512064674,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 94.89263081550598,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1063,
+      "n_groups": 1063,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 861,
+      "n_removed": 861,
+      "var_share_removed": 0.699,
+      "var_share_sae_error": 0.0021,
+      "top": [
+        {
+          "group": 1050,
+          "latents": [
+            305
+          ],
+          "gain_margin": 4068.47,
+          "examples": [
+            "Tory Burch",
+            "Tory Burch",
+            "Tory Burch"
+          ]
+        },
+        {
+          "group": 1054,
+          "latents": [
+            204
+          ],
+          "gain_margin": 2447.41,
+          "examples": [
+            "Nikon",
+            "Nikon",
+            "Nikon"
+          ]
+        },
+        {
+          "group": 401,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 1144.99,
+          "examples": [
+            "Sam Edelman",
+            "Sam Edelman",
+            "UGG"
+          ]
+        },
+        {
+          "group": 62,
+          "latents": [
+            1865
+          ],
+          "gain_margin": 970.67,
+          "examples": [
+            "HTC",
+            "SanDisk",
+            "Fitbit"
+          ]
+        },
+        {
+          "group": 817,
+          "latents": [
+            111
+          ],
+          "gain_margin": 493.89,
+          "examples": [
+            "lululemon athletica",
+            "lululemon athletica",
+            "lululemon athletica"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 774,
+      "n_groups": 774,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 675,
+      "n_removed": 675,
+      "var_share_removed": 0.7884,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 140,
+          "latents": [
+            1738
+          ],
+          "gain_margin": 1696.72,
+          "examples": [
+            "Footwear",
+            "Footwear",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 752,
+          "latents": [
+            305
+          ],
+          "gain_margin": 979.34,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 101,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 871.07,
+          "examples": [
+            "Strollers",
+            "Strollers",
+            "Strollers"
+          ]
+        },
+        {
+          "group": 444,
+          "latents": [
+            1067
+          ],
+          "gain_margin": 673.09,
+          "examples": [
+            "Strollers",
+            "Strollers",
+            "Strollers"
+          ]
+        },
+        {
+          "group": 53,
+          "latents": [
+            1790
+          ],
+          "gain_margin": 601.1,
+          "examples": [
+            "Footwear",
+            "Footwear",
+            "Shoes"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1266,
+      "n_groups": 1266,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1040,
+      "n_removed": 1040,
+      "var_share_removed": 0.6719,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 1264,
+          "latents": [
+            305
+          ],
+          "gain_margin": 4741.38,
+          "examples": [
+            "Desktops & All-In-Ones",
+            "Laptops & Netbooks",
+            "Laptops & Netbooks"
+          ]
+        },
+        {
+          "group": 312,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 1343.05,
+          "examples": [
+            "Boots",
+            "Boots",
+            "Boots"
+          ]
+        },
+        {
+          "group": 573,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1121.27,
+          "examples": [
+            "Shoulder Bag",
+            "Shoulder Bag",
+            "Shoulder Bag"
+          ]
+        },
+        {
+          "group": 542,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1066.36,
+          "examples": [
+            "Swings, Jumpers & Bouncers",
+            "Tennis & Racquets",
+            "Baseball & Softball"
+          ]
+        },
+        {
+          "group": 933,
+          "latents": [
+            477
+          ],
+          "gain_margin": 610.96,
+          "examples": [
+            "Sticker",
+            "Sticker",
+            "Sticker"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1216,
+      "n_groups": 1214,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 990,
+      "n_removed": 992,
+      "var_share_removed": 0.7146,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 1206,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3881.87,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "group": 549,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 2716.79,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "group": 407,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1152.19,
+          "examples": [
+            "Women/Coats & Jackets/Raincoat",
+            "Women/Coats & Jackets/Raincoat",
+            "Women/Coats & Jackets/Fleece Jacket"
+          ]
+        },
+        {
+          "group": 1134,
+          "latents": [
+            204
+          ],
+          "gain_margin": 908.17,
+          "examples": [
+            "Women/Coats & Jackets/Raincoat",
+            "Women/Coats & Jackets/Raincoat",
+            "Electronics/Cameras & Photography/Film Photography"
+          ]
+        },
+        {
+          "group": 1038,
+          "latents": [
+            559
+          ],
+          "gain_margin": 846.91,
+          "examples": [
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2039,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1302,
+      "n_removed": 1304,
+      "var_share_removed": 0.5755,
+      "var_share_sae_error": 0.0795,
+      "top": [
+        {
+          "group": 1270,
+          "latents": [
+            305
+          ],
+          "gain_margin": 8191.34,
+          "examples": [
+            "Air Jordan 11 (xi) size 9.5 black varsity red/white color way. These are brand new in box. Box was shipped previously and is NOT MINT, but shoes are perfect and",
+            "NWT Retails [rm] Comes with 2017 inserts In 2018 you can purchase 2018 inserts from Kate Spade",
+            "Authentic Classic Q - Francesca' Leather Shopper. Great condition! Used maybe twice! Comes with dust bag. Hard to find! Magnetic closure with interior clip-lock"
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            125
+          ],
+          "gain_margin": 2892.93,
+          "examples": [
+            "This listing is for any phrase 3\" height decal. I can make any size you need! See my other listings for additional sizes.",
+            "One little pen mark other than that in super great condition it can be folded over to be smaller or unzipped to be bigger",
+            "Drawstring under armour shorts."
+          ]
+        },
+        {
+          "group": 953,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1951.82,
+          "examples": [
+            "Great condition authentic Dooney and Bourke handbag. Primary colors are brown and light brown. No signs of wear on the outside. On inside there are normal signs",
+            "Stunning Dooney & Bourke Handbag 4\" W 11\"-L 7\"-H Priced to Sell Fast",
+            "NEW Dooney & Bourke Claremont Janine Satchel Handbag. With attachable wallet. Never used, but has small scratch on flap. View photos."
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1499,
+            1581
+          ],
+          "gain_margin": 1635.0,
+          "examples": [
+            "Philadelphia Eagles logo nfl custom decal sticker design logo for your car or truck. also if you want it smaller it can go on a Yeti metal thermos cup, just let",
+            "This cute usb cable shell, not only PROTECTS your cable, but also DECORATES your cable more beautifully !! * Stop replacing iPhone charger cables. The usb cable",
+            "Very cool, crescent moon necklace with glow in the dark dangle! Fun and creative! A lovely piece in itself. Decorative and bright! Put necklace under UV lightin"
+          ]
+        },
+        {
+          "group": 350,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 709.25,
+          "examples": [
+            "Original Xbox controller Pelican Xbox controller Both work.",
+            "This is a brand-new in the sealed box official Microsoft Xbox 360 wireless controller, black. I ship within one business day with tracking number.",
+            "About 7 months old has not been used very much at all comes with perfect working great condition drill with battery battery lasts literally forever does not com"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2043,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1149,
+      "n_removed": 1149,
+      "var_share_removed": 0.4169,
+      "var_share_sae_error": 0.0608,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            204,
+            305
+          ],
+          "gain_margin": 11762.03,
+          "examples": [
+            "NWT Rag & Bone Alice Crop Moto Jean 29",
+            "Kate Spade Tory Burch Bundle",
+            "Michael Kors Jet Set (100% Authentic)"
+          ]
+        },
+        {
+          "group": 268,
+          "latents": [
+            1499
+          ],
+          "gain_margin": 8340.52,
+          "examples": [
+            "Washi Tape FREE SHIPPING",
+            "Adorable cat stickers",
+            "Free shipping Pokemon go vinyl decal"
+          ]
+        },
+        {
+          "group": 2032,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1242.14,
+          "examples": [
+            "Tory Burch Jelly Sandal",
+            "(3) WUNDERBROW black/brown",
+            "Black and gold flat thong Tory burch"
+          ]
+        },
+        {
+          "group": 148,
+          "latents": [
+            1877
+          ],
+          "gain_margin": 838.28,
+          "examples": [
+            "Lily Grace Sticker",
+            "10 VS PINK STICKERS NEW",
+            "DC comics puzzle game"
+          ]
+        },
+        {
+          "group": 2016,
+          "latents": [
+            579
+          ],
+          "gain_margin": 629.93,
+          "examples": [
+            "Beyonce iPhone 7 Case",
+            "iPad 2,3,4 Case",
+            "Samsung s5"
+          ]
+        }
+      ]
+    }
+  }
+}

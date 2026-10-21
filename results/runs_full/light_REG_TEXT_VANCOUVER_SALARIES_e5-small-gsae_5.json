@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13640.69655318224,
+  "test_error": 13640.69655318224,
+  "course_metric": "r2",
+  "course_score": 0.7521387566628266,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 38.25797414779663,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2028,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1261,
+      "n_removed": 1261,
+      "var_share_removed": 0.5476,
+      "var_share_sae_error": 0.0282,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            694,
+            1124,
+            1326,
+            1968
+          ],
+          "gain_margin": 637.69,
+          "examples": [
+            "Johnson, J",
+            "Johnson, J",
+            "Johnson, J"
+          ]
+        },
+        {
+          "group": 1296,
+          "latents": [
+            669
+          ],
+          "gain_margin": 338.62,
+          "examples": [
+            "Singh, J",
+            "Singh, J",
+            "Singh, R"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1027,
+            1468
+          ],
+          "gain_margin": 320.31,
+          "examples": [
+            "Topping, S",
+            "Topping, S",
+            "Topping, S"
+          ]
+        },
+        {
+          "group": 1185,
+          "latents": [
+            1159
+          ],
+          "gain_margin": 300.27,
+          "examples": [
+            "Rice, M D",
+            "Rice, M D",
+            "Rice, M D"
+          ]
+        },
+        {
+          "group": 1528,
+          "latents": [
+            891
+          ],
+          "gain_margin": 283.67,
+          "examples": [
+            "Connelly, P",
+            "Connelly, P",
+            "Connelly, T"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1443,
+      "n_groups": 1439,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 800,
+      "n_removed": 800,
+      "var_share_removed": 0.2047,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 1054,
+          "latents": [
+            651
+          ],
+          "gain_margin": 2878.67,
+          "examples": [
+            "General Manager Planning & Development",
+            "General Manager Planning & Development",
+            "General Manager"
+          ]
+        },
+        {
+          "group": 303,
+          "latents": [
+            1533
+          ],
+          "gain_margin": 2753.95,
+          "examples": [
+            "General Manager",
+            "General Manager",
+            "Chief Of Staff"
+          ]
+        },
+        {
+          "group": 701,
+          "latents": [
+            796
+          ],
+          "gain_margin": 2693.92,
+          "examples": [
+            "Associate Director Facilites Development",
+            "Associate Director Facilites Development",
+            "Managing Director Dept Svc & Ptr Agree"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1415,
+            1863
+          ],
+          "gain_margin": 1710.49,
+          "examples": [
+            "Manager, Fire Prevention",
+            "Manager, Payroll",
+            "Manager Animal Control"
+          ]
+        },
+        {
+          "group": 1042,
+          "latents": [
+            781
+          ],
+          "gain_margin": 1527.04,
+          "examples": [
+            "SOLICITOR III",
+            "Solicitor III",
+            "Solicitor III"
+          ]
+        }
+      ]
+    }
+  }
+}

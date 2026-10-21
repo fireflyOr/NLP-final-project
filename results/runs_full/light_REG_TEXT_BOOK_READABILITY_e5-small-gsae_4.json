@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8438373556625987,
+  "test_error": 0.8438373556625987,
+  "course_metric": "r2",
+  "course_score": 0.8027461156214999,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 56.63614058494568,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 586,
+      "n_groups": 586,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 459,
+      "n_removed": 459,
+      "var_share_removed": 0.472,
+      "var_share_sae_error": 0.0005,
+      "top": [
+        {
+          "group": 447,
+          "latents": [
+            349
+          ],
+          "gain_margin": 70.9,
+          "examples": [
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 232,
+          "latents": [
+            905
+          ],
+          "gain_margin": 58.17,
+          "examples": [
+            "THE FAIRY BOOK.",
+            "THE FAIRY BOOK.",
+            "THE FAIRY BOOK."
+          ]
+        },
+        {
+          "group": 469,
+          "latents": [
+            45
+          ],
+          "gain_margin": 53.88,
+          "examples": [
+            "DARING AND DANGER.",
+            "Famous Modern Ghost Stories by Dorothy Scarborough et al.",
+            "Famous Modern Ghost Stories by Dorothy Scarborough et al."
+          ]
+        },
+        {
+          "group": 213,
+          "latents": [
+            1415
+          ],
+          "gain_margin": 39.96,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 454,
+          "latents": [
+            570
+          ],
+          "gain_margin": 27.65,
+          "examples": [
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1472,
+      "n_groups": 1471,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1164,
+      "n_removed": 1165,
+      "var_share_removed": 0.5566,
+      "var_share_sae_error": 0.0023,
+      "top": [
+        {
+          "group": 800,
+          "latents": [
+            1055
+          ],
+          "gain_margin": 307.52,
+          "examples": [
+            "National Park Service, US Department of the Interior",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 277,
+          "latents": [
+            1474
+          ],
+          "gain_margin": 89.07,
+          "examples": [
+            "Nathalie Q. Balaban and Orit Gefen",
+            "Robert Hichens",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 604,
+          "latents": [
+            1068
+          ],
+          "gain_margin": 76.68,
+          "examples": [
+            "A member of the London Scottish writes:",
+            "The Constantinople correspondent of The Daily Atlantis of New York wrote on Sept. 17",
+            "first Turkish communiqu\u00e9 of the war, appearing in the Turkish press on Oct. 31, 1914"
+          ]
+        },
+        {
+          "group": 34,
+          "latents": [
+            1996
+          ],
+          "gain_margin": 58.31,
+          "examples": [
+            "Core Knowledge Foundation",
+            "Commonwealth of Learning",
+            "Commonwealth of Learning"
+          ]
+        },
+        {
+          "group": 310,
+          "latents": [
+            1818
+          ],
+          "gain_margin": 50.47,
+          "examples": [
+            "Austin T. Mudd, Lindsey S. Alexander, Rosaline V. Waworuntu, Brian M. Berg, Sharon M. Donovan, and Ryan N. Dilger",
+            "Decree of Sept. 23, 1914. MM. Georges Payelle, First President of the Cour des Comptes; Armand Mollard, Minister Plenipotentiary; Georges Maringer, Counselor of",
+            "Karthika G"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 85,
+      "n_groups": 81,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 76,
+      "n_removed": 80,
+      "var_share_removed": 0.31,
+      "var_share_sae_error": 0.0071,
+      "top": [
+        {
+          "group": 13,
+          "latents": [
+            1761
+          ],
+          "gain_margin": 1.16,
+          "examples": [
+            "honour",
+            "fibre, pretences",
+            "honours"
+          ]
+        },
+        {
+          "group": 21,
+          "latents": [
+            1535
+          ],
+          "gain_margin": 0.88,
+          "examples": [
+            "travelled, travelling",
+            "axe",
+            "axe"
+          ]
+        },
+        {
+          "group": 49,
+          "latents": [
+            298
+          ],
+          "gain_margin": 0.46,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 77,
+          "latents": [
+            554
+          ],
+          "gain_margin": 0.27,
+          "examples": [
+            "traveller, travelled",
+            "traveller, travelled",
+            "travelled, travelling"
+          ]
+        },
+        {
+          "group": 50,
+          "latents": [
+            320
+          ],
+          "gain_margin": 0.12,
+          "examples": [
+            "travellers, traveller",
+            "gramme",
+            "traveller, travelled"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1960,
+      "n_groups": 1960,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1480,
+      "n_removed": 1480,
+      "var_share_removed": 0.6954,
+      "var_share_sae_error": 0.0423,
+      "top": [
+        {
+          "group": 1857,
+          "latents": [
+            372
+          ],
+          "gain_margin": 183.64,
+          "examples": [
+            "Long time ago, Hyena and Hare were great friends. They were both poor but Hare owned a donkey. He also had a very small basin, which he used to feed the donkey.",
+            "Long ago, there was a clever cat and a foolish dog. The clever cat lived well in a wealthy family's house. The foolish dog starved on the street. \"How is it tha",
+            "The animals all agreed and immediately grabbed hoes, shovels and picks. They started digging a well. Hare had not come, but the other animals continued without "
+          ]
+        },
+        {
+          "group": 867,
+          "latents": [
+            1404
+          ],
+          "gain_margin": 87.98,
+          "examples": [
+            "There was an old lady with a stomachache. \nA fairy flew by and stopped to ask why the old lady was crying. \n\"I have a terrible stomachache,\" she wept. \"Can you ",
+            "\"Oh, dear,\" said Polly to herself, the next morning, trying to get a breakfast for the sick ones out of the inevitable mush; \"everything's just as bad as it can",
+            "I told my story first, as mammas usually do; and it was all about a naughty little pig, who did not mind his mother when she bade him stay in the sty, but crawl"
+          ]
+        },
+        {
+          "group": 1527,
+          "latents": [
+            714
+          ],
+          "gain_margin": 57.16,
+          "examples": [
+            "The first day of term cannot be considered a cheerful occasion. As the boys arrive on the previous evening, they have so much to tell each other, are so full of",
+            "The hypothesis of mental continuity throughout organic evolution may be used in two different ways. On the one hand, it may be held that we have more knowledge ",
+            "It is nearly break time at Siyafunda Primary School. The two spaza shop owners at the school are preparing lunch to sell to hungry children. \nIn Mr. Motaung's s"
+          ]
+        },
+        {
+          "group": 1118,
+          "latents": [
+            212
+          ],
+          "gain_margin": 55.36,
+          "examples": [
+            "A boy once found some nuts in a jar. Like all boys, he was fond of nuts, and was glad to hear that he might put his hand once in the jar, and have all the nuts ",
+            "It was not many months before Lucy comprehended how wise her father had been in training his little girl. She was gathering violets in a field one day, when she",
+            "Viscosity is a physical property of fluids. It shows resistance to flow. In a simple example, water has a low viscosity, as it is 'thin'. Syrup or tar, on the o"
+          ]
+        },
+        {
+          "group": 475,
+          "latents": [
+            1638
+          ],
+          "gain_margin": 43.41,
+          "examples": [
+            "Aspirin is the most used medicine worldwide. About 80 million pounds of aspirin are produced and 100 billion tablets consumed each year. Aspirin reduces pain, f",
+            "My cousin Kamohelo leans on her hoe. What do I do? What do I know? My aunt Keromang has a dress to sew. What do I do? What do I know? My uncle Khotso herds the ",
+            "Curiously enough,\" he said, without waiting for any opening question from The Times reporter\u2014Mr. Smith often interviews himself\u2014\"curiously enough, I was on my w"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1946,
+      "n_groups": 1946,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1518,
+      "n_removed": 1518,
+      "var_share_removed": 0.6855,
+      "var_share_sae_error": 0.0319,
+      "top": [
+        {
+          "group": 829,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 72.64,
+          "examples": [
+            "Mobile_app",
+            "Network_card",
+            "Columbian_Exchange"
+          ]
+        },
+        {
+          "group": 369,
+          "latents": [
+            1687
+          ],
+          "gain_margin": 42.59,
+          "examples": [
+            "The Wonderful Bird.",
+            "A Story of Bird Life",
+            "TRUE STORY OF A BIRD"
+          ]
+        },
+        {
+          "group": 485,
+          "latents": [
+            1748
+          ],
+          "gain_margin": 38.75,
+          "examples": [
+            "Drum",
+            "Hard_disk",
+            "Electric_current"
+          ]
+        },
+        {
+          "group": 1668,
+          "latents": [
+            1300
+          ],
+          "gain_margin": 33.17,
+          "examples": [
+            "TRAPPIST-1: A Dark Star With a Bright Future",
+            "THE WOLF\nAND\nThe Seven Young Goslings.",
+            "FEEDING THE SWANS IN WINTER"
+          ]
+        },
+        {
+          "group": 656,
+          "latents": [
+            1171
+          ],
+          "gain_margin": 29.66,
+          "examples": [
+            "A Familiar Preface",
+            "ELDER BROWN'S BACKSLIDE",
+            "FRITHIOF THE BOLD"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 921,
+      "n_groups": 919,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 717,
+      "n_removed": 719,
+      "var_share_removed": 0.3491,
+      "var_share_sae_error": 0.0063,
+      "top": [
+        {
+          "group": 754,
+          "latents": [
+            719
+          ],
+          "gain_margin": 211.62,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Moon",
+            "https://en.wikipedia.org/wiki/Humidity",
+            "https://en.wikipedia.org/wiki/Organic_chemistry"
+          ]
+        },
+        {
+          "group": 118,
+          "latents": [
+            1535
+          ],
+          "gain_margin": 81.64,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Historian",
+            "https://en.wikipedia.org/wiki/Civil_law_(legal_system)",
+            "https://en.wikipedia.org/wiki/Feudalism"
+          ]
+        },
+        {
+          "group": 596,
+          "latents": [
+            941
+          ],
+          "gain_margin": 75.74,
+          "examples": [
+            "http://www.gutenberg.org/files/7766/7766-h/7766-h.htm",
+            "http://www.gutenberg.org/files/19079/19079-h/19079-h.htm",
+            "http://www.gutenberg.org/files/8195/8195-h/8195-h.htm#13"
+          ]
+        },
+        {
+          "group": 346,
+          "latents": [
+            1372
+          ],
+          "gain_margin": 67.08,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#ELVES",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_286",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#UPSTORY"
+          ]
+        },
+        {
+          "group": 662,
+          "latents": [
+            491
+          ],
+          "gain_margin": 41.41,
+          "examples": [
+            "http://www.gutenberg.org/files/205/205-h/205-h.htm",
+            "http://www.gutenberg.org/files/22420/22420-h/22420-h.htm#Page_125",
+            "http://www.gutenberg.org/files/24943/24943-h/24943-h.htm#Page_181"
+          ]
+        }
+      ]
+    }
+  }
+}

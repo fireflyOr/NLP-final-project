@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -14509.769757181546,
+  "test_error": 14509.769757181546,
+  "course_metric": "r2",
+  "course_score": 0.7334004458565757,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.44798254966736,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2042,
+      "n_groups": 2030,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 1216,
+      "n_removed": 1216,
+      "var_share_removed": 0.5268,
+      "var_share_sae_error": 0.0278,
+      "top": [
+        {
+          "group": 1793,
+          "latents": [
+            1511
+          ],
+          "gain_margin": 449.15,
+          "examples": [
+            "MacDonald, R*",
+            "Jackson, O*",
+            "Wong, C*"
+          ]
+        },
+        {
+          "group": 368,
+          "latents": [
+            1357
+          ],
+          "gain_margin": 389.94,
+          "examples": [
+            "Beck, K H",
+            "Beck, K H",
+            "Beck, K H"
+          ]
+        },
+        {
+          "group": 397,
+          "latents": [
+            1106
+          ],
+          "gain_margin": 333.28,
+          "examples": [
+            "Maddison, J",
+            "Maddison, J",
+            "Kinley, R"
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            1451
+          ],
+          "gain_margin": 317.68,
+          "examples": [
+            "Wassenaar, F J",
+            "Wassenaar, F J",
+            "Wassenaar, F J"
+          ]
+        },
+        {
+          "group": 340,
+          "latents": [
+            1901
+          ],
+          "gain_margin": 290.6,
+          "examples": [
+            "Steele, R",
+            "Steele, R",
+            "Steele, R"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1457,
+      "n_groups": 1454,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 827,
+      "n_removed": 828,
+      "var_share_removed": 0.1815,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 1429,
+          "latents": [
+            217
+          ],
+          "gain_margin": 2818.23,
+          "examples": [
+            "Director Strategic Initiatives",
+            "Director Strategic Ops & Board Relations",
+            "Director Departmental Services"
+          ]
+        },
+        {
+          "group": 465,
+          "latents": [
+            810
+          ],
+          "gain_margin": 2100.51,
+          "examples": [
+            "GENERAL MANAGER DBL",
+            "General Manager Dbl",
+            "General Manager Dbl"
+          ]
+        },
+        {
+          "group": 886,
+          "latents": [
+            1579
+          ],
+          "gain_margin": 1825.07,
+          "examples": [
+            "General Manager - Engineering Services",
+            "General Manager - Engineering Services",
+            "General Manager - Engineering Services"
+          ]
+        },
+        {
+          "group": 454,
+          "latents": [
+            1679
+          ],
+          "gain_margin": 1292.21,
+          "examples": [
+            "City Manager",
+            "City Manager",
+            "City Manager"
+          ]
+        },
+        {
+          "group": 1159,
+          "latents": [
+            568
+          ],
+          "gain_margin": 1251.43,
+          "examples": [
+            "Solicitor lll",
+            "Solicitor Team Lead",
+            "Solicitor Team Lead"
+          ]
+        }
+      ]
+    }
+  }
+}

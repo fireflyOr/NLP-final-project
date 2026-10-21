@@ -1,0 +1,232 @@
+
+=== light ===
+mean course score (AUROC / R^2) per dataset:
+encoder                         e5-small  e5-small-gsae  e5-small-pls  e5-small-relsae2  e5-small-relsae2-rand  e5-small-stack  e5-small-tar  e5-small-tar-gsae  e5-small-tar-gsae-cv  e5-small-tar-gsae-rand
+dataset                                                                                                                                                                                                      
+BIN_TEXT_FAKE_JOB_POSTING         0.9143         0.9070        0.9071            0.9055                 0.9023          0.9202        0.9107             0.9150                   NaN                  0.9031
+BIN_TEXT_JIGSAW_TOXICITY          0.8188         0.7991        0.8638            0.8126                 0.7861          0.8641        0.9332             0.9294                0.9308                  0.8799
+BIN_TEXT_KICKSTARTER_FUNDING      0.7178         0.7189        0.7242            0.7215                 0.7054          0.7269        0.7341             0.7282                0.7127                  0.7077
+MUL_TEXT_DATA_SCIENTIST_SALARY    0.7980         0.7952        0.7926            0.7981                 0.7975          0.8059        0.8065             0.8032                   NaN                  0.7966
+MUL_TEXT_MICHELIN_RESTAURANTS     0.8934         0.8884        0.8766            0.8908                 0.8886          0.9024        0.9045             0.9026                   NaN                  0.9010
+MUL_TEXT_PRODUCT_SENTIMENT        0.8741         0.8734        0.8462            0.8669                 0.8676          0.8789        0.8899             0.8872                   NaN                  0.8886
+MUL_TEXT_SPOTIFY_GENRES           0.8999         0.8986        0.9003            0.9009                 0.8989          0.7936        0.9040             0.9053                   NaN                  0.9033
+MUL_TEXT_US_ACCIDENTS             0.9702         0.9695        0.9703            0.9707                 0.9692          0.9731        0.9784             0.9783                0.9826                  0.9749
+MUL_TEXT_WINE_REVIEW              0.9662         0.9663        0.9712            0.9664                 0.9655          0.9738        0.9747             0.9745                0.7535                  0.9738
+MUL_TEXT_WOMEN_CLOTHING_REVIEW    0.8985         0.8965        0.8959            0.8972                 0.8936          0.9016        0.9056             0.9044                0.9043                  0.9026
+REG_TEXT_BABIES_PRICES            0.7769         0.7909        0.8084            0.7727                 0.7618          0.8078        0.7951             0.7895                0.7850                  0.7571
+REG_TEXT_BOOK_PRICE               0.4959         0.4781        0.5011            0.4884                 0.4605          0.5205        0.5143             0.4992                   NaN                  0.4691
+REG_TEXT_BOOK_READABILITY         0.8048         0.7952        0.8088            0.8027                 0.7979          0.8071        0.8155             0.8128                   NaN                  0.8034
+REG_TEXT_MERCARI_MARKETPLACE      0.4137         0.4091        0.4367            0.4133                 0.4005          0.4452        0.4387             0.4333                   NaN                  0.4090
+REG_TEXT_MONTGOMERY_SALARIES      0.9732         0.9732        0.9752            0.9733                 0.9720          0.9737        0.9747             0.9749                   NaN                  0.9758
+REG_TEXT_ROTTEN_TOMATOES          0.4937         0.4763        0.4801            0.4956                 0.4791          0.5095        0.5060             0.5003                   NaN                  0.4739
+REG_TEXT_SCIMAGOJR_IMPACT         0.8430         0.8417        0.8386            0.8452                 0.8446          0.8454        0.8489             0.8472                   NaN                  0.8429
+REG_TEXT_VANCOUVER_SALARIES       0.7336         0.7488        0.7690            0.7390                 0.7344          0.7660        0.7651             0.7684                   NaN                  0.7562
+REG_TEXT_VIDEO_GAMES_SALES        0.3683         0.3531        0.3685            0.3551                 0.3466          0.3836        0.3787             0.3553                   NaN                  0.2549
+REG_TEXT_ZOMATO_RESTAURANTS       0.7826         0.7774        0.7906            0.7782                 0.7733          0.8094        0.8025             0.8020                   NaN                  0.7884
+
+paired comparison vs e5-small over (dataset, fold) pairs:
+                        n_pairs  mean_delta  wins  losses  wilcoxon_p datasets_improved
+encoder                                                                                
+e5-small-gsae               120     -0.0040    41      79      0.0033              4/20
+e5-small-pls                120      0.0044    63      57      0.1512             13/20
+e5-small-relsae2            120     -0.0021    55      65      0.1425              9/20
+e5-small-relsae2-rand       120     -0.0096    23      97      0.0000              2/20
+e5-small-stack              120      0.0086   106      14      0.0000             19/20
+e5-small-tar                120      0.0172   110      10      0.0000             19/20
+e5-small-tar-gsae           120      0.0137    98      22      0.0000             19/20
+e5-small-tar-gsae-cv         23      0.0133    16       7      0.0698               4/6
+e5-small-tar-gsae-rand      120     -0.0037    65      55      0.9374             10/20
+
+paired comparison vs e5-small-tar over (dataset, fold) pairs:
+                        n_pairs  mean_delta  wins  losses  wilcoxon_p datasets_improved
+encoder                                                                                
+e5-small                    120     -0.0172    10     110      0.0000              1/20
+e5-small-gsae               120     -0.0212    13     107      0.0000              0/20
+e5-small-pls                120     -0.0128    23      97      0.0000              3/20
+e5-small-relsae2            120     -0.0194     9     111      0.0000              0/20
+e5-small-relsae2-rand       120     -0.0268     5     115      0.0000              0/20
+e5-small-stack              120     -0.0086    51      69      0.2376              8/20
+e5-small-tar-gsae           120     -0.0035    44      76      0.0001              4/20
+e5-small-tar-gsae-cv         23     -0.0275     6      17      0.0015               0/6
+e5-small-tar-gsae-rand      120     -0.0210    13     107      0.0000              1/20
+
+=== gain vs official TAR gain (LightGBM; ours: same splits as our Frozen; TAR: paper's Frozen->TAR) ===
+  e5-small-gsae          BIN_TEXT_FAKE_JOB_POSTING          gain -0.0073   TAR gain +0.0124
+  e5-small-gsae          BIN_TEXT_JIGSAW_TOXICITY           gain -0.0197   TAR gain +0.1211
+  e5-small-gsae          BIN_TEXT_KICKSTARTER_FUNDING       gain +0.0010   TAR gain +0.0166
+  e5-small-gsae          MUL_TEXT_DATA_SCIENTIST_SALARY     gain -0.0028   TAR gain +0.0080
+  e5-small-gsae          MUL_TEXT_MICHELIN_RESTAURANTS      gain -0.0050   TAR gain +0.0073
+  e5-small-gsae          MUL_TEXT_PRODUCT_SENTIMENT         gain -0.0007   TAR gain +0.0273
+  e5-small-gsae          MUL_TEXT_SPOTIFY_GENRES            gain -0.0013   TAR gain +0.0041
+  e5-small-gsae          MUL_TEXT_US_ACCIDENTS              gain -0.0007   TAR gain +0.0069
+  e5-small-gsae          MUL_TEXT_WINE_REVIEW               gain +0.0001   TAR gain +0.0095
+  e5-small-gsae          MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain -0.0020   TAR gain +0.0059
+  e5-small-gsae          REG_TEXT_BABIES_PRICES             gain +0.0141   TAR gain +0.0344
+  e5-small-gsae          REG_TEXT_BOOK_PRICE                gain -0.0178   TAR gain +0.0290
+  e5-small-gsae          REG_TEXT_BOOK_READABILITY          gain -0.0096   TAR gain +0.0078
+  e5-small-gsae          REG_TEXT_MERCARI_MARKETPLACE       gain -0.0047   TAR gain +0.0188
+  e5-small-gsae          REG_TEXT_MONTGOMERY_SALARIES       gain -0.0001   TAR gain -0.0002
+  e5-small-gsae          REG_TEXT_ROTTEN_TOMATOES           gain -0.0174   TAR gain +0.0228
+  e5-small-gsae          REG_TEXT_SCIMAGOJR_IMPACT          gain -0.0014   TAR gain +0.0103
+  e5-small-gsae          REG_TEXT_VANCOUVER_SALARIES        gain +0.0152   TAR gain +0.0266
+  e5-small-gsae          REG_TEXT_VIDEO_GAMES_SALES         gain -0.0152   TAR gain +0.0522
+  e5-small-gsae          REG_TEXT_ZOMATO_RESTAURANTS        gain -0.0052   TAR gain +0.0251
+  e5-small-pls           BIN_TEXT_FAKE_JOB_POSTING          gain -0.0071   TAR gain +0.0124
+  e5-small-pls           BIN_TEXT_JIGSAW_TOXICITY           gain +0.0450   TAR gain +0.1211
+  e5-small-pls           BIN_TEXT_KICKSTARTER_FUNDING       gain +0.0064   TAR gain +0.0166
+  e5-small-pls           MUL_TEXT_DATA_SCIENTIST_SALARY     gain -0.0054   TAR gain +0.0080
+  e5-small-pls           MUL_TEXT_MICHELIN_RESTAURANTS      gain -0.0168   TAR gain +0.0073
+  e5-small-pls           MUL_TEXT_PRODUCT_SENTIMENT         gain -0.0280   TAR gain +0.0273
+  e5-small-pls           MUL_TEXT_SPOTIFY_GENRES            gain +0.0004   TAR gain +0.0041
+  e5-small-pls           MUL_TEXT_US_ACCIDENTS              gain +0.0001   TAR gain +0.0069
+  e5-small-pls           MUL_TEXT_WINE_REVIEW               gain +0.0051   TAR gain +0.0095
+  e5-small-pls           MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain -0.0026   TAR gain +0.0059
+  e5-small-pls           REG_TEXT_BABIES_PRICES             gain +0.0315   TAR gain +0.0344
+  e5-small-pls           REG_TEXT_BOOK_PRICE                gain +0.0052   TAR gain +0.0290
+  e5-small-pls           REG_TEXT_BOOK_READABILITY          gain +0.0040   TAR gain +0.0078
+  e5-small-pls           REG_TEXT_MERCARI_MARKETPLACE       gain +0.0230   TAR gain +0.0188
+  e5-small-pls           REG_TEXT_MONTGOMERY_SALARIES       gain +0.0019   TAR gain -0.0002
+  e5-small-pls           REG_TEXT_ROTTEN_TOMATOES           gain -0.0136   TAR gain +0.0228
+  e5-small-pls           REG_TEXT_SCIMAGOJR_IMPACT          gain -0.0045   TAR gain +0.0103
+  e5-small-pls           REG_TEXT_VANCOUVER_SALARIES        gain +0.0354   TAR gain +0.0266
+  e5-small-pls           REG_TEXT_VIDEO_GAMES_SALES         gain +0.0002   TAR gain +0.0522
+  e5-small-pls           REG_TEXT_ZOMATO_RESTAURANTS        gain +0.0080   TAR gain +0.0251
+  e5-small-relsae2       BIN_TEXT_FAKE_JOB_POSTING          gain -0.0087   TAR gain +0.0124
+  e5-small-relsae2       BIN_TEXT_JIGSAW_TOXICITY           gain -0.0062   TAR gain +0.1211
+  e5-small-relsae2       BIN_TEXT_KICKSTARTER_FUNDING       gain +0.0037   TAR gain +0.0166
+  e5-small-relsae2       MUL_TEXT_DATA_SCIENTIST_SALARY     gain +0.0001   TAR gain +0.0080
+  e5-small-relsae2       MUL_TEXT_MICHELIN_RESTAURANTS      gain -0.0026   TAR gain +0.0073
+  e5-small-relsae2       MUL_TEXT_PRODUCT_SENTIMENT         gain -0.0073   TAR gain +0.0273
+  e5-small-relsae2       MUL_TEXT_SPOTIFY_GENRES            gain +0.0010   TAR gain +0.0041
+  e5-small-relsae2       MUL_TEXT_US_ACCIDENTS              gain +0.0005   TAR gain +0.0069
+  e5-small-relsae2       MUL_TEXT_WINE_REVIEW               gain +0.0002   TAR gain +0.0095
+  e5-small-relsae2       MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain -0.0013   TAR gain +0.0059
+  e5-small-relsae2       REG_TEXT_BABIES_PRICES             gain -0.0041   TAR gain +0.0344
+  e5-small-relsae2       REG_TEXT_BOOK_PRICE                gain -0.0074   TAR gain +0.0290
+  e5-small-relsae2       REG_TEXT_BOOK_READABILITY          gain -0.0021   TAR gain +0.0078
+  e5-small-relsae2       REG_TEXT_MERCARI_MARKETPLACE       gain -0.0004   TAR gain +0.0188
+  e5-small-relsae2       REG_TEXT_MONTGOMERY_SALARIES       gain +0.0001   TAR gain -0.0002
+  e5-small-relsae2       REG_TEXT_ROTTEN_TOMATOES           gain +0.0019   TAR gain +0.0228
+  e5-small-relsae2       REG_TEXT_SCIMAGOJR_IMPACT          gain +0.0022   TAR gain +0.0103
+  e5-small-relsae2       REG_TEXT_VANCOUVER_SALARIES        gain +0.0054   TAR gain +0.0266
+  e5-small-relsae2       REG_TEXT_VIDEO_GAMES_SALES         gain -0.0133   TAR gain +0.0522
+  e5-small-relsae2       REG_TEXT_ZOMATO_RESTAURANTS        gain -0.0044   TAR gain +0.0251
+  e5-small-relsae2-rand  BIN_TEXT_FAKE_JOB_POSTING          gain -0.0119   TAR gain +0.0124
+  e5-small-relsae2-rand  BIN_TEXT_JIGSAW_TOXICITY           gain -0.0327   TAR gain +0.1211
+  e5-small-relsae2-rand  BIN_TEXT_KICKSTARTER_FUNDING       gain -0.0124   TAR gain +0.0166
+  e5-small-relsae2-rand  MUL_TEXT_DATA_SCIENTIST_SALARY     gain -0.0005   TAR gain +0.0080
+  e5-small-relsae2-rand  MUL_TEXT_MICHELIN_RESTAURANTS      gain -0.0047   TAR gain +0.0073
+  e5-small-relsae2-rand  MUL_TEXT_PRODUCT_SENTIMENT         gain -0.0065   TAR gain +0.0273
+  e5-small-relsae2-rand  MUL_TEXT_SPOTIFY_GENRES            gain -0.0010   TAR gain +0.0041
+  e5-small-relsae2-rand  MUL_TEXT_US_ACCIDENTS              gain -0.0010   TAR gain +0.0069
+  e5-small-relsae2-rand  MUL_TEXT_WINE_REVIEW               gain -0.0006   TAR gain +0.0095
+  e5-small-relsae2-rand  MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain -0.0049   TAR gain +0.0059
+  e5-small-relsae2-rand  REG_TEXT_BABIES_PRICES             gain -0.0151   TAR gain +0.0344
+  e5-small-relsae2-rand  REG_TEXT_BOOK_PRICE                gain -0.0354   TAR gain +0.0290
+  e5-small-relsae2-rand  REG_TEXT_BOOK_READABILITY          gain -0.0069   TAR gain +0.0078
+  e5-small-relsae2-rand  REG_TEXT_MERCARI_MARKETPLACE       gain -0.0133   TAR gain +0.0188
+  e5-small-relsae2-rand  REG_TEXT_MONTGOMERY_SALARIES       gain -0.0013   TAR gain -0.0002
+  e5-small-relsae2-rand  REG_TEXT_ROTTEN_TOMATOES           gain -0.0146   TAR gain +0.0228
+  e5-small-relsae2-rand  REG_TEXT_SCIMAGOJR_IMPACT          gain +0.0016   TAR gain +0.0103
+  e5-small-relsae2-rand  REG_TEXT_VANCOUVER_SALARIES        gain +0.0008   TAR gain +0.0266
+  e5-small-relsae2-rand  REG_TEXT_VIDEO_GAMES_SALES         gain -0.0217   TAR gain +0.0522
+  e5-small-relsae2-rand  REG_TEXT_ZOMATO_RESTAURANTS        gain -0.0093   TAR gain +0.0251
+  e5-small-stack         BIN_TEXT_FAKE_JOB_POSTING          gain +0.0059   TAR gain +0.0124
+  e5-small-stack         BIN_TEXT_JIGSAW_TOXICITY           gain +0.0453   TAR gain +0.1211
+  e5-small-stack         BIN_TEXT_KICKSTARTER_FUNDING       gain +0.0090   TAR gain +0.0166
+  e5-small-stack         MUL_TEXT_DATA_SCIENTIST_SALARY     gain +0.0079   TAR gain +0.0080
+  e5-small-stack         MUL_TEXT_MICHELIN_RESTAURANTS      gain +0.0090   TAR gain +0.0073
+  e5-small-stack         MUL_TEXT_PRODUCT_SENTIMENT         gain +0.0048   TAR gain +0.0273
+  e5-small-stack         MUL_TEXT_SPOTIFY_GENRES            gain -0.1064   TAR gain +0.0041
+  e5-small-stack         MUL_TEXT_US_ACCIDENTS              gain +0.0029   TAR gain +0.0069
+  e5-small-stack         MUL_TEXT_WINE_REVIEW               gain +0.0076   TAR gain +0.0095
+  e5-small-stack         MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain +0.0031   TAR gain +0.0059
+  e5-small-stack         REG_TEXT_BABIES_PRICES             gain +0.0309   TAR gain +0.0344
+  e5-small-stack         REG_TEXT_BOOK_PRICE                gain +0.0247   TAR gain +0.0290
+  e5-small-stack         REG_TEXT_BOOK_READABILITY          gain +0.0023   TAR gain +0.0078
+  e5-small-stack         REG_TEXT_MERCARI_MARKETPLACE       gain +0.0315   TAR gain +0.0188
+  e5-small-stack         REG_TEXT_MONTGOMERY_SALARIES       gain +0.0005   TAR gain -0.0002
+  e5-small-stack         REG_TEXT_ROTTEN_TOMATOES           gain +0.0158   TAR gain +0.0228
+  e5-small-stack         REG_TEXT_SCIMAGOJR_IMPACT          gain +0.0024   TAR gain +0.0103
+  e5-small-stack         REG_TEXT_VANCOUVER_SALARIES        gain +0.0325   TAR gain +0.0266
+  e5-small-stack         REG_TEXT_VIDEO_GAMES_SALES         gain +0.0153   TAR gain +0.0522
+  e5-small-stack         REG_TEXT_ZOMATO_RESTAURANTS        gain +0.0268   TAR gain +0.0251
+  e5-small-tar           BIN_TEXT_FAKE_JOB_POSTING          gain -0.0036   TAR gain +0.0124
+  e5-small-tar           BIN_TEXT_JIGSAW_TOXICITY           gain +0.1144   TAR gain +0.1211
+  e5-small-tar           BIN_TEXT_KICKSTARTER_FUNDING       gain +0.0163   TAR gain +0.0166
+  e5-small-tar           MUL_TEXT_DATA_SCIENTIST_SALARY     gain +0.0085   TAR gain +0.0080
+  e5-small-tar           MUL_TEXT_MICHELIN_RESTAURANTS      gain +0.0111   TAR gain +0.0073
+  e5-small-tar           MUL_TEXT_PRODUCT_SENTIMENT         gain +0.0157   TAR gain +0.0273
+  e5-small-tar           MUL_TEXT_SPOTIFY_GENRES            gain +0.0041   TAR gain +0.0041
+  e5-small-tar           MUL_TEXT_US_ACCIDENTS              gain +0.0082   TAR gain +0.0069
+  e5-small-tar           MUL_TEXT_WINE_REVIEW               gain +0.0085   TAR gain +0.0095
+  e5-small-tar           MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain +0.0071   TAR gain +0.0059
+  e5-small-tar           REG_TEXT_BABIES_PRICES             gain +0.0183   TAR gain +0.0344
+  e5-small-tar           REG_TEXT_BOOK_PRICE                gain +0.0185   TAR gain +0.0290
+  e5-small-tar           REG_TEXT_BOOK_READABILITY          gain +0.0106   TAR gain +0.0078
+  e5-small-tar           REG_TEXT_MERCARI_MARKETPLACE       gain +0.0250   TAR gain +0.0188
+  e5-small-tar           REG_TEXT_MONTGOMERY_SALARIES       gain +0.0015   TAR gain -0.0002
+  e5-small-tar           REG_TEXT_ROTTEN_TOMATOES           gain +0.0123   TAR gain +0.0228
+  e5-small-tar           REG_TEXT_SCIMAGOJR_IMPACT          gain +0.0059   TAR gain +0.0103
+  e5-small-tar           REG_TEXT_VANCOUVER_SALARIES        gain +0.0315   TAR gain +0.0266
+  e5-small-tar           REG_TEXT_VIDEO_GAMES_SALES         gain +0.0104   TAR gain +0.0522
+  e5-small-tar           REG_TEXT_ZOMATO_RESTAURANTS        gain +0.0199   TAR gain +0.0251
+  e5-small-tar-gsae      BIN_TEXT_FAKE_JOB_POSTING          gain +0.0007   TAR gain +0.0124
+  e5-small-tar-gsae      BIN_TEXT_JIGSAW_TOXICITY           gain +0.1105   TAR gain +0.1211
+  e5-small-tar-gsae      BIN_TEXT_KICKSTARTER_FUNDING       gain +0.0104   TAR gain +0.0166
+  e5-small-tar-gsae      MUL_TEXT_DATA_SCIENTIST_SALARY     gain +0.0052   TAR gain +0.0080
+  e5-small-tar-gsae      MUL_TEXT_MICHELIN_RESTAURANTS      gain +0.0092   TAR gain +0.0073
+  e5-small-tar-gsae      MUL_TEXT_PRODUCT_SENTIMENT         gain +0.0130   TAR gain +0.0273
+  e5-small-tar-gsae      MUL_TEXT_SPOTIFY_GENRES            gain +0.0053   TAR gain +0.0041
+  e5-small-tar-gsae      MUL_TEXT_US_ACCIDENTS              gain +0.0081   TAR gain +0.0069
+  e5-small-tar-gsae      MUL_TEXT_WINE_REVIEW               gain +0.0084   TAR gain +0.0095
+  e5-small-tar-gsae      MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain +0.0060   TAR gain +0.0059
+  e5-small-tar-gsae      REG_TEXT_BABIES_PRICES             gain +0.0126   TAR gain +0.0344
+  e5-small-tar-gsae      REG_TEXT_BOOK_PRICE                gain +0.0033   TAR gain +0.0290
+  e5-small-tar-gsae      REG_TEXT_BOOK_READABILITY          gain +0.0080   TAR gain +0.0078
+  e5-small-tar-gsae      REG_TEXT_MERCARI_MARKETPLACE       gain +0.0196   TAR gain +0.0188
+  e5-small-tar-gsae      REG_TEXT_MONTGOMERY_SALARIES       gain +0.0017   TAR gain -0.0002
+  e5-small-tar-gsae      REG_TEXT_ROTTEN_TOMATOES           gain +0.0066   TAR gain +0.0228
+  e5-small-tar-gsae      REG_TEXT_SCIMAGOJR_IMPACT          gain +0.0042   TAR gain +0.0103
+  e5-small-tar-gsae      REG_TEXT_VANCOUVER_SALARIES        gain +0.0349   TAR gain +0.0266
+  e5-small-tar-gsae      REG_TEXT_VIDEO_GAMES_SALES         gain -0.0130   TAR gain +0.0522
+  e5-small-tar-gsae      REG_TEXT_ZOMATO_RESTAURANTS        gain +0.0194   TAR gain +0.0251
+  e5-small-tar-gsae-cv   BIN_TEXT_JIGSAW_TOXICITY           gain +0.1119   TAR gain +0.1211
+  e5-small-tar-gsae-cv   BIN_TEXT_KICKSTARTER_FUNDING       gain -0.0052   TAR gain +0.0166
+  e5-small-tar-gsae-cv   MUL_TEXT_US_ACCIDENTS              gain +0.0124   TAR gain +0.0069
+  e5-small-tar-gsae-cv   MUL_TEXT_WINE_REVIEW               gain -0.2127   TAR gain +0.0095
+  e5-small-tar-gsae-cv   MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain +0.0059   TAR gain +0.0059
+  e5-small-tar-gsae-cv   REG_TEXT_BABIES_PRICES             gain +0.0081   TAR gain +0.0344
+  e5-small-tar-gsae-rand BIN_TEXT_FAKE_JOB_POSTING          gain -0.0111   TAR gain +0.0124
+  e5-small-tar-gsae-rand BIN_TEXT_JIGSAW_TOXICITY           gain +0.0611   TAR gain +0.1211
+  e5-small-tar-gsae-rand BIN_TEXT_KICKSTARTER_FUNDING       gain -0.0101   TAR gain +0.0166
+  e5-small-tar-gsae-rand MUL_TEXT_DATA_SCIENTIST_SALARY     gain -0.0014   TAR gain +0.0080
+  e5-small-tar-gsae-rand MUL_TEXT_MICHELIN_RESTAURANTS      gain +0.0077   TAR gain +0.0073
+  e5-small-tar-gsae-rand MUL_TEXT_PRODUCT_SENTIMENT         gain +0.0145   TAR gain +0.0273
+  e5-small-tar-gsae-rand MUL_TEXT_SPOTIFY_GENRES            gain +0.0034   TAR gain +0.0041
+  e5-small-tar-gsae-rand MUL_TEXT_US_ACCIDENTS              gain +0.0048   TAR gain +0.0069
+  e5-small-tar-gsae-rand MUL_TEXT_WINE_REVIEW               gain +0.0076   TAR gain +0.0095
+  e5-small-tar-gsae-rand MUL_TEXT_WOMEN_CLOTHING_REVIEW     gain +0.0041   TAR gain +0.0059
+  e5-small-tar-gsae-rand REG_TEXT_BABIES_PRICES             gain -0.0198   TAR gain +0.0344
+  e5-small-tar-gsae-rand REG_TEXT_BOOK_PRICE                gain -0.0268   TAR gain +0.0290
+  e5-small-tar-gsae-rand REG_TEXT_BOOK_READABILITY          gain -0.0015   TAR gain +0.0078
+  e5-small-tar-gsae-rand REG_TEXT_MERCARI_MARKETPLACE       gain -0.0047   TAR gain +0.0188
+  e5-small-tar-gsae-rand REG_TEXT_MONTGOMERY_SALARIES       gain +0.0026   TAR gain -0.0002
+  e5-small-tar-gsae-rand REG_TEXT_ROTTEN_TOMATOES           gain -0.0198   TAR gain +0.0228
+  e5-small-tar-gsae-rand REG_TEXT_SCIMAGOJR_IMPACT          gain -0.0002   TAR gain +0.0103
+  e5-small-tar-gsae-rand REG_TEXT_VANCOUVER_SALARIES        gain +0.0226   TAR gain +0.0266
+  e5-small-tar-gsae-rand REG_TEXT_VIDEO_GAMES_SALES         gain -0.1134   TAR gain +0.0522
+  e5-small-tar-gsae-rand REG_TEXT_ZOMATO_RESTAURANTS        gain +0.0058   TAR gain +0.0251
+                        n_datasets  mean_gain  mean_official_tar_gain beats_tar_on  wilcoxon_p_vs_tar  share_of_tar_gain
+encoder                                                                                                                 
+e5-small-gsae                   20    -0.0040                  0.0223         1/20             0.0000            -0.1802
+e5-small-pls                    20     0.0044                  0.0223         3/20             0.0003             0.1977
+e5-small-relsae2                20    -0.0021                  0.0223         1/20             0.0000            -0.0961
+e5-small-relsae2-rand           20    -0.0096                  0.0223         0/20             0.0000            -0.4294
+e5-small-stack                  20     0.0086                  0.0223         5/20             0.0083             0.3851
+e5-small-tar                    20     0.0172                  0.0223         9/20             0.1231             0.7719
+e5-small-tar-gsae               20     0.0137                  0.0223         8/20             0.0240             0.6146
+e5-small-tar-gsae-cv             6    -0.0133                  0.0324          1/6             0.0938            -0.4094
+e5-small-tar-gsae-rand          20    -0.0037                  0.0223         2/20             0.0000            -0.1678
+
+Note: with few datasets the p-values are indicative only; 6 folds per dataset are not independent (2 repeats of 3-fold CV), so treat dataset-level wins as the primary signal.

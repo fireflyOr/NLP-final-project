@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9040663102406412,
+  "test_error": 0.09593368975935879,
+  "course_metric": "auroc",
+  "course_score": 0.9040663102406412,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 57.88003635406494,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 392,
+      "n_removed": 120,
+      "threshold": 0.0426,
+      "passed_test": 33,
+      "removed_norm_ratio": 0.3697,
+      "var_share_kept": 0.5513,
+      "var_share_sae_error": 0.2575,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 426,
+          "score": 0.1179,
+          "n_active": 420,
+          "examples": [
+            "Weekly PART TIME Cash Job, Staff Required.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest ",
+            "Weekly CASH Jobs, Hiring Part Time Workers.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest",
+            "URGENT Job Full Time &amp; Part Time, Cash Pay.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get big"
+          ]
+        },
+        {
+          "latent": 9,
+          "score": 0.1168,
+          "n_active": 232,
+          "examples": [
+            "Cash In Hand Jobs To Begin This Week.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cash.",
+            "Weekly CASH Jobs, Hiring Part Time Workers.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest",
+            "Weekly PART TIME Cash Job, Staff Required.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest "
+          ]
+        },
+        {
+          "latent": 158,
+          "score": 0.095,
+          "n_active": 447,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.0949,
+          "n_active": 430,
+          "examples": [
+            "A truly fantastic opportunity offering a strong comp and benefits package, temporary housing, and relocation for a sharp industry Project Manager who's excited ",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "A truly fantastic opportunity offering a strong comp and benefits package, temporary housing, and relocation for a sharp industry Project Manager who's excited "
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.0872,
+          "n_active": 467,
+          "examples": [
+            "We are currently seeking a General Clerk I. The right candidate will be an integral part of our talented team, supporting our continued growth. This position wi",
+            "The Accounting Clerk will work in a team environment providing general clerical, accounting and office support. Primary duties will include but are not limited ",
+            "Payroll Clerk Job Purpose: Responsible for Compiling and posting employee payroll data and manages hours clocked. Creates and distributes paychecks in accordanc"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 284,
+      "n_kept": 445,
+      "n_removed": 67,
+      "threshold": 0.0506,
+      "passed_test": 63,
+      "removed_norm_ratio": 0.5901,
+      "var_share_kept": 0.7432,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 169,
+          "score": 0.1343,
+          "n_active": 28,
+          "examples": [
+            "20-3075",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 97,
+          "score": 0.1166,
+          "n_active": 27,
+          "examples": [
+            "13-20",
+            "15-19",
+            "15-19"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.0978,
+          "n_active": 42,
+          "examples": [
+            "20-3075",
+            "192000-288000",
+            "19200-33600"
+          ]
+        },
+        {
+          "latent": 401,
+          "score": 0.0851,
+          "n_active": 22,
+          "examples": [
+            "1517-1517",
+            "0-1000",
+            "0-1000"
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.0815,
+          "n_active": 1260,
+          "examples": [
+            "20-25",
+            "20-25",
+            "20-25"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 394,
+      "n_removed": 118,
+      "threshold": 0.0463,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.4515,
+      "var_share_kept": 0.6447,
+      "var_share_sae_error": 0.1004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 342,
+          "score": 0.1227,
+          "n_active": 418,
+          "examples": [
+            "Use Your Spare Time to Start Earning More",
+            "Cash In Hand Jobs To Begin This Week.",
+            "CASH JOBS, Part Time Workers Needed."
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.0799,
+          "n_active": 333,
+          "examples": [
+            "Office Manager",
+            "Office Manager",
+            "Office Manager"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.0748,
+          "n_active": 447,
+          "examples": [
+            "Administrator",
+            "IT - Administrator ",
+            "IT Administrator"
+          ]
+        },
+        {
+          "latent": 418,
+          "score": 0.0731,
+          "n_active": 266,
+          "examples": [
+            "Records Clerk Job in Orange County",
+            "General Clerk I ",
+            "Office Clerk"
+          ]
+        },
+        {
+          "latent": 114,
+          "score": 0.0717,
+          "n_active": 280,
+          "examples": [
+            "Accountant",
+            "Accountant",
+            "Accountant"
+          ]
+        }
+      ]
+    }
+  }
+}

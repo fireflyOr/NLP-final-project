@@ -1,0 +1,404 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7133770240431345,
+  "test_error": 0.2866229759568655,
+  "course_metric": "auroc",
+  "course_score": 0.7133770240431345,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 89.56775689125061,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 562,
+      "n_groups": 464,
+      "n_multi_groups": 70,
+      "n_groups_dropped": 297,
+      "n_removed": 338,
+      "var_share_removed": 0.4916,
+      "var_share_sae_error": 0.0086,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            976,
+            1154,
+            1886
+          ],
+          "gain_margin": 528.24,
+          "examples": [
+            "1970-01-01 00:00:01.423214861",
+            "1970-01-01 00:00:01.428008141",
+            "1970-01-01 00:00:01.424003514"
+          ]
+        },
+        {
+          "group": 59,
+          "latents": [
+            469,
+            621,
+            934
+          ],
+          "gain_margin": 306.28,
+          "examples": [
+            "1970-01-01 00:00:01.406253720",
+            "1970-01-01 00:00:01.406031137",
+            "1970-01-01 00:00:01.406209867"
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            1023,
+            1334,
+            1752
+          ],
+          "gain_margin": 196.98,
+          "examples": [
+            "1970-01-01 00:00:01.404321582",
+            "1970-01-01 00:00:01.404311447",
+            "1970-01-01 00:00:01.404800507"
+          ]
+        },
+        {
+          "group": 305,
+          "latents": [
+            186
+          ],
+          "gain_margin": 172.33,
+          "examples": [
+            "1970-01-01 00:00:01.363020850",
+            "1970-01-01 00:00:01.362080819",
+            "1970-01-01 00:00:01.362000745"
+          ]
+        },
+        {
+          "group": 257,
+          "latents": [
+            458
+          ],
+          "gain_margin": 123.49,
+          "examples": [
+            "1970-01-01 00:00:01.405029020",
+            "1970-01-01 00:00:01.405291508",
+            "1970-01-01 00:00:01.405390210"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 669,
+      "n_groups": 582,
+      "n_multi_groups": 75,
+      "n_groups_dropped": 405,
+      "n_removed": 453,
+      "var_share_removed": 0.4501,
+      "var_share_sae_error": 0.0079,
+      "top": [
+        {
+          "group": 360,
+          "latents": [
+            256
+          ],
+          "gain_margin": 290.73,
+          "examples": [
+            "1970-01-01 00:00:01.350443220",
+            "1970-01-01 00:00:01.350144117",
+            "1970-01-01 00:00:01.350333227"
+          ]
+        },
+        {
+          "group": 581,
+          "latents": [
+            405
+          ],
+          "gain_margin": 240.41,
+          "examples": [
+            "1970-01-01 00:00:01.394172000",
+            "1970-01-01 00:00:01.376262000",
+            "1970-01-01 00:00:01.379142000"
+          ]
+        },
+        {
+          "group": 23,
+          "latents": [
+            976,
+            1154,
+            1886
+          ],
+          "gain_margin": 229.9,
+          "examples": [
+            "1970-01-01 00:00:01.426100457",
+            "1970-01-01 00:00:01.427204021",
+            "1970-01-01 00:00:01.427111301"
+          ]
+        },
+        {
+          "group": 89,
+          "latents": [
+            17,
+            1924
+          ],
+          "gain_margin": 207.8,
+          "examples": [
+            "1970-01-01 00:00:01.387738800",
+            "1970-01-01 00:00:01.382238000",
+            "1970-01-01 00:00:01.383138180"
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            1663,
+            1894
+          ],
+          "gain_margin": 187.45,
+          "examples": [
+            "1970-01-01 00:00:01.370806200",
+            "1970-01-01 00:00:01.371796200",
+            "1970-01-01 00:00:01.417777200"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2044,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1265,
+      "n_removed": 1265,
+      "var_share_removed": 0.4096,
+      "var_share_sae_error": 0.1672,
+      "top": [
+        {
+          "group": 505,
+          "latents": [
+            1531
+          ],
+          "gain_margin": 367.43,
+          "examples": [
+            "\"Earth is home to aliens, magic, super-tech, & monsters. Survive, rule, or fight to seal our dimensional borders in this D6 RPG.\"",
+            "\"Exquisite dinosaur artwork by Jeff Dee and Talzhemir, and a dinosaur sourcebook for Cavemaster(tm) - the Stone Age RPG!\"",
+            "\"A massive expansion to the Pathfinder RPG Mythic rules in three print books, featuring spells, feats, monsters, mythic paths, and more!\""
+          ]
+        },
+        {
+          "group": 1245,
+          "latents": [
+            613
+          ],
+          "gain_margin": 321.82,
+          "examples": [
+            "\"Twist is a ultra-portable universal adapter for MacBook with optional 4 USB charging ports, universal outlet and easy to use design.\"",
+            "\"Collecting the works of America's great journalists: Twain, London, Crane, Hemingway, Davis, Tarbell, Steffens, and many more.\"",
+            "\"Darkmatter is the world's first Xbox(tm) laptop that you can buy as a fully assembled product or in kit form. Now Xbox ONE compatible!\""
+          ]
+        },
+        {
+          "group": 468,
+          "latents": [
+            1624
+          ],
+          "gain_margin": 319.23,
+          "examples": [
+            "\"Brews-Key is a precision machined high-quality bottle opener that also seals your beer, protects it and helps identify it.\"",
+            "\"ATtiny85 ISP makes working with the AVR ATtiny85 simple.  Port your small Arduino projects to a low cost chip and prototype easily.\"",
+            "\"A functional solid brass key hook that adds quality and style to your everyday carry. Designed in Vancouver & Made in the USA.\""
+          ]
+        },
+        {
+          "group": 1057,
+          "latents": [
+            405
+          ],
+          "gain_margin": 303.38,
+          "examples": [
+            "\"Unique web-based encyclopedia all about Cheshire, from apples to zoning.\"",
+            "\"A interactive informational website where legal cultivators and enthusiasts can meet to share ideas and products with leading experts.\"",
+            "\"Looking for funding to continue the Tom Bowl web site (tombowl.com). Covers the cost of the domain name and hosting for a year.\""
+          ]
+        },
+        {
+          "group": 1916,
+          "latents": [
+            97
+          ],
+          "gain_margin": 252.06,
+          "examples": [
+            "\"I am looking to open my first online store, and to do this I need to purchase set up materials and repair some essential equipment.\"",
+            "\"I'm starting up a photography business, but I feel my camera is too simple. I need a more professional camera, such as the Canon 70d.\"",
+            "\"I need to purchase silversmith equipment for my business to remain relative & competitive. It will also allow me to bring on an intern.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2039,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1239,
+      "n_removed": 1240,
+      "var_share_removed": 0.3891,
+      "var_share_sae_error": 0.1436,
+      "top": [
+        {
+          "group": 1004,
+          "latents": [
+            1023
+          ],
+          "gain_margin": 385.22,
+          "examples": [
+            "\"sky-line-the-space-elevator-documentary\"",
+            "\"framed-a-documentary-film\"",
+            "\"a-kurdish-documentary\""
+          ]
+        },
+        {
+          "group": 711,
+          "latents": [
+            1315
+          ],
+          "gain_margin": 183.15,
+          "examples": [
+            "\"cubit-perfect-cubes-of-tungsten-titanium-and-more\"",
+            "\"arts-and-crafts-with-emilie\"",
+            "\"cubes-military-tough-secure-modular-solar-power-an\""
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            140,
+            1918
+          ],
+          "gain_margin": 150.18,
+          "examples": [
+            "\"recording-the-mendelsson-concerti\"",
+            "\"recording-new-chamber-works\"",
+            "\"keep-me-conscious-wants-to-record-a-new-record\""
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            406,
+            414,
+            1298
+          ],
+          "gain_margin": 144.16,
+          "examples": [
+            "\"and-again-a-feature-film\"",
+            "\"avocation-a-feature-length-film\"",
+            "\"feature-movie-the-pupil\""
+          ]
+        },
+        {
+          "group": 1486,
+          "latents": [
+            652
+          ],
+          "gain_margin": 136.48,
+          "examples": [
+            "\"the-wild-coast-exploring-south-americas-northeast\"",
+            "\"shagadelica-the-glow-fur-desert-ship\"",
+            "\"the-mutaytor-hits-the-east-coast\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1255,
+      "n_removed": 1256,
+      "var_share_removed": 0.3851,
+      "var_share_sae_error": 0.1572,
+      "top": [
+        {
+          "group": 2029,
+          "latents": [
+            23
+          ],
+          "gain_margin": 1187.72,
+          "examples": [
+            "\"PIQUE (Canceled)\"",
+            "\"RISK Theatre Company (Canceled)\"",
+            "\"U-P.E.E.R. (Canceled)\""
+          ]
+        },
+        {
+          "group": 368,
+          "latents": [
+            1119
+          ],
+          "gain_margin": 791.27,
+          "examples": [
+            "\"meBooks (Canceled)\"",
+            "\"Social Media Website (Canceled)\"",
+            "\"Custom Geek (Canceled)\""
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            228
+          ],
+          "gain_margin": 385.8,
+          "examples": [
+            "\"Ma Maison - A Documentary\"",
+            "\"Queens: A Documentary\"",
+            "\"Black Hills Climbing Documentary\""
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            414,
+            448,
+            494
+          ],
+          "gain_margin": 218.54,
+          "examples": [
+            "\"The Vanished - A Feature Film\"",
+            "\"Poison - A Feature Film\"",
+            "\"Draw - Short Film\""
+          ]
+        },
+        {
+          "group": 826,
+          "latents": [
+            1468
+          ],
+          "gain_margin": 212.88,
+          "examples": [
+            "\"New E.P.\"",
+            "\"new demo\"",
+            "\"The New EP\""
+          ]
+        }
+      ]
+    }
+  }
+}

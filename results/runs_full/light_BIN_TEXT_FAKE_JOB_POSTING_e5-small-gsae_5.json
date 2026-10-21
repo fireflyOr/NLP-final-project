@@ -1,0 +1,243 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.916703698018082,
+  "test_error": 0.08329630198191795,
+  "course_metric": "auroc",
+  "course_score": 0.916703698018082,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 48.801254749298096,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1275,
+      "n_removed": 1275,
+      "var_share_removed": 0.4935,
+      "var_share_sae_error": 0.1048,
+      "top": [
+        {
+          "group": 1263,
+          "latents": [
+            509
+          ],
+          "gain_margin": 599.58,
+          "examples": [
+            "Part Time Job Work From Home, Daily Pay.Work Minimum 1-2 Hours Per Day Anytime.Won't Required Experience For This Job.You Can Earn $350 to $450 Everyday.Suitabl",
+            "Now Hiring!\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0\u00a0$1,000 SIGN ON BONUS.\u00a0 MUST WORK FOR 6 MONTHS.Dipple is seeking experienced Underground Plumbing Service Technicians to join our tea",
+            "Salary:\u00a39 - \u00a310 per hour\u00a0We are currently going through an exciting period of change and a new client base, resulting in this part-time finance position being c"
+          ]
+        },
+        {
+          "group": 1906,
+          "latents": [
+            776
+          ],
+          "gain_margin": 545.94,
+          "examples": [
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 2042,
+          "latents": [
+            285
+          ],
+          "gain_margin": 448.56,
+          "examples": [
+            "The Administrative Assistant I is responsible for the completion of assigned office and administrative tasks.\u00a0 Maintains confidentiality of client, employee, an",
+            "We seek to hire a full time Administrative assistant for our new office to Assists management staff by performing administrative dutiesAdministrative Assistant.",
+            "The Administrative Assistant will make a first impression on our customers and therefore is required to maintain a high level of professionalism and personal st"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            2033
+          ],
+          "gain_margin": 395.7,
+          "examples": [
+            "Maverick FX, established in 1997, is an award-winning trading firm that focuses that focuses primarily on trading short to intermediate time frames in the spot ",
+            "Takes dictation and types documents.Sends and\u00a0receives\u00a0emailActs as a receptionist, answers phones and communicates simple information.Files information in and ",
+            "Tutor Doctor Carrollton/Dallas is looking for an English Tutor.\u00a0 You will be responsible to help primary, middle and high school students with english homework."
+          ]
+        },
+        {
+          "group": 602,
+          "latents": [
+            856
+          ],
+          "gain_margin": 313.37,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 257,
+      "n_groups": 228,
+      "n_multi_groups": 20,
+      "n_groups_dropped": 199,
+      "n_removed": 221,
+      "var_share_removed": 0.824,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 17,
+          "latents": [
+            567,
+            739,
+            2011
+          ],
+          "gain_margin": 120.88,
+          "examples": [
+            "0-30000",
+            "0-30000",
+            "3000-6000"
+          ]
+        },
+        {
+          "group": 191,
+          "latents": [
+            813
+          ],
+          "gain_margin": 118.51,
+          "examples": [
+            "18-22",
+            "22-61000",
+            "22-28"
+          ]
+        },
+        {
+          "group": 214,
+          "latents": [
+            356
+          ],
+          "gain_margin": 113.95,
+          "examples": [
+            "26000-30000",
+            "26000-30000",
+            "26000-50000"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            1581
+          ],
+          "gain_margin": 112.97,
+          "examples": [
+            "18-22",
+            "22-28",
+            "21-63000"
+          ]
+        },
+        {
+          "group": 188,
+          "latents": [
+            864
+          ],
+          "gain_margin": 91.31,
+          "examples": [
+            "2000-5000",
+            "2000-5000",
+            "1000-2000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1980,
+      "n_groups": 1974,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1408,
+      "n_removed": 1408,
+      "var_share_removed": 0.5104,
+      "var_share_sae_error": 0.025,
+      "top": [
+        {
+          "group": 1756,
+          "latents": [
+            389
+          ],
+          "gain_margin": 387.99,
+          "examples": [
+            "Administrative Positions",
+            "Administrative Assistant - $19.35 Per Hr",
+            "Administrative"
+          ]
+        },
+        {
+          "group": 207,
+          "latents": [
+            1699
+          ],
+          "gain_margin": 288.44,
+          "examples": [
+            "Data Entry",
+            "Data Entry",
+            "Data entry"
+          ]
+        },
+        {
+          "group": 1087,
+          "latents": [
+            695
+          ],
+          "gain_margin": 265.17,
+          "examples": [
+            "I want to work @Locish",
+            "I want to work @Workable",
+            "Audiologist or Clinical Hearing Screener Required "
+          ]
+        },
+        {
+          "group": 794,
+          "latents": [
+            1280
+          ],
+          "gain_margin": 226.3,
+          "examples": [
+            "Administrative Assistant",
+            "Administrative Assistant",
+            "Administrative Assistant"
+          ]
+        },
+        {
+          "group": 234,
+          "latents": [
+            1966
+          ],
+          "gain_margin": 224.32,
+          "examples": [
+            "Accounting Clerk-Dealership",
+            "Accounting Clerk",
+            "Office Clerk"
+          ]
+        }
+      ]
+    }
+  }
+}

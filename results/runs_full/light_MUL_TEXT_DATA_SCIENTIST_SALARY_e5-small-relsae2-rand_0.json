@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4020832278494577,
+  "test_error": 1.4020832278494577,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7935203243147404,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 92.47613549232483,
+  "diagnostics": {
+    "experience": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 436,
+      "n_kept": 511,
+      "n_removed": 1,
+      "threshold": 0.0439,
+      "passed_test": 403,
+      "removed_norm_ratio": 0.003,
+      "var_share_kept": 0.9991,
+      "var_share_sae_error": 0.0,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 391,
+          "score": 0.4602,
+          "n_active": 761,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.4601,
+          "n_active": 761,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 57,
+          "score": 0.4582,
+          "n_active": 760,
+          "examples": [
+            "0-3 yrs",
+            "0-3 yrs",
+            "0-3 yrs"
+          ]
+        },
+        {
+          "latent": 28,
+          "score": 0.4393,
+          "n_active": 1279,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "latent": 229,
+          "score": 0.4222,
+          "n_active": 1319,
+          "examples": [
+            "0-3 yrs",
+            "0-3 yrs",
+            "0-3 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 478,
+      "n_removed": 34,
+      "threshold": 0.0431,
+      "passed_test": 226,
+      "removed_norm_ratio": 0.1432,
+      "var_share_kept": 0.8235,
+      "var_share_sae_error": 0.1213,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.2892,
+          "n_active": 2533,
+          "examples": [
+            " Hands-on experience ...",
+            " We have immediate openings for ...",
+            " Proven experience in ..."
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.2783,
+          "n_active": 2222,
+          "examples": [
+            "The role determines if an alert is deemed an incident and will be required to query referential ...",
+            "Job Description:  \tResponsible for handling MIS and Operations for South region  \tCoordinating ...",
+            "- This group has more experience than L1 support and manages incidents raised by the L1s or as agreed in ..."
+          ]
+        },
+        {
+          "latent": 49,
+          "score": 0.276,
+          "n_active": 2126,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 105,
+          "score": 0.2754,
+          "n_active": 2194,
+          "examples": [
+            "Under- Graduates(Backlogs): Candidates who have backlogs with 1 year international voice experience can ...",
+            "Under- Graduates(Backlogs): Candidates who have backlogs with 1 year international voice experience can ...",
+            "Age, total work experience, relevant academic qualification mean little to us in the face of motivation, ..."
+          ]
+        },
+        {
+          "latent": 82,
+          "score": 0.2745,
+          "n_active": 2183,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 468,
+      "n_removed": 44,
+      "threshold": 0.0461,
+      "passed_test": 147,
+      "removed_norm_ratio": 0.1875,
+      "var_share_kept": 0.822,
+      "var_share_sae_error": 0.1053,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 324,
+          "score": 0.1821,
+          "n_active": 751,
+          "examples": [
+            "Tender Executive",
+            "Tender Executive",
+            "Chief Executive Officer"
+          ]
+        },
+        {
+          "latent": 189,
+          "score": 0.1624,
+          "n_active": 273,
+          "examples": [
+            "Vice President",
+            "Vice President - Sales",
+            "Vice President - Analytics - Bank"
+          ]
+        },
+        {
+          "latent": 310,
+          "score": 0.1585,
+          "n_active": 400,
+          "examples": [
+            "VP (vice President)  - Engineering",
+            "Vice President",
+            "VP - Corporate Business Development"
+          ]
+        },
+        {
+          "latent": 22,
+          "score": 0.1521,
+          "n_active": 476,
+          "examples": [
+            "Network Engineer (cisco, Checkpoint, Juniper, Fortinet, Brocade)",
+            "Network Engineer (cisco, Checkpoint, Juniper, Fortinet, Brocade)",
+            "Pension Valuation - Actuarial"
+          ]
+        },
+        {
+          "latent": 115,
+          "score": 0.1482,
+          "n_active": 854,
+          "examples": [
+            "Infosys - BPM is Hiring People for PR to PO | Immediate Joiner.",
+            "Hiring for Senior Executive ( Recommendations Platform)",
+            "Hiring for a Fortune 100 Company for Operatonal Risk Analytics Manager"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 462,
+      "n_removed": 50,
+      "threshold": 0.0466,
+      "passed_test": 148,
+      "removed_norm_ratio": 0.2245,
+      "var_share_kept": 0.7932,
+      "var_share_sae_error": 0.0991,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 144,
+          "score": 0.1673,
+          "n_active": 214,
+          "examples": [
+            "voice analyst , voice research",
+            "BPO, International Voice, Voice Process, Quality Analysis, Quality Analyst,...",
+            "BPO, International Voice, Voice Process, Quality Analysis, Quality Analyst,..."
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.1631,
+          "n_active": 230,
+          "examples": [
+            "ar calling, ar caller, denial management, ar analyst, ar executive...",
+            "domestic bpo, call quality, Call Audit, Quality Analyst, Quality Analysis...",
+            "AR Caller, accounts receivable caller, ar executive, AR Calling, ar analyst..."
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.16,
+          "n_active": 521,
+          "examples": [
+            "outbound sales, call center, telesales, life insurance, Contact Center...",
+            "call monitoring, quality analysis, feedback, call audit...",
+            "call monitoring, quality analysis, feedback, Call Audit..."
+          ]
+        },
+        {
+          "latent": 446,
+          "score": 0.1498,
+          "n_active": 1172,
+          "examples": [
+            "Communication Skills",
+            "Communication Skills, Strong Interpersonal Skills, Written Communication...",
+            "Communication Skills, Strong Interpersonal Skills, Written Communication..."
+          ]
+        },
+        {
+          "latent": 484,
+          "score": 0.1297,
+          "n_active": 355,
+          "examples": [
+            "bpo, call center, bpo operations, bpo trainer, Quality Analyst, Fresher...",
+            "bpo, kpo, international bpo, fresher, technical support, call center jobs...",
+            "bpo, ites, kpo, networking, call center, night shift, computer hardware, it..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 503,
+      "n_kept": 498,
+      "n_removed": 14,
+      "threshold": 0.0465,
+      "passed_test": 243,
+      "removed_norm_ratio": 0.1127,
+      "var_share_kept": 0.9263,
+      "var_share_sae_error": 0.0048,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.14,
+          "n_active": 3190,
+          "examples": [
+            "Bengaluru(Residency Road)",
+            "Bengaluru(Residency Road)",
+            "Mumbai(Charni Road)"
+          ]
+        },
+        {
+          "latent": 298,
+          "score": 0.129,
+          "n_active": 1956,
+          "examples": [
+            "Kuwait, Middle East",
+            "Bengaluru(Sarjapur)",
+            "Bengaluru(Sarjapur)"
+          ]
+        },
+        {
+          "latent": 371,
+          "score": 0.1281,
+          "n_active": 2581,
+          "examples": [
+            "Bangalore, Bangalore",
+            "Bangalore, Bangalore",
+            "Bengaluru(Hoskote)"
+          ]
+        },
+        {
+          "latent": 65,
+          "score": 0.1258,
+          "n_active": 1895,
+          "examples": [
+            "Bengaluru, Netherlands",
+            "Bengaluru, Netherlands",
+            "Bengaluru"
+          ]
+        },
+        {
+          "latent": 9,
+          "score": 0.1258,
+          "n_active": 2071,
+          "examples": [
+            "Bengaluru(7th Phase JP Nagar+3)",
+            "Bengaluru(1st Stage Indira Nagar+2)",
+            "Bengaluru(7th Phase JP Nagar)"
+          ]
+        }
+      ]
+    }
+  }
+}

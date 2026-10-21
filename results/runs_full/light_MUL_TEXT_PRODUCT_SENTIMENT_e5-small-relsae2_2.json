@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6379525885283996,
+  "test_error": 0.6379525885283996,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8671817028473441,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 15.880834817886353,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 363,
+      "n_removed": 149,
+      "threshold": 0.0847,
+      "passed_test": 10,
+      "removed_norm_ratio": 0.4777,
+      "var_share_kept": 0.5895,
+      "var_share_sae_error": 0.1634,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 141,
+          "score": 0.1609,
+          "n_active": 374,
+          "examples": [
+            "Nope, @mention Is NOT Launching Its Own Social Network at #SXSW {link}",
+            "I guess @mention has no excuse not to get an iPad 2: {link} #sxsw",
+            "And now, it won't pull from website to iPhone. Awesome. Glad I wasted that time. #festivalgenius #notsomuch #sxsw"
+          ]
+        },
+        {
+          "latent": 166,
+          "score": 0.1439,
+          "n_active": 168,
+          "examples": [
+            "RT @mention Finally fed up with #AngryBirds, Julian screamed &quot;I got your no-fly zone right here, pigfucker!&quot; and threw his iPad at some kid. #sxsw",
+            "Just added my #SXSW flights to @planely. Matching people on planes/airports. Also downloaded the @KLM iPhone app, nicely done.",
+            "Airport delay to #sxsw. Just introduced @mention to #CatPhysics. I feel like a drug pusher: First ipad play is free but after that..."
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.1264,
+          "n_active": 181,
+          "examples": [
+            ".@mention Bahrain govt turned off Google Earth. As a result, more people learned about it and govt had to turn it back on. #sxsw",
+            "We're so ungrateful bc we have too much shit to play with. So turn off some of your shit (iPhone) now and then. #sxsw",
+            "Dealing w/ @mention white freeze screen far too much, while at #SXSW everyone has an iPhone...making conversion a possibility #Efficient"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.1066,
+          "n_active": 308,
+          "examples": [
+            "Heading to iPad Design Headaches in Hilton - Salon J #sxsw",
+            "RT @mention This is why social technology is amazing: Google has set up a Person Finder in both English and Japanese: {link} #SXSW",
+            "This is why social technology is amazing: Google has set up a Person Finder in both English and Japanese: {link} #SXSW"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.1062,
+          "n_active": 201,
+          "examples": [
+            "My ipad 2 vs Android panel starts at 330 at Radisson. Bloody Mary starts now! #SXSW",
+            "Jesus hockey mask?! I'm worse than I thought... #SXSW @mention Apple Store, SXSW {link}",
+            "RT @mention Server Challenge is a huge hit at #sxsw! Come by booth 400 to try your hand. Win an iPhone 4 bottle opener case by beating 2 mins."
+          ]
+        }
+      ]
+    }
+  }
+}

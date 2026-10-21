@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5801065467424495,
+  "test_error": 0.5801065467424495,
+  "course_metric": "r2",
+  "course_score": 0.3980432086545953,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 99.84711956977844,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 424,
+      "n_removed": 88,
+      "threshold": 0.0405,
+      "passed_test": 188,
+      "removed_norm_ratio": 0.2635,
+      "var_share_kept": 0.9369,
+      "var_share_sae_error": 0.0072,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 231,
+          "score": 0.1778,
+          "n_active": 3945,
+          "examples": [
+            "FOREVER 21",
+            "FOREVER 21",
+            "FOREVER 21"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.1676,
+          "n_active": 3936,
+          "examples": [
+            "GUESS",
+            "GUESS",
+            "GUESS"
+          ]
+        },
+        {
+          "latent": 334,
+          "score": 0.164,
+          "n_active": 4234,
+          "examples": [
+            "Junk Food",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 141,
+          "score": 0.1639,
+          "n_active": 4253,
+          "examples": [
+            "Not Your Mother's",
+            "No Boundaries",
+            "No Boundaries"
+          ]
+        },
+        {
+          "latent": 374,
+          "score": 0.1638,
+          "n_active": 765,
+          "examples": [
+            "Laura Geller",
+            "Laura Geller",
+            "Laura Geller"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 499,
+      "n_kept": 413,
+      "n_removed": 99,
+      "threshold": 0.0414,
+      "passed_test": 141,
+      "removed_norm_ratio": 0.2708,
+      "var_share_kept": 0.7739,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.1688,
+          "n_active": 1561,
+          "examples": [
+            "Strollers",
+            "Strollers",
+            "Strollers"
+          ]
+        },
+        {
+          "latent": 337,
+          "score": 0.1582,
+          "n_active": 320,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 92,
+          "score": 0.1551,
+          "n_active": 347,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "latent": 438,
+          "score": 0.1442,
+          "n_active": 282,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 370,
+          "score": 0.1431,
+          "n_active": 285,
+          "examples": [
+            "Weddings",
+            "Weddings",
+            "Weddings"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 452,
+      "n_removed": 60,
+      "threshold": 0.0393,
+      "passed_test": 197,
+      "removed_norm_ratio": 0.2767,
+      "var_share_kept": 0.9237,
+      "var_share_sae_error": 0.0006,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 132,
+          "score": 0.1796,
+          "n_active": 503,
+          "examples": [
+            "Lacrosse",
+            "Swings, Jumpers & Bouncers",
+            "Baseball & Softball"
+          ]
+        },
+        {
+          "latent": 92,
+          "score": 0.1784,
+          "n_active": 1781,
+          "examples": [
+            "Handbag",
+            "Handbag",
+            "Handbag"
+          ]
+        },
+        {
+          "latent": 409,
+          "score": 0.1505,
+          "n_active": 695,
+          "examples": [
+            "Baby",
+            "Baby",
+            "Baby Seats"
+          ]
+        },
+        {
+          "latent": 57,
+          "score": 0.1417,
+          "n_active": 218,
+          "examples": [
+            "Flight/Bomber",
+            "Flight/Bomber",
+            "Athletic Training"
+          ]
+        },
+        {
+          "latent": 265,
+          "score": 0.1382,
+          "n_active": 504,
+          "examples": [
+            "iPad/Tablet/eBook Access",
+            "iPad/Tablet/eBook Access",
+            "iPad/Tablet/eBook Access"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 440,
+      "n_removed": 72,
+      "threshold": 0.0385,
+      "passed_test": 182,
+      "removed_norm_ratio": 0.3088,
+      "var_share_kept": 0.8308,
+      "var_share_sae_error": 0.0014,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.1883,
+          "n_active": 796,
+          "examples": [
+            "Handmade/Bags and Purses/Purse",
+            "Handmade/Bags and Purses/Purse",
+            "Handmade/Bags and Purses/Purse"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.1533,
+          "n_active": 836,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "latent": 133,
+          "score": 0.1417,
+          "n_active": 1755,
+          "examples": [
+            "Kids/Boys 2T-5T/Bottoms",
+            "Kids/Boys 2T-5T/Bottoms",
+            "Kids/Boys 2T-5T/Bottoms"
+          ]
+        },
+        {
+          "latent": 333,
+          "score": 0.1387,
+          "n_active": 233,
+          "examples": [
+            "Other/Office supplies/Ink & Toner",
+            "Other/Office supplies/Ink & Toner",
+            "Other/Office supplies/Ink & Toner"
+          ]
+        },
+        {
+          "latent": 226,
+          "score": 0.1359,
+          "n_active": 241,
+          "examples": [
+            "Women/Shoes/Athletic",
+            "Women/Shoes/Athletic",
+            "Women/Shoes/Athletic"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 383,
+      "n_removed": 129,
+      "threshold": 0.0425,
+      "passed_test": 52,
+      "removed_norm_ratio": 0.3113,
+      "var_share_kept": 0.5999,
+      "var_share_sae_error": 0.2293,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 203,
+          "score": 0.1199,
+          "n_active": 804,
+          "examples": [
+            "Authentic",
+            "Authentic",
+            "100% authentic"
+          ]
+        },
+        {
+          "latent": 365,
+          "score": 0.1103,
+          "n_active": 731,
+          "examples": [
+            "New in box.",
+            "Box flaw.",
+            "New in box"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.0907,
+          "n_active": 684,
+          "examples": [
+            "Works fine! Power Supply PA3714U-1ACA",
+            "Metro Pcs phone 2GB ram Cracked screen Works great. As is With charger.",
+            "Everything works. Mater has batteries in him but the major need to him needs batteries. I took them out a while back and never put any back in. He works though."
+          ]
+        },
+        {
+          "latent": 84,
+          "score": 0.0876,
+          "n_active": 364,
+          "examples": [
+            "iphone is unlocked. Screen has been fixed 2 times, just recently replaced. Everything works on the phone. The back has a few small scratches but other than that",
+            "64 gin unlocked iPhone 6 works perfectly fine just a crack on the bottom left and nicks on edges. Carrier and iCloud unlocked",
+            "Looking to sell my iphone 6 64gb unlocked. Phone is in great condition and will work on any carrier. Battery life is great, phone was well taken care of. Imei -"
+          ]
+        },
+        {
+          "latent": 351,
+          "score": 0.0818,
+          "n_active": 3491,
+          "examples": [
+            "Pricing is per book",
+            "Both packages are sealed",
+            "All shirts are a size small."
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 390,
+      "n_removed": 122,
+      "threshold": 0.0413,
+      "passed_test": 71,
+      "removed_norm_ratio": 0.3617,
+      "var_share_kept": 0.6154,
+      "var_share_sae_error": 0.1947,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 64,
+          "score": 0.1403,
+          "n_active": 1008,
+          "examples": [
+            "Shirt",
+            "Women's shirt",
+            "Men's shirt"
+          ]
+        },
+        {
+          "latent": 287,
+          "score": 0.0998,
+          "n_active": 1652,
+          "examples": [
+            "It cosmetics your skin but better light",
+            "Justice shirt and capri",
+            "Skin, Body, Hair, Scent, Makeup samples"
+          ]
+        },
+        {
+          "latent": 462,
+          "score": 0.0942,
+          "n_active": 615,
+          "examples": [
+            "Burberry",
+            "TORY BURCH ladies elegant sunglasses",
+            "Burberry purse"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.0879,
+          "n_active": 983,
+          "examples": [
+            "Lularoe TC",
+            "LuLaRoe TC Frenchie French Bulldog",
+            "Lularoe tc Christmas trees !"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.087,
+          "n_active": 265,
+          "examples": [
+            "Air Raid",
+            "Air Max 95",
+            "AIR MAX 97"
+          ]
+        }
+      ]
+    }
+  }
+}

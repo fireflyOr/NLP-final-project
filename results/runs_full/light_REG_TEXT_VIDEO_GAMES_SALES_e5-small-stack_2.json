@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-stack",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.3202851122026305,
+  "test_error": 1.3202851122026305,
+  "course_metric": "r2",
+  "course_score": 0.39512339772772553,
+  "n_text_cols": 2,
+  "n_text_features": 61,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 12.01331877708435,
+  "diagnostics": {}
+}

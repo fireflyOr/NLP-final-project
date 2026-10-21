@@ -1,0 +1,864 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ROTTEN_TOMATOES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8329572796368677,
+  "test_error": 0.8329572796368677,
+  "course_metric": "r2",
+  "course_score": 0.4874142215484223,
+  "n_text_cols": 13,
+  "n_text_features": 390,
+  "n_train": 4772,
+  "n_test": 2386,
+  "runtime_s": 254.35104775428772,
+  "diagnostics": {
+    "Actors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 326,
+      "n_removed": 186,
+      "threshold": 0.0565,
+      "passed_test": 9,
+      "removed_norm_ratio": 0.506,
+      "var_share_kept": 0.4721,
+      "var_share_sae_error": 0.2241,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 80,
+          "score": 0.0696,
+          "n_active": 361,
+          "examples": [
+            "Kaleb Shorey,Nick Sommer,Stephanie Leigh Rose",
+            "Joe B. Barton,Don Barrett,Sherry Leigh",
+            "Graham Phillips,Zack Pearlman,Ashley Greene"
+          ]
+        },
+        {
+          "latent": 236,
+          "score": 0.0685,
+          "n_active": 113,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 219,
+          "score": 0.0653,
+          "n_active": 353,
+          "examples": [
+            "Warren Beatty,Paula Prentiss,William Daniels",
+            "Quvenzhan\u00e9 Wallis,Cameron Diaz,Jamie Foxx",
+            "Shawn Wayans,Marlon Wayans,Kerry Washington"
+          ]
+        },
+        {
+          "latent": 242,
+          "score": 0.0642,
+          "n_active": 260,
+          "examples": [
+            "Kate Beckinsale,Luke Wilson,Frank Whaley",
+            "Angels & Airwaves,Critter,Thomas DeLonge",
+            "Kate Hudson,Matthew McConaughey,Adam Goldberg"
+          ]
+        },
+        {
+          "latent": 135,
+          "score": 0.0595,
+          "n_active": 262,
+          "examples": [
+            "Rex Ingram,Oscar Polk,Eddie 'Rochester' Anderson",
+            "Bud Abbott,Lou Costello,Tom Brown",
+            "Bud Abbott,Lou Costello,Patricia Medina"
+          ]
+        }
+      ]
+    },
+    "Cast": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 323,
+      "n_removed": 189,
+      "threshold": 0.0567,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.5168,
+      "var_share_kept": 0.4421,
+      "var_share_sae_error": 0.2721,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 440,
+          "score": 0.0888,
+          "n_active": 262,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 49,
+          "score": 0.0816,
+          "n_active": 159,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 363,
+          "score": 0.075,
+          "n_active": 254,
+          "examples": [
+            "Rob Brown,Dennis Quaid,Darrin Dewitt Henson,Omar Benson Miller,Nelsan Ellis,Charles S. Dutton,Justin Martin,Justin Jones,Nicole Beharie,Aunjanue Ellis,Elizabeth",
+            "Bill Paxton,Matthew McConaughey,Powers Boothe,Matt O'Leary,Jeremy Sumpter,Luke Askew,Levi Kreis,Derk Cheetwood,Missy Crider,Alan Davidson,Cynthia Ettinger,Vince",
+            "Clara Mamet,William H. Macy,Jared Gilman,Rebecca Pidgeon,Ella Dershowitz,John Pirruccello,David Paymer,Matt Malloy,Matt O'Leary,Willow Hale,Malia Bryne,Dean Cat"
+          ]
+        },
+        {
+          "latent": 185,
+          "score": 0.0709,
+          "n_active": 268,
+          "examples": [
+            "River Phoenix,Jonathan Pryce,Judy Davis,T. Dan Hopkins,Karen Black,John Trudell,Julius Drum,Rodney A. Grant,George Aguilar,Lorne Miller",
+            "Orion Acaba,Larry Norman",
+            "River Phoenix,Lili Taylor,Richard Panebianco,Anthony Clark,Mitchell Whitfield,Holly Near,Elizabeth Daily,Sue Morales,Christina Mastin,Christopher Shaw,John Lacy"
+          ]
+        },
+        {
+          "latent": 193,
+          "score": 0.0692,
+          "n_active": 329,
+          "examples": [
+            "Owen Wilson,Adrien Brody,Jason Schwartzman,Amara Karan,Wallace Wolodarsky,Waris Ahluwalia,Irrfan Khan,Barbet Schroeder,Camilla Rutherford,Bill Murray,Anjelica H",
+            "Dustin Hoffman,Meryl Streep,Jane Alexander,Justin Henry,Howard Duff,George Coe,JoBeth Williams,Bill Moor,Howland Chamberlain,Jack Ramage,Jess Osuna,Nicholas Hor",
+            "Bill Murray,Owen Wilson,Cate Blanchett,Anjelica Huston,Willem Dafoe,Jeff Goldblum,Michael Gambon,Noah Taylor,Bud Cort,Seu Jorge,Robyn Cohen,Waris Ahluwalia,Niel"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 245,
+      "n_kept": 442,
+      "n_removed": 70,
+      "threshold": 0.0566,
+      "passed_test": 17,
+      "removed_norm_ratio": 0.7053,
+      "var_share_kept": 0.5092,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 406,
+          "score": 0.0794,
+          "n_active": 204,
+          "examples": [
+            "USA,Albania",
+            "USA,Greece",
+            "Greece,USA"
+          ]
+        },
+        {
+          "latent": 58,
+          "score": 0.078,
+          "n_active": 201,
+          "examples": [
+            "UK,USA",
+            "UK,USA",
+            "UK,USA"
+          ]
+        },
+        {
+          "latent": 20,
+          "score": 0.0774,
+          "n_active": 200,
+          "examples": [
+            "Thailand,USA,Indonesia",
+            "Thailand,USA",
+            "USA,UK"
+          ]
+        },
+        {
+          "latent": 319,
+          "score": 0.0767,
+          "n_active": 198,
+          "examples": [
+            "UK,USA",
+            "UK,USA",
+            "UK,USA"
+          ]
+        },
+        {
+          "latent": 345,
+          "score": 0.0763,
+          "n_active": 204,
+          "examples": [
+            "USA,UK",
+            "USA,UK",
+            "USA,UK"
+          ]
+        }
+      ]
+    },
+    "Creator": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 342,
+      "n_removed": 170,
+      "threshold": 0.0612,
+      "passed_test": 33,
+      "removed_norm_ratio": 0.4866,
+      "var_share_kept": 0.5583,
+      "var_share_sae_error": 0.1719,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 234,
+          "score": 0.1494,
+          "n_active": 146,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.1474,
+          "n_active": 278,
+          "examples": [
+            "Trey Parker",
+            "Trey Parker",
+            "George Lucas"
+          ]
+        },
+        {
+          "latent": 486,
+          "score": 0.1407,
+          "n_active": 215,
+          "examples": [
+            "Kipp Tribble",
+            "Allen Actor",
+            "Trisha Gum"
+          ]
+        },
+        {
+          "latent": 440,
+          "score": 0.1314,
+          "n_active": 241,
+          "examples": [
+            "Stanley Kubrick,Jim Thompson",
+            "Stanley Kubrick,Anthony Burgess",
+            "Stanley Kubrick,Calder Willingham"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.1298,
+          "n_active": 239,
+          "examples": [
+            "Flood Reed",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 328,
+      "n_removed": 184,
+      "threshold": 0.0598,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5012,
+      "var_share_kept": 0.4422,
+      "var_share_sae_error": 0.2743,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 396,
+          "score": 0.0734,
+          "n_active": 256,
+          "examples": [
+            "After inadvertently wreaking havoc on the elf community due to his ungainly size, a man raised as an elf at the North Pole is sent to the U.S. in search of his ",
+            "Former FBI profiler Will Graham returns to service to pursue a deranged serial murderer named 'the Tooth Fairy' by the media.",
+            "An evil millionaire (Hulk Hogan) gets amnesia and then belives that he is Santa Claus."
+          ]
+        },
+        {
+          "latent": 445,
+          "score": 0.0638,
+          "n_active": 223,
+          "examples": [
+            "Ethan Bortnick plays the leading role as Nathan,a young boy who's separated from his mother when she goes missing during a trip to Japan to help after the tsuna",
+            "Despite trying to keep his swashbuckling to a minimum, a threat to California's pending statehood causes the adventure-loving Alejandro de la Vega (Banderas) --",
+            "Jake Barnes and his two kids, Sean and Jessie, have moved to Alaska after his wife died. He is a former airline pilot now delivering toilet paper across the mou"
+          ]
+        },
+        {
+          "latent": 170,
+          "score": 0.061,
+          "n_active": 383,
+          "examples": [
+            "Priscilla Chase is a woman who has never had an orgasm.",
+            "A young officer in Napoleon's army pursues a mysterious woman to the castle of an elderly Baron.",
+            "Two teenage girls discover a mermaid in their beach club's swimming pool."
+          ]
+        },
+        {
+          "latent": 442,
+          "score": 0.0566,
+          "n_active": 356,
+          "examples": [
+            "Video Games: The Movie, a feature length documentary, aims to educate & entertain audiences about how video games are made, marketed, and consumed by looking ba",
+            "A nostalgic and compelling look into the legendary three camera, three projector process that revolutionized motion pictures and led the industry into the wides",
+            "The story of the Australian exploitation genre cinema of 1970s and 80s."
+          ]
+        },
+        {
+          "latent": 482,
+          "score": 0.0541,
+          "n_active": 227,
+          "examples": [
+            "Ethan Bortnick plays the leading role as Nathan,a young boy who's separated from his mother when she goes missing during a trip to Japan to help after the tsuna",
+            "Jack Deth is a kind of cop/bounty hunter in the bleak Los Angeles of the future. He's become obssessed with chasing Whistler - an evil criminal who uses powerfu",
+            "San Francisco heiress Page Forrester is brutally murdered in her remote beach house. Her husband Jack is devastated by the crime but soon finds himself accused "
+          ]
+        }
+      ]
+    },
+    "Director": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 342,
+      "n_removed": 170,
+      "threshold": 0.0604,
+      "passed_test": 10,
+      "removed_norm_ratio": 0.5495,
+      "var_share_kept": 0.6159,
+      "var_share_sae_error": 0.1246,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 44,
+          "score": 0.086,
+          "n_active": 402,
+          "examples": [
+            "Sam Raimi",
+            "Sam Raimi",
+            "Sam Raimi"
+          ]
+        },
+        {
+          "latent": 25,
+          "score": 0.0849,
+          "n_active": 118,
+          "examples": [
+            "John R. Cherry III",
+            "John R. Cherry III",
+            "John R. Cherry III"
+          ]
+        },
+        {
+          "latent": 333,
+          "score": 0.0803,
+          "n_active": 493,
+          "examples": [
+            "Felix E. Feist",
+            "Merian C. Cooper,Ernest B. Schoedsack",
+            "Frank R. Strayer"
+          ]
+        },
+        {
+          "latent": 322,
+          "score": 0.074,
+          "n_active": 351,
+          "examples": [
+            "Lloyd Bacon",
+            "Lloyd Bacon",
+            "Lloyd Bacon"
+          ]
+        },
+        {
+          "latent": 45,
+          "score": 0.0711,
+          "n_active": 322,
+          "examples": [
+            "Tobe Hooper",
+            "Tobe Hooper",
+            "Tobe Hooper"
+          ]
+        }
+      ]
+    },
+    "Filming Locations": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 317,
+      "n_removed": 195,
+      "threshold": 0.0568,
+      "passed_test": 25,
+      "removed_norm_ratio": 0.5563,
+      "var_share_kept": 0.5557,
+      "var_share_sae_error": 0.076,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 167,
+          "score": 0.0865,
+          "n_active": 666,
+          "examples": [
+            "June Mountain, California, USA",
+            "Bloedel Floral Conservatory, Vancouver, British Columbia, Canada",
+            "King City Secondary School, King City, Ontario, Canada"
+          ]
+        },
+        {
+          "latent": 37,
+          "score": 0.0775,
+          "n_active": 680,
+          "examples": [
+            "Brentford F.C, Griffin Park, Brentford, Middlesex, England, UK",
+            "Paramount Ranch - 2813 Cornell Road, Agoura, California, USA",
+            "Paramount Ranch - 2813 Cornell Road, Agoura, California, USA"
+          ]
+        },
+        {
+          "latent": 234,
+          "score": 0.074,
+          "n_active": 603,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 74,
+          "score": 0.0738,
+          "n_active": 595,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 49,
+          "score": 0.0726,
+          "n_active": 639,
+          "examples": [
+            "Bodleian Library, Broad Street, Oxford, Oxfordshire, England, UK",
+            "Old Library, Trinity College, Dublin, County Dublin, Ireland",
+            "Black Park Country Park, Wexham, Buckinghamshire, England, UK"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 455,
+      "n_kept": 430,
+      "n_removed": 82,
+      "threshold": 0.0575,
+      "passed_test": 121,
+      "removed_norm_ratio": 0.303,
+      "var_share_kept": 0.7012,
+      "var_share_sae_error": 0.0006,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 136,
+          "score": 0.2631,
+          "n_active": 289,
+          "examples": [
+            "Documentary,News",
+            "Documentary,News",
+            "Documentary,Short"
+          ]
+        },
+        {
+          "latent": 293,
+          "score": 0.2628,
+          "n_active": 278,
+          "examples": [
+            "Documentary",
+            "Documentary",
+            "Documentary"
+          ]
+        },
+        {
+          "latent": 408,
+          "score": 0.2619,
+          "n_active": 281,
+          "examples": [
+            "Documentary,News",
+            "Documentary,News",
+            "Documentary,Crime,News"
+          ]
+        },
+        {
+          "latent": 100,
+          "score": 0.2575,
+          "n_active": 286,
+          "examples": [
+            "Documentary,Music",
+            "Documentary,Music",
+            "Documentary,Music"
+          ]
+        },
+        {
+          "latent": 281,
+          "score": 0.255,
+          "n_active": 307,
+          "examples": [
+            "Documentary,News",
+            "Documentary,News",
+            "Documentary,History,News"
+          ]
+        }
+      ]
+    },
+    "Language": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 247,
+      "n_kept": 467,
+      "n_removed": 45,
+      "threshold": 0.0611,
+      "passed_test": 43,
+      "removed_norm_ratio": 0.5543,
+      "var_share_kept": 0.8074,
+      "var_share_sae_error": 0.0012,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 48,
+          "score": 0.0959,
+          "n_active": 3919,
+          "examples": [
+            "English",
+            "English",
+            "English"
+          ]
+        },
+        {
+          "latent": 137,
+          "score": 0.0933,
+          "n_active": 543,
+          "examples": [
+            "English,Maltese,French,Turkish",
+            "English,Berber languages,French",
+            "English,Klingon,Russian,French"
+          ]
+        },
+        {
+          "latent": 364,
+          "score": 0.0917,
+          "n_active": 3339,
+          "examples": [
+            "English,Inuktitut",
+            "English",
+            "English"
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.091,
+          "n_active": 3375,
+          "examples": [
+            "English,Ibo",
+            "English",
+            "English"
+          ]
+        },
+        {
+          "latent": 348,
+          "score": 0.0903,
+          "n_active": 3360,
+          "examples": [
+            "English",
+            "English",
+            "English"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 274,
+      "n_removed": 238,
+      "threshold": 0.0598,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.6205,
+      "var_share_kept": 0.3964,
+      "var_share_sae_error": 0.2266,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 314,
+          "score": 0.0705,
+          "n_active": 223,
+          "examples": [
+            "It Takes Two",
+            "The Raid 2",
+            "Airplane II: The Sequel"
+          ]
+        },
+        {
+          "latent": 74,
+          "score": 0.0678,
+          "n_active": 173,
+          "examples": [
+            "Standard Operating Procedure",
+            "The Darjeeling Limited",
+            "Operator"
+          ]
+        },
+        {
+          "latent": 234,
+          "score": 0.0585,
+          "n_active": 298,
+          "examples": [
+            "The Man Who Knew Too Much",
+            "Knowing",
+            "The Unknown Known"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0547,
+          "n_active": 232,
+          "examples": [
+            "This Girl's Life",
+            "Life as We Know It",
+            "Life"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0546,
+          "n_active": 366,
+          "examples": [
+            "Back to the Future Part II",
+            "The Karate Kid, Part II",
+            "The Hills Have Eyes Part II"
+          ]
+        }
+      ]
+    },
+    "RatingCount": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 506,
+      "n_kept": 347,
+      "n_removed": 165,
+      "threshold": 0.0538,
+      "passed_test": 18,
+      "removed_norm_ratio": 0.4907,
+      "var_share_kept": 0.5673,
+      "var_share_sae_error": 0.0152,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 452,
+          "score": 0.1444,
+          "n_active": 914,
+          "examples": [
+            "739",
+            "739",
+            "913"
+          ]
+        },
+        {
+          "latent": 440,
+          "score": 0.0967,
+          "n_active": 614,
+          "examples": [
+            "1,091",
+            "1,061",
+            "1,591"
+          ]
+        },
+        {
+          "latent": 36,
+          "score": 0.0864,
+          "n_active": 395,
+          "examples": [
+            "7",
+            "7",
+            "7"
+          ]
+        },
+        {
+          "latent": 154,
+          "score": 0.0825,
+          "n_active": 658,
+          "examples": [
+            "998",
+            "982",
+            "988"
+          ]
+        },
+        {
+          "latent": 68,
+          "score": 0.0705,
+          "n_active": 275,
+          "examples": [
+            "25",
+            "25",
+            "18"
+          ]
+        }
+      ]
+    },
+    "Release Date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 379,
+      "n_kept": 264,
+      "n_removed": 248,
+      "threshold": 0.0604,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.7344,
+      "var_share_kept": 0.2239,
+      "var_share_sae_error": 0.002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 386,
+          "score": 0.0638,
+          "n_active": 158,
+          "examples": [
+            "5 September 2013 (South Korea)",
+            "23 March 1996 (South Korea)",
+            "20 May 2005 (South Korea)"
+          ]
+        },
+        {
+          "latent": 34,
+          "score": 0.0492,
+          "n_active": 76,
+          "examples": [
+            "30 August 2013 (Taiwan)",
+            "31 August 1973 (Hong Kong)",
+            "4 May 2012 (Taiwan)"
+          ]
+        },
+        {
+          "latent": 72,
+          "score": 0.0405,
+          "n_active": 169,
+          "examples": [
+            "10 March 2014 (UK)",
+            "14 March 2014 (UK)",
+            "March 2015 (USA)"
+          ]
+        },
+        {
+          "latent": 415,
+          "score": 0.0388,
+          "n_active": 269,
+          "examples": [
+            "1922 (Poland)",
+            "1958 (Norway)",
+            "1958 (USA)"
+          ]
+        },
+        {
+          "latent": 414,
+          "score": 0.0373,
+          "n_active": 3442,
+          "examples": [
+            "12 November 2012 (USA)",
+            "12 November 2013 (USA)",
+            "12 November 2013 (USA)"
+          ]
+        }
+      ]
+    },
+    "ReviewCount": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 501,
+      "n_kept": 438,
+      "n_removed": 74,
+      "threshold": 0.0586,
+      "passed_test": 116,
+      "removed_norm_ratio": 0.2451,
+      "var_share_kept": 0.7874,
+      "var_share_sae_error": 0.0116,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 143,
+          "score": 0.1475,
+          "n_active": 772,
+          "examples": [
+            "12 user,10 critic",
+            "10 user,12 critic",
+            "10 user,12 critic"
+          ]
+        },
+        {
+          "latent": 412,
+          "score": 0.1388,
+          "n_active": 1004,
+          "examples": [
+            "3 user",
+            "3 user",
+            "3 user"
+          ]
+        },
+        {
+          "latent": 68,
+          "score": 0.1354,
+          "n_active": 867,
+          "examples": [
+            "25 user,15 critic",
+            "25 user,15 critic",
+            "15 user,25 critic"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.1249,
+          "n_active": 726,
+          "examples": [
+            "1 user,2 critic",
+            "1 user,2 critic",
+            "1 user,2 critic"
+          ]
+        },
+        {
+          "latent": 327,
+          "score": 0.1249,
+          "n_active": 638,
+          "examples": [
+            "9 user,7 critic",
+            "9 user,7 critic",
+            "9 user,7 critic"
+          ]
+        }
+      ]
+    }
+  }
+}

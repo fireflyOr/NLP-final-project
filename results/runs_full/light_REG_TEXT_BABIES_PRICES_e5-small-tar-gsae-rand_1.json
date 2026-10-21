@@ -1,0 +1,316 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -21.733202023455018,
+  "test_error": 21.733202023455018,
+  "course_metric": "r2",
+  "course_score": 0.7692106246371186,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 250.9950511455536,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 276,
+      "n_groups": 276,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 261,
+      "n_removed": 261,
+      "var_share_removed": 0.9055,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 9,
+          "latents": [
+            2009
+          ],
+          "gain_margin": 41.78,
+          "examples": [
+            "orange / pink / blue / black / purple",
+            "orange / blue / green / pink",
+            "orange / blue / green"
+          ]
+        },
+        {
+          "group": 123,
+          "latents": [
+            464
+          ],
+          "gain_margin": 33.46,
+          "examples": [
+            "mauve / cream",
+            "cream / black",
+            "cream / green"
+          ]
+        },
+        {
+          "group": 127,
+          "latents": [
+            245
+          ],
+          "gain_margin": 3.53,
+          "examples": [
+            "red / blue",
+            "red / blue",
+            "red / blue"
+          ]
+        },
+        {
+          "group": 66,
+          "latents": [
+            1787
+          ],
+          "gain_margin": 1.83,
+          "examples": [
+            "mauve / cream",
+            "cream / green / pink / chocolate",
+            "red / blue / green / orange / chocolate"
+          ]
+        },
+        {
+          "group": 255,
+          "latents": [
+            46
+          ],
+          "gain_margin": 1.74,
+          "examples": [
+            "gray",
+            "gray",
+            "gray"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 264,
+      "n_groups": 264,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 252,
+      "n_removed": 252,
+      "var_share_removed": 0.7633,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 94,
+          "latents": [
+            654
+          ],
+          "gain_margin": 217.17,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 195,
+          "latents": [
+            477
+          ],
+          "gain_margin": 66.35,
+          "examples": [
+            "Tomorrowland Pillowtime Pal",
+            "Koala",
+            "Koala"
+          ]
+        },
+        {
+          "group": 254,
+          "latents": [
+            204
+          ],
+          "gain_margin": 39.3,
+          "examples": [
+            "Sophie Harding",
+            "Sophie Harding",
+            "Sophie Harding"
+          ]
+        },
+        {
+          "group": 62,
+          "latents": [
+            1274
+          ],
+          "gain_margin": 27.43,
+          "examples": [
+            "Dr.",
+            "Dr.",
+            "CoCaLo Baby."
+          ]
+        },
+        {
+          "group": 194,
+          "latents": [
+            313
+          ],
+          "gain_margin": 26.18,
+          "examples": [
+            "Carter's",
+            "Carter's",
+            "Carter's"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 792,
+      "n_groups": 792,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 566,
+      "n_removed": 566,
+      "var_share_removed": 0.5486,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 381,
+          "latents": [
+            911
+          ],
+          "gain_margin": 1224.77,
+          "examples": [
+            "Glenna Jean",
+            "Glenna Jean",
+            "Glenna Jean"
+          ]
+        },
+        {
+          "group": 44,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 1093.93,
+          "examples": [
+            "Sumersault Ltd",
+            "Sumersault Ltd",
+            "Sumersault Ltd"
+          ]
+        },
+        {
+          "group": 716,
+          "latents": [
+            346
+          ],
+          "gain_margin": 848.54,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "group": 605,
+          "latents": [
+            1252
+          ],
+          "gain_margin": 751.07,
+          "examples": [
+            "Ace Baby Furniture",
+            "Ace Baby Furniture",
+            "Ace Baby Furniture"
+          ]
+        },
+        {
+          "group": 146,
+          "latents": [
+            1786
+          ],
+          "gain_margin": 695.03,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1273,
+      "n_groups": 1269,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 861,
+      "n_removed": 864,
+      "var_share_removed": 0.5122,
+      "var_share_sae_error": 0.0064,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            1922,
+            2009
+          ],
+          "gain_margin": 6891.75,
+          "examples": [
+            "Sweet Jojo Designs Cowgirl Collection Children's Bedding - 4-Piece Twin Set",
+            "Gallery All Crystal 10 Light Chandelier with 40mm Faceted Crystal Balls",
+            "Tulip Garden 4-Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 626,
+          "latents": [
+            1252
+          ],
+          "gain_margin": 2259.08,
+          "examples": [
+            "CRAZY DAISY 11 PIECE CRIB SET",
+            "Disney Baby Minnie Mouse Polkadots 4 Piece Crib Set",
+            "Disney Baby - Monsters, Inc. 4 Piece Crib Set"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1667
+          ],
+          "gain_margin": 1959.85,
+          "examples": [
+            "Marmont Hill - 'Belle Sugar and Spice' Peanuts Print on Canvas",
+            "Marmont Hill - 'Belle Sugar and Spice' Peanuts Print on Canvas",
+            "Marmont Hill - 'Peace and Love' Peanuts Print on White Pine Wood"
+          ]
+        },
+        {
+          "group": 1221,
+          "latents": [
+            200
+          ],
+          "gain_margin": 1943.92,
+          "examples": [
+            "2 Section Locker with Bench",
+            "Lambs & Ivy S.S. Noah 9-Piece Crib Bedding Set",
+            "Just Born Antique Chic 7-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 195,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 854.46,
+          "examples": [
+            "Mickey & Friends - Minnie Mouse Small Stencils",
+            "Carters Changing Pad Cover Printed White Stars On Navy",
+            "Minnie Mouse & Daisy Foam Characters"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,390 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23979602816165208,
+  "test_error": 0.23979602816165208,
+  "course_metric": "r2",
+  "course_score": 0.4907153616114891,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 49.2063090801239,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1763,
+      "n_groups": 1763,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1120,
+      "n_removed": 1120,
+      "var_share_removed": 0.5795,
+      "var_share_sae_error": 0.0035,
+      "top": [
+        {
+          "group": 1258,
+          "latents": [
+            887
+          ],
+          "gain_margin": 323.6,
+          "examples": [
+            "Oxford University Press (India)",
+            "Oxford University Press, Jyotiprakash Tamuli, Mouchumi Handique",
+            "Ladybird"
+          ]
+        },
+        {
+          "group": 1400,
+          "latents": [
+            94
+          ],
+          "gain_margin": 250.63,
+          "examples": [
+            "Rahul Pandita",
+            "A.K. Thakur",
+            "Chitrangada Mukherjee"
+          ]
+        },
+        {
+          "group": 519,
+          "latents": [
+            1445
+          ],
+          "gain_margin": 197.36,
+          "examples": [
+            "Ladybird Ladybird",
+            "Rhett McLaughlin",
+            "Ladybird"
+          ]
+        },
+        {
+          "group": 1525,
+          "latents": [
+            656
+          ],
+          "gain_margin": 168.3,
+          "examples": [
+            "Liv Constantine",
+            "Chris Hedges",
+            "DT Editorial Services"
+          ]
+        },
+        {
+          "group": 1518,
+          "latents": [
+            990
+          ],
+          "gain_margin": 164.9,
+          "examples": [
+            "Ladybird",
+            "Ladybird",
+            "Ladybird"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 518,
+      "n_groups": 484,
+      "n_multi_groups": 26,
+      "n_groups_dropped": 327,
+      "n_removed": 339,
+      "var_share_removed": 0.3995,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 8,
+          "latents": [
+            102,
+            946
+          ],
+          "gain_margin": 1243.03,
+          "examples": [
+            "Hardcover,\u2013 18 May 2012",
+            "Hardcover,\u2013 9 Oct 2012",
+            "Hardcover,\u2013 29 Jul 2014"
+          ]
+        },
+        {
+          "group": 110,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 433.26,
+          "examples": [
+            "Cards,\u2013 2015",
+            "Mass Market Paperback,\u2013 2015",
+            "Paperback,\u2013 2018"
+          ]
+        },
+        {
+          "group": 349,
+          "latents": [
+            703
+          ],
+          "gain_margin": 175.92,
+          "examples": [
+            "Paperback,\u2013 1 Feb 2014",
+            "Paperback,\u2013 1 Dec 2012",
+            "Paperback,\u2013 1 Dec 2012"
+          ]
+        },
+        {
+          "group": 226,
+          "latents": [
+            862
+          ],
+          "gain_margin": 132.75,
+          "examples": [
+            "Paperback,\u2013 7 Aug 2013",
+            "Paperback,\u2013 7 Aug 2013",
+            "Paperback,\u2013 7 Aug 2012"
+          ]
+        },
+        {
+          "group": 409,
+          "latents": [
+            648
+          ],
+          "gain_margin": 129.32,
+          "examples": [
+            "Plastic Comb,\u2013 DVD, NTSC",
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 877,
+      "n_groups": 877,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 684,
+      "n_removed": 684,
+      "var_share_removed": 0.5602,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 242,
+          "latents": [
+            1433
+          ],
+          "gain_margin": 251.97,
+          "examples": [
+            "Design Pattern Programming",
+            "Design Pattern Programming",
+            "Design Pattern Programming"
+          ]
+        },
+        {
+          "group": 770,
+          "latents": [
+            94
+          ],
+          "gain_margin": 189.01,
+          "examples": [
+            "Indian Writing (Books)",
+            "Indian Writing (Books)",
+            "Indian Writing (Books)"
+          ]
+        },
+        {
+          "group": 484,
+          "latents": [
+            444
+          ],
+          "gain_margin": 162.13,
+          "examples": [
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)"
+          ]
+        },
+        {
+          "group": 538,
+          "latents": [
+            653
+          ],
+          "gain_margin": 132.91,
+          "examples": [
+            "Children's Crime & Thriller (Books)",
+            "Children's Crime & Thriller (Books)",
+            "Children's Crime & Thriller (Books)"
+          ]
+        },
+        {
+          "group": 846,
+          "latents": [
+            4
+          ],
+          "gain_margin": 115.85,
+          "examples": [
+            "Family & Relationships (Books)",
+            "Family & Relationships (Books)",
+            "Family & Relationships (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1998,
+      "n_groups": 1998,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1215,
+      "n_removed": 1215,
+      "var_share_removed": 0.6559,
+      "var_share_sae_error": 0.03,
+      "top": [
+        {
+          "group": 443,
+          "latents": [
+            1453
+          ],
+          "gain_margin": 295.04,
+          "examples": [
+            "The definitive book on animation, from the Academy Award-winning animator behind Who Framed Roger Rabbit?\n\nAnimation is one of the hottest areas of filmmaking t",
+            "For centuries the nature and meaning of Islamic art has been misunderstood in the West, being regarded as no more than decoration. But in fact the abstract art ",
+            "About the book:\nAlgorithm Design Techniques: Recursion, Backtracking, Greedy, Divide and Conquer, and Dynamic Programming.\n\nAlgorithm Design Techniques is a det"
+          ]
+        },
+        {
+          "group": 620,
+          "latents": [
+            1517
+          ],
+          "gain_margin": 168.83,
+          "examples": [
+            "You know the authors' names. You recognize the title. You've probably used this book yourself. This is The Elements of Style, the classic style manual, now in a",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Shorthand is the art of representing spoken sounds by written signs. Pitman Shorthand provides a way of representing every sound heard in English words. Issac P"
+          ]
+        },
+        {
+          "group": 1906,
+          "latents": [
+            1166
+          ],
+          "gain_margin": 145.84,
+          "examples": [
+            "Scale, chord, arpeggio and cadence studies in all major and minor keys presented in a convenient two-page format. Includes an in-depth 12 page explanation that ",
+            "CCENT/CCNA ICND1 Official Certification Guide is a comprehensive self-study tool for professionals preparing for the new ICND1 exam. Complete coverage of all ex",
+            "The world's premier method for learning modern plectrum/flatpick style guitar, time-tested and proven successful in building the theoretic and technical foundat"
+          ]
+        },
+        {
+          "group": 435,
+          "latents": [
+            1930
+          ],
+          "gain_margin": 141.37,
+          "examples": [
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. "
+          ]
+        },
+        {
+          "group": 83,
+          "latents": [
+            1913
+          ],
+          "gain_margin": 135.32,
+          "examples": [
+            "\"I don't even feel like I've scratched the surface of what I can do with Python\"\nWith Python Tricks: The Book you'll discover Python's best practices and the po",
+            "Take tiny steps to enter the big world of data science through this interesting guide About This Book * Learn the fundamentals of machine learning and build you",
+            "Python for Everybody is designed to introduce students to programming and software development through the lens of exploring data.You can think of the Python pr"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1942,
+      "n_groups": 1942,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1245,
+      "n_removed": 1245,
+      "var_share_removed": 0.6178,
+      "var_share_sae_error": 0.0242,
+      "top": [
+        {
+          "group": 1774,
+          "latents": [
+            261
+          ],
+          "gain_margin": 238.17,
+          "examples": [
+            "Photography: The Definitive Visual History",
+            "National Geographic Ultimate Field Guide to Photography: Revised and Expanded (Photography Field Guides)",
+            "Mastering Composition: The Definitive Guide for Photographers"
+          ]
+        },
+        {
+          "group": 292,
+          "latents": [
+            1664
+          ],
+          "gain_margin": 166.17,
+          "examples": [
+            "The Boy You've Loved Reading About Box Set",
+            "Neil Gaiman & Chris Riddell Box Set",
+            "Batman by Scott Snyder & Greg Capullo Box Set"
+          ]
+        },
+        {
+          "group": 1932,
+          "latents": [
+            444
+          ],
+          "gain_margin": 151.81,
+          "examples": [
+            "Soccernomics: Why England Lose, Why Germany, Spain and France Win, and Why One Day The Rest of the World will Finally Catch Up",
+            "5 Language Visual Dictionary: English, French, German, Spanish, Italian (Dictionaries)",
+            "Computer Coding Games for Kids: A Step-by-Step Visual Guide to Building Your Own Computer Games"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            1624
+          ],
+          "gain_margin": 140.1,
+          "examples": [
+            "It's All About The Click",
+            "V for Vendetta Deluxe Collector Set",
+            "About Grace"
+          ]
+        },
+        {
+          "group": 686,
+          "latents": [
+            863
+          ],
+          "gain_margin": 122.51,
+          "examples": [
+            "Tinkle Double Digest No. 51",
+            "Tinkle Double Digest No. 37",
+            "First Star I See Tonight: A Chicago Stars Novel"
+          ]
+        }
+      ]
+    }
+  }
+}

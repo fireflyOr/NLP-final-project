@@ -1,0 +1,392 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4047329579210657,
+  "test_error": 1.4047329579210657,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7947833659599758,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 170.44561958312988,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 581,
+      "n_groups": 577,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 519,
+      "n_removed": 521,
+      "var_share_removed": 0.6398,
+      "var_share_sae_error": 0.0001,
+      "top": [
+        {
+          "group": 332,
+          "latents": [
+            873
+          ],
+          "gain_margin": 4782.08,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 514,
+          "latents": [
+            643
+          ],
+          "gain_margin": 2266.29,
+          "examples": [
+            "13-14 yrs",
+            "13-20 yrs",
+            "13-20 yrs"
+          ]
+        },
+        {
+          "group": 136,
+          "latents": [
+            1435
+          ],
+          "gain_margin": 2172.42,
+          "examples": [
+            "10-16 yrs",
+            "10-16 yrs",
+            "10-16 yrs"
+          ]
+        },
+        {
+          "group": 484,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 2028.46,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 531,
+          "latents": [
+            703
+          ],
+          "gain_margin": 1721.24,
+          "examples": [
+            "1-1 yrs",
+            "1-1 yrs",
+            "1-4 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2027,
+      "n_groups": 2024,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1101,
+      "n_removed": 1102,
+      "var_share_removed": 0.3006,
+      "var_share_sae_error": 0.0422,
+      "top": [
+        {
+          "group": 943,
+          "latents": [
+            1180
+          ],
+          "gain_margin": 2775.19,
+          "examples": [
+            " Hands-on experience ...",
+            "  Experience  & ...",
+            "          Experience with the ..."
+          ]
+        },
+        {
+          "group": 267,
+          "latents": [
+            1559
+          ],
+          "gain_margin": 1501.14,
+          "examples": [
+            "Flexible attitude to work and willingness to work outside core hours on occasion to meet deadlines;As a ...",
+            "Tech.- 5 - 7 - years experience;Good knowledge of polymer and surfactant structure property relationship ...",
+            "Location: Gurgaon ..."
+          ]
+        },
+        {
+          "group": 1197,
+          "latents": [
+            228
+          ],
+          "gain_margin": 893.79,
+          "examples": [
+            " - 10+ years overall experience ...",
+            "Experience : 10+ yrs;Education Background - Tier ...",
+            "10 years of work experience;Good communication and collaboration skills are essential;Domain knowledge ..."
+          ]
+        },
+        {
+          "group": 179,
+          "latents": [
+            1956
+          ],
+          "gain_margin": 872.95,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 1847,
+          "latents": [
+            73
+          ],
+          "gain_margin": 693.48,
+          "examples": [
+            "Identify cost elements required in a given solution and gather the appropriate cost assumptions required ...",
+            "Identify cost elements required in a given solution and gather the appropriate cost assumptions required ...",
+            "Ensure process assessments leveraging knowledge about the different IPA solutions and its capabilities, ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1999,
+      "n_groups": 1977,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 944,
+      "n_removed": 947,
+      "var_share_removed": 0.2159,
+      "var_share_sae_error": 0.0327,
+      "top": [
+        {
+          "group": 34,
+          "latents": [
+            1983
+          ],
+          "gain_margin": 3233.4,
+          "examples": [
+            "Email Support Executive",
+            "Email Support Executive",
+            "Tender Executive"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            311,
+            1415
+          ],
+          "gain_margin": 2849.63,
+          "examples": [
+            "Manager - Supply",
+            "Manager",
+            "Manager"
+          ]
+        },
+        {
+          "group": 1662,
+          "latents": [
+            1449
+          ],
+          "gain_margin": 1870.51,
+          "examples": [
+            "Associate Director - Analytics",
+            "Associate Director - Analytics",
+            "Associate Director - Analytics"
+          ]
+        },
+        {
+          "group": 1948,
+          "latents": [
+            1148
+          ],
+          "gain_margin": 1495.39,
+          "examples": [
+            "Head - Sales Operations",
+            "Head Marketing",
+            "Head Marketing"
+          ]
+        },
+        {
+          "group": 1706,
+          "latents": [
+            564
+          ],
+          "gain_margin": 1399.27,
+          "examples": [
+            "Freshers (voice)",
+            "B Com Fresher",
+            "Fresher - Analytics"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1947,
+      "n_groups": 1919,
+      "n_multi_groups": 21,
+      "n_groups_dropped": 848,
+      "n_removed": 850,
+      "var_share_removed": 0.2092,
+      "var_share_sae_error": 0.0275,
+      "top": [
+        {
+          "group": 294,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 1820.33,
+          "examples": [
+            "Outsourcing, Subject Matter Expert, Operations leadership...",
+            "Outsourcing, Operations, advanced analytics, Manager Technology",
+            "Outsourcing, Operations, advanced analytics, Manager Technology"
+          ]
+        },
+        {
+          "group": 365,
+          "latents": [
+            1497
+          ],
+          "gain_margin": 1377.38,
+          "examples": [
+            "analytics, analytics head, sas, reporting",
+            "Analytics, SAS, people management, P&C analytics, Analytics Head",
+            "Analytics, SAS, people management, P&C analytics, Analytics Head"
+          ]
+        },
+        {
+          "group": 1735,
+          "latents": [
+            288
+          ],
+          "gain_margin": 1236.97,
+          "examples": [
+            "voice analyst , voice research",
+            "technical voice process, bpo voice, technical support, root cause analysis,...",
+            "database management, voice"
+          ]
+        },
+        {
+          "group": 414,
+          "latents": [
+            1405
+          ],
+          "gain_margin": 828.81,
+          "examples": [
+            "seo, seo executive, search engine optimization executive...",
+            "seo, seo executive, search engine optimization executive...",
+            "Sales Executive Activities"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            701,
+            809,
+            968
+          ],
+          "gain_margin": 785.53,
+          "examples": [
+            "project management, project leading, requirements management, gap analysis,...",
+            "Financial Accounting, Mba Finance, Financial Management, Consolidation...",
+            "Financial Accounting, Mba Finance, Financial Management, Consolidation..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 949,
+      "n_groups": 941,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 818,
+      "n_removed": 826,
+      "var_share_removed": 0.8596,
+      "var_share_sae_error": 0.003,
+      "top": [
+        {
+          "group": 431,
+          "latents": [
+            1276
+          ],
+          "gain_margin": 354.85,
+          "examples": [
+            "Central African Republic",
+            "South Korea",
+            "Sudan"
+          ]
+        },
+        {
+          "group": 208,
+          "latents": [
+            1757
+          ],
+          "gain_margin": 303.81,
+          "examples": [
+            "Canada",
+            "Canada",
+            "Canada"
+          ]
+        },
+        {
+          "group": 882,
+          "latents": [
+            380
+          ],
+          "gain_margin": 257.58,
+          "examples": [
+            "Bengaluru, Mumbai",
+            "Bengaluru, Mumbai",
+            "Bengaluru, Mumbai"
+          ]
+        },
+        {
+          "group": 187,
+          "latents": [
+            1485
+          ],
+          "gain_margin": 191.98,
+          "examples": [
+            "Bengaluru(Dairy Circle)",
+            "Bengaluru(Dairy Circle)",
+            "Bengaluru(Dairy Circle)"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            2037
+          ],
+          "gain_margin": 162.75,
+          "examples": [
+            "Canada, Germany",
+            "Germany, Hong Kong",
+            "Canada, Hong Kong"
+          ]
+        }
+      ]
+    }
+  }
+}

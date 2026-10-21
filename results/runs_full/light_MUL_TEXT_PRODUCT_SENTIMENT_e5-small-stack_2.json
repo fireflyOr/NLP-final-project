@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-stack",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6367266883890031,
+  "test_error": 0.6367266883890031,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8785831852245131,
+  "n_text_cols": 1,
+  "n_text_features": 34,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 4.7870800495147705,
+  "diagnostics": {}
+}

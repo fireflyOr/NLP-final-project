@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.9886916386943341,
+  "test_error": 0.9886916386943341,
+  "course_metric": "r2",
+  "course_score": 0.3791071795055424,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.07638216018677,
+  "diagnostics": {
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 382,
+      "n_removed": 130,
+      "threshold": 0.0544,
+      "passed_test": 23,
+      "removed_norm_ratio": 0.4085,
+      "var_share_kept": 0.5672,
+      "var_share_sae_error": 0.2138,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 338,
+          "score": 0.1427,
+          "n_active": 462,
+          "examples": [
+            "Mario Bros.",
+            "Dr. Mario",
+            "Dr. Mario"
+          ]
+        },
+        {
+          "latent": 107,
+          "score": 0.1225,
+          "n_active": 634,
+          "examples": [
+            "Devil May Cry",
+            "Devil May Cry 4",
+            "Devil May Cry 4"
+          ]
+        },
+        {
+          "latent": 395,
+          "score": 0.1049,
+          "n_active": 699,
+          "examples": [
+            "Taiko no Tatsujin Wii: Dodon to 2 Yome!",
+            "Donkey Kong GB: Dinky Kong & Dixie Kong",
+            "Donkey Kong Country 2: Diddy's Kong Quest"
+          ]
+        },
+        {
+          "latent": 423,
+          "score": 0.1043,
+          "n_active": 693,
+          "examples": [
+            "Final Fantasy VI",
+            "Final Fantasy",
+            "Final Fantasy"
+          ]
+        },
+        {
+          "latent": 52,
+          "score": 0.0993,
+          "n_active": 529,
+          "examples": [
+            "God of War",
+            "Ratchet & Clank",
+            "God of War: Ghost of Sparta"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 478,
+      "n_removed": 34,
+      "threshold": 0.0773,
+      "passed_test": 30,
+      "removed_norm_ratio": 0.2514,
+      "var_share_kept": 0.942,
+      "var_share_sae_error": 0.0009,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 331,
+          "score": 0.2037,
+          "n_active": 447,
+          "examples": [
+            "Office Create",
+            "Inti Creates",
+            "Kaga Create"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.1931,
+          "n_active": 625,
+          "examples": [
+            "Mojang",
+            "Mojang",
+            "Mojang"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.1862,
+          "n_active": 608,
+          "examples": [
+            "Disney Interactive Studios",
+            "Disney Interactive Studios",
+            "Disney Interactive Studios"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.1833,
+          "n_active": 515,
+          "examples": [
+            "Big Ben Interactive",
+            "Big Ben Interactive",
+            "Big Ben Interactive"
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.1812,
+          "n_active": 1445,
+          "examples": [
+            "Idea Factory International",
+            "Idea Factory International",
+            "Coconuts Japan"
+          ]
+        }
+      ]
+    }
+  }
+}

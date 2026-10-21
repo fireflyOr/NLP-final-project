@@ -1,0 +1,397 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.401408638564285,
+  "test_error": 1.401408638564285,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7961323458358942,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 164.76003670692444,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 633,
+      "n_groups": 633,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 584,
+      "n_removed": 584,
+      "var_share_removed": 0.6471,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 231,
+          "latents": [
+            873
+          ],
+          "gain_margin": 3871.37,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 588,
+          "latents": [
+            389
+          ],
+          "gain_margin": 3486.5,
+          "examples": [
+            "16-18 yrs",
+            "11-18 yrs",
+            "11-18 yrs"
+          ]
+        },
+        {
+          "group": 531,
+          "latents": [
+            32
+          ],
+          "gain_margin": 2444.85,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 456,
+          "latents": [
+            764
+          ],
+          "gain_margin": 1690.83,
+          "examples": [
+            "1-1 yrs",
+            "1-1 yrs",
+            "1-2 yrs"
+          ]
+        },
+        {
+          "group": 421,
+          "latents": [
+            611
+          ],
+          "gain_margin": 1462.49,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2021,
+      "n_groups": 2013,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1137,
+      "n_removed": 1144,
+      "var_share_removed": 0.2937,
+      "var_share_sae_error": 0.0419,
+      "top": [
+        {
+          "group": 481,
+          "latents": [
+            1458
+          ],
+          "gain_margin": 1204.17,
+          "examples": [
+            "About Fototentia Diagnostics Private Limited : We are a solar energy services company formed by IIT ...",
+            "As an Analyst - Decision Science at Jumbotail you will-    Bring a thorough understanding of ...",
+            "- Should have handled a FB marketing budget in excess 50 lacs preferably;- Should have experience of ..."
+          ]
+        },
+        {
+          "group": 483,
+          "latents": [
+            1744
+          ],
+          "gain_margin": 1088.87,
+          "examples": [
+            "We follow only white hat techniques to bring in organic results;* Experience with link building process, ...",
+            "- Is proficient at identifying and using the relevant analytical tools and ensure zero-defect in all ...",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 1800,
+          "latents": [
+            228
+          ],
+          "gain_margin": 827.58,
+          "examples": [
+            "10 years of work experience;Good communication and collaboration skills are essential;Domain knowledge ...",
+            "10 years of work experience and preferably leading small size team;Have experience in Travel or Retail/ ...",
+            "- Minimum of 10 years experience in designing and developing web applications using latest technologies ..."
+          ]
+        },
+        {
+          "group": 135,
+          "latents": [
+            1934
+          ],
+          "gain_margin": 780.58,
+          "examples": [
+            "-Diploma in Chemical / Electrical / Mechanical Engineering with 10 years corrosion experience;-English ...",
+            "    Data Analyst Trainee    Job ID R- 10098308     Date posted 10/ 24/ 2018 ...",
+            "Annuities Domain experience is mandatory;Work Experience\t- 8 to 15 ..."
+          ]
+        },
+        {
+          "group": 1413,
+          "latents": [
+            752
+          ],
+          "gain_margin": 607.71,
+          "examples": [
+            "Engineering graduate with comprehensive experience for 15 ...",
+            "Annuities Domain experience is mandatory;Work Experience\t8 to 15 ...",
+            "Annuities Domain experience is mandatory;Work Experience\t- 8 to 15 ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2001,
+      "n_groups": 1981,
+      "n_multi_groups": 15,
+      "n_groups_dropped": 913,
+      "n_removed": 913,
+      "var_share_removed": 0.2145,
+      "var_share_sae_error": 0.0326,
+      "top": [
+        {
+          "group": 29,
+          "latents": [
+            311,
+            1415
+          ],
+          "gain_margin": 2854.01,
+          "examples": [
+            "Manager",
+            "Manager",
+            "Manager"
+          ]
+        },
+        {
+          "group": 93,
+          "latents": [
+            1983
+          ],
+          "gain_margin": 2839.36,
+          "examples": [
+            "Research Executive",
+            "Research Executive",
+            "Email Support Executive"
+          ]
+        },
+        {
+          "group": 1014,
+          "latents": [
+            1449
+          ],
+          "gain_margin": 1600.39,
+          "examples": [
+            "Analytics Manager",
+            "Analytics Manager",
+            "Analytics Manager"
+          ]
+        },
+        {
+          "group": 1862,
+          "latents": [
+            1148
+          ],
+          "gain_margin": 1316.43,
+          "examples": [
+            "Head Marketing",
+            "Head Marketing",
+            "Head Marketing"
+          ]
+        },
+        {
+          "group": 1724,
+          "latents": [
+            357
+          ],
+          "gain_margin": 1303.4,
+          "examples": [
+            "WALK IN - Record To Report",
+            "Walk in : Finance Executive",
+            "Walk in for Back Office Executive in Bank"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1964,
+      "n_groups": 1936,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 884,
+      "n_removed": 885,
+      "var_share_removed": 0.2189,
+      "var_share_sae_error": 0.028,
+      "top": [
+        {
+          "group": 272,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 2074.0,
+          "examples": [
+            "Outsourcing, Analytical, Operations, Licensing, Usage, Technical support...",
+            "Outsourcing, Operations, advanced analytics, Manager Technology",
+            "Outsourcing, Operations, advanced analytics, Manager Technology"
+          ]
+        },
+        {
+          "group": 18,
+          "latents": [
+            1449,
+            1497
+          ],
+          "gain_margin": 1480.75,
+          "examples": [
+            "Analytics, Manager - Analytics, Model Development, strategy development...",
+            "Analytics, Manager - Analytics, Model Development, strategy development...",
+            "Analytics, Head - Analytics, data analytics, Data Science, business process..."
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            136,
+            701,
+            1249,
+            1440,
+            1557,
+            1573,
+            1799
+          ],
+          "gain_margin": 993.48,
+          "examples": [
+            "Data Management, Program Management, Management Consulting...",
+            "Data Management, Program Management, Management Consulting...",
+            "Project Management, Operations Management, Program Management..."
+          ]
+        },
+        {
+          "group": 301,
+          "latents": [
+            1708
+          ],
+          "gain_margin": 834.23,
+          "examples": [
+            "call monitoring, quality analysis, feedback, Call Audit...",
+            "call monitoring, quality analysis, feedback, Call Audit...",
+            "Call Monitoring, Quality Monitoring, Quality Analysis, Call Center, Inbound..."
+          ]
+        },
+        {
+          "group": 933,
+          "latents": [
+            1533
+          ],
+          "gain_margin": 829.51,
+          "examples": [
+            "travel consultant, ticketing executive, travel executive...",
+            "seo, seo executive, search engine optimization executive...",
+            "seo, seo executive, search engine optimization executive..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 947,
+      "n_groups": 939,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 795,
+      "n_removed": 802,
+      "var_share_removed": 0.839,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 187,
+          "latents": [
+            1757
+          ],
+          "gain_margin": 308.44,
+          "examples": [
+            "Fiji",
+            "Australia, Canada",
+            "Australia, Canada"
+          ]
+        },
+        {
+          "group": 685,
+          "latents": [
+            814
+          ],
+          "gain_margin": 172.36,
+          "examples": [
+            "Anywherein India",
+            "Anywherein India",
+            "Anywherein India"
+          ]
+        },
+        {
+          "group": 786,
+          "latents": [
+            1026
+          ],
+          "gain_margin": 153.71,
+          "examples": [
+            "Bengaluru, Mumbai",
+            "Bengaluru, Mumbai",
+            "Bengaluru, Mumbai"
+          ]
+        },
+        {
+          "group": 156,
+          "latents": [
+            1700
+          ],
+          "gain_margin": 147.23,
+          "examples": [
+            "Phagwara, Patna, Patiala, Pathankot, Paradeep, Palwal, Palakkad, Panjim, Pathanamthitta",
+            "Nagar, Nagpur, Nasik, Neemrana, Nizamabad, Varanasi, Vijayawada, Vasai, Vadodara",
+            "Patna, Dehradun, Bikaner, Hisar, Shimla, Ratlam, Raipur, Bareilly, Bathinda"
+          ]
+        },
+        {
+          "group": 51,
+          "latents": [
+            1950
+          ],
+          "gain_margin": 139.7,
+          "examples": [
+            "Australia, Hong Kong",
+            "Saudi Arabia, Singapore, South Africa",
+            "Australia, Canada, Dubai/ UAE, Hong Kong, New Zealand, Singapore"
+          ]
+        }
+      ]
+    }
+  }
+}

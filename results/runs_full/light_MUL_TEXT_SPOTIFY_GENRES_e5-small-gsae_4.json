@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.235201783531272,
+  "test_error": 3.235201783531272,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9001871007425859,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1268.3051462173462,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 427,
+      "n_removed": 428,
+      "var_share_removed": 0.1389,
+      "var_share_sae_error": 0.0953,
+      "top": [
+        {
+          "group": 1993,
+          "latents": [
+            276
+          ],
+          "gain_margin": 3673.46,
+          "examples": [
+            "Sobre N\u00f3s (Ao Vivo)",
+            "Na Moda (Ao Vivo)",
+            "Playlist (Ao Vivo)"
+          ]
+        },
+        {
+          "group": 1092,
+          "latents": [
+            554
+          ],
+          "gain_margin": 3361.09,
+          "examples": [
+            "\u5fa9\u9ed1\u738b - \u5929\u9f8d\u516b\u90e8",
+            "\u7b2c\u4e8c\u5929\u5802",
+            "\u4f46\u9858\u4eba\u9577\u4e45"
+          ]
+        },
+        {
+          "group": 2012,
+          "latents": [
+            542
+          ],
+          "gain_margin": 2210.73,
+          "examples": [
+            "Un Bai\u00f3n para el Ojo Idiota",
+            "El Pr\u00edncipe de la Canci\u00f3n",
+            "El Disco de Tu Coraz\u00f3n"
+          ]
+        },
+        {
+          "group": 182,
+          "latents": [
+            1532
+          ],
+          "gain_margin": 2101.48,
+          "examples": [
+            "Hairspray (Original Broadway Cast Recording)",
+            "Songs for a New World (New York City Center 2018 Encores! Off-Center Cast Recording)",
+            "Songs for a New World (New York City Center 2018 Encores! Off-Center Cast Recording)"
+          ]
+        },
+        {
+          "group": 986,
+          "latents": [
+            1300
+          ],
+          "gain_margin": 1939.97,
+          "examples": [
+            "\u8207\u6211\u5e38\u5728 (\u83ef\u661f40\u7cfb\u5217)",
+            "\u5e78\u798f (\u83ef\u661f40\u7cfb\u5217)",
+            "\u6211\u9084\u662f\u4f60\u7684 (\u60c5\u6b4c\u738b)"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 107,
+      "n_removed": 107,
+      "var_share_removed": 0.0446,
+      "var_share_sae_error": 0.0831,
+      "top": [
+        {
+          "group": 453,
+          "latents": [
+            1373
+          ],
+          "gain_margin": 3119.24,
+          "examples": [
+            "Karunesh",
+            "Navaan Sandhu",
+            "Sujatha;Vijay Yesudas"
+          ]
+        },
+        {
+          "group": 2047,
+          "latents": [
+            94
+          ],
+          "gain_margin": 2202.8,
+          "examples": [
+            "Mohan Kannan;Amitabh Bhattacharya",
+            "Vijay Antony;Jayadev;Rajalakshmi",
+            "Anuradha Paudwal;Kumar Sanu"
+          ]
+        },
+        {
+          "group": 1042,
+          "latents": [
+            507
+          ],
+          "gain_margin": 1664.05,
+          "examples": [
+            "Hank Williams",
+            "Hank Williams",
+            "Hank Williams"
+          ]
+        },
+        {
+          "group": 1498,
+          "latents": [
+            721
+          ],
+          "gain_margin": 1271.98,
+          "examples": [
+            "Jacob's Piano",
+            "Smyang Piano",
+            "Smyang Piano"
+          ]
+        },
+        {
+          "group": 1354,
+          "latents": [
+            735
+          ],
+          "gain_margin": 1211.61,
+          "examples": [
+            "Hillsong Worship;Hillsong Young & Free",
+            "Hillsong Worship;Hillsong Young & Free",
+            "Hillsong Young & Free"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2043,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 630,
+      "n_removed": 630,
+      "var_share_removed": 0.1675,
+      "var_share_sae_error": 0.1078,
+      "top": [
+        {
+          "group": 1800,
+          "latents": [
+            1304
+          ],
+          "gain_margin": 3301.88,
+          "examples": [
+            "\u5931\u604b\u30bd\u30f3\u30b0\u6ca2\u5c71\u8074\u3044\u3066 \u6ce3\u3044\u3066\u3070\u304b\u308a\u306e\u79c1\u306f\u3082\u3046\u3002",
+            "\u3053\u3093\u306a\u306b\u60b2\u3057\u3044\u306e\u306b\u8179\u304c\u9cf4\u308b",
+            "\u3048\u3063\u3068\u5e72\u652f\u304c\u30fc\u308b"
+          ]
+        },
+        {
+          "group": 1873,
+          "latents": [
+            276
+          ],
+          "gain_margin": 2574.15,
+          "examples": [
+            "Sobre N\u00f3s - Ao Vivo",
+            "Uma vida s\u00f3 - Ao vivo",
+            "Vida Boa (Ao Vivo)"
+          ]
+        },
+        {
+          "group": 1855,
+          "latents": [
+            1108
+          ],
+          "gain_margin": 2060.74,
+          "examples": [
+            "\u6708\u7403\u4e0a\u78b0\u9762",
+            "\u9918\u751f\u90fd\u662f\u4f60",
+            "\u5e78\u798f\u6469\u5929\u8f2a"
+          ]
+        },
+        {
+          "group": 350,
+          "latents": [
+            1046
+          ],
+          "gain_margin": 1945.54,
+          "examples": [
+            "\u611b\u306e\u30ec\u30f3\u30bf\u30eb (Prod. \u30de\u30ab\u30ed\u30cb\u3048\u3093\u3074\u3064)",
+            "\u30a2\u30a4\u30ce\u30ab\u30bf\u30c1",
+            "\u597d\u304d\u3060\u304b\u3089\u3002"
+          ]
+        },
+        {
+          "group": 1275,
+          "latents": [
+            131
+          ],
+          "gain_margin": 1722.61,
+          "examples": [
+            "Chorando Se Foi",
+            "Harpo",
+            "Os Mlk do Momento"
+          ]
+        }
+      ]
+    }
+  }
+}

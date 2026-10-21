@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7149841549438267,
+  "test_error": 0.2850158450561733,
+  "course_metric": "auroc",
+  "course_score": 0.7149841549438267,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 96.24615669250488,
+  "diagnostics": {
+    "created_at": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 383,
+      "n_kept": 354,
+      "n_removed": 158,
+      "threshold": 0.0392,
+      "passed_test": 18,
+      "removed_norm_ratio": 0.5755,
+      "var_share_kept": 0.5352,
+      "var_share_sae_error": 0.011,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 488,
+          "score": 0.069,
+          "n_active": 253,
+          "examples": [
+            "1970-01-01 00:00:01.404121510",
+            "1970-01-01 00:00:01.404162620",
+            "1970-01-01 00:00:01.404240008"
+          ]
+        },
+        {
+          "latent": 20,
+          "score": 0.0689,
+          "n_active": 259,
+          "examples": [
+            "1970-01-01 00:00:01.404699688",
+            "1970-01-01 00:00:01.404688994",
+            "1970-01-01 00:00:01.404696009"
+          ]
+        },
+        {
+          "latent": 470,
+          "score": 0.0681,
+          "n_active": 251,
+          "examples": [
+            "1970-01-01 00:00:01.404865937",
+            "1970-01-01 00:00:01.404801232",
+            "1970-01-01 00:00:01.404908627"
+          ]
+        },
+        {
+          "latent": 190,
+          "score": 0.0651,
+          "n_active": 257,
+          "examples": [
+            "1970-01-01 00:00:01.404162620",
+            "1970-01-01 00:00:01.404254921",
+            "1970-01-01 00:00:01.404452370"
+          ]
+        },
+        {
+          "latent": 281,
+          "score": 0.0581,
+          "n_active": 771,
+          "examples": [
+            "1970-01-01 00:00:01.379480206",
+            "1970-01-01 00:00:01.372902097",
+            "1970-01-01 00:00:01.371417120"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 412,
+      "n_kept": 382,
+      "n_removed": 130,
+      "threshold": 0.0378,
+      "passed_test": 21,
+      "removed_norm_ratio": 0.5118,
+      "var_share_kept": 0.6091,
+      "var_share_sae_error": 0.0104,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 141,
+          "score": 0.0623,
+          "n_active": 1326,
+          "examples": [
+            "1970-01-01 00:00:01.355040000",
+            "1970-01-01 00:00:01.321740000",
+            "1970-01-01 00:00:01.427040000"
+          ]
+        },
+        {
+          "latent": 119,
+          "score": 0.0587,
+          "n_active": 507,
+          "examples": [
+            "1970-01-01 00:00:01.408075200",
+            "1970-01-01 00:00:01.408130497",
+            "1970-01-01 00:00:01.408147140"
+          ]
+        },
+        {
+          "latent": 97,
+          "score": 0.0523,
+          "n_active": 2419,
+          "examples": [
+            "1970-01-01 00:00:01.361772000",
+            "1970-01-01 00:00:01.335762000",
+            "1970-01-01 00:00:01.418277600"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0496,
+          "n_active": 8767,
+          "examples": [
+            "1970-01-01 00:00:01.298001600",
+            "1970-01-01 00:00:01.368201600",
+            "1970-01-01 00:00:01.370030400"
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0484,
+          "n_active": 937,
+          "examples": [
+            "1970-01-01 00:00:01.427753220",
+            "1970-01-01 00:00:01.426010137",
+            "1970-01-01 00:00:01.427200148"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 363,
+      "n_removed": 149,
+      "threshold": 0.0406,
+      "passed_test": 28,
+      "removed_norm_ratio": 0.3848,
+      "var_share_kept": 0.4747,
+      "var_share_sae_error": 0.303,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 16,
+          "score": 0.1002,
+          "n_active": 1821,
+          "examples": [
+            "\"I am trying to complete a trilogy of fantasy-fiction novels I began more than 10 years ago.\"",
+            "\"I have a story, but I am not a writer. I want to get my story out to the masses. I hope God's work in my life will inspire others.\"",
+            "\"I am wanting to do a professional recording of my songs.\""
+          ]
+        },
+        {
+          "latent": 270,
+          "score": 0.0671,
+          "n_active": 871,
+          "examples": [
+            "\"Looking to start up a studio showcasing the beauty and wonder of all great sporting events and the amazing athletes that excel in it.\"",
+            "\"The California Museum is seeking funding to research and produce an exhibit celebrating Ray Eames' centennial.\"",
+            "\"I want to find & remodel a space for a Future Dance, Fitness & Holistic Wellness Center/School for troubled youth/young adults.\""
+          ]
+        },
+        {
+          "latent": 60,
+          "score": 0.0663,
+          "n_active": 627,
+          "examples": [
+            "\"Sports Stream is a premier sports live streaming platform that provides users with a more affordable option to watching HD sports.\"",
+            "\"Just like the title implies, we want our audience to come prepared to be wild and crazy and enjoy the festivities of the night.\"",
+            "\"Our goal is to create a welcoming chill out space with a variety of teas, aerials, lounge music, offered 24hrs to event participants.\""
+          ]
+        },
+        {
+          "latent": 449,
+          "score": 0.0601,
+          "n_active": 1142,
+          "examples": [
+            "\"We want to program a wider variety of excellent films.\"",
+            "\"A film about the art of grieving, and how it can make us better people for those who are still with us.\"",
+            "\"The Film Brewer is a website devoted to discussions about film and television.  I have a unique outlook and dedication to film history.\""
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0591,
+          "n_active": 1151,
+          "examples": [
+            "\"Let's get away!\"",
+            "\"READ THE UPDATE!!!\"",
+            "\"Funding successful!\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 330,
+      "n_removed": 182,
+      "threshold": 0.0409,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.4896,
+      "var_share_kept": 0.4165,
+      "var_share_sae_error": 0.2734,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 112,
+          "score": 0.0778,
+          "n_active": 4183,
+          "examples": [
+            "\"degrees\"",
+            "\"h4\"",
+            "\"seasons\""
+          ]
+        },
+        {
+          "latent": 103,
+          "score": 0.0581,
+          "n_active": 480,
+          "examples": [
+            "\"safe-wallet-case-for-iphone-6simplify-your-everyda\"",
+            "\"wildely-raw\"",
+            "\"smultronstallet-or-where-wild-strawberries-grow\""
+          ]
+        },
+        {
+          "latent": 173,
+          "score": 0.0454,
+          "n_active": 1142,
+          "examples": [
+            "\"bikes-in-space-2-more-feminist-bicycle-science-fic\"",
+            "\"allzumenschliches-all-too-human-sci-fi-space-adven\"",
+            "\"protoflux-the-first-magnetic-filament-for-your-3d\""
+          ]
+        },
+        {
+          "latent": 368,
+          "score": 0.0453,
+          "n_active": 473,
+          "examples": [
+            "\"the-grain-back-card-deck-printed-in-the-uk\"",
+            "\"happy-ending-greetingstm-crude-cards\"",
+            "\"breaking-bad-themed-playing-cards\""
+          ]
+        },
+        {
+          "latent": 4,
+          "score": 0.0427,
+          "n_active": 869,
+          "examples": [
+            "\"blkchurch-customisable-watches\"",
+            "\"hat-triqs-stickers\"",
+            "\"morning-glory\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 327,
+      "n_removed": 185,
+      "threshold": 0.0425,
+      "passed_test": 10,
+      "removed_norm_ratio": 0.4964,
+      "var_share_kept": 0.4006,
+      "var_share_sae_error": 0.2923,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 112,
+          "score": 0.0829,
+          "n_active": 3744,
+          "examples": [
+            "\"NATIVE\"",
+            "\"Blue\"",
+            "\"One\""
+          ]
+        },
+        {
+          "latent": 172,
+          "score": 0.0759,
+          "n_active": 1106,
+          "examples": [
+            "\"On the Buses (Canceled)\"",
+            "\"My Apps (Canceled)\"",
+            "\"Research Study (Canceled)\""
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0737,
+          "n_active": 819,
+          "examples": [
+            "\"SAVED! The Anthology (Canceled)\"",
+            "\"Pocket mosters: de film (Canceled)\"",
+            "\"America's Cathedrals (Canceled)\""
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.0546,
+          "n_active": 485,
+          "examples": [
+            "\"Playing Cards Deconstructed with Royal Pips by USPCC\"",
+            "\"Cards for Kindness\"",
+            "\"Cats! A 54-Card Deck of Cat Playing Cards\""
+          ]
+        },
+        {
+          "latent": 460,
+          "score": 0.0534,
+          "n_active": 704,
+          "examples": [
+            "\"Device Stand for laptops, gaming consoles, and externals\"",
+            "\"Wall Socket 2.1 amp USB Charger w/ 180\u00b0 Plug Rotation\"",
+            "\"PC Daddy: Low-cost USB AM/FM/Shortwave radio for your PC\""
+          ]
+        }
+      ]
+    }
+  }
+}

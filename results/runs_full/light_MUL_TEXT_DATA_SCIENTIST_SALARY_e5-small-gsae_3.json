@@ -1,0 +1,394 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4041174780685797,
+  "test_error": 1.4041174780685797,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7928702354582869,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 166.8657820224762,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 562,
+      "n_groups": 550,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 511,
+      "n_removed": 520,
+      "var_share_removed": 0.6961,
+      "var_share_sae_error": 0.0,
+      "top": [
+        {
+          "group": 356,
+          "latents": [
+            873
+          ],
+          "gain_margin": 3546.41,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 406,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 2167.41,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 499,
+          "latents": [
+            1184
+          ],
+          "gain_margin": 2018.82,
+          "examples": [
+            "11-21 yrs",
+            "15-21 yrs",
+            "15-21 yrs"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            1418,
+            2012
+          ],
+          "gain_margin": 1369.84,
+          "examples": [
+            "2-2 yrs",
+            "2-2 yrs",
+            "1-2 yrs"
+          ]
+        },
+        {
+          "group": 410,
+          "latents": [
+            36
+          ],
+          "gain_margin": 1350.85,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2030,
+      "n_groups": 2026,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1122,
+      "n_removed": 1124,
+      "var_share_removed": 0.3004,
+      "var_share_sae_error": 0.0421,
+      "top": [
+        {
+          "group": 754,
+          "latents": [
+            1180
+          ],
+          "gain_margin": 2271.4,
+          "examples": [
+            " Hands-on experience ...",
+            "           Good end to end ...",
+            " Should have good communication ..."
+          ]
+        },
+        {
+          "group": 470,
+          "latents": [
+            1458
+          ],
+          "gain_margin": 1062.61,
+          "examples": [
+            "Limited openings in one of the reputed organization : Location : Chennai  Process : R2R ...",
+            "Limited openings in one of the reputed organization : Location : Chennai  Process : R2R ...",
+            "1.\tEnsuring a deep connect between the Vijay brand and its viewers, by helping select the right content, ..."
+          ]
+        },
+        {
+          "group": 485,
+          "latents": [
+            1744
+          ],
+          "gain_margin": 986.86,
+          "examples": [
+            "backup (1.) To maintain high login Efficiency (Availability) for customers (2.) To resolve tickets ...",
+            "backup (1.) To maintain high login Efficiency (Availability) for customers (2.) To resolve tickets ...",
+            "The email would include a link where you can complete your application - a few short questions on your ..."
+          ]
+        },
+        {
+          "group": 93,
+          "latents": [
+            1934
+          ],
+          "gain_margin": 979.1,
+          "examples": [
+            " Order the required Quantity of ...",
+            " Order the required Quantity of ...",
+            "3) Decent Technical Experience on PL-SQL, to write simple to medium complexity scripts;2) Have some BA/pr ..."
+          ]
+        },
+        {
+          "group": 1158,
+          "latents": [
+            228
+          ],
+          "gain_margin": 762.1,
+          "examples": [
+            "10 years project management experience PMP certification Preferred Additional skills Business analysis ...",
+            "10 years of work experience and preferably leading small size team;Have experience in Travel or Retail/ ...",
+            "10 years of work experience and preferably leading small size team;Have experience in Travel or Retail/ ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2004,
+      "n_groups": 1984,
+      "n_multi_groups": 17,
+      "n_groups_dropped": 956,
+      "n_removed": 959,
+      "var_share_removed": 0.2287,
+      "var_share_sae_error": 0.033,
+      "top": [
+        {
+          "group": 17,
+          "latents": [
+            311,
+            2032
+          ],
+          "gain_margin": 2488.33,
+          "examples": [
+            "Technical Manager",
+            "Technical Manager",
+            "Technical Manager"
+          ]
+        },
+        {
+          "group": 1934,
+          "latents": [
+            769
+          ],
+          "gain_margin": 2477.91,
+          "examples": [
+            "Executive-account Payable",
+            "Executive Manager",
+            "Executive Assistant"
+          ]
+        },
+        {
+          "group": 1069,
+          "latents": [
+            1148
+          ],
+          "gain_margin": 1641.21,
+          "examples": [
+            "HEAD OF Projects",
+            "Head of Product - API",
+            "Head Marketing"
+          ]
+        },
+        {
+          "group": 770,
+          "latents": [
+            1533
+          ],
+          "gain_margin": 1569.9,
+          "examples": [
+            "Chief Executive Officer",
+            "Chief Executive Officer",
+            "Executive - Social Media"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            768,
+            1005,
+            1414
+          ],
+          "gain_margin": 1515.58,
+          "examples": [
+            "Architect",
+            "Architect",
+            "Architect"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1953,
+      "n_groups": 1924,
+      "n_multi_groups": 22,
+      "n_groups_dropped": 894,
+      "n_removed": 899,
+      "var_share_removed": 0.2088,
+      "var_share_sae_error": 0.028,
+      "top": [
+        {
+          "group": 758,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 1520.24,
+          "examples": [
+            "Outsourcing, Subject Matter Expert, Operations leadership...",
+            "Outsourcing, Operations, advanced analytics, Manager Technology",
+            "Project planning, Solution architecture, Outsourcing..."
+          ]
+        },
+        {
+          "group": 1860,
+          "latents": [
+            451
+          ],
+          "gain_margin": 1303.72,
+          "examples": [
+            "Analytics, Head - Analytics, data analytics, Data Science, business process...",
+            "Analytics, Head - Analytics, data analytics, Data Science, business process...",
+            "Analytics, Head - Analytics, data analytics, Data Science, business process..."
+          ]
+        },
+        {
+          "group": 750,
+          "latents": [
+            1405
+          ],
+          "gain_margin": 956.03,
+          "examples": [
+            "seo, seo executive, search engine optimization executive...",
+            "seo, SEO Executive, Search Engine Optimization",
+            "Technical Research Analyst, technical research executive..."
+          ]
+        },
+        {
+          "group": 1779,
+          "latents": [
+            189
+          ],
+          "gain_margin": 819.78,
+          "examples": [
+            "domestic bpo, call quality, Call Audit, Quality Analyst, Quality Analysis...",
+            "quality analysis, call monitoring",
+            "call monitoring, quality analysis, feedback, call audit..."
+          ]
+        },
+        {
+          "group": 887,
+          "latents": [
+            306
+          ],
+          "gain_margin": 776.07,
+          "examples": [
+            "Test Engineering",
+            "Software Engineer",
+            "Business Analyst, CRM"
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 920,
+      "n_groups": 914,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 768,
+      "n_removed": 773,
+      "var_share_removed": 0.8709,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 697,
+          "latents": [
+            847
+          ],
+          "gain_margin": 227.54,
+          "examples": [
+            "Bengaluru",
+            "Bengaluru",
+            "Bengaluru"
+          ]
+        },
+        {
+          "group": 29,
+          "latents": [
+            1950
+          ],
+          "gain_margin": 227.08,
+          "examples": [
+            "Australia, Hong Kong",
+            "Singapore, Hong Kong",
+            "Maldives"
+          ]
+        },
+        {
+          "group": 295,
+          "latents": [
+            1337
+          ],
+          "gain_margin": 219.72,
+          "examples": [
+            "Noida, Singapore",
+            "Bengaluru, Singapore",
+            "Singapore, Hong Kong"
+          ]
+        },
+        {
+          "group": 354,
+          "latents": [
+            1301
+          ],
+          "gain_margin": 187.6,
+          "examples": [
+            "Canada",
+            "Canada",
+            "Canada"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1159,
+            1896
+          ],
+          "gain_margin": 166.1,
+          "examples": [
+            "Gurgaon, Gurugram",
+            "Gurgaon, Gurugram",
+            "Gurgaon, Gurugram"
+          ]
+        }
+      ]
+    }
+  }
+}

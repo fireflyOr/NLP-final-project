@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5765131894974123,
+  "test_error": 0.5765131894974123,
+  "course_metric": "r2",
+  "course_score": 0.40547752059648023,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 6.9919140338897705,
+  "diagnostics": {}
+}

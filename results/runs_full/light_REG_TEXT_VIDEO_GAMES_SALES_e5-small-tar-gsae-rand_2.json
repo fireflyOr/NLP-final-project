@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.3361206610230068,
+  "test_error": 1.3361206610230068,
+  "course_metric": "r2",
+  "course_score": 0.3805265570346422,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.019410610198975,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2041,
+      "n_groups": 2038,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1612,
+      "n_removed": 1612,
+      "var_share_removed": 0.5904,
+      "var_share_sae_error": 0.0464,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            1233,
+            1439
+          ],
+          "gain_margin": 6323.02,
+          "examples": [
+            "Call of Duty 2",
+            "Call of Duty 2",
+            "Call of Duty 3"
+          ]
+        },
+        {
+          "group": 244,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 5232.99,
+          "examples": [
+            "Grand Theft Auto 2",
+            "Grand Theft Auto",
+            "Super Mario 64"
+          ]
+        },
+        {
+          "group": 1379,
+          "latents": [
+            244
+          ],
+          "gain_margin": 4230.57,
+          "examples": [
+            "Billy's Boot Camp: Wii de Enjoy Diet!",
+            "Big Brain Academy: Wii Degree",
+            "Wii Fit Plus"
+          ]
+        },
+        {
+          "group": 253,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 3262.67,
+          "examples": [
+            "Nintendo Land",
+            "Nintendo Presents: Crossword Collection",
+            "Nintendo World Cup"
+          ]
+        },
+        {
+          "group": 1315,
+          "latents": [
+            329
+          ],
+          "gain_margin": 2928.62,
+          "examples": [
+            "Professor Layton and the Curious Village",
+            "Professor Layton and the Last Specter",
+            "Street Fighter EX Plus Alpha"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1011,
+      "n_groups": 1011,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 947,
+      "n_removed": 947,
+      "var_share_removed": 0.8913,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 960,
+          "latents": [
+            559
+          ],
+          "gain_margin": 881.02,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 731,
+          "latents": [
+            168
+          ],
+          "gain_margin": 878.25,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 683,
+          "latents": [
+            344
+          ],
+          "gain_margin": 674.92,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 696,
+          "latents": [
+            346
+          ],
+          "gain_margin": 580.81,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 824,
+          "latents": [
+            200
+          ],
+          "gain_margin": 508.84,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

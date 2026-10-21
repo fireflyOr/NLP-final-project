@@ -1,0 +1,169 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3324154457515465,
+  "test_error": 1.3324154457515465,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9732240196517237,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 184.0773742198944,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1393,
+      "n_groups": 1379,
+      "n_multi_groups": 14,
+      "n_groups_dropped": 173,
+      "n_removed": 173,
+      "var_share_removed": 0.0643,
+      "var_share_sae_error": 0.0254,
+      "top": [
+        {
+          "group": 8,
+          "latents": [
+            154,
+            1187
+          ],
+          "gain_margin": 11597.18,
+          "examples": [
+            "A to Z has kept a lid on its pricing, and offers one of the best values in Oregon Pinot Noir. Though very young, this wine is soft and forward, and benefits fro",
+            "Light, clear and crisp, this extremely light-bodied wine combines fruit from various vineyards and clones, and offers a suggestion of cranberry and pomegranate.",
+            "Michael Mondavi's Folio Fine Wine Partners now offers an Oregon Pinot Noir, this one vinified by Rob Mondavi, a fourth- generation winemaker. Pale and elegantly"
+          ]
+        },
+        {
+          "group": 276,
+          "latents": [
+            1795
+          ],
+          "gain_margin": 11477.25,
+          "examples": [
+            "A tasty, sweet and sour blend of Chardonnay, Riesling, Viognier and Pinot Gris, this has bountiful fruit flavors of peach and pear. It's a big, forward, generou",
+            "Just a hint of citrus emanates from the glass. The very light-bodied palate remains very citrussy, taut, fresh and bright. Save this one for a hot summer day an",
+            "With a light prickle on the tongue, this is a fresh and fruity wine that has sweetness balanced by a citric edge. It's crisp and ready to drink."
+          ]
+        },
+        {
+          "group": 1199,
+          "latents": [
+            15
+          ],
+          "gain_margin": 11251.19,
+          "examples": [
+            "This is a huge wine, that's insanely rich and concentrated. It tastes like the ripest summer blackberries, still warm from the sun, mashed and drizzed with cr\u00e8m",
+            "This wine seems a bit muddled, with aromas of cranberries, dried herbs, vanilla, cashews and barrel spices struggling to get to the surface. The palate is mediu",
+            "Made by a winery outside of Gilroy, this bottling from eastern Salinas Valley fruit brings very nice aromas of blackberry extract, baking spices, gingerbread an"
+          ]
+        },
+        {
+          "group": 18,
+          "latents": [
+            494,
+            564
+          ],
+          "gain_margin": 10127.31,
+          "examples": [
+            "Aromas of sulfur and swimming pool blow off and leave citrusy notes. Pyrazinic flavors of bell pepper suggest barely ripe (maybe underripe) grapes. That essence",
+            "Dominated by Sylvaner but with some fragrant Muscat also in the blend, this is a perfumed wine, fresh while soft. It's delicate, balanced, cut neatly with acidi",
+            "This wine is a blend of Bordeaux and Rh\u00f4ne varieties with Merlot (30%) and Syrah (24%) taking the lead. Aromas of raspberry, dark plum and black fruit are follo"
+          ]
+        },
+        {
+          "group": 591,
+          "latents": [
+            863
+          ],
+          "gain_margin": 9426.37,
+          "examples": [
+            "Quite delicate herb, lime, mineral and smoke aromas on the nose open to a full yet still lean mouth of bright citrus and herb flavors. The P-J style tends to li",
+            "More assertive and full-bodied than many versions, this wine smells like snap peas and spring flowers, but gets richer on the palate as peach flavors come out a",
+            "Simple apple and apricot aromas prevail on the nose. This feels lean, shallow and hollow, while flavors of peach pit and melon are somewhat bitter and finish ab"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 695,
+      "n_groups": 695,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 564,
+      "n_removed": 564,
+      "var_share_removed": 0.7452,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 588,
+          "latents": [
+            187
+          ],
+          "gain_margin": 4003.39,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            1606
+          ],
+          "gain_margin": 3881.44,
+          "examples": [
+            "Central Italy",
+            "Central Italy",
+            "Central Italy"
+          ]
+        },
+        {
+          "group": 568,
+          "latents": [
+            851
+          ],
+          "gain_margin": 3303.62,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 312,
+          "latents": [
+            1095
+          ],
+          "gain_margin": 2785.03,
+          "examples": [
+            "Kremstal",
+            "Kremstal",
+            "Kremstal"
+          ]
+        },
+        {
+          "group": 424,
+          "latents": [
+            20
+          ],
+          "gain_margin": 2748.62,
+          "examples": [
+            "Lisboa",
+            "Lisboa",
+            "Lisboa"
+          ]
+        }
+      ]
+    }
+  }
+}

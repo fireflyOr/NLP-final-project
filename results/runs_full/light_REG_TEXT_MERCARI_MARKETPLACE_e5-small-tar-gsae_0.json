@@ -1,0 +1,469 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.57264509555885,
+  "test_error": 0.57264509555885,
+  "course_metric": "r2",
+  "course_score": 0.4343429958716376,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 94.72440147399902,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1048,
+      "n_groups": 1048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 838,
+      "n_removed": 838,
+      "var_share_removed": 0.4716,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 1043,
+          "latents": [
+            305
+          ],
+          "gain_margin": 4563.8,
+          "examples": [
+            "Beats",
+            "Beats",
+            "Beats"
+          ]
+        },
+        {
+          "group": 947,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1626.36,
+          "examples": [
+            "Kate Spade",
+            "Kate Spade",
+            "Kate Spade"
+          ]
+        },
+        {
+          "group": 519,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 1128.04,
+          "examples": [
+            "Dell",
+            "Dell",
+            "Dell"
+          ]
+        },
+        {
+          "group": 104,
+          "latents": [
+            1865
+          ],
+          "gain_margin": 729.9,
+          "examples": [
+            "HTC",
+            "LG",
+            "LG"
+          ]
+        },
+        {
+          "group": 1007,
+          "latents": [
+            204
+          ],
+          "gain_margin": 694.47,
+          "examples": [
+            "Christian Louboutin",
+            "Christian Louboutin",
+            "Christian Louboutin"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 754,
+      "n_groups": 754,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 679,
+      "n_removed": 679,
+      "var_share_removed": 0.6262,
+      "var_share_sae_error": 0.0005,
+      "top": [
+        {
+          "group": 173,
+          "latents": [
+            1790
+          ],
+          "gain_margin": 2133.24,
+          "examples": [
+            "Footwear",
+            "Footwear",
+            "Footwear"
+          ]
+        },
+        {
+          "group": 278,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 1909.4,
+          "examples": [
+            "TV, Audio & Surveillance",
+            "TV, Audio & Surveillance",
+            "TV, Audio & Surveillance"
+          ]
+        },
+        {
+          "group": 746,
+          "latents": [
+            305
+          ],
+          "gain_margin": 795.88,
+          "examples": [
+            "Cameras & Photography",
+            "Cameras & Photography",
+            "Cameras & Photography"
+          ]
+        },
+        {
+          "group": 381,
+          "latents": [
+            1185
+          ],
+          "gain_margin": 496.46,
+          "examples": [
+            "Artwork",
+            "Artwork",
+            "Artwork"
+          ]
+        },
+        {
+          "group": 331,
+          "latents": [
+            1376
+          ],
+          "gain_margin": 313.83,
+          "examples": [
+            "Cameras & Photography",
+            "Cameras & Photography",
+            "Cameras & Photography"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1268,
+      "n_groups": 1268,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1038,
+      "n_removed": 1038,
+      "var_share_removed": 0.4683,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 318,
+          "latents": [
+            892
+          ],
+          "gain_margin": 2935.31,
+          "examples": [
+            "Hip Bag",
+            "Satchel",
+            "Satchel"
+          ]
+        },
+        {
+          "group": 225,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 2828.67,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 1264,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1278.55,
+          "examples": [
+            "Laptops & Netbooks",
+            "Laptops & Netbooks",
+            "Laptops & Netbooks"
+          ]
+        },
+        {
+          "group": 1037,
+          "latents": [
+            559
+          ],
+          "gain_margin": 767.82,
+          "examples": [
+            "Fleece Jacket",
+            "Fleece Jacket",
+            "Fleece Jacket"
+          ]
+        },
+        {
+          "group": 1235,
+          "latents": [
+            778
+          ],
+          "gain_margin": 693.03,
+          "examples": [
+            "Snowboard",
+            "Snowboard",
+            "Skateboard"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1240,
+      "n_groups": 1239,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1020,
+      "n_removed": 1020,
+      "var_share_removed": 0.4311,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 1216,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3141.1,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "group": 1136,
+          "latents": [
+            892
+          ],
+          "gain_margin": 2781.57,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "group": 1143,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1222.78,
+          "examples": [
+            "Women/Shoes/Athletic",
+            "Women/Shoes/Athletic",
+            "Women/Shoes/Athletic"
+          ]
+        },
+        {
+          "group": 555,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 686.6,
+          "examples": [
+            "Electronics/TV, Audio & Surveillance/Home Speakers & Subwoofers",
+            "Electronics/TV, Audio & Surveillance/Home Speakers & Subwoofers",
+            "Electronics/TV, Audio & Surveillance/Portable Audio & Accessories"
+          ]
+        },
+        {
+          "group": 799,
+          "latents": [
+            559
+          ],
+          "gain_margin": 635.68,
+          "examples": [
+            "Women/Athletic Apparel/Pants, Tights, Leggings",
+            "Women/Athletic Apparel/Pants, Tights, Leggings",
+            "Women/Athletic Apparel/Pants, Tights, Leggings"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2040,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1325,
+      "n_removed": 1326,
+      "var_share_removed": 0.3038,
+      "var_share_sae_error": 0.0811,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            305,
+            892
+          ],
+          "gain_margin": 11219.64,
+          "examples": [
+            "Kendra Scott Coral and Iridescent White Rae / Excellent Condition / KS Bags Included",
+            "authentic it's not a mini, it's brand new never used with tags attached 100% Authentic! New still has tags and paper stuffed inside wit tags Rhea Zip SM Studded",
+            "The beats sound amazing and comes with a charger and aux. They are wireless and do work. Also they are authentic. If you have any questions pls message me."
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            1472,
+            1499
+          ],
+          "gain_margin": 3415.67,
+          "examples": [
+            "Hello Kitty Jeep Car Decal Sticker. White Color. Size: Approx. 3\" Wide.",
+            "Vinyl sticker, can be used to decorate car, laptop, skateboards and more! Free shipping, handmade!",
+            "4 + 1 free Colorful and simple internally threaded belly button ring. This double plastic ball navel ring features a 11mm curved 316L surgical steel barbell. Ne"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            377,
+            753
+          ],
+          "gain_margin": 1370.05,
+          "examples": [
+            "Vinyl sticker, can be used to decorate car, laptop, skateboards and more! Free shipping, handmade!",
+            "Hello Kitty Jeep Car Decal Sticker. White Color. Size: Approx. 3\" Wide.",
+            "Infant girls socks ranging in size from new born to 6 months. Includes Jordan, Converse (not pictured), I love Mom and I love Dad, days of the week (currently m"
+          ]
+        },
+        {
+          "group": 945,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 688.16,
+          "examples": [
+            "BRAND NEW NIKE ORDEM 3 OFFICIAL MATCH BALL. FIFA TESTED AND APPROVED. WITH NIKE'S AEROWTRAC TECHNOLOGY SIZE 5 SOCCER BALL",
+            "* brand new/NIB * - please note the box corner has some damage pic4 Fisher-Price My Little Snugabear Ballerina Cradle N' Swing Retail Value: [rm] Max weight 25 ",
+            "This item has some scratches on the outer sides...( Everything is in working condition ) Smok Kooper Plus 200 Watt Temperature Control Features: ** USB Cable (N"
+          ]
+        },
+        {
+          "group": 127,
+          "latents": [
+            1922
+          ],
+          "gain_margin": 547.04,
+          "examples": [
+            "Authentic Tri fold vintage Louis Vuitton wallet! This was my first Louis Vuitton wallet I ever purchased and it has been really good to me but ready for someone",
+            "CHANEL LIP GLOSSES, I DID USE FEW TIMES THEY ARE IN GOOD CONDITION, SANITIZING ALL MY LIP GLOSSES, THEY ARE LIKE A NEW ONES , COLORS ARE : 147 NIGHT OF HEART. 8",
+            "Authentic Brownmonogram Louis Vuitton Wallet. Made in France . Comes with original box and dust bag, like new condition never used willing to negotiate a fair p"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2041,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1192,
+      "n_removed": 1192,
+      "var_share_removed": 0.2789,
+      "var_share_sae_error": 0.0626,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            753,
+            892,
+            1529
+          ],
+          "gain_margin": 13684.07,
+          "examples": [
+            "NWT Patagonia Synchilla Fleece Men's XL",
+            "Kate Spade Tory Burch Bundle",
+            "Ugg boots authentic"
+          ]
+        },
+        {
+          "group": 656,
+          "latents": [
+            1499
+          ],
+          "gain_margin": 4996.89,
+          "examples": [
+            "Kitchen oilproof wall stickers",
+            "Hello Kitty Jeep Car Decal Sticker White",
+            "3pcs nail art line sticker tape (metal2)"
+          ]
+        },
+        {
+          "group": 508,
+          "latents": [
+            1581
+          ],
+          "gain_margin": 1054.11,
+          "examples": [
+            "Instant screen door",
+            "Origami Owl Charms",
+            "Fm Transmitter/ Car Charger"
+          ]
+        },
+        {
+          "group": 1949,
+          "latents": [
+            200
+          ],
+          "gain_margin": 598.54,
+          "examples": [
+            "Huaraches",
+            "NEW ACTIVE MONQ ESSENTIAL OIL INHALER",
+            "Nintendo dsi"
+          ]
+        },
+        {
+          "group": 1992,
+          "latents": [
+            344
+          ],
+          "gain_margin": 466.57,
+          "examples": [
+            "Iphone 5s (Icloud Locked) For parts",
+            "CRACKED SCREEN Samsung Galaxy Note 5 ATT",
+            "Unlocked Gold iPhone 5s"
+          ]
+        }
+      ]
+    }
+  }
+}

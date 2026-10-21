@@ -1,0 +1,91 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae-cv",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -20.041026399682018,
+  "test_error": 20.041026399682018,
+  "course_metric": "r2",
+  "course_score": 0.7861224529229978,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 268.72952914237976,
+  "diagnostics": {
+    "colors": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 270,
+      "n_groups": 269,
+      "n_val_rows": 305,
+      "chosen_fraction": 0.1,
+      "n_removed": 27,
+      "val_loss": {
+        "0.0": 0.59839,
+        "0.1": 0.59549,
+        "0.25": 0.60631,
+        "0.5": 0.60982,
+        "0.75": 0.60367
+      },
+      "frac_groups_no_signal": 0.632,
+      "var_share_removed": 0.1889
+    },
+    "company_free": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 224,
+      "n_groups": 224,
+      "n_val_rows": 305,
+      "chosen_fraction": 0.1,
+      "n_removed": 22,
+      "val_loss": {
+        "0.0": 0.55236,
+        "0.1": 0.5481,
+        "0.25": 0.55647,
+        "0.5": 0.55194,
+        "0.75": 0.54837
+      },
+      "frac_groups_no_signal": 0.527,
+      "var_share_removed": 0.1023
+    },
+    "company_struct": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 724,
+      "n_groups": 724,
+      "n_val_rows": 305,
+      "chosen_fraction": 0.75,
+      "n_removed": 543,
+      "val_loss": {
+        "0.0": 0.29304,
+        "0.1": 0.28965,
+        "0.25": 0.29235,
+        "0.5": 0.29039,
+        "0.75": 0.28002
+      },
+      "frac_groups_no_signal": 0.622,
+      "var_share_removed": 0.4686
+    },
+    "title": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1167,
+      "n_groups": 1167,
+      "n_val_rows": 305,
+      "chosen_fraction": 0.75,
+      "n_removed": 875,
+      "val_loss": {
+        "0.0": 0.16489,
+        "0.1": 0.1714,
+        "0.25": 0.1679,
+        "0.5": 0.13889,
+        "0.75": 0.13806
+      },
+      "frac_groups_no_signal": 0.711,
+      "var_share_removed": 0.3097
+    }
+  }
+}

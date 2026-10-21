@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6338947427989858,
+  "test_error": 0.6338947427989858,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.868702867033553,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 12.707318305969238,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 363,
+      "n_removed": 149,
+      "threshold": 0.0831,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.4782,
+      "var_share_kept": 0.5917,
+      "var_share_sae_error": 0.1618,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 141,
+          "score": 0.162,
+          "n_active": 312,
+          "examples": [
+            "@mention helaas... &quot;@mention Google is NOT launching any products at  #SXSW {link}",
+            "Google will not launch Facebook competitor Circles @mention #sxsw today as thought, creeper half-friends the world over disappointed.",
+            "Google Circles will not launch at #SXSW - {link}"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.1609,
+          "n_active": 234,
+          "examples": [
+            "This double buzzing issue with iPhone iOS 4.3 is getting annoying. In other news, an iPhone may fly across the room at #GR2L2 #SXSW",
+            "Apple autocorrect is so weird. Ogilvy autocorrects to idiocy. #ogilvynotes #sxsw :)",
+            "we're all frankenstein! the amalgamation of our fragmented digital identities, becoming anti-schizophrenic, google as AI. SM is sci-fi #sxsw"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.12,
+          "n_active": 242,
+          "examples": [
+            "Get (down)loaded Hoot! - RT #HootSuite Mobile for #SXSW ~ Updates for iPhone, BlackBerry &amp; Android {link}",
+            "Mobile mayhem! RT @mention Hoot! New Blog post: HootSuite Mobile for #SXSW ~ Updates for iPhone, BlackBerry &amp; Android {link}",
+            "HootSuite Mobile for #SXSW ~ Updates for iPhone, BlackBerry &amp; Android {link} #hootsuite"
+          ]
+        },
+        {
+          "latent": 124,
+          "score": 0.1153,
+          "n_active": 161,
+          "examples": [
+            "RT @mention Texas Observer Tomlinson says they would double revenue per issue with iPad subscriptions. #newsapps #sxsw",
+            "Apple likes it when you pay them. As long as the gadget will be liked by many, this closed system will work. #pnid #sxsw",
+            "$15k for a &quot;high-quality PDF&quot; iPad app is a good investment for small mags, says Chris Tomlinson, formerly Texas Obs (now AP) #sxsw"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.1142,
+          "n_active": 218,
+          "examples": [
+            "First up: iPad Design Headaches (2 Tablets, Call in the Morning). #SXSW #tapworthy",
+            "Checking out iPad Design Headaches (2 Tablets, Call in the Morning).\n{link} #SXSW #tapworthy #fb",
+            "#SXSW ##tapworthy Check out iPad Design Headaches (2 Tablets, Call in the Morning) at SXSW.\n{link}"
+          ]
+        }
+      ]
+    }
+  }
+}

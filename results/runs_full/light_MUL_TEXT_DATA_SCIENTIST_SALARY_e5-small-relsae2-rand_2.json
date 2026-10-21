@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3716947014267582,
+  "test_error": 1.3716947014267582,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8021191043649584,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 87.1499891281128,
+  "diagnostics": {
+    "experience": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 444,
+      "n_kept": 512,
+      "n_removed": 0,
+      "threshold": 0.048,
+      "passed_test": 405,
+      "removed_norm_ratio": 0.0,
+      "var_share_kept": 1.0,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 28,
+          "score": 0.4593,
+          "n_active": 1349,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.4454,
+          "n_active": 775,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 391,
+          "score": 0.4449,
+          "n_active": 775,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 57,
+          "score": 0.4436,
+          "n_active": 775,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.4431,
+          "n_active": 775,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 486,
+      "n_removed": 26,
+      "threshold": 0.0447,
+      "passed_test": 195,
+      "removed_norm_ratio": 0.1463,
+      "var_share_kept": 0.7985,
+      "var_share_sae_error": 0.1237,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.2766,
+          "n_active": 2509,
+          "examples": [
+            "  Experience  & ...",
+            " If you are comfortable with ...",
+            " If you are comfortable with ..."
+          ]
+        },
+        {
+          "latent": 2,
+          "score": 0.2747,
+          "n_active": 2069,
+          "examples": [
+            "AR Callers with 1-3 yrs of experience looking for dayshift can also apply;Only 5 days working;Should ...",
+            "AR Callers with 1-3 yrs of experience looking for dayshift can also apply;Only 5 days working;Should ...",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 82,
+          "score": 0.2695,
+          "n_active": 2047,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 105,
+          "score": 0.2683,
+          "n_active": 2114,
+          "examples": [
+            "Under- Graduates(Backlogs): Candidates who have backlogs with 1 year international voice experience can ...",
+            "Under- Graduates(Backlogs): Candidates who have backlogs with 1 year international voice experience can ...",
+            "Under- Graduates(Backlogs): Candidates who have backlogs with 1 year international voice experience can ..."
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.2662,
+          "n_active": 2078,
+          "examples": [
+            "l Should be able to identify root cause of undesired vibrations at the brake system (Brake Squeal, Brake ...",
+            "l Should be able to identify root cause of undesired vibrations at the brake system (Brake Squeal, Brake ...",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 479,
+      "n_removed": 33,
+      "threshold": 0.0482,
+      "passed_test": 141,
+      "removed_norm_ratio": 0.1344,
+      "var_share_kept": 0.8503,
+      "var_share_sae_error": 0.1035,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 437,
+          "score": 0.1953,
+          "n_active": 822,
+          "examples": [
+            "Executive",
+            "MIS Executive - Projects",
+            "Executive Assistant"
+          ]
+        },
+        {
+          "latent": 324,
+          "score": 0.1663,
+          "n_active": 807,
+          "examples": [
+            "Executive",
+            "Billing Executive",
+            "Executive Assistant to the President"
+          ]
+        },
+        {
+          "latent": 68,
+          "score": 0.1537,
+          "n_active": 929,
+          "examples": [
+            "Hiring for Sanction Screening Analyst",
+            "Hiring for a Fortune 100 Company for Operatonal Risk Analytics Manager",
+            "Hiring for AM and KAM for Leading Bank"
+          ]
+        },
+        {
+          "latent": 459,
+          "score": 0.1416,
+          "n_active": 238,
+          "examples": [
+            "International Voice Process",
+            "International Technical Support | International Voice Process.",
+            "German Language Expert - Voice Process"
+          ]
+        },
+        {
+          "latent": 310,
+          "score": 0.1387,
+          "n_active": 415,
+          "examples": [
+            "VP Economic Research",
+            "VP - Corporate Business Development",
+            "VP - Corporate Business Development"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 479,
+      "n_removed": 33,
+      "threshold": 0.0462,
+      "passed_test": 164,
+      "removed_norm_ratio": 0.1858,
+      "var_share_kept": 0.8198,
+      "var_share_sae_error": 0.0989,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 90,
+          "score": 0.1881,
+          "n_active": 422,
+          "examples": [
+            "uk process, voice quality, call audit, call quality, uk calling...",
+            "call monitoring, quality analysis, feedback, Call Audit...",
+            "call monitoring, quality analysis, feedback, call audit..."
+          ]
+        },
+        {
+          "latent": 460,
+          "score": 0.1421,
+          "n_active": 222,
+          "examples": [
+            "semi voice process, semi voice, non voice, non voice process, fresher...",
+            "semi voice process, semi voice, non voice, non voice process, fresher...",
+            "semi voice process, semi voice, non voice, non voice process, fresher..."
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.1253,
+          "n_active": 440,
+          "examples": [
+            "Domestic Voice Process, domestic international bpo, domestic call centre...",
+            "domestic bpo, call center, voice process, calling, quality analysis, qa...",
+            "call monitoring, quality analysis, domestic bpo, feedback, outbound..."
+          ]
+        },
+        {
+          "latent": 484,
+          "score": 0.1224,
+          "n_active": 341,
+          "examples": [
+            "bpo, call center, bpo operations, bpo trainer, Quality Analyst, Fresher...",
+            "BPO, Technical Support, Voice Support, Call Center, Customer Support, Bpos,...",
+            "BPO, Technical Support, Voice Support, Call Center, Customer Support, Bpos,..."
+          ]
+        },
+        {
+          "latent": 449,
+          "score": 0.1172,
+          "n_active": 494,
+          "examples": [
+            "Onboarding, on - boarding, on boarding, verification, documentation...",
+            "board meeting, problem solving, MIS Preparation, budgeting preparation...",
+            "objective c, ios, memory management, IOS Lead"
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 501,
+      "n_kept": 495,
+      "n_removed": 17,
+      "threshold": 0.0472,
+      "passed_test": 229,
+      "removed_norm_ratio": 0.0452,
+      "var_share_kept": 0.9747,
+      "var_share_sae_error": 0.0047,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.1316,
+          "n_active": 3148,
+          "examples": [
+            "Ethiopia",
+            "Rajkot",
+            "Rajkot"
+          ]
+        },
+        {
+          "latent": 147,
+          "score": 0.1188,
+          "n_active": 2766,
+          "examples": [
+            "Mumbai(Mindspace)",
+            "Mumbai(Mindspace)",
+            "Bengaluru(Dodda Nekkundi)"
+          ]
+        },
+        {
+          "latent": 40,
+          "score": 0.1158,
+          "n_active": 1968,
+          "examples": [
+            "Mysore",
+            "Mysore",
+            "Mysore"
+          ]
+        },
+        {
+          "latent": 483,
+          "score": 0.1153,
+          "n_active": 2403,
+          "examples": [
+            "Pune(Pune Nashik Highway+1), Akola",
+            "Bengaluru(Old Airport Road)",
+            "Bengaluru(Old Airport Road)"
+          ]
+        },
+        {
+          "latent": 123,
+          "score": 0.1151,
+          "n_active": 3146,
+          "examples": [
+            "Bengaluru(HMT Layout)",
+            "Bengaluru(HSR Layout)",
+            "Bengaluru(HSR Layout)"
+          ]
+        }
+      ]
+    }
+  }
+}

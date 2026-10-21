@@ -1,0 +1,464 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7229057989933692,
+  "test_error": 0.7229057989933692,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8905839659522844,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 193.8718762397766,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2042,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1057,
+      "n_removed": 1057,
+      "var_share_removed": 0.3346,
+      "var_share_sae_error": 0.1094,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            1130,
+            1937
+          ],
+          "gain_margin": 320.11,
+          "examples": [
+            "Hotel Californian, 36 State St., Santa Barbara, CA, 93101, USA",
+            "Hotel Los Gatos, 210 E. Main St., Los Gatos, CA, 95030, USA",
+            "Nunne Boutique Hotel, Nunne 14, Tallinn, 10133, Estonia"
+          ]
+        },
+        {
+          "group": 606,
+          "latents": [
+            1128
+          ],
+          "gain_margin": 241.95,
+          "examples": [
+            "2F, Forest Tower, 2-3-1 Atago, Minato-ku, Tokyo, 105-0002, Japan",
+            "2F, The Taste Thonglor, Thong Lo Soi 11, Khlong Tan Nuea, Vadhana, Bangkok, 10110, Thailand",
+            "1F, Sunflower Tower, 37 Maizidian Street, Chaoyang, Beijing, China Mainland"
+          ]
+        },
+        {
+          "group": 1852,
+          "latents": [
+            281
+          ],
+          "gain_margin": 210.85,
+          "examples": [
+            "2F, Nijubashi Square, 3-2-3 Marunouchi, Chiyoda-ku, Tokyo, 100-0005, Japan",
+            "MF, Main Bldg, Imperial Hotel Tokyo, 1-1-1 Uchisaiwaicho, Chiyoda-ku, Tokyo, 100-8558, Japan",
+            "1-5-12 Nakameguro, Meguro-ku, Tokyo, 153-0061, Japan"
+          ]
+        },
+        {
+          "group": 1099,
+          "latents": [
+            550
+          ],
+          "gain_margin": 185.7,
+          "examples": [
+            "Pla\u00e7a del Carme 9, Camprodon, 17867, Spain",
+            "1835 Paisley Road West, Cardonald, G52 3SX, United Kingdom",
+            "Carretera Camprod\u00f3n N 260, La Vall de Bianya, 17813, Spain"
+          ]
+        },
+        {
+          "group": 2018,
+          "latents": [
+            459
+          ],
+          "gain_margin": 181.82,
+          "examples": [
+            "438 Third Ave., New York, NY, 10016, USA",
+            "102 Third Ave., New York, NY, 10003, USA",
+            "2810 3rd Ave. S., Birmingham, AL, 35233, USA"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1227,
+      "n_groups": 1216,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 1032,
+      "n_removed": 1041,
+      "var_share_removed": 0.6295,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 251,
+          "latents": [
+            1697
+          ],
+          "gain_margin": 1199.16,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 317,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 649.75,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            2038
+          ],
+          "gain_margin": 511.74,
+          "examples": [
+            "Italian, Creative",
+            "Italian, Creative",
+            "Creative, Italian"
+          ]
+        },
+        {
+          "group": 515,
+          "latents": [
+            764
+          ],
+          "gain_margin": 467.0,
+          "examples": [
+            "Creative, Mexican",
+            "Creative, Piedmontese",
+            "Creative, Italian"
+          ]
+        },
+        {
+          "group": 1213,
+          "latents": [
+            555
+          ],
+          "gain_margin": 399.99,
+          "examples": [
+            "Modern Cuisine, Modern French",
+            "Modern Cuisine, Modern French",
+            "Modern Cuisine, Modern French"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 788,
+      "n_removed": 788,
+      "var_share_removed": 0.2531,
+      "var_share_sae_error": 0.1945,
+      "top": [
+        {
+          "group": 1611,
+          "latents": [
+            307
+          ],
+          "gain_margin": 641.68,
+          "examples": [
+            "Located in the centre of Bahnhofsviertel \u2013 a stone's throw from Moseleck, a legendary rustic pub \u2013 this pleasingly unpretentious establishment is a delightfully",
+            "The high-flying talents of Michael Vanderhaeghe and his father Franky set the scene in this temple to fine dining. Knockout sauces and a superlative range of lo",
+            "The Sandoval brothers (with Mario in the kitchen, Diego at the head of the dining room and Rafael as sommelier) are, without a doubt, three great aces of Spanis"
+          ]
+        },
+        {
+          "group": 173,
+          "latents": [
+            1933
+          ],
+          "gain_margin": 379.84,
+          "examples": [
+            "A far cry from your average cramped noodle shop, this is lavish and glam spot. Better still, it also delivers on flavour \u2013 the signature beef noodle soup with o",
+            "Its sign could use a new coat of paint and the room is nothing to write home about, but the regulars have been returning for its hearty beef soup for nearly thr",
+            "For premium flavour and texture, this 60-year-old restaurant uses only halal-certified Taiwanese beef that is freshly slaughtered. The beef stock is simmered al"
+          ]
+        },
+        {
+          "group": 496,
+          "latents": [
+            1912
+          ],
+          "gain_margin": 314.45,
+          "examples": [
+            "It\u2019s hard to miss this restaurant with its large orange crab statue out front. And you wouldn\u2019t want to miss eating here either. Inside is a mix of industrial a",
+            "The three-storey room is furnished with orange tables and leather chairs that evoke 1980s nostalgia. For over three decades, Ya Yuan has been feeding hungry loc",
+            "If Candente were any larger, it would need its own zip code. The number of tables, the expansive patio, the bar seating that stretches the length of the kitchen"
+          ]
+        },
+        {
+          "group": 1692,
+          "latents": [
+            1154
+          ],
+          "gain_margin": 309.96,
+          "examples": [
+            "Agnes and Sherman is a fun spot in the Houston Heights neighborhood from Chef Nick Wong and Lisa Lee. Rooted in their third-culture upbringing and love for nost",
+            "La Fl\u00e8che d'Argent \u2013 the name is a nod to the incredible \"Silver Arrows\" Mercedes-Benz Formula 1 cars of the 1930s \u2013 references the nearby Circuit de Charade ra",
+            "Familiar faces in the region, Markus and Britta Nagy are known as ambitious restaurateurs. Here, in their charming half-timbered inn dating back to 1688, they s"
+          ]
+        },
+        {
+          "group": 254,
+          "latents": [
+            1915
+          ],
+          "gain_margin": 307.2,
+          "examples": [
+            "Indigo-dyed norens are a traditional craft of Tokushima. Indigo blue is the keynote colour of chairs and trays as well, symbolising Tokushima and declaring the ",
+            "Water from Kyoto\u2019s Fushimi district supports TOKI\u2019s contemporary cuisine. In accordance with its concept, that \u2018fond\u2019 equals \u2018dashi\u2019, the restaurant harmonises ",
+            "The chef\u2019s motto is \u2018Ingredients, flame, simplicity\u2019: simple dishes, prepared with just the right flame for carefully selected ingredients. No plate has more th"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 733,
+      "n_groups": 723,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 646,
+      "n_removed": 656,
+      "var_share_removed": 0.8431,
+      "var_share_sae_error": 0.0005,
+      "top": [
+        {
+          "group": 704,
+          "latents": [
+            1006
+          ],
+          "gain_margin": 1563.12,
+          "examples": [
+            "Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Car park,Great view,Interesting wine list,Wheelchair access",
+            "Car park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 36,
+          "latents": [
+            2037
+          ],
+          "gain_margin": 1540.3,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Notable sake list,Valet parking",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Valet parking",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list"
+          ]
+        },
+        {
+          "group": 696,
+          "latents": [
+            239
+          ],
+          "gain_margin": 1163.06,
+          "examples": [
+            "Air conditioning,Counter dining,Interesting wine list",
+            "Air conditioning,Counter dining,Interesting wine list",
+            "Air conditioning,Counter dining,Interesting wine list"
+          ]
+        },
+        {
+          "group": 44,
+          "latents": [
+            1799
+          ],
+          "gain_margin": 582.38,
+          "examples": [
+            "Interesting wine list",
+            "Interesting wine list",
+            "Interesting wine list"
+          ]
+        },
+        {
+          "group": 677,
+          "latents": [
+            334
+          ],
+          "gain_margin": 555.18,
+          "examples": [
+            "Car park,Counter dining,Great view,Interesting wine list,Wheelchair access",
+            "Car park,Interesting wine list,Wheelchair access",
+            "Car park,Interesting wine list,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1996,
+      "n_groups": 1996,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1546,
+      "n_removed": 1546,
+      "var_share_removed": 0.687,
+      "var_share_sae_error": 0.0157,
+      "top": [
+        {
+          "group": 1664,
+          "latents": [
+            505
+          ],
+          "gain_margin": 181.66,
+          "examples": [
+            "Yens, Switzerland",
+            "Ningde, China Mainland",
+            "Ningde, China Mainland"
+          ]
+        },
+        {
+          "group": 745,
+          "latents": [
+            1890
+          ],
+          "gain_margin": 137.13,
+          "examples": [
+            "Kyoto, Japan",
+            "Kyoto, Japan",
+            "Kyoto, Japan"
+          ]
+        },
+        {
+          "group": 868,
+          "latents": [
+            982
+          ],
+          "gain_margin": 117.85,
+          "examples": [
+            "Amposta, Spain",
+            "Sedella, Spain",
+            "Pedreguer, Spain"
+          ]
+        },
+        {
+          "group": 1787,
+          "latents": [
+            3
+          ],
+          "gain_margin": 106.81,
+          "examples": [
+            "Shanghai, China Mainland",
+            "Shanghai, China Mainland",
+            "Shanghai, China Mainland"
+          ]
+        },
+        {
+          "group": 1969,
+          "latents": [
+            635
+          ],
+          "gain_margin": 100.61,
+          "examples": [
+            "Monthey, Switzerland",
+            "Cham, Switzerland",
+            "Muri, Switzerland"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2041,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1088,
+      "n_removed": 1091,
+      "var_share_removed": 0.4079,
+      "var_share_sae_error": 0.106,
+      "top": [
+        {
+          "group": 2024,
+          "latents": [
+            622
+          ],
+          "gain_margin": 219.53,
+          "examples": [
+            "Ho Hung Kee (Causeway Bay)",
+            "Ph\u1edf H\u00f9ng (District 1)",
+            "Ph\u1edf B\u00f2 Ph\u00fa Gia (District 3)"
+          ]
+        },
+        {
+          "group": 790,
+          "latents": [
+            1071
+          ],
+          "gain_margin": 200.16,
+          "examples": [
+            "Corenucopia by Clare Smyth",
+            "L'Hibiscus by J\u00e9r\u00e9my Lasserre",
+            "The White Room by Jacob Jan Boerma"
+          ]
+        },
+        {
+          "group": 832,
+          "latents": [
+            1366
+          ],
+          "gain_margin": 148.92,
+          "examples": [
+            "Tai Wai Dining Room",
+            "Tai Tsai (Tsuen Wan)",
+            "In Love (Gongti East Road)"
+          ]
+        },
+        {
+          "group": 1004,
+          "latents": [
+            1647
+          ],
+          "gain_margin": 129.28,
+          "examples": [
+            "The Cottage in the Wood",
+            "Ch\u00e2teau d'Origny",
+            "Villa De Winckels"
+          ]
+        },
+        {
+          "group": 1015,
+          "latents": [
+            1478
+          ],
+          "gain_margin": 127.11,
+          "examples": [
+            "ADN",
+            "Y Polyn",
+            "Jamn"
+          ]
+        }
+      ]
+    }
+  }
+}

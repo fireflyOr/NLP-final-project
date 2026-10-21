@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2303069103182894,
+  "test_error": 0.2303069103182894,
+  "course_metric": "r2",
+  "course_score": 0.49999516407432554,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 71.40275692939758,
+  "diagnostics": {
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 355,
+      "n_removed": 157,
+      "threshold": 0.0667,
+      "passed_test": 19,
+      "removed_norm_ratio": 0.5412,
+      "var_share_kept": 0.6589,
+      "var_share_sae_error": 0.1229,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 0,
+          "score": 0.1091,
+          "n_active": 252,
+          "examples": [
+            "Hansaji J. Yogendra",
+            "Agarwal A.N.",
+            "Agarwal A.N."
+          ]
+        },
+        {
+          "latent": 484,
+          "score": 0.1006,
+          "n_active": 259,
+          "examples": [
+            "S. Chakraborty, B.K. Sarkar",
+            "N.D.V. Prasada Rao",
+            "D,V,Prasada,Rao N, N.D.V. Prasada Rao"
+          ]
+        },
+        {
+          "latent": 292,
+          "score": 0.0945,
+          "n_active": 278,
+          "examples": [
+            "Philip Geer Ed.M.",
+            "Nir Eyal",
+            "V.E. Schwab"
+          ]
+        },
+        {
+          "latent": 445,
+          "score": 0.0888,
+          "n_active": 262,
+          "examples": [
+            "Daniel J. Siegel",
+            "Matthew Reilly",
+            "Matthew Reilly"
+          ]
+        },
+        {
+          "latent": 321,
+          "score": 0.0826,
+          "n_active": 245,
+          "examples": [
+            "Oxford University Press (India)",
+            "Thea Stilton",
+            "Thea Stilton"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 305,
+      "n_kept": 429,
+      "n_removed": 83,
+      "threshold": 0.0703,
+      "passed_test": 15,
+      "removed_norm_ratio": 0.3555,
+      "var_share_kept": 0.6815,
+      "var_share_sae_error": 0.0026,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 34,
+          "score": 0.1848,
+          "n_active": 511,
+          "examples": [
+            "Hardcover,\u2013 30 May 2013",
+            "Hardcover,\u2013 20 May 1993",
+            "Hardcover,\u2013 29 May 2009"
+          ]
+        },
+        {
+          "latent": 501,
+          "score": 0.1654,
+          "n_active": 214,
+          "examples": [
+            "Paperback,\u2013 2005",
+            "Paperback,\u2013 2005",
+            "Paperback,\u2013 2005"
+          ]
+        },
+        {
+          "latent": 161,
+          "score": 0.1561,
+          "n_active": 185,
+          "examples": [
+            "Plastic Comb,\u2013 DVD, NTSC",
+            "Paperback,\u2013 2010",
+            "Paperback,\u2013 2010"
+          ]
+        },
+        {
+          "latent": 275,
+          "score": 0.1385,
+          "n_active": 239,
+          "examples": [
+            "Cards,\u2013 2015",
+            "(Kannada),Paperback,\u2013 2014",
+            "Paperback,\u2013 2019"
+          ]
+        },
+        {
+          "latent": 179,
+          "score": 0.1227,
+          "n_active": 136,
+          "examples": [
+            "Paperback,\u2013 ADPCM, 12 Apr 2006",
+            "Flexibound,\u2013 Import, 2018",
+            "Paperback,\u2013 Print, Jun 2011"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 495,
+      "n_kept": 342,
+      "n_removed": 170,
+      "threshold": 0.0719,
+      "passed_test": 20,
+      "removed_norm_ratio": 0.55,
+      "var_share_kept": 0.5676,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 290,
+          "score": 0.1235,
+          "n_active": 181,
+          "examples": [
+            "French",
+            "Film & Television",
+            "Film & Television"
+          ]
+        },
+        {
+          "latent": 261,
+          "score": 0.1046,
+          "n_active": 111,
+          "examples": [
+            "Urban & Regional",
+            "Development & Growth",
+            "Rome"
+          ]
+        },
+        {
+          "latent": 349,
+          "score": 0.1041,
+          "n_active": 201,
+          "examples": [
+            "Comics & Graphic Novels (Books)",
+            "Comics & Graphic Novels (Books)",
+            "Comics & Graphic Novels (Books)"
+          ]
+        },
+        {
+          "latent": 89,
+          "score": 0.1016,
+          "n_active": 65,
+          "examples": [
+            "Ethics",
+            "Ethics",
+            "Ethics"
+          ]
+        },
+        {
+          "latent": 391,
+          "score": 0.0984,
+          "n_active": 387,
+          "examples": [
+            "Speech",
+            "Communications",
+            "Communications"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 344,
+      "n_removed": 168,
+      "threshold": 0.0718,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.5007,
+      "var_share_kept": 0.4972,
+      "var_share_sae_error": 0.253,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 121,
+          "score": 0.0949,
+          "n_active": 194,
+          "examples": [
+            "Leon Leyson (born Leib Lezjon) was only ten years old when the Nazis invaded Poland and his family was forced to relocate to the Krakow ghetto. With incredible ",
+            "Girl in the Woods is Aspen Matis\u2019s exhilarating true-life adventure of hiking from Mexico to Canada\u2014a coming-of-age story, a survival story, and a triumphant st",
+            "An Inspiration\nThe Holocaust was one of the most horrendous and terrible eras in history. Innumerable books have been written describing the horrors of the Holo"
+          ]
+        },
+        {
+          "latent": 128,
+          "score": 0.0899,
+          "n_active": 251,
+          "examples": [
+            "What would the world be like if 80 percent of the population manifested superpowers called \u201cQuirks\u201d at age four? Heroes and villains would be battling it out ev",
+            "What would the world be like if 80 percent of the population manifested superpowers called \u201cQuirks\u201d at age four? Heroes and villains would be battling it out ev",
+            "Black Beauty meets many different people during his difficult life. Can Black Beauty ever be as happy as he was at Mr Gordon's farm? Ladybird Readers is a grade"
+          ]
+        },
+        {
+          "latent": 338,
+          "score": 0.0796,
+          "n_active": 247,
+          "examples": [
+            "WIZARD AND GLASS is the fourth volume in Stephen King's epic Dark Tower series. The Dark Tower is now a major motion picture starring Matthew McConaughey and Id",
+            "*The Grishaverse will be coming to Netflix soon with Shadow and Bone, an original series!*\nNominated for the CILIP Carnegie Medal 2017, this fantasy epic from t",
+            "\"He was no longer Jean Valjean, but No. 24601\"\n\nVictor Hugo\u2019s tale of injustice, heroism and love follows the fortunes of Jean Valjean, an escaped convict deter"
+          ]
+        },
+        {
+          "latent": 431,
+          "score": 0.0752,
+          "n_active": 208,
+          "examples": [
+            "The Daylight War, the eagerly anticipated third volume in Brett\u2019s internationally bestselling Demon Cycle, continues the epic tale of humanity\u2019s last stand agai",
+            "NEW YORK TIMES BESTSELLER\n\nWith The Warded Man and The Desert Spear, Peter V. Brett surged to the front rank of contemporary fantasy, standing alongside giants ",
+            "'THE GHOST ROAD is a startlingly good novel ... With the other two volumes of the trilogy, it forms one of the richest and most rewarding works of fiction of re"
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.0746,
+          "n_active": 197,
+          "examples": [
+            "Microsoft Visual Basic for Applications (VBA) is an exceptional programming language and environment. VBA has often been criticized for its simplicity as a lang",
+            "Easy to understand and fun to read, Introducing Python is ideal for beginning programmers as well as those new to the language. Author Bill Lubanovic takes you ",
+            "This brilliantly colored Tarot deck and instruction booklet will lead you to increased self-knowledge and enlightenment. The  lavishly illustrated cards portray"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 342,
+      "n_removed": 170,
+      "threshold": 0.0693,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.4974,
+      "var_share_kept": 0.5342,
+      "var_share_sae_error": 0.1977,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 213,
+          "score": 0.1184,
+          "n_active": 608,
+          "examples": [
+            "C & C++ Interview Questions You'll Most Likely Be Asked: 4 (Job Interview Questions)",
+            "Data Structures & Algorithms Interview Questions You'll Most Likely Be Asked: 6 (Job Interview Questions)",
+            "AWS Certified Solutions Architect Official Study Guide: Associate Exam (Aws Certified Solutions Architect Official: Associate Exam)"
+          ]
+        },
+        {
+          "latent": 217,
+          "score": 0.0961,
+          "n_active": 227,
+          "examples": [
+            "Bleach Box Set 3: Includes vols. 49-74 with premium (Bleach Box Sets)",
+            "Yes Please",
+            "Yes Please"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.0878,
+          "n_active": 164,
+          "examples": [
+            "Lobster Is the Best Medicine",
+            "Trinity College London Piano Exam Pieces & Exercises 2018-2020. Grade 4 (with CD) (Piano 2018-2020)",
+            "Let's Crack CDS Exam - Combined Defence Services Examination [Free eBooks Inside]"
+          ]
+        },
+        {
+          "latent": 442,
+          "score": 0.0861,
+          "n_active": 214,
+          "examples": [
+            "National Geographic Stunning Photographs",
+            "Oil Painting Techniques and Materials (Dover Art Instruction)",
+            "Sunset in Central Park (From Manhattan with Love)"
+          ]
+        },
+        {
+          "latent": 48,
+          "score": 0.0831,
+          "n_active": 168,
+          "examples": [
+            "It Must've Been Something He Wrote",
+            "Italian Made Easy",
+            "Word Power Made Easy"
+          ]
+        }
+      ]
+    }
+  }
+}

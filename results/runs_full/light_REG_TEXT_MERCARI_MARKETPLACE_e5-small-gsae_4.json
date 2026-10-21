@@ -1,0 +1,466 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5999836697493167,
+  "test_error": 0.5999836697493167,
+  "course_metric": "r2",
+  "course_score": 0.37894280637344147,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 95.8703088760376,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1218,
+      "n_groups": 1218,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 884,
+      "n_removed": 884,
+      "var_share_removed": 0.4823,
+      "var_share_sae_error": 0.0027,
+      "top": [
+        {
+          "group": 1216,
+          "latents": [
+            8
+          ],
+          "gain_margin": 634.83,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 1109,
+          "latents": [
+            1087
+          ],
+          "gain_margin": 430.53,
+          "examples": [
+            "DC Comics",
+            "DC Comics",
+            "DC Comics"
+          ]
+        },
+        {
+          "group": 1215,
+          "latents": [
+            46
+          ],
+          "gain_margin": 338.93,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 142,
+          "latents": [
+            1433
+          ],
+          "gain_margin": 331.33,
+          "examples": [
+            "Grace In LA",
+            "Clarks",
+            "Free People"
+          ]
+        },
+        {
+          "group": 104,
+          "latents": [
+            1755
+          ],
+          "gain_margin": 306.43,
+          "examples": [
+            "Pokemon",
+            "Pokemon",
+            "Pokemon"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 893,
+      "n_groups": 893,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 756,
+      "n_removed": 756,
+      "var_share_removed": 0.666,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 878,
+          "latents": [
+            365
+          ],
+          "gain_margin": 461.98,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 726,
+          "latents": [
+            407
+          ],
+          "gain_margin": 400.82,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            2035
+          ],
+          "gain_margin": 361.21,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 810,
+          "latents": [
+            331
+          ],
+          "gain_margin": 292.86,
+          "examples": [
+            "Sweats & Hoodies",
+            "Sweats & Hoodies",
+            "Sweats & Hoodies"
+          ]
+        },
+        {
+          "group": 453,
+          "latents": [
+            351
+          ],
+          "gain_margin": 246.74,
+          "examples": [
+            "Suits",
+            "Shoes",
+            "Shoes"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1468,
+      "n_groups": 1468,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1069,
+      "n_removed": 1069,
+      "var_share_removed": 0.4755,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 664,
+          "latents": [
+            941
+          ],
+          "gain_margin": 810.72,
+          "examples": [
+            "Backpack",
+            "Cargo",
+            "Cargo"
+          ]
+        },
+        {
+          "group": 408,
+          "latents": [
+            664
+          ],
+          "gain_margin": 732.17,
+          "examples": [
+            "Digital Cameras",
+            "Digital Cameras",
+            "Digital Cameras"
+          ]
+        },
+        {
+          "group": 411,
+          "latents": [
+            1571
+          ],
+          "gain_margin": 320.87,
+          "examples": [
+            "Networking & Connectivity",
+            "Networking & Connectivity",
+            "Cell Phones & Smartphones"
+          ]
+        },
+        {
+          "group": 1161,
+          "latents": [
+            238
+          ],
+          "gain_margin": 314.23,
+          "examples": [
+            "Athletic Training",
+            "Athletic Training",
+            "All Other Sports"
+          ]
+        },
+        {
+          "group": 1294,
+          "latents": [
+            534
+          ],
+          "gain_margin": 298.3,
+          "examples": [
+            "Change Purse",
+            "Change Purse",
+            "Change Purse"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1436,
+      "n_groups": 1436,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1046,
+      "n_removed": 1046,
+      "var_share_removed": 0.4418,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 834,
+          "latents": [
+            1289
+          ],
+          "gain_margin": 824.42,
+          "examples": [
+            "Men/Athletic Apparel/Socks",
+            "Men/Athletic Apparel/Socks",
+            "Men/Athletic Apparel/Socks"
+          ]
+        },
+        {
+          "group": 413,
+          "latents": [
+            1293
+          ],
+          "gain_margin": 452.27,
+          "examples": [
+            "Electronics/Cell Phones & Accessories/Batteries",
+            "Electronics/Cell Phones & Accessories/Batteries",
+            "Electronics/Cell Phones & Accessories/Batteries"
+          ]
+        },
+        {
+          "group": 531,
+          "latents": [
+            1648
+          ],
+          "gain_margin": 427.12,
+          "examples": [
+            "Electronics/Cameras & Photography/Lenses & Filters",
+            "Electronics/Cameras & Photography/Lenses & Filters",
+            "Kids/Pregnancy & Maternity/Family Planning Tests"
+          ]
+        },
+        {
+          "group": 239,
+          "latents": [
+            1346
+          ],
+          "gain_margin": 401.67,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "group": 449,
+          "latents": [
+            1296
+          ],
+          "gain_margin": 390.38,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2040,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1199,
+      "n_removed": 1200,
+      "var_share_removed": 0.3301,
+      "var_share_sae_error": 0.1153,
+      "top": [
+        {
+          "group": 494,
+          "latents": [
+            1621
+          ],
+          "gain_margin": 806.84,
+          "examples": [
+            "New in box.",
+            "Comes with box , great condition",
+            "Brand new in box."
+          ]
+        },
+        {
+          "group": 1548,
+          "latents": [
+            1035
+          ],
+          "gain_margin": 683.45,
+          "examples": [
+            "100% authentic",
+            "Have proof of authentic",
+            "Authentic. Barely used"
+          ]
+        },
+        {
+          "group": 951,
+          "latents": [
+            1674
+          ],
+          "gain_margin": 390.02,
+          "examples": [
+            "BNWT Lularoe Monroe. Beautiful Floral print with black fringe.",
+            "Brand new lularoe Irma. Size large. Peach color with dark grey/black micro stripe",
+            "These are brand new LuLaRoe leggings! Super cute and super soft. One size fits all. Tag isn't attached but it's there!"
+          ]
+        },
+        {
+          "group": 383,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 367.5,
+          "examples": [
+            "So cute :)",
+            "Cute",
+            "Cute"
+          ]
+        },
+        {
+          "group": 1601,
+          "latents": [
+            678
+          ],
+          "gain_margin": 360.43,
+          "examples": [
+            "Genuine leather, works great ,color brown NO box sorry !",
+            "iPhone 7 Plus Leather Case Brand new never used 8 colors to pick from. #1 , #5 and #7 are sold out If you purchase, send me which number you want.",
+            "Set of 4 Leather Bracelets."
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2041,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1138,
+      "n_removed": 1139,
+      "var_share_removed": 0.3535,
+      "var_share_sae_error": 0.0787,
+      "top": [
+        {
+          "group": 1581,
+          "latents": [
+            166
+          ],
+          "gain_margin": 979.6,
+          "examples": [
+            "LuLaRoe Outfit",
+            "LuLaRoe outfit",
+            "LuLaRoe"
+          ]
+        },
+        {
+          "group": 853,
+          "latents": [
+            1183
+          ],
+          "gain_margin": 890.57,
+          "examples": [
+            "Apple iPhone 6 64gb At&t silver",
+            "Gold iPhone 6 Plus for ATT 16GB",
+            "iPhone 6 Plus 64GB"
+          ]
+        },
+        {
+          "group": 1956,
+          "latents": [
+            664
+          ],
+          "gain_margin": 539.48,
+          "examples": [
+            "T-Mobile tablet",
+            "Children's educational tablet",
+            "Cricket ZTE phone"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            204,
+            933,
+            1282,
+            1748
+          ],
+          "gain_margin": 510.18,
+          "examples": [
+            "Mary Kay",
+            "Five LPS",
+            "Tate Langdon"
+          ]
+        },
+        {
+          "group": 418,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 490.61,
+          "examples": [
+            "Louis Vuitton",
+            "Louis Vuitton bag",
+            "Louis Vuitton belt"
+          ]
+        }
+      ]
+    }
+  }
+}

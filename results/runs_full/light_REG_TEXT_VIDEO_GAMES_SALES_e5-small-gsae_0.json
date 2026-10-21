@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.4714457524540854,
+  "test_error": 1.4714457524540854,
+  "course_metric": "r2",
+  "course_score": 0.3237022105805031,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 35.370692014694214,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2044,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1576,
+      "n_removed": 1576,
+      "var_share_removed": 0.5895,
+      "var_share_sae_error": 0.0735,
+      "top": [
+        {
+          "group": 2016,
+          "latents": [
+            1210
+          ],
+          "gain_margin": 5951.85,
+          "examples": [
+            "Paper Mario",
+            "Super Mario Bros.",
+            "Paper Mario: The Thousand-Year Door"
+          ]
+        },
+        {
+          "group": 31,
+          "latents": [
+            2017
+          ],
+          "gain_margin": 2931.5,
+          "examples": [
+            "Dr. Mario",
+            "Mario Tennis Open",
+            "Mario Paint"
+          ]
+        },
+        {
+          "group": 2023,
+          "latents": [
+            341
+          ],
+          "gain_margin": 2671.9,
+          "examples": [
+            "Devil May Cry",
+            "Devil May Cry 4",
+            "Devil May Cry 4"
+          ]
+        },
+        {
+          "group": 181,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 2395.41,
+          "examples": [
+            "Pokemon Stadium",
+            "Pok\u00e9mon Stadium 2",
+            "Pok\u00e9mon Colosseum"
+          ]
+        },
+        {
+          "group": 778,
+          "latents": [
+            1420
+          ],
+          "gain_margin": 1960.09,
+          "examples": [
+            "Pokemon Ruby/Pokemon Sapphire",
+            "Pokemon Omega Ruby/Pokemon Alpha Sapphire",
+            "Pokemon Pinball: Ruby & Sapphire"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1210,
+      "n_groups": 1210,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1094,
+      "n_removed": 1094,
+      "var_share_removed": 0.7089,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 1169,
+          "latents": [
+            347
+          ],
+          "gain_margin": 2683.95,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1176,
+          "latents": [
+            95
+          ],
+          "gain_margin": 1093.69,
+          "examples": [
+            "Sweets",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1152,
+          "latents": [
+            432
+          ],
+          "gain_margin": 935.79,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 754,
+          "latents": [
+            542
+          ],
+          "gain_margin": 825.33,
+          "examples": [
+            "Fox Interactive",
+            "Fox Interactive",
+            "Fox Interactive"
+          ]
+        },
+        {
+          "group": 717,
+          "latents": [
+            620
+          ],
+          "gain_margin": 743.94,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

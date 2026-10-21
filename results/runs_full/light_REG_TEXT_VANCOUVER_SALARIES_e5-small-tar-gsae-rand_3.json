@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -12963.964442084463,
+  "test_error": 12963.964442084463,
+  "course_metric": "r2",
+  "course_score": 0.7496993804172034,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.49328422546387,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2033,
+      "n_groups": 2020,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 1230,
+      "n_removed": 1231,
+      "var_share_removed": 0.553,
+      "var_share_sae_error": 0.0269,
+      "top": [
+        {
+          "group": 1608,
+          "latents": [
+            911
+          ],
+          "gain_margin": 708.82,
+          "examples": [
+            "Le Clair, J N",
+            "Oldfield, T B",
+            "Oldfield, T B"
+          ]
+        },
+        {
+          "group": 670,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 633.93,
+          "examples": [
+            "Salehijam, A AJ",
+            "Burrero, A",
+            "Burrero, A"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            813,
+            1102
+          ],
+          "gain_margin": 531.7,
+          "examples": [
+            "Manson, I",
+            "Foster, I",
+            "Jung, I"
+          ]
+        },
+        {
+          "group": 47,
+          "latents": [
+            1979
+          ],
+          "gain_margin": 457.68,
+          "examples": [
+            "Jackson, S M",
+            "Jackson, S M",
+            "Jackson, O"
+          ]
+        },
+        {
+          "group": 1987,
+          "latents": [
+            316
+          ],
+          "gain_margin": 420.63,
+          "examples": [
+            "Campbell, K W",
+            "Campbell, K W",
+            "Jackson, J"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1004,
+      "n_groups": 1002,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 685,
+      "n_removed": 686,
+      "var_share_removed": 0.4269,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 179,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 7242.67,
+          "examples": [
+            "DIRECTOR PUBLIC SPACE & STREET USE",
+            "Director Public Space & Street Use",
+            "Director Public Space & Street Use"
+          ]
+        },
+        {
+          "group": 266,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 5197.19,
+          "examples": [
+            "General Manager Planning, Urban Des& Sustain",
+            "General Manager Real Estate & Facilities",
+            "DEPUTY GENERAL MANAGER"
+          ]
+        },
+        {
+          "group": 936,
+          "latents": [
+            305
+          ],
+          "gain_margin": 4786.27,
+          "examples": [
+            "Manager, Strategic Initiatives",
+            "Chief Of Staff",
+            "CHIEF OF STAFF"
+          ]
+        },
+        {
+          "group": 114,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 4532.67,
+          "examples": [
+            "DEPUTY AUDIT GENERAL",
+            "Deputy General Manager",
+            "DEPUTY GENERAL MANAGER"
+          ]
+        },
+        {
+          "group": 453,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 3163.1,
+          "examples": [
+            "Manager Development Permit Group",
+            "Manager Fin & Performance Measurement",
+            "Manager Park Development, Pb"
+          ]
+        }
+      ]
+    }
+  }
+}

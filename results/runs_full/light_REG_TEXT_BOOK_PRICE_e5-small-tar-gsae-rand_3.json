@@ -1,0 +1,389 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2456830389836318,
+  "test_error": 0.2456830389836318,
+  "course_metric": "r2",
+  "course_score": 0.45073638593003407,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 50.89767503738403,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1658,
+      "n_groups": 1658,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1141,
+      "n_removed": 1141,
+      "var_share_removed": 0.6357,
+      "var_share_sae_error": 0.0032,
+      "top": [
+        {
+          "group": 1657,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1027.22,
+          "examples": [
+            "Wizards RPG Team",
+            "Jason Schreier",
+            "Scott Snyder, Tim Seeley, Jason Fabok"
+          ]
+        },
+        {
+          "group": 1656,
+          "latents": [
+            477
+          ],
+          "gain_margin": 598.46,
+          "examples": [
+            "Saumya Sharma",
+            "Ma Anand Sheela",
+            "Manjushree Thapa"
+          ]
+        },
+        {
+          "group": 278,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 448.11,
+          "examples": [
+            "Aparna Pande",
+            "K. Neihsial, 2",
+            "S. Bashir S. and Hashmi M. Saran"
+          ]
+        },
+        {
+          "group": 49,
+          "latents": [
+            2020
+          ],
+          "gain_margin": 249.97,
+          "examples": [
+            "Raghu Srinivasan",
+            "Raghu Srinivasan",
+            "Deepak Raja"
+          ]
+        },
+        {
+          "group": 826,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 181.81,
+          "examples": [
+            "Scholastic Inc",
+            "Scholastic Inc",
+            "Scholastic"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 772,
+      "n_groups": 743,
+      "n_multi_groups": 27,
+      "n_groups_dropped": 520,
+      "n_removed": 531,
+      "var_share_removed": 0.5942,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 297,
+          "latents": [
+            305
+          ],
+          "gain_margin": 506.79,
+          "examples": [
+            "Hardcover,\u2013 Deckle Edge, 18 Oct 2011",
+            "Hardcover,\u2013 Illustrated, 19 Feb 2001",
+            "Hardcover,\u2013 6 Jan 2010"
+          ]
+        },
+        {
+          "group": 693,
+          "latents": [
+            200
+          ],
+          "gain_margin": 407.69,
+          "examples": [
+            "Hardcover,\u2013 6 Jan 2010",
+            "Hardcover,\u2013 6 Jan 2016",
+            "Hardcover,\u2013 16 Jun 2005"
+          ]
+        },
+        {
+          "group": 311,
+          "latents": [
+            1072
+          ],
+          "gain_margin": 320.5,
+          "examples": [
+            "Hardcover,\u2013 16 Jun 2005",
+            "Hardcover,\u2013 11 Jun 2009",
+            "Hardcover,\u2013 6 Jan 2010"
+          ]
+        },
+        {
+          "group": 366,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 231.76,
+          "examples": [
+            "Paperback,\u2013 2010",
+            "Paperback,\u2013 2010",
+            "Paperback,\u2013 2010"
+          ]
+        },
+        {
+          "group": 362,
+          "latents": [
+            1577
+          ],
+          "gain_margin": 230.56,
+          "examples": [
+            "Hardcover,\u2013 19 Mar 2008",
+            "Hardcover,\u2013 14 Mar 2002",
+            "Hardcover,\u2013 24 Mar 2000"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 698,
+      "n_groups": 698,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 564,
+      "n_removed": 564,
+      "var_share_removed": 0.6547,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 149,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 949.72,
+          "examples": [
+            "Children's Crime & Thriller (Books)",
+            "Children's Crime & Thriller (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        },
+        {
+          "group": 696,
+          "latents": [
+            289
+          ],
+          "gain_margin": 509.09,
+          "examples": [
+            "Software Programming Compilers",
+            "C# Programming",
+            "Object-Oriented Software Design"
+          ]
+        },
+        {
+          "group": 165,
+          "latents": [
+            1667
+          ],
+          "gain_margin": 318.21,
+          "examples": [
+            "Software Architecture",
+            "Software Architecture",
+            "Software Architecture"
+          ]
+        },
+        {
+          "group": 327,
+          "latents": [
+            679
+          ],
+          "gain_margin": 274.72,
+          "examples": [
+            "Operating Systems Textbooks",
+            "Operating Systems Textbooks",
+            "Software Design & Engineering"
+          ]
+        },
+        {
+          "group": 215,
+          "latents": [
+            620
+          ],
+          "gain_margin": 177.47,
+          "examples": [
+            "Grammar (Books)",
+            "Grammar (Books)",
+            "Grammar (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1771,
+      "n_groups": 1771,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1289,
+      "n_removed": 1289,
+      "var_share_removed": 0.6781,
+      "var_share_sae_error": 0.0197,
+      "top": [
+        {
+          "group": 1770,
+          "latents": [
+            305
+          ],
+          "gain_margin": 4283.91,
+          "examples": [
+            "The perfect one-on-one photography course, this week-by-week tutorial develops your photography skills - from how to focus to using lenses and flash effectively",
+            "The perfect one-on-one photography course, this week-by-week tutorial develops your photography skills - from how to focus to using lenses and flash effectively",
+            "\"How to Shoot Video That Doesn't Suck\" is all about the language of video. It's about how to think like a director, regardless of equipment (amateurs think abou"
+          ]
+        },
+        {
+          "group": 109,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 1602.96,
+          "examples": [
+            "Straightforward and entertaining, this is the ultimate source for people seeking real how-to advice from the editors and photographers of National Geographic. I",
+            "Fashionpedia is the ultimate fashion bible, containing thousands of fashion items for more efficient and productive brainstorming. Designed to be as visually dr",
+            "Technologies may change, but the need for clear and accurate communication never goes out of style. That is why for more than one hundred years The Chicago Manu"
+          ]
+        },
+        {
+          "group": 54,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 1367.89,
+          "examples": [
+            "This kit will be a must-have for millions of dedicated fans of Game of Thrones, HBO's global television phenomenon. It includes a 4\u201d replica of Jon Snow's sword",
+            "Imagine a reality where the world\u2019s most powerful super-being does not grow up in Smallville, Kansas\u2014or even America, for that matter\u2026\n\nSuperman: Red Son is a v",
+            "A timeless classic with nearly one million copies in print, Ben Hogan\u2019s Five Lessons outlines the building blocks of winning golf from one of the all-time maste"
+          ]
+        },
+        {
+          "group": 752,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 782.58,
+          "examples": [
+            "The best thing happened to her . . . but in the worst way possible . . .\nPrisha Srivastav turned eighteen two months back. Hailing from Faridabad, she\nstudies m",
+            "Madhurima Pandey is twenty-five, single and gradually coming to terms with\nthe annoying 'you're next' nudges from family and friends. But soon they realize\nthat",
+            "The fast-paced new novel from the internationally bestselling author of The Best Laid Plans, Morning, Noon & Night and Bloodline.\nSomeone was following her. She"
+          ]
+        },
+        {
+          "group": 881,
+          "latents": [
+            1508
+          ],
+          "gain_margin": 490.29,
+          "examples": [
+            "This popular four-book series has been revised and updated, while preserving the features which have made it so successful. These include: Clear, simple explana",
+            "This popular four-book series has been revised and updated, while preserving the features which have made it so successful. These include: Clear, simple explana",
+            "This popular four-book series has been revised and updated, while preserving the features which have made it so successful. These include: Clear, simple explana"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1792,
+      "n_groups": 1792,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1229,
+      "n_removed": 1229,
+      "var_share_removed": 0.5794,
+      "var_share_sae_error": 0.0193,
+      "top": [
+        {
+          "group": 1791,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2193.31,
+          "examples": [
+            "The Dark Tower IV: Wizard and Glass",
+            "Digital Photography Complete Course",
+            "Digital Photography Complete Course"
+          ]
+        },
+        {
+          "group": 694,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 1843.38,
+          "examples": [
+            "Fashion Designer\u2032s Handbook for Adobe Illustrator",
+            "The Animator's Survival Kit: A Manual of Methods, Principles and Formulas for Classical, Computer, Games, Stop Motion and Internet Animators",
+            "Mastering Composition: The Definitive Guide for Photographers"
+          ]
+        },
+        {
+          "group": 1790,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1176.4,
+          "examples": [
+            "Draupadi",
+            "Private: No. 1 Suspect: (Private 4)",
+            "Pretty Vile Girl"
+          ]
+        },
+        {
+          "group": 893,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 630.92,
+          "examples": [
+            "The Tintin Collection: The Adventure of Tintin (The Adventures of Tintin - Compact Editions)",
+            "Learning JavaScript Design Patterns: A JavaScript and jQuery Developer's Guide",
+            "The Data Warehouse ETL Toolkit: Practical Techniques for Extracting, Cleaning, Conforming, and Delivering Data"
+          ]
+        },
+        {
+          "group": 1786,
+          "latents": [
+            679
+          ],
+          "gain_margin": 348.34,
+          "examples": [
+            "One Piece, Vol. 58",
+            "He-Man: The Eternity War Vol. 2 (He-Man and the Masters of the Universe)",
+            "The New Big - Book of Logos"
+          ]
+        }
+      ]
+    }
+  }
+}

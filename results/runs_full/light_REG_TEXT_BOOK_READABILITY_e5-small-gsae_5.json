@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.9268656840742522,
+  "test_error": 0.9268656840742522,
+  "course_metric": "r2",
+  "course_score": 0.7812892108360278,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 56.55471134185791,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 560,
+      "n_groups": 559,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 439,
+      "n_removed": 440,
+      "var_share_removed": 0.4582,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 538,
+          "latents": [
+            8
+          ],
+          "gain_margin": 56.85,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 205,
+          "latents": [
+            1256
+          ],
+          "gain_margin": 40.3,
+          "examples": [
+            "Great Epochs in American History, Volume I. Voyages Of Discovery And Early Explorations: 1000 A.D.-1684",
+            "Great Epochs in American History, Volume I. Voyages Of Discovery And Early Explorations: 1000 A.D.-1683",
+            "Great Epochs in American History, Volume I. Voyages Of Discovery And Early Explorations: 1000 A.D.-1682"
+          ]
+        },
+        {
+          "group": 516,
+          "latents": [
+            620
+          ],
+          "gain_margin": 32.42,
+          "examples": [
+            "The Nursery, June 1877, Vol. XXI. No. 6\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, June 1877, Vol. XXI. No. 6\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, June 1877, Vol. XXI. No. 6\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 70,
+          "latents": [
+            1641
+          ],
+          "gain_margin": 24.54,
+          "examples": [
+            "Children's Edition\n\nof\n\nTOUCHING INCIDENTS and REMARKABLE ANSWERS TO PRAYER",
+            "Title: Heroes Every Child Should Know\n",
+            "Title: Heroes Every Child Should Know\n"
+          ]
+        },
+        {
+          "group": 429,
+          "latents": [
+            349
+          ],
+          "gain_margin": 24.37,
+          "examples": [
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1536,
+      "n_groups": 1535,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1231,
+      "n_removed": 1232,
+      "var_share_removed": 0.5891,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 1527,
+          "latents": [
+            381
+          ],
+          "gain_margin": 227.38,
+          "examples": [
+            "By Albert F. Blaisdell and Francis K. Ball.",
+            "A Medical Record?",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 634,
+          "latents": [
+            239
+          ],
+          "gain_margin": 101.16,
+          "examples": [
+            "Wikibooks",
+            "Wikibooks",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 49,
+          "latents": [
+            1996
+          ],
+          "gain_margin": 95.88,
+          "examples": [
+            "Core Knowledge Foundation",
+            "Core Knowledge Foundation",
+            "Core Knowledge Foundation"
+          ]
+        },
+        {
+          "group": 1513,
+          "latents": [
+            147
+          ],
+          "gain_margin": 93.55,
+          "examples": [
+            "A Medical Record?",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 120,
+          "latents": [
+            1707
+          ],
+          "gain_margin": 83.07,
+          "examples": [
+            "Speaker of the House of the Parliament of Turkey on Aug. 2",
+            "wikipedia",
+            "wikipedia"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 95,
+      "n_groups": 92,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 86,
+      "n_removed": 89,
+      "var_share_removed": 0.3845,
+      "var_share_sae_error": 0.0056,
+      "top": [
+        {
+          "group": 42,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 0.74,
+          "examples": [
+            "parlour",
+            "parlour",
+            "parlour"
+          ]
+        },
+        {
+          "group": 54,
+          "latents": [
+            212
+          ],
+          "gain_margin": 0.19,
+          "examples": [
+            "centre",
+            "centre",
+            "centre"
+          ]
+        },
+        {
+          "group": 65,
+          "latents": [
+            213
+          ],
+          "gain_margin": 0.17,
+          "examples": [
+            "micrometres, millilitre, sulphide",
+            "sulphur, sulphur",
+            "sulphate, sulphate"
+          ]
+        },
+        {
+          "group": 63,
+          "latents": [
+            586
+          ],
+          "gain_margin": 0.16,
+          "examples": [
+            "traveller",
+            "traveller",
+            "traveller"
+          ]
+        },
+        {
+          "group": 51,
+          "latents": [
+            1159
+          ],
+          "gain_margin": 0.13,
+          "examples": [
+            "centimetre, centimetres, kilometres",
+            "ploughed",
+            "kilometres, metres, metres"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1983,
+      "n_groups": 1983,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1470,
+      "n_removed": 1470,
+      "var_share_removed": 0.6833,
+      "var_share_sae_error": 0.0425,
+      "top": [
+        {
+          "group": 982,
+          "latents": [
+            1110
+          ],
+          "gain_margin": 54.76,
+          "examples": [
+            "On February 1, 1960, the peaceful activists introduced a new tactic into their set of strategies. Four African American college students walked up to a whites-o",
+            "He stayed at the station, helped in the kitchen, cut firewood, kept the yard clean, and swept the platform. In a fortnight's time his wife arrived, and Semyon w",
+            "One day his mother asked him, \"Where do you learn these songs from, Sakima?\" Sakima answered, \"I just know them, mother. I hear them in my mind and then I sing."
+          ]
+        },
+        {
+          "group": 399,
+          "latents": [
+            1824
+          ],
+          "gain_margin": 50.44,
+          "examples": [
+            "The principal tests were made through the conduits on Market Street, laid by the National Underground Electric Company as far as Ninth Street. A cable of five c",
+            "Then, however, something happened which made every mouth mute and every eye fixed. In the meantime, of course, the rope-dancer had commenced his performance: he",
+            "Limited government is a concept in political philosophy in which governmental power is restricted by law, usually in a written constitution. It is a key concept"
+          ]
+        },
+        {
+          "group": 673,
+          "latents": [
+            1343
+          ],
+          "gain_margin": 43.25,
+          "examples": [
+            "The farm was seven miles in the country, and the road leading to it was a fine one. There were some hills, to be sure; but, whenever we came to one, Dick and I ",
+            "The boy had a basket strapped to his back, and stood looking intently, with both hands resting on his knees. His name was Norman Blake. Other boys, and a young ",
+            "There are, however, three fundamental principles to be borne in mind if we would follow the explanation clearly from step to step, and these three principles mu"
+          ]
+        },
+        {
+          "group": 364,
+          "latents": [
+            1422
+          ],
+          "gain_margin": 40.64,
+          "examples": [
+            "The tube that communicates with the vessel, F, is put in communication, after the latter has been completely filled with water, with the point of the cock, B. T",
+            "A V6 engine, often just called a V6, is an internal combustion engine with six cylinders. The engine has three cylinders on each side called banks. The two bank",
+            "An antenna or aerial is a metal device made to send or receive radio waves. Many electronic devices like radio, television, radar, wireless LAN, cell phone, and"
+          ]
+        },
+        {
+          "group": 1130,
+          "latents": [
+            714
+          ],
+          "gain_margin": 40.49,
+          "examples": [
+            "The hypothesis of mental continuity throughout organic evolution may be used in two different ways. On the one hand, it may be held that we have more knowledge ",
+            "Chunu and Munu are reading in a library.\n\"Chunu, look at this boy spinning around. This picture is so nice!\" \"Munu, look at these red blossoming flowers.\" \"Chun",
+            "There are numerous experimental studies using mostly mice and rats showing that, when these animals are reared in enriched environments, they outperform those r"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1946,
+      "n_groups": 1946,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1511,
+      "n_removed": 1511,
+      "var_share_removed": 0.684,
+      "var_share_sae_error": 0.0327,
+      "top": [
+        {
+          "group": 477,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 131.47,
+          "examples": [
+            "Big_memory",
+            "Turtle_ship",
+            "Rosetta_Stone"
+          ]
+        },
+        {
+          "group": 1460,
+          "latents": [
+            266
+          ],
+          "gain_margin": 29.54,
+          "examples": [
+            "Birds and Man",
+            "The Red Man's Continent\nA Chronicle of Aboriginal America, Volume 1 In The Chronicles Of America Series",
+            "How colours came together in the sky"
+          ]
+        },
+        {
+          "group": 1413,
+          "latents": [
+            645
+          ],
+          "gain_margin": 21.06,
+          "examples": [
+            "A KNOWING DOG",
+            "MY DOG",
+            "A TRUE STORY ABOUT A DOG"
+          ]
+        },
+        {
+          "group": 1856,
+          "latents": [
+            827
+          ],
+          "gain_margin": 17.92,
+          "examples": [
+            "THE CAT SHOW",
+            "The Grass Seeker",
+            "Sharing Your Home With Arthropods"
+          ]
+        },
+        {
+          "group": 1913,
+          "latents": [
+            50
+          ],
+          "gain_margin": 17.45,
+          "examples": [
+            "Elephant and\nChameleon",
+            "Peck's Uncle Ike and The Red Headed",
+            "THE MARVELOUS DOG AND THE WONDERFUL CAT"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 968,
+      "n_groups": 966,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 741,
+      "n_removed": 742,
+      "var_share_removed": 0.3646,
+      "var_share_sae_error": 0.0051,
+      "top": [
+        {
+          "group": 840,
+          "latents": [
+            719
+          ],
+          "gain_margin": 177.41,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Ancient_Greek",
+            "https://en.wikipedia.org/wiki/Internet_Protocol",
+            "https://en.wikipedia.org/wiki/Information_privacy"
+          ]
+        },
+        {
+          "group": 387,
+          "latents": [
+            941
+          ],
+          "gain_margin": 120.98,
+          "examples": [
+            "http://www.gutenberg.org/files/7766/7766-h/7766-h.htm",
+            "http://www.gutenberg.org/files/19079/19079-h/19079-h.htm",
+            "http://www.gutenberg.org/files/19079/19079-h/19079-h.htm"
+          ]
+        },
+        {
+          "group": 130,
+          "latents": [
+            1850
+          ],
+          "gain_margin": 110.48,
+          "examples": [
+            "http://www.gutenberg.org/cache/epub/18581/pg18581.txt",
+            "http://www.gutenberg.org/files/62631/62631-h/62631-h.htm",
+            "http://www.gutenberg.org/files/8484/8484-h/8484-h.htm#5"
+          ]
+        },
+        {
+          "group": 834,
+          "latents": [
+            155
+          ],
+          "gain_margin": 95.75,
+          "examples": [
+            "http://www.gutenberg.org/files/28132/28132-h/28132-h.htm#Page_109",
+            "http://www.gutenberg.org/files/28133/28133-h/28133-h.htm#Page_139",
+            "http://www.gutenberg.org/files/28136/28136-h/28136-h.htm#Page_38"
+          ]
+        },
+        {
+          "group": 786,
+          "latents": [
+            67
+          ],
+          "gain_margin": 57.18,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Marine_biology",
+            "https://simple.wikipedia.org/wiki/Organism",
+            "https://en.wikipedia.org/wiki/Ecosystem"
+          ]
+        }
+      ]
+    }
+  }
+}

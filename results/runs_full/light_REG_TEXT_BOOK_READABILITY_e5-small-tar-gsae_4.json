@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8150912241928286,
+  "test_error": 0.8150912241928286,
+  "course_metric": "r2",
+  "course_score": 0.815956491246558,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 57.596964597702026,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 426,
+      "n_groups": 426,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 350,
+      "n_removed": 350,
+      "var_share_removed": 0.4354,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 277,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 526.1,
+          "examples": [
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People",
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People",
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People"
+          ]
+        },
+        {
+          "group": 335,
+          "latents": [
+            298
+          ],
+          "gain_margin": 176.13,
+          "examples": [
+            "The Nursery, December 1873, Vol. XIV. No. 6",
+            "The Nursery, December 1873, Vol. XIV. No. 6",
+            "The Nursery, December 1873, Vol. XIV. No. 6"
+          ]
+        },
+        {
+          "group": 268,
+          "latents": [
+            45
+          ],
+          "gain_margin": 160.47,
+          "examples": [
+            "The Brown Fairy Book",
+            "THE FAIRY BOOK.",
+            "THE FAIRY BOOK."
+          ]
+        },
+        {
+          "group": 361,
+          "latents": [
+            396
+          ],
+          "gain_margin": 132.78,
+          "examples": [
+            "The Nursery, No. 109, January, 1876, Vol. XIX.\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 109, January, 1876, Vol. XIX.\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 109, January, 1876, Vol. XIX.\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 345,
+          "latents": [
+            477
+          ],
+          "gain_margin": 115.61,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1276,
+      "n_groups": 1276,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1053,
+      "n_removed": 1053,
+      "var_share_removed": 0.42,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 1233,
+          "latents": [
+            190
+          ],
+          "gain_margin": 178.16,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 508,
+          "latents": [
+            911
+          ],
+          "gain_margin": 177.91,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1273,
+          "latents": [
+            349
+          ],
+          "gain_margin": 160.48,
+          "examples": [
+            "Ghanaian folktale",
+            "Ghanaian folktale",
+            "Edith's Papa"
+          ]
+        },
+        {
+          "group": 1142,
+          "latents": [
+            477
+          ],
+          "gain_margin": 131.57,
+          "examples": [
+            "African Storybook and Paul Walugo",
+            "Little Zebra Books",
+            "Ghanaian folktale"
+          ]
+        },
+        {
+          "group": 148,
+          "latents": [
+            1867
+          ],
+          "gain_margin": 127.39,
+          "examples": [
+            "an editorial article published Oct. 15, (28,) 1914, in the Mir, the organ of the Nationalists, and signed by A. Bouroff, ex-Minister and ex-Vice President of th",
+            "wikipedia",
+            "wikipedia"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 92,
+      "n_groups": 92,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 83,
+      "n_removed": 83,
+      "var_share_removed": 0.3045,
+      "var_share_sae_error": 0.0021,
+      "top": [
+        {
+          "group": 73,
+          "latents": [
+            409
+          ],
+          "gain_margin": 1.7,
+          "examples": [
+            "marvellous",
+            "cosy",
+            "favourite"
+          ]
+        },
+        {
+          "group": 15,
+          "latents": [
+            1674
+          ],
+          "gain_margin": 0.27,
+          "examples": [
+            "smouldered, grey",
+            "vapours, grey, grey",
+            "grey"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            2002
+          ],
+          "gain_margin": 0.1,
+          "examples": [
+            "fillet",
+            "centres",
+            "centres"
+          ]
+        },
+        {
+          "group": 11,
+          "latents": [
+            1468
+          ],
+          "gain_margin": 0.0,
+          "examples": [
+            "labouring",
+            "labourer",
+            "fulfilment"
+          ]
+        },
+        {
+          "group": 24,
+          "latents": [
+            1467
+          ],
+          "gain_margin": 0.0,
+          "examples": [
+            "moustache",
+            "moustache",
+            "moustaches, moustaches"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1235,
+      "n_groups": 1235,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 994,
+      "n_removed": 994,
+      "var_share_removed": 0.071,
+      "var_share_sae_error": 0.0088,
+      "top": [
+        {
+          "group": 1228,
+          "latents": [
+            204
+          ],
+          "gain_margin": 2426.4,
+          "examples": [
+            "An idea of the unpreparedness of European diplomacy in the face of the sudden Balkan war can be had by simply glancing at the records of the British House of Co",
+            "As Socrates did not write down any of his teachings, secondary sources provide the only information on his life and thought. The sometimes contradictory nature ",
+            "Mr. Beck makes out a case from the viewpoint of the accusing party\u2014of course, nobody will doubt the legal abilities of Mr. Beck\u2014but before the Supreme Court of "
+          ]
+        },
+        {
+          "group": 1223,
+          "latents": [
+            200
+          ],
+          "gain_margin": 1965.33,
+          "examples": [
+            "Our relations with Turkey have been strained for some months. But after the negotiations of Bucharest some agreement was reached regarding the refugees. Those i",
+            "In zeal for education Quebec was therefore not behind Boston. But the spirit was different. Quebec believed that safety lay in control by the Church, and this c",
+            "At the age of eighty-two years, and full of honor, after a life actively devoted to scientific work of the highest and most accurate kind, which has contributed"
+          ]
+        },
+        {
+          "group": 154,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 1960.92,
+          "examples": [
+            "Chicken and Millipede were friends. But they were always competing with each other. One day they decided to play football to see who was the best player. They w",
+            "Bon is on a summer break! He asks Ma to play. But she is busy. She tells Bon to ask his Pa. Bon finds his Pa. \"Pa! Want to play ball?\" Pa says no. He is going t",
+            "This is Cat. This is Dog. Cat and Dog live in a house. A house with a door. A house with a roof. Cat and Dog have a ball. The ball is red and blue and green. Ca"
+          ]
+        },
+        {
+          "group": 607,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 1673.58,
+          "examples": [
+            "Tommy had to go to school every day, and while he was away I either stayed in the house or played in the backyard. I had some bones out there and an old rubber ",
+            "Mother Goat passes by. \"Will you go to the fair with me?\" she asks Mother Hen. \n\"I'm busy with my eggs, \" Mother Hen answers. One, two, three, four, five, six. ",
+            "Look! The sun is rising. The birds are chirping. The girls are ready to play.\nChunu says, \"Brrr, how cold!\"\nMunu says, \"Yes, so cold!\"\nChunu says, \"I will wear "
+          ]
+        },
+        {
+          "group": 611,
+          "latents": [
+            779
+          ],
+          "gain_margin": 1506.19,
+          "examples": [
+            "A great many centuries ago, when the earth was even more beautiful than it is now, there grew in one of the many valleys a dainty little fern leaf. All around t",
+            "She lived in one of the most beautiful homes in Louisville, a city full of beautiful homes. And Rosanna's was one of the loveliest. It was a great, rambling hou",
+            "I can never forget that evening four years ago. It was a cold December. We were in a big room in our log house in Lithuania. My good, kind, thin old mother sat "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1631,
+      "n_groups": 1631,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1279,
+      "n_removed": 1279,
+      "var_share_removed": 0.3673,
+      "var_share_sae_error": 0.0196,
+      "top": [
+        {
+          "group": 929,
+          "latents": [
+            779
+          ],
+          "gain_margin": 629.4,
+          "examples": [
+            "JESSIE AND HER KITTEN",
+            "A Woodland Valentine",
+            "HOW LITTLE EDITH WENT TO SLEEP"
+          ]
+        },
+        {
+          "group": 1626,
+          "latents": [
+            419
+          ],
+          "gain_margin": 501.85,
+          "examples": [
+            "Assyria",
+            "Hearing_aid",
+            "Electronic_nose"
+          ]
+        },
+        {
+          "group": 1629,
+          "latents": [
+            349
+          ],
+          "gain_margin": 403.1,
+          "examples": [
+            "DAISIES AND CLOVER",
+            "Arion and the Dolphin",
+            "EDITH AND THE CHICKENS"
+          ]
+        },
+        {
+          "group": 1628,
+          "latents": [
+            477
+          ],
+          "gain_margin": 163.5,
+          "examples": [
+            "DOWN THE RIVER AFTER THE BOY",
+            "The boy and the jackal",
+            "Moni the Goat-Boy"
+          ]
+        },
+        {
+          "group": 913,
+          "latents": [
+            967
+          ],
+          "gain_margin": 143.71,
+          "examples": [
+            "The Animals and the Mirror",
+            "SAM AND HIS GOATS",
+            "IN CANADA WITH A LYNX"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 916,
+      "n_groups": 911,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 723,
+      "n_removed": 726,
+      "var_share_removed": 0.2537,
+      "var_share_sae_error": 0.0037,
+      "top": [
+        {
+          "group": 884,
+          "latents": [
+            688
+          ],
+          "gain_margin": 414.83,
+          "examples": [
+            "https://www.commonlit.org/texts/the-mouse",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#LITTLEBEARS",
+            "http://www.gutenberg.org/files/20552/20552-h/20552-h.htm#The_Wonderful_Bird"
+          ]
+        },
+        {
+          "group": 54,
+          "latents": [
+            1874
+          ],
+          "gain_margin": 297.64,
+          "examples": [
+            "http://www.gutenberg.org/files/24941/24941-h/24941-h.htm#Page_103",
+            "http://www.gutenberg.org/files/24941/24941-h/24941-h.htm#Page_97",
+            "http://www.gutenberg.org/files/24941/24941-h/24941-h.htm#Page_105"
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            1782
+          ],
+          "gain_margin": 246.58,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Bronze_Age",
+            "https://en.wikipedia.org/wiki/Oil_refinery",
+            "https://en.wikipedia.org/wiki/Civil_engineering"
+          ]
+        },
+        {
+          "group": 105,
+          "latents": [
+            1672
+          ],
+          "gain_margin": 217.5,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Hyperlink",
+            "https://en.wikipedia.org/wiki/Aurora",
+            "https://en.wikipedia.org/wiki/Dynasty"
+          ]
+        },
+        {
+          "group": 45,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 190.67,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Software_development",
+            "https://en.wikipedia.org/wiki/Software_engineering",
+            "https://en.wikipedia.org/wiki/Computing_platform"
+          ]
+        }
+      ]
+    }
+  }
+}

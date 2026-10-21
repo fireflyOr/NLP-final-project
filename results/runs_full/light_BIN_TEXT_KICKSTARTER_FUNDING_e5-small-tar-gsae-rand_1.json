@@ -1,0 +1,392 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7052554670410323,
+  "test_error": 0.29474453295896774,
+  "course_metric": "auroc",
+  "course_score": 0.7052554670410324,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 93.35853815078735,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 870,
+      "n_groups": 861,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 631,
+      "n_removed": 635,
+      "var_share_removed": 0.6133,
+      "var_share_sae_error": 0.0058,
+      "top": [
+        {
+          "group": 686,
+          "latents": [
+            635
+          ],
+          "gain_margin": 145.91,
+          "examples": [
+            "1970-01-01 00:00:01.360203556",
+            "1970-01-01 00:00:01.360255597",
+            "1970-01-01 00:00:01.360731187"
+          ]
+        },
+        {
+          "group": 542,
+          "latents": [
+            565
+          ],
+          "gain_margin": 143.33,
+          "examples": [
+            "1970-01-01 00:00:01.421702906",
+            "1970-01-01 00:00:01.421991877",
+            "1970-01-01 00:00:01.421355512"
+          ]
+        },
+        {
+          "group": 82,
+          "latents": [
+            1594
+          ],
+          "gain_margin": 117.75,
+          "examples": [
+            "1970-01-01 00:00:01.431490011",
+            "1970-01-01 00:00:01.432153287",
+            "1970-01-01 00:00:01.431627472"
+          ]
+        },
+        {
+          "group": 239,
+          "latents": [
+            1334
+          ],
+          "gain_margin": 105.97,
+          "examples": [
+            "1970-01-01 00:00:01.404911333",
+            "1970-01-01 00:00:01.404739332",
+            "1970-01-01 00:00:01.404993258"
+          ]
+        },
+        {
+          "group": 841,
+          "latents": [
+            508
+          ],
+          "gain_margin": 104.32,
+          "examples": [
+            "1970-01-01 00:00:01.405061450",
+            "1970-01-01 00:00:01.405928122",
+            "1970-01-01 00:00:01.405102054"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 864,
+      "n_groups": 843,
+      "n_multi_groups": 20,
+      "n_groups_dropped": 619,
+      "n_removed": 629,
+      "var_share_removed": 0.5888,
+      "var_share_sae_error": 0.006,
+      "top": [
+        {
+          "group": 663,
+          "latents": [
+            554
+          ],
+          "gain_margin": 355.45,
+          "examples": [
+            "1970-01-01 00:00:01.365746460",
+            "1970-01-01 00:00:01.401753600",
+            "1970-01-01 00:00:01.401663600"
+          ]
+        },
+        {
+          "group": 330,
+          "latents": [
+            1663
+          ],
+          "gain_margin": 196.2,
+          "examples": [
+            "1970-01-01 00:00:01.416535200",
+            "1970-01-01 00:00:01.401766200",
+            "1970-01-01 00:00:01.392766200"
+          ]
+        },
+        {
+          "group": 294,
+          "latents": [
+            1867
+          ],
+          "gain_margin": 191.89,
+          "examples": [
+            "1970-01-01 00:00:01.343620740",
+            "1970-01-01 00:00:01.410148740",
+            "1970-01-01 00:00:01.410148740"
+          ]
+        },
+        {
+          "group": 519,
+          "latents": [
+            1154
+          ],
+          "gain_margin": 183.63,
+          "examples": [
+            "1970-01-01 00:00:01.407360013",
+            "1970-01-01 00:00:01.427569117",
+            "1970-01-01 00:00:01.427575928"
+          ]
+        },
+        {
+          "group": 230,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 168.29,
+          "examples": [
+            "1970-01-01 00:00:01.366519413",
+            "1970-01-01 00:00:01.364161679",
+            "1970-01-01 00:00:01.364153005"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1251,
+      "n_removed": 1252,
+      "var_share_removed": 0.4531,
+      "var_share_sae_error": 0.1458,
+      "top": [
+        {
+          "group": 1725,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 2366.03,
+          "examples": [
+            "\"An independent clothing brand looking to encompass inspirational and motivating messages. Using clothing as a platform to impact others\"",
+            "\"A social commerce online platform that discovers the most exclusive, cutting edge independent brands on todays market.\"",
+            "\"I am trying to bring first a series of Natural Bodybuilding and workout t-shirts and then sports nutrition items to the market.\""
+          ]
+        },
+        {
+          "group": 403,
+          "latents": [
+            1769
+          ],
+          "gain_margin": 1109.52,
+          "examples": [
+            "\"Our 4th Renaissance Miniatures terrain KS!  A collection of pre-painted, modular Castle & Siege Engine kits for 28mm tabletop gamers.\"",
+            "\"The 3D Dungeon tiles for miniatures and role playing games you have always wanted. Sturdy, easily transportable, and highly detailed.\"",
+            "\"This project will produce six 32mm fantasy miniatures for our Freeblades game.\""
+          ]
+        },
+        {
+          "group": 2035,
+          "latents": [
+            978
+          ],
+          "gain_margin": 439.46,
+          "examples": [
+            "\"9 integrated and enterprise-level business applications for small and medium sized businesses over the cloud.\"",
+            "\"This is an app that will revolutionize how to we give and receive directions to our friends and family!\"",
+            "\"Easy to use app will help you know if your kids are being cyber bullied. Get alerts and notices to help track and monitor your child.\""
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            315
+          ],
+          "gain_margin": 364.71,
+          "examples": [
+            "\"Me and the Trinity is set to record their sophomore album to be entitled PARALLELS. With your help, we can make this happen!\"",
+            "\"Help Kirsten on her way with recording her d\u00e9but album and get rewards for your donations!\"",
+            "\"Help Youth Owned Records record and release teen band Creal's debut album.\""
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            279,
+            807
+          ],
+          "gain_margin": 299.19,
+          "examples": [
+            "\"I have finally decided to follow my dream. I want to be a professional musician. This is the project that with get me there.\"",
+            "\"My first mixtape, and I want it to sound professional and emulate quality! So I need to get some studio time. Music is my everything.\"",
+            "\"My first professionally recorded album.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2044,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1230,
+      "n_removed": 1232,
+      "var_share_removed": 0.4305,
+      "var_share_sae_error": 0.1325,
+      "top": [
+        {
+          "group": 1019,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 1179.19,
+          "examples": [
+            "\"social-media-website\"",
+            "\"secure-and-ad-free-messaging-app-with-social-netwo\"",
+            "\"the-online-platform-for-students-and-graduates\""
+          ]
+        },
+        {
+          "group": 715,
+          "latents": [
+            803
+          ],
+          "gain_margin": 615.16,
+          "examples": [
+            "\"the-last-knife-sharpener-documentary-2014\"",
+            "\"ttd-a-short-film-that-drags-you-back-to-the-90s\"",
+            "\"rocky-horror-saved-my-life-a-fan-documentary\""
+          ]
+        },
+        {
+          "group": 916,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 382.68,
+          "examples": [
+            "\"foulfaerie-print-shop-opening-my-online-store\"",
+            "\"obtainn-the-first-personal-online-learning-portal\"",
+            "\"jumbawumba-your-internet-easy-personal-secure\""
+          ]
+        },
+        {
+          "group": 2032,
+          "latents": [
+            441
+          ],
+          "gain_margin": 344.15,
+          "examples": [
+            "\"become-a-co-producer-for-babble-on-babalon\"",
+            "\"plus-size-clothes-can-be-fashionable\"",
+            "\"can-we-talk\""
+          ]
+        },
+        {
+          "group": 442,
+          "latents": [
+            1769
+          ],
+          "gain_margin": 320.05,
+          "examples": [
+            "\"pixel-dungeon-paper-miniatures\"",
+            "\"urdaggar-tribes-of-valor-fantasy-miniatures\"",
+            "\"anime-miniatures-28mm-minis-for-painting-gaming-fa\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2041,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1206,
+      "n_removed": 1207,
+      "var_share_removed": 0.4355,
+      "var_share_sae_error": 0.1372,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            454,
+            1052
+          ],
+          "gain_margin": 2735.42,
+          "examples": [
+            "\"College: The App (Canceled)\"",
+            "\"GERIELLE SNACKS Restaurant (Canceled)\"",
+            "\"Burgers and Babes Food Truck (Canceled)\""
+          ]
+        },
+        {
+          "group": 743,
+          "latents": [
+            732
+          ],
+          "gain_margin": 563.18,
+          "examples": [
+            "\"Unique Poster Project <ALL-TIME #1 ATHLETE> (Canceled)\"",
+            "\"T-Shirts and Tanks for Hardstyle Team Podcast (Canceled)\"",
+            "\"SUPERHILLCOOL\u2122 // The\u00a0Music Quiz! (iOS) (Canceled)\""
+          ]
+        },
+        {
+          "group": 2023,
+          "latents": [
+            23
+          ],
+          "gain_margin": 525.28,
+          "examples": [
+            "\"Little Shop of Candles! (Canceled)\"",
+            "\"The Aleatory Arcana (Canceled)\"",
+            "\"Midnight at the Midway (Canceled)\""
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            315,
+            681
+          ],
+          "gain_margin": 476.55,
+          "examples": [
+            "\"The Bold Type records their first album.\"",
+            "\"Post Rapture Party's First Album!\"",
+            "\"Help Fund The Local Strangers' 1st Full Length Album\""
+          ]
+        },
+        {
+          "group": 1006,
+          "latents": [
+            803
+          ],
+          "gain_margin": 439.7,
+          "examples": [
+            "\"Live Blues DVD:  \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"Friday Night B",
+            "\"Marvels Vs. Capcom 3 Live Action Short Fan Film\"",
+            "\"Waking Reverie: An Animated Short Film by Andrew Riding\""
+          ]
+        }
+      ]
+    }
+  }
+}

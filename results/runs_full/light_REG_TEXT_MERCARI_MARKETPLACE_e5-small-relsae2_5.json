@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5649489066686351,
+  "test_error": 0.5649489066686351,
+  "course_metric": "r2",
+  "course_score": 0.42366162654289463,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 100.70348978042603,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 430,
+      "n_removed": 82,
+      "threshold": 0.0407,
+      "passed_test": 178,
+      "removed_norm_ratio": 0.2603,
+      "var_share_kept": 0.9172,
+      "var_share_sae_error": 0.0063,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 231,
+          "score": 0.1518,
+          "n_active": 3922,
+          "examples": [
+            "FOREVER 21",
+            "FOREVER 21",
+            "FOREVER 21"
+          ]
+        },
+        {
+          "latent": 194,
+          "score": 0.1435,
+          "n_active": 3973,
+          "examples": [
+            "Mixit",
+            "Boppy",
+            "Boppy"
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.1434,
+          "n_active": 4019,
+          "examples": [
+            "Almost Famous",
+            "GUESS",
+            "GUESS"
+          ]
+        },
+        {
+          "latent": 123,
+          "score": 0.1412,
+          "n_active": 3900,
+          "examples": [
+            "beautyblender\u00ae",
+            "HTC",
+            "H&M"
+          ]
+        },
+        {
+          "latent": 165,
+          "score": 0.1406,
+          "n_active": 3937,
+          "examples": [
+            "Nerf",
+            "Nerf",
+            "Nerf"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 494,
+      "n_kept": 428,
+      "n_removed": 84,
+      "threshold": 0.041,
+      "passed_test": 152,
+      "removed_norm_ratio": 0.2619,
+      "var_share_kept": 0.7888,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.158,
+          "n_active": 2632,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 379,
+          "score": 0.1505,
+          "n_active": 338,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "latent": 268,
+          "score": 0.1498,
+          "n_active": 370,
+          "examples": [
+            "Shorts",
+            "Shorts",
+            "Shorts"
+          ]
+        },
+        {
+          "latent": 92,
+          "score": 0.1408,
+          "n_active": 380,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "latent": 24,
+          "score": 0.1382,
+          "n_active": 852,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 420,
+      "n_removed": 92,
+      "threshold": 0.0389,
+      "passed_test": 187,
+      "removed_norm_ratio": 0.3918,
+      "var_share_kept": 0.8596,
+      "var_share_sae_error": 0.0007,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.1674,
+          "n_active": 1613,
+          "examples": [
+            "Disposable Diapers",
+            "Disposable Diapers",
+            "Disposable Diapers"
+          ]
+        },
+        {
+          "latent": 132,
+          "score": 0.147,
+          "n_active": 485,
+          "examples": [
+            "Flight/Bomber",
+            "Flight/Bomber",
+            "Swings, Jumpers & Bouncers"
+          ]
+        },
+        {
+          "latent": 191,
+          "score": 0.1264,
+          "n_active": 605,
+          "examples": [
+            "Guitars",
+            "Parka",
+            "Parka"
+          ]
+        },
+        {
+          "latent": 278,
+          "score": 0.1239,
+          "n_active": 852,
+          "examples": [
+            "Classic, Straight Leg",
+            "Classic, Straight Leg",
+            "Classic, Straight Leg"
+          ]
+        },
+        {
+          "latent": 409,
+          "score": 0.1181,
+          "n_active": 744,
+          "examples": [
+            "Baby",
+            "Baby",
+            "Baby Gyms & Playmats"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 402,
+      "n_removed": 110,
+      "threshold": 0.042,
+      "passed_test": 135,
+      "removed_norm_ratio": 0.4118,
+      "var_share_kept": 0.7514,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.1558,
+          "n_active": 741,
+          "examples": [
+            "Handmade/Bags and Purses/Purse",
+            "Handmade/Bags and Purses/Purse",
+            "Handmade/Bags and Purses/Purse"
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.1439,
+          "n_active": 321,
+          "examples": [
+            "Women/Women's Handbags/Hobo",
+            "Women/Women's Handbags/Hobo",
+            "Women/Women's Handbags/Hobo"
+          ]
+        },
+        {
+          "latent": 79,
+          "score": 0.1386,
+          "n_active": 1686,
+          "examples": [
+            "Women/Shoes/Slippers",
+            "Women/Shoes/Slippers",
+            "Women/Shoes/Slippers"
+          ]
+        },
+        {
+          "latent": 55,
+          "score": 0.1324,
+          "n_active": 1047,
+          "examples": [
+            "Men/Sweats & Hoodies/Sweatshirt, Pullover",
+            "Men/Sweats & Hoodies/Sweatshirt, Pullover",
+            "Men/Sweats & Hoodies/Sweatshirt, Pullover"
+          ]
+        },
+        {
+          "latent": 314,
+          "score": 0.1288,
+          "n_active": 1586,
+          "examples": [
+            "Handmade/Art/Drawings",
+            "Handmade/Art/Drawings",
+            "Women/Dresses/Asymmetrical Hem"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 379,
+      "n_removed": 133,
+      "threshold": 0.0409,
+      "passed_test": 56,
+      "removed_norm_ratio": 0.3238,
+      "var_share_kept": 0.5972,
+      "var_share_sae_error": 0.2281,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 351,
+          "score": 0.1152,
+          "n_active": 3733,
+          "examples": [
+            "Women's XL",
+            "Hemingway",
+            "Winter shoes"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.1044,
+          "n_active": 2088,
+          "examples": [
+            "Works great.",
+            "good quality",
+            "Works great"
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.1001,
+          "n_active": 1990,
+          "examples": [
+            "Reserved",
+            "Used condition",
+            "New Condition"
+          ]
+        },
+        {
+          "latent": 199,
+          "score": 0.0995,
+          "n_active": 828,
+          "examples": [
+            "Authentic",
+            "New ! Authentic!",
+            "100% Authentic from Kylie Cosmetics (:"
+          ]
+        },
+        {
+          "latent": 31,
+          "score": 0.0968,
+          "n_active": 1770,
+          "examples": [
+            "New, never used.",
+            "Never worn.",
+            "Never used"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 430,
+      "n_removed": 82,
+      "threshold": 0.0392,
+      "passed_test": 86,
+      "removed_norm_ratio": 0.2636,
+      "var_share_kept": 0.6873,
+      "var_share_sae_error": 0.1948,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.117,
+          "n_active": 955,
+          "examples": [
+            "Shirt",
+            "Shirt",
+            "Shirts"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.1038,
+          "n_active": 1245,
+          "examples": [
+            "EUC LuLaRoe Pink Blue Aztec Leggings OS",
+            "LuLaRoe OS Heathered Purple Leggings",
+            "Lularoe Aztec dots!! \"Unicorn\" TC"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.1006,
+          "n_active": 821,
+          "examples": [
+            "Irma s Lularoe",
+            "LuLaRoe Irma",
+            "LulaRoe Irma"
+          ]
+        },
+        {
+          "latent": 304,
+          "score": 0.0959,
+          "n_active": 1044,
+          "examples": [
+            "Sailor Pin Up Button Up Shirt",
+            "Shirt",
+            "Shirt"
+          ]
+        },
+        {
+          "latent": 36,
+          "score": 0.0884,
+          "n_active": 793,
+          "examples": [
+            "Belts",
+            "Vintage belt buckles jewelry",
+            "Choker Necklace"
+          ]
+        }
+      ]
+    }
+  }
+}

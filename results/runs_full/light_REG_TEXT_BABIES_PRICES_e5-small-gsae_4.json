@@ -1,0 +1,317 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -20.31376966065828,
+  "test_error": 20.31376966065828,
+  "course_metric": "r2",
+  "course_score": 0.8226232189052567,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 228.8806173801422,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 224,
+      "n_groups": 221,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 212,
+      "n_removed": 213,
+      "var_share_removed": 0.9547,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 24,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 70.14,
+          "examples": [
+            "orange / gold / cream / chocolate",
+            "orange / cream / chocolate",
+            "orange / blue / cream / chocolate"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            7,
+            1628
+          ],
+          "gain_margin": 34.26,
+          "examples": [
+            "orange / pink / blue / black / purple",
+            "orange / blue / pink / red",
+            "orange / pink / black / purple"
+          ]
+        },
+        {
+          "group": 92,
+          "latents": [
+            1388
+          ],
+          "gain_margin": 7.39,
+          "examples": [
+            "blue / gray",
+            "blue / gray",
+            "blue / gray"
+          ]
+        },
+        {
+          "group": 11,
+          "latents": [
+            1935
+          ],
+          "gain_margin": 7.27,
+          "examples": [
+            "espresso",
+            "espresso",
+            "espresso"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            42,
+            999
+          ],
+          "gain_margin": 3.06,
+          "examples": [
+            "blue / cream",
+            "tan / cream",
+            "tan / cream"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 261,
+      "n_groups": 259,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 245,
+      "n_removed": 247,
+      "var_share_removed": 0.6907,
+      "var_share_sae_error": 0.0023,
+      "top": [
+        {
+          "group": 42,
+          "latents": [
+            1615
+          ],
+          "gain_margin": 107.74,
+          "examples": [
+            "Tomorrowland Pillowtime Pal",
+            "Sadie & Scout",
+            "Sadie & Scout"
+          ]
+        },
+        {
+          "group": 114,
+          "latents": [
+            1368
+          ],
+          "gain_margin": 41.04,
+          "examples": [
+            "Perfectly Pink Solid,",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 45,
+          "latents": [
+            1652
+          ],
+          "gain_margin": 29.93,
+          "examples": [
+            "Cleveland",
+            "Cleveland",
+            "Cleveland"
+          ]
+        },
+        {
+          "group": 85,
+          "latents": [
+            1059
+          ],
+          "gain_margin": 28.21,
+          "examples": [
+            "Glenna Jean Lulu",
+            "Glenna Jean Lulu",
+            "Glenna Jean Lulu"
+          ]
+        },
+        {
+          "group": 145,
+          "latents": [
+            373
+          ],
+          "gain_margin": 19.33,
+          "examples": [
+            "Glenna Jean Echo",
+            "Glenna Jean Echo",
+            "Glenna Jean Echo"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 912,
+      "n_groups": 912,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 592,
+      "n_removed": 592,
+      "var_share_removed": 0.3509,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 120,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 796.17,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "group": 224,
+          "latents": [
+            1785
+          ],
+          "gain_margin": 529.18,
+          "examples": [
+            "Sakar International",
+            "Marmont Hill",
+            "Marmont Hill"
+          ]
+        },
+        {
+          "group": 874,
+          "latents": [
+            351
+          ],
+          "gain_margin": 463.19,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 573,
+          "latents": [
+            1108
+          ],
+          "gain_margin": 325.63,
+          "examples": [
+            "Arms Reach Concepts",
+            "Arms Reach Concepts",
+            "Arms Reach Concepts"
+          ]
+        },
+        {
+          "group": 568,
+          "latents": [
+            837
+          ],
+          "gain_margin": 324.88,
+          "examples": [
+            "South Shore Furniture",
+            "South Shore Furniture",
+            "Woombie"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1804,
+      "n_groups": 1798,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1105,
+      "n_removed": 1108,
+      "var_share_removed": 0.4142,
+      "var_share_sae_error": 0.0088,
+      "top": [
+        {
+          "group": 1711,
+          "latents": [
+            40
+          ],
+          "gain_margin": 745.06,
+          "examples": [
+            "Tulip Garden 6-Piece Bedding Set",
+            "Fleeting Flora 6-Piece Bedding Set",
+            "Bella 6 Piece Bed Set"
+          ]
+        },
+        {
+          "group": 887,
+          "latents": [
+            1377
+          ],
+          "gain_margin": 729.59,
+          "examples": [
+            "Pam Grace Creations 10 Piece Crib Bedding Set - Pam's Paisley",
+            "Bacati Botanical Sanctuary Multi-Color 10 Piece Crib Bedding Set",
+            "Disney Baby - Lion King 7 Piece Crib Set"
+          ]
+        },
+        {
+          "group": 455,
+          "latents": [
+            1463
+          ],
+          "gain_margin": 639.31,
+          "examples": [
+            "Modern Raindrop Crystal 3 Light Chandelier Light Fixture",
+            "Gallery 3 Light Chandelier with Crystals and Black Shade",
+            "Gallery 3 Light Chandelier with Crystals and White Shade"
+          ]
+        },
+        {
+          "group": 967,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 480.56,
+          "examples": [
+            "Fisher-Price Twinkling Lights Projection Mobile",
+            "Glenna Jean Isabella Memory Board - Toile",
+            "Oakland Raiders, Darren McFadden Biggshots Full Comforter Set"
+          ]
+        },
+        {
+          "group": 1673,
+          "latents": [
+            692
+          ],
+          "gain_margin": 439.11,
+          "examples": [
+            "Atlanta Falcons, Matt Ryan Biggshots Full Comforter Set",
+            "Detroit Lions, Matthew Stafford Biggshots Twin Comforter Set",
+            "Atlanta Falcons, Matt Ryan Biggshots Queen Comforter Set"
+          ]
+        }
+      ]
+    }
+  }
+}

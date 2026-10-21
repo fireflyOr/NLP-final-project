@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13775.021928034697,
+  "test_error": 13775.021928034697,
+  "course_metric": "r2",
+  "course_score": 0.7472331443719734,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.499438762664795,
+  "diagnostics": {
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 336,
+      "n_removed": 176,
+      "threshold": 0.0407,
+      "passed_test": 6,
+      "removed_norm_ratio": 0.4892,
+      "var_share_kept": 0.6013,
+      "var_share_sae_error": 0.1511,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 504,
+          "score": 0.0528,
+          "n_active": 705,
+          "examples": [
+            "Novak, R*",
+            "Backlin, M J*",
+            "McDonald, G*"
+          ]
+        },
+        {
+          "latent": 437,
+          "score": 0.0445,
+          "n_active": 714,
+          "examples": [
+            "Brunton, L",
+            "Brunton, L",
+            "Brunton, L"
+          ]
+        },
+        {
+          "latent": 339,
+          "score": 0.0434,
+          "n_active": 552,
+          "examples": [
+            "Soo, V",
+            "Soo, V",
+            "Soo, V"
+          ]
+        },
+        {
+          "latent": 411,
+          "score": 0.042,
+          "n_active": 647,
+          "examples": [
+            "Samra, N S",
+            "Archila Quiroa, D",
+            "Rose, S M"
+          ]
+        },
+        {
+          "latent": 207,
+          "score": 0.041,
+          "n_active": 234,
+          "examples": [
+            "Novak, R*",
+            "Critchlow, R R*",
+            "Newstead, D R*"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 460,
+      "n_removed": 52,
+      "threshold": 0.0463,
+      "passed_test": 220,
+      "removed_norm_ratio": 0.1983,
+      "var_share_kept": 0.9336,
+      "var_share_sae_error": 0.008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 192,
+          "score": 0.2773,
+          "n_active": 290,
+          "examples": [
+            "General Manager",
+            "General Manager",
+            "Deputy General Manager"
+          ]
+        },
+        {
+          "latent": 399,
+          "score": 0.2687,
+          "n_active": 1007,
+          "examples": [
+            "Manager Programming & Learning",
+            "Manager Programming & Learning",
+            "Manager Security Programs"
+          ]
+        },
+        {
+          "latent": 404,
+          "score": 0.2249,
+          "n_active": 464,
+          "examples": [
+            "Director Communications",
+            "Director Communications",
+            "Director Communications"
+          ]
+        },
+        {
+          "latent": 361,
+          "score": 0.2182,
+          "n_active": 306,
+          "examples": [
+            "General Manager - Corporate Services",
+            "Head Resident Stage Elec",
+            "Head Resident Stage Elec"
+          ]
+        },
+        {
+          "latent": 126,
+          "score": 0.2166,
+          "n_active": 421,
+          "examples": [
+            "Manager Green Infrastructure Implementn",
+            "Manager Green Infrastructure Implementn",
+            "Manager Green Infrastructure Implementn"
+          ]
+        }
+      ]
+    }
+  }
+}

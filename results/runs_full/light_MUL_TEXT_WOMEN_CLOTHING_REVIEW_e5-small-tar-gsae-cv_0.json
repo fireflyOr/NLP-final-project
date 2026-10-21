@@ -1,0 +1,55 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae-cv",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7239188355050442,
+  "test_error": 0.7239188355050442,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.904347054777479,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 249.35074400901794,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1744,
+      "n_groups": 1738,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.25,
+      "n_removed": 436,
+      "val_loss": {
+        "0.0": 0.6915,
+        "0.1": 0.66585,
+        "0.25": 0.66297,
+        "0.5": 0.66585,
+        "0.75": 0.70256
+      },
+      "frac_groups_no_signal": 0.59,
+      "var_share_removed": 0.0759
+    },
+    "Title": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1498,
+      "n_groups": 1492,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.25,
+      "n_removed": 374,
+      "val_loss": {
+        "0.0": 0.81496,
+        "0.1": 0.79685,
+        "0.25": 0.77564,
+        "0.5": 0.77738,
+        "0.75": 0.81438
+      },
+      "frac_groups_no_signal": 0.62,
+      "var_share_removed": 0.2605
+    }
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23440503984442,
+  "test_error": 0.23440503984442,
+  "course_metric": "r2",
+  "course_score": 0.513356983021284,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 50.78289294242859,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1621,
+      "n_groups": 1621,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1082,
+      "n_removed": 1082,
+      "var_share_removed": 0.4508,
+      "var_share_sae_error": 0.0029,
+      "top": [
+        {
+          "group": 543,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1028.96,
+          "examples": [
+            "Manohar Pandey",
+            "Ramkrishna Gopal Bhandrakar, S.R. Bhandarkar",
+            "Meena Kandasamy"
+          ]
+        },
+        {
+          "group": 1465,
+          "latents": [
+            305
+          ],
+          "gain_margin": 771.46,
+          "examples": [
+            "Mike Perez",
+            "Ben Greenfield",
+            "Catrin Brown, Mike Ford"
+          ]
+        },
+        {
+          "group": 809,
+          "latents": [
+            477
+          ],
+          "gain_margin": 642.01,
+          "examples": [
+            "Sardar Patel",
+            "Nikita Singh",
+            "Nikita Singh"
+          ]
+        },
+        {
+          "group": 1620,
+          "latents": [
+            204
+          ],
+          "gain_margin": 483.73,
+          "examples": [
+            "Osamu Tezuka",
+            "Osamu Tezuka",
+            "Max Euwe"
+          ]
+        },
+        {
+          "group": 241,
+          "latents": [
+            1248
+          ],
+          "gain_margin": 314.27,
+          "examples": [
+            "Hamid Baig",
+            "Minnie Vaid",
+            "Ladybird Ladybird"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 724,
+      "n_groups": 691,
+      "n_multi_groups": 28,
+      "n_groups_dropped": 508,
+      "n_removed": 522,
+      "var_share_removed": 0.3972,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 139,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 641.8,
+          "examples": [
+            "Hardcover,\u2013 Illustrated, 14 Jun 2015",
+            "Hardcover,\u2013 Facsimile, 31 May 2011",
+            "Product Bundle,\u2013 26 Aug 2016"
+          ]
+        },
+        {
+          "group": 8,
+          "latents": [
+            688,
+            1492,
+            1546
+          ],
+          "gain_margin": 620.08,
+          "examples": [
+            "Paperback,\u2013 1 Apr 2019",
+            "Paperback,\u2013 1 Apr 2019",
+            "Paperback,\u2013 1 Apr 2019"
+          ]
+        },
+        {
+          "group": 629,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 347.96,
+          "examples": [
+            "Hardcover,\u2013 11 Jan 2018",
+            "Hardcover,\u2013 30 Jan 2018",
+            "Hardcover,\u2013 30 Sep 2018"
+          ]
+        },
+        {
+          "group": 270,
+          "latents": [
+            1061
+          ],
+          "gain_margin": 325.13,
+          "examples": [
+            "Product Bundle,\u2013 26 Aug 2016",
+            "Flexibound,\u2013 21 Oct 2014",
+            "Hardcover,\u2013 Facsimile, 31 May 2011"
+          ]
+        },
+        {
+          "group": 78,
+          "latents": [
+            1787
+          ],
+          "gain_margin": 226.83,
+          "examples": [
+            "Plastic Comb,\u2013 DVD, NTSC",
+            "Hardcover,\u2013 Abridged, Audiobook, Box set",
+            "Hardcover,\u2013 Box set, 2 Aug 2009"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 736,
+      "n_groups": 736,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 603,
+      "n_removed": 603,
+      "var_share_removed": 0.5385,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 724,
+          "latents": [
+            620
+          ],
+          "gain_margin": 741.03,
+          "examples": [
+            "Children's Language Learning (Books)",
+            "Children's Language Learning (Books)",
+            "Children's Language Learning (Books)"
+          ]
+        },
+        {
+          "group": 206,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 523.24,
+          "examples": [
+            "Words, Language & Grammar Reference",
+            "Essays (Books)",
+            "Essays (Books)"
+          ]
+        },
+        {
+          "group": 363,
+          "latents": [
+            867
+          ],
+          "gain_margin": 294.83,
+          "examples": [
+            "Software Testing",
+            "Software Testing",
+            "Software Design & Engineering"
+          ]
+        },
+        {
+          "group": 418,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 227.1,
+          "examples": [
+            "Design Pattern Programming",
+            "Design Pattern Programming",
+            "Design Pattern Programming"
+          ]
+        },
+        {
+          "group": 349,
+          "latents": [
+            794
+          ],
+          "gain_margin": 146.44,
+          "examples": [
+            "Language & Linguistics",
+            "Language & Linguistics",
+            "Language, Linguistics & Writing (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1752,
+      "n_groups": 1752,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1231,
+      "n_removed": 1231,
+      "var_share_removed": 0.3931,
+      "var_share_sae_error": 0.0184,
+      "top": [
+        {
+          "group": 217,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 2021.83,
+          "examples": [
+            "What does an idea look like? And where do they come from? Grant Snider's illustrations will motivate you to explore these questions, inspire you to come up with",
+            "\"You\u2019ll initially find it hard to believe that these pictures are real\u2014but they are. These are the most beautiful photographs of the world\u2019s most beautiful bird",
+            "This kit will be a must-have for millions of dedicated fans of Game of Thrones, HBO's global television phenomenon. It includes a 4\u201d replica of Jon Snow's sword"
+          ]
+        },
+        {
+          "group": 1750,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1922.91,
+          "examples": [
+            "Modernist aesthetics in architecture, art, and product design are familiar to many. In soaring glass structures or minimalist canvases, we recognize a time of v",
+            "For the Swiss-born architect and city planner Le Corbusier (Charles-\u00c9douard Jeanneret, 1887\u20131965), architecture constituted a noble art, an exalted calling in w",
+            "This best-selling manga of high seas adventures just got bigger with this omnibus edition of One Piece!\n\nAs a child, Monkey D. Luffy dreamed of becoming King of"
+          ]
+        },
+        {
+          "group": 943,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1870.71,
+          "examples": [
+            "Poker champion turned business consultant Annie Duke teaches you how to get comfortable with uncertainty and make better decisions as a result.\n\nIn Super Bowl X",
+            "(Piano Method). The great Baroque master composer Johann Sebastian Bach (1685-1750) wrote music for every combination of instruments and voices. His simplest an",
+            "For centuries the nature and meaning of Islamic art has been misunderstood in the West, being regarded as no more than decoration. But in fact the abstract art "
+          ]
+        },
+        {
+          "group": 446,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1648.55,
+          "examples": [
+            "Six months have passed since Prisha was pushed to death by the person she loved the most, Saveer. But she doesn't believes that it was him till she stumbles upo",
+            "Soulmate is not just a love story but a life-changing story. It talks about every phase of life from teenage to adulthood. This book describes a small town girl",
+            "What if your husband's ex-girlfriend makes\na sudden comeback into your lives?\nPriya and Chirag are like several other modern couples, living life at breakneck s"
+          ]
+        },
+        {
+          "group": 1745,
+          "latents": [
+            396
+          ],
+          "gain_margin": 570.82,
+          "examples": [
+            "Village boy meets pretty girl in city college. Since we live in dramatic times, this can no longer go unnoticed. He decides to marry her. She runs away as fast ",
+            "The only guy Sia Sharma, a romantic fiction editor, had loved had left six years ago. Ryan Mathur has now become a well-known entrepreneur and his advertising c",
+            "For nine years, Rajat Gupta led McKinsey and company \u2013 The first foreign-born person to head the world\u2019s most influential management consultancy. He was also th"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1784,
+      "n_groups": 1784,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1255,
+      "n_removed": 1255,
+      "var_share_removed": 0.4696,
+      "var_share_sae_error": 0.0184,
+      "top": [
+        {
+          "group": 221,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1857.02,
+          "examples": [
+            "Key Words 3c: Let me write",
+            "Fool Me Once",
+            "The Malhotra Bride"
+          ]
+        },
+        {
+          "group": 1783,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1372.55,
+          "examples": [
+            "Uzumaki (3-in-1, Deluxe Edition): Includes vols. 1, 2 & 3",
+            "And On That Bombshell: Inside the Madness and Genius of TOP GEAR",
+            "One Piece: East Blue 7-8-9, Vol. 3 (Omnibus Edition) (One Piece (Omnibus Edition))"
+          ]
+        },
+        {
+          "group": 1031,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1319.99,
+          "examples": [
+            "Frederick Noad: Solo Guitar Playing Volume 1 - Fourth Edition (Book/CD)",
+            "The Art of God of War",
+            "The Art of God of War"
+          ]
+        },
+        {
+          "group": 890,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1015.26,
+          "examples": [
+            "250 Stencil Designs from India (Dover Pictorial Archive)",
+            "Fifty Cars that Changed the World: Design Museum Fifty",
+            "Trinity College London Electronic Keyboard Exam Pieces & Technical Work 2019-2022: Initial Grade"
+          ]
+        },
+        {
+          "group": 833,
+          "latents": [
+            1061
+          ],
+          "gain_margin": 432.34,
+          "examples": [
+            "Hands-On Machine Learning with Scikit-Learn and Tensor Flow: Concepts, Tools, and Techniques to Build Intelligent Systems",
+            "Data Mining: Concepts and Techniques (The Morgan Kaufmann Series in Data Management Systems)",
+            "CISA: Certified Information Systems Auditor Study Guide, 4ed (SYBEX)"
+          ]
+        }
+      ]
+    }
+  }
+}

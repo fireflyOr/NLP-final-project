@@ -1,0 +1,393 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3786298337829612,
+  "test_error": 1.3786298337829612,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.797215002607317,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 167.66451263427734,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 606,
+      "n_groups": 604,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 554,
+      "n_removed": 556,
+      "var_share_removed": 0.6371,
+      "var_share_sae_error": 0.0,
+      "top": [
+        {
+          "group": 508,
+          "latents": [
+            873
+          ],
+          "gain_margin": 3953.66,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 505,
+          "latents": [
+            32
+          ],
+          "gain_margin": 2796.96,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 498,
+          "latents": [
+            611
+          ],
+          "gain_margin": 2138.56,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 288,
+          "latents": [
+            1498
+          ],
+          "gain_margin": 1386.23,
+          "examples": [
+            "11-21 yrs",
+            "14-21 yrs",
+            "14-21 yrs"
+          ]
+        },
+        {
+          "group": 72,
+          "latents": [
+            1383
+          ],
+          "gain_margin": 1145.72,
+          "examples": [
+            "10-15 yrs",
+            "10-15 yrs",
+            "10-15 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2029,
+      "n_groups": 2023,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1117,
+      "n_removed": 1119,
+      "var_share_removed": 0.2921,
+      "var_share_sae_error": 0.0417,
+      "top": [
+        {
+          "group": 1902,
+          "latents": [
+            1180
+          ],
+          "gain_margin": 1490.2,
+          "examples": [
+            "Should ensure designs are in compliance with ...",
+            "Should ensure designs are in compliance with ...",
+            " Should have good communication ..."
+          ]
+        },
+        {
+          "group": 67,
+          "latents": [
+            1956
+          ],
+          "gain_margin": 1470.3,
+          "examples": [
+            "- Optional experience with Hadoop in-memory SQL like database technologies such as LLAP, Kognitio and ...",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 293,
+          "latents": [
+            1744
+          ],
+          "gain_margin": 754.93,
+          "examples": [
+            "backup (1.) To maintain high login Efficiency (Availability) for customers (2.) To resolve tickets ...",
+            "backup (1.) To maintain high login Efficiency (Availability) for customers (2.) To resolve tickets ...",
+            "backup (1.) To maintain high login Efficiency (Availability) for customers (2.) To resolve tickets ..."
+          ]
+        },
+        {
+          "group": 2022,
+          "latents": [
+            1
+          ],
+          "gain_margin": 697.99,
+          "examples": [
+            "2 years experience managing projects for software products and web applications Thorough understanding ...",
+            "2 years experience managing projects for software products and web applications Thorough understanding ...",
+            "At least two years of experience in:;  Experience Preferred ..."
+          ]
+        },
+        {
+          "group": 1994,
+          "latents": [
+            290
+          ],
+          "gain_margin": 570.21,
+          "examples": [
+            "Good communication skills (both written & spoken ...",
+            "Good Communication skill both written and verbal;Good communication skill both written and verbal;Good ...",
+            "Should be excellent in communication;Minimum qualification: undergrad/Grad;Urgent requirement of Voice ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2000,
+      "n_groups": 1986,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 920,
+      "n_removed": 923,
+      "var_share_removed": 0.2279,
+      "var_share_sae_error": 0.0323,
+      "top": [
+        {
+          "group": 9,
+          "latents": [
+            311,
+            1415,
+            1731,
+            2032
+          ],
+          "gain_margin": 3260.62,
+          "examples": [
+            "Manager, Product Management",
+            "Manager, Analytics",
+            "Manager- Financial Reporting"
+          ]
+        },
+        {
+          "group": 93,
+          "latents": [
+            1983
+          ],
+          "gain_margin": 2970.75,
+          "examples": [
+            "Executive",
+            "Email Support Executive",
+            "Email Support Executive"
+          ]
+        },
+        {
+          "group": 461,
+          "latents": [
+            1449
+          ],
+          "gain_margin": 1843.72,
+          "examples": [
+            "Analytics Manager",
+            "Analytics Manager",
+            "Analytics Manager"
+          ]
+        },
+        {
+          "group": 787,
+          "latents": [
+            1148
+          ],
+          "gain_margin": 1696.16,
+          "examples": [
+            "Head Marketing",
+            "Head Marketing",
+            "Head Marketing"
+          ]
+        },
+        {
+          "group": 988,
+          "latents": [
+            1405
+          ],
+          "gain_margin": 1513.41,
+          "examples": [
+            "Support Executive with Punjabi Language is Mandatory",
+            "Inside Sales Executive",
+            "Warehouse Executive"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1965,
+      "n_groups": 1938,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 909,
+      "n_removed": 910,
+      "var_share_removed": 0.2324,
+      "var_share_sae_error": 0.0273,
+      "top": [
+        {
+          "group": 303,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 1842.18,
+          "examples": [
+            "Outsourcing, Operations, advanced analytics, Manager Technology",
+            "Outsourcing, Operations, advanced analytics, Manager Technology",
+            "Outsourcing, Operations, advanced analytics, Manager Technology"
+          ]
+        },
+        {
+          "group": 404,
+          "latents": [
+            1497
+          ],
+          "gain_margin": 1358.54,
+          "examples": [
+            "Analytics, Head - Analytics, data analytics, Data Science, business process...",
+            "Analytics, SAS, people management, P&C analytics, Analytics Head",
+            "Analytics, SAS, people management, P&C analytics, Analytics Head"
+          ]
+        },
+        {
+          "group": 876,
+          "latents": [
+            1405
+          ],
+          "gain_margin": 878.6,
+          "examples": [
+            "Sales Executive Activities",
+            "seo, seo executive, search engine optimization executive...",
+            "field executive, Field Work"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            110,
+            2011
+          ],
+          "gain_margin": 710.73,
+          "examples": [
+            "financial model, financial modelling, business models",
+            "Manager - Model Development, Model Development, strategy development...",
+            "Model Validation, Model Building, Strategic Thinking..."
+          ]
+        },
+        {
+          "group": 1301,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 681.41,
+          "examples": [
+            "call center executive, Call Center, Cce, Call Center Agent...",
+            "Customer Service, Call Center Management, Calling, Quality Control, Quality...",
+            "customer service, contact center, calling, call center, domestic bpo..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 975,
+      "n_groups": 966,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 829,
+      "n_removed": 838,
+      "var_share_removed": 0.8238,
+      "var_share_sae_error": 0.0039,
+      "top": [
+        {
+          "group": 738,
+          "latents": [
+            881
+          ],
+          "gain_margin": 221.43,
+          "examples": [
+            "Patna, Dehradun, Bikaner, Hisar, Shimla, Ratlam, Raipur, Bareilly, Bathinda",
+            "Chandigarh, Mohali, Panchkula",
+            "Chandigarh"
+          ]
+        },
+        {
+          "group": 926,
+          "latents": [
+            888
+          ],
+          "gain_margin": 209.28,
+          "examples": [
+            "jehanabad, katihar, khagaria, kishangang, lakhisarai, madhepura, madhubani, nalanda, nawada",
+            "hazaribagh, gumla, khunti, koderma, pakur, palamu, ramgarh, chaibasa, sahebganj",
+            "Lucknow, Aligarh, Kanpur, Allahabad, Jhansi, Ujjain, Gwalior, Moradabad, Gorakhpur"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            2047
+          ],
+          "gain_margin": 172.64,
+          "examples": [
+            "United States (U.S)",
+            "United States (U.S)",
+            "United States (U.S)"
+          ]
+        },
+        {
+          "group": 51,
+          "latents": [
+            1950
+          ],
+          "gain_margin": 110.08,
+          "examples": [
+            "Malaysia",
+            "Malaysia",
+            "Malaysia"
+          ]
+        },
+        {
+          "group": 308,
+          "latents": [
+            1337
+          ],
+          "gain_margin": 100.81,
+          "examples": [
+            "Chennai, Singapore",
+            "Bengaluru, Singapore",
+            "Bengaluru, Singapore"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-stack",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8596006755023274,
+  "test_error": 0.14039932449767256,
+  "course_metric": "auroc",
+  "course_score": 0.8596006755023273,
+  "n_text_cols": 2,
+  "n_text_features": 61,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 14.221830606460571,
+  "diagnostics": {}
+}

@@ -1,0 +1,474 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.1994902283693036,
+  "test_error": 0.1994902283693036,
+  "course_metric": "r2",
+  "course_score": 0.7950261465193569,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 107.4406247138977,
+  "diagnostics": {
+    "address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 293,
+      "n_removed": 219,
+      "threshold": 0.0412,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.6052,
+      "var_share_kept": 0.4836,
+      "var_share_sae_error": 0.1272,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 246,
+          "score": 0.0418,
+          "n_active": 821,
+          "examples": [
+            "51, Cunningham Road, Bangalore",
+            "51, Cunningham Road, Bangalore",
+            "51, Cunningham Road, Bangalore"
+          ]
+        },
+        {
+          "latent": 136,
+          "score": 0.0413,
+          "n_active": 247,
+          "examples": [
+            "HM Eleganza, 31, Museum Road, Off MG Road, Church Street, Bangalore",
+            "HM Eleganza, 31, Museum Road, Off MG Road, Church Street, Bangalore",
+            "HM Eleganza, 31, Museum Road, Off MG Road, Church Street, Bangalore"
+          ]
+        },
+        {
+          "latent": 427,
+          "score": 0.0397,
+          "n_active": 493,
+          "examples": [
+            "2, Outer Ring Road",
+            "195, Seppings Road",
+            "50, Little Plaza, Cunningham Road"
+          ]
+        },
+        {
+          "latent": 186,
+          "score": 0.038,
+          "n_active": 148,
+          "examples": [
+            "Delivery Only",
+            "Delivery Only",
+            "Delivery Only"
+          ]
+        },
+        {
+          "latent": 477,
+          "score": 0.0358,
+          "n_active": 347,
+          "examples": [
+            "55, Goenka Chambers, Jeevan Griha Colony, 19th Main, Phase 2, JP Nagar, Bangalore",
+            "55, Goenka Chambers, Jeevan Griha Colony, 19th Main, Phase 2, JP Nagar, Bangalore",
+            "55, 5th Floor, Goenka Chambers, 19th Main Road, Jeewan Griha Colony, Phase 2, JP Nagar, Bangalore"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 491,
+      "n_kept": 419,
+      "n_removed": 93,
+      "threshold": 0.038,
+      "passed_test": 75,
+      "removed_norm_ratio": 0.2342,
+      "var_share_kept": 0.8078,
+      "var_share_sae_error": 0.0024,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 191,
+          "score": 0.0884,
+          "n_active": 1424,
+          "examples": [
+            "Parsi",
+            "Parsi",
+            "Parsi, North Indian"
+          ]
+        },
+        {
+          "latent": 66,
+          "score": 0.0856,
+          "n_active": 3825,
+          "examples": [
+            "Bar Food, North Indian",
+            "Bar Food, North Indian",
+            "Bar Food, North Indian"
+          ]
+        },
+        {
+          "latent": 238,
+          "score": 0.0847,
+          "n_active": 3890,
+          "examples": [
+            "Rajasthani, North Indian",
+            "Rajasthani, North Indian",
+            "Rajasthani, North Indian"
+          ]
+        },
+        {
+          "latent": 332,
+          "score": 0.0807,
+          "n_active": 1785,
+          "examples": [
+            "Fast Food, North Indian",
+            "Fast Food, North Indian",
+            "Fast Food, North Indian"
+          ]
+        },
+        {
+          "latent": 387,
+          "score": 0.0778,
+          "n_active": 1782,
+          "examples": [
+            "North Indian, Chinese, European",
+            "North Indian, Chinese, European",
+            "North Indian, Chinese, European"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 392,
+      "n_removed": 120,
+      "threshold": 0.0432,
+      "passed_test": 29,
+      "removed_norm_ratio": 0.2007,
+      "var_share_kept": 0.8371,
+      "var_share_sae_error": 0.0244,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 118,
+          "score": 0.0802,
+          "n_active": 5174,
+          "examples": [
+            "Dance Floor, Dj",
+            "Dance Floor, Dj",
+            "Donne Biryani, Raita"
+          ]
+        },
+        {
+          "latent": 191,
+          "score": 0.0741,
+          "n_active": 4628,
+          "examples": [
+            "Malai Kofta",
+            "Malai Kofta",
+            "Malai Kofta"
+          ]
+        },
+        {
+          "latent": 109,
+          "score": 0.0669,
+          "n_active": 4500,
+          "examples": [
+            "Malai Kofta",
+            "Malai Kofta",
+            "Malai Kofta"
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0644,
+          "n_active": 4490,
+          "examples": [
+            "Vegetarian",
+            "Dal Fry",
+            "Dal Fry"
+          ]
+        },
+        {
+          "latent": 451,
+          "score": 0.0606,
+          "n_active": 883,
+          "examples": [
+            "Belgian Dark Chocolate",
+            "Chocolate Cake",
+            "Chocolate Cake"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 381,
+      "n_removed": 131,
+      "threshold": 0.0399,
+      "passed_test": 10,
+      "removed_norm_ratio": 0.1453,
+      "var_share_kept": 0.8067,
+      "var_share_sae_error": 0.0348,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 395,
+          "score": 0.0487,
+          "n_active": 356,
+          "examples": [
+            "['Veg Pasta Salad', 'Summer Sweet Corn Salad', 'Sweet n Spicy Sprout Pineapple Salad', 'Roasted Mushroom Salad', 'Sunny Side Poach Egg Salad', 'Chicken Pasta Sa",
+            "['Grilled Veg Sandwich', 'Grrilled Veg Cheese Sandwich', 'Grilled Chilli Cheese Sandwich', 'Grilled Potato Cheese Sandwich', 'Grilled Potato Onion Cheese Sandwi",
+            "['Grilled Veg Sandwich With Watermelon Juice', 'Chocolate And Cheese Sandwich', 'Grilled Veg And Cheese Sandwich', 'Fruit Bowl', 'Pulpy Grape Juice', 'Watermelo"
+          ]
+        },
+        {
+          "latent": 388,
+          "score": 0.0486,
+          "n_active": 276,
+          "examples": [
+            "['Chicken Hyderabadi', 'Tandoori Chicken', 'Mushroom Biryani', 'Paneer Biryani', 'Mixed Veg Biryani', 'Hyderabadi Chicken Biryani', 'Hyderabadi Chicken Kebab Bi",
+            "['Chicken Hyderabadi', 'Tandoori Chicken', 'Mushroom Biryani', 'Paneer Biryani', 'Mixed Veg Biryani', 'Hyderabadi Chicken Biryani', 'Hyderabadi Chicken Kebab Bi",
+            "['Chicken Hyderabadi Dum Biryani (half)', 'Combo 2', 'Combo 4', 'Combo 6', 'Chicken Kothu Porotta', 'Chicken Hyderabadi (half)', 'Combo 1', 'Combo 2', 'Combo 4'"
+          ]
+        },
+        {
+          "latent": 397,
+          "score": 0.0474,
+          "n_active": 66,
+          "examples": [
+            "['Indori Poha', 'Jain Poha', 'Masala Poha', 'Indori Poha', 'Jain Poha', 'Masala Poha']",
+            "['Matar Masala Poha', 'Vegetable Poha', 'Paneer Bhurji Poha', 'Egg Bhurji Poha', 'Egg Chilli Poha', 'Plain Poha', 'Aloo Masala Poha', 'Chilli Poha', 'Jain Poha'",
+            "['Matar Masala Poha', 'Vegetable Poha', 'Paneer Bhurji Poha', 'Achari Poha', 'Egg Bhurji Poha', 'Egg Chilli Poha', 'Plain Poha', 'Aloo Masala Poha', 'Chilli Poh"
+          ]
+        },
+        {
+          "latent": 473,
+          "score": 0.0462,
+          "n_active": 180,
+          "examples": [
+            "['Rava Masala Dosa', 'Paper Masala Dosa', 'Set Dosa', 'Rava Dosa', 'Plain Dosa', 'Open Dosa', 'Onion Dosa', 'Masala Dosa', 'Medhu Dosa', 'Butter Plain Dosa', 'R",
+            "['2 Idly', '1 Vada', 'Masala Dosa', '2 Idly', '1 Vada', 'Masala Dosa', 'Set Dosa', 'Plain Dosa', 'Onion Dosa', 'Open Dosa', 'Rava Dosa', 'Rava Masala Dosa', 'Ra",
+            "['Plain Cheese Dosa', 'Plain Onion Dosa', 'Masala Dosa', 'Cheese Masala Dosa', 'Schezwan Masala Dosa', 'Schezwan Cheese Masala Dosa', 'Mysore Masala Dosa', 'Pan"
+          ]
+        },
+        {
+          "latent": 170,
+          "score": 0.0436,
+          "n_active": 128,
+          "examples": [
+            "['Beef Roast', 'Pork Vindhalo', 'Special Fish Curry Rice', 'Prawn Curry Rice', 'Special Fish Curry Rice', 'Prawn Curry Rice', 'Hot Fish Curry Rice', 'Goan Chick",
+            "['Poori Sabji', 'Chana Dal Idli', 'Rava Idli', 'Oats Idli', 'Idli Fry', 'Vermicilli Upma', 'Lemon Sevai', 'kanda Poha', 'Indori Poha', 'Poori Sabji', 'Bombay Gr",
+            "['Rava Dosa', 'Onion Dosa', 'Capsicum Dosa', 'Veg Grilled Sandwich', 'Cheese Grilled Sandwich', 'Paneer Grilled Sandwich', 'Veg Cheese Grilled Sandwich', 'Panee"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 336,
+      "n_removed": 176,
+      "threshold": 0.0389,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.5023,
+      "var_share_kept": 0.5797,
+      "var_share_sae_error": 0.1579,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 459,
+          "score": 0.0778,
+          "n_active": 418,
+          "examples": [
+            "Sweet Truth",
+            "Sweet Truth",
+            "Sweet Truth"
+          ]
+        },
+        {
+          "latent": 376,
+          "score": 0.0594,
+          "n_active": 369,
+          "examples": [
+            "Naga's",
+            "Nagas",
+            "Nagas"
+          ]
+        },
+        {
+          "latent": 253,
+          "score": 0.0559,
+          "n_active": 822,
+          "examples": [
+            "Priya's Punjabi",
+            "Priya's Punjabi",
+            "Priya's Punjabi"
+          ]
+        },
+        {
+          "latent": 169,
+          "score": 0.0543,
+          "n_active": 801,
+          "examples": [
+            "Cool Point",
+            "Food Point",
+            "Food Point"
+          ]
+        },
+        {
+          "latent": 358,
+          "score": 0.0541,
+          "n_active": 560,
+          "examples": [
+            "Chef Master",
+            "Chef's Gallery",
+            "Chef's Gallery"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 476,
+      "n_kept": 369,
+      "n_removed": 143,
+      "threshold": 0.0476,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.4366,
+      "var_share_kept": 0.6958,
+      "var_share_sae_error": 0.0132,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 339,
+          "score": 0.0732,
+          "n_active": 40,
+          "examples": [
+            "080 39658868",
+            "080 39457777",
+            "080 39457777"
+          ]
+        },
+        {
+          "latent": 448,
+          "score": 0.0703,
+          "n_active": 3096,
+          "examples": [
+            "+91 7090999991\r\r\n+91 7090599999",
+            "+91 7090999991\r\n+91 7090599999",
+            "+91 7090999991\r\n+91 7090599999"
+          ]
+        },
+        {
+          "latent": 99,
+          "score": 0.0668,
+          "n_active": 911,
+          "examples": [
+            "080 40926612\r\n080 40926780",
+            "080 40914803\n080 40998477",
+            "080 40933344\n080 40933355"
+          ]
+        },
+        {
+          "latent": 242,
+          "score": 0.0635,
+          "n_active": 288,
+          "examples": [
+            "080 41454647",
+            "080 41631800",
+            "080 41306532"
+          ]
+        },
+        {
+          "latent": 62,
+          "score": 0.0623,
+          "n_active": 2531,
+          "examples": [
+            "+91 9880888881\r\n+91 9379888801",
+            "+91 9880888881\n+91 9379888801",
+            "+91 8970588888\r\r\n+91 8970688888"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 402,
+      "n_removed": 110,
+      "threshold": 0.0419,
+      "passed_test": 65,
+      "removed_norm_ratio": 0.3472,
+      "var_share_kept": 0.5755,
+      "var_share_sae_error": 0.2321,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 298,
+          "score": 0.1313,
+          "n_active": 870,
+          "examples": [
+            "[('Rated 4.0', \"RATED\\n  Just came back home. Firstly we had a little bit trouble finding this place. It's located on the top floor of Central Mall Jp Nagar.\\nO",
+            "[('Rated 4.0', \"RATED\\n  Just came back home. Firstly we had a little bit trouble finding this place. It's located on the top floor of Central Mall Jp Nagar.\\nO",
+            "[('Rated 4.0', \"RATED\\n  Just came back home. Firstly we had a little bit trouble finding this place. It's located on the top floor of Central Mall Jp Nagar.\\nO"
+          ]
+        },
+        {
+          "latent": 334,
+          "score": 0.1308,
+          "n_active": 615,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  Very unprofessional behavior. Had ordered a chocolate cake for a colleague in office but never got the cake. They did not deliver the o",
+            "[('Rated 1.0', \"RATED\\n  I am trying to be polite here. After the horrible (read tasteless) mutton thali, I gave them the feedback that what went wrong. The che",
+            "[('Rated 2.0', \"RATED\\n  The food is not good . Chicken and mutton not fresh with a very pungent smelling food. Not acceptable . Kindly please don't provide sta"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.1151,
+          "n_active": 697,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  Ordered a rose falooda and strawberry ice cream combo. They sent me rose milkshake and a scrawny scoop of ice cream...both of which tas",
+            "[('Rated 1.0', \"RATED\\n  Ordered a rose falooda and strawberry ice cream combo. They sent me rose milkshake and a scrawny scoop of ice cream...both of which tas",
+            "[('Rated 1.0', 'RATED\\n  I ordered a Grilled cheese sandwich, Kiwi juice and watermelon juice.\\nI have never in my life had such bad fresh juices.\\nHow can you "
+          ]
+        },
+        {
+          "latent": 8,
+          "score": 0.1033,
+          "n_active": 756,
+          "examples": [
+            "[('Rated 2.0', 'RATED\\n  One of the worst beer i have ever had in my life. I have never ever had a beer mixed with water. Really really bad.\\n\\nWould recommend ",
+            "[('Rated 2.0', 'RATED\\n  One of the worst beer i have ever had in my life. I have never ever had a beer mixed with water. Really really bad.\\n\\nWould recommend ",
+            "[('Rated 1.0', 'RATED\\n  bad food')]"
+          ]
+        },
+        {
+          "latent": 458,
+          "score": 0.1028,
+          "n_active": 754,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  Horrible. They say they have a wide menu but all dishes are cooked in the same gravy and staff training is inadequate and they are disc",
+            "[('Rated 2.0', 'RATED\\n  Worst place I have ever visited..we ordered chilly garlic fish and some starters they delivered it very late and fish was not cooked pr",
+            "[('Rated 2.0', 'RATED\\n  Worst place I have ever visited..we ordered chilly garlic fish and some starters they delivered it very late and fish was not cooked pr"
+          ]
+        }
+      ]
+    }
+  }
+}

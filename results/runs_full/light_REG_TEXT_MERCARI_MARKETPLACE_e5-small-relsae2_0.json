@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.578252728439716,
+  "test_error": 0.578252728439716,
+  "course_metric": "r2",
+  "course_score": 0.4232103493309187,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 98.7405993938446,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 444,
+      "n_removed": 68,
+      "threshold": 0.0401,
+      "passed_test": 164,
+      "removed_norm_ratio": 0.2131,
+      "var_share_kept": 0.9534,
+      "var_share_sae_error": 0.0067,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 231,
+          "score": 0.1633,
+          "n_active": 4080,
+          "examples": [
+            "LA Idol",
+            "FOREVER 21",
+            "FOREVER 21"
+          ]
+        },
+        {
+          "latent": 262,
+          "score": 0.1505,
+          "n_active": 4233,
+          "examples": [
+            "The North Face",
+            "The North Face",
+            "The North Face"
+          ]
+        },
+        {
+          "latent": 49,
+          "score": 0.1497,
+          "n_active": 4158,
+          "examples": [
+            "Boohoo",
+            "Boohoo",
+            "Boohoo"
+          ]
+        },
+        {
+          "latent": 495,
+          "score": 0.1491,
+          "n_active": 4040,
+          "examples": [
+            "Frontline",
+            "Tilly's",
+            "Ecko Unltd."
+          ]
+        },
+        {
+          "latent": 3,
+          "score": 0.1489,
+          "n_active": 4030,
+          "examples": [
+            "Maybelline",
+            "Maybelline",
+            "Maybelline"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 497,
+      "n_kept": 432,
+      "n_removed": 80,
+      "threshold": 0.0386,
+      "passed_test": 155,
+      "removed_norm_ratio": 0.2189,
+      "var_share_kept": 0.8422,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.1584,
+          "n_active": 1562,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 92,
+          "score": 0.1501,
+          "n_active": 363,
+          "examples": [
+            "Serving",
+            "Serving",
+            "Serving"
+          ]
+        },
+        {
+          "latent": 401,
+          "score": 0.1441,
+          "n_active": 391,
+          "examples": [
+            "Daily & Travel items",
+            "Daily & Travel items",
+            "Daily & Travel items"
+          ]
+        },
+        {
+          "latent": 334,
+          "score": 0.1402,
+          "n_active": 403,
+          "examples": [
+            "Pet Supplies",
+            "Pet Supplies",
+            "Pet Supplies"
+          ]
+        },
+        {
+          "latent": 417,
+          "score": 0.1355,
+          "n_active": 335,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 450,
+      "n_removed": 62,
+      "threshold": 0.0399,
+      "passed_test": 190,
+      "removed_norm_ratio": 0.3329,
+      "var_share_kept": 0.9009,
+      "var_share_sae_error": 0.0006,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.1772,
+          "n_active": 1609,
+          "examples": [
+            "Handbag",
+            "Handbag",
+            "Handbag"
+          ]
+        },
+        {
+          "latent": 132,
+          "score": 0.149,
+          "n_active": 410,
+          "examples": [
+            "Varsity/Baseball",
+            "Varsity/Baseball",
+            "NCAA"
+          ]
+        },
+        {
+          "latent": 483,
+          "score": 0.1104,
+          "n_active": 764,
+          "examples": [
+            "NHL",
+            "NCAA",
+            "NCAA"
+          ]
+        },
+        {
+          "latent": 409,
+          "score": 0.1103,
+          "n_active": 694,
+          "examples": [
+            "Baby",
+            "Baby",
+            "Baby"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.11,
+          "n_active": 656,
+          "examples": [
+            "Boot Cut",
+            "Boot Cut",
+            "Boot Cut"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 435,
+      "n_removed": 77,
+      "threshold": 0.0409,
+      "passed_test": 159,
+      "removed_norm_ratio": 0.331,
+      "var_share_kept": 0.8097,
+      "var_share_sae_error": 0.0014,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.1748,
+          "n_active": 905,
+          "examples": [
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.1577,
+          "n_active": 943,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "latent": 79,
+          "score": 0.1475,
+          "n_active": 1339,
+          "examples": [
+            "Kids/Girls 0-24 Mos/Shoes",
+            "Kids/Girls 0-24 Mos/Shoes",
+            "Kids/Girls 0-24 Mos/Shoes"
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.1253,
+          "n_active": 234,
+          "examples": [
+            "Women/Women's Handbags/Hobo",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.1234,
+          "n_active": 967,
+          "examples": [
+            "Women/Shoes/Flats",
+            "Women/Shoes/Flats",
+            "Women/Shoes/Flats"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 393,
+      "n_removed": 119,
+      "threshold": 0.0385,
+      "passed_test": 84,
+      "removed_norm_ratio": 0.3208,
+      "var_share_kept": 0.5908,
+      "var_share_sae_error": 0.2349,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 388,
+          "score": 0.1223,
+          "n_active": 782,
+          "examples": [
+            "100% Authentic Nike Air Max Zero 'Be True'. Shoes are in excellent condition only worn a handful of times and cleaned with Crep shoe cleaner. Comes with origina",
+            "100% Authentic Like New w/out box Swiped once. Not my color. Cream Bronzer MY PRICES ARE FIRM!!!!",
+            "100% Authentic, Used Michael Kors Tote. Does have defects as shown. Price is negotiable."
+          ]
+        },
+        {
+          "latent": 351,
+          "score": 0.116,
+          "n_active": 3797,
+          "examples": [
+            "Gray wolves",
+            "Minnie Mouse collection",
+            "Hemingway"
+          ]
+        },
+        {
+          "latent": 503,
+          "score": 0.1016,
+          "n_active": 870,
+          "examples": [
+            "Worn once. Comes with box.",
+            "Brand new in box.",
+            "Brand new with box"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0996,
+          "n_active": 2073,
+          "examples": [
+            "Small",
+            "Small",
+            "Good"
+          ]
+        },
+        {
+          "latent": 31,
+          "score": 0.085,
+          "n_active": 1460,
+          "examples": [
+            "never used",
+            "Never Used",
+            "Never used"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 397,
+      "n_removed": 115,
+      "threshold": 0.0409,
+      "passed_test": 78,
+      "removed_norm_ratio": 0.3224,
+      "var_share_kept": 0.6442,
+      "var_share_sae_error": 0.1966,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.1044,
+          "n_active": 796,
+          "examples": [
+            "Shirt",
+            "Women's shirt",
+            "Women's shirt"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.1019,
+          "n_active": 767,
+          "examples": [
+            "Lularoe",
+            "LulaRoe",
+            "Lularoe os"
+          ]
+        },
+        {
+          "latent": 29,
+          "score": 0.0973,
+          "n_active": 779,
+          "examples": [
+            "lularoe OS UNICORN.",
+            "Lularoe os",
+            "LuLaRoe OS butterflies"
+          ]
+        },
+        {
+          "latent": 93,
+          "score": 0.0835,
+          "n_active": 501,
+          "examples": [
+            "Louis Vuitton",
+            "Louis Vuitton",
+            "Louis Vuitton Alma PM"
+          ]
+        },
+        {
+          "latent": 168,
+          "score": 0.079,
+          "n_active": 1277,
+          "examples": [
+            "Draperlauren case",
+            "Jeffrey Campbell litas",
+            "ON HOLD FOR TR24/7 UNTIL 02/10 @ NOON"
+          ]
+        }
+      ]
+    }
+  }
+}

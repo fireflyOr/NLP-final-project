@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.1449426366662259,
+  "test_error": 1.1449426366662259,
+  "course_metric": "r2",
+  "course_score": 0.3598116293712984,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.89290904998779,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2042,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1651,
+      "n_removed": 1651,
+      "var_share_removed": 0.4591,
+      "var_share_sae_error": 0.053,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            1439
+          ],
+          "gain_margin": 11392.6,
+          "examples": [
+            "Super Mario Bros.",
+            "Mario Bros.",
+            "Mario Bros."
+          ]
+        },
+        {
+          "group": 460,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 4627.95,
+          "examples": [
+            "Grand Theft Auto: Liberty City Stories",
+            "Pok\u00e9mon Emerald Version",
+            "Pokemon XD: Gale of Darkness"
+          ]
+        },
+        {
+          "group": 234,
+          "latents": [
+            1885
+          ],
+          "gain_margin": 3297.81,
+          "examples": [
+            "Donkey Kong Barrel Blast",
+            "Mario Kart 7",
+            "Sega Arcade Gallery"
+          ]
+        },
+        {
+          "group": 1019,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 2980.38,
+          "examples": [
+            "Call of Duty: Finest Hour",
+            "Call of Duty: Finest Hour",
+            "Fire Emblem: Radiant Dawn"
+          ]
+        },
+        {
+          "group": 1638,
+          "latents": [
+            725
+          ],
+          "gain_margin": 1702.12,
+          "examples": [
+            "The Walking Dead: Season One",
+            "The Walking Dead: Season One",
+            "The Walking Dead: Season One"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1002,
+      "n_groups": 1002,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 930,
+      "n_removed": 930,
+      "var_share_removed": 0.6801,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 988,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2276.95,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 836,
+          "latents": [
+            559
+          ],
+          "gain_margin": 1361.05,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 687,
+          "latents": [
+            99
+          ],
+          "gain_margin": 842.49,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 227,
+          "latents": [
+            1293
+          ],
+          "gain_margin": 839.98,
+          "examples": [
+            "Westwood Studios",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 63,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 633.53,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

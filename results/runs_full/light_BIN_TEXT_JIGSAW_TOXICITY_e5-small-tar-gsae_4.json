@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9257666359363855,
+  "test_error": 0.07423336406361447,
+  "course_metric": "auroc",
+  "course_score": 0.9257666359363854,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 39.60906267166138,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2041,
+      "n_groups": 2040,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1440,
+      "n_removed": 1440,
+      "var_share_removed": 0.2902,
+      "var_share_sae_error": 0.1028,
+      "top": [
+        {
+          "group": 2037,
+          "latents": [
+            227
+          ],
+          "gain_margin": 7059.74,
+          "examples": [
+            "stupid hypocrite words fox, take a hike",
+            "Democrats,  you cant fix stupid. This idiot wants to impeach the President  for deporting illegals, and Hillary clinton thinks America should hate the ME A, whi",
+            "H.L. MENCKEN\u2019S prediction:\n\n\u201cAs democracy is perfected, the office of the President represents, more and more closely, the inner soul of the people. On some gre"
+          ]
+        },
+        {
+          "group": 2035,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 2869.15,
+          "examples": [
+            "Thank God.....\n\nI will no longer have to listen to the idiot Bullwinkle sounding grandson, along with some other voice that states that this is a four by four t",
+            "Another idiot troll must add less than two cents worth of inanity.",
+            "Living down town should be for professionals without kids and retirees. These idiots can move to the suburbs."
+          ]
+        },
+        {
+          "group": 1745,
+          "latents": [
+            315
+          ],
+          "gain_margin": 2459.84,
+          "examples": [
+            "This is the ignorant liberal loon that stated the NRA is a terrorist organization.  Who votes for these idiots?",
+            "I can't remember one time that this journalist has ever been right about anything. I always take the bait. Kiszla is more worthless as a human than the words he",
+            "Ah, the old \"0.01% of your people are scum, so therefore you're ALL scum!!!!\".\n\nCareful, there's a deep supply of that to be applied on the (D) side as well."
+          ]
+        },
+        {
+          "group": 879,
+          "latents": [
+            510
+          ],
+          "gain_margin": 1845.42,
+          "examples": [
+            "Leah -\n\nYou have become stupider and naive in your middle-age. \n\nChildren?",
+            "What is wrong with people?! Over $20, so stupid!",
+            "This is a really, really stupid man."
+          ]
+        },
+        {
+          "group": 84,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 985.28,
+          "examples": [
+            "She is gross.",
+            "Trump is an idiot.",
+            "what a loser asshole"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1360,
+      "n_groups": 1278,
+      "n_multi_groups": 70,
+      "n_groups_dropped": 936,
+      "n_removed": 978,
+      "var_share_removed": 0.406,
+      "var_share_sae_error": 0.0185,
+      "top": [
+        {
+          "group": 497,
+          "latents": [
+            351
+          ],
+          "gain_margin": 179.0,
+          "examples": [
+            "2016-10-28 19:28:12.059174",
+            "2016-03-28 02:02:28.520481",
+            "2016-10-28 00:13:28.004244"
+          ]
+        },
+        {
+          "group": 636,
+          "latents": [
+            1168
+          ],
+          "gain_margin": 143.61,
+          "examples": [
+            "2017-10-22 14:10:50.387998",
+            "2017-03-17 03:40:10.388897",
+            "2017-04-20 17:00:06.280972"
+          ]
+        },
+        {
+          "group": 176,
+          "latents": [
+            1803
+          ],
+          "gain_margin": 106.81,
+          "examples": [
+            "2017-09-06 18:40:24.042310",
+            "2017-01-08 20:55:12.022368",
+            "2016-12-11 17:00:39.882332"
+          ]
+        },
+        {
+          "group": 730,
+          "latents": [
+            511
+          ],
+          "gain_margin": 96.73,
+          "examples": [
+            "2017-10-04 00:04:00.652652",
+            "2016-12-19 06:06:31.455956",
+            "2017-10-18 00:06:18.254439"
+          ]
+        },
+        {
+          "group": 802,
+          "latents": [
+            336
+          ],
+          "gain_margin": 88.55,
+          "examples": [
+            "2017-10-19 19:30:21.593065",
+            "2017-10-17 18:15:32.202765",
+            "2017-03-08 03:50:30.939765"
+          ]
+        }
+      ]
+    }
+  }
+}

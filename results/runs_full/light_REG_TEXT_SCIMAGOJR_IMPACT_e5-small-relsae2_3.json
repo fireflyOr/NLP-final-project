@@ -1,0 +1,604 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -25.26059408275641,
+  "test_error": 25.26059408275641,
+  "course_metric": "r2",
+  "course_score": 0.8205726770423151,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 161.86203122138977,
+  "diagnostics": {
+    "Areas": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 486,
+      "n_kept": 421,
+      "n_removed": 91,
+      "threshold": 0.0426,
+      "passed_test": 66,
+      "removed_norm_ratio": 0.2277,
+      "var_share_kept": 0.8059,
+      "var_share_sae_error": 0.0006,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 431,
+          "score": 0.1199,
+          "n_active": 1329,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology",
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology",
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology"
+          ]
+        },
+        {
+          "latent": 344,
+          "score": 0.1155,
+          "n_active": 959,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Social Sciences",
+            "Biochemistry, Genetics and Molecular Biology; Medicine",
+            "Biochemistry, Genetics and Molecular Biology; Medicine"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.1153,
+          "n_active": 527,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Chemistry",
+            "Biochemistry, Genetics and Molecular Biology; Chemistry",
+            "Biochemistry, Genetics and Molecular Biology; Chemistry"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.1139,
+          "n_active": 874,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology",
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology",
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology"
+          ]
+        },
+        {
+          "latent": 151,
+          "score": 0.1136,
+          "n_active": 257,
+          "examples": [
+            "Pharmacology, Toxicology and Pharmaceutics",
+            "Pharmacology, Toxicology and Pharmaceutics",
+            "Pharmacology, Toxicology and Pharmaceutics"
+          ]
+        }
+      ]
+    },
+    "Categories": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 503,
+      "n_kept": 411,
+      "n_removed": 101,
+      "threshold": 0.0405,
+      "passed_test": 48,
+      "removed_norm_ratio": 0.3236,
+      "var_share_kept": 0.7601,
+      "var_share_sae_error": 0.012,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 499,
+          "score": 0.094,
+          "n_active": 1195,
+          "examples": [
+            "Insect Science (Q3); Plant Science (Q3)",
+            "Insect Science (Q4); Plant Science (Q4)",
+            "Plant Science (Q1)"
+          ]
+        },
+        {
+          "latent": 344,
+          "score": 0.0714,
+          "n_active": 1202,
+          "examples": [
+            "Applied Microbiology and Biotechnology (Q1); Biomedical Engineering (Q1); Genetics (Q2); Structural Biology (Q2)",
+            "Applied Microbiology and Biotechnology (Q1); Biomedical Engineering (Q1); Biophysics (Q1)",
+            "Applied Microbiology and Biotechnology (Q3); Microbiology (medical) (Q3)"
+          ]
+        },
+        {
+          "latent": 313,
+          "score": 0.0711,
+          "n_active": 577,
+          "examples": [
+            "Condensed Matter Physics (Q4)",
+            "Condensed Matter Physics (Q1)",
+            "Condensed Matter Physics (Q1)"
+          ]
+        },
+        {
+          "latent": 178,
+          "score": 0.069,
+          "n_active": 194,
+          "examples": [
+            "Physiology (Q2); Physiology (medical) (Q2)",
+            "Physiology (Q2); Physiology (medical) (Q2)",
+            "Physiology (Q1); Physiology (medical) (Q1)"
+          ]
+        },
+        {
+          "latent": 121,
+          "score": 0.0683,
+          "n_active": 878,
+          "examples": [
+            "Biophysics (Q2); Cell Biology (Q3); Molecular Biology (Q3); Structural Biology (Q3)",
+            "Anatomy (Q4); Cell Biology (Q4); Histology (Q4)",
+            "Histology (Q1); Cell Biology (Q2)"
+          ]
+        }
+      ]
+    },
+    "Citations / Doc  (2years)": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 497,
+      "n_kept": 271,
+      "n_removed": 241,
+      "threshold": 0.0423,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.6325,
+      "var_share_kept": 0.3769,
+      "var_share_sae_error": 0.0011,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 481,
+          "score": 0.0535,
+          "n_active": 116,
+          "examples": [
+            "9,00",
+            "9,98",
+            "9,67"
+          ]
+        },
+        {
+          "latent": 257,
+          "score": 0.0427,
+          "n_active": 113,
+          "examples": [
+            "11,82",
+            "10,82",
+            "7,82"
+          ]
+        },
+        {
+          "latent": 123,
+          "score": 0.0407,
+          "n_active": 44,
+          "examples": [
+            "10,07",
+            "10,72",
+            "10,06"
+          ]
+        },
+        {
+          "latent": 353,
+          "score": 0.0355,
+          "n_active": 1051,
+          "examples": [
+            "1,82",
+            "1,82",
+            "1,82"
+          ]
+        },
+        {
+          "latent": 8,
+          "score": 0.035,
+          "n_active": 105,
+          "examples": [
+            "12,67",
+            "12,75",
+            "12,90"
+          ]
+        }
+      ]
+    },
+    "Coverage": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 454,
+      "n_kept": 470,
+      "n_removed": 42,
+      "threshold": 0.0449,
+      "passed_test": 260,
+      "removed_norm_ratio": 0.0661,
+      "var_share_kept": 0.9329,
+      "var_share_sae_error": 0.0028,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 100,
+          "score": 0.3061,
+          "n_active": 2647,
+          "examples": [
+            "1920-2025",
+            "1922-2025",
+            "1921-1992, 1996-2025"
+          ]
+        },
+        {
+          "latent": 131,
+          "score": 0.299,
+          "n_active": 1179,
+          "examples": [
+            "2015-2017, 2019-2025",
+            "2015, 2017-2025",
+            "2015, 2019-2025"
+          ]
+        },
+        {
+          "latent": 273,
+          "score": 0.2947,
+          "n_active": 2946,
+          "examples": [
+            "2015-2018, 2020-2025",
+            "2015, 2017-2025",
+            "2005, 2015-2025"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.2709,
+          "n_active": 2356,
+          "examples": [
+            "2019-2025",
+            "2019-2025",
+            "2019-2025"
+          ]
+        },
+        {
+          "latent": 298,
+          "score": 0.2685,
+          "n_active": 2680,
+          "examples": [
+            "2019-2025",
+            "2019-2025",
+            "2019-2025"
+          ]
+        }
+      ]
+    },
+    "Issn": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 384,
+      "n_removed": 128,
+      "threshold": 0.0438,
+      "passed_test": 78,
+      "removed_norm_ratio": 0.3631,
+      "var_share_kept": 0.7456,
+      "var_share_sae_error": 0.0312,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 345,
+          "score": 0.169,
+          "n_active": 4907,
+          "examples": [
+            "11217138",
+            "25220098",
+            "27310574"
+          ]
+        },
+        {
+          "latent": 25,
+          "score": 0.1659,
+          "n_active": 1166,
+          "examples": [
+            "00317144",
+            "00272000",
+            "00981354"
+          ]
+        },
+        {
+          "latent": 156,
+          "score": 0.1453,
+          "n_active": 2451,
+          "examples": [
+            "15523373, 1532673X",
+            "1533256X",
+            "15578070, 15311074"
+          ]
+        },
+        {
+          "latent": 331,
+          "score": 0.1355,
+          "n_active": 921,
+          "examples": [
+            "26661497",
+            "26667568",
+            "2667193X"
+          ]
+        },
+        {
+          "latent": 7,
+          "score": 0.1339,
+          "n_active": 2629,
+          "examples": [
+            "1462169X",
+            "1462317X",
+            "1463578X"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 313,
+      "n_removed": 199,
+      "threshold": 0.0433,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.6046,
+      "var_share_kept": 0.5432,
+      "var_share_sae_error": 0.0826,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 31,
+          "score": 0.0533,
+          "n_active": 1120,
+          "examples": [
+            "Scientific Publishers OWN",
+            "eScholarship Publishing",
+            "eScholarship"
+          ]
+        },
+        {
+          "latent": 293,
+          "score": 0.0507,
+          "n_active": 272,
+          "examples": [
+            "Statistics Canada",
+            "Austrian Statistical Society",
+            "Chilean Statistical Society"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.0488,
+          "n_active": 435,
+          "examples": [
+            "American Leather Chemists Association",
+            "Society of Pharmaceutical Education &amp; Research [SPER]",
+            "Society of Leather Technologists and Chemists"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0482,
+          "n_active": 601,
+          "examples": [
+            "Wiley-Liss Inc.",
+            "Wiley-Liss Inc.",
+            "Wiley-Liss Inc."
+          ]
+        },
+        {
+          "latent": 12,
+          "score": 0.0476,
+          "n_active": 435,
+          "examples": [
+            "Entomological Society of Washington",
+            "American Entomological Society",
+            "Kansas Entomological Society"
+          ]
+        }
+      ]
+    },
+    "Ref  / Doc ": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 462,
+      "n_kept": 287,
+      "n_removed": 225,
+      "threshold": 0.0448,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5984,
+      "var_share_kept": 0.3559,
+      "var_share_sae_error": 0.0056,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 64,
+          "score": 0.0378,
+          "n_active": 895,
+          "examples": [
+            "66,27",
+            "66,38",
+            "66,38"
+          ]
+        },
+        {
+          "latent": 20,
+          "score": 0.0329,
+          "n_active": 410,
+          "examples": [
+            "4,89",
+            "102,89",
+            "19,89"
+          ]
+        },
+        {
+          "latent": 308,
+          "score": 0.0329,
+          "n_active": 2467,
+          "examples": [
+            "63,71",
+            "73,71",
+            "72,71"
+          ]
+        },
+        {
+          "latent": 198,
+          "score": 0.0323,
+          "n_active": 259,
+          "examples": [
+            "114,89",
+            "31,89",
+            "31,89"
+          ]
+        },
+        {
+          "latent": 161,
+          "score": 0.0321,
+          "n_active": 667,
+          "examples": [
+            "31,19",
+            "31,19",
+            "31,19"
+          ]
+        }
+      ]
+    },
+    "SJR": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 505,
+      "n_kept": 219,
+      "n_removed": 293,
+      "threshold": 0.0432,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.7292,
+      "var_share_kept": 0.2965,
+      "var_share_sae_error": 0.0033,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 131,
+          "score": 0.045,
+          "n_active": 161,
+          "examples": [
+            "6,788",
+            "6,010",
+            "6,799"
+          ]
+        },
+        {
+          "latent": 71,
+          "score": 0.0339,
+          "n_active": 776,
+          "examples": [
+            "1,911",
+            "1,911",
+            "0,911"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.0328,
+          "n_active": 172,
+          "examples": [
+            "19,430",
+            "19,006",
+            "16,586"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.0323,
+          "n_active": 233,
+          "examples": [
+            "5,703",
+            "5,731",
+            "5,594"
+          ]
+        },
+        {
+          "latent": 46,
+          "score": 0.0322,
+          "n_active": 489,
+          "examples": [
+            "15,519",
+            "8,021",
+            "14,402"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 335,
+      "n_removed": 177,
+      "threshold": 0.0419,
+      "passed_test": 18,
+      "removed_norm_ratio": 0.4739,
+      "var_share_kept": 0.5198,
+      "var_share_sae_error": 0.1609,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 151,
+          "score": 0.085,
+          "n_active": 1000,
+          "examples": [
+            "Current Topics in Peptide and Protein Research",
+            "Current Protein and Peptide Science",
+            "Peptide Science"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.0722,
+          "n_active": 784,
+          "examples": [
+            "Main Group Chemistry",
+            "Chemist",
+            "Progress in Chemistry"
+          ]
+        },
+        {
+          "latent": 204,
+          "score": 0.0692,
+          "n_active": 2486,
+          "examples": [
+            "Journal of Ecology",
+            "Journal of Chemical Sciences",
+            "Journal of Health Sciences"
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.0684,
+          "n_active": 548,
+          "examples": [
+            "Journal of Biotechnology",
+            "Current Research in Biotechnology",
+            "Biotechnology Notes"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.0651,
+          "n_active": 671,
+          "examples": [
+            "Women and Gender in China Studies",
+            "Biology of Sex Differences",
+            "Gender Studies"
+          ]
+        }
+      ]
+    }
+  }
+}

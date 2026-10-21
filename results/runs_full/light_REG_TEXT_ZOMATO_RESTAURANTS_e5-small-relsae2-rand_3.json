@@ -1,0 +1,474 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.21378147386072593,
+  "test_error": 0.21378147386072593,
+  "course_metric": "r2",
+  "course_score": 0.7614516414668381,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 104.82662081718445,
+  "diagnostics": {
+    "address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 301,
+      "n_removed": 211,
+      "threshold": 0.0433,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6198,
+      "var_share_kept": 0.4738,
+      "var_share_sae_error": 0.1267,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 99,
+          "score": 0.043,
+          "n_active": 1815,
+          "examples": [
+            "HMT Main Road, Inside compound of HMT Cinemas, Jalahalli, Bangalore",
+            "609, 10th A Main Road, 4th Block, Jayanagar, Bangalore",
+            "104, 1st Main Road, Koramangala Industrial Layout, Koramangala 5th Block, Bangalore"
+          ]
+        },
+        {
+          "latent": 279,
+          "score": 0.0416,
+          "n_active": 298,
+          "examples": [
+            "51, 5th Main, 60 Feet Road, BNG Homestay Building, Jai Bheema Nagar, 1st Stage, BTM, Bangalore",
+            "51, 5th Main, 60 Feet Road, BNG Homestay Building, Jai Bheema Nagar, 1st Stage, BTM, Bangalore",
+            "51, 5th Main, 60 Feet Road, BNG Homestay Building, Jai Bheema Nagar, 1st Stage, BTM, Bangalore"
+          ]
+        },
+        {
+          "latent": 31,
+          "score": 0.0401,
+          "n_active": 1401,
+          "examples": [
+            "Best Of Bengal",
+            "Hennur Bagalur Road",
+            "Delivery Only"
+          ]
+        },
+        {
+          "latent": 172,
+          "score": 0.0383,
+          "n_active": 563,
+          "examples": [
+            "Shop 52/1, Nishika Arcade B3, Near Jodidhars Club, Nanjappa Layout Main Road, Vidyaranyapura, Bangalore",
+            "Shop 52/1, Nishika Arcade B3, Near Jodidhars Club, Nanjappa Layout Main Road, Vidyaranyapura, Bangalore",
+            "168, Above Aishwarya Departmental Store, 7th Main, Koramangala 1st Block, Bangalore"
+          ]
+        },
+        {
+          "latent": 449,
+          "score": 0.0379,
+          "n_active": 274,
+          "examples": [
+            "117, Neelasandra Bazar Street, Rose Garden Bus Stop",
+            "117, Neelasandra Bazar Street, Rose Garden Bus Stop",
+            "117, Neelasandra Bazar Street, Rose Garden Bus Stop"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 492,
+      "n_kept": 418,
+      "n_removed": 94,
+      "threshold": 0.0413,
+      "passed_test": 58,
+      "removed_norm_ratio": 0.294,
+      "var_share_kept": 0.7417,
+      "var_share_sae_error": 0.0024,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 191,
+          "score": 0.0865,
+          "n_active": 1395,
+          "examples": [
+            "Tibetan",
+            "Tibetan",
+            "Parsi, North Indian"
+          ]
+        },
+        {
+          "latent": 66,
+          "score": 0.0859,
+          "n_active": 3836,
+          "examples": [
+            "North Indian",
+            "North Indian",
+            "North Indian"
+          ]
+        },
+        {
+          "latent": 9,
+          "score": 0.085,
+          "n_active": 2646,
+          "examples": [
+            "North Indian, BBQ",
+            "North Indian, BBQ",
+            "North Indian, BBQ"
+          ]
+        },
+        {
+          "latent": 262,
+          "score": 0.0839,
+          "n_active": 3465,
+          "examples": [
+            "Cafe, North Indian",
+            "Cafe, North Indian",
+            "Cafe, North Indian"
+          ]
+        },
+        {
+          "latent": 139,
+          "score": 0.0828,
+          "n_active": 2889,
+          "examples": [
+            "North Indian, Chinese",
+            "North Indian, Chinese",
+            "North Indian, Chinese"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 399,
+      "n_removed": 113,
+      "threshold": 0.0391,
+      "passed_test": 56,
+      "removed_norm_ratio": 0.5138,
+      "var_share_kept": 0.5309,
+      "var_share_sae_error": 0.0245,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 198,
+          "score": 0.0585,
+          "n_active": 625,
+          "examples": [
+            "Cappuccino, Eclair, Pizza, Coffee, Blueberry Cheesecake, Oreo Cheesecake, Tiramisu",
+            "Cappuccino, Eclair, Pizza, Coffee, Blueberry Cheesecake, Oreo Cheesecake, Tiramisu",
+            "Cappuccino, Eclair, Pizza, Coffee, Blueberry Cheesecake, Oreo Cheesecake, Tiramisu"
+          ]
+        },
+        {
+          "latent": 46,
+          "score": 0.0576,
+          "n_active": 297,
+          "examples": [
+            "Decor",
+            "Decor",
+            "Decor"
+          ]
+        },
+        {
+          "latent": 494,
+          "score": 0.0551,
+          "n_active": 4346,
+          "examples": [
+            "Decor",
+            "Decor",
+            "Decor"
+          ]
+        },
+        {
+          "latent": 353,
+          "score": 0.0545,
+          "n_active": 332,
+          "examples": [
+            "Turkish Ice Cream, Baklava, Chocolate Icecreams",
+            "Turkish Ice Cream, Baklava, Chocolate Icecreams",
+            "Turkish Ice Cream, Baklava, Chocolate Icecreams"
+          ]
+        },
+        {
+          "latent": 490,
+          "score": 0.0545,
+          "n_active": 258,
+          "examples": [
+            "Shawarma",
+            "Shawarma",
+            "Shawarma"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 360,
+      "n_removed": 152,
+      "threshold": 0.0442,
+      "passed_test": 6,
+      "removed_norm_ratio": 0.5541,
+      "var_share_kept": 0.5624,
+      "var_share_sae_error": 0.0345,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 481,
+          "score": 0.0507,
+          "n_active": 422,
+          "examples": [
+            "['Crispy Chicken', 'Chicken Lollipop', 'Grilled Chicken', 'Chicken Kabab Oil Fried', 'Boneless Malai Tikka [5 Pieces]', 'Tandoori Chicken', 'Kalmi Kabab', 'Chic",
+            "['Crispy Chicken', 'Chicken Lollipop', 'Grilled Chicken', 'Chicken Kabab Oil Fried', 'Boneless Malai Tikka [5 Pieces]', 'Tandoori Chicken', 'Kalmi Kabab', 'Chic",
+            "['Chicken 65', 'Chicken Chilly', 'Chicken Lemon', 'Paneer Tikka Masala', 'Dal Khichdi', 'Veg Hot and Sour Soup', 'Veg Manchow Soup', 'Veg Clear Soup', 'Veg Nood"
+          ]
+        },
+        {
+          "latent": 253,
+          "score": 0.0475,
+          "n_active": 169,
+          "examples": [
+            "['J.S. Shawarma', 'Whole Meat Shawarma', 'Malgoum Shawarma', 'Shawarma on Your Plate', 'Just Fries and Toum', 'Coke [250 ml]', 'J.S. Shawarma Jumbo', 'Malgoum S",
+            "['J.S. Shawarma', 'Whole Meat Shawarma', 'Malgoum Shawarma', 'Shawarma on Your Plate', 'Whole Meat Combo', 'Just Fries and Toum', 'Coke [250 ml]', 'Malgoum Shaw",
+            "['J.S. Shawarma', 'Whole Meat Shawarma', 'Malgoum Shawarma', 'Shawarma on Your Plate', 'J.S Shawarma Combo', 'Whole Meat Combo', 'Just Fries and Toum', 'Malgoum"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.0475,
+          "n_active": 380,
+          "examples": [
+            "['Chicken Biryani', 'Paneer Biryani', 'Barbeque Chicken Wrap', 'Masala Paneer Tikka Wrap', 'Masala Chicken Tikka Wrap', 'Cheese Melt Chicken Wrap', 'Cheese Melt",
+            "['Salmon Sushi [6 Pieces]', 'Tuna with Prawn Combo Sushi [6 Pieces]', 'Cucumber Maki Roll [6 Pieces]', 'Salad Sushi Roll', 'Tofu Salad Sushi Roll', 'Chicken Sau",
+            "['Chicken Biryani', 'Paneer Biryani', 'Barbeque Chicken Wrap', 'Masala Paneer Tikka Wrap', 'Cheesy Corn Salsa Wrap', 'Cheese Melt Chicken Wrap', 'Cheese Melt Pa"
+          ]
+        },
+        {
+          "latent": 439,
+          "score": 0.0457,
+          "n_active": 553,
+          "examples": [
+            "['Paneer Tikka', 'Kalmi Kabab [2 Pieces]', 'Tandoori Chicken', 'Tandoori Kabab [6 Pieces]', 'Tandoori Lollipop [6 Pieces]', 'Boneless Chicken Tikka', 'Boneless ",
+            "['Chicken Kebab', 'Kalmi Kebab', 'Chicken Wings', 'Chicken Lollipop', 'Chicken Tandoori', 'Grilled Chicken', 'Chicken Shawaya', 'Barbeque Chicken', 'Alfan', 'Ch",
+            "['Barbecue Chicken', 'Alfaham Dajaj', 'Afghani Dajaj', 'Dal Fry', 'Paneer Butter Masala', 'Butter Chicken Masala', 'Paneer Tikka', 'Boneless Chicken Kebab', 'Ta"
+          ]
+        },
+        {
+          "latent": 77,
+          "score": 0.0453,
+          "n_active": 368,
+          "examples": [
+            "['Shaadi Chicken Dum Biryani', 'Chicken Dum Biryani', 'Murg Tikka Biryani', 'Tandoori Chicken Biryani', 'Murg Tikka Biryani', 'Chicken Dum Biryani', 'Paneer Tik",
+            "['Shaadi Mutton Dum Biryani', 'Tandoori Chicken Biryani', 'Murg Tikka Biryani', 'Paneer Tikka Biryani', 'Biryani Rice + Murgh Tikka (3pcs)', 'Biryani Rice + Tan",
+            "['Executive Pack- Shanmukha Veg Special Biryani', 'Executive Pack- Shanmukha Chicken Fry Piece Biryani', 'Executive Pack- Shanmukha Special Chicken Biryani', 'F"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 331,
+      "n_removed": 181,
+      "threshold": 0.0407,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.5695,
+      "var_share_kept": 0.5133,
+      "var_share_sae_error": 0.1575,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 413,
+          "score": 0.0557,
+          "n_active": 595,
+          "examples": [
+            "Express Food Delivery",
+            "Express Food Delivery",
+            "Express Food Delivery"
+          ]
+        },
+        {
+          "latent": 215,
+          "score": 0.0485,
+          "n_active": 932,
+          "examples": [
+            "Havmor",
+            "Havmor",
+            "Havmor"
+          ]
+        },
+        {
+          "latent": 169,
+          "score": 0.0477,
+          "n_active": 567,
+          "examples": [
+            "Red Chilli",
+            "The Yellow Chilli",
+            "The Yellow Chilli"
+          ]
+        },
+        {
+          "latent": 35,
+          "score": 0.0439,
+          "n_active": 512,
+          "examples": [
+            "B-hive",
+            "B-hive",
+            "B-hive"
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.0406,
+          "n_active": 635,
+          "examples": [
+            "Cream N Desserts",
+            "Cream Factory",
+            "Cream Factory"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 470,
+      "n_kept": 374,
+      "n_removed": 138,
+      "threshold": 0.0399,
+      "passed_test": 41,
+      "removed_norm_ratio": 0.455,
+      "var_share_kept": 0.6307,
+      "var_share_sae_error": 0.0133,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 508,
+          "score": 0.0707,
+          "n_active": 4818,
+          "examples": [
+            "+91 8147112950\n+91 9663895441",
+            "+91 9886525634\r\n+91 7406615506",
+            "+91 9886525634\r\n+91 7406615506"
+          ]
+        },
+        {
+          "latent": 99,
+          "score": 0.0694,
+          "n_active": 618,
+          "examples": [
+            "080 41641751\r\n080 41655896",
+            "080 60500444\r\r\n080 60500333",
+            "080 41606454\r\n080 41606452"
+          ]
+        },
+        {
+          "latent": 447,
+          "score": 0.069,
+          "n_active": 481,
+          "examples": [
+            "080 41471383",
+            "080 41471383",
+            "080 41471383"
+          ]
+        },
+        {
+          "latent": 242,
+          "score": 0.0664,
+          "n_active": 297,
+          "examples": [
+            "080 41641414",
+            "080 41454647",
+            "080 41454647"
+          ]
+        },
+        {
+          "latent": 114,
+          "score": 0.0615,
+          "n_active": 59,
+          "examples": [
+            "080 39658868",
+            "080 39854710",
+            "080 39257409"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 402,
+      "n_removed": 110,
+      "threshold": 0.0432,
+      "passed_test": 71,
+      "removed_norm_ratio": 0.3603,
+      "var_share_kept": 0.5634,
+      "var_share_sae_error": 0.232,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 334,
+          "score": 0.1707,
+          "n_active": 866,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  I think I did a mistake by visiting this restaurant worst food we ordered something for parcel and got something else really unprofessi",
+            "[('Rated 4.0', \"RATED\\n  Punjab Calling is a new take out centre at Electronic city. There's seating for about 6 people at a time as well. They serve authentic ",
+            "[('Rated 4.0', \"RATED\\n  Punjab Calling is a new take out centre at Electronic city. There's seating for about 6 people at a time as well. They serve authentic "
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1339,
+          "n_active": 750,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  What an absolute rip off, 200 for this pile of sorry shit, what an insult to the proper Bombay sandwich, do a better job, hit me up if ",
+            "[('Rated 1.0', \"RATED\\n  Ordered a chicken subwich at 49 on offer. So here's the suggestion, please don't put your food on offer if that's the portion that you ",
+            "[('Rated 1.0', 'RATED\\n  Ordered Mango ice cream with mango chunks. Paid 130 per ice cream. What got delivered is Mango ice cream with strawberry sauce. This is"
+          ]
+        },
+        {
+          "latent": 298,
+          "score": 0.1332,
+          "n_active": 689,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  Hi, is the cake I received half KG.. Whom are you fooling..??? You charged 470 for a half KG of Black Forest cake, and this is what I r",
+            "[('Rated 1.0', \"RATED\\n  Hi, is the cake I received half KG.. Whom are you fooling..??? You charged 470 for a half KG of Black Forest cake, and this is what I r",
+            "[('Rated 1.0', \"RATED\\n  Hi, is the cake I received half KG.. Whom are you fooling..??? You charged 470 for a half KG of Black Forest cake, and this is what I r"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.124,
+          "n_active": 1359,
+          "examples": [
+            "[('Rated 4.0', 'RATED\\n  delightful starters and tasty mock tails is what we found here in this place. unfortunately most of the menu was not available due to s",
+            "[('Rated 4.0', 'RATED\\n  delightful starters and tasty mock tails is what we found here in this place. unfortunately most of the menu was not available due to s",
+            "[('Rated 4.0', 'RATED\\n  delightful starters and tasty mock tails is what we found here in this place. unfortunately most of the menu was not available due to s"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.1093,
+          "n_active": 1311,
+          "examples": [
+            "[('Rated 2.0', 'RATED\\n \\ni have ordered biryani and kabab but the kabab was burnt and only three pieces were there'), ('Rated 4.0', 'RATED\\n  good food, quanti",
+            "[('Rated 4.0', 'RATED\\n  taste similar to other places...'), ('Rated 5.0', 'RATED\\n  Friendly staffs, polite gesture towards customer. Tasty food and good quali",
+            "[('Rated 1.0', 'RATED\\n  quality is not good. I got different item.'), ('Rated 5.0', 'RATED\\n  good'), ('Rated 3.0', 'RATED\\n  food is very spicy'), ('Rated 5.0"
+          ]
+        }
+      ]
+    }
+  }
+}

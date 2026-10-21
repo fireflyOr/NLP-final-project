@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-stack",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.19748074530622675,
+  "test_error": 0.19748074530622675,
+  "course_metric": "r2",
+  "course_score": 0.7964431067257923,
+  "n_text_cols": 7,
+  "n_text_features": 211,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.55403518676758,
+  "diagnostics": {}
+}

@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.9792297407979181,
+  "test_error": 0.9792297407979181,
+  "course_metric": "r2",
+  "course_score": 0.3909343516083901,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.43958377838135,
+  "diagnostics": {
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 382,
+      "n_removed": 130,
+      "threshold": 0.0544,
+      "passed_test": 23,
+      "removed_norm_ratio": 0.43,
+      "var_share_kept": 0.5452,
+      "var_share_sae_error": 0.2138,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 338,
+          "score": 0.1427,
+          "n_active": 462,
+          "examples": [
+            "Mario Bros.",
+            "Dr. Mario",
+            "Dr. Mario"
+          ]
+        },
+        {
+          "latent": 429,
+          "score": 0.1296,
+          "n_active": 466,
+          "examples": [
+            "Guinness World Records: The Videogame",
+            "Guinness World Records: The Videogame",
+            "The Naked Brothers Band: The Video Game"
+          ]
+        },
+        {
+          "latent": 107,
+          "score": 0.1225,
+          "n_active": 634,
+          "examples": [
+            "Devil May Cry",
+            "Devil May Cry 4",
+            "Devil May Cry 4"
+          ]
+        },
+        {
+          "latent": 450,
+          "score": 0.1073,
+          "n_active": 667,
+          "examples": [
+            "Mario Party",
+            "Mario Bros.",
+            "Dr. Mario"
+          ]
+        },
+        {
+          "latent": 395,
+          "score": 0.1049,
+          "n_active": 699,
+          "examples": [
+            "Taiko no Tatsujin Wii: Dodon to 2 Yome!",
+            "Donkey Kong GB: Dinky Kong & Dixie Kong",
+            "Donkey Kong Country 2: Diddy's Kong Quest"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 478,
+      "n_removed": 34,
+      "threshold": 0.0773,
+      "passed_test": 30,
+      "removed_norm_ratio": 0.2453,
+      "var_share_kept": 0.9358,
+      "var_share_sae_error": 0.0009,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 283,
+          "score": 0.2081,
+          "n_active": 443,
+          "examples": [
+            "Mattel Interactive",
+            "Mattel Interactive",
+            "Mattel Interactive"
+          ]
+        },
+        {
+          "latent": 331,
+          "score": 0.2037,
+          "n_active": 447,
+          "examples": [
+            "Office Create",
+            "Inti Creates",
+            "Kaga Create"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.1931,
+          "n_active": 625,
+          "examples": [
+            "Mojang",
+            "Mojang",
+            "Mojang"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.1862,
+          "n_active": 608,
+          "examples": [
+            "Disney Interactive Studios",
+            "Disney Interactive Studios",
+            "Disney Interactive Studios"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.1833,
+          "n_active": 515,
+          "examples": [
+            "Big Ben Interactive",
+            "Big Ben Interactive",
+            "Big Ben Interactive"
+          ]
+        }
+      ]
+    }
+  }
+}

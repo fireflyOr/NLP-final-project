@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7247174122900591,
+  "test_error": 0.7247174122900591,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.904337046420008,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 71.75304460525513,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1822,
+      "n_groups": 1815,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 915,
+      "n_removed": 917,
+      "var_share_removed": 0.2661,
+      "var_share_sae_error": 0.037,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            83,
+            698
+          ],
+          "gain_margin": 23436.2,
+          "examples": [
+            "I wanted to love this sweater but the fit is off slightly. i ordered my regular size xs and the chest/shoulder area fits nice but the waist comes very tight and",
+            "I wanted to like this top, as the fabric was nice and thick, but found that it dipped too low beneath the armpits, which would be ok if your lats are in perfect",
+            "I'm always looking for pieces that would good for either layering or worn alone. this looks cute on the model, but when i received it, it's actually very flowin"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            828,
+            1677
+          ],
+          "gain_margin": 15780.41,
+          "examples": [
+            "I fell in love with this online and i'm so thrilled that it's even more beautiful in person. it is a stunning, very dark teal velvet with the most gorgeous embr",
+            "I'm so glad i found this gem in the store, as the online pic does this shirt no justice!  the green version is vibrant and adorable, and this shirt is lightweig",
+            "When i saw this online, i knew i'd have to order it fast--it's just gorgeous. i got it in the mail today and couldn't be happier! i'm usually xs in angel of the"
+          ]
+        },
+        {
+          "group": 1243,
+          "latents": [
+            437
+          ],
+          "gain_margin": 7484.73,
+          "examples": [
+            "This shirt has absolutely no shape. look carefully at the model and you we discover she is cleverly positioned to hide the sheer boxy-ness of this shirt. the pr",
+            "Very poorly made- wide and short, very unflattering. the material is advertised as cotton, but it felt very synthetic.",
+            "I'm 5 ft 7 125 lbs true size 4 and these pants made me look like i had boy parts. super disappointed!"
+          ]
+        },
+        {
+          "group": 1814,
+          "latents": [
+            106
+          ],
+          "gain_margin": 5432.16,
+          "examples": [
+            "This vest looked so cute online but it's a disaster. the quilting is so bulky that the drawstring doesn't work properly and it just hangs. itlooks like somethin",
+            "The color is nice and the material is what you might find used by a high school drama club with a low budget - a very cheap polyester. on top of that - it is un",
+            "This sweater/tunic is very poor quality - the seams looked like they were about to come apart as soon as i got it. and, without a chunky statement necklace, it "
+          ]
+        },
+        {
+          "group": 1812,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 4563.09,
+          "examples": [
+            "This skirt was horrible on me. it was loose in the waist, tight in the hips and poofed out like crazy at the tiered part on the bottom. the material also felt c",
+            "I had high hopes ordering this top...unfortunately the top has a metallic fiber to the material and that detail was not noted in the product description! it als",
+            "This top is quite boxy and i was very disappointed with the color, it looked as if i'd washed it in filthy water. it's a very dingy white, needless to say it we"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1613,
+      "n_groups": 1609,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1053,
+      "n_removed": 1054,
+      "var_share_removed": 0.4725,
+      "var_share_sae_error": 0.0143,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            106,
+            437
+          ],
+          "gain_margin": 15547.76,
+          "examples": [
+            "Fabric looks cheap",
+            "Huge jacket, wash color is not as pictured",
+            "Very thin"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            153,
+            2017
+          ],
+          "gain_margin": 4804.59,
+          "examples": [
+            "Fabulously comfortable and stylish",
+            "Comfy & stylish",
+            "I'm tall and it's perfect"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            59,
+            539
+          ],
+          "gain_margin": 4244.75,
+          "examples": [
+            "Very nice skirt but too small",
+            "Nice but sleeves and body have volume",
+            "Nice but 5% spandex makes it a bit clingy"
+          ]
+        },
+        {
+          "group": 1604,
+          "latents": [
+            828
+          ],
+          "gain_margin": 3534.08,
+          "examples": [
+            "Flattering and comfy - my perfect jean!",
+            "Chic and feminine sweater, i love it!",
+            "Perfect fall sweater!"
+          ]
+        },
+        {
+          "group": 1596,
+          "latents": [
+            396
+          ],
+          "gain_margin": 3243.3,
+          "examples": [
+            "Very unflattering dress",
+            "Poor quality, unflattering fit",
+            "Completely disappointed!"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.409095574615727,
+  "test_error": 1.409095574615727,
+  "course_metric": "r2",
+  "course_score": 0.3013103477641852,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 31.670206308364868,
+  "diagnostics": {
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 398,
+      "n_removed": 114,
+      "threshold": 0.0471,
+      "passed_test": 34,
+      "removed_norm_ratio": 0.3769,
+      "var_share_kept": 0.5922,
+      "var_share_sae_error": 0.2145,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 80,
+          "score": 0.136,
+          "n_active": 640,
+          "examples": [
+            "Grand Theft Auto 2",
+            "Grand Theft Auto V",
+            "Grand Theft Auto V"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.1273,
+          "n_active": 1308,
+          "examples": [
+            "Tom Clancy's Rainbow Six: Siege",
+            "Tom Clancy's Rainbow Six: Siege",
+            "Military History: Commander - Europe at War"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.0965,
+          "n_active": 674,
+          "examples": [
+            "Persona 4: Arena",
+            "Persona 4: Arena",
+            "Mario & Sonic at the Rio 2016 Olympic Games"
+          ]
+        },
+        {
+          "latent": 180,
+          "score": 0.0866,
+          "n_active": 562,
+          "examples": [
+            "Tomb Raider: Underworld",
+            "Tomb Raider: Underworld",
+            "Tomb Raider: Underworld (Others sales)"
+          ]
+        },
+        {
+          "latent": 10,
+          "score": 0.0821,
+          "n_active": 670,
+          "examples": [
+            "Dave Mirra Freestyle BMX 2",
+            "Dave Mirra Freestyle BMX 2",
+            "Dave Mirra Freestyle BMX 2"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 505,
+      "n_kept": 475,
+      "n_removed": 37,
+      "threshold": 0.0527,
+      "passed_test": 46,
+      "removed_norm_ratio": 0.2623,
+      "var_share_kept": 0.9317,
+      "var_share_sae_error": 0.0009,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 244,
+          "score": 0.2201,
+          "n_active": 409,
+          "examples": [
+            "Indie Games",
+            "Indie Games",
+            "JVC"
+          ]
+        },
+        {
+          "latent": 60,
+          "score": 0.2029,
+          "n_active": 1182,
+          "examples": [
+            "Jack of All Games",
+            "Jack of All Games",
+            "Jack of All Games"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1951,
+          "n_active": 461,
+          "examples": [
+            "2D Boy",
+            "Phantagram",
+            "XS Games"
+          ]
+        },
+        {
+          "latent": 190,
+          "score": 0.1922,
+          "n_active": 492,
+          "examples": [
+            "Alchemist",
+            "Alchemist",
+            "Alchemist"
+          ]
+        },
+        {
+          "latent": 26,
+          "score": 0.1902,
+          "n_active": 548,
+          "examples": [
+            "Paradox Development",
+            "Paradox Interactive",
+            "Paradox Interactive"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6152426211428895,
+  "test_error": 0.6152426211428895,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8638694651757333,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 19.33856439590454,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1832,
+      "n_groups": 1827,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 845,
+      "n_removed": 850,
+      "var_share_removed": 0.4606,
+      "var_share_sae_error": 0.0197,
+      "top": [
+        {
+          "group": 923,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 189.69,
+          "examples": [
+            "RT @mention Google was incapable of doing disruptive innovation- and acquired 89 startups over the last few years @mention #leanstartup #sxsw",
+            "Really excited to see the documentary Something Ventured at #sxsw today. About the rise of Intel, Apple, Genentech, Cisco, &amp; Atari.",
+            "&quot;Apple: the most elegant fascist corporation in America today.&quot; -- Kara Swisher #sxsw #flipboard"
+          ]
+        },
+        {
+          "group": 1726,
+          "latents": [
+            457
+          ],
+          "gain_margin": 154.94,
+          "examples": [
+            "#google to expensive mobile data plans are killing the flavor of contextual discovery abroad #SxSW #pnid",
+            "N7: Here - Time is Always Against Us {link} [codes valid: 4:00-7:59:59p 03/11/11] #infektd #sxsw #necro",
+            "#Mullenweg admits that iPhone app for Wordpress is not very good yet. Which is very true. Respect his honesty and awareness #sxsw"
+          ]
+        },
+        {
+          "group": 298,
+          "latents": [
+            1830
+          ],
+          "gain_margin": 153.24,
+          "examples": [
+            "@mention Peter Cashmore on the iPad 2: it's only a minor improvement. Not worth it unless you have money to burn. #SXSW",
+            "RT @mention @mention Peter Cashmore on the iPad 2: it's only a minor improvement. Not worth it unless you have money to burn. #SXSW",
+            "It is also limited in its abilities. Its a balance. RT @mention @mention An iPad is cheaper than most laptops. #newsapps #sxsw"
+          ]
+        },
+        {
+          "group": 423,
+          "latents": [
+            1551
+          ],
+          "gain_margin": 144.97,
+          "examples": [
+            "&quot;Apple: the most elegant fascist corporation in America today.&quot; -- Kara Swisher #sxsw #flipboard",
+            "Apple is &quot;the classiest, fascist company in America,&quot; says @mention #sxsw",
+            "RT @mention Apple...&quot;the classiest fascist company in America&quot; Kara Swisher #sxsw"
+          ]
+        },
+        {
+          "group": 545,
+          "latents": [
+            1260
+          ],
+          "gain_margin": 136.31,
+          "examples": [
+            "Totally love the copia cocoon messenger iPad bag I picked up for attending the redbox/gilt group/graphic.ly sesh this morning! #sxsw",
+            "The @mention / @mention party was without a doubt the best party I've ever been to in #SXSW. Well done!",
+            "Our updated iPhone app has song info for select streams (incl. @mention 24/7) &amp; live video streaming in time for #SXSW {link}"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7481392673788199,
+  "test_error": 0.25186073262118014,
+  "course_metric": "auroc",
+  "course_score": 0.7481392673788199,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 40.8346631526947,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 388,
+      "n_removed": 124,
+      "threshold": 0.0414,
+      "passed_test": 32,
+      "removed_norm_ratio": 0.3677,
+      "var_share_kept": 0.4694,
+      "var_share_sae_error": 0.319,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 86,
+          "score": 0.1001,
+          "n_active": 458,
+          "examples": [
+            "Life is a series of intelligence tests.  The people that bought (and buy) tickets on Frontier flights are not scoring well.",
+            "David Brooks has called President Trump a coward. Let's think about how this mild conservative Brooks, a man of moderation, might have come to this conclusion. ",
+            "Catherine Rampell is an opinion columnist for the Washington Post \u2013 of course she has never met a moderate Republican, she is part of the Beltway-Manhattan (BM)"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.0926,
+          "n_active": 641,
+          "examples": [
+            "This is snowflakery at its worst.",
+            "This kind of trash is why I hate the Globe.",
+            "poor management and changing habits in office rentals"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0836,
+          "n_active": 2049,
+          "examples": [
+            "Good on you, sir.  Your post is succinct, to the point and has nothing to do with what I posted.",
+            "Nasty.\n\nI have no reason to lie.  You just don't like what I've said here and elsewhere because it doesn't support your position.  So yes.  You don't know what ",
+            "You forgot to add \"sarcasm\" in brackets......er, you weren't serious, were you?"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.0753,
+          "n_active": 1288,
+          "examples": [
+            "We have been told \u2013 not credibly \u2013 for more than a year that Donald Trump doesn\u2019t have any properties or business interests in Russia. But for the first six mon",
+            "\"all for the sake of appeasing his shrinking base.\"\n\nRecent polls released after President Trump's Charlottesville remarks found Trump's job approval at 40% sup",
+            "In broad terms Donald Trump's Gospel is the prosperity Gospel on steroids.  He is the archetype of the \"Power of Positive Thinking\" of Norman Vincent Peale, who"
+          ]
+        },
+        {
+          "latent": 202,
+          "score": 0.0692,
+          "n_active": 425,
+          "examples": [
+            "Very Funny.",
+            "Funny. :-)",
+            "Too funny!"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 307,
+      "n_kept": 351,
+      "n_removed": 161,
+      "threshold": 0.0408,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7723,
+      "var_share_kept": 0.2938,
+      "var_share_sae_error": 0.0315,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 201,
+          "score": 0.0247,
+          "n_active": 1354,
+          "examples": [
+            "2016-12-05 00:15:28.009644",
+            "2016-05-04 16:30:13.020504",
+            "2017-11-07 00:16:18.978384"
+          ]
+        },
+        {
+          "latent": 178,
+          "score": 0.0231,
+          "n_active": 222,
+          "examples": [
+            "2017-01-13 21:46:20.781072",
+            "2016-10-25 04:29:15.787719",
+            "2017-01-10 15:51:00.787887"
+          ]
+        },
+        {
+          "latent": 350,
+          "score": 0.0202,
+          "n_active": 36,
+          "examples": [
+            "2016-08-05 05:00:21.515541",
+            "2017-06-12 17:46:17.885041",
+            "2016-12-11 20:48:08.045041"
+          ]
+        },
+        {
+          "latent": 106,
+          "score": 0.02,
+          "n_active": 22,
+          "examples": [
+            "2016-03-30 20:42:03.217206",
+            "2017-01-31 00:21:22.217085",
+            "2016-05-02 05:26:58.217086"
+          ]
+        },
+        {
+          "latent": 51,
+          "score": 0.0197,
+          "n_active": 7257,
+          "examples": [
+            "2017-09-24 23:19:53.034674",
+            "2017-09-23 15:16:57.410664",
+            "2017-09-27 13:10:24.531451"
+          ]
+        }
+      ]
+    }
+  }
+}

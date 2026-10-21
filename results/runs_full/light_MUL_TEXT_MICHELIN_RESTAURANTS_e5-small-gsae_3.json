@@ -1,0 +1,464 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7278204441861506,
+  "test_error": 0.7278204441861506,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8859033852310516,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 192.9870297908783,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2040,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1063,
+      "n_removed": 1065,
+      "var_share_removed": 0.3642,
+      "var_share_sae_error": 0.1091,
+      "top": [
+        {
+          "group": 622,
+          "latents": [
+            1745
+          ],
+          "gain_margin": 448.93,
+          "examples": [
+            "Hotel Californian, 36 State St., Santa Barbara, CA, 93101, USA",
+            "H\u00f4tel du Palais, 1 avenue de l'Imp\u00e9ratrice, Biarritz, 64200, France",
+            "26F, The Ritz-Carlton Hotel, 269 Shuncheng Avenue, Qingyang, Chengdu, China Mainland"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            2041
+          ],
+          "gain_margin": 238.46,
+          "examples": [
+            "40 Upper Lascar Row, Sheung Wan, Hong Kong, Hong Kong SAR China",
+            "1F, SL Ginza, 68 Electric Road, Tin Hau, Hong Kong, Hong Kong SAR China",
+            "1F, Sino Plaza, 255-257 Gloucester Road, Causeway Bay, Hong Kong, Hong Kong SAR China"
+          ]
+        },
+        {
+          "group": 816,
+          "latents": [
+            1557
+          ],
+          "gain_margin": 236.47,
+          "examples": [
+            "2-5-27 Ukida, Kita-ku, Osaka, 530-0021, Japan",
+            "3-4-12 Toyosaki, Kita-ku, Osaka, 531-0072, Japan",
+            "1-3-4 Dojima, Kita-ku, Osaka, 530-0003, Japan"
+          ]
+        },
+        {
+          "group": 1687,
+          "latents": [
+            467
+          ],
+          "gain_margin": 202.58,
+          "examples": [
+            "2-3F, Renaissance Northeast Hotel, 607 Renmin Avenue, Nanyuan Street, Linping, Hangzhou, China Mainland",
+            "200 Massachusetts Ave. NW, Ste.150, Washington, DC, 20001, USA",
+            "A103, Zone A, Southeast World, 125 Huachang Road, Huli, Xiamen, China Mainland"
+          ]
+        },
+        {
+          "group": 973,
+          "latents": [
+            638
+          ],
+          "gain_margin": 201.03,
+          "examples": [
+            "Utrechtsestraat 51, Amsterdam, 1017 VJ, Netherlands",
+            "Noordeinde 142, The Hague, 2514 GP, Netherlands",
+            "Holland Amerikakade 104, Rotterdam, 3072 MC, Netherlands"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1196,
+      "n_groups": 1186,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 992,
+      "n_removed": 998,
+      "var_share_removed": 0.613,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 115,
+          "latents": [
+            1697
+          ],
+          "gain_margin": 1495.99,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 322,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 667.64,
+          "examples": [
+            "Creative, Calabrian",
+            "Creative, Castilian",
+            "Meats and Grills, Creative"
+          ]
+        },
+        {
+          "group": 517,
+          "latents": [
+            764
+          ],
+          "gain_margin": 542.11,
+          "examples": [
+            "Creative, Calabrian",
+            "Creative French, Belgian",
+            "Creative"
+          ]
+        },
+        {
+          "group": 1132,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 435.75,
+          "examples": [
+            "Meats and Grills, Creative",
+            "Creative, Farm to table",
+            "Creative, Farm to table"
+          ]
+        },
+        {
+          "group": 18,
+          "latents": [
+            635,
+            901
+          ],
+          "gain_margin": 434.95,
+          "examples": [
+            "Contemporary",
+            "Contemporary",
+            "Contemporary"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 853,
+      "n_removed": 853,
+      "var_share_removed": 0.2727,
+      "var_share_sae_error": 0.1946,
+      "top": [
+        {
+          "group": 89,
+          "latents": [
+            1933
+          ],
+          "gain_margin": 864.14,
+          "examples": [
+            "A far cry from your average cramped noodle shop, this is lavish and glam spot. Better still, it also delivers on flavour \u2013 the signature beef noodle soup with o",
+            "While eating ramen, salt water from the noodles gradually dilutes the soup. You can experience this for yourself. First, pour a little of the soup into a separa",
+            "This noodle joint tucked away among residences is run by a married couple. Their signature beef noodle soup comes in two varieties: red braised and clear broth."
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            1281
+          ],
+          "gain_margin": 526.08,
+          "examples": [
+            "This buzzy, industrial-style restaurant is set \u2013 somewhat incongruously \u2013 in a former butcher\u2019s shop in the old meatpacking district, and was one of the pioneer",
+            "The view you have here of Almere's marina as the boats sail away is quite something to behold. The lounge terrace is a great place to sit, but equally charming ",
+            "This charmingly laid-back restaurant serves dishes made with regional and seasonal ingredients, drawing on influences from the Mediterranean and beyond. The bes"
+          ]
+        },
+        {
+          "group": 53,
+          "latents": [
+            1907
+          ],
+          "gain_margin": 255.16,
+          "examples": [
+            "One of the most beloved lao hua noodle shops in Fuzhou, Wei Rong is jam-packed with noodle lovers day and night. Pick your noodles and toppings \u2013 the seafood, m",
+            "Cantonese-style noodles topped with beef brisket, pork ribs, pork knuckles or beef tendon are the name of the game here. The noodles are springy, and the pork k",
+            "In 1989, the founder started his first noodle shop just down the road. After several moves, he is back in his old neighbourhood once again. In his 70s, he still"
+          ]
+        },
+        {
+          "group": 2046,
+          "latents": [
+            66
+          ],
+          "gain_margin": 245.91,
+          "examples": [
+            "Now here is a restaurant that has a sense of the original! The interior design is very contemporary and, similarly, the chef keeps his ear to the ground for the",
+            "A restaurant with a fun, modern feel that is enjoying considerable success in the city. The menu here is contemporary in style with elements of fusion cooking a",
+            "An informal, centrally located restaurant on two floors, run by a highly professional couple. The traditional cuisine with a contemporary touch includes several"
+          ]
+        },
+        {
+          "group": 126,
+          "latents": [
+            1854
+          ],
+          "gain_margin": 237.56,
+          "examples": [
+            "Housed in a historic palazzo on the charming Piazza della Motta in the town centre, this restaurant is one you will immediately want to share with family and fr",
+            "Simply arriving in Cusago near Milan, where the imposing castle dominates the attractive centre, puts you in a good mood. At Da Orlando, the menu is equally bal",
+            "A salon en plein air overlooking Asolo\u2019s historical center, this charming spot offers attentive service and Italian cuisine presented with a modern touch. The m"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 694,
+      "n_groups": 670,
+      "n_multi_groups": 20,
+      "n_groups_dropped": 599,
+      "n_removed": 620,
+      "var_share_removed": 0.8112,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 645,
+          "latents": [
+            239
+          ],
+          "gain_margin": 1593.81,
+          "examples": [
+            "Counter dining,Interesting wine list",
+            "Counter dining,Interesting wine list",
+            "Counter dining,Interesting wine list"
+          ]
+        },
+        {
+          "group": 446,
+          "latents": [
+            1006
+          ],
+          "gain_margin": 1583.33,
+          "examples": [
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list"
+          ]
+        },
+        {
+          "group": 110,
+          "latents": [
+            1752
+          ],
+          "gain_margin": 834.39,
+          "examples": [
+            "Air conditioning,Bring your own bottle,Counter dining",
+            "Air conditioning,Bring your own bottle,Counter dining,Interesting wine list,Terrace,Wheelchair access",
+            "Air conditioning,Bring your own bottle,Counter dining,Terrace"
+          ]
+        },
+        {
+          "group": 97,
+          "latents": [
+            1799
+          ],
+          "gain_margin": 526.03,
+          "examples": [
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list"
+          ]
+        },
+        {
+          "group": 665,
+          "latents": [
+            334
+          ],
+          "gain_margin": 404.62,
+          "examples": [
+            "Car park,Counter dining,Great view,Interesting wine list,Wheelchair access",
+            "Car park,Interesting wine list,Wheelchair access",
+            "Car park,Interesting wine list,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1986,
+      "n_groups": 1985,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1519,
+      "n_removed": 1520,
+      "var_share_removed": 0.7483,
+      "var_share_sae_error": 0.0153,
+      "top": [
+        {
+          "group": 1447,
+          "latents": [
+            825
+          ],
+          "gain_margin": 133.27,
+          "examples": [
+            "Goes, Netherlands",
+            "Goes, Netherlands",
+            "Enter, Netherlands"
+          ]
+        },
+        {
+          "group": 495,
+          "latents": [
+            1829
+          ],
+          "gain_margin": 129.8,
+          "examples": [
+            "Sant'Agata sui Due Golfi, Italy",
+            "Schw\u00e4bisch Hall, Germany",
+            "Schw\u00e4bisch Hall, Germany"
+          ]
+        },
+        {
+          "group": 555,
+          "latents": [
+            1329
+          ],
+          "gain_margin": 111.75,
+          "examples": [
+            "Crans-Montana, Switzerland",
+            "Crans-Montana, Switzerland",
+            "Crans-Montana, Switzerland"
+          ]
+        },
+        {
+          "group": 1622,
+          "latents": [
+            306
+          ],
+          "gain_margin": 103.92,
+          "examples": [
+            "Lunel, France",
+            "Lugo, Spain",
+            "Ludlow, United Kingdom"
+          ]
+        },
+        {
+          "group": 1589,
+          "latents": [
+            685
+          ],
+          "gain_margin": 81.64,
+          "examples": [
+            "Blaregnies, Belgium",
+            "Stavelot, Belgium",
+            "Herentals, Belgium"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2044,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 999,
+      "n_removed": 1000,
+      "var_share_removed": 0.3355,
+      "var_share_sae_error": 0.1045,
+      "top": [
+        {
+          "group": 2002,
+          "latents": [
+            622
+          ],
+          "gain_margin": 277.79,
+          "examples": [
+            "Chi Chia Chuang (Changchun Road)",
+            "Congkak (Bukit Bintang)",
+            "Somchai Go Tae (Bang Len)"
+          ]
+        },
+        {
+          "group": 134,
+          "latents": [
+            1811
+          ],
+          "gain_margin": 230.18,
+          "examples": [
+            "Oryori Matsumura",
+            "Oryori Mitsuyasu",
+            "Oryori Ichiho"
+          ]
+        },
+        {
+          "group": 1298,
+          "latents": [
+            3
+          ],
+          "gain_margin": 150.13,
+          "examples": [
+            "Madame L\u00e2n",
+            "China Village",
+            "Dongyin Fisherman"
+          ]
+        },
+        {
+          "group": 2016,
+          "latents": [
+            259
+          ],
+          "gain_margin": 127.42,
+          "examples": [
+            "Kandoo Nippon Restaurant",
+            "Akasaka Kikunoi",
+            "Kikunoi Honten"
+          ]
+        },
+        {
+          "group": 1456,
+          "latents": [
+            1082
+          ],
+          "gain_margin": 124.11,
+          "examples": [
+            "Godai",
+            "Godaille",
+            "Restaurant Hywel Jones by Lucknam Park"
+          ]
+        }
+      ]
+    }
+  }
+}

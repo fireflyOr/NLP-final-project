@@ -1,0 +1,315 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -23.139068195702343,
+  "test_error": 23.139068195702343,
+  "course_metric": "r2",
+  "course_score": 0.7603794800092967,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 249.72017073631287,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 273,
+      "n_groups": 273,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 263,
+      "n_removed": 263,
+      "var_share_removed": 0.9005,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 212,
+          "latents": [
+            402
+          ],
+          "gain_margin": 26.76,
+          "examples": [
+            "cream / espresso",
+            "cream / green",
+            "cream / green"
+          ]
+        },
+        {
+          "group": 262,
+          "latents": [
+            260
+          ],
+          "gain_margin": 25.85,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 59,
+          "latents": [
+            1251
+          ],
+          "gain_margin": 12.06,
+          "examples": [
+            "tan / cream",
+            "tan / cream / pink",
+            "cream"
+          ]
+        },
+        {
+          "group": 112,
+          "latents": [
+            1677
+          ],
+          "gain_margin": 3.33,
+          "examples": [
+            "orange / cream",
+            "tan / cream",
+            "orange / blue / cream / tan / chocolate"
+          ]
+        },
+        {
+          "group": 208,
+          "latents": [
+            656
+          ],
+          "gain_margin": 3.02,
+          "examples": [
+            "black / green / grey",
+            "black / pink / gray",
+            "black / pink / gray"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 265,
+      "n_groups": 265,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 252,
+      "n_removed": 252,
+      "var_share_removed": 0.7168,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 241,
+          "latents": [
+            654
+          ],
+          "gain_margin": 103.35,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs."
+          ]
+        },
+        {
+          "group": 104,
+          "latents": [
+            1147
+          ],
+          "gain_margin": 79.46,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean Echo",
+            "Glenna Jean Liam"
+          ]
+        },
+        {
+          "group": 10,
+          "latents": [
+            1999
+          ],
+          "gain_margin": 54.81,
+          "examples": [
+            "Wilma Sanchez",
+            "Glenna Jean Echo",
+            "Duck River Textile"
+          ]
+        },
+        {
+          "group": 11,
+          "latents": [
+            1938
+          ],
+          "gain_margin": 40.86,
+          "examples": [
+            "Birth+",
+            "Nature",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 259,
+          "latents": [
+            151
+          ],
+          "gain_margin": 39.92,
+          "examples": [
+            "Sadie &",
+            "Sadie &",
+            "Sadie &"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 750,
+      "n_groups": 750,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 532,
+      "n_removed": 532,
+      "var_share_removed": 0.4028,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 88,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 2268.29,
+          "examples": [
+            "Ace Baby Furniture",
+            "Ace Baby Furniture",
+            "Ace Baby Furniture"
+          ]
+        },
+        {
+          "group": 594,
+          "latents": [
+            346
+          ],
+          "gain_margin": 1284.27,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 289,
+          "latents": [
+            998
+          ],
+          "gain_margin": 1277.14,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 746,
+          "latents": [
+            324
+          ],
+          "gain_margin": 1116.71,
+          "examples": [
+            "KidKraft",
+            "KidKraft",
+            "KidKraft"
+          ]
+        },
+        {
+          "group": 469,
+          "latents": [
+            448
+          ],
+          "gain_margin": 628.12,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1251,
+      "n_groups": 1250,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 844,
+      "n_removed": 844,
+      "var_share_removed": 0.243,
+      "var_share_sae_error": 0.0062,
+      "top": [
+        {
+          "group": 76,
+          "latents": [
+            1922
+          ],
+          "gain_margin": 4259.22,
+          "examples": [
+            "Sweet Jojo Designs Funky Zebra Collection Toddler Bedding - 5-Piece Set",
+            "Kids Line Fleur 9 Piece Crib Bedding Set",
+            "Sweet Jojo Designs Funky Zebra Collection Children's and Teen Bedding - 4-Piece Twin Set"
+          ]
+        },
+        {
+          "group": 311,
+          "latents": [
+            1475
+          ],
+          "gain_margin": 3191.26,
+          "examples": [
+            "My Baby Sam Penny Lane 3 Piece Crib Bedding Set",
+            "Manam Kids First Friends 9 Piece Crib Set",
+            "Manam Kids Dotted Bunch Rug - 8x4.8"
+          ]
+        },
+        {
+          "group": 37,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 2170.41,
+          "examples": [
+            "Sumersault Little Prince 4-Piece Crib Bedding Set",
+            "Sumersault Colorburst 10-Piece Crib Bedding Set",
+            "Sumersault Princess 4-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 1232,
+          "latents": [
+            346
+          ],
+          "gain_margin": 1511.68,
+          "examples": [
+            "Baby in the Tub Framed Art Print",
+            "Trademark Games The Stand Off Ready to hang Gallery Wrapped",
+            "Baby Aspen My Sweet Baby Classic Cable Knit Blanket and Rattle"
+          ]
+        },
+        {
+          "group": 150,
+          "latents": [
+            1681
+          ],
+          "gain_margin": 1140.32,
+          "examples": [
+            "RoomMates Paw Patrol Chair Rail Prepasted Mural",
+            "RoomMates My Little Pony Ponyville Chair Rail Mural",
+            "Gallery All Crystal 4 Light Chandelier with Swarovski Crystal"
+          ]
+        }
+      ]
+    }
+  }
+}

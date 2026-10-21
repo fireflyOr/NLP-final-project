@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.2152012646533645,
+  "test_error": 3.2152012646533645,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9085019608468798,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1334.811354637146,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1916,
+      "n_groups": 1915,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 276,
+      "n_removed": 276,
+      "var_share_removed": 0.0284,
+      "var_share_sae_error": 0.0391,
+      "top": [
+        {
+          "group": 537,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 5447.19,
+          "examples": [
+            "Esencial Miguel Bose",
+            "Uma",
+            "Papas Da L\u00edngua"
+          ]
+        },
+        {
+          "group": 905,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 5290.5,
+          "examples": [
+            "Pa' Quitarle las Ganas (feat. Banda La Reyna de Monterrey & La Atraktiva de Monterrey)",
+            "B\u00e1jale como 7500",
+            "B\u00e1jale como 7500"
+          ]
+        },
+        {
+          "group": 1857,
+          "latents": [
+            506
+          ],
+          "gain_margin": 3086.48,
+          "examples": [
+            "As Paisagens Conhecidas",
+            "Dois Amores, Duas Paix\u00f5es, Vol. 14",
+            "Sextou Beb\u00ea (Ao Vivo)"
+          ]
+        },
+        {
+          "group": 946,
+          "latents": [
+            1162
+          ],
+          "gain_margin": 3035.39,
+          "examples": [
+            "Lo Esencial de Estela Nu\u00f1ez",
+            "Lo Mejor Del Tango",
+            "Lo Mejor Del Tango"
+          ]
+        },
+        {
+          "group": 1912,
+          "latents": [
+            771
+          ],
+          "gain_margin": 2480.0,
+          "examples": [
+            "Met De Vlam In De Pijp",
+            "Do Melhor Jeito",
+            "Ofrenda"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1910,
+      "n_groups": 1909,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 95,
+      "n_removed": 95,
+      "var_share_removed": 0.0125,
+      "var_share_sae_error": 0.0339,
+      "top": [
+        {
+          "group": 127,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 6711.22,
+          "examples": [
+            "Desalmado;Nata de Lima",
+            "3030;Lauana Prado",
+            "LUDMILLA;Ferrugem"
+          ]
+        },
+        {
+          "group": 1850,
+          "latents": [
+            696
+          ],
+          "gain_margin": 3887.42,
+          "examples": [
+            "Melvin Taylor;Lucky Peterson;Titus Williams;Ray \"Killer\" Allison",
+            "Allen Watts",
+            "Josh Williams;Don Rigsby;Kristin Scott Benson}Ron Stewart;Missy Raines;Randy Kohrs"
+          ]
+        },
+        {
+          "group": 948,
+          "latents": [
+            850
+          ],
+          "gain_margin": 3862.63,
+          "examples": [
+            "Pyotr Ilyich Tchaikovsky;Wiener Philharmoniker;James Levine",
+            "Johann Sebastian Bach;Daniel Hope;Lorenza Borrani;Lucy Gould;Stewart Eaton;William Conway;Enno Senft;Stefan Maass;Stefan Rath",
+            "Georges Bizet;Maria Callas;Nicolai Gedda;Orchestre de l'Op\u00e9ra National de Paris;Georges Pr\u00eatre;Orchestre du Th\u00e9\u00e2tre National de l'Op\u00e9ra Paris;Paris Opera Orches"
+          ]
+        },
+        {
+          "group": 473,
+          "latents": [
+            1162
+          ],
+          "gain_margin": 3242.21,
+          "examples": [
+            "Carlos Moscardini",
+            "Agust\u00edn Amig\u00f3",
+            "Miguel Montero"
+          ]
+        },
+        {
+          "group": 930,
+          "latents": [
+            1266
+          ],
+          "gain_margin": 2868.91,
+          "examples": [
+            "Karen Keldani;Fabio Keldani",
+            "Giacomo Puccini;Renaud Capu\u00e7on",
+            "Gabriel Diniz"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1931,
+      "n_groups": 1929,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 471,
+      "n_removed": 471,
+      "var_share_removed": 0.0455,
+      "var_share_sae_error": 0.0452,
+      "top": [
+        {
+          "group": 474,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 6060.58,
+          "examples": [
+            "Atras de la Raya",
+            "Cielo De Ti",
+            "\u00c0 plat ventre"
+          ]
+        },
+        {
+          "group": 391,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 5556.1,
+          "examples": [
+            "No Mundo da Lua / Abra\u00e7o",
+            "Boquinha",
+            "T\u00e1xi Lunar (Ao Vivo)"
+          ]
+        },
+        {
+          "group": 1926,
+          "latents": [
+            771
+          ],
+          "gain_margin": 4338.48,
+          "examples": [
+            "Bailarina Rota",
+            "Saudade N\u00e9 Filha?",
+            "Bailarina"
+          ]
+        },
+        {
+          "group": 765,
+          "latents": [
+            1777
+          ],
+          "gain_margin": 3079.36,
+          "examples": [
+            "Cuento de hadas/Camino a casa",
+            "Cuadros Dentro De Cuadros - Acustico",
+            "Torna a Surriento"
+          ]
+        },
+        {
+          "group": 478,
+          "latents": [
+            1428
+          ],
+          "gain_margin": 2758.14,
+          "examples": [
+            "G\u00fcaracha",
+            "Kannetha Dooratholam",
+            "Bansuri"
+          ]
+        }
+      ]
+    }
+  }
+}

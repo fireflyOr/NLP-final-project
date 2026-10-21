@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7396100509512744,
+  "test_error": 0.7396100509512744,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8965228191968571,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 35.87664294242859,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 408,
+      "n_removed": 104,
+      "threshold": 0.045,
+      "passed_test": 96,
+      "removed_norm_ratio": 0.3819,
+      "var_share_kept": 0.5998,
+      "var_share_sae_error": 0.1946,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 213,
+          "score": 0.2507,
+          "n_active": 2602,
+          "examples": [
+            "I absolutely love this gorgeous cardigan. i will wear it for years to come!!",
+            "This top is fabulous! the color is amazing and the back is just beautiful! i would recommend this sweater to anyone i absolutely love it! my only concern is get",
+            "This skirt is gorgeous!! drapes beautifully & the color is vibrant! get it!! you'll be so pleased! i sure am!!!"
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.2353,
+          "n_active": 1445,
+          "examples": [
+            "This shirt is pretty but wasn't worth the price in my opinion. the shirt does a pretty decent job of staying closed at least, and the embroidering is pretty, bu",
+            "This just did not sit well on me. while the length was fine and the fabric was a nice thick weave with a flattering amount of stretch, the twist at the shoulder",
+            "The lace and fit were good. but the length seemed awkward to me given how boxy and flowy-ish the dress is. it felt like a baby doll with sleeves or something. a"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.1457,
+          "n_active": 2622,
+          "examples": [
+            "So much extra fabric. not something i would recommend buying online.",
+            "What a disappointment and for the price, it's outrageous!",
+            "This top was much more fitted than expected and was not flattering. i would not recommend."
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.1456,
+          "n_active": 2178,
+          "examples": [
+            "The dress is beautiful but runs small so unfortunately i have to return it.",
+            "It's such a pretty top but i felt that it looked maternity-ish so i returned it.",
+            "This dress was adorable & fit great! regrettably, i had to return it since it wasn't lined."
+          ]
+        },
+        {
+          "latent": 312,
+          "score": 0.1311,
+          "n_active": 635,
+          "examples": [
+            "This is a lovely, light coverup with a beautiful pattern, however, in the catalogue it appears blush pink when in reality it is white. the model must be wearing",
+            "Cute stripes and soft, but very pajama top like in feel/look... like if you wear it out, people will assume you've got the matching bottoms stuck under your pil",
+            "This shirt is comfy, fits well, the color (pink or dusty rose) works well with most outfits, but the front hook is ill-placed and often visible. it could be tuc"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 443,
+      "n_removed": 69,
+      "threshold": 0.0443,
+      "passed_test": 162,
+      "removed_norm_ratio": 0.19,
+      "var_share_kept": 0.8175,
+      "var_share_sae_error": 0.0666,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 217,
+          "score": 0.2432,
+          "n_active": 1136,
+          "examples": [
+            "Great, but...",
+            "Gorgeous, but...",
+            "Gorgeous but ..."
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.1886,
+          "n_active": 2080,
+          "examples": [
+            "Maybe....",
+            "Almost, but not quite",
+            "This might be"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.1832,
+          "n_active": 1182,
+          "examples": [
+            "Needs a better discription",
+            "Wish it had a little more shape",
+            "Boxier than it appears"
+          ]
+        },
+        {
+          "latent": 228,
+          "score": 0.1603,
+          "n_active": 1250,
+          "examples": [
+            "Obsessed.",
+            "Obsessed",
+            "Obsessed"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1575,
+          "n_active": 1295,
+          "examples": [
+            "Material is awful",
+            "Only the sleeves are pretty; the rest is terrible",
+            "They look great but are poorly made"
+          ]
+        }
+      ]
+    }
+  }
+}

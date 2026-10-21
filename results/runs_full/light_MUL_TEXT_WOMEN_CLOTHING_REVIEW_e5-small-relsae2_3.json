@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7353319553923114,
+  "test_error": 0.7353319553923114,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.897536202786047,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.759438276290894,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 398,
+      "n_removed": 114,
+      "threshold": 0.0487,
+      "passed_test": 79,
+      "removed_norm_ratio": 0.4193,
+      "var_share_kept": 0.575,
+      "var_share_sae_error": 0.1938,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 18,
+          "score": 0.2833,
+          "n_active": 4113,
+          "examples": [
+            "I am returning the dress. it has too much volume and is not flattering at all",
+            "While i love the design and shape of this blouse, the fabric was of very poor quality. i will return it.",
+            "Very disappointed the back of this blouse is plain, not as displayed."
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.1852,
+          "n_active": 3030,
+          "examples": [
+            "Got this today and highly recommend it! it fits perfectly and is very flattering! i can see wearing this all wear round! perfect date shirt!",
+            "Love love love this sweater! lots of compliments as well :))",
+            "I absolutely love this skirt! the picture does not do it justice. it is absolutely beautiful and fits perfectly. i received so many compliments when i wore it!"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.1659,
+          "n_active": 1019,
+          "examples": [
+            "Based on the other reviews, i sized down from my usual 6p to a 2p, but this dress was still ridiculously huge and extremely unflattering. i could tell the minut",
+            "I'm a big retailer buyer- and usually love the dresses, especially the petite xs maxis. this was the worst retailer purchase i have ever made. \r\n\r\nit was humong",
+            "What a let down. the sweater i received in no way resembles the product pictured. based on the original price point, i envisioned a beautiful hand-knitted sweat"
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.1356,
+          "n_active": 724,
+          "examples": [
+            "I have bought 4 of these, but after 1st wash on 2 of them and they were in a lingere bag, there are little holes on the front of each, now they are bum around s",
+            "More importatn, super soft matieral and comfortbale, hwoever, when i put it on, ilfelt like i was wearing a robe... i do like the detial in the fabric, but jsut",
+            "They were fine. i had hoped they'd be more like begging a though... more structure. they were very much just leggings and rather unflattering in the crotch area"
+          ]
+        },
+        {
+          "latent": 278,
+          "score": 0.1348,
+          "n_active": 1676,
+          "examples": [
+            "I love this black turtleneck. arms are a little long, so should have gotten small. i wore it and love it! you can play with collar and snaps; up or down.",
+            "Love love love this turtleneck! it's soft and cozy, and i've already reached for it on several chilly days. it definitely runs large. i sized down and it still ",
+            "This sweater coat is perfect. i've been looking for one i loved for years. in my opinion, it runs true to size. i ordered my usual xsp. it is fitted in the arms"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 444,
+      "n_removed": 68,
+      "threshold": 0.0458,
+      "passed_test": 145,
+      "removed_norm_ratio": 0.1689,
+      "var_share_kept": 0.8568,
+      "var_share_sae_error": 0.0648,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 217,
+          "score": 0.2451,
+          "n_active": 1065,
+          "examples": [
+            "Nice but yellowy",
+            "Gorgeous but ...",
+            "Gorgeous but..."
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1814,
+          "n_active": 3522,
+          "examples": [
+            "Cute, poorly made",
+            "Good concept, poor product",
+            "Great light coat, poorly made"
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.1719,
+          "n_active": 1048,
+          "examples": [
+            "Not as bad as previously reviewed",
+            "Almost but not quite",
+            "Not so bad!"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.1644,
+          "n_active": 767,
+          "examples": [
+            "Not quite as pictured",
+            "Almost but not quite",
+            "I'm not there yet"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.1624,
+          "n_active": 2286,
+          "examples": [
+            "Love !!",
+            "Love!!",
+            "Love!!"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23620512541353134,
+  "test_error": 0.23620512541353134,
+  "course_metric": "r2",
+  "course_score": 0.49229772033758123,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 71.61702156066895,
+  "diagnostics": {
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 339,
+      "n_removed": 173,
+      "threshold": 0.07,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.5782,
+      "var_share_kept": 0.62,
+      "var_share_sae_error": 0.1245,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 0,
+          "score": 0.107,
+          "n_active": 242,
+          "examples": [
+            "Ladybird",
+            "Ladybird",
+            "Ladybird"
+          ]
+        },
+        {
+          "latent": 65,
+          "score": 0.0964,
+          "n_active": 324,
+          "examples": [
+            "Anindya Dutta",
+            "Anjali Hooda Sangwan",
+            "Anju"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.0947,
+          "n_active": 179,
+          "examples": [
+            "PUSTAK MAHAL EDITORIAL BOARD",
+            "Pustak Mahal Editorial Board",
+            "PUSTAK MAHAL EDITORIAL BOARD"
+          ]
+        },
+        {
+          "latent": 337,
+          "score": 0.0871,
+          "n_active": 159,
+          "examples": [
+            "Louis L'Amour",
+            "Louis L'Amour",
+            "Louis L'Amour"
+          ]
+        },
+        {
+          "latent": 200,
+          "score": 0.0865,
+          "n_active": 166,
+          "examples": [
+            "Ladybird",
+            "Ladybird",
+            "Ladybird"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 296,
+      "n_kept": 455,
+      "n_removed": 57,
+      "threshold": 0.0663,
+      "passed_test": 22,
+      "removed_norm_ratio": 0.234,
+      "var_share_kept": 0.8222,
+      "var_share_sae_error": 0.0026,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 407,
+          "score": 0.1448,
+          "n_active": 1940,
+          "examples": [
+            "Hardcover,\u2013 15 Oct 2013",
+            "Hardcover,\u2013 15 Feb 2013",
+            "Hardcover,\u2013 27 Aug 2013"
+          ]
+        },
+        {
+          "latent": 261,
+          "score": 0.1432,
+          "n_active": 1410,
+          "examples": [
+            "Hardcover,\u2013 18 May 2012",
+            "Hardcover,\u2013 19 May 2009",
+            "Hardcover,\u2013 6 Jan 2010"
+          ]
+        },
+        {
+          "latent": 161,
+          "score": 0.1277,
+          "n_active": 208,
+          "examples": [
+            "Plastic Comb,\u2013 DVD, NTSC",
+            "Cards,\u2013 2015",
+            "Paperback,\u2013 1971"
+          ]
+        },
+        {
+          "latent": 275,
+          "score": 0.1257,
+          "n_active": 176,
+          "examples": [
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017"
+          ]
+        },
+        {
+          "latent": 176,
+          "score": 0.1226,
+          "n_active": 103,
+          "examples": [
+            "Paperback,\u2013 2007",
+            "Paperback,\u2013 2007",
+            "Paperback,\u2013 2007"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 496,
+      "n_kept": 354,
+      "n_removed": 158,
+      "threshold": 0.0728,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.5123,
+      "var_share_kept": 0.603,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 349,
+          "score": 0.1219,
+          "n_active": 120,
+          "examples": [
+            "Digital Media & Graphic Design (Books)",
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)"
+          ]
+        },
+        {
+          "latent": 47,
+          "score": 0.1066,
+          "n_active": 81,
+          "examples": [
+            "Indian Writing (Books)",
+            "Indian Writing (Books)",
+            "Indian Writing (Books)"
+          ]
+        },
+        {
+          "latent": 286,
+          "score": 0.0935,
+          "n_active": 134,
+          "examples": [
+            "Flash Cards",
+            "Comics",
+            "Comics"
+          ]
+        },
+        {
+          "latent": 8,
+          "score": 0.0925,
+          "n_active": 97,
+          "examples": [
+            "Public Affairs",
+            "Rhetoric & Speech (Books)",
+            "Rhetoric & Speech (Books)"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.0912,
+          "n_active": 190,
+          "examples": [
+            "Sikhism (Books)",
+            "Language, Linguistics & Writing (Books)",
+            "Language, Linguistics & Writing (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 334,
+      "n_removed": 178,
+      "threshold": 0.0695,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.5085,
+      "var_share_kept": 0.4999,
+      "var_share_sae_error": 0.2516,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 165,
+          "score": 0.1054,
+          "n_active": 297,
+          "examples": [
+            "CISSP (ISC)2 Certified Information Systems Security Professional Official Study Guide, 7th Edition has been completely updated for the latest 2015 CISSP Body of",
+            "CCENT/CCNA ICND1 Official Certification Guide is a comprehensive self-study tool for professionals preparing for the new ICND1 exam. Complete coverage of all ex",
+            "THE PRINCETON REVIEW GETS RESULTS. Get all the prep you need to ace the Test of English as a Foreign Language with a full-length simulated TOEFL iBT test, an MP"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.1012,
+          "n_active": 167,
+          "examples": [
+            "The ultimate guide to human-centered design\n\nEven the smartest among us can feel inept as we fail to figure out which light switch or oven burner to turn on, or",
+            "The ultimate guide to human-centered design\n\nEven the smartest among us can feel inept as we fail to figure out which light switch or oven burner to turn on, or",
+            "Campfire's World War II: Against The Rising Sun focuses on the war in the East, through the eyes of the servicemen and civilians on both sides of the conflict. "
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.0948,
+          "n_active": 189,
+          "examples": [
+            "This lavish coffee-table book traces the history of photography from the first black and white images to celebrated examples of 21st-century digital photography",
+            "This iconic National Geographic photography collection of the world\u2019s most majestic nature landscapes presents the exquisiteness of the great outdoors and showc",
+            "This dazzling photo collection reveals exquisite moments in time held still. Capturing the instant in which a firecracker explodes into a burst of electric ener"
+          ]
+        },
+        {
+          "latent": 194,
+          "score": 0.0867,
+          "n_active": 227,
+          "examples": [
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. "
+          ]
+        },
+        {
+          "latent": 153,
+          "score": 0.0859,
+          "n_active": 214,
+          "examples": [
+            "After Adam Warlock's return in Infinity Gauntlet, his worse half the Magus wasn't far behind! The struggle for ultimate power over the universe continues when a",
+            "RONIN is the acclaimed epic by Frank Miller, the visionary writer/artist of THE DARK KNIGHT RETURNS, 300 and Sin City. In this tale of a legendary warrior, the ",
+            "A New York Times bestseller!\n\nThe only one thing more terrifying than the madness currently gripping Gotham City is the method behind it.\n \nGang wars. Viral out"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 341,
+      "n_removed": 171,
+      "threshold": 0.0734,
+      "passed_test": 13,
+      "removed_norm_ratio": 0.5135,
+      "var_share_kept": 0.5196,
+      "var_share_sae_error": 0.1968,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 213,
+          "score": 0.1123,
+          "n_active": 522,
+          "examples": [
+            "AWS Certified Solutions Architect - Associate Guide: The ultimate exam guide to AWS Solutions Architect certification",
+            "How to Play Guitar Step by Step: The Complete Guide to Mastering the Guitar (Step By Step Book & DVD)",
+            "Are You Smart Enough to Work at Google?: Trick Questions, Zen-like Riddles, Insanely Difficult Puzzles, and Other Devious Interviewing Techniques You ... Know t"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.1005,
+          "n_active": 195,
+          "examples": [
+            "Official IELTS Practice Materials 1 with Audio CD",
+            "Cambridge International AS and A Level IT Coursebook with CD-ROM (Cambridge International Examinations)",
+            "Official IELTS Practice Materials 2 with DVD"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.099,
+          "n_active": 313,
+          "examples": [
+            "Complete Screenwriting Course: A complete guide to writing, developing and marketing a script for TV or film (Teach Yourself)",
+            "Creative Watercolor: A Step-by-Step Guide for Beginners--Create with Paints, Inks, Markers, Glitter, and More! (Art for Modern Makers)",
+            "CCNA Routing and Switching Portable Command Guide (ICND1 100-105, ICND2 200-105, and CCNA 200-125)"
+          ]
+        },
+        {
+          "latent": 339,
+          "score": 0.0905,
+          "n_active": 194,
+          "examples": [
+            "Python Cookbook",
+            "Automate the Boring Stuff with Python",
+            "Black Hat Python"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0845,
+          "n_active": 250,
+          "examples": [
+            "All You Need is Love",
+            "How to Ruin Everything",
+            "Body Goddess: The Complete Guide on Yoga for Women"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.17078188449912,
+  "test_error": 1.17078188449912,
+  "course_metric": "r2",
+  "course_score": 0.378986163191277,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.71332406997681,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1585,
+      "n_removed": 1585,
+      "var_share_removed": 0.5909,
+      "var_share_sae_error": 0.0742,
+      "top": [
+        {
+          "group": 1266,
+          "latents": [
+            256
+          ],
+          "gain_margin": 7498.86,
+          "examples": [
+            "Mario Tennis",
+            "Mario Kart Wii",
+            "Super Mario World"
+          ]
+        },
+        {
+          "group": 292,
+          "latents": [
+            1673
+          ],
+          "gain_margin": 5312.97,
+          "examples": [
+            "Wii Fit",
+            "Wii Fit U",
+            "Wii Music"
+          ]
+        },
+        {
+          "group": 45,
+          "latents": [
+            2017
+          ],
+          "gain_margin": 3615.73,
+          "examples": [
+            "Jeep Thrills",
+            "Super Mario Bros.",
+            "Super Mario Bros."
+          ]
+        },
+        {
+          "group": 1986,
+          "latents": [
+            29
+          ],
+          "gain_margin": 2016.19,
+          "examples": [
+            "Shin Chan: Las Nuevas Aventuras Para Wii!",
+            "Mr Bean's Wacky World of Wii",
+            "Def Jam Icon"
+          ]
+        },
+        {
+          "group": 490,
+          "latents": [
+            1657
+          ],
+          "gain_margin": 1893.89,
+          "examples": [
+            "New Super Mario Bros. U",
+            "Scooby-Doo",
+            "Super Smash Bros. for Wii U and 3DS"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1219,
+      "n_groups": 1219,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1108,
+      "n_removed": 1108,
+      "var_share_removed": 0.6941,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 1178,
+          "latents": [
+            205
+          ],
+          "gain_margin": 1627.54,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 950,
+          "latents": [
+            620
+          ],
+          "gain_margin": 1197.48,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1209,
+          "latents": [
+            29
+          ],
+          "gain_margin": 1016.97,
+          "examples": [
+            "Coconuts Japan",
+            "Coconuts Japan",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1218,
+          "latents": [
+            95
+          ],
+          "gain_margin": 1014.17,
+          "examples": [
+            "Sweets",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            1565
+          ],
+          "gain_margin": 624.37,
+          "examples": [
+            "Coconuts Japan",
+            "Coconuts Japan",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

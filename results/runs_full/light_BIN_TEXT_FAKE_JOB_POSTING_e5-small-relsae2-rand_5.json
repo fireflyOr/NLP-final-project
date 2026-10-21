@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9036269178873547,
+  "test_error": 0.09637308211264528,
+  "course_metric": "auroc",
+  "course_score": 0.9036269178873547,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 56.779414892196655,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 379,
+      "n_removed": 133,
+      "threshold": 0.0472,
+      "passed_test": 39,
+      "removed_norm_ratio": 0.3943,
+      "var_share_kept": 0.5361,
+      "var_share_sae_error": 0.2581,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 342,
+          "score": 0.1569,
+          "n_active": 507,
+          "examples": [
+            "The CompanyThe Beans Group is a media company that exists to empower young people to thrive. \u00a0We have been on an exponential growth spurt since our inception as",
+            "Customer Relationship Management specialist company looking to hire people to add to our Telemarketing team. This is a Virtual position and all Candidates must ",
+            "Award-Winning London-Based Technology Media Company Seek an Ambitious and Passionate Developer.The CompanyThe Beans Group is a media company that exists to empo"
+          ]
+        },
+        {
+          "latent": 75,
+          "score": 0.0968,
+          "n_active": 394,
+          "examples": [
+            "#URL_40db8ee573e5afc88001636e8ccb082c0d19fe854bf028429228acb51eacede4# is looking for an outstanding and committed individual with a strong interest in cities, ",
+            "We currently have a vacancy for a PowerBuilder Developer, fluent in English and French, to offer his/her services as an expert who will be based in Brussels, Be",
+            "We currently have a vacancy for an Analyst fluent in English and French, to offer his/her services as an expert who will be based in Brussels. The work will be "
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0894,
+          "n_active": 858,
+          "examples": [
+            "Essential Duties and Responsibilities include the following: -Provides sales support to Sales Representatives.  -Coordinates sales for assigned accounts. -Speak",
+            "Duties and Responsibilities:  1. A marketing representative is required to attend regular meetings with upper management weekly 2. He/ She have to attend sales ",
+            "The Administrative Assistant I is responsible for the completion of assigned office and administrative tasks.\u00a0 Maintains confidentiality of client, employee, an"
+          ]
+        },
+        {
+          "latent": 164,
+          "score": 0.0842,
+          "n_active": 628,
+          "examples": [
+            "Salary Range$100K-$125K+ with generous benefits package.Requires working knowledge of purchasing, materials, payroll, accounts payable, accounts receivable, IT,",
+            "Play with kids, get paid for it\u00a0Love travel? Jobs in Asia$1500 USD + monthly ($200 Cost of living)Excellent for student loans/credit cardsHousing provided (Furn",
+            "We need good techs with either Cable or Satellite experience.We can train.\u00a0Must have truck\u00a0Start TodayPaid Mileage$4,000-$7,000 a month to startPaid weekly***10"
+          ]
+        },
+        {
+          "latent": 253,
+          "score": 0.0776,
+          "n_active": 418,
+          "examples": [
+            "Namely is an agile startup dedicated to\u00a0building an end-to-end Human Capital Management platform for businesses of all sizes \u2013 some of the world\u2019s most innovati",
+            "The Accounting Clerk will perform a variety of accounting functions to support the Finance department such as maintaining accounting records, compiling and sort",
+            "Namely is an agile startup dedicated to building an end-to-end Human Capital Management platform for businesses of all sizes \u2013 clients like Birchbox, BuzzFeed &"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 295,
+      "n_kept": 428,
+      "n_removed": 84,
+      "threshold": 0.0535,
+      "passed_test": 49,
+      "removed_norm_ratio": 0.7218,
+      "var_share_kept": 0.7252,
+      "var_share_sae_error": 0.0063,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 511,
+          "score": 0.0875,
+          "n_active": 35,
+          "examples": [
+            "21600-31200",
+            "21600-31200",
+            "21600-31200"
+          ]
+        },
+        {
+          "latent": 72,
+          "score": 0.0851,
+          "n_active": 31,
+          "examples": [
+            "15750-15750",
+            "15750-15750",
+            "15750-15750"
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.0748,
+          "n_active": 1296,
+          "examples": [
+            "20-25",
+            "168000-216000",
+            "143520-197600"
+          ]
+        },
+        {
+          "latent": 165,
+          "score": 0.071,
+          "n_active": 6416,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 143,
+          "score": 0.0709,
+          "n_active": 6337,
+          "examples": [
+            "10716-16074",
+            "41600-62400",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 387,
+      "n_removed": 125,
+      "threshold": 0.0503,
+      "passed_test": 28,
+      "removed_norm_ratio": 0.4234,
+      "var_share_kept": 0.6581,
+      "var_share_sae_error": 0.0994,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 373,
+          "score": 0.1259,
+          "n_active": 401,
+          "examples": [
+            "Administrative Assitstant",
+            "Administrative Manager",
+            "Administrative Assistant / Office Manager"
+          ]
+        },
+        {
+          "latent": 342,
+          "score": 0.1056,
+          "n_active": 325,
+          "examples": [
+            "Use Your Spare Time to Start Earning More",
+            "Earn the Income You Deserve",
+            "Well Paid Cash Jobs To Start Immediately. "
+          ]
+        },
+        {
+          "latent": 377,
+          "score": 0.0963,
+          "n_active": 564,
+          "examples": [
+            "Immediate Opening : Oracle Developer for  Bahrain",
+            "Cruise Staff Wanted *URGENT*",
+            "Cruise Staff Wanted *URGENT*"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.0912,
+          "n_active": 385,
+          "examples": [
+            "Office Manager",
+            "Office Manager",
+            "Office Manager"
+          ]
+        },
+        {
+          "latent": 64,
+          "score": 0.0822,
+          "n_active": 337,
+          "examples": [
+            "Accounting Clerk",
+            "Records Clerk ",
+            "Records Clerk "
+          ]
+        }
+      ]
+    }
+  }
+}

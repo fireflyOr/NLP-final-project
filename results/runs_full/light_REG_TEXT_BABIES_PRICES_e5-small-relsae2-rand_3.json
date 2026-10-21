@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -25.022738382771156,
+  "test_error": 25.022738382771156,
+  "course_metric": "r2",
+  "course_score": 0.719778182973192,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 72.45453524589539,
+  "diagnostics": {
+    "colors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 249,
+      "n_kept": 435,
+      "n_removed": 77,
+      "threshold": 0.058,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.7942,
+      "var_share_kept": 0.7162,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 335,
+          "score": 0.0584,
+          "n_active": 65,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 391,
+          "score": 0.0486,
+          "n_active": 517,
+          "examples": [
+            "blue",
+            "blue",
+            "blue"
+          ]
+        },
+        {
+          "latent": 418,
+          "score": 0.0486,
+          "n_active": 685,
+          "examples": [
+            "tan",
+            "tan",
+            "tan"
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.0454,
+          "n_active": 1346,
+          "examples": [
+            "red / blue",
+            "red / blue",
+            "red / blue"
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.0449,
+          "n_active": 58,
+          "examples": [
+            "cream / green",
+            "cream / green",
+            "cream / blue / grey"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 298,
+      "n_kept": 439,
+      "n_removed": 73,
+      "threshold": 0.0703,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.4434,
+      "var_share_kept": 0.6901,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 86,
+          "score": 0.0909,
+          "n_active": 47,
+          "examples": [
+            "Sadie &",
+            "Sadie &",
+            "Sadie &"
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.0769,
+          "n_active": 59,
+          "examples": [
+            "The Northwest Co.",
+            "The Northwest Co.",
+            "The Northwest Co."
+          ]
+        },
+        {
+          "latent": 55,
+          "score": 0.0763,
+          "n_active": 44,
+          "examples": [
+            "Bacati Metro Pink,",
+            "RoomMates! Simply",
+            "RoomMates! Simply"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0762,
+          "n_active": 56,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Jenny Selvalicious",
+            "Glenna Jean, Wall"
+          ]
+        },
+        {
+          "latent": 106,
+          "score": 0.0746,
+          "n_active": 189,
+          "examples": [
+            "RoomMates! Simply",
+            "RoomMates! Simply",
+            "RoomMates! Simply"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 491,
+      "n_kept": 434,
+      "n_removed": 78,
+      "threshold": 0.0701,
+      "passed_test": 120,
+      "removed_norm_ratio": 0.36,
+      "var_share_kept": 0.7713,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 266,
+          "score": 0.2749,
+          "n_active": 38,
+          "examples": [
+            "Thorley Industries INC LLC",
+            "Learning Carpets",
+            "Learning Carpets"
+          ]
+        },
+        {
+          "latent": 404,
+          "score": 0.2565,
+          "n_active": 169,
+          "examples": [
+            "Aspen Brands",
+            "Aspen Brands",
+            "Aspen Brands"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.2451,
+          "n_active": 172,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 366,
+          "score": 0.2404,
+          "n_active": 297,
+          "examples": [
+            "RiverRidge Kids",
+            "RiverRidge Kids",
+            "RiverRidge Kids"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.2312,
+          "n_active": 41,
+          "examples": [
+            "York Wall Coverings",
+            "York Wall Coverings",
+            "York Wall Coverings"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 412,
+      "n_removed": 100,
+      "threshold": 0.0694,
+      "passed_test": 83,
+      "removed_norm_ratio": 0.4403,
+      "var_share_kept": 0.7376,
+      "var_share_sae_error": 0.0786,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 354,
+          "score": 0.2667,
+          "n_active": 371,
+          "examples": [
+            "Dream On Me On The Go 4 Piece Toddler Bedding Set",
+            "Desert Dreams 4-Piece Bedding Set",
+            "Surina 4-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "latent": 38,
+          "score": 0.2579,
+          "n_active": 202,
+          "examples": [
+            "Sleeping Partners Chandelier Shaded Table Lamp - White",
+            "Tadpoles Chandelier Table Lamp White Diamond",
+            "Tadpoles Chandelier Table Lamp Lavender Topaz"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.2294,
+          "n_active": 148,
+          "examples": [
+            "Gallery All Crystal 10 Light Chandelier with 40mm Faceted Crystal Balls",
+            "One Decor 8.5\" Wide Shelf",
+            "9in x 10in Framed Art Print - Fairyland I by Sophie Harding"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.1896,
+          "n_active": 170,
+          "examples": [
+            "Gallery Wrought Iron & Crystal White 3 Light Swag Plug in Chandelier with Pink Crystal Hearts",
+            "Gallery Wrought Iron & Crystal 3 Light Swag Plug in Chandelier with Pink Crystal Hearts",
+            "Gallery Wrought Iron & Crystal Swag Plug In White 3 Light Chandelier"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.154,
+          "n_active": 213,
+          "examples": [
+            "Marmont Hill - 'Belle and Snoopy' Peanuts Print on Canvas",
+            "Marmont Hill - 'Belle and Snoopy' Peanuts Print on Canvas",
+            "Marmont Hill - 'Steam Train 2' Eric Carle Framed Art Print"
+          ]
+        }
+      ]
+    }
+  }
+}

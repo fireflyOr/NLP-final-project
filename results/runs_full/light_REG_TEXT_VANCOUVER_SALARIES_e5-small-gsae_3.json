@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13247.306565209965,
+  "test_error": 13247.306565209965,
+  "course_metric": "r2",
+  "course_score": 0.7386386072263014,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.67938995361328,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2040,
+      "n_groups": 2032,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1249,
+      "n_removed": 1249,
+      "var_share_removed": 0.5476,
+      "var_share_sae_error": 0.0288,
+      "top": [
+        {
+          "group": 1335,
+          "latents": [
+            713
+          ],
+          "gain_margin": 450.3,
+          "examples": [
+            "Doherty, R E",
+            "Doherty, R E",
+            "Friesen, A"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            245,
+            798
+          ],
+          "gain_margin": 423.29,
+          "examples": [
+            "Topping, S",
+            "Topping, S",
+            "Bell, S"
+          ]
+        },
+        {
+          "group": 237,
+          "latents": [
+            1916
+          ],
+          "gain_margin": 320.65,
+          "examples": [
+            "Singh, A",
+            "Singh, A",
+            "Singh, A"
+          ]
+        },
+        {
+          "group": 947,
+          "latents": [
+            1143
+          ],
+          "gain_margin": 314.61,
+          "examples": [
+            "Mooney, R I",
+            "McNaney, K C",
+            "McNaney, K C"
+          ]
+        },
+        {
+          "group": 1266,
+          "latents": [
+            49
+          ],
+          "gain_margin": 313.09,
+          "examples": [
+            "Holm, K",
+            "Holm, M",
+            "Cavaliere, G A"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1437,
+      "n_groups": 1433,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 796,
+      "n_removed": 797,
+      "var_share_removed": 0.1883,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 316,
+          "latents": [
+            1862
+          ],
+          "gain_margin": 3295.66,
+          "examples": [
+            "GENERAL MANAGER DBL",
+            "General Manager",
+            "General Manager"
+          ]
+        },
+        {
+          "group": 1417,
+          "latents": [
+            796
+          ],
+          "gain_margin": 2932.53,
+          "examples": [
+            "Director Orgl Health & Safety",
+            "Director Social Policy",
+            "Director Of Business Unit Fp&A"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            1983
+          ],
+          "gain_margin": 1702.05,
+          "examples": [
+            "Director, Tourism & Destination Events",
+            "Director, Recreation",
+            "Director Recreation"
+          ]
+        },
+        {
+          "group": 357,
+          "latents": [
+            1415
+          ],
+          "gain_margin": 1581.06,
+          "examples": [
+            "Manager Purchasing Buildings & Maintenan",
+            "Manager, Emergency Management",
+            "Manager, Park Development"
+          ]
+        },
+        {
+          "group": 511,
+          "latents": [
+            1679
+          ],
+          "gain_margin": 1492.4,
+          "examples": [
+            "City Librarian",
+            "CITY CLERK",
+            "City Clerk"
+          ]
+        }
+      ]
+    }
+  }
+}

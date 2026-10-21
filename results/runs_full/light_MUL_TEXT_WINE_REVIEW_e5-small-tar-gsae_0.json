@@ -1,0 +1,173 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2393978127871985,
+  "test_error": 1.2393978127871985,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9762882824790986,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 292.6357731819153,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1460,
+      "n_groups": 1447,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 177,
+      "n_removed": 177,
+      "var_share_removed": 0.0074,
+      "var_share_sae_error": 0.0252,
+      "top": [
+        {
+          "group": 15,
+          "latents": [
+            1293,
+            1693,
+            2023
+          ],
+          "gain_margin": 14706.48,
+          "examples": [
+            "This blend of Menc\u00eda, the local Grand Noir and Merenzao opens with raisiny, spicy, slightly baked aromas that suggest nutmeg. The palate is drawing and hard, wi",
+            "A Rh\u00f4ne-style blend of Garnacha (Grenache), Mourv\u00e8dre, Tempranillo, Syrah and Graciano, this pretty wine is soft and dry. It has an earthy, dried herb taste, wi",
+            "An elegantly integrated dark-red-cherry component distinguishes the nose of this blend of 40% Mourv\u00e8dre, 35% Grenache, 20% Syrah and 5% Counoise, with hints of "
+          ]
+        },
+        {
+          "group": 7,
+          "latents": [
+            1008,
+            1795
+          ],
+          "gain_margin": 14403.99,
+          "examples": [
+            "The nose gives little away. The palate shows slight fizz and a slightly bitter but pleasant phenolic edge. There is zesty freshness, some concentration and clea",
+            "Herbal notes of blossom rise from the glass, with a smoky, flinty accent. The palate presents a honeyed aspect, promising ripe fruit and lusciousness checked by",
+            "Fragrant white flower, orchard fruit and a touch of flint lead the nose. The linear, lively palate shows mature apple, nectarine zest and mineral alongside vibr"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            256,
+            1187
+          ],
+          "gain_margin": 9947.37,
+          "examples": [
+            "A beautiful shade of mauve, John Jensen's blend of grapes from Monterey and San Benito counties boasts complete aromas of dried rose petals, frozen grapes and r",
+            "The cave cooperative in Tavel is the largest producer in the appellation, so it's reassuring that so many of its cuv\u00e9es scored highly in this year's tastings. C",
+            "The winery donates to breast cancer research and cure. The wine is pretty good, offering rich, sweet flavors of raspberries, oranges and limes."
+          ]
+        },
+        {
+          "group": 1280,
+          "latents": [
+            15
+          ],
+          "gain_margin": 8391.91,
+          "examples": [
+            "In this hot vintage, the wine seems narrow and reduced on the nose and palate. A collapsed structure shows density and jammy flavors of leafy berry, herbs and s",
+            "This extremely limited selection is from the oldest section of the original estate vineyard, planted in 1972. Those old vine flavors are subtle and spicy, openi",
+            "Penetrating aromatically, spicy and complex, this brings in sharp berry scents, baking chocolate and a streak of herb. It's tight and vertically structured, and"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1120,
+            1621,
+            1969
+          ],
+          "gain_margin": 8354.88,
+          "examples": [
+            "Named after the Bay of Biscay near Gascony, this wine is light, fruity and crisp. It has an herbal character, refreshing green fruit and lively acidity. Drink n",
+            "The aromas of melon and tropical fruit are light but enchanting. The medium-bodied flavors provide interest and show a pleasing sense of balance.",
+            "This is so light in color it almost looks like water. Oily aromas suggest tropical fruits, while this feels lean and somewhat dilute. Pithy citrus is the key fl"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 718,
+      "n_groups": 718,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 623,
+      "n_removed": 623,
+      "var_share_removed": 0.5734,
+      "var_share_sae_error": 0.0005,
+      "top": [
+        {
+          "group": 492,
+          "latents": [
+            180
+          ],
+          "gain_margin": 4780.58,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 417,
+          "latents": [
+            461
+          ],
+          "gain_margin": 4010.9,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 703,
+          "latents": [
+            477
+          ],
+          "gain_margin": 3252.61,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 572,
+          "latents": [
+            764
+          ],
+          "gain_margin": 3131.35,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 650,
+          "latents": [
+            918
+          ],
+          "gain_margin": 2320.92,
+          "examples": [
+            "Beira Interior",
+            "Beira Interior",
+            "Beira Interior"
+          ]
+        }
+      ]
+    }
+  }
+}

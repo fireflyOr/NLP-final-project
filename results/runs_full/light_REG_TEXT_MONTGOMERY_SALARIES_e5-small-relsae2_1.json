@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -4227.3129230897,
+  "test_error": 4227.3129230897,
+  "course_metric": "r2",
+  "course_score": 0.9782161219723808,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 72.73731660842896,
+  "diagnostics": {
+    "date_first_hired": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 457,
+      "n_kept": 380,
+      "n_removed": 132,
+      "threshold": 0.0555,
+      "passed_test": 33,
+      "removed_norm_ratio": 0.3513,
+      "var_share_kept": 0.6974,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 262,
+          "score": 0.1541,
+          "n_active": 241,
+          "examples": [
+            "2016-05-04",
+            "2016-04-25",
+            "2016-01-04"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.1316,
+          "n_active": 352,
+          "examples": [
+            "2016-07-11",
+            "2016-07-11",
+            "2016-07-11"
+          ]
+        },
+        {
+          "latent": 436,
+          "score": 0.1188,
+          "n_active": 296,
+          "examples": [
+            "2016-04-04",
+            "2016-04-04",
+            "2016-04-04"
+          ]
+        },
+        {
+          "latent": 339,
+          "score": 0.1182,
+          "n_active": 236,
+          "examples": [
+            "2016-11-28",
+            "2016-11-28",
+            "2016-11-28"
+          ]
+        },
+        {
+          "latent": 395,
+          "score": 0.1142,
+          "n_active": 394,
+          "examples": [
+            "2016-05-02",
+            "2016-05-02",
+            "2016-05-02"
+          ]
+        }
+      ]
+    },
+    "division": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 376,
+      "n_removed": 136,
+      "threshold": 0.0531,
+      "passed_test": 42,
+      "removed_norm_ratio": 0.5232,
+      "var_share_kept": 0.8249,
+      "var_share_sae_error": 0.002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 426,
+          "score": 0.1024,
+          "n_active": 560,
+          "examples": [
+            "Self Contained Breathing Apparatus (SCBA) Shop",
+            "Self Contained Breathing Apparatus (SCBA) Shop",
+            "Station 31"
+          ]
+        },
+        {
+          "latent": 27,
+          "score": 0.0984,
+          "n_active": 558,
+          "examples": [
+            "Retail Administration",
+            "Retail Administration",
+            "Retail Administration"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.0913,
+          "n_active": 758,
+          "examples": [
+            "Information Technology Services",
+            "Information Technology Services",
+            "Information Technology Services"
+          ]
+        },
+        {
+          "latent": 177,
+          "score": 0.0889,
+          "n_active": 412,
+          "examples": [
+            "First Battalion - Administration",
+            "First Battalion - Administration",
+            "First Battalion - Administration"
+          ]
+        },
+        {
+          "latent": 173,
+          "score": 0.0885,
+          "n_active": 535,
+          "examples": [
+            "EASD - DCM Services",
+            "EASD - DCM Services",
+            "ETSD Network Services"
+          ]
+        }
+      ]
+    },
+    "employee_position_title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 501,
+      "n_kept": 434,
+      "n_removed": 78,
+      "threshold": 0.054,
+      "passed_test": 128,
+      "removed_norm_ratio": 0.3066,
+      "var_share_kept": 0.7856,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 386,
+          "score": 0.1776,
+          "n_active": 48,
+          "examples": [
+            "Assistant Chief Administrative Officer",
+            "Assistant Chief Administrative Officer",
+            "Assistant Chief of Police"
+          ]
+        },
+        {
+          "latent": 222,
+          "score": 0.1445,
+          "n_active": 68,
+          "examples": [
+            "Division Chief MCFRS Volunteer Services",
+            "Emergency Vehicle Maintenance Crew Chief",
+            "Emergency Vehicle Maintenance Crew Chief"
+          ]
+        },
+        {
+          "latent": 265,
+          "score": 0.1347,
+          "n_active": 140,
+          "examples": [
+            "Police Lieutenant",
+            "Police Lieutenant",
+            "Police Lieutenant"
+          ]
+        },
+        {
+          "latent": 260,
+          "score": 0.1308,
+          "n_active": 292,
+          "examples": [
+            "Public Information Officer II",
+            "Public Information Officer II",
+            "Public Information Officer II"
+          ]
+        },
+        {
+          "latent": 107,
+          "score": 0.1271,
+          "n_active": 380,
+          "examples": [
+            "Dental Hygienist",
+            "Dental Hygienist",
+            "Community Health Clinic Technician"
+          ]
+        }
+      ]
+    },
+    "full_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 280,
+      "n_removed": 232,
+      "threshold": 0.0542,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5632,
+      "var_share_kept": 0.4123,
+      "var_share_sae_error": 0.2028,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 172,
+          "score": 0.048,
+          "n_active": 361,
+          "examples": [
+            "Morningstar, Gary A.",
+            "Lewis, Gary W. JR..",
+            "Seal, Gary R."
+          ]
+        },
+        {
+          "latent": 177,
+          "score": 0.0471,
+          "n_active": 368,
+          "examples": [
+            "Gomez, Pedro T.",
+            "Gomez, Manuel L.",
+            "Dominguez, Ariel O."
+          ]
+        },
+        {
+          "latent": 325,
+          "score": 0.0433,
+          "n_active": 263,
+          "examples": [
+            "Carter, David C.",
+            "Lee, David C.",
+            "Platt, David J."
+          ]
+        },
+        {
+          "latent": 408,
+          "score": 0.0408,
+          "n_active": 395,
+          "examples": [
+            "Pastor, Dale M.",
+            "Black, Donald W.",
+            "Black, Lenworth W."
+          ]
+        },
+        {
+          "latent": 202,
+          "score": 0.0402,
+          "n_active": 374,
+          "examples": [
+            "Dollar-Sibal, Alison C.",
+            "Liou, Raycharn",
+            "Perez, Maria L."
+          ]
+        }
+      ]
+    }
+  }
+}

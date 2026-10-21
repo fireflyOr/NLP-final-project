@@ -1,0 +1,315 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -4703.7206837739,
+  "test_error": 4703.7206837739,
+  "course_metric": "r2",
+  "course_score": 0.9736433739526708,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 59.395371437072754,
+  "diagnostics": {
+    "date_first_hired": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 995,
+      "n_groups": 926,
+      "n_multi_groups": 42,
+      "n_groups_dropped": 618,
+      "n_removed": 636,
+      "var_share_removed": 0.1677,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 920,
+          "latents": [
+            1264
+          ],
+          "gain_margin": 1218.9,
+          "examples": [
+            "2013-04-22",
+            "2013-04-22",
+            "2013-04-22"
+          ]
+        },
+        {
+          "group": 688,
+          "latents": [
+            472
+          ],
+          "gain_margin": 921.18,
+          "examples": [
+            "1990-10-28",
+            "1990-11-19",
+            "1989-12-26"
+          ]
+        },
+        {
+          "group": 794,
+          "latents": [
+            1499
+          ],
+          "gain_margin": 743.63,
+          "examples": [
+            "2013-09-09",
+            "2013-09-09",
+            "2013-09-09"
+          ]
+        },
+        {
+          "group": 294,
+          "latents": [
+            800
+          ],
+          "gain_margin": 445.63,
+          "examples": [
+            "2016-03-07",
+            "2016-03-07",
+            "2016-03-07"
+          ]
+        },
+        {
+          "group": 497,
+          "latents": [
+            702
+          ],
+          "gain_margin": 442.92,
+          "examples": [
+            "1987-11-02",
+            "1987-11-22",
+            "1987-02-01"
+          ]
+        }
+      ]
+    },
+    "division": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1218,
+      "n_groups": 1217,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 836,
+      "n_removed": 837,
+      "var_share_removed": 0.2533,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 1126,
+          "latents": [
+            707
+          ],
+          "gain_margin": 1400.13,
+          "examples": [
+            "Goshen Crossing",
+            "Goshen Crossing",
+            "Goshen Crossing"
+          ]
+        },
+        {
+          "group": 1214,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1320.44,
+          "examples": [
+            "HQ Police Chief",
+            "Director's Office",
+            "Director's Office"
+          ]
+        },
+        {
+          "group": 1156,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1085.83,
+          "examples": [
+            "Technology Management",
+            "Technology Management",
+            "Technology Management"
+          ]
+        },
+        {
+          "group": 598,
+          "latents": [
+            1499
+          ],
+          "gain_margin": 962.2,
+          "examples": [
+            "Silver Spring Urban District",
+            "Silver Spring Urban District",
+            "Silver Spring Urban District"
+          ]
+        },
+        {
+          "group": 505,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 815.95,
+          "examples": [
+            "Transit Silver Spring Ride On",
+            "Transit Silver Spring Ride On",
+            "Transit Silver Spring Ride On"
+          ]
+        }
+      ]
+    },
+    "employee_position_title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 847,
+      "n_groups": 847,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 484,
+      "n_removed": 484,
+      "var_share_removed": 0.135,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 585,
+          "latents": [
+            911
+          ],
+          "gain_margin": 5300.97,
+          "examples": [
+            "County Executive",
+            "Fire/Rescue Battalion Chief",
+            "Fire/Rescue Battalion Chief"
+          ]
+        },
+        {
+          "group": 365,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 2416.11,
+          "examples": [
+            "Director Department of Technology Services",
+            "Manager I",
+            "Manager I"
+          ]
+        },
+        {
+          "group": 371,
+          "latents": [
+            564
+          ],
+          "gain_margin": 2375.38,
+          "examples": [
+            "Director Department of Environmental Protection",
+            "Capital Projects Manager",
+            "Capital Projects Manager"
+          ]
+        },
+        {
+          "group": 27,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 2060.16,
+          "examples": [
+            "Property Manager I",
+            "Deputy Sheriff Sergeant",
+            "Deputy Sheriff Sergeant"
+          ]
+        },
+        {
+          "group": 835,
+          "latents": [
+            477
+          ],
+          "gain_margin": 1646.29,
+          "examples": [
+            "Warehouse Worker",
+            "Warehouse Worker",
+            "Warehouse Worker"
+          ]
+        }
+      ]
+    },
+    "full_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2022,
+      "n_groups": 2021,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1358,
+      "n_removed": 1359,
+      "var_share_removed": 0.4781,
+      "var_share_sae_error": 0.054,
+      "top": [
+        {
+          "group": 288,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 139.19,
+          "examples": [
+            "Moran, Mark K.",
+            "Sofman, Mark A.",
+            "Kopp, Mark T."
+          ]
+        },
+        {
+          "group": 2017,
+          "latents": [
+            967
+          ],
+          "gain_margin": 80.59,
+          "examples": [
+            "Mele, Linda A.",
+            "Micele, Christine N.",
+            "Kaufmann, Barbara A."
+          ]
+        },
+        {
+          "group": 353,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 75.82,
+          "examples": [
+            "Rivera, Maritza",
+            "Betara-Aliyu, Risquat O.",
+            "Torres, Blanca E."
+          ]
+        },
+        {
+          "group": 1976,
+          "latents": [
+            510
+          ],
+          "gain_margin": 74.89,
+          "examples": [
+            "Hall, Stefan A.",
+            "Singer, Arye Y.",
+            "Castellanos, Juan A."
+          ]
+        },
+        {
+          "group": 1978,
+          "latents": [
+            529
+          ],
+          "gain_margin": 54.06,
+          "examples": [
+            "Grant, Thomas W.",
+            "Dufek, Thomas",
+            "Curtis, Thomas P."
+          ]
+        }
+      ]
+    }
+  }
+}

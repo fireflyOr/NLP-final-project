@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -24.81267275328726,
+  "test_error": 24.81267275328726,
+  "course_metric": "r2",
+  "course_score": 0.733496943755525,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 72.9342987537384,
+  "diagnostics": {
+    "colors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 230,
+      "n_kept": 445,
+      "n_removed": 67,
+      "threshold": 0.0668,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.2568,
+      "var_share_kept": 0.8078,
+      "var_share_sae_error": 0.0126,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 465,
+          "score": 0.0607,
+          "n_active": 142,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.0573,
+          "n_active": 46,
+          "examples": [
+            "cream / blue / grey",
+            "blue / cream / green",
+            "cream / blue / pink"
+          ]
+        },
+        {
+          "latent": 439,
+          "score": 0.0572,
+          "n_active": 129,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        },
+        {
+          "latent": 335,
+          "score": 0.057,
+          "n_active": 57,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.056,
+          "n_active": 49,
+          "examples": [
+            "cream / black",
+            "cream / pink",
+            "cream / pink"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 280,
+      "n_kept": 450,
+      "n_removed": 62,
+      "threshold": 0.0748,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.1751,
+      "var_share_kept": 0.8399,
+      "var_share_sae_error": 0.0008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 148,
+          "score": 0.0777,
+          "n_active": 43,
+          "examples": [
+            "The Beatrix Girls",
+            "The Beatrix Girls",
+            "Star Wars Rebels"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.077,
+          "n_active": 34,
+          "examples": [
+            "RoomMates! Simply",
+            "RoomMates! Simply",
+            "RoomMates! Simply"
+          ]
+        },
+        {
+          "latent": 240,
+          "score": 0.0769,
+          "n_active": 229,
+          "examples": [
+            "The Academy",
+            "The Academy",
+            "The Academy"
+          ]
+        },
+        {
+          "latent": 343,
+          "score": 0.0756,
+          "n_active": 28,
+          "examples": [
+            "RoomMates! Simply",
+            "RoomMates! Simply",
+            "RoomMates! Simply"
+          ]
+        },
+        {
+          "latent": 151,
+          "score": 0.075,
+          "n_active": 193,
+          "examples": [
+            "Trend Lab Waverly",
+            "Delta Children's Products.",
+            "Delta Children's Products."
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 484,
+      "n_kept": 430,
+      "n_removed": 82,
+      "threshold": 0.0727,
+      "passed_test": 108,
+      "removed_norm_ratio": 0.2846,
+      "var_share_kept": 0.835,
+      "var_share_sae_error": 0.0,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 115,
+          "score": 0.3031,
+          "n_active": 28,
+          "examples": [
+            "Candide",
+            "Candide",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.2623,
+          "n_active": 159,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.2538,
+          "n_active": 66,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "latent": 366,
+          "score": 0.2498,
+          "n_active": 205,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.2228,
+          "n_active": 46,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 394,
+      "n_removed": 118,
+      "threshold": 0.0707,
+      "passed_test": 78,
+      "removed_norm_ratio": 0.4514,
+      "var_share_kept": 0.7398,
+      "var_share_sae_error": 0.0779,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 362,
+          "score": 0.2568,
+          "n_active": 298,
+          "examples": [
+            "Snuggleberry Baby Sunflower Love 6 Piece Crib Bedding Set with Storybook",
+            "Snuggleberry Baby Nightie Night Owl 6 Piece Crib Bedding Set with Storybook",
+            "Cotton Tale Here Kitty Kitty 7 Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "latent": 38,
+          "score": 0.241,
+          "n_active": 263,
+          "examples": [
+            "My Baby Sam Follow Your Arrow in Navy Wall D&Atilde;&copy;cor",
+            "Sumersault Sea Pirate  4 Piece Crib Set",
+            "Snuggleberry Baby Sunflower Love 5 Piece Crib Bedding Set with Storybook"
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.2383,
+          "n_active": 365,
+          "examples": [
+            "Fleeting Flora 4-Piece Bedding Set",
+            "Summer Infant 4 Piece Bedding Set - Parisian Pink",
+            "Desert Dreams 4-Piece Bedding Set"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.2295,
+          "n_active": 151,
+          "examples": [
+            "Tranquil Woods 5-Piece Bedding Set",
+            "babyletto In Bloom 5-Piece Set",
+            "Tulip Garden 5-Piece Bedding Set"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.2047,
+          "n_active": 142,
+          "examples": [
+            "Gallery Wrought Iron & Crystal Swag Plug In White Chandelier Pendant",
+            "Gallery Wrought Iron & Crystal 4 Light Floral Swag Plug In White Chandelier",
+            "Gallery Wrought Iron and Crystal 4 Light Chandelier with Pink Crystal Hearts"
+          ]
+        }
+      ]
+    }
+  }
+}

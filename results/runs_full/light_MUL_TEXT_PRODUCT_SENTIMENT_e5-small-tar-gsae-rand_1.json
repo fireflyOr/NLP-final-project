@@ -1,0 +1,93 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6342922421126546,
+  "test_error": 0.6342922421126546,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8867674989728177,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 22.598249435424805,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1458,
+      "n_groups": 1458,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 787,
+      "n_removed": 787,
+      "var_share_removed": 0.3177,
+      "var_share_sae_error": 0.0124,
+      "top": [
+        {
+          "group": 762,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 1946.7,
+          "examples": [
+            "Fuck. iPhone crapped out, will not charge at all. Says it is charging, but at 5% after all night. What are my options in Austin? #sxsw",
+            "This double buzzing issue with iPhone iOS 4.3 is getting annoying. In other news, an iPhone may fly across the room at #GR2L2 #SXSW",
+            "Cant handle #SxSW traffic? RT @mention Dear @mention your own app for iPhone has sucked all day. #crashing"
+          ]
+        },
+        {
+          "group": 1454,
+          "latents": [
+            878
+          ],
+          "gain_margin": 1256.7,
+          "examples": [
+            "New version of Google Maps for Mobile is pretty amazing - vector based &amp; FAST! #sxsw",
+            "marcelosomers: New version of Google Maps for Mobile is pretty amazing - vector based &amp; FAST! #sxsw: marcelosomers:... {link}",
+            "amazing the amount of app updates on my ipad today for the kick off of #sxsw"
+          ]
+        },
+        {
+          "group": 1254,
+          "latents": [
+            668
+          ],
+          "gain_margin": 1025.56,
+          "examples": [
+            "RT @mention Diller on Google TV: &quot;The first product wasn't good. It wasn't a consumer product, basically.&quot; #sxsw #diller",
+            "I just watched &quot;iPad Design Headaches&quot; at #SXSW. Buttons are a hack.  #tapworthy",
+            "It is well known steve jobs hates #sxsw RT @mention iPhone just autocorrected &quot;sxsw&quot; to &quot;ass's&quot;."
+          ]
+        },
+        {
+          "group": 755,
+          "latents": [
+            967
+          ],
+          "gain_margin": 900.86,
+          "examples": [
+            "Will Google Circles take on Facebook?  {link} #circles #sxsw",
+            "Can Google get social in Texas? {link} #ChrisMessina #facebook #google #GoogleCircles #SXSW #TWITTER",
+            "Can Google get social in Texas?  {link} #SXSW #google"
+          ]
+        },
+        {
+          "group": 360,
+          "latents": [
+            1520
+          ],
+          "gain_margin": 866.39,
+          "examples": [
+            "RT @mention holy smokes, ipad2 replacing my flip cam as default video capture device. beautiful. elegant. apple. #sxsw",
+            "Apple's customer service is top notch. They've even got guys hanging out with the line giving inventory updates and just being nice #sxsw",
+            "haha, awesomely rad iPad app by @mention {link} #hollergram #sxsw"
+          ]
+        }
+      ]
+    }
+  }
+}

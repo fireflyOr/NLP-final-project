@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8997859836715452,
+  "test_error": 0.10021401632845484,
+  "course_metric": "auroc",
+  "course_score": 0.8997859836715452,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 1235.4563875198364,
+  "diagnostics": {}
+}

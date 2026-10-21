@@ -1,0 +1,18 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-pls",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7829469676145111,
+  "test_error": 0.7829469676145111,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8790981686342627,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 10.90778660774231,
+  "diagnostics": {}
+}

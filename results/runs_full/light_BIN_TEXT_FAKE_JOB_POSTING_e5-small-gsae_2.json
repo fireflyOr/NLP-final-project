@@ -1,0 +1,242 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9071576889204891,
+  "test_error": 0.09284231107951091,
+  "course_metric": "auroc",
+  "course_score": 0.9071576889204889,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 48.105661153793335,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1317,
+      "n_removed": 1317,
+      "var_share_removed": 0.502,
+      "var_share_sae_error": 0.1047,
+      "top": [
+        {
+          "group": 1806,
+          "latents": [
+            509
+          ],
+          "gain_margin": 652.12,
+          "examples": [
+            "Are you looking to make anywhere from 600-115,000$ a month? Are you looking to be paid to take vacations? Are you tired of working a 9-5 with no ability to grow",
+            "Are you looking to make anywhere from 600-115,000$ a month? Are you looking to be paid to take vacations? Are you tired of working a 9-5 with no ability to grow",
+            "Our International Company is seeking an active employee. We give a work for everybody.Part-Time $430 per a week.Basic characteristics:\u00b7 Energy\u00b7 Enthusiasm\u00b7 Will"
+          ]
+        },
+        {
+          "group": 912,
+          "latents": [
+            979
+          ],
+          "gain_margin": 571.99,
+          "examples": [
+            "The Data Entry Clerk is responsible for verifying and accurately entering information in the computer during her/his assigned duty times. The Data Entry Clerk w",
+            "Data EntryThe purpose of this position is to complete study related case report forms, either paper or electronic and to ensure that all international regulator",
+            "Experienced, reliable team members are needed for our Data Entry Clerk / Administrative Assistant needed! We are currently searching for candidates with previou"
+          ]
+        },
+        {
+          "group": 1976,
+          "latents": [
+            776
+          ],
+          "gain_margin": 457.36,
+          "examples": [
+            "2-Workonline is seeking individuals for both full-time and part-time opportunities in a variety of career fields including data entry, and typing.\u00a0These positio",
+            "Employment Opportunity: Part Time Cleaners in the Chelsea and Dexter Areas As a growing company, we are looking for exceptional people who share our love for th",
+            "Employment Opportunity: Part Time Cleaners in the Brighton Area\u00a0 As a growing company, we are looking for exceptional people who share our love for the customer"
+          ]
+        },
+        {
+          "group": 1808,
+          "latents": [
+            558
+          ],
+          "gain_margin": 383.95,
+          "examples": [
+            "About AnittelAnittel is currently seeking a driven individual to join our successful Service Desk team as we continue to grow as one of Australia's leading IT&a",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 1634,
+          "latents": [
+            525
+          ],
+          "gain_margin": 351.81,
+          "examples": [
+            "Petroleum engineers' jobs typically involve research and production of natural gas and crude oil. More specifically, their job is to apply their knowledge of oi",
+            "Job Description: Candidate should have a strong background and hands-on experience in one of the following disciplines: offshore pipelines, offshore structures,",
+            "A\u00a0Sr. Mech. Eng (Oil &amp; Gas)\u00a0is required having\u00a010+ years\u2019 experience in the Mechanical Engineering field\u00a0"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 287,
+      "n_groups": 269,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 227,
+      "n_removed": 244,
+      "var_share_removed": 0.8432,
+      "var_share_sae_error": 0.0021,
+      "top": [
+        {
+          "group": 172,
+          "latents": [
+            451
+          ],
+          "gain_margin": 100.35,
+          "examples": [
+            "2000-5000",
+            "2000-5000",
+            "2500-5000"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1121
+          ],
+          "gain_margin": 88.13,
+          "examples": [
+            "25-30",
+            "32-35",
+            "35-40"
+          ]
+        },
+        {
+          "group": 93,
+          "latents": [
+            1803
+          ],
+          "gain_margin": 78.17,
+          "examples": [
+            "13-15",
+            "13-15",
+            "14-15"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            1257,
+            2007
+          ],
+          "gain_margin": 50.4,
+          "examples": [
+            "0-25000",
+            "25000-25000",
+            "25000-100000"
+          ]
+        },
+        {
+          "group": 31,
+          "latents": [
+            1935
+          ],
+          "gain_margin": 42.33,
+          "examples": [
+            "2500-2800",
+            "2500-3500",
+            "23000-25000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1992,
+      "n_groups": 1986,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1384,
+      "n_removed": 1385,
+      "var_share_removed": 0.5073,
+      "var_share_sae_error": 0.0251,
+      "top": [
+        {
+          "group": 973,
+          "latents": [
+            1280
+          ],
+          "gain_margin": 393.4,
+          "examples": [
+            "Administrative Assistant",
+            "Administrative Assistant",
+            "Administrative Assistant"
+          ]
+        },
+        {
+          "group": 205,
+          "latents": [
+            1966
+          ],
+          "gain_margin": 376.95,
+          "examples": [
+            "Accounting Clerk",
+            " Accounting Clerk ",
+            "Accounting Clerk"
+          ]
+        },
+        {
+          "group": 1792,
+          "latents": [
+            54
+          ],
+          "gain_margin": 336.23,
+          "examples": [
+            "$950/Week Truck Drivers Needed",
+            "CASH Paying Vacancies (Apply Today)",
+            "Staff Required For Part-Time Cash Positions."
+          ]
+        },
+        {
+          "group": 1628,
+          "latents": [
+            602
+          ],
+          "gain_margin": 272.26,
+          "examples": [
+            "Easy Money",
+            "Ninestone",
+            "Bill Review Manager"
+          ]
+        },
+        {
+          "group": 608,
+          "latents": [
+            642
+          ],
+          "gain_margin": 208.47,
+          "examples": [
+            "Urgent position for SQL BI Tester",
+            "Admin Assistant\\Urgently",
+            "URGENT Job Full Time & Part Time, Cash Pay."
+          ]
+        }
+      ]
+    }
+  }
+}

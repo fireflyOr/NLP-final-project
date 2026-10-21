@@ -1,0 +1,706 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.2847924923067754,
+  "test_error": 0.2847924923067754,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9617414561275753,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 230.79390478134155,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1729,
+      "n_groups": 1727,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1283,
+      "n_removed": 1285,
+      "var_share_removed": 0.6142,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 1640,
+          "latents": [
+            930
+          ],
+          "gain_margin": 176.72,
+          "examples": [
+            "KCLT",
+            "KCLT",
+            "KCLT"
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            1605
+          ],
+          "gain_margin": 100.87,
+          "examples": [
+            "KTTN",
+            "KTTN",
+            "KTTN"
+          ]
+        },
+        {
+          "group": 1129,
+          "latents": [
+            135
+          ],
+          "gain_margin": 98.44,
+          "examples": [
+            "KNGU",
+            "KDET",
+            "KDET"
+          ]
+        },
+        {
+          "group": 1563,
+          "latents": [
+            95
+          ],
+          "gain_margin": 96.25,
+          "examples": [
+            "KOKC",
+            "KOKC",
+            "KOKC"
+          ]
+        },
+        {
+          "group": 1571,
+          "latents": [
+            827
+          ],
+          "gain_margin": 85.66,
+          "examples": [
+            "KDTW",
+            "KDTW",
+            "KDTW"
+          ]
+        }
+      ]
+    },
+    "City": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1966,
+      "n_groups": 1966,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1287,
+      "n_removed": 1287,
+      "var_share_removed": 0.631,
+      "var_share_sae_error": 0.0055,
+      "top": [
+        {
+          "group": 827,
+          "latents": [
+            750
+          ],
+          "gain_margin": 139.97,
+          "examples": [
+            "Old Station",
+            "Dry Branch",
+            "Shamokin"
+          ]
+        },
+        {
+          "group": 1225,
+          "latents": [
+            178
+          ],
+          "gain_margin": 113.19,
+          "examples": [
+            "Falls Church",
+            "Falls Church",
+            "Falls Church"
+          ]
+        },
+        {
+          "group": 1492,
+          "latents": [
+            133
+          ],
+          "gain_margin": 101.31,
+          "examples": [
+            "Robbins",
+            "Robbins",
+            "Fort Walton Beach"
+          ]
+        },
+        {
+          "group": 1299,
+          "latents": [
+            809
+          ],
+          "gain_margin": 94.06,
+          "examples": [
+            "Brooklet",
+            "Mira Loma",
+            "Mira Loma"
+          ]
+        },
+        {
+          "group": 364,
+          "latents": [
+            1772
+          ],
+          "gain_margin": 86.34,
+          "examples": [
+            "Gold Run",
+            "Gold River",
+            "Pelion"
+          ]
+        }
+      ]
+    },
+    "County": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1591,
+      "n_groups": 1591,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1188,
+      "n_removed": 1188,
+      "var_share_removed": 0.6381,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 186,
+          "latents": [
+            1925
+          ],
+          "gain_margin": 145.65,
+          "examples": [
+            "Sanpete",
+            "Franklin",
+            "Franklin"
+          ]
+        },
+        {
+          "group": 722,
+          "latents": [
+            1138
+          ],
+          "gain_margin": 119.65,
+          "examples": [
+            "St. Louis County",
+            "St. Louis County",
+            "St. Louis County"
+          ]
+        },
+        {
+          "group": 1435,
+          "latents": [
+            569
+          ],
+          "gain_margin": 83.04,
+          "examples": [
+            "Southeastern Connecticut",
+            "Southeastern Connecticut",
+            "Southeastern Connecticut"
+          ]
+        },
+        {
+          "group": 415,
+          "latents": [
+            1315
+          ],
+          "gain_margin": 81.49,
+          "examples": [
+            "Weber",
+            "Weber",
+            "Weber"
+          ]
+        },
+        {
+          "group": 811,
+          "latents": [
+            181
+          ],
+          "gain_margin": 79.27,
+          "examples": [
+            "Navajo",
+            "Navajo",
+            "District of Columbia"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2016,
+      "n_multi_groups": 23,
+      "n_groups_dropped": 914,
+      "n_removed": 915,
+      "var_share_removed": 0.1951,
+      "var_share_sae_error": 0.0734,
+      "top": [
+        {
+          "group": 23,
+          "latents": [
+            212,
+            270,
+            987,
+            1347,
+            1921
+          ],
+          "gain_margin": 4736.99,
+          "examples": [
+            "Left lane blocked due to accident on I-71 Northbound near Clark Ave.",
+            "Right lane blocked due to accident on I-70 Westbound at Cole St.",
+            "Left lane blocked due to accident on CA-57 Northbound at CA-60."
+          ]
+        },
+        {
+          "group": 11,
+          "latents": [
+            630,
+            1997
+          ],
+          "gain_margin": 3294.07,
+          "examples": [
+            "Incident on US-70 EB near US-70 Road closed. Take alternate route.",
+            "Construction on US-75 NB near F ST Road closed. Take alternate route.",
+            "Construction on I-10 EB near I-110 Road closed. Take alternate route."
+          ]
+        },
+        {
+          "group": 496,
+          "latents": [
+            1535
+          ],
+          "gain_margin": 2877.6,
+          "examples": [
+            "Closed between Louisiana Scenic Bayou Bywy and Riverview Rd - Road closed due to accident.",
+            "Closed between Korean War Veterans Pky and State St - Road closed due to accident. Lane blocked.",
+            "Closed at Bathgate Dr - Road closed due to accident."
+          ]
+        },
+        {
+          "group": 1992,
+          "latents": [
+            559
+          ],
+          "gain_margin": 2306.94,
+          "examples": [
+            "Accident on Atlantic Ave at Schenck Ave.",
+            "Accident on Powell Ave at Old Powell Ave.",
+            "Accident on Mayfield Ave at Ramsdell Ave."
+          ]
+        },
+        {
+          "group": 22,
+          "latents": [
+            905,
+            1976
+          ],
+          "gain_margin": 1609.67,
+          "examples": [
+            "At H St - Accident.",
+            "At Maytown Rest Area - Accident.",
+            "At High St - Accident."
+          ]
+        }
+      ]
+    },
+    "End_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 326,
+      "n_groups": 295,
+      "n_multi_groups": 27,
+      "n_groups_dropped": 165,
+      "n_removed": 182,
+      "var_share_removed": 0.3166,
+      "var_share_sae_error": 0.0059,
+      "top": [
+        {
+          "group": 234,
+          "latents": [
+            977
+          ],
+          "gain_margin": 848.08,
+          "examples": [
+            "2021-02-27 05:00:00",
+            "2021-01-05 01:00:00",
+            "2021-02-11 07:00:06"
+          ]
+        },
+        {
+          "group": 106,
+          "latents": [
+            1380
+          ],
+          "gain_margin": 522.45,
+          "examples": [
+            "2022-12-24 13:10:00",
+            "2022-12-30 15:19:00",
+            "2022-09-20 17:45:00"
+          ]
+        },
+        {
+          "group": 205,
+          "latents": [
+            862
+          ],
+          "gain_margin": 509.66,
+          "examples": [
+            "2018-02-05 10:00:09",
+            "2018-01-31 04:52:07",
+            "2018-10-30 12:16:00"
+          ]
+        },
+        {
+          "group": 286,
+          "latents": [
+            292
+          ],
+          "gain_margin": 471.12,
+          "examples": [
+            "2017-10-17 16:47:57",
+            "2017-04-10 12:22:00",
+            "2016-11-17 17:47:25"
+          ]
+        },
+        {
+          "group": 101,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 428.46,
+          "examples": [
+            "2020-05-01 18:00:57",
+            "2020-04-03 17:00:54",
+            "2020-01-05 02:05:38"
+          ]
+        }
+      ]
+    },
+    "Start_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 336,
+      "n_groups": 311,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 163,
+      "n_removed": 176,
+      "var_share_removed": 0.188,
+      "var_share_sae_error": 0.0054,
+      "top": [
+        {
+          "group": 88,
+          "latents": [
+            940
+          ],
+          "gain_margin": 823.43,
+          "examples": [
+            "2017-09-18 19:18:40",
+            "2017-01-17 09:57:43",
+            "2017-03-21 19:18:46"
+          ]
+        },
+        {
+          "group": 54,
+          "latents": [
+            1210
+          ],
+          "gain_margin": 660.22,
+          "examples": [
+            "2020-11-28 00:36:00",
+            "2021-11-29 13:00:00",
+            "2021-12-28 11:00:00"
+          ]
+        },
+        {
+          "group": 148,
+          "latents": [
+            1395
+          ],
+          "gain_margin": 585.8,
+          "examples": [
+            "2022-04-30 22:59:30",
+            "2022-09-30 11:28:30",
+            "2022-04-27 12:48:30"
+          ]
+        },
+        {
+          "group": 296,
+          "latents": [
+            292
+          ],
+          "gain_margin": 378.23,
+          "examples": [
+            "2017-10-02 09:37:47",
+            "2016-07-07 17:26:26",
+            "2017-10-09 07:05:47"
+          ]
+        },
+        {
+          "group": 255,
+          "latents": [
+            1567
+          ],
+          "gain_margin": 375.14,
+          "examples": [
+            "2020-03-03 09:53:25",
+            "2020-05-29 11:44:28",
+            "2020-05-25 13:16:23"
+          ]
+        }
+      ]
+    },
+    "Street": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2017,
+      "n_groups": 2005,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1225,
+      "n_removed": 1225,
+      "var_share_removed": 0.4128,
+      "var_share_sae_error": 0.0217,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            713,
+            1836,
+            1843,
+            1981
+          ],
+          "gain_margin": 3976.63,
+          "examples": [
+            "I-196",
+            "I-196 W",
+            "I-77 N"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            609,
+            670
+          ],
+          "gain_margin": 1169.84,
+          "examples": [
+            "I-10",
+            "I-10",
+            "I-10"
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            296,
+            428,
+            1891
+          ],
+          "gain_margin": 550.2,
+          "examples": [
+            "Southside Connector S",
+            "N South Fwy S",
+            "South Ave"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            298,
+            648,
+            740
+          ],
+          "gain_margin": 480.78,
+          "examples": [
+            "W Patrick St",
+            "W Illinois Ave",
+            " W Canal St"
+          ]
+        },
+        {
+          "group": 489,
+          "latents": [
+            1166
+          ],
+          "gain_margin": 445.04,
+          "examples": [
+            "I-278 W",
+            "I-278 E",
+            "I-278 E"
+          ]
+        }
+      ]
+    },
+    "Weather_Timestamp": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 281,
+      "n_groups": 236,
+      "n_multi_groups": 31,
+      "n_groups_dropped": 126,
+      "n_removed": 148,
+      "var_share_removed": 0.2353,
+      "var_share_sae_error": 0.0046,
+      "top": [
+        {
+          "group": 142,
+          "latents": [
+            1405
+          ],
+          "gain_margin": 1264.62,
+          "examples": [
+            "2020-10-14 10:51:00",
+            "2016-10-14 10:53:00",
+            "2019-06-14 06:50:00"
+          ]
+        },
+        {
+          "group": 96,
+          "latents": [
+            1128
+          ],
+          "gain_margin": 720.47,
+          "examples": [
+            "2017-03-21 13:47:00",
+            "2018-03-21 18:45:00",
+            "2017-03-17 10:19:00"
+          ]
+        },
+        {
+          "group": 22,
+          "latents": [
+            617,
+            704,
+            1874
+          ],
+          "gain_margin": 654.17,
+          "examples": [
+            "2020-01-08 06:53:00",
+            "2020-01-09 09:53:00",
+            "2020-01-06 07:54:00"
+          ]
+        },
+        {
+          "group": 109,
+          "latents": [
+            1637
+          ],
+          "gain_margin": 498.0,
+          "examples": [
+            "2019-04-08 00:15:00",
+            "2019-01-07 05:53:00",
+            "2019-01-09 14:53:00"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            292,
+            295
+          ],
+          "gain_margin": 484.36,
+          "examples": [
+            "2016-07-01 09:23:00",
+            "2016-09-01 09:47:00",
+            "2016-11-01 08:47:00"
+          ]
+        }
+      ]
+    },
+    "Zipcode": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1401,
+      "n_groups": 1292,
+      "n_multi_groups": 92,
+      "n_groups_dropped": 769,
+      "n_removed": 827,
+      "var_share_removed": 0.3523,
+      "var_share_sae_error": 0.0063,
+      "top": [
+        {
+          "group": 741,
+          "latents": [
+            1404
+          ],
+          "gain_margin": 3935.93,
+          "examples": [
+            "91789-3502",
+            "80007-7125",
+            "33004-4361"
+          ]
+        },
+        {
+          "group": 743,
+          "latents": [
+            630
+          ],
+          "gain_margin": 324.7,
+          "examples": [
+            "97910-9710",
+            "97488-9748",
+            "94952-9426"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            201,
+            532,
+            969
+          ],
+          "gain_margin": 300.3,
+          "examples": [
+            "71106-3026",
+            "08096",
+            "14606"
+          ]
+        },
+        {
+          "group": 184,
+          "latents": [
+            2025
+          ],
+          "gain_margin": 201.69,
+          "examples": [
+            "29625-2519",
+            "12185-2517",
+            "27529-4643"
+          ]
+        },
+        {
+          "group": 19,
+          "latents": [
+            508,
+            1621,
+            2023
+          ],
+          "gain_margin": 181.3,
+          "examples": [
+            "92008",
+            "92008",
+            "92008"
+          ]
+        }
+      ]
+    }
+  }
+}

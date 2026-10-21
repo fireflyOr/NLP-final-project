@@ -1,0 +1,171 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8925398718349926,
+  "test_error": 0.10746012816500738,
+  "course_metric": "auroc",
+  "course_score": 0.8925398718349925,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 39.59878873825073,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2044,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1405,
+      "n_removed": 1405,
+      "var_share_removed": 0.5146,
+      "var_share_sae_error": 0.1082,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            227,
+            1869
+          ],
+          "gain_margin": 11425.04,
+          "examples": [
+            "To the Chinese Trudeau is a useful idiot.",
+            "This is a really, really stupid man.",
+            "well you cant take the stupid out of a lefty with nonsense like you just posted"
+          ]
+        },
+        {
+          "group": 1536,
+          "latents": [
+            510
+          ],
+          "gain_margin": 1220.54,
+          "examples": [
+            "Because it's 2017 and we have an idiot leading the country.",
+            "She is such an IDIOT",
+            "This is a really, really stupid man."
+          ]
+        },
+        {
+          "group": 2032,
+          "latents": [
+            480
+          ],
+          "gain_margin": 1016.62,
+          "examples": [
+            "While being a Canadian, I partly agree with your point about smug Canadians. However, I don't agree with the rest of what you said. There isn't supposed to be a",
+            "The radical Islamic terrorist is carrying out acts against an entire population in the name of Islamic fundamentalism. He is obviously more dangerous of the two",
+            "According to the USDJ Bureau of Justice Statistics:\n\nInmates convicted of committing violent acts against children were more like to have been white, a percenta"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1052,
+            1121,
+            1219
+          ],
+          "gain_margin": 891.19,
+          "examples": [
+            "Even if corporate and unions' donations to political parties in BC are banned, unions will continue to exert significant control over the BC NDP... contrary to ",
+            "Definitely NO to your suggestion of a capital gains tax on personal homes.\nThere are many problems with that and it's not likely to improve the housing supply o",
+            "is the established landlord pledging these other two dozen properties as additional collateral, if yes, I agree with you to a point, if the established landlord"
+          ]
+        },
+        {
+          "group": 75,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 457.85,
+          "examples": [
+            "You will eternally burn in hell.",
+            "\"\"These young people now getting to college have no sense of history of any kind....no sense of the violence and the barbarities of history,\" she observed. \"The",
+            "You are a sick individual"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1524,
+      "n_groups": 1412,
+      "n_multi_groups": 90,
+      "n_groups_dropped": 1044,
+      "n_removed": 1100,
+      "var_share_removed": 0.6456,
+      "var_share_sae_error": 0.0192,
+      "top": [
+        {
+          "group": 55,
+          "latents": [
+            249,
+            2000
+          ],
+          "gain_margin": 130.7,
+          "examples": [
+            "2017-01-29 06:30:25.505222",
+            "2016-07-31 16:01:16.392236",
+            "2017-01-14 17:30:02.560348"
+          ]
+        },
+        {
+          "group": 435,
+          "latents": [
+            847
+          ],
+          "gain_margin": 114.38,
+          "examples": [
+            "2016-10-10 22:26:17.013188",
+            "2017-06-11 01:11:01.041089",
+            "2017-05-13 15:01:53.312115"
+          ]
+        },
+        {
+          "group": 268,
+          "latents": [
+            1384
+          ],
+          "gain_margin": 114.31,
+          "examples": [
+            "2017-08-13 17:51:17.102849",
+            "2017-06-06 15:29:31.081154",
+            "2017-10-11 23:50:18.661154"
+          ]
+        },
+        {
+          "group": 289,
+          "latents": [
+            1688
+          ],
+          "gain_margin": 99.71,
+          "examples": [
+            "2017-06-12 16:00:35.140290",
+            "2016-12-05 15:38:00.358393",
+            "2016-12-05 16:29:30.700320"
+          ]
+        },
+        {
+          "group": 953,
+          "latents": [
+            1168
+          ],
+          "gain_margin": 95.75,
+          "examples": [
+            "2017-03-01 20:23:38.388172",
+            "2016-11-30 21:01:11.387155",
+            "2016-06-12 22:46:15.383818"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8653727658207716,
+  "test_error": 0.8653727658207716,
+  "course_metric": "r2",
+  "course_score": 0.8072383994002024,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 84.19716548919678,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 444,
+      "n_kept": 328,
+      "n_removed": 184,
+      "threshold": 0.0735,
+      "passed_test": 6,
+      "removed_norm_ratio": 0.5967,
+      "var_share_kept": 0.4379,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 325,
+          "score": 0.0812,
+          "n_active": 118,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 85,
+          "score": 0.0781,
+          "n_active": 38,
+          "examples": [
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers",
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers",
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers"
+          ]
+        },
+        {
+          "latent": 425,
+          "score": 0.0777,
+          "n_active": 72,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0763,
+          "n_active": 31,
+          "examples": [
+            "Brothers of Pity and Other Tales of Beasts and Men",
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.0707,
+          "n_active": 104,
+          "examples": [
+            "The Fairy Godmothers and Other Tales",
+            "The Fairy Godmothers and Other Tales",
+            "The Fairy Godmothers and Other Tales"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 297,
+      "n_removed": 215,
+      "threshold": 0.073,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.6547,
+      "var_share_kept": 0.5737,
+      "var_share_sae_error": 0.0869,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 460,
+          "score": 0.0759,
+          "n_active": 189,
+          "examples": [
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes"
+          ]
+        },
+        {
+          "latent": 9,
+          "score": 0.0736,
+          "n_active": 163,
+          "examples": [
+            "AUNT SADIE",
+            "AUNT SADIE",
+            "NASA"
+          ]
+        },
+        {
+          "latent": 305,
+          "score": 0.0627,
+          "n_active": 267,
+          "examples": [
+            "ANNA LIVINGSTON",
+            "Anna Livingston",
+            "Anna Livingston"
+          ]
+        },
+        {
+          "latent": 140,
+          "score": 0.0566,
+          "n_active": 232,
+          "examples": [
+            "French Foreign Office",
+            "French Foreign Office",
+            "Miss Rydingsv\u00e4rd."
+          ]
+        },
+        {
+          "latent": 83,
+          "score": 0.056,
+          "n_active": 101,
+          "examples": [
+            "H. W.",
+            "H. B.",
+            "H"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 119,
+      "n_kept": 432,
+      "n_removed": 80,
+      "threshold": 0.0708,
+      "passed_test": 0,
+      "removed_norm_ratio": 1.7518,
+      "var_share_kept": 0.4672,
+      "var_share_sae_error": 0.0036,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 0,
+          "score": 0.034,
+          "n_active": 36,
+          "examples": [
+            "panelled",
+            "judgement, judgement, judgement",
+            "centre, rumour"
+          ]
+        },
+        {
+          "latent": 380,
+          "score": 0.0287,
+          "n_active": 21,
+          "examples": [
+            "practising, recognise",
+            "practising",
+            "practising"
+          ]
+        },
+        {
+          "latent": 292,
+          "score": 0.0283,
+          "n_active": 24,
+          "examples": [
+            "theatre, theatre, theatre",
+            "theatre, theatre",
+            "prologue"
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.0236,
+          "n_active": 26,
+          "examples": [
+            "traveller, travelled",
+            "traveller, travelled",
+            "travelling"
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0207,
+          "n_active": 87,
+          "examples": [
+            "popularised",
+            "favourite, programme, colours",
+            "coloured, favourites"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 315,
+      "n_removed": 197,
+      "threshold": 0.0694,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5212,
+      "var_share_kept": 0.43,
+      "var_share_sae_error": 0.2563,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 70,
+          "score": 0.0795,
+          "n_active": 238,
+          "examples": [
+            "His hope was not disappointed: for the stocking was found most bountifully filled; and Willie eagerly hastened to examine its contents. It was fortunate that he",
+            "He continued walking. He saw some splendid new clothes. He took off his clothes and put on the new ones. Then he thought about what the old woman had said. He t",
+            "Man, when he is young, prizes metaphysical explanations, because they make him see matters of the highest import in things he found disagreeable or contemptible"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.0729,
+          "n_active": 160,
+          "examples": [
+            "\"During the last spring a lady bee-keeper of Connecticut discovered these mites in her hives while investigating to learn the cause of their rapid depletion. Sh",
+            "There are 356 living turtle species on Earth. Turtles come in all shapes, sizes, and colors. Some of the differences between turtles may help them to survive be",
+            "One old woman especially loved the smells that drifted out of the bakery window every morning. This was Ma Shange who slept on a bench in the park every night. "
+          ]
+        },
+        {
+          "latent": 289,
+          "score": 0.0701,
+          "n_active": 107,
+          "examples": [
+            "Once upon a time, there lived a man who had plenty of everything \u2013 a large fertile farm, with cattle, sheep, and goats. But, as he grew old, he grew sad, becaus",
+            "Once upon a time there was a little red hen. She lived in a little white house and she had a little green garden. Every day she worked in the house and garden.\n",
+            "Once upon a time, there was a man who had three sons. The youngest son was the cleverest and his father liked him the most. Then the man realised that his two o"
+          ]
+        },
+        {
+          "latent": 446,
+          "score": 0.0647,
+          "n_active": 180,
+          "examples": [
+            "St. Blaise, the property of Sir Frederick Johnstone, was bred by Lord Alington, and is by Hermit from Fusee. This is an unexceptionable pedigree, for Hermit is ",
+            "For example, John and I sometimes take our books, and sit down on the rocks in the wood, under the thick trees, and read stories. And then Carlo will lie down a",
+            "Instant replay is a video reproduction of something that recently occurred which was both shot and broadcast live. The video, having already been shown live, is"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.0646,
+          "n_active": 168,
+          "examples": [
+            "Aladdin's Mother burst out laughing at the idea of her son wishing to be the son-in-law of the Sultan, and told him to put such thoughts out of his head at once",
+            "The Imperial Chancellor has declared that there was irrefutable proof that if Germany did not march through Belgium, her enemies would. This proof, as now being",
+            "He read the letters. One was very unpleasant, from a merchant who was buying a forest on his wife's property. To sell this forest was absolutely essential; but "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 279,
+      "n_removed": 233,
+      "threshold": 0.0691,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.5867,
+      "var_share_kept": 0.4113,
+      "var_share_sae_error": 0.2071,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 499,
+          "score": 0.0763,
+          "n_active": 182,
+          "examples": [
+            "Computing_platform",
+            "Computer_program",
+            "Software_as_a_service"
+          ]
+        },
+        {
+          "latent": 82,
+          "score": 0.0601,
+          "n_active": 180,
+          "examples": [
+            "THE MAN IN THE MOON",
+            "Experiments in Binary Arithmetic",
+            "RAVAGES OF A RARE SCOLYTID BEETLE IN THE SUGAR MAPLES OF NORTHEASTERN NEW YORK"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.059,
+          "n_active": 223,
+          "examples": [
+            "DARKNESS AND LIGHT",
+            "Plague_of_Athens",
+            "Luck"
+          ]
+        },
+        {
+          "latent": 48,
+          "score": 0.0587,
+          "n_active": 173,
+          "examples": [
+            "SOME OF THE DEVELOPMENTS OF MECHANICAL ENGINEERING DURING THE LAST HALF-CENTURY.",
+            "Who Was Who: 5000 B. C. to Date",
+            "Fifty Famous People"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.0572,
+          "n_active": 213,
+          "examples": [
+            "The Eyes Have It",
+            "PICTURES ON GLASS.",
+            "Through the Looking-Glass"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 268,
+      "n_removed": 244,
+      "threshold": 0.0781,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6474,
+      "var_share_kept": 0.4465,
+      "var_share_sae_error": 0.0552,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 382,
+          "score": 0.0552,
+          "n_active": 64,
+          "examples": [
+            "https://www.commonlit.org/texts/how-boots-befooled-the-king",
+            "https://www.commonlit.org/texts/who-gets-to-be-president",
+            "https://en.wikipedia.org/wiki/Plague_of_Athens"
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0524,
+          "n_active": 301,
+          "examples": [
+            "http://www.gutenberg.org/cache/epub/7849/pg7849-images.html",
+            "http://www.gutenberg.org/cache/epub/7210/pg7210-images.html",
+            "http://www.gutenberg.org/cache/epub/7026/pg7026-images.html"
+          ]
+        },
+        {
+          "latent": 41,
+          "score": 0.0509,
+          "n_active": 133,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Nuclear_power_plant",
+            "https://en.wikipedia.org/wiki/Interplanetary_dust_cloud",
+            "https://en.wikipedia.org/wiki/Seven_Years%27_War"
+          ]
+        },
+        {
+          "latent": 429,
+          "score": 0.049,
+          "n_active": 74,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Vacuum_cleaner",
+            "https://simple.wikipedia.org/wiki/Vacuum_tube",
+            "https://www.commonlit.org/texts/joseph-s-dreams-from-genesis-37"
+          ]
+        },
+        {
+          "latent": 10,
+          "score": 0.0489,
+          "n_active": 589,
+          "examples": [
+            "http://www.gutenberg.org/files/42159/42159-h/42159-h.htm#Page_306",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_306",
+            "http://www.gutenberg.org/files/26377/26377-h/26377-h.htm#Lloyd_Georges_Appeal_to_Labor"
+          ]
+        }
+      ]
+    }
+  }
+}

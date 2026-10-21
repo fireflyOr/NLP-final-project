@@ -1,0 +1,464 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7390617022330654,
+  "test_error": 0.7390617022330654,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8844622603484673,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 200.32552337646484,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2039,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1015,
+      "n_removed": 1017,
+      "var_share_removed": 0.3383,
+      "var_share_sae_error": 0.1095,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            1745,
+            1937
+          ],
+          "gain_margin": 574.06,
+          "examples": [
+            "Hotel Californian, 36 State St., Santa Barbara, CA, 93101, USA",
+            "The Pinch Hotel, 36 George St., Charleston, SC, 29401, USA",
+            "Beverly Wilshire, A Four Seasons Hotel, 9500 Wilshire Blvd., Beverly Hills, CA, 90212, USA"
+          ]
+        },
+        {
+          "group": 2016,
+          "latents": [
+            503
+          ],
+          "gain_margin": 243.16,
+          "examples": [
+            "Stauffacherstrasse 163, Zurich, 8004, Switzerland",
+            "Utoquai 45, Zurich, 8008, Switzerland",
+            "St. Annagasse 2, Zurich, 8001, Switzerland"
+          ]
+        },
+        {
+          "group": 1009,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 239.99,
+          "examples": [
+            "39F, Four Seasons Hotel Tokyo at Otemachi, 1-2-1 Otemachi, Chiyoda-ku, Tokyo, 100-0004, Japan",
+            "7F, Four Seasons Hotel Tokyo at Marunouchi, 1-11-1 Marunouchi, Chiyoda-ku, Tokyo, 100-6277, Japan",
+            "1F, Toranomon Hills Station Tower, 2-6-4 Toranomon, Minato-ku, Tokyo, 105-0001, Japan"
+          ]
+        },
+        {
+          "group": 266,
+          "latents": [
+            1861
+          ],
+          "gain_margin": 195.0,
+          "examples": [
+            "60 Xixi Road, Xihu, Hangzhou, China Mainland",
+            "1913 Art District, 129 Hongwu North Road, Xuanwu, Nanjing, China Mainland",
+            "Xingfu West Road, Xingfu Mei Lin, Sanshengxiang, Jinjiang, Chengdu, China Mainland"
+          ]
+        },
+        {
+          "group": 882,
+          "latents": [
+            638
+          ],
+          "gain_margin": 192.0,
+          "examples": [
+            "Rotterdamseweg 480, Schipluiden, 2636 KB, Netherlands",
+            "Meent 72a, Rotterdam, 3011 JN, Netherlands",
+            "Barentszstraat 171, Amsterdam, 1013 NM, Netherlands"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1265,
+      "n_groups": 1257,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1054,
+      "n_removed": 1061,
+      "var_share_removed": 0.6054,
+      "var_share_sae_error": 0.0018,
+      "top": [
+        {
+          "group": 246,
+          "latents": [
+            1697
+          ],
+          "gain_margin": 1278.02,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1189,
+          "latents": [
+            292
+          ],
+          "gain_margin": 1197.79,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1156,
+          "latents": [
+            1215
+          ],
+          "gain_margin": 675.25,
+          "examples": [
+            "Ligurian, Creative",
+            "Tuscan, Creative",
+            "Umbrian, Creative"
+          ]
+        },
+        {
+          "group": 366,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 581.08,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        },
+        {
+          "group": 119,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 402.11,
+          "examples": [
+            "Creative, Calabrian",
+            "Creative, Scandinavian",
+            "Creative, Andalusian"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2048,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 832,
+      "n_removed": 832,
+      "var_share_removed": 0.2645,
+      "var_share_sae_error": 0.1947,
+      "top": [
+        {
+          "group": 235,
+          "latents": [
+            1933
+          ],
+          "gain_margin": 632.5,
+          "examples": [
+            "Its sign could use a new coat of paint and the room is nothing to write home about, but the regulars have been returning for its hearty beef soup for nearly thr",
+            "Choose between blanched rice noodles tossed in a thick gravy, or soup noodles in a deeply flavourful ox bone broth. Then top with sliced beef, beef tripe, tendo",
+            "This ph\u1edf shop has been around since 2008 and the owner Mr Hoang is justly proud of his clear beef broth that takes over 12 hours to make. Feel free to customise"
+          ]
+        },
+        {
+          "group": 430,
+          "latents": [
+            1307
+          ],
+          "gain_margin": 376.94,
+          "examples": [
+            "A small restaurant just a stone\u2019s throw from the sea which is memorable for its chic decor and intimate ambience. The cuisine combines traditional influences wi",
+            "A contemporary-style restaurant with an open-view kitchen where two different styles of cuisine can be enjoyed: creative tapas influenced by different tradition",
+            "Once upon a time there was a little village known for its passion for books. What could thus be more natural than that the former printing works be turned into "
+          ]
+        },
+        {
+          "group": 1235,
+          "latents": [
+            1281
+          ],
+          "gain_margin": 277.98,
+          "examples": [
+            "Outdoor service in the summer on the terrace with an exceptional view of the lake. Original furnishings and extremely well kept rooms. Menu including lake speci",
+            "An elegant residence with gardens sloping down to the lake. The charming terrace, where meals are served in summer, offers superb views of the lake, while the c",
+            "Housed in the elegant Relais Villa Flora, this restaurant occupies a natural terrace with breathtaking views of the Nissene hills. The dishes are predominantly "
+          ]
+        },
+        {
+          "group": 569,
+          "latents": [
+            978
+          ],
+          "gain_margin": 261.7,
+          "examples": [
+            "Nestled between splendid beaches and bays, this restaurant focuses on the sea, not only in its views but also in its cuisine. The owner takes centre stage in th",
+            "With its stunning clifftop location and menu packed full of delicious seafood, this bright and airy restaurant really makes the most of its seaside setting. It'",
+            "This beachfront restaurant has looked out onto the ebbing and flowing tides since 1924. An idyllic setting in which to enjoy dishes that showcase fine ingredien"
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            505
+          ],
+          "gain_margin": 235.76,
+          "examples": [
+            "This venue sports a dark colour scheme, with an eclectic mix of Chinese garden motifs and European palatial glamour. The Hong Kong chef excels in refined Canton",
+            "Service is fast-paced and to the point, which is understandable considering how busy this restaurant always is. The large menu offers something for everyone and",
+            "This wildly popular Chinatown spot is still packed to the gills most days, and for good reason: the made-to-order dim sum and Cantonese fare remain consistently"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 720,
+      "n_groups": 705,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 634,
+      "n_removed": 649,
+      "var_share_removed": 0.8254,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 72,
+          "latents": [
+            1799
+          ],
+          "gain_margin": 2127.18,
+          "examples": [
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list"
+          ]
+        },
+        {
+          "group": 173,
+          "latents": [
+            1006
+          ],
+          "gain_margin": 1391.41,
+          "examples": [
+            "Interesting wine list,Valet parking,Wheelchair access",
+            "Interesting wine list,Valet parking,Wheelchair access",
+            "Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 84,
+          "latents": [
+            1789
+          ],
+          "gain_margin": 1268.35,
+          "examples": [
+            "Air conditioning,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 699,
+          "latents": [
+            239
+          ],
+          "gain_margin": 576.45,
+          "examples": [
+            "Interesting wine list,Notable sake list",
+            "Interesting wine list,Notable sake list",
+            "Air conditioning,Interesting wine list"
+          ]
+        },
+        {
+          "group": 682,
+          "latents": [
+            334
+          ],
+          "gain_margin": 558.65,
+          "examples": [
+            "Car park,Great view,Interesting wine list,Wheelchair access",
+            "Car park,Great view,Interesting wine list,Wheelchair access",
+            "Car park,Interesting wine list,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1993,
+      "n_groups": 1993,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1529,
+      "n_removed": 1529,
+      "var_share_removed": 0.6949,
+      "var_share_sae_error": 0.0157,
+      "top": [
+        {
+          "group": 1860,
+          "latents": [
+            1238
+          ],
+          "gain_margin": 163.14,
+          "examples": [
+            "Barneville-Carteret, France",
+            "M\u00e9zy-Moulins, France",
+            "Fort William, United Kingdom"
+          ]
+        },
+        {
+          "group": 993,
+          "latents": [
+            1538
+          ],
+          "gain_margin": 156.83,
+          "examples": [
+            "Decatur, GA, USA",
+            "Decatur, GA, USA",
+            "Decatur, GA, USA"
+          ]
+        },
+        {
+          "group": 345,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 139.82,
+          "examples": [
+            "Xiamen, China Mainland",
+            "Xiamen, China Mainland",
+            "Xiamen, China Mainland"
+          ]
+        },
+        {
+          "group": 995,
+          "latents": [
+            1113
+          ],
+          "gain_margin": 136.13,
+          "examples": [
+            "Torgiano, Italy",
+            "San Remo, Italy",
+            "Bibbiena, Italy"
+          ]
+        },
+        {
+          "group": 264,
+          "latents": [
+            1800
+          ],
+          "gain_margin": 111.95,
+          "examples": [
+            "Le Mans, France",
+            "Inverkeilor, United Kingdom",
+            "Osaka, Japan"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2042,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1057,
+      "n_removed": 1061,
+      "var_share_removed": 0.3738,
+      "var_share_sae_error": 0.105,
+      "top": [
+        {
+          "group": 2013,
+          "latents": [
+            1206
+          ],
+          "gain_margin": 252.13,
+          "examples": [
+            "Mraz & Sohn",
+            "Khon Kaen Grilled Pork Neck",
+            "You Mian"
+          ]
+        },
+        {
+          "group": 661,
+          "latents": [
+            1071
+          ],
+          "gain_margin": 239.06,
+          "examples": [
+            "Corenucopia by Clare Smyth",
+            "CORE by Clare Smyth",
+            "Bayview by Michel Roth"
+          ]
+        },
+        {
+          "group": 1469,
+          "latents": [
+            1309
+          ],
+          "gain_margin": 171.3,
+          "examples": [
+            "Lin Family of One - The Bund",
+            "La Promenade - Maison Dallais",
+            "Shaun Rankin at Grantley Hall"
+          ]
+        },
+        {
+          "group": 835,
+          "latents": [
+            1126
+          ],
+          "gain_margin": 170.63,
+          "examples": [
+            "Thai & Thai",
+            "Thai Garden",
+            "Tha\u00ef Spices"
+          ]
+        },
+        {
+          "group": 1753,
+          "latents": [
+            432
+          ],
+          "gain_margin": 159.63,
+          "examples": [
+            "Substance",
+            "ME.",
+            "Stage"
+          ]
+        }
+      ]
+    }
+  }
+}

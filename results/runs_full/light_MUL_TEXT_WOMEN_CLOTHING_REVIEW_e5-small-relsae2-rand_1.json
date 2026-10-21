@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7550519308452198,
+  "test_error": 0.7550519308452198,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8891782980063511,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.0086407661438,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 405,
+      "n_removed": 107,
+      "threshold": 0.0462,
+      "passed_test": 83,
+      "removed_norm_ratio": 0.3683,
+      "var_share_kept": 0.5829,
+      "var_share_sae_error": 0.1938,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 18,
+          "score": 0.2685,
+          "n_active": 3797,
+          "examples": [
+            "While i love the design and shape of this blouse, the fabric was of very poor quality. i will return it.",
+            "The dress is beautiful but runs small so unfortunately i have to return it.",
+            "I also wanted to love this top but sadly had to return it because it is very short and the peplum piece is very wide. it was not flattering at all."
+          ]
+        },
+        {
+          "latent": 56,
+          "score": 0.186,
+          "n_active": 869,
+          "examples": [
+            "This shirt is pretty but wasn't worth the price in my opinion. the shirt does a pretty decent job of staying closed at least, and the embroidering is pretty, bu",
+            "The skirt is not as form fitting as i had hoped. it is a lot of material that is flowy and billowy, not straight and pencil-like as shown as in the pictures. th",
+            "The shape was not as nice on model, seemed like a lot of extra material."
+          ]
+        },
+        {
+          "latent": 180,
+          "score": 0.1389,
+          "n_active": 1312,
+          "examples": [
+            "Fits perfect!",
+            "I received this as a gift for my birthday in the navy blue and it fits great. i'm 5'2 and the petite medium was the perfect length.",
+            "It fits great! i love the material and how it fits and drapes."
+          ]
+        },
+        {
+          "latent": 450,
+          "score": 0.1155,
+          "n_active": 569,
+          "examples": [
+            "I'm on the fence about this one. it is pretty",
+            "I was apprehensive because of the long tail at the back of this shirt, but it is very pretty with capris.",
+            "I seldom take anything but a size m in retailer tops. this m top fits ok but it is a bit sloppy overall. one reviewer says it is 'body skimming' but not on me. "
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.1146,
+          "n_active": 1389,
+          "examples": [
+            "The shape was not as nice on model, seemed like a lot of extra material.",
+            "This looked more fitted on the model. the xs was still boxy on me, but i loved the eyelet hem so much i kept it!",
+            "I would have liked it but it was too small for me."
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 429,
+      "n_removed": 83,
+      "threshold": 0.0452,
+      "passed_test": 147,
+      "removed_norm_ratio": 0.3461,
+      "var_share_kept": 0.678,
+      "var_share_sae_error": 0.0635,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 56,
+          "score": 0.1954,
+          "n_active": 1886,
+          "examples": [
+            "Maybe",
+            "Maybe for some...",
+            "Maybe...."
+          ]
+        },
+        {
+          "latent": 157,
+          "score": 0.1855,
+          "n_active": 2105,
+          "examples": [
+            "Great piece!",
+            "Great piece!",
+            "Great quality!"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1804,
+          "n_active": 1477,
+          "examples": [
+            "Nice, has flaws.",
+            "Great light coat, poorly made",
+            "Some major design flaws"
+          ]
+        },
+        {
+          "latent": 420,
+          "score": 0.161,
+          "n_active": 2113,
+          "examples": [
+            "Love!!",
+            "Love!!",
+            "Snags!"
+          ]
+        },
+        {
+          "latent": 72,
+          "score": 0.1524,
+          "n_active": 958,
+          "examples": [
+            "Long enough for tall women",
+            "Bring back tall sizes!",
+            "Please make them in tall sizes"
+          ]
+        }
+      ]
+    }
+  }
+}

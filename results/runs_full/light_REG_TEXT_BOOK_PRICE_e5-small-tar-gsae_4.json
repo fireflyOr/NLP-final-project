@@ -1,0 +1,390 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.24614795513927207,
+  "test_error": 0.24614795513927207,
+  "course_metric": "r2",
+  "course_score": 0.4683689141194397,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 50.756866455078125,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1612,
+      "n_groups": 1612,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1066,
+      "n_removed": 1066,
+      "var_share_removed": 0.4294,
+      "var_share_sae_error": 0.0033,
+      "top": [
+        {
+          "group": 377,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1084.0,
+          "examples": [
+            "K. Somasundaram",
+            "Priya Kumar",
+            "S Meenakshi Ammal"
+          ]
+        },
+        {
+          "group": 1603,
+          "latents": [
+            477
+          ],
+          "gain_margin": 643.46,
+          "examples": [
+            "Akash Verma",
+            "Penguin Books India",
+            "Ravi Nirmal Sharma"
+          ]
+        },
+        {
+          "group": 1161,
+          "latents": [
+            305
+          ],
+          "gain_margin": 490.03,
+          "examples": [
+            "Russ Manning",
+            "Russ Manning",
+            "Russ Manning"
+          ]
+        },
+        {
+          "group": 783,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 475.45,
+          "examples": [
+            "Gurmehar Kaur",
+            "Suresh Samudrala",
+            "Saurabh Sharma"
+          ]
+        },
+        {
+          "group": 805,
+          "latents": [
+            204
+          ],
+          "gain_margin": 300.79,
+          "examples": [
+            "Osamu Tezuka",
+            "Osamu Tezuka",
+            "Jim White"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 863,
+      "n_groups": 816,
+      "n_multi_groups": 40,
+      "n_groups_dropped": 599,
+      "n_removed": 627,
+      "var_share_removed": 0.251,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 501,
+          "latents": [
+            23
+          ],
+          "gain_margin": 779.16,
+          "examples": [
+            "Product Bundle,\u2013 26 Aug 2016",
+            "Paperback,\u2013 Box set, 15 Jun 2014",
+            "Hardcover,\u2013 29 Nov 2016"
+          ]
+        },
+        {
+          "group": 569,
+          "latents": [
+            305
+          ],
+          "gain_margin": 535.63,
+          "examples": [
+            "Product Bundle,\u2013 26 Aug 2016",
+            "Flexibound,\u2013 27 Sep 2011",
+            "Hardcover,\u2013 Box set, 2 Aug 2009"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            1492,
+            1546
+          ],
+          "gain_margin": 427.26,
+          "examples": [
+            "(Kannada),Paperback,\u2013 2014",
+            "Paperback,\u2013 1 Feb 2017",
+            "Paperback,\u2013 1 Feb 2017"
+          ]
+        },
+        {
+          "group": 149,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 388.74,
+          "examples": [
+            "Hardcover,\u2013 Box set, 2 Aug 2009",
+            "Product Bundle,\u2013 26 Aug 2016",
+            "Hardcover,\u2013 31 Dec 2010"
+          ]
+        },
+        {
+          "group": 634,
+          "latents": [
+            1072
+          ],
+          "gain_margin": 241.7,
+          "examples": [
+            "Hardcover,\u2013 Facsimile, 31 May 2011",
+            "Hardcover,\u2013 20 May 1993",
+            "Hardcover,\u2013 9 Oct 2012"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 714,
+      "n_groups": 714,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 581,
+      "n_removed": 581,
+      "var_share_removed": 0.5318,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 444,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 860.89,
+          "examples": [
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        },
+        {
+          "group": 554,
+          "latents": [
+            305
+          ],
+          "gain_margin": 542.97,
+          "examples": [
+            "Visual Arts",
+            "Media Studies",
+            "Media Studies"
+          ]
+        },
+        {
+          "group": 88,
+          "latents": [
+            1226
+          ],
+          "gain_margin": 502.32,
+          "examples": [
+            "Children's Language Learning (Books)",
+            "Children's Language Learning (Books)",
+            "Children's Language Learning (Books)"
+          ]
+        },
+        {
+          "group": 110,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 216.56,
+          "examples": [
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)"
+          ]
+        },
+        {
+          "group": 365,
+          "latents": [
+            813
+          ],
+          "gain_margin": 128.82,
+          "examples": [
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1705,
+      "n_groups": 1705,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1213,
+      "n_removed": 1213,
+      "var_share_removed": 0.3874,
+      "var_share_sae_error": 0.018,
+      "top": [
+        {
+          "group": 973,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2818.87,
+          "examples": [
+            "Beginning a new four-book series collecting the entire run of the Tarzan newspaper strip by Russ Manning. In 1967, Manning was selected by the Edgar Rice Burrou",
+            "Photographic lighting is a topic that will never go out of style, no matter how sophisticated cameras and other technology get. Even with the most high-tech gea",
+            "5th edition of this digital photography bestseller from Tom Ang\nRenowned photographer and digital expert Tom Ang shows you how to master the essentials of digit"
+          ]
+        },
+        {
+          "group": 105,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 1857.56,
+          "examples": [
+            "Frank Miller's Sin City has set the gold standard for crime comics, both for Miller's unflinching stories and for his visceral, powerfully charged art. To honor",
+            "The fourth edition of the authoritative guide to producing, directing, shooting, editing, and distributing your video or film.\n\nWidely acknowledged as the \u201cbibl",
+            "A complete guide to brush pen lettering, The Art of Brush Lettering takes a meditative approach to creating beautiful letterforms, plus freestyle lettering, fau"
+          ]
+        },
+        {
+          "group": 425,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1197.78,
+          "examples": [
+            "Bestselling romance writer Revati Krishna had everything that a girl could wish for \u2013 A sparkling career, a thriving fan-base and a perfect love life. However, ",
+            "The small and peaceful hill town of Ramsar wakes up to mysterious break-ins on two consecutive days. While the first one takes place at the local doctor's clini",
+            "Six months have passed since Prisha was pushed to death by the person she loved the most, Saveer. But she doesn't believes that it was him till she stumbles upo"
+          ]
+        },
+        {
+          "group": 1702,
+          "latents": [
+            942
+          ],
+          "gain_margin": 922.93,
+          "examples": [
+            "Lonely Planet: The world's leading travel guide publisher With Lonely Planet's Malay Phrasebook, let no barriers - language or culture - get in your way. Grab t",
+            "With Hands-On Recommendation Systems with Python, learn the tools and techniques required in building various kinds of powerful recommendation systems (collabor",
+            "Learn how to program in Python while making and breaking ciphers\u2014algorithms used to create and send secret messages! \n\nAfter a crash course in Python programmin"
+          ]
+        },
+        {
+          "group": 1704,
+          "latents": [
+            204
+          ],
+          "gain_margin": 886.16,
+          "examples": [
+            "Specially arranged and simplified, these pieces offer beginners the pleasure and satisfaction of playing Beethoven. Students and teachers alike will delight in ",
+            "Translated by Audie E. Bock.\n\n\"A first rate book and a joy to read.... It's doubtful that a complete understanding of the director's artistry can be obtained wi",
+            "Attention merchant: an industrial-scale harvester of human attention. A firm whose business model is the mass capture of attention for resale to advertisers. In"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1765,
+      "n_groups": 1765,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1263,
+      "n_removed": 1263,
+      "var_share_removed": 0.4677,
+      "var_share_sae_error": 0.0175,
+      "top": [
+        {
+          "group": 528,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1689.59,
+          "examples": [
+            "The Max Muscle Plan",
+            "Running Your First Ultra: Customizable Training Plans for Your First 50K to 100-mile Race",
+            "Cracking the SAT Premium Edition with 8 Practice Tests, 2019: The All-in-One Solution for Your Highest Possible Score (College Test Preparation)"
+          ]
+        },
+        {
+          "group": 1764,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1352.82,
+          "examples": [
+            "Batman by Scott Snyder & Greg Capullo Box Set",
+            "Cinematography: Theory and Practice: Image Making for Cinematographers and Directors: Volume 3",
+            "Bruce Lee Striking Thoughts: Bruce Lee's Wisdom for Daily Living (Bruce Lee Library)"
+          ]
+        },
+        {
+          "group": 312,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1095.19,
+          "examples": [
+            "The Malhotra Bride",
+            "The No. 1 Ladies' Detective Agency",
+            "Kommandant's Girl"
+          ]
+        },
+        {
+          "group": 439,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 975.62,
+          "examples": [
+            "Coraline Graphic Novel",
+            "Introducing Lacan: A Graphic Guide",
+            "DC Comics Ultimate Character Guide"
+          ]
+        },
+        {
+          "group": 881,
+          "latents": [
+            813
+          ],
+          "gain_margin": 430.26,
+          "examples": [
+            "The Boy with a Broken Heart",
+            "The Boy Who Loved",
+            "Fearless Nadia"
+          ]
+        }
+      ]
+    }
+  }
+}

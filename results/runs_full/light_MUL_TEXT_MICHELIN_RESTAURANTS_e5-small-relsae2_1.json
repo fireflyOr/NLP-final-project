@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7222623962367526,
+  "test_error": 0.7222623962367526,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8932600035294896,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 104.79927635192871,
+  "diagnostics": {
+    "Address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 198,
+      "n_removed": 314,
+      "threshold": 0.0438,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7098,
+      "var_share_kept": 0.232,
+      "var_share_sae_error": 0.2326,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 147,
+          "score": 0.0354,
+          "n_active": 555,
+          "examples": [
+            "1323 N. Mills Ave., Orlando, FL, 32803, USA",
+            "4979 New Broad St., Orlando, FL, 32814, USA",
+            "720 N. Mills Ave., Orlando, FL, 32803, USA"
+          ]
+        },
+        {
+          "latent": 400,
+          "score": 0.0353,
+          "n_active": 711,
+          "examples": [
+            "600-1 Chengbei Road, Fengze, Quanzhou, China Mainland",
+            "Balar\u00e9s 3, Ponteceso, 15110, Spain",
+            "6F, Central Tower, 5 Xiancun Road, Zhujiang New Town, Tianhe, Guangzhou, China Mainland"
+          ]
+        },
+        {
+          "latent": 153,
+          "score": 0.0342,
+          "n_active": 717,
+          "examples": [
+            "105, Building 4, Fujian Screen Culture Creative Industry Park, 81 Liuhe Road, Gulou, Fuzhou, China Mainland",
+            "2375 Alamo Pintado Ave., Los Olivos, CA, 93441, USA",
+            "81 Grand'Rue, Ribeauvill\u00e9, 68150, France"
+          ]
+        },
+        {
+          "latent": 167,
+          "score": 0.0311,
+          "n_active": 553,
+          "examples": [
+            "Ovi\u00f1ana, Soto de Lui\u00f1a, 33156, Spain",
+            "2375 Alamo Pintado Ave., Los Olivos, CA, 93441, USA",
+            "Olmo 3, Miranda de Ebro, 09200, Spain"
+          ]
+        },
+        {
+          "latent": 388,
+          "score": 0.0304,
+          "n_active": 419,
+          "examples": [
+            "El Ansar 1, Trece\u00f1o, 39592, Spain",
+            "9 Murray Street, Ancoats, Manchester, M4 6HS, United Kingdom",
+            "91 U Thong Road, Ho Rattanachai, Phra Nakhon Si Ayutthaya, 13000, Thailand"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 499,
+      "n_kept": 347,
+      "n_removed": 165,
+      "threshold": 0.0504,
+      "passed_test": 32,
+      "removed_norm_ratio": 0.3825,
+      "var_share_kept": 0.6681,
+      "var_share_sae_error": 0.0028,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 309,
+          "score": 0.1007,
+          "n_active": 867,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Innovative, Creative"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.0995,
+          "n_active": 735,
+          "examples": [
+            "Creative, Seafood",
+            "Creative, Seafood",
+            "Creative, Seafood"
+          ]
+        },
+        {
+          "latent": 270,
+          "score": 0.0959,
+          "n_active": 770,
+          "examples": [
+            "Pizza",
+            "Pizza",
+            "Pizza"
+          ]
+        },
+        {
+          "latent": 201,
+          "score": 0.0908,
+          "n_active": 1074,
+          "examples": [
+            "Creative, Bakery",
+            "Fusion, Creative",
+            "Fusion, Creative"
+          ]
+        },
+        {
+          "latent": 319,
+          "score": 0.0872,
+          "n_active": 1070,
+          "examples": [
+            "Modern British, Creative",
+            "Creative British",
+            "Creative British"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 330,
+      "n_removed": 182,
+      "threshold": 0.046,
+      "passed_test": 10,
+      "removed_norm_ratio": 0.4404,
+      "var_share_kept": 0.3741,
+      "var_share_sae_error": 0.3712,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 451,
+          "score": 0.0606,
+          "n_active": 826,
+          "examples": [
+            "A veritable culinary institution, De Bokkedoorns was established in 1961 and has held on to its two MICHELIN stars for the past 30 years. Owner Pascal Beeren, w",
+            "A diminutive, unpretentious and informal restaurant with a name that pays homage to the traditional \u201cberbena\u201d festivals. At the centre of everything here is Car",
+            "Exclusivity is a word that comes to mind when thinking about this small restaurant in the F\u00e4hrhaus hotel: a prime location on the Moselle riverfront, an elegant"
+          ]
+        },
+        {
+          "latent": 60,
+          "score": 0.0599,
+          "n_active": 743,
+          "examples": [
+            "This long-standing family business is run with real dedication. No compromises are made when it comes to the quality of the produce, and the dishes taste great!",
+            "You will feel at home here for a number of reasons. Not only can you enjoy the modern, classic and seasonal cuisine showcasing local produce, but there is also ",
+            "Cuisine, art and accommodation are combined in this long-running family business. Three sisters run both the hotel \u2013 with some classic, some stylishly modern gu"
+          ]
+        },
+        {
+          "latent": 206,
+          "score": 0.0557,
+          "n_active": 1058,
+          "examples": [
+            "If you\u2019re exploring Maribor, this restaurant is a great place to stop and take a break and has a real holiday feel with its spacious terrace boasting views of t",
+            "Pegasus is poised to take wing at the entrance to this restaurant housed in a magnificent 18C abode. While you immerse yourself in the classical interior (woodw",
+            "Combining modern features with the original wood and stone, plus cordial service and a pleasingly down-to-earth atmosphere, this charming 15C Grisons building p"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.055,
+          "n_active": 1110,
+          "examples": [
+            "Situated in a central yet secluded location, this intimate and elegant restaurant serves typical Sicilian cuisine with a focus on fish, vegetables from the kitc",
+            "Situated next to the hotel of the same name (a reference to the Faraglioni islands just off the coast here) but with its own entrance, this restaurant overlooks",
+            "The owner-chef\u2019s Calabrian origins are evident on a menu that combines Mediterranean cuisine (including fish and seafood) with Piedmontese specialities and show"
+          ]
+        },
+        {
+          "latent": 131,
+          "score": 0.0526,
+          "n_active": 478,
+          "examples": [
+            "With a slogan like Volg de natuur (\"Follow nature\") and a name that refers to the fertile, clay-rich soil of the area, it is immediately clear that terroir is a",
+            "It isn\u2019t often you hear of a restaurant that gives free rein to its chef\u2019s desire and passion for food, life and nature\u2014yet at Evvai that is exactly what you\u2019ll",
+            "A standout name in Catalan cuisine, both for its setting in a delightful farmhouse and the talent of chef Nandu Jubany, a man with a passion for motorbikes to t"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 436,
+      "n_kept": 424,
+      "n_removed": 88,
+      "threshold": 0.0498,
+      "passed_test": 36,
+      "removed_norm_ratio": 0.206,
+      "var_share_kept": 0.8143,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 389,
+          "score": 0.1205,
+          "n_active": 777,
+          "examples": [
+            "Garden or park,Interesting wine list,Terrace,Wheelchair access",
+            "Brunch,Interesting wine list,Terrace,Wheelchair access",
+            "Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 480,
+          "score": 0.1166,
+          "n_active": 705,
+          "examples": [
+            "Garden or park,Interesting wine list,Wheelchair access",
+            "Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Counter dining,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 363,
+          "score": 0.1138,
+          "n_active": 1343,
+          "examples": [
+            "Credit cards not accepted,Interesting wine list",
+            "Credit cards not accepted,Interesting wine list",
+            "Credit cards not accepted,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 242,
+          "score": 0.1097,
+          "n_active": 1024,
+          "examples": [
+            "Air conditioning,Brunch,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Brunch,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 123,
+          "score": 0.1094,
+          "n_active": 635,
+          "examples": [
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 111,
+      "n_removed": 401,
+      "threshold": 0.0475,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.9053,
+      "var_share_kept": 0.1571,
+      "var_share_sae_error": 0.0827,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 1,
+          "score": 0.0285,
+          "n_active": 704,
+          "examples": [
+            "Montoro, Italy",
+            "Mont\u00e0, Italy",
+            "Montcy-Notre-Dame, France"
+          ]
+        },
+        {
+          "latent": 149,
+          "score": 0.0275,
+          "n_active": 427,
+          "examples": [
+            "Bourgvilain, France",
+            "Bozel, France",
+            "Bolzano, Italy"
+          ]
+        },
+        {
+          "latent": 223,
+          "score": 0.027,
+          "n_active": 519,
+          "examples": [
+            "Sprockh\u00f6vel, Germany",
+            "Birkweiler, Germany",
+            "Minerve, France"
+          ]
+        },
+        {
+          "latent": 493,
+          "score": 0.0261,
+          "n_active": 663,
+          "examples": [
+            "Romoos, Switzerland",
+            "Romoos, Switzerland",
+            "Saint Lorenzen, Italy"
+          ]
+        },
+        {
+          "latent": 105,
+          "score": 0.0256,
+          "n_active": 713,
+          "examples": [
+            "Cuenca, Spain",
+            "Ch\u00e2tel, France",
+            "Scarsdale, NY, USA"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 276,
+      "n_removed": 236,
+      "threshold": 0.0478,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.563,
+      "var_share_kept": 0.3929,
+      "var_share_sae_error": 0.2352,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 123,
+          "score": 0.0431,
+          "n_active": 432,
+          "examples": [
+            "Louroc - H\u00f4tel du Cap-Eden-Roc",
+            "Bistrot 1936 - Domaine du Limonay",
+            "La Bastide Bourrelly - Mathias Dandine"
+          ]
+        },
+        {
+          "latent": 351,
+          "score": 0.0386,
+          "n_active": 827,
+          "examples": [
+            "B\u1eddm",
+            "hom",
+            "D\u016aM"
+          ]
+        },
+        {
+          "latent": 471,
+          "score": 0.0385,
+          "n_active": 595,
+          "examples": [
+            "Sushi Shikon",
+            "Shibari Sushi and Grill",
+            "Cracco in Galleria"
+          ]
+        },
+        {
+          "latent": 221,
+          "score": 0.0366,
+          "n_active": 1205,
+          "examples": [
+            "U Mat\u011bje",
+            "Oilje",
+            "Kaleja"
+          ]
+        },
+        {
+          "latent": 390,
+          "score": 0.0365,
+          "n_active": 194,
+          "examples": [
+            "Runner Up",
+            "Fleher Hof",
+            "Aschbacher Hof"
+          ]
+        }
+      ]
+    }
+  }
+}

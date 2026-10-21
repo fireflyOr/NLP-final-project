@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13034.997642047123,
+  "test_error": 13034.997642047123,
+  "course_metric": "r2",
+  "course_score": 0.7674691840021364,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.37417149543762,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2031,
+      "n_groups": 2024,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1285,
+      "n_removed": 1285,
+      "var_share_removed": 0.6058,
+      "var_share_sae_error": 0.0259,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            305,
+            911
+          ],
+          "gain_margin": 1649.24,
+          "examples": [
+            "Guner, T",
+            "Ballard, E A*",
+            "Wilson, G*"
+          ]
+        },
+        {
+          "group": 968,
+          "latents": [
+            1003
+          ],
+          "gain_margin": 625.1,
+          "examples": [
+            "Nikolai, A J",
+            "Nikolai, A J",
+            "Heinz, D J"
+          ]
+        },
+        {
+          "group": 1992,
+          "latents": [
+            16
+          ],
+          "gain_margin": 357.8,
+          "examples": [
+            "Webster, G",
+            "Webster, G",
+            "Webster, G"
+          ]
+        },
+        {
+          "group": 125,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 357.08,
+          "examples": [
+            "Smutylo, S",
+            "Berda, S D",
+            "Berda, S D"
+          ]
+        },
+        {
+          "group": 2020,
+          "latents": [
+            522
+          ],
+          "gain_margin": 330.07,
+          "examples": [
+            "James, P",
+            "James, P",
+            "Anderson, P"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1039,
+      "n_groups": 1038,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 720,
+      "n_removed": 721,
+      "var_share_removed": 0.5102,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 920,
+          "latents": [
+            911
+          ],
+          "gain_margin": 7595.51,
+          "examples": [
+            "Senior Branch Head Engineering",
+            "Senior Branch Head Engineering",
+            "Senior Branch Head Engineering"
+          ]
+        },
+        {
+          "group": 421,
+          "latents": [
+            305
+          ],
+          "gain_margin": 5820.57,
+          "examples": [
+            "SENIOR MANAGER, INFORMATION TECHNOLOGY",
+            "Manager City-Wide Plan",
+            "Manager Technology Planning"
+          ]
+        },
+        {
+          "group": 941,
+          "latents": [
+            323
+          ],
+          "gain_margin": 3450.39,
+          "examples": [
+            "Director IT Infrastructure",
+            "Director Transportation",
+            "Director Transportation"
+          ]
+        },
+        {
+          "group": 980,
+          "latents": [
+            204
+          ],
+          "gain_margin": 3246.4,
+          "examples": [
+            "Director Planning",
+            "Deputy Fire Chief",
+            "Deputy Fire Chief"
+          ]
+        },
+        {
+          "group": 337,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 3000.84,
+          "examples": [
+            "Deputy Chief Election Officer (T)",
+            "DEPUTY GENERAL MANAGER, ACT",
+            "Deputy Director"
+          ]
+        }
+      ]
+    }
+  }
+}

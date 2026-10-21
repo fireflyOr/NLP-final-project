@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7233860686617616,
+  "test_error": 0.7233860686617616,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8889561357645765,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 99.34156250953674,
+  "diagnostics": {
+    "Address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 211,
+      "n_removed": 301,
+      "threshold": 0.0499,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7112,
+      "var_share_kept": 0.2307,
+      "var_share_sae_error": 0.234,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 19,
+          "score": 0.0348,
+          "n_active": 463,
+          "examples": [
+            "Hotel Californian, 36 State St., Santa Barbara, CA, 93101, USA",
+            "The Cavendish Hotel, Church Lane, Baslow, DE45 1SP, United Kingdom",
+            "H\u00f4tel Renaissance, 320 avenue Wolfgang-Amadeus-Mozart, Aix-en-Provence, 13100, France"
+          ]
+        },
+        {
+          "latent": 163,
+          "score": 0.0343,
+          "n_active": 341,
+          "examples": [
+            "Stall 11, The Grid - Food Market, Power Plant Mall, Rockwell Drive corner Estrella, Makati - Metro Manila, 1210, The Philippines",
+            "GF, Milky Way Building, 900 Arnaiz Avenue corner Paseo de Roxas, Makati - Metro Manila, 1200, The Philippines",
+            "The Republik, Lot No.M.03, Mezzanine Floor, Jalan Medan Setia 1, Bukit Damansara, Kuala Lumpur, 50490, Malaysia"
+          ]
+        },
+        {
+          "latent": 47,
+          "score": 0.0333,
+          "n_active": 265,
+          "examples": [
+            "Doctor 13, Linares, 23700, Spain",
+            "Doctor Dou 19, Barcelona, 08001, Spain",
+            "Doctor Castelo 31, Madrid, 28009, Spain"
+          ]
+        },
+        {
+          "latent": 442,
+          "score": 0.0331,
+          "n_active": 399,
+          "examples": [
+            "Square Beaumarchais, Monaco, 98000, Principality of Monaco",
+            "Lily of the Valley, colline Saint-Michel, quartier de Gigaro, La Croix-Valmer, 83420, France",
+            "H\u00f4tel M\u00e9tropole Monte-Carlo, 4 avenue de la Madone, Monaco, 98000, Principality of Monaco"
+          ]
+        },
+        {
+          "latent": 168,
+          "score": 0.0325,
+          "n_active": 665,
+          "examples": [
+            "Val\u00e8ncia 28, Barcelona, 08015, Spain",
+            "68 Rua de Felicidade, Macau, Macau",
+            "3F, Roppongi Hills Residence B, 6-12-2 Roppongi, Minato-ku, Tokyo, 106-0032, Japan"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 500,
+      "n_kept": 373,
+      "n_removed": 139,
+      "threshold": 0.0494,
+      "passed_test": 25,
+      "removed_norm_ratio": 0.2898,
+      "var_share_kept": 0.7832,
+      "var_share_sae_error": 0.0028,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 163,
+          "score": 0.1132,
+          "n_active": 908,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "latent": 309,
+          "score": 0.1113,
+          "n_active": 926,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.1043,
+          "n_active": 903,
+          "examples": [
+            "Creative, Seafood",
+            "Creative, Seafood",
+            "Creative, Seafood"
+          ]
+        },
+        {
+          "latent": 201,
+          "score": 0.1025,
+          "n_active": 1031,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        },
+        {
+          "latent": 319,
+          "score": 0.0998,
+          "n_active": 1091,
+          "examples": [
+            "Creative British",
+            "Creative British",
+            "Traditional British"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 338,
+      "n_removed": 174,
+      "threshold": 0.0486,
+      "passed_test": 8,
+      "removed_norm_ratio": 0.4306,
+      "var_share_kept": 0.379,
+      "var_share_sae_error": 0.3705,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 170,
+          "score": 0.0713,
+          "n_active": 1113,
+          "examples": [
+            "On the quayside facing the fishing port, the seafood counter piled high with fish and shellfish sits proudly in front of the restaurant. This seafaring theme is",
+            "With its panoramic view of the sea and the port, this local institution on the Cotentin peninsula faces the Channel Islands of Jersey and Guernsey. In a pleasan",
+            "A simple establishment tucked away from the tourist bustle, where everything revolves around fish, as one might expect given its name. Right at the entrance of "
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.0641,
+          "n_active": 571,
+          "examples": [
+            "It isn\u2019t often you hear of a restaurant that gives free rein to its chef\u2019s desire and passion for food, life and nature\u2014yet at Evvai that is exactly what you\u2019ll",
+            "Its location, far from all the city\u2019s bustle, is extremely pleasant, and the calm becomes perceptible as you approach. The restaurant sits within Herdade da Mal",
+            "Tempura Matsui skillfully demonstrates why tempura is a celebrated Japanese cuisine type in its own right. The prized seats are at the counter, especially if yo"
+          ]
+        },
+        {
+          "latent": 115,
+          "score": 0.0614,
+          "n_active": 956,
+          "examples": [
+            "This charming, deservedly popular restaurant is smartly laid out and run by a delightful team, whose attentive and personable service will make you want to beco",
+            "A restaurant with a fun, modern feel that is enjoying considerable success in the city. The menu here is contemporary in style with elements of fusion cooking a",
+            "Now here is a restaurant that has a sense of the original! The interior design is very contemporary and, similarly, the chef keeps his ear to the ground for the"
+          ]
+        },
+        {
+          "latent": 206,
+          "score": 0.0591,
+          "n_active": 1406,
+          "examples": [
+            "Mirrors and fabrics add to the luxurious atmosphere in the dining room at this restaurant, but it is the outdoor terrace (open between May and October) with its",
+            "The authentic d\u00e9cor of this handsome town house is perfectly paired with modern comforts. Wooden floors, elegant mirrors and a trendy vibe. The lovely terrace i",
+            "This inn has a long-standing tradition of hospitality. A relaxed atmosphere reigns in the delightful interior, which combines modern elements with rustic charm."
+          ]
+        },
+        {
+          "latent": 510,
+          "score": 0.0576,
+          "n_active": 501,
+          "examples": [
+            "Located within the Ritz-Carlton, Grande Lakes, this restaurant from Chef John Tesar cuts an impressive figure. It is a vast, modern space sporting beachy hues, ",
+            "Exclusivity is a word that comes to mind when thinking about this small restaurant in the F\u00e4hrhaus hotel: a prime location on the Moselle riverfront, an elegant",
+            "From chef/owner Blanca Esthela Mart\u00ednez Bueno, what began with humble roots in 2008 making burritos for local vineyard workers has evolved into one of the most "
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 437,
+      "n_kept": 407,
+      "n_removed": 105,
+      "threshold": 0.0511,
+      "passed_test": 33,
+      "removed_norm_ratio": 0.1501,
+      "var_share_kept": 0.861,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 389,
+          "score": 0.1375,
+          "n_active": 750,
+          "examples": [
+            "Interesting wine list,Valet parking,Wheelchair access",
+            "Interesting wine list,Valet parking,Wheelchair access",
+            "Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 363,
+          "score": 0.1329,
+          "n_active": 1314,
+          "examples": [
+            "Air conditioning,Brunch,Interesting wine list",
+            "Air conditioning,Brunch,Interesting wine list",
+            "Air conditioning,Credit cards not accepted,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.1275,
+          "n_active": 905,
+          "examples": [
+            "Garden or park,Interesting wine list",
+            "Garden or park,Interesting wine list",
+            "Air conditioning,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 127,
+          "score": 0.1109,
+          "n_active": 1582,
+          "examples": [
+            "Interesting wine list",
+            "Interesting wine list",
+            "Interesting wine list"
+          ]
+        },
+        {
+          "latent": 377,
+          "score": 0.1103,
+          "n_active": 1682,
+          "examples": [
+            "Garden or park,Interesting wine list",
+            "Garden or park,Interesting wine list",
+            "Car park,Interesting wine list"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 119,
+      "n_removed": 393,
+      "threshold": 0.0471,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.9018,
+      "var_share_kept": 0.1673,
+      "var_share_sae_error": 0.083,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 440,
+          "score": 0.0268,
+          "n_active": 422,
+          "examples": [
+            "Split, Croatia",
+            "Split, Croatia",
+            "Split, Croatia"
+          ]
+        },
+        {
+          "latent": 57,
+          "score": 0.0267,
+          "n_active": 470,
+          "examples": [
+            "Les Ponts-de-C\u00e9, France",
+            "Les Ponts-de-C\u00e9, France",
+            "Ponte, Italy"
+          ]
+        },
+        {
+          "latent": 128,
+          "score": 0.0264,
+          "n_active": 274,
+          "examples": [
+            "Florence, Italy",
+            "Florence, Italy",
+            "Florence, Italy"
+          ]
+        },
+        {
+          "latent": 202,
+          "score": 0.0259,
+          "n_active": 341,
+          "examples": [
+            "Baden, France",
+            "Baden, France",
+            "Bordeaux, France"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.0254,
+          "n_active": 320,
+          "examples": [
+            "Tain-l'Hermitage, France",
+            "Tain-l'Hermitage, France",
+            "Tain-l'Hermitage, France"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 267,
+      "n_removed": 245,
+      "threshold": 0.0481,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5765,
+      "var_share_kept": 0.3794,
+      "var_share_sae_error": 0.2367,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 168,
+          "score": 0.0441,
+          "n_active": 604,
+          "examples": [
+            "Rivas",
+            "Flaveurs - Domaine Mont-Riant",
+            "Floh"
+          ]
+        },
+        {
+          "latent": 312,
+          "score": 0.0434,
+          "n_active": 568,
+          "examples": [
+            "Cavour",
+            "Cacciatori",
+            "Cavita"
+          ]
+        },
+        {
+          "latent": 351,
+          "score": 0.0422,
+          "n_active": 900,
+          "examples": [
+            "B\u1eddm",
+            "b\u014dm",
+            "hom"
+          ]
+        },
+        {
+          "latent": 101,
+          "score": 0.0399,
+          "n_active": 488,
+          "examples": [
+            "Hirschen",
+            "Hirschen",
+            "Hirsch"
+          ]
+        },
+        {
+          "latent": 330,
+          "score": 0.0374,
+          "n_active": 1880,
+          "examples": [
+            "Serge Vieira",
+            "Alessandro Borghese",
+            "Tori Yamaguchi"
+          ]
+        }
+      ]
+    }
+  }
+}

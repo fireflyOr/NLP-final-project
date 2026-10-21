@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8574023547953826,
+  "test_error": 0.8574023547953826,
+  "course_metric": "r2",
+  "course_score": 0.8107728619667507,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 84.12886548042297,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 444,
+      "n_kept": 328,
+      "n_removed": 184,
+      "threshold": 0.0735,
+      "passed_test": 6,
+      "removed_norm_ratio": 0.4145,
+      "var_share_kept": 0.5276,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.1022,
+          "n_active": 44,
+          "examples": [
+            "Favorite Fairy Tales",
+            "Favorite Fairy Tales",
+            "Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 325,
+          "score": 0.0812,
+          "n_active": 118,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 85,
+          "score": 0.0781,
+          "n_active": 38,
+          "examples": [
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers",
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers",
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers"
+          ]
+        },
+        {
+          "latent": 425,
+          "score": 0.0777,
+          "n_active": 72,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0763,
+          "n_active": 31,
+          "examples": [
+            "Brothers of Pity and Other Tales of Beasts and Men",
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 297,
+      "n_removed": 215,
+      "threshold": 0.073,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.6637,
+      "var_share_kept": 0.5667,
+      "var_share_sae_error": 0.0869,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 460,
+          "score": 0.0759,
+          "n_active": 189,
+          "examples": [
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes"
+          ]
+        },
+        {
+          "latent": 9,
+          "score": 0.0736,
+          "n_active": 163,
+          "examples": [
+            "AUNT SADIE",
+            "AUNT SADIE",
+            "NASA"
+          ]
+        },
+        {
+          "latent": 305,
+          "score": 0.0627,
+          "n_active": 267,
+          "examples": [
+            "ANNA LIVINGSTON",
+            "Anna Livingston",
+            "Anna Livingston"
+          ]
+        },
+        {
+          "latent": 450,
+          "score": 0.0621,
+          "n_active": 182,
+          "examples": [
+            "A. T. Quiller-Couch",
+            "A. T. Quiller-Couch",
+            "A. T. Quiller-Couch"
+          ]
+        },
+        {
+          "latent": 331,
+          "score": 0.0573,
+          "n_active": 183,
+          "examples": [
+            "Auntie May",
+            "Grace E. Sellon",
+            "Grace E. Sellon"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 119,
+      "n_kept": 432,
+      "n_removed": 80,
+      "threshold": 0.0708,
+      "passed_test": 0,
+      "removed_norm_ratio": 2.3225,
+      "var_share_kept": 0.4363,
+      "var_share_sae_error": 0.0036,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 397,
+          "score": 0.0454,
+          "n_active": 22,
+          "examples": [
+            "armour, armour",
+            "armour",
+            "ploughing"
+          ]
+        },
+        {
+          "latent": 0,
+          "score": 0.034,
+          "n_active": 36,
+          "examples": [
+            "panelled",
+            "judgement, judgement, judgement",
+            "centre, rumour"
+          ]
+        },
+        {
+          "latent": 380,
+          "score": 0.0287,
+          "n_active": 21,
+          "examples": [
+            "practising, recognise",
+            "practising",
+            "practising"
+          ]
+        },
+        {
+          "latent": 292,
+          "score": 0.0283,
+          "n_active": 24,
+          "examples": [
+            "theatre, theatre, theatre",
+            "theatre, theatre",
+            "prologue"
+          ]
+        },
+        {
+          "latent": 472,
+          "score": 0.0276,
+          "n_active": 26,
+          "examples": [
+            "programmes",
+            "travelled",
+            "travelled"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 315,
+      "n_removed": 197,
+      "threshold": 0.0694,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5191,
+      "var_share_kept": 0.437,
+      "var_share_sae_error": 0.2563,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 475,
+          "score": 0.0865,
+          "n_active": 163,
+          "examples": [
+            "This conception of repression once fixed, together with the distortion of the dream in relation to repressed psychical matter, we are in a position to give a ge",
+            "Who loves splashing? The Irrawaddy Dolphin loves splashing in Chilika Lake.\nWho loves dust baths? The Malabar Pied Hornbill loves a dust bath in the forest in D",
+            "What are their effects, for good and evil, upon modern literature? \nWe recognize the physical expression of love as itself no way impure or unclean: but as a pa"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0814,
+          "n_active": 199,
+          "examples": [
+            "What prompted these researchers to study the ecological aspects of a common species? Citizens often assume \"obvious roles\" for urban species, based on occasiona",
+            "On Feb. 4, 1917, an assembly composed of 200 Belgians speaking the Flemish language met and voted for the creation of a \"Council of Flanders.\" On March 3, this ",
+            "\"Madam,\" said the white rooster, bowing very low, \"your trouble is my own, \u2014 that is, I'm hungry, too. But we might be worse off. We might be in a box on our wa"
+          ]
+        },
+        {
+          "latent": 70,
+          "score": 0.0795,
+          "n_active": 238,
+          "examples": [
+            "His hope was not disappointed: for the stocking was found most bountifully filled; and Willie eagerly hastened to examine its contents. It was fortunate that he",
+            "He continued walking. He saw some splendid new clothes. He took off his clothes and put on the new ones. Then he thought about what the old woman had said. He t",
+            "Man, when he is young, prizes metaphysical explanations, because they make him see matters of the highest import in things he found disagreeable or contemptible"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.0729,
+          "n_active": 160,
+          "examples": [
+            "\"During the last spring a lady bee-keeper of Connecticut discovered these mites in her hives while investigating to learn the cause of their rapid depletion. Sh",
+            "There are 356 living turtle species on Earth. Turtles come in all shapes, sizes, and colors. Some of the differences between turtles may help them to survive be",
+            "One old woman especially loved the smells that drifted out of the bakery window every morning. This was Ma Shange who slept on a bench in the park every night. "
+          ]
+        },
+        {
+          "latent": 289,
+          "score": 0.0701,
+          "n_active": 107,
+          "examples": [
+            "Once upon a time, there lived a man who had plenty of everything \u2013 a large fertile farm, with cattle, sheep, and goats. But, as he grew old, he grew sad, becaus",
+            "Once upon a time there was a little red hen. She lived in a little white house and she had a little green garden. Every day she worked in the house and garden.\n",
+            "Once upon a time, there was a man who had three sons. The youngest son was the cleverest and his father liked him the most. Then the man realised that his two o"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 279,
+      "n_removed": 233,
+      "threshold": 0.0691,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.5858,
+      "var_share_kept": 0.4157,
+      "var_share_sae_error": 0.2071,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 499,
+          "score": 0.0763,
+          "n_active": 182,
+          "examples": [
+            "Computing_platform",
+            "Computer_program",
+            "Software_as_a_service"
+          ]
+        },
+        {
+          "latent": 184,
+          "score": 0.0695,
+          "n_active": 120,
+          "examples": [
+            "The Kitten That Forgot How to Mew",
+            "NAMING THE KITTEN",
+            "Cat and Dog:\nCat is yellow"
+          ]
+        },
+        {
+          "latent": 363,
+          "score": 0.0613,
+          "n_active": 188,
+          "examples": [
+            "Emma Watson\u2019s United Nations: \u201cHeForShe: Gender Equality is Your Issue, Too\u201d Speech",
+            "\"Etheldreda the Ready\"",
+            "RIVINA L\u00c6VIS"
+          ]
+        },
+        {
+          "latent": 82,
+          "score": 0.0601,
+          "n_active": 180,
+          "examples": [
+            "THE MAN IN THE MOON",
+            "Experiments in Binary Arithmetic",
+            "RAVAGES OF A RARE SCOLYTID BEETLE IN THE SUGAR MAPLES OF NORTHEASTERN NEW YORK"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.059,
+          "n_active": 223,
+          "examples": [
+            "DARKNESS AND LIGHT",
+            "Plague_of_Athens",
+            "Luck"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 268,
+      "n_removed": 244,
+      "threshold": 0.0781,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6659,
+      "var_share_kept": 0.4111,
+      "var_share_sae_error": 0.0552,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 419,
+          "score": 0.0568,
+          "n_active": 291,
+          "examples": [
+            "https://www.commonlit.org/texts/jackie-kennedy-onassis-an-icon-for-the-ages",
+            "https://beyondpenguins.ehe.osu.edu/issue/a-sense-of-place/the-top-and-bottom-of-the-world",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/ice-sculptures-23-text.pdf"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.0552,
+          "n_active": 64,
+          "examples": [
+            "https://www.commonlit.org/texts/how-boots-befooled-the-king",
+            "https://www.commonlit.org/texts/who-gets-to-be-president",
+            "https://en.wikipedia.org/wiki/Plague_of_Athens"
+          ]
+        },
+        {
+          "latent": 249,
+          "score": 0.0542,
+          "n_active": 41,
+          "examples": [
+            "http://www.gutenberg.org/files/15659/15659-h/15659-h.htm#THE_WOLF_AND_THE_SEVEN_YOUNG_KIDS",
+            "http://www.gutenberg.org/files/16522/16522-h/16522-h.htm#GOING_AFTER_COWS",
+            "http://www.gutenberg.org/files/15928/15928-h/15928-h.htm#THE_ANTS_DAIRY"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.0524,
+          "n_active": 506,
+          "examples": [
+            "https://simple.wikipedia.org/wiki/Video_camera",
+            "http://www.gutenberg.org/files/10436/10436-h/10436-h.htm",
+            "http://www.gutenberg.org/files/11319/11319-h/11319-h.htm#Joachim"
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0524,
+          "n_active": 301,
+          "examples": [
+            "http://www.gutenberg.org/cache/epub/7849/pg7849-images.html",
+            "http://www.gutenberg.org/cache/epub/7210/pg7210-images.html",
+            "http://www.gutenberg.org/cache/epub/7026/pg7026-images.html"
+          ]
+        }
+      ]
+    }
+  }
+}

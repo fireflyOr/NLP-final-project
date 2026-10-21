@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7134616389240224,
+  "test_error": 0.28653836107597763,
+  "course_metric": "auroc",
+  "course_score": 0.7134616389240225,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 97.58238005638123,
+  "diagnostics": {
+    "created_at": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 389,
+      "n_kept": 369,
+      "n_removed": 143,
+      "threshold": 0.0402,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.6193,
+      "var_share_kept": 0.5455,
+      "var_share_sae_error": 0.0109,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 265,
+          "score": 0.0673,
+          "n_active": 869,
+          "examples": [
+            "1970-01-01 00:00:01.427020750",
+            "1970-01-01 00:00:01.423015509",
+            "1970-01-01 00:00:01.423202161"
+          ]
+        },
+        {
+          "latent": 19,
+          "score": 0.067,
+          "n_active": 900,
+          "examples": [
+            "1970-01-01 00:00:01.423080547",
+            "1970-01-01 00:00:01.426563380",
+            "1970-01-01 00:00:01.423680372"
+          ]
+        },
+        {
+          "latent": 190,
+          "score": 0.0597,
+          "n_active": 236,
+          "examples": [
+            "1970-01-01 00:00:01.404720402",
+            "1970-01-01 00:00:01.404910450",
+            "1970-01-01 00:00:01.404314075"
+          ]
+        },
+        {
+          "latent": 332,
+          "score": 0.0591,
+          "n_active": 775,
+          "examples": [
+            "1970-01-01 00:00:01.364510007",
+            "1970-01-01 00:00:01.361402051",
+            "1970-01-01 00:00:01.362080819"
+          ]
+        },
+        {
+          "latent": 398,
+          "score": 0.0589,
+          "n_active": 716,
+          "examples": [
+            "1970-01-01 00:00:01.426002407",
+            "1970-01-01 00:00:01.427020750",
+            "1970-01-01 00:00:01.427140719"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 420,
+      "n_kept": 384,
+      "n_removed": 128,
+      "threshold": 0.0386,
+      "passed_test": 32,
+      "removed_norm_ratio": 0.4119,
+      "var_share_kept": 0.7418,
+      "var_share_sae_error": 0.0103,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 178,
+          "score": 0.0709,
+          "n_active": 1575,
+          "examples": [
+            "1970-01-01 00:00:01.342030210",
+            "1970-01-01 00:00:01.342828800",
+            "1970-01-01 00:00:01.342648800"
+          ]
+        },
+        {
+          "latent": 479,
+          "score": 0.0627,
+          "n_active": 718,
+          "examples": [
+            "1970-01-01 00:00:01.330732800",
+            "1970-01-01 00:00:01.330621209",
+            "1970-01-01 00:00:01.330632000"
+          ]
+        },
+        {
+          "latent": 332,
+          "score": 0.0614,
+          "n_active": 481,
+          "examples": [
+            "1970-01-01 00:00:01.363266127",
+            "1970-01-01 00:00:01.362872320",
+            "1970-01-01 00:00:01.367035140"
+          ]
+        },
+        {
+          "latent": 480,
+          "score": 0.0577,
+          "n_active": 3289,
+          "examples": [
+            "1970-01-01 00:00:01.267610340",
+            "1970-01-01 00:00:01.308610800",
+            "1970-01-01 00:00:01.431014104"
+          ]
+        },
+        {
+          "latent": 398,
+          "score": 0.0561,
+          "n_active": 1395,
+          "examples": [
+            "1970-01-01 00:00:01.428331401",
+            "1970-01-01 00:00:01.423450800",
+            "1970-01-01 00:00:01.423375140"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 364,
+      "n_removed": 148,
+      "threshold": 0.0408,
+      "passed_test": 31,
+      "removed_norm_ratio": 0.4107,
+      "var_share_kept": 0.4514,
+      "var_share_sae_error": 0.3025,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 270,
+          "score": 0.1099,
+          "n_active": 1538,
+          "examples": [
+            "\"I want to record my ten original songs that I've written about Love, Life experiences, and Bible Characters.\"",
+            "\"I would like to publish and market a book of poems about the wilderness times of my congregation and personal life.\"",
+            "\"I wrote and self published this book and now I really want to get this book noticed by readers that can relate to the story.\""
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.0719,
+          "n_active": 1430,
+          "examples": [
+            "\"Will this be the greatest podcast of all time??.....Look, i don't have all the answers all the time but what I will say is this....nope\"",
+            "\"HOW FAST, HOW FAR, HOW LONG CAN YOU RUN...\"",
+            "\"Just what is the greatest video game ever? We all have opinions but will probably never have an answer but here are 100 of the best.\""
+          ]
+        },
+        {
+          "latent": 449,
+          "score": 0.0702,
+          "n_active": 1119,
+          "examples": [
+            "\"The poster that helps you pick the perfect film to watch, features over 200 top movies, year of release and star rating.\"",
+            "\"A movie that will make New Jerseyans proud and have the rest of the country want to come visit.\"",
+            "\"A film about the art of grieving, and how it can make us better people for those who are still with us.\""
+          ]
+        },
+        {
+          "latent": 426,
+          "score": 0.0655,
+          "n_active": 494,
+          "examples": [
+            "\"The Lume Cube is a revolutionary little light. 1,500 Lumens Powerful in a 1.5\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
+            "\"The VicamPlus transforms any iPhone 5 into a professional, waterproof camera with 3 lenses. Compatible with all GoPro accessories.\"",
+            "\"ChargeDrive is the world's most versatile phone accessory. It's a Phone Charger Cable, Flash Drive, and Tripod Mount all in one.\""
+          ]
+        },
+        {
+          "latent": 109,
+          "score": 0.0643,
+          "n_active": 374,
+          "examples": [
+            "\"app\"",
+            "\"1\"",
+            "\"Project\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 354,
+      "n_removed": 158,
+      "threshold": 0.04,
+      "passed_test": 15,
+      "removed_norm_ratio": 0.3937,
+      "var_share_kept": 0.5155,
+      "var_share_sae_error": 0.2691,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 102,
+          "score": 0.0825,
+          "n_active": 5058,
+          "examples": [
+            "\"frames\"",
+            "\"seasons\"",
+            "\"cups\""
+          ]
+        },
+        {
+          "latent": 437,
+          "score": 0.0661,
+          "n_active": 986,
+          "examples": [
+            "\"chinatown-a-documentary-film-in-post-production\"",
+            "\"walking-without-limits-a-documentary-film\"",
+            "\"between-worlds-documentary-film-and-book\""
+          ]
+        },
+        {
+          "latent": 80,
+          "score": 0.054,
+          "n_active": 577,
+          "examples": [
+            "\"a-real-life-fiction\"",
+            "\"real-fruit-jewelry\"",
+            "\"real-modeling-and-acting-jobs\""
+          ]
+        },
+        {
+          "latent": 375,
+          "score": 0.0531,
+          "n_active": 545,
+          "examples": [
+            "\"the-roscos-full-length-album\"",
+            "\"full-length-music-album\"",
+            "\"run-boy-run-full-length-album\""
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.0516,
+          "n_active": 580,
+          "examples": [
+            "\"sharzet-social-networking-with-no-limits-web-site\"",
+            "\"oursinglelivescom-the-webseries\"",
+            "\"online-womens-resource-center\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 341,
+      "n_removed": 171,
+      "threshold": 0.0423,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.423,
+      "var_share_kept": 0.4682,
+      "var_share_sae_error": 0.291,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 112,
+          "score": 0.0833,
+          "n_active": 3895,
+          "examples": [
+            "\"GEORGE\"",
+            "\"Lily\"",
+            "\"ToY\""
+          ]
+        },
+        {
+          "latent": 58,
+          "score": 0.0826,
+          "n_active": 1009,
+          "examples": [
+            "\"After The  End - A Novel\"",
+            "\"Chad Johnson is finishing \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"Grace",
+            "\"The Remnants (Canceled)\""
+          ]
+        },
+        {
+          "latent": 172,
+          "score": 0.078,
+          "n_active": 1120,
+          "examples": [
+            "\"Jewelry Supply Funding (Canceled)\"",
+            "\"UNIVERSAL (Canceled)\"",
+            "\"Research Study (Canceled)\""
+          ]
+        },
+        {
+          "latent": 171,
+          "score": 0.0666,
+          "n_active": 645,
+          "examples": [
+            "\"Our Single Lives .Com - The Webseries\"",
+            "\"THE Website\"",
+            "\"The Soccer Academy Web Television Series\""
+          ]
+        },
+        {
+          "latent": 437,
+          "score": 0.0513,
+          "n_active": 1146,
+          "examples": [
+            "\"Native Tongue - The Film\"",
+            "\"The Find a Film Movie Poster\"",
+            "\"Stay (Student Film)\""
+          ]
+        }
+      ]
+    }
+  }
+}

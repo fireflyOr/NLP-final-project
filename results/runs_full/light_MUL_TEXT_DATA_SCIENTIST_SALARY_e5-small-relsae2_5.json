@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3725382669169968,
+  "test_error": 1.3725382669169968,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8006152995122945,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 83.0188262462616,
+  "diagnostics": {
+    "experience": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 448,
+      "n_kept": 512,
+      "n_removed": 0,
+      "threshold": 0.0465,
+      "passed_test": 419,
+      "removed_norm_ratio": 0.0,
+      "var_share_kept": 0.998,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 28,
+          "score": 0.4671,
+          "n_active": 1310,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "latent": 353,
+          "score": 0.4614,
+          "n_active": 975,
+          "examples": [
+            "0-4 yrs",
+            "0-4 yrs",
+            "0-4 yrs"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.4575,
+          "n_active": 764,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 57,
+          "score": 0.4565,
+          "n_active": 764,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "latent": 144,
+          "score": 0.4522,
+          "n_active": 1022,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 483,
+      "n_removed": 29,
+      "threshold": 0.0461,
+      "passed_test": 167,
+      "removed_norm_ratio": 0.0893,
+      "var_share_kept": 0.8498,
+      "var_share_sae_error": 0.122,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.2709,
+          "n_active": 2509,
+          "examples": [
+            " Hands-on experience ...",
+            " Proven experience in ...",
+            " If you are comfortable with ..."
+          ]
+        },
+        {
+          "latent": 2,
+          "score": 0.2665,
+          "n_active": 2222,
+          "examples": [
+            " He should be a good ...",
+            " Temporary Staff with HGS Limited     Location:  Khar  West, Mumbai & Vashi, ...",
+            "Responsible for all industry standard Design For Test (DFT) solutions for complex and low power chips ..."
+          ]
+        },
+        {
+          "latent": 82,
+          "score": 0.261,
+          "n_active": 2126,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.2604,
+          "n_active": 2174,
+          "examples": [
+            "To provide the required MIS, Reports and information at discussed frequency;Onboarding of new joinees as ...",
+            "Have expertise Netlist2GDSII or RTL2GDSII flows using Synopsys/Cadence/Mentor toolset in deep submicron ...",
+            "Please share your updated CV on seema.dalvi.consultant @nielsen.com if the required skill-sets match ..."
+          ]
+        },
+        {
+          "latent": 417,
+          "score": 0.2587,
+          "n_active": 2108,
+          "examples": [
+            "At Fingent, we believe that business software should be beautiful, usable and ...",
+            "At Fingent, we believe that business software should be beautiful, usable and ...",
+            "Aptara copy editors rigorously follow a publishers house style sheet, or optionally apply copy editing ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 469,
+      "n_removed": 43,
+      "threshold": 0.0453,
+      "passed_test": 150,
+      "removed_norm_ratio": 0.1517,
+      "var_share_kept": 0.8422,
+      "var_share_sae_error": 0.1051,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 324,
+          "score": 0.204,
+          "n_active": 775,
+          "examples": [
+            "Executive",
+            "Email Support Executive",
+            "Email Support Executive"
+          ]
+        },
+        {
+          "latent": 459,
+          "score": 0.1829,
+          "n_active": 275,
+          "examples": [
+            "German Language Expert - Voice Process",
+            "International Technical Support | International Voice Process.",
+            "Senior Analyst: Voice and Accent Training: Chandigarh"
+          ]
+        },
+        {
+          "latent": 189,
+          "score": 0.1822,
+          "n_active": 201,
+          "examples": [
+            "Vice President",
+            "Vice President - Sales",
+            "Vice President Finance"
+          ]
+        },
+        {
+          "latent": 468,
+          "score": 0.1694,
+          "n_active": 298,
+          "examples": [
+            "Biotechnology Walk In Interview",
+            "Biotechnology Walk In Interview",
+            "Walkin Interviews - Java Developer - 22nd to 31st Oct"
+          ]
+        },
+        {
+          "latent": 310,
+          "score": 0.1534,
+          "n_active": 372,
+          "examples": [
+            "VP - Marketing",
+            "Vp-analytics",
+            "Vp-strategic Analytics"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 465,
+      "n_removed": 47,
+      "threshold": 0.0459,
+      "passed_test": 177,
+      "removed_norm_ratio": 0.1478,
+      "var_share_kept": 0.8401,
+      "var_share_sae_error": 0.0986,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 90,
+          "score": 0.1761,
+          "n_active": 381,
+          "examples": [
+            "call center executive, Call Center, Cce, Call Center Agent...",
+            "call quality, call quality control, call qa, call quality assurance...",
+            "Quality Analyst, Call Audit, Call Calibration, call quality"
+          ]
+        },
+        {
+          "latent": 144,
+          "score": 0.1608,
+          "n_active": 265,
+          "examples": [
+            "voice analyst , voice research",
+            "BPO, International Voice, Voice Process, Quality Analysis, Quality Analyst,...",
+            "International Voice Process, Night Shift, Analytical Skills, Voice Process,..."
+          ]
+        },
+        {
+          "latent": 8,
+          "score": 0.1177,
+          "n_active": 219,
+          "examples": [
+            "Back Office, Backend, Computer Operating",
+            "Back Office, Backend, Computer Operating",
+            "part time, freelancing, data entry, present job, work from home..."
+          ]
+        },
+        {
+          "latent": 91,
+          "score": 0.1131,
+          "n_active": 211,
+          "examples": [
+            "fresher",
+            "fresher, graduate",
+            "fresher, graduate, mba fresher, b tech fresher, graduate fresher, trainee..."
+          ]
+        },
+        {
+          "latent": 80,
+          "score": 0.1109,
+          "n_active": 219,
+          "examples": [
+            "study abroad, overseas education, Counselling, universities...",
+            "study abroad, overseas education, Counselling, universities...",
+            "English, German, Translation, German Language Specialist..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 496,
+      "n_removed": 16,
+      "threshold": 0.0471,
+      "passed_test": 242,
+      "removed_norm_ratio": 0.0603,
+      "var_share_kept": 0.9578,
+      "var_share_sae_error": 0.0052,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 357,
+          "score": 0.1455,
+          "n_active": 3098,
+          "examples": [
+            "Bengaluru(Residency Road)",
+            "Bengaluru(Palace Road)",
+            "Bengaluru(Hoskote)"
+          ]
+        },
+        {
+          "latent": 201,
+          "score": 0.1338,
+          "n_active": 4792,
+          "examples": [
+            "Mumbai(Vidya Vihar West)",
+            "Pune(Rajgurunagar)",
+            "Mumbai(Wadala)"
+          ]
+        },
+        {
+          "latent": 43,
+          "score": 0.1274,
+          "n_active": 2172,
+          "examples": [
+            "Bengaluru(Palace Road)",
+            "Bengaluru(Sarjapur)",
+            "Bengaluru(Sarjapur)"
+          ]
+        },
+        {
+          "latent": 67,
+          "score": 0.1273,
+          "n_active": 657,
+          "examples": [
+            "Hyderabad, Bengaluru, Bhubaneshwar, Visakhapatnam, Vijayawada, Warangal, Guntur, Mumbai, Pune",
+            "Delhi NCR, Pune, Chandigarh, Delhi, Faridabad, Gurgaon, Jaipur, Lucknow, Noida",
+            "Pune, Bhopal, Jabalpur, Jaipur, Jaisalmer, Jalandhar, Jalgaon, Jamnagar, Jamshedpur"
+          ]
+        },
+        {
+          "latent": 65,
+          "score": 0.1218,
+          "n_active": 1926,
+          "examples": [
+            "Rajkot",
+            "Rajkot",
+            "Bengaluru(Mahadevpura)"
+          ]
+        }
+      ]
+    }
+  }
+}

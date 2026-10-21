@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8479060658999228,
+  "test_error": 0.8479060658999228,
+  "course_metric": "r2",
+  "course_score": 0.810667772173876,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 83.42619037628174,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 457,
+      "n_kept": 330,
+      "n_removed": 182,
+      "threshold": 0.0737,
+      "passed_test": 15,
+      "removed_norm_ratio": 0.3815,
+      "var_share_kept": 0.5842,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.1072,
+          "n_active": 49,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "latent": 427,
+          "score": 0.1002,
+          "n_active": 65,
+          "examples": [
+            "The Peace Egg and Other tales",
+            "Stories from the Ballads\nTold to the Children",
+            "Stories from the Ballads\nTold to the Children"
+          ]
+        },
+        {
+          "latent": 325,
+          "score": 0.0953,
+          "n_active": 120,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 16,
+          "score": 0.0952,
+          "n_active": 33,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "latent": 188,
+          "score": 0.0933,
+          "n_active": 34,
+          "examples": [
+            "African Storybook Level 2",
+            "African Storybook Level 2",
+            "African Storybook Level 2"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 277,
+      "n_removed": 235,
+      "threshold": 0.076,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6887,
+      "var_share_kept": 0.5172,
+      "var_share_sae_error": 0.0898,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 460,
+          "score": 0.0565,
+          "n_active": 228,
+          "examples": [
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes"
+          ]
+        },
+        {
+          "latent": 360,
+          "score": 0.056,
+          "n_active": 148,
+          "examples": [
+            "From the San Francisco Call",
+            "UNCLE SAM.",
+            "F. H."
+          ]
+        },
+        {
+          "latent": 41,
+          "score": 0.0539,
+          "n_active": 268,
+          "examples": [
+            "Sophie Swett",
+            "By Sophie Swett.",
+            "Sophie May"
+          ]
+        },
+        {
+          "latent": 501,
+          "score": 0.0517,
+          "n_active": 248,
+          "examples": [
+            "From Information Supplied by Italian Navy Department",
+            "Pedro Morais, Ester Dias, In\u00eas Cerveira, Stephanie M. Carlson, Rachel C. Johnson, & Anna M. Sturrock",
+            "Bahtiyar Yilmaz, Joana C. Carvalho, & Marta Marialva"
+          ]
+        },
+        {
+          "latent": 342,
+          "score": 0.0506,
+          "n_active": 116,
+          "examples": [
+            "Arthur M. Winfield",
+            "Arthur M. Winfield",
+            "Arthur M. Winfield"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 144,
+      "n_kept": 434,
+      "n_removed": 78,
+      "threshold": 0.0687,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.3343,
+      "var_share_kept": 0.6943,
+      "var_share_sae_error": 0.0014,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 361,
+          "score": 0.0343,
+          "n_active": 40,
+          "examples": [
+            "pretence, marvelled",
+            "marvellous",
+            "marvellous"
+          ]
+        },
+        {
+          "latent": 491,
+          "score": 0.0336,
+          "n_active": 24,
+          "examples": [
+            "kilometres, centimetre",
+            "moustaches, moustaches",
+            "kilometres"
+          ]
+        },
+        {
+          "latent": 448,
+          "score": 0.0316,
+          "n_active": 2560,
+          "examples": [
+            "parlour, honoured, parlour",
+            "parlour",
+            "parlour"
+          ]
+        },
+        {
+          "latent": 452,
+          "score": 0.0311,
+          "n_active": 31,
+          "examples": [
+            "gaoler",
+            "tonne",
+            "sceptre"
+          ]
+        },
+        {
+          "latent": 77,
+          "score": 0.0284,
+          "n_active": 20,
+          "examples": [
+            "kilometres",
+            "kilometres",
+            "metres"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 319,
+      "n_removed": 193,
+      "threshold": 0.0739,
+      "passed_test": 4,
+      "removed_norm_ratio": 0.5024,
+      "var_share_kept": 0.4498,
+      "var_share_sae_error": 0.2571,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 23,
+          "score": 0.0842,
+          "n_active": 192,
+          "examples": [
+            "Groton Bay, as every student of geography knows, is a nearly landlocked, well sheltered body of water, some seven miles long and three wide. At the mouth of the",
+            "Le Beau Disconus leapt on his war-horse and took his arms, and rode towards the fire. When he drew nigh he saw there two giants.\nThe maiden cried aloud for help",
+            "Fatima arrived the next day. Max brought her out in a covered basket, lined with padded crimson satin. Max likes cats and Aunt Cynthia. He explained how we were"
+          ]
+        },
+        {
+          "latent": 344,
+          "score": 0.0805,
+          "n_active": 224,
+          "examples": [
+            "My Dear Lucy:\nI have no news. We live in the drawing-room, looking out at the rain. We cannot go out in this frightful weather, so we have theatricals. How stup",
+            "They were the 'Godlike Kings', and when old Hobden piled some comfortable brushwood between the big wooden knees of Volaterrae, they called him 'Hands of Giants",
+            "When you think of flamingos, you always remember their beautiful pink color. Amazingly, the birds get this color from the food they eat! Flamingos eat organisms"
+          ]
+        },
+        {
+          "latent": 299,
+          "score": 0.0771,
+          "n_active": 169,
+          "examples": [
+            "The best kind of tea to use if teacup reading is to be followed is undoubtedly China tea, the original tea imported into this country and still the best for all",
+            "One day the children were out in the fields, running races, picking flowers, and making daisy-chains!\nWhen they began to feel tired and hungry, they got milk an",
+            "A glorious sensation of freedom came over me as I felt my horse's springy step,\u2014a sensation which brought powerfully back the memory of those days when I first "
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0762,
+          "n_active": 156,
+          "examples": [
+            "The catbird belongs to the family of thrushes, and is one of the most peculiar of our American birds. It is dark colored, with brown head and neck, and greenish",
+            "On one of her voyages from China, the Pitt, East Indiaman, had on board, among her passengers, a young tiger. He appeared to be as harmless and playful as a kit",
+            "Lin-Manuel Miranda often cites his childhood years as a source of inspiration for his work. He was born on January 16, 1980, in Washington Heights, a majority-L"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.073,
+          "n_active": 188,
+          "examples": [
+            "Once upon a time, there lived a man who had plenty of everything \u2013 a large fertile farm, with cattle, sheep, and goats. But, as he grew old, he grew sad, becaus",
+            "Once upon a time the Forest was in a great commotion. Early in the evening the wise old Cedars had shaken their heads and told of strange things that were to ha",
+            "Once upon a time, Lion was the strongest and most feared of all the animals. He would catch other animals and eat them. But one morning while he was looking for"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 287,
+      "n_removed": 225,
+      "threshold": 0.0701,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.5754,
+      "var_share_kept": 0.4213,
+      "var_share_sae_error": 0.2069,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 152,
+          "score": 0.0756,
+          "n_active": 166,
+          "examples": [
+            "Duke Ellington",
+            "JOHN SINGER SARGENT",
+            "David Crockett"
+          ]
+        },
+        {
+          "latent": 418,
+          "score": 0.073,
+          "n_active": 171,
+          "examples": [
+            "A Final Reckoning\nA Tale of Bush Life in Australia",
+            "SHIPPING OSTRICHES FROM CAPE TOWN TO AUSTRALIA.",
+            "Four Months of War"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.058,
+          "n_active": 136,
+          "examples": [
+            "FDR's First Inaugural Address",
+            "Critical Miscellanies (Vol. 1 of 3), Essay 1: Robespierre",
+            "Havilah's first book"
+          ]
+        },
+        {
+          "latent": 132,
+          "score": 0.0576,
+          "n_active": 113,
+          "examples": [
+            "LATONA AND THE RUSTICS",
+            "Searching for the spirit of Spring\n",
+            "The Recovery Of The Hispaniola"
+          ]
+        },
+        {
+          "latent": 223,
+          "score": 0.0571,
+          "n_active": 94,
+          "examples": [
+            "Dr. Meyer-Gerhard's Mission",
+            "From Lithuania to the Chicago Stockyards",
+            "The Huge Hunter\nOr, the Steam Man of the Prairies"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 286,
+      "n_removed": 226,
+      "threshold": 0.0728,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6108,
+      "var_share_kept": 0.4685,
+      "var_share_sae_error": 0.0556,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 387,
+          "score": 0.0683,
+          "n_active": 82,
+          "examples": [
+            "http://www.gutenberg.org/files/14170/14170-h/14170-h.htm#A_SMART_HORSE",
+            "https://www.commonlit.org/texts/from-the-wild-horses-of-assateague-island",
+            "https://www.commonlit.org/texts/the-fox-the-hen-and-the-drum"
+          ]
+        },
+        {
+          "latent": 15,
+          "score": 0.0662,
+          "n_active": 51,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Food_chain",
+            "http://www.gutenberg.org/files/19909/19909-h/19909-h.htm#A_MYSTERY_IN_THE_KITCHEN",
+            "http://www.gutenberg.org/files/14170/14170-h/14170-h.htm#ABOUT_FLAX_BARLEY_AND_RYE"
+          ]
+        },
+        {
+          "latent": 485,
+          "score": 0.0583,
+          "n_active": 132,
+          "examples": [
+            "https://www.commonlit.org/texts/excerpt-from-peter-pan-when-wendy-grew-up",
+            "https://www.commonlit.org/texts/the-1972-andes-flight-disaster",
+            "https://www.commonlit.org/texts/from-lithuania-to-the-chicago-stockyards"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.0582,
+          "n_active": 326,
+          "examples": [
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/partners-23-text.pdf",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/ice-sculptures-23-text.pdf",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/sanderlings-23-text.pdf"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0564,
+          "n_active": 286,
+          "examples": [
+            "http://www.online-literature.com/edward-hale/how-to-do-it/",
+            "http://www.online-literature.com/darwin/formation-of-vegetable-mould/",
+            "https://www.commonlit.org/texts/excerpt-from-peter-pan-when-wendy-grew-up"
+          ]
+        }
+      ]
+    }
+  }
+}

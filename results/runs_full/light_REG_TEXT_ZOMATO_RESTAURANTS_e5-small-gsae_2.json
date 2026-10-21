@@ -1,0 +1,550 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.20575983321346772,
+  "test_error": 0.20575983321346772,
+  "course_metric": "r2",
+  "course_score": 0.7827583661384919,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 117.70337557792664,
+  "diagnostics": {
+    "address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2015,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 998,
+      "n_removed": 999,
+      "var_share_removed": 0.322,
+      "var_share_sae_error": 0.0369,
+      "top": [
+        {
+          "group": 14,
+          "latents": [
+            1136,
+            1902
+          ],
+          "gain_margin": 304.52,
+          "examples": [
+            "13, A4 Sharavathi Block, NGV, Koramangala 6th Block, Bangalore",
+            "503, 6th Main, 6th Block, Koramangala 6th Block, Bangalore",
+            "503, 6th Main, 6th Block, Koramangala 6th Block, Bangalore"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            1180,
+            1666
+          ],
+          "gain_margin": 198.35,
+          "examples": [
+            "648, Rajaram Mohan Roy Road",
+            "648, Rajaram Mohan Roy Road",
+            "Sarjapura Main Road Kaikondrahali Sarjapur Road, Bangalore"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            722,
+            1997
+          ],
+          "gain_margin": 195.19,
+          "examples": [
+            "NS Palya, Stage 2, BTM Layout, Bangalore",
+            "15, 16th Main Road, BTM Layout, 1st Stage, 1st Phase, BTM, Bangalore",
+            "15, 16th Main Road, BTM Layout, 1st Stage, 1st Phase, BTM, Bangalore"
+          ]
+        },
+        {
+          "group": 8,
+          "latents": [
+            384,
+            1682,
+            1900
+          ],
+          "gain_margin": 190.74,
+          "examples": [
+            "3, Third Floor, Vega City Mall, Bannerghatta Road, Bangalore",
+            "3, Third Floor, Vega City Mall, Bannerghatta Road, Bangalore",
+            "3, Third Floor, Vega City Mall, Bannerghatta Road, Bangalore"
+          ]
+        },
+        {
+          "group": 2010,
+          "latents": [
+            959
+          ],
+          "gain_margin": 167.58,
+          "examples": [
+            "418/9, 1st Cross, Green Leaf Layout, 80 Feet Road, 4th Block, Near blue dart office, Koramangala, Bangalore",
+            "418/9, 1st Cross, Green Leaf Layout, 80 Feet Road, 4th Block, Near blue dart office, Koramangala, Bangalore",
+            "418/9, 1st Cross, Green Leaf Layout, 80 Feet Road, Near Blue Dart Office, Koramangala 4th Block, Bangalore"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1155,
+      "n_groups": 1131,
+      "n_multi_groups": 20,
+      "n_groups_dropped": 678,
+      "n_removed": 679,
+      "var_share_removed": 0.0912,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 12,
+          "latents": [
+            200,
+            778
+          ],
+          "gain_margin": 1116.47,
+          "examples": [
+            "Chinese",
+            "Chinese",
+            "Chinese"
+          ]
+        },
+        {
+          "group": 33,
+          "latents": [
+            266,
+            555
+          ],
+          "gain_margin": 761.03,
+          "examples": [
+            "North Indian",
+            "North Indian",
+            "North Indian"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            31,
+            735,
+            1932
+          ],
+          "gain_margin": 681.61,
+          "examples": [
+            "Biryani, Kerala, Mughlai, Street Food, North Indian, Chinese, South Indian, Andhra",
+            "Biryani, Kerala, Mughlai, Street Food, North Indian, Chinese, South Indian, Andhra",
+            "Biryani, Kerala, Mughlai, Street Food, North Indian, Chinese, South Indian, Andhra"
+          ]
+        },
+        {
+          "group": 7,
+          "latents": [
+            304,
+            588
+          ],
+          "gain_margin": 674.41,
+          "examples": [
+            "Desserts",
+            "Desserts",
+            "Desserts"
+          ]
+        },
+        {
+          "group": 641,
+          "latents": [
+            333
+          ],
+          "gain_margin": 385.83,
+          "examples": [
+            "Beverages, Bubble Tea, Desserts",
+            "Beverages, Tea",
+            "Beverages, Tea"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1693,
+      "n_groups": 1662,
+      "n_multi_groups": 23,
+      "n_groups_dropped": 1100,
+      "n_removed": 1105,
+      "var_share_removed": 0.1522,
+      "var_share_sae_error": 0.0044,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            67,
+            609,
+            768
+          ],
+          "gain_margin": 6604.59,
+          "examples": [
+            "Vegetarian",
+            "Panipuri",
+            "Panipuri"
+          ]
+        },
+        {
+          "group": 1256,
+          "latents": [
+            891
+          ],
+          "gain_margin": 2415.85,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 303,
+          "latents": [
+            1723
+          ],
+          "gain_margin": 1634.87,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 1350,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 1228.8,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 680,
+          "latents": [
+            1458
+          ],
+          "gain_margin": 1215.55,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1401,
+      "n_groups": 1401,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1109,
+      "n_removed": 1109,
+      "var_share_removed": 0.4366,
+      "var_share_sae_error": 0.0055,
+      "top": [
+        {
+          "group": 1390,
+          "latents": [
+            532
+          ],
+          "gain_margin": 365.53,
+          "examples": [
+            "['Paneer Chilli', 'Leg Chicken Fry [2 Pieces]', 'Chilli Chicken [Regular]', 'Chilli Chicken', 'Aloo Gobhi', 'Paneer Butter Masala', 'Kadhai Paneer', 'Chilli Pan",
+            "['Roi Tawa Fry', 'Green Peas Masala', 'Special Dalma', 'Chicken Kasa Dry [4 Pieces]', 'Hyderabadi Chicken Dum Biriyani', 'Tomato Soup', 'Veg Manchow Soup', 'Veg",
+            "['Aloo Paratha', 'Punjabi Thali', 'Shahi Thali', 'Paratha Combo', '4 Stuffed Paratha Combo [Serves 2]', 'Plain Rice with Yellow Dal', 'Chicken Thali', 'Veg Frie"
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            1417
+          ],
+          "gain_margin": 210.89,
+          "examples": [
+            "['Gujiya (Pack of 5)', 'Thandai (Serves 1)', 'Gujiya + Thandai Combo', 'Barbeque Chicken Wrap', 'Masala Paneer Tikka Wrap', 'Cheesy Corn Salsa Wrap', 'Egg Rice ",
+            "['Chole Kulcha Meal', 'Upvas Aloo Paratha With Dahi', 'Singhada Aloo Paratha with Hare Tamatar Ki Sabji', 'Smoked Butter Chicken Combo', 'Paneer Methi Chaman Co",
+            "['Rasgulla', 'Rasmalai', 'Matka Rabdi', 'Kesar Badam Milk', 'Laddu', 'Balushahi', 'Besan Laddu', 'Mysore Pak', 'Coconut Barfi', 'Soan Papdi', 'Ajmeri Kalakand',"
+          ]
+        },
+        {
+          "group": 1358,
+          "latents": [
+            283
+          ],
+          "gain_margin": 166.92,
+          "examples": [
+            "['Plate Meal', 'Carrier Meal', 'Full Meal', 'Non Veg Combo Meal', 'Biryani Rice', 'Mushroom Biryani', 'Veg Biryani', 'Egg Biryani', 'Chicken Biryani [Family Pac",
+            "['Chicken 65', 'Veg Biryani', 'Egg Biryani', 'Chicken Biryani', 'Mutton Biryani', 'Cream of Tomato Soup', 'Cream of Veg Soup', 'Cream of Mushroom Soup', 'Sweet ",
+            "['Veg Biryani', 'Egg Biryani', 'Hyderabadi Chicken Biryani', 'Boneless Hyderabadi Chicken Biryani', 'Chicken Lollipop Biryani', 'Hyderabadi Mutton Biryani', 'Pr"
+          ]
+        },
+        {
+          "group": 698,
+          "latents": [
+            755
+          ],
+          "gain_margin": 154.96,
+          "examples": [
+            "['Dal Fry', 'Paneer Butter Masala', 'Butter Chicken', 'Kadai Chicken', 'Chicken Hyderabadi', 'Tandoori Chicken', 'Gym Special Tandoori', 'Kalmi Kabab', 'Tandoor",
+            "['Chicken Kabab [5 Pieces]', 'Vegetable Biryani', 'Chicken Biryani', 'Veg Biryani Combo', 'Chicken Biryani Combo', 'Veg Meal Combo', 'Egg Meal Combo', 'Chicken ",
+            "['Crispy Chicken', 'Grilled Chicken', 'Chicken Kabab Oil Fried', 'Boneless Malai Tikka [5 Pieces]', 'Tandoori Chicken', 'Kalmi Kabab', 'Chicken Tandoori Kabab ["
+          ]
+        },
+        {
+          "group": 1377,
+          "latents": [
+            301
+          ],
+          "gain_margin": 133.29,
+          "examples": [
+            "['Tomato Soup', 'Mushroom Soup', 'Veg Clear Soup', 'Veg Hot n Sour Soup', 'Veg Manchow Soup', 'Veg Sweet Corn Soup', 'Veg Lemon Coriander Soup', 'Cream of Mushr",
+            "['Peshawari Tandoori Chicken', 'Mutton Seekh Kebab', 'Chicken Kebab', 'Al Faham Chicken', 'Veg Kofta Curry', 'Veg Manchow Soup', 'Veg Hot N Sour Soup', 'Veg Swe",
+            "['Tandoori Chicken', 'Paneer Manchurian Dry', 'Grilled Chicken', 'Paneer Butter Masala', 'Mushroom Masala', 'Boneless Butter Chicken Gravy', 'Kerala Paratha', '"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2045,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 964,
+      "n_removed": 964,
+      "var_share_removed": 0.3996,
+      "var_share_sae_error": 0.0301,
+      "top": [
+        {
+          "group": 1021,
+          "latents": [
+            1213
+          ],
+          "gain_margin": 306.25,
+          "examples": [
+            "Imperial Restaurant",
+            "Imperial Restaurant",
+            "Imperial Restaurant"
+          ]
+        },
+        {
+          "group": 183,
+          "latents": [
+            1900
+          ],
+          "gain_margin": 236.8,
+          "examples": [
+            "Mr. Meetharam",
+            "Mr. Meetharam",
+            "Mr. Meetharam"
+          ]
+        },
+        {
+          "group": 1847,
+          "latents": [
+            955
+          ],
+          "gain_margin": 201.71,
+          "examples": [
+            "Night Cafe",
+            "Night Panda",
+            "Night Panda"
+          ]
+        },
+        {
+          "group": 1067,
+          "latents": [
+            383
+          ],
+          "gain_margin": 200.67,
+          "examples": [
+            "Cochin Connection",
+            "Cochin Connection",
+            "Food Junction"
+          ]
+        },
+        {
+          "group": 688,
+          "latents": [
+            1466
+          ],
+          "gain_margin": 198.95,
+          "examples": [
+            "Aathithya",
+            "Aathithya",
+            "Aaha"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1286,
+      "n_groups": 1214,
+      "n_multi_groups": 65,
+      "n_groups_dropped": 654,
+      "n_removed": 660,
+      "var_share_removed": 0.0991,
+      "var_share_sae_error": 0.0064,
+      "top": [
+        {
+          "group": 515,
+          "latents": [
+            1091
+          ],
+          "gain_margin": 346.64,
+          "examples": [
+            "080 49653130",
+            "080 49653030",
+            "080 49653030"
+          ]
+        },
+        {
+          "group": 1118,
+          "latents": [
+            867
+          ],
+          "gain_margin": 314.32,
+          "examples": [
+            "080 49653014",
+            "080 49653014",
+            "080 49653014"
+          ]
+        },
+        {
+          "group": 790,
+          "latents": [
+            200
+          ],
+          "gain_margin": 307.21,
+          "examples": [
+            "+91 9066696999",
+            "+91 9066696999",
+            "+91 8049994999"
+          ]
+        },
+        {
+          "group": 210,
+          "latents": [
+            1999
+          ],
+          "gain_margin": 295.09,
+          "examples": [
+            "080 49148000",
+            "080 49148000",
+            "080 49148000"
+          ]
+        },
+        {
+          "group": 38,
+          "latents": [
+            393,
+            813
+          ],
+          "gain_margin": 285.42,
+          "examples": [
+            "080 49722220",
+            "080 49722220",
+            "+91 9682222100"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2044,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1060,
+      "n_removed": 1060,
+      "var_share_removed": 0.353,
+      "var_share_sae_error": 0.0932,
+      "top": [
+        {
+          "group": 992,
+          "latents": [
+            1254
+          ],
+          "gain_margin": 598.78,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  quality is not good. I got different item.'), ('Rated 5.0', 'RATED\\n  good'), ('Rated 3.0', 'RATED\\n  food is very spicy'), ('Rated 5.0",
+            "[('Rated 1.0', 'RATED\\n  not at all good, tasteless worst biryani I have ever had'), ('Rated 3.0', 'RATED\\n  too late'), ('Rated 1.0', 'RATED\\n  ordered Hyderab",
+            "[('Rated 5.0', 'RATED\\n  yummy food very nice keep it up'), ('Rated 5.0', 'RATED\\n  happy to order ?'), ('Rated 2.0', \"RATED\\n  it's not that much of taste\"), ("
+          ]
+        },
+        {
+          "group": 518,
+          "latents": [
+            1553
+          ],
+          "gain_margin": 510.07,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  One of the worst food I ever had in my life. We ordered fried fried rice and munchurian. Chilly chicken. Both the dishes were smelling ",
+            "[('Rated 4.0', 'RATED\\n  Perfectly prepared breakfast. Scrabble eggs was mouth watering, sausage and chicken bacon was well prepared,good portion they serve. He",
+            "[('Rated 4.0', 'RATED\\n  Perfectly prepared breakfast. Scrabble eggs was mouth watering, sausage and chicken bacon was well prepared,good portion they serve. He"
+          ]
+        },
+        {
+          "group": 1617,
+          "latents": [
+            776
+          ],
+          "gain_margin": 469.18,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  Very cheap and dirty place.\\nI won\u00c3\u0083\\x83\u00c3\u0082\\x83\u00c3\u0083\\x82\u00c3\u0082\\x83\u00c3\u0083\\x83\u00c3\u0082\\x82\u00c3\u0083\\x82\u00c3\u0082\u00c2\u00a2\u00c3\u0083\\x83\u00c3\u0082\\x83\u00c3\u0083\\x82\u00c3\u0082\\x82\u00c3\u0083\\x83\u00c3\u0082\\x82\u00c3\u0083\\x82\u00c3\u0082\\x80\u00c3\u0083\\x83\u00c3",
+            "[('Rated 1.0', 'RATED\\n  Very cheap and dirty place.\\nI won\u00c3\u0083\\x83\u00c3\u0082\\x83\u00c3\u0083\\x82\u00c3\u0082\\x83\u00c3\u0083\\x83\u00c3\u0082\\x82\u00c3\u0083\\x82\u00c3\u0082\u00c2\u00a2\u00c3\u0083\\x83\u00c3\u0082\\x83\u00c3\u0083\\x82\u00c3\u0082\\x82\u00c3\u0083\\x83\u00c3\u0082\\x82\u00c3\u0083\\x82\u00c3\u0082\\x80\u00c3\u0083\\x83\u00c3",
+            "[('Rated 1.0', 'RATED\\n  Very cheap and dirty place.\\nI won\u00c3\u0083\\x83\u00c3\u0082\\x83\u00c3\u0083\\x82\u00c3\u0082\\x83\u00c3\u0083\\x83\u00c3\u0082\\x82\u00c3\u0083\\x82\u00c3\u0082\u00c2\u00a2\u00c3\u0083\\x83\u00c3\u0082\\x83\u00c3\u0083\\x82\u00c3\u0082\\x82\u00c3\u0083\\x83\u00c3\u0082\\x82\u00c3\u0083\\x82\u00c3\u0082\\x80\u00c3\u0083\\x83\u00c3"
+          ]
+        },
+        {
+          "group": 1424,
+          "latents": [
+            418
+          ],
+          "gain_margin": 426.92,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  Not happy with the services and food, each starters had an interval of 10mins with very minimal servings, food was not upto the mark, n",
+            "[('Rated 1.0', 'RATED\\n  Not happy with the services and food, each starters had an interval of 10mins with very minimal servings, food was not upto the mark, n",
+            "[('Rated 5.0', \"RATED\\n  Nice place. It's a franchise of Bombay Haji Ali Juice centre. SITAPHAL cream was yum. Also the faloodas and other juices are good. Can "
+          ]
+        },
+        {
+          "group": 1007,
+          "latents": [
+            873
+          ],
+          "gain_margin": 389.07,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  I went by the rating and ordered a pizza , there are pizza dough ketchup and pizza cheese , no concept of toppings , worst thing I've e",
+            "[('Rated 4.0', 'RATED\\n  I had ordered a veg fried rice combo From here, I had received veg fried rice and baby corn gravy and both tasted delicious and cost wa",
+            "[('Rated 4.0', 'RATED\\n  I had ordered a veg fried rice combo From here, I had received veg fried rice and baby corn gravy and both tasted delicious and cost wa"
+          ]
+        }
+      ]
+    }
+  }
+}

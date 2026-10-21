@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2799606925179996,
+  "test_error": 1.2799606925179996,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9742549550608726,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 179.66029357910156,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1407,
+      "n_groups": 1384,
+      "n_multi_groups": 23,
+      "n_groups_dropped": 192,
+      "n_removed": 192,
+      "var_share_removed": 0.0094,
+      "var_share_sae_error": 0.0256,
+      "top": [
+        {
+          "group": 194,
+          "latents": [
+            1795
+          ],
+          "gain_margin": 11537.36,
+          "examples": [
+            "Delicate but inviting aromas suggest Spanish broom, stone fruit and lychee. The palate is round but vibrant, boasting juicy white peach, creamy green apple, ene",
+            "Flavors are followed by intense crisp citrus fruit. This is a lively style, very fresh with a delicious tang of orange zest, light caramel and vibrant acidity.",
+            "A blend of Vermentino, Viognier and Petit Manseng, this charming white opens with aromas of Spanish broom, Mediterranean brush, beeswax and apricot. The palate "
+          ]
+        },
+        {
+          "group": 1113,
+          "latents": [
+            15
+          ],
+          "gain_margin": 8568.42,
+          "examples": [
+            "There's no denying this wine's appeal with its aromas and flavors of dark fruit, caf\u00e9 au lait, earth and herbs. It's restrained yet flavorful, with a lingering,",
+            "Spicy clove, pepper and a crunch of tannin characterize this full-bodied, 100% varietal wine that feels both leathery and herbal. Cassis and red currant notes a",
+            "Coming from a warmer slice of the upper Santa Ynez Valley, this wine by the Fess Parker family shows black plums, hot gravel, dark chocolate and black peppercor"
+          ]
+        },
+        {
+          "group": 295,
+          "latents": [
+            1449
+          ],
+          "gain_margin": 8445.2,
+          "examples": [
+            "This is an intense expression of cola and cinnamon stick, provocatively spicy on the tongue. Boldly ripe and full bodied, it unpacks layers upon layers of baked",
+            "Just beautiful. Showcases true Russian River characteristics of dryness, acidity and, in this vintage, exceptional ripeness without too much alcohol. Silky and ",
+            "It's dry, silky and crisp, with pleasant sour cherry candy, pomegranate and rhubarb flavors. Drink now, although you do want to decant it for an hour or two."
+          ]
+        },
+        {
+          "group": 1365,
+          "latents": [
+            694
+          ],
+          "gain_margin": 8382.84,
+          "examples": [
+            "Full in the mouth, round and rich, the wine is finely structured, fresh and ripe at the same time. Delicious.",
+            "A nice Russian River Chard, firm in acidic minerals, with an edge of dried herbs and wood char to the pineapple, green apple and cream caramel flavors.",
+            "The wine is pretty basic, with buttered toast, vanilla bean, brown sugar and juicy pineapple and orange flavors."
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1693,
+            2023
+          ],
+          "gain_margin": 7258.85,
+          "examples": [
+            "Thin and low in aromatic impact, this luminous white blend of Falanghina, Greco and Fiano delivers measured tones of exotic fruit, pear and honeysuckle. The win",
+            "Braide Alte is a beautiful blend of Sauvignon, Chardonnay, Picolit and Moscato Giallo (some of the main white grapes used in northern Italy) that shows sophisti",
+            "Clean and crisp aromas of Asian pear, lemongrass, honeysuckle, passion fruit and green plum show on the nose of this blend of 64% S\u00e9millon and 36% Sauvignon Bla"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 719,
+      "n_groups": 719,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 606,
+      "n_removed": 606,
+      "var_share_removed": 0.6819,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 468,
+          "latents": [
+            415
+          ],
+          "gain_margin": 4591.48,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 128,
+          "latents": [
+            1272
+          ],
+          "gain_margin": 3202.29,
+          "examples": [
+            "Alentejano",
+            "Alentejano",
+            "Alentejano"
+          ]
+        },
+        {
+          "group": 361,
+          "latents": [
+            477
+          ],
+          "gain_margin": 2946.86,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 591,
+          "latents": [
+            565
+          ],
+          "gain_margin": 2816.2,
+          "examples": [
+            "Portuguese Table Wine",
+            "Portuguese Table Wine",
+            "Portuguese Table Wine"
+          ]
+        },
+        {
+          "group": 150,
+          "latents": [
+            1722
+          ],
+          "gain_margin": 2391.9,
+          "examples": [
+            "Duriense",
+            "Vinho Verde",
+            "Vinho Verde"
+          ]
+        }
+      ]
+    }
+  }
+}

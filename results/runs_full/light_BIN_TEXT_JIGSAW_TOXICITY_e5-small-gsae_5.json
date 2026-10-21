@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7847971096619951,
+  "test_error": 0.21520289033800488,
+  "course_metric": "auroc",
+  "course_score": 0.7847971096619951,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 36.99937200546265,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1400,
+      "n_removed": 1400,
+      "var_share_removed": 0.4452,
+      "var_share_sae_error": 0.1735,
+      "top": [
+        {
+          "group": 259,
+          "latents": [
+            1867
+          ],
+          "gain_margin": 869.1,
+          "examples": [
+            "This is a really, really stupid man.",
+            "She is gross.",
+            "It is a pretty stupid situation."
+          ]
+        },
+        {
+          "group": 1809,
+          "latents": [
+            614
+          ],
+          "gain_margin": 496.84,
+          "examples": [
+            "Oh, you poor little thing!",
+            "TWO scumbags entered the home.  What about the second one?",
+            "Don't forget to run over cyclists, too, Dicky."
+          ]
+        },
+        {
+          "group": 1754,
+          "latents": [
+            599
+          ],
+          "gain_margin": 421.55,
+          "examples": [
+            "Starbucks as a political player? \n\nBizarre.",
+            "Oh the actions of thieves and the comments of clowns.",
+            "Lynn;  show some leadership for a change instead of this corporate welfare program called SB21.  You are the problem if you don't."
+          ]
+        },
+        {
+          "group": 1148,
+          "latents": [
+            1110
+          ],
+          "gain_margin": 402.07,
+          "examples": [
+            "She meets the criteria to be a racist , pitiful .",
+            "Wilson is a freakshow, and that isn't Racist, just truthful. Everything she has done is underlain by political motives.",
+            "As I said racist spoken by a racist."
+          ]
+        },
+        {
+          "group": 2043,
+          "latents": [
+            1049
+          ],
+          "gain_margin": 320.47,
+          "examples": [
+            "Trump is the product of American CONSERVATISM.",
+            "Trump is the kind of guy who rips the scabs off other people's wounds.",
+            "Trump, the malignant narcissist, mentally deficient sociopath and disingenuous political degenerate, was in Texas today for more photo op selfies and more empty"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 788,
+      "n_groups": 734,
+      "n_multi_groups": 46,
+      "n_groups_dropped": 522,
+      "n_removed": 553,
+      "var_share_removed": 0.6137,
+      "var_share_sae_error": 0.016,
+      "top": [
+        {
+          "group": 317,
+          "latents": [
+            1031
+          ],
+          "gain_margin": 143.02,
+          "examples": [
+            "2017-07-13 22:07:33.349979",
+            "2017-10-29 17:19:19.829620",
+            "2017-05-29 22:29:20.437700"
+          ]
+        },
+        {
+          "group": 71,
+          "latents": [
+            1400
+          ],
+          "gain_margin": 126.05,
+          "examples": [
+            "2016-10-22 22:00:51.806074",
+            "2017-10-22 22:42:16.533889",
+            "2016-02-22 22:30:17.182063"
+          ]
+        },
+        {
+          "group": 428,
+          "latents": [
+            1535
+          ],
+          "gain_margin": 114.33,
+          "examples": [
+            "2017-07-06 14:26:51.999673",
+            "2016-10-22 22:00:51.806074",
+            "2016-10-04 10:04:51.932087"
+          ]
+        },
+        {
+          "group": 111,
+          "latents": [
+            1929
+          ],
+          "gain_margin": 114.25,
+          "examples": [
+            "2016-08-03 16:15:30.596377",
+            "2017-09-24 22:19:01.592849",
+            "2017-09-16 08:00:20.591842"
+          ]
+        },
+        {
+          "group": 212,
+          "latents": [
+            1363
+          ],
+          "gain_margin": 111.33,
+          "examples": [
+            "2016-10-14 01:30:32.403088",
+            "2016-10-14 01:05:40.795833",
+            "2016-10-14 09:51:26.646151"
+          ]
+        }
+      ]
+    }
+  }
+}

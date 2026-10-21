@@ -1,0 +1,315 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -20.788113938702427,
+  "test_error": 20.788113938702427,
+  "course_metric": "r2",
+  "course_score": 0.8142426960816691,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 250.58534860610962,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 272,
+      "n_groups": 271,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 251,
+      "n_removed": 252,
+      "var_share_removed": 0.9139,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 261,
+          "latents": [
+            971
+          ],
+          "gain_margin": 75.03,
+          "examples": [
+            "cream / blue / grey",
+            "gold",
+            "gold"
+          ]
+        },
+        {
+          "group": 159,
+          "latents": [
+            755
+          ],
+          "gain_margin": 36.27,
+          "examples": [
+            "red / espresso / chocolate",
+            "cream / green / pink / chocolate",
+            "cream / pink / chocolate"
+          ]
+        },
+        {
+          "group": 48,
+          "latents": [
+            1197
+          ],
+          "gain_margin": 34.32,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "group": 116,
+          "latents": [
+            1073
+          ],
+          "gain_margin": 25.23,
+          "examples": [
+            "red / blue / green",
+            "blue / green / black",
+            "blue / green / purple"
+          ]
+        },
+        {
+          "group": 25,
+          "latents": [
+            1566
+          ],
+          "gain_margin": 16.63,
+          "examples": [
+            "orange / cream / purple",
+            "cream / black",
+            "cream / pink"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 240,
+      "n_groups": 240,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 224,
+      "n_removed": 224,
+      "var_share_removed": 0.7221,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 150,
+          "latents": [
+            205
+          ],
+          "gain_margin": 77.13,
+          "examples": [
+            "JoJo Designs",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 32,
+          "latents": [
+            1553
+          ],
+          "gain_margin": 68.63,
+          "examples": [
+            "Minnie.",
+            "P'kolino",
+            "Koala Baby"
+          ]
+        },
+        {
+          "group": 204,
+          "latents": [
+            377
+          ],
+          "gain_margin": 35.13,
+          "examples": [
+            "JoJo Designs",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 43,
+          "latents": [
+            1713
+          ],
+          "gain_margin": 31.21,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 182,
+          "latents": [
+            471
+          ],
+          "gain_margin": 23.64,
+          "examples": [
+            "Tomorrowland Pillowtime Pal",
+            "Tomorrowland Slumberbag.",
+            "Cuddletime"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 761,
+      "n_groups": 761,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 544,
+      "n_removed": 544,
+      "var_share_removed": 0.4019,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 750,
+          "latents": [
+            324
+          ],
+          "gain_margin": 2720.83,
+          "examples": [
+            "Million Dollar Baby",
+            "Million Dollar Baby",
+            "Million Dollar Baby"
+          ]
+        },
+        {
+          "group": 618,
+          "latents": [
+            360
+          ],
+          "gain_margin": 1297.48,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 335,
+          "latents": [
+            998
+          ],
+          "gain_margin": 739.63,
+          "examples": [
+            "Glenna Jean",
+            "Glenna Jean",
+            "Glenna Jean"
+          ]
+        },
+        {
+          "group": 56,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 733.4,
+          "examples": [
+            "Dream Baby",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 362,
+          "latents": [
+            1332
+          ],
+          "gain_margin": 538.68,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1276,
+      "n_groups": 1273,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 859,
+      "n_removed": 861,
+      "var_share_removed": 0.232,
+      "var_share_sae_error": 0.0064,
+      "top": [
+        {
+          "group": 262,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 5278.01,
+          "examples": [
+            "Disney Planes XL Chair Rail Prepasted Mural 6' x 10.5' - Ultra-strippable",
+            "Gallery Modern Chrome 6 Light Orb Chandelier",
+            "Gallery Wrought Iron and Crystal Chandelier"
+          ]
+        },
+        {
+          "group": 1266,
+          "latents": [
+            651
+          ],
+          "gain_margin": 2586.43,
+          "examples": [
+            "Sumersault Sea Pirate  4 Piece Crib Set",
+            "Dream On Me Sea Friends 4 Piece Reversible Full Size Crib Bedding Set",
+            "CRAZY DAISY 11 PIECE CRIB SET"
+          ]
+        },
+        {
+          "group": 620,
+          "latents": [
+            1647
+          ],
+          "gain_margin": 2578.76,
+          "examples": [
+            "Olive Kids Fairy Princess Sheet Set - Full",
+            "Lambs & Ivy Little Princess 5 Piece Bedding Set",
+            "Aqua Peacock Full/Queen Bedding Set"
+          ]
+        },
+        {
+          "group": 1269,
+          "latents": [
+            108
+          ],
+          "gain_margin": 2411.55,
+          "examples": [
+            "Peanuts Snoopy 4 Piece Toddler Bedding Set",
+            "Fleeting Flora 6-Piece Bedding Set",
+            "Tranquil Woods 5-Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 525,
+          "latents": [
+            1770
+          ],
+          "gain_margin": 763.78,
+          "examples": [
+            "Baby in the Tub Framed Art Print",
+            "Gallery 3 Light Swag Plug In Chandelier with Crystals and White Shade",
+            "Gallery 3 Light Swag Plug In Chandelier with Crystals and Black Shade"
+          ]
+        }
+      ]
+    }
+  }
+}

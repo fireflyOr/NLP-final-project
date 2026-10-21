@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.879159036862615,
+  "test_error": 0.879159036862615,
+  "course_metric": "r2",
+  "course_score": 0.7985772568457034,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 57.22533655166626,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 564,
+      "n_groups": 564,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 438,
+      "n_removed": 438,
+      "var_share_removed": 0.4674,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 558,
+          "latents": [
+            8
+          ],
+          "gain_margin": 113.4,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 193,
+          "latents": [
+            1261
+          ],
+          "gain_margin": 61.45,
+          "examples": [
+            "Dutch Fairy Tales for Young Folks",
+            "Chambers Elementary Science Reader Book I",
+            "A Primary Reader\nOld-time Stories, Fairy Tales and Myths Retold by Children"
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            1641
+          ],
+          "gain_margin": 36.23,
+          "examples": [
+            "Title: Heroes Every Child Should Know\n",
+            "Title: Heroes Every Child Should Know\n",
+            "Title: Heroes Every Child Should Know\n"
+          ]
+        },
+        {
+          "group": 539,
+          "latents": [
+            46
+          ],
+          "gain_margin": 26.03,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 260,
+          "latents": [
+            658
+          ],
+          "gain_margin": 25.43,
+          "examples": [
+            "The Nursery, September 1873, Vol. XIV. No. 3",
+            "The Nursery, September 1873, Vol. XIV. No. 3",
+            "The Nursery, September 1873, Vol. XIV. No. 3"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1517,
+      "n_groups": 1517,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1241,
+      "n_removed": 1241,
+      "var_share_removed": 0.581,
+      "var_share_sae_error": 0.0021,
+      "top": [
+        {
+          "group": 132,
+          "latents": [
+            1885
+          ],
+          "gain_margin": 169.99,
+          "examples": [
+            "Helen Keller",
+            "E. Louise Smythe",
+            "E. Louise Smythe"
+          ]
+        },
+        {
+          "group": 886,
+          "latents": [
+            116
+          ],
+          "gain_margin": 127.91,
+          "examples": [
+            "National Archives",
+            "The Associated Press",
+            "THOMAS FLETCHER, F.C.S."
+          ]
+        },
+        {
+          "group": 466,
+          "latents": [
+            582
+          ],
+          "gain_margin": 125.7,
+          "examples": [
+            "Various Authors",
+            "Various Authors",
+            "simple wiki"
+          ]
+        },
+        {
+          "group": 592,
+          "latents": [
+            1038
+          ],
+          "gain_margin": 96.54,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1406,
+          "latents": [
+            147
+          ],
+          "gain_margin": 82.5,
+          "examples": [
+            "Mike Kubic",
+            "Mike Kubic",
+            "Mike Kubic"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 100,
+      "n_groups": 94,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 89,
+      "n_removed": 95,
+      "var_share_removed": 0.4056,
+      "var_share_sae_error": 0.0072,
+      "top": [
+        {
+          "group": 10,
+          "latents": [
+            1941
+          ],
+          "gain_margin": 0.82,
+          "examples": [
+            "armour, travelled",
+            "grey, travelled",
+            "traveller, travelled"
+          ]
+        },
+        {
+          "group": 62,
+          "latents": [
+            987
+          ],
+          "gain_margin": 0.44,
+          "examples": [
+            "sulphide, sulphides, sulphide, sulphide, sulphide, sulphate",
+            "sulphur, sulphur",
+            "sulphur, sulphur"
+          ]
+        },
+        {
+          "group": 33,
+          "latents": [
+            554
+          ],
+          "gain_margin": 0.41,
+          "examples": [
+            "traveller, travelled",
+            "travellers",
+            "travellers"
+          ]
+        },
+        {
+          "group": 26,
+          "latents": [
+            376
+          ],
+          "gain_margin": 0.18,
+          "examples": [
+            "realised, realising",
+            "realised",
+            "realised"
+          ]
+        },
+        {
+          "group": 78,
+          "latents": [
+            1558
+          ],
+          "gain_margin": 0.14,
+          "examples": [
+            "globalisation",
+            "travelled, travelling",
+            "travelling"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1972,
+      "n_groups": 1972,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1462,
+      "n_removed": 1462,
+      "var_share_removed": 0.679,
+      "var_share_sae_error": 0.0424,
+      "top": [
+        {
+          "group": 1108,
+          "latents": [
+            124
+          ],
+          "gain_margin": 39.96,
+          "examples": [
+            "Once upon a time in the middle of winter, when the flakes of snow were falling like feathers from the clouds, a Queen sat at her palace window, which had an ebo",
+            "Once upon a time, in a very small village on the borders of one of the great pine forests of Norway, there lived a wood-cutter, named Peder Olsen. He had built ",
+            "Once upon a time, there was a man called Byantaka who had a cow. Each day Byantaka grazed his cow. He also gave the cow water to drink, but Byantaka only had a "
+          ]
+        },
+        {
+          "group": 1895,
+          "latents": [
+            1083
+          ],
+          "gain_margin": 31.83,
+          "examples": [
+            "There are some birds that can take care of themselves almost as soon as they are born; but Mrs. Cuckoo never leaves her eggs in their nests. Oh, no! she chooses",
+            "In its habits it is shy; and its voice may be often heard whilst the eye seeks in vain to find the bird itself. Its food consists of caterpillars and various in",
+            "The life of a pelican seems to be a very lazy, if not a very pleasant one. Man, ever on the watch to turn the habits of animals to his own account, observing ho"
+          ]
+        },
+        {
+          "group": 1913,
+          "latents": [
+            714
+          ],
+          "gain_margin": 30.68,
+          "examples": [
+            "What do we find transformed? Simply the energy, or potential, contained in the fuel or food we put into the machine. Its exact equivalent we find transformed to",
+            "The hypothesis of mental continuity throughout organic evolution may be used in two different ways. On the one hand, it may be held that we have more knowledge ",
+            "The two horses picked their way carefully downward over the loose shale of the steep hillside. The big bay stallion in the lead sidled mincingly, tossing his he"
+          ]
+        },
+        {
+          "group": 109,
+          "latents": [
+            1947
+          ],
+          "gain_margin": 30.0,
+          "examples": [
+            "Boy Blue's father then went to the men who were making hay, and said, \"Men, men, have you seen my Boy Blue?\" But the men answered, \"No, no: we have not seen Boy",
+            "Poppypink sat up in bed and yawned. \"Why is everybody getting up so early?\" she asked. \"Is it a holiday?\"\nThe older fairies were dressing themselves and brushin",
+            "Uncle Wiggily Longears, the nice old gentleman rabbit, came out of the underground burrow house of the Littletail family, where he was visiting a while with the"
+          ]
+        },
+        {
+          "group": 731,
+          "latents": [
+            827
+          ],
+          "gain_margin": 26.99,
+          "examples": [
+            "The Soil and Its Preparation.--The strawberry may be successfully grown in any soil adapted to the growth of ordinary field or garden crops. The ground should b",
+            "\"How can I go to bed,\" said Penny, the flossy dog, \"till I say good-night to Baby Ray? He gives me part of his bread and milk, and pats me with his little, soft",
+            "Mrs. Earthworm is angry. She is fed up of being covered in mud and never being able to have a proper bath. She insists that her husband install a bathtub with r"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1946,
+      "n_groups": 1946,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1521,
+      "n_removed": 1521,
+      "var_share_removed": 0.7024,
+      "var_share_sae_error": 0.032,
+      "top": [
+        {
+          "group": 269,
+          "latents": [
+            1687
+          ],
+          "gain_margin": 66.0,
+          "examples": [
+            "A TRUE STORY OF A PARTRIDGE",
+            "The Story of the First Humming-bird.",
+            "The Story of the Sparrow"
+          ]
+        },
+        {
+          "group": 968,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 65.05,
+          "examples": [
+            "Turtle_ship",
+            "Public_domain",
+            "Marshall_Plan"
+          ]
+        },
+        {
+          "group": 242,
+          "latents": [
+            1748
+          ],
+          "gain_margin": 46.09,
+          "examples": [
+            "Solubility",
+            "Optical_fiber",
+            "Internet_Protocol"
+          ]
+        },
+        {
+          "group": 899,
+          "latents": [
+            732
+          ],
+          "gain_margin": 40.41,
+          "examples": [
+            "Princess Polly's Gay Winter",
+            "Polly and Eleanor",
+            "THE BOYHOOD OF FIONN"
+          ]
+        },
+        {
+          "group": 1873,
+          "latents": [
+            50
+          ],
+          "gain_margin": 32.48,
+          "examples": [
+            "JESSIE AND HER KITTEN",
+            "The boy and the jackal",
+            "The Jackal and the Partridge"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 961,
+      "n_groups": 958,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 728,
+      "n_removed": 731,
+      "var_share_removed": 0.4049,
+      "var_share_sae_error": 0.0062,
+      "top": [
+        {
+          "group": 812,
+          "latents": [
+            719
+          ],
+          "gain_margin": 131.78,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Humidity",
+            "https://en.wikipedia.org/wiki/Biodiesel",
+            "https://en.wikipedia.org/wiki/Lung"
+          ]
+        },
+        {
+          "group": 181,
+          "latents": [
+            1850
+          ],
+          "gain_margin": 72.26,
+          "examples": [
+            "http://www.gutenberg.org/files/8391/8391-h/8391-h.htm#15",
+            "http://www.gutenberg.org/files/9163/9163-h/9163-h.htm#15",
+            "http://www.gutenberg.org/files/15478/15478-h/15478-h.htm#toc_55"
+          ]
+        },
+        {
+          "group": 489,
+          "latents": [
+            383
+          ],
+          "gain_margin": 55.05,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Implantable_cardioverter-defibrillator",
+            "https://en.wikipedia.org/wiki/Facial_recognition_system",
+            "https://en.wikipedia.org/wiki/Molecular_nanotechnology"
+          ]
+        },
+        {
+          "group": 215,
+          "latents": [
+            1535
+          ],
+          "gain_margin": 51.96,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Historian",
+            "https://simple.wikipedia.org/wiki/Civil_rights",
+            "https://en.wikipedia.org/wiki/Liberalism"
+          ]
+        },
+        {
+          "group": 410,
+          "latents": [
+            667
+          ],
+          "gain_margin": 30.97,
+          "examples": [
+            "https://www.commonlit.org/texts/what-to-the-slave-is-the-fourth-of-july",
+            "https://www.commonlit.org/texts/hoover-feeding-the-starving-victims-of-world-war-i",
+            "https://www.commonlit.org/texts/fdr-and-the-new-deal"
+          ]
+        }
+      ]
+    }
+  }
+}

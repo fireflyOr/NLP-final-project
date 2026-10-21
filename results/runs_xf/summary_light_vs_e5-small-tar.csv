@@ -1,0 +1,2 @@
+encoder,n_pairs,mean_delta,wins,losses,wilcoxon_p,datasets_improved
+e5-small-tar-gsae-xf,30,-0.0006148278048891509,8,9,0.5861743444807836,1/5

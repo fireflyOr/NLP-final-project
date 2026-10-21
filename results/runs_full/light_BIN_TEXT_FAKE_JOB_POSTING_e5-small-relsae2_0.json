@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9063430796922878,
+  "test_error": 0.09365692030771222,
+  "course_metric": "auroc",
+  "course_score": 0.9063430796922879,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 58.09873151779175,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 388,
+      "n_removed": 124,
+      "threshold": 0.0445,
+      "passed_test": 36,
+      "removed_norm_ratio": 0.3677,
+      "var_share_kept": 0.5603,
+      "var_share_sae_error": 0.2587,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 342,
+          "score": 0.1384,
+          "n_active": 454,
+          "examples": [
+            "StudyHall\u00a0is hiring current college students and recent graduates! \u00a0You must be digitally savvy and willing to get things done on time!StudyHall's mission is si",
+            "DESCRIPTIONStudyHall\u00a0is hiring current college students and recent graduates! \u00a0You must be digitally savvy and willing to get things done on time!StudyHall\u00a0crea",
+            "We are looking for skilled photographers to join our photography team in our face paced, high volume fashion production studio.\u00a0 The RealReal is the country\u2019s l"
+          ]
+        },
+        {
+          "latent": 164,
+          "score": 0.1036,
+          "n_active": 648,
+          "examples": [
+            "Salary Range$100K-$125K+ with generous benefits package.Requires working knowledge of purchasing, materials, payroll, accounts payable, accounts receivable, IT,",
+            "$1000 Signing bonusFastest Growing Hyundai Dealership in MassExtensive New Car Inventory$1 Million Dollar used car InventoryImmediate Positions AvailableAnticip",
+            "Vacancies in Asia$1500 + monthly ($200 Cost of living)Housing ProvidedAirfare IncludedExcellent for student loans/credit cards"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.1023,
+          "n_active": 565,
+          "examples": [
+            "Payroll Clerk Job Purpose: Responsible for Compiling and posting employee payroll data and manages hours clocked. Creates and distributes paychecks in accordanc",
+            "JOB DESCRIPTIONWe are seeking a full time payroll clerk to manage day to day accounting for our operation. PAY SCALE : $30/hrResponsibilities will include- Bala",
+            "As a Records Clerk, you will be responsible for maintaining active and inactive case files for DOJ-ENRD, providing quality customer service, and working effecti"
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.0853,
+          "n_active": 912,
+          "examples": [
+            "\u0396\u03b7\u03c4\u03b5\u03af\u03c4\u03b1\u03b9 senior web developer \u03bc\u03b5 3\u03b5\u03c4\u03ae \u03b5\u03bc\u03c0\u03b5\u03b9\u03c1\u03af\u03b1 \u03c3\u03b5 \u03b1\u03bd\u03ac\u03c0\u03c4\u03c5\u03be\u03b7 #URL_c5591c960537d84ff7889f414633cdbc8e7d36f3fe042a096d374e4e058388d5# Web \u03b5\u03c6\u03b1\u03c1\u03bc\u03bf\u03b3\u03ce\u03bd \u03c3\u03b5 C#, HTML/CSS/",
+            "(We have more than 1500+ Job openings in our website and some of them are relevant to this job. Feel free to search it in the website and apply directly. Just C",
+            "(We have more than 1500+ Job openings in our website and some of them are relevant to this job. Feel free to search it in the website and apply directly. Just C"
+          ]
+        },
+        {
+          "latent": 285,
+          "score": 0.0829,
+          "n_active": 545,
+          "examples": [
+            "Skills Required \u2013 TechnicalA working knowledge of the energy industry, including facilities and operations.Excellent verbal and written communication skills wit",
+            "Major Oil &amp; Gas Company in the Kingdom of Saudi Arabia is seeking highly skilled Project EngineerTo work in their company, throughout KSA. UP to $156000 USD",
+            "Major Oil &amp; Gas Company in the Kingdom of Saudi Arabia is seeking highly skilled Engineer I (Civil, Electrical/Instrumentation, Electrical, Mechanical, Rota"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 303,
+      "n_kept": 445,
+      "n_removed": 67,
+      "threshold": 0.0483,
+      "passed_test": 56,
+      "removed_norm_ratio": 0.0928,
+      "var_share_kept": 0.8961,
+      "var_share_sae_error": 0.0016,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 97,
+          "score": 0.0999,
+          "n_active": 31,
+          "examples": [
+            "25-30",
+            "13-20",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 35,
+          "score": 0.0889,
+          "n_active": 20,
+          "examples": [
+            "25-30",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 407,
+          "score": 0.0866,
+          "n_active": 45,
+          "examples": [
+            "28000-30000",
+            "28000-30000",
+            "318278-400000"
+          ]
+        },
+        {
+          "latent": 257,
+          "score": 0.0854,
+          "n_active": 26,
+          "examples": [
+            "2000-6000",
+            "5000-6000",
+            "20800-22800"
+          ]
+        },
+        {
+          "latent": 161,
+          "score": 0.078,
+          "n_active": 26,
+          "examples": [
+            "13-20",
+            "15-19",
+            "15-19"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 397,
+      "n_removed": 115,
+      "threshold": 0.0448,
+      "passed_test": 38,
+      "removed_norm_ratio": 0.3604,
+      "var_share_kept": 0.7165,
+      "var_share_sae_error": 0.0994,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 478,
+          "score": 0.1138,
+          "n_active": 499,
+          "examples": [
+            "Accountant",
+            "Accountant",
+            "Accountant"
+          ]
+        },
+        {
+          "latent": 427,
+          "score": 0.1108,
+          "n_active": 329,
+          "examples": [
+            "CIVIL PROJECT ENGINEER",
+            "Civil Construction Coordinator",
+            "Civil Engineer, Instrumentation, Electrical, Mechanical, Rotating, Architectural, Safety, and Piping Engineer "
+          ]
+        },
+        {
+          "latent": 156,
+          "score": 0.1017,
+          "n_active": 350,
+          "examples": [
+            "Administrative Assistant",
+            "Administrative Assistant",
+            "Administrative Assistant"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.089,
+          "n_active": 494,
+          "examples": [
+            "Office Manager & Administrative Assistant",
+            "Office Manager",
+            "Office Manager"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0866,
+          "n_active": 639,
+          "examples": [
+            "Assistant Training and Quality Development Facilitator",
+            "Assistant Training and Quality Development Faciliator",
+            "Assistant Training & Quality Development Facilitator"
+          ]
+        }
+      ]
+    }
+  }
+}

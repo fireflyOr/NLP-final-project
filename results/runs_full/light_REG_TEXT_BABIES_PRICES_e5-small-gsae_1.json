@@ -1,0 +1,316 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -18.633607335709737,
+  "test_error": 18.633607335709737,
+  "course_metric": "r2",
+  "course_score": 0.8303467215989176,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 148.21024703979492,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 220,
+      "n_groups": 219,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 215,
+      "n_removed": 215,
+      "var_share_removed": 0.9778,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 177,
+          "latents": [
+            26
+          ],
+          "gain_margin": 14.44,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            973,
+            1836
+          ],
+          "gain_margin": 13.16,
+          "examples": [
+            "orange / pink / blue / black / purple",
+            "orange / blue / green / pink",
+            "orange / tan / green / pink"
+          ]
+        },
+        {
+          "group": 144,
+          "latents": [
+            570
+          ],
+          "gain_margin": 8.01,
+          "examples": [
+            "gray",
+            "gray",
+            "gray"
+          ]
+        },
+        {
+          "group": 217,
+          "latents": [
+            363
+          ],
+          "gain_margin": 0.44,
+          "examples": [
+            "cream / black",
+            "cream / green",
+            "cream / blue / red"
+          ]
+        },
+        {
+          "group": 208,
+          "latents": [
+            343
+          ],
+          "gain_margin": 0.09,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 267,
+      "n_groups": 267,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 252,
+      "n_removed": 252,
+      "var_share_removed": 0.6836,
+      "var_share_sae_error": 0.0057,
+      "top": [
+        {
+          "group": 86,
+          "latents": [
+            1615
+          ],
+          "gain_margin": 52.16,
+          "examples": [
+            "The Beatrix Girls",
+            "Sadie & Scout",
+            "Sadie & Scout"
+          ]
+        },
+        {
+          "group": 199,
+          "latents": [
+            22
+          ],
+          "gain_margin": 46.66,
+          "examples": [
+            "Makiko",
+            "Glenna Jean Lil'",
+            "Glenna Jean, Wall"
+          ]
+        },
+        {
+          "group": 162,
+          "latents": [
+            1437
+          ],
+          "gain_margin": 45.95,
+          "examples": [
+            "CoCaLo Baby.",
+            "JoJo Designs.",
+            "CoCaLo Baby"
+          ]
+        },
+        {
+          "group": 249,
+          "latents": [
+            298
+          ],
+          "gain_margin": 16.16,
+          "examples": [
+            "Glenna Jean Happy",
+            "Glenna Jean Happy",
+            "Glenna Jean Happy"
+          ]
+        },
+        {
+          "group": 182,
+          "latents": [
+            1022
+          ],
+          "gain_margin": 13.34,
+          "examples": [
+            "Glenna Jean Lil'",
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Swizzle"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 953,
+      "n_groups": 953,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 596,
+      "n_removed": 596,
+      "var_share_removed": 0.3591,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 768,
+          "latents": [
+            359
+          ],
+          "gain_margin": 1124.57,
+          "examples": [
+            "York Wall Coverings",
+            "York Wall Coverings",
+            "York Wall Coverings"
+          ]
+        },
+        {
+          "group": 116,
+          "latents": [
+            1785
+          ],
+          "gain_margin": 635.27,
+          "examples": [
+            "Sakar International",
+            "Marmont Hill",
+            "Marmont Hill"
+          ]
+        },
+        {
+          "group": 71,
+          "latents": [
+            1754
+          ],
+          "gain_margin": 516.53,
+          "examples": [
+            "Olive Kids",
+            "Olive Kids",
+            "Olive Kids"
+          ]
+        },
+        {
+          "group": 37,
+          "latents": [
+            1927
+          ],
+          "gain_margin": 438.79,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 583,
+          "latents": [
+            36
+          ],
+          "gain_margin": 351.16,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1797,
+      "n_groups": 1787,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1102,
+      "n_removed": 1105,
+      "var_share_removed": 0.4103,
+      "var_share_sae_error": 0.0092,
+      "top": [
+        {
+          "group": 388,
+          "latents": [
+            1667
+          ],
+          "gain_margin": 1487.54,
+          "examples": [
+            "Gallery Contemporary Crystal 3 Light Chandelier with White Shade",
+            "Gallery Empire 3 Light Crystal Chandelier",
+            "Marmont Hill - 'Belle Sugar and Spice' Peanuts Print on Canvas"
+          ]
+        },
+        {
+          "group": 885,
+          "latents": [
+            1200
+          ],
+          "gain_margin": 902.63,
+          "examples": [
+            "Dream On Me Pink Butterfly and Flower 4 Piece Toddler Bed Set",
+            "Dream On Me On The Go 4 Piece Toddler Bedding Set",
+            "Violet 4-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 262,
+          "latents": [
+            1943
+          ],
+          "gain_margin": 659.06,
+          "examples": [
+            "Sweet Jojo Designs Funky Zebra Collection Toddler Bedding - 5-Piece Set",
+            "Sweet Jojo Designs Red and Black Trellis Collection 5-Piece Toddler Bedding Set",
+            "Sweet Jojo Designs Yellow and Gray Avery Collection 5 Piece Toddler Bedding Set"
+          ]
+        },
+        {
+          "group": 741,
+          "latents": [
+            1544
+          ],
+          "gain_margin": 619.97,
+          "examples": [
+            "Dallas Cowboys, Tony Romo Biggshots Twin Comforter Set",
+            "Arizona Cardinals, Larry Fitzgerald Biggshots Full Comforter Set",
+            "Dallas Cowboys, Tony Romo Biggshots Full Comforter Set"
+          ]
+        },
+        {
+          "group": 1734,
+          "latents": [
+            40
+          ],
+          "gain_margin": 536.66,
+          "examples": [
+            "Tulip Garden 6-Piece Bedding Set",
+            "Fleeting Flora 6-Piece Bedding Set",
+            "Bella 6 Piece Bed Set"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.370050458985092,
+  "test_error": 3.370050458985092,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8952949330746577,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1269.233553647995,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 506,
+      "n_removed": 506,
+      "var_share_removed": 0.1629,
+      "var_share_sae_error": 0.0969,
+      "top": [
+        {
+          "group": 2028,
+          "latents": [
+            1108
+          ],
+          "gain_margin": 3211.26,
+          "examples": [
+            "\u300a\u72fc\u6bbf\u4e0b\u300b\u5f71\u8996\u539f\u8072\u5e36",
+            "\u5f26\u5b50\u9996\u5f35\u540c\u540d\u5c08\u8f2f",
+            "\u83ef\u7d0d\u5eff\u4e09\u9031\u5e74\u7d00\u5ff5\u7cbe\u9078\u7cfb\u5217 - Beyond"
+          ]
+        },
+        {
+          "group": 1944,
+          "latents": [
+            276
+          ],
+          "gain_margin": 2619.6,
+          "examples": [
+            "Ao Vivo",
+            "Ao vivo",
+            "Ao Vivo"
+          ]
+        },
+        {
+          "group": 1736,
+          "latents": [
+            551
+          ],
+          "gain_margin": 2499.81,
+          "examples": [
+            "Mozart - All Day Classics",
+            "Mozart - All Day Classics",
+            "Mozart - All Day Classics"
+          ]
+        },
+        {
+          "group": 471,
+          "latents": [
+            1721
+          ],
+          "gain_margin": 1756.59,
+          "examples": [
+            "Ac\u00fastico e Ao Vivo 2/3",
+            "Ac\u00fastico (Ao Vivo)",
+            "Ac\u00fastico (Ao Vivo)"
+          ]
+        },
+        {
+          "group": 513,
+          "latents": [
+            1349
+          ],
+          "gain_margin": 1718.05,
+          "examples": [
+            "\u3044\u3044\u3053\u3068\u304c\u3057\u305f\u3044",
+            "\u611a\u304b\u8005\u305f\u3061",
+            "\u597d\u304d\u3060"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2046,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 134,
+      "n_removed": 134,
+      "var_share_removed": 0.0543,
+      "var_share_sae_error": 0.0864,
+      "top": [
+        {
+          "group": 1945,
+          "latents": [
+            544
+          ],
+          "gain_margin": 2427.73,
+          "examples": [
+            "Pritam;Atif Aslam",
+            "Atif Aslam;Pritam",
+            "Pritam;Soham"
+          ]
+        },
+        {
+          "group": 1294,
+          "latents": [
+            61
+          ],
+          "gain_margin": 2274.48,
+          "examples": [
+            "Jones & Stephenson",
+            "Hank Williams;Drifting Cowboys",
+            "Hank Williams;Drifting Cowboys"
+          ]
+        },
+        {
+          "group": 458,
+          "latents": [
+            1373
+          ],
+          "gain_margin": 2249.57,
+          "examples": [
+            "Nusrat Fateh Ali Khan",
+            "Aaryan Shah",
+            "Aaryan Shah"
+          ]
+        },
+        {
+          "group": 2043,
+          "latents": [
+            94
+          ],
+          "gain_margin": 2218.0,
+          "examples": [
+            "Divya Kumar;Neeti Mohan",
+            "K. S. Harisankar;Shweta Mohan",
+            "Vijay Antony;Shankar Mahadevan"
+          ]
+        },
+        {
+          "group": 1689,
+          "latents": [
+            445
+          ],
+          "gain_margin": 1519.37,
+          "examples": [
+            "Tatiana and Sergey Nikitin",
+            "Mokhov",
+            "Mokhov"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 572,
+      "n_removed": 572,
+      "var_share_removed": 0.152,
+      "var_share_sae_error": 0.1085,
+      "top": [
+        {
+          "group": 1018,
+          "latents": [
+            1304
+          ],
+          "gain_margin": 3516.6,
+          "examples": [
+            "\u541b\u306e\u7b11\u9854\u3067\u4e16\u754c\u304c\u3084\u3070\u3044",
+            "\u305d\u3093\u306a\u30d2\u30ed\u30b7\u306b\u9a19\u3055\u308c\u3066",
+            "\u597d\u304d\u3068\u3044\u3046\u3053\u3068\u306f\u2026"
+          ]
+        },
+        {
+          "group": 487,
+          "latents": [
+            1710
+          ],
+          "gain_margin": 3048.08,
+          "examples": [
+            "\u6211\u4ee5\u5f8c\u4e0d\u518d\u53bb\u9577\u6d32",
+            "\u5ee3\u5dde\u8db3\u6d74\u4e00\u591c - Live",
+            "\u4e94\u6708\u96e8"
+          ]
+        },
+        {
+          "group": 1960,
+          "latents": [
+            276
+          ],
+          "gain_margin": 2298.7,
+          "examples": [
+            "\u00c9 Dor Que N\u00e3o Passa - Ao Vivo",
+            "Esque\u00e7a Que Eu Te Amo - Ao Vivo",
+            "Minha Vida Sem Voc\u00ea - Ao Vivo"
+          ]
+        },
+        {
+          "group": 1600,
+          "latents": [
+            1349
+          ],
+          "gain_margin": 2273.38,
+          "examples": [
+            "\u3044\u3068\u3050\u3061",
+            "\u594f(\u304b\u306a\u3067)",
+            "\u611a\u304b\u8005\u305f\u3061"
+          ]
+        },
+        {
+          "group": 1481,
+          "latents": [
+            131
+          ],
+          "gain_margin": 1713.18,
+          "examples": [
+            "MAGO",
+            "Fogo (Vers\u00e3o Estendida)",
+            "Flos Potentia (Sugar, Cotton, Tabacco)"
+          ]
+        }
+      ]
+    }
+  }
+}

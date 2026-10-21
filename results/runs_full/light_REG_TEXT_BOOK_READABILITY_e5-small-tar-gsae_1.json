@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.847076489690049,
+  "test_error": 0.847076489690049,
+  "course_metric": "r2",
+  "course_score": 0.8153032159731246,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 58.54632091522217,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 435,
+      "n_groups": 434,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 360,
+      "n_removed": 361,
+      "var_share_removed": 0.4256,
+      "var_share_sae_error": 0.0025,
+      "top": [
+        {
+          "group": 334,
+          "latents": [
+            349
+          ],
+          "gain_margin": 350.26,
+          "examples": [
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 391,
+          "latents": [
+            477
+          ],
+          "gain_margin": 323.56,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 154,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 247.95,
+          "examples": [
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm"
+          ]
+        },
+        {
+          "group": 179,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 229.43,
+          "examples": [
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers"
+          ]
+        },
+        {
+          "group": 347,
+          "latents": [
+            813
+          ],
+          "gain_margin": 196.83,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1293,
+      "n_groups": 1293,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1066,
+      "n_removed": 1066,
+      "var_share_removed": 0.4347,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 1291,
+          "latents": [
+            477
+          ],
+          "gain_margin": 337.26,
+          "examples": [
+            "African Storybook and Paul Walugo",
+            "Kaka Gana Abba",
+            "Freddie's Papa"
+          ]
+        },
+        {
+          "group": 824,
+          "latents": [
+            801
+          ],
+          "gain_margin": 207.08,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1280,
+          "latents": [
+            911
+          ],
+          "gain_margin": 170.54,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 123,
+          "latents": [
+            1672
+          ],
+          "gain_margin": 98.38,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 87,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 86.41,
+          "examples": [
+            "an editorial article published Oct. 15, (28,) 1914, in the Mir, the organ of the Nationalists, and signed by A. Bouroff, ex-Minister and ex-Vice President of th",
+            "wikipedia",
+            "wikipedia"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 93,
+      "n_groups": 92,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 85,
+      "n_removed": 86,
+      "var_share_removed": 0.2991,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 50,
+          "latents": [
+            70
+          ],
+          "gain_margin": 2.53,
+          "examples": [
+            "traveller",
+            "traveller",
+            "neighbouring, traveller"
+          ]
+        },
+        {
+          "group": 56,
+          "latents": [
+            832
+          ],
+          "gain_margin": 0.83,
+          "examples": [
+            "neighbour, honour",
+            "favour",
+            "favour"
+          ]
+        },
+        {
+          "group": 62,
+          "latents": [
+            195
+          ],
+          "gain_margin": 0.41,
+          "examples": [
+            "parlour",
+            "parlour",
+            "parlour"
+          ]
+        },
+        {
+          "group": 85,
+          "latents": [
+            1197
+          ],
+          "gain_margin": 0.21,
+          "examples": [
+            "theatre, neighbour",
+            "draught, neighbouring",
+            "neighbour, honour"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            2015
+          ],
+          "gain_margin": 0.08,
+          "examples": [
+            "kilogrammes",
+            "kilogrammes, kilogrammes",
+            "modelling"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1181,
+      "n_groups": 1181,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 937,
+      "n_removed": 937,
+      "var_share_removed": 0.0752,
+      "var_share_sae_error": 0.0091,
+      "top": [
+        {
+          "group": 1172,
+          "latents": [
+            779
+          ],
+          "gain_margin": 3494.47,
+          "examples": [
+            "It was more than six hundred years ago that a little peasant baby was born in the small village of Vespignano, not far from the beautiful city of Florence, in I",
+            "It is not often (out of a fairy tale) that wishes to change the whole current of one's life are granted so promptly as that wish of mine was.\nThe next morning's",
+            "Italian painters received their names in peculiar ways. This man's father was a tailor; and the artist was named after his father's profession. He was in fact \""
+          ]
+        },
+        {
+          "group": 1155,
+          "latents": [
+            688
+          ],
+          "gain_margin": 1828.38,
+          "examples": [
+            "Greeny doesn't want to nap. Today, she wants to be a tree! Trees don't need naps! Trees can play all day long. Trees only need to be green. Uh-oh. \nDad can't fi",
+            "Bountong is happy with his new hat. He puts it on and runs to visit Buk-Le. Now they can play like two buffaloes! They ride across the fields and run with the w",
+            "Dog is in his house. Dog is sitting in his house. Then someone knocks on the door. Dog opens the door. Dog sees someone yellow! Dog asks, \"Who are you?\" It is C"
+          ]
+        },
+        {
+          "group": 143,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 1516.44,
+          "examples": [
+            "One million years ago, a soccer gem was formed. When it was discovered, people fought to possess this powerful jewel. During the first soccer world war the gem ",
+            "Long ago, there was a clever cat and a foolish dog. The clever cat lived well in a wealthy family's house. The foolish dog starved on the street. \"How is it tha",
+            "Once upon a time, there was a long dry spell. The animals ate all the grass in the country. Only the imbowa plants on the big trees survived. One day Goat saw H"
+          ]
+        },
+        {
+          "group": 1090,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 1208.26,
+          "examples": [
+            "The oldest hyena said, \"Let the strongest hyena stand on the ground and then let the rest of us stand on each other's backs. We will climb on one another's back",
+            "At this point, Hyena burst into laughter and began rolling on the ground. She said, \"That is a striking truth!\" Goat took advantage of this and ran, back toward",
+            "Winter is approaching. A bird decides to build a nest. She gathers little twigs and builds her nest carefully. After a lot of care and hard work, the nest is re"
+          ]
+        },
+        {
+          "group": 1170,
+          "latents": [
+            911
+          ],
+          "gain_margin": 1133.18,
+          "examples": [
+            "An acropolis (Greek: from akros or akron, \"highest\", \"topmost\", \"outermost\" and polis, \"city\"; plural in English: acropoles, acropoleis or acropolises) is a set",
+            "Oracle bone script was the form of Chinese characters used on oracle bones\u2014animal bones or turtle plastrons used in pyromantic divination\u2014in the late 2nd millen",
+            "Electronic engineering is a discipline that investigates all kinds of situations related to electricity and magnetism. Electronic engineers are concerned with s"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1676,
+      "n_groups": 1676,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1350,
+      "n_removed": 1350,
+      "var_share_removed": 0.3913,
+      "var_share_sae_error": 0.0201,
+      "top": [
+        {
+          "group": 1675,
+          "latents": [
+            349
+          ],
+          "gain_margin": 405.32,
+          "examples": [
+            "Sly Jackal tricks the silly Donkey",
+            "TINY HARE AND THE WIND BALL",
+            "Lion and Warthog"
+          ]
+        },
+        {
+          "group": 836,
+          "latents": [
+            779
+          ],
+          "gain_margin": 333.41,
+          "examples": [
+            "THE CHRISTMAS TREE AND THE WEDDING",
+            "A CHRISTMAS TREE AND A WEDDING",
+            "The tree wife"
+          ]
+        },
+        {
+          "group": 778,
+          "latents": [
+            867
+          ],
+          "gain_margin": 297.96,
+          "examples": [
+            "The Chemical Composition of Rice, Maize, and Barley",
+            "IN RUMANIA\u2019S PARLIAMENT",
+            "Metabolism"
+          ]
+        },
+        {
+          "group": 684,
+          "latents": [
+            477
+          ],
+          "gain_margin": 290.2,
+          "examples": [
+            "HOW MY BOYS HELPED THEIR MOTHER",
+            "THE BLACKBIRD'S NEST",
+            "OUR OLD BILLY"
+          ]
+        },
+        {
+          "group": 835,
+          "latents": [
+            911
+          ],
+          "gain_margin": 149.25,
+          "examples": [
+            "Environmental_science",
+            "Ozone_layer",
+            "Android_(operating_system)"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 903,
+      "n_groups": 901,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 709,
+      "n_removed": 711,
+      "var_share_removed": 0.2963,
+      "var_share_sae_error": 0.0039,
+      "top": [
+        {
+          "group": 894,
+          "latents": [
+            349
+          ],
+          "gain_margin": 291.67,
+          "examples": [
+            "http://www.gutenberg.org/files/28134/28134-h/28134-h.htm#Page_168",
+            "http://www.gutenberg.org/files/28133/28133-h/28133-h.htm#Page_133",
+            "http://www.gutenberg.org/files/15170/15170-h/15170-h.htm#little-cook"
+          ]
+        },
+        {
+          "group": 389,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 253.64,
+          "examples": [
+            "https://www.commonlit.org/texts/the-story-of-the-lazy-boy-a-kachari-folktale",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/at-home-23-text.pdf",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/two-miles-below-23-text.pdf"
+          ]
+        },
+        {
+          "group": 48,
+          "latents": [
+            1782
+          ],
+          "gain_margin": 240.64,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Oil_refinery",
+            "https://en.wikipedia.org/wiki/Geocentric_model",
+            "https://en.wikipedia.org/wiki/Great_Migration_(African_American)"
+          ]
+        },
+        {
+          "group": 121,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 212.91,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Android_(operating_system)",
+            "https://en.wikipedia.org/wiki/Internet_Protocol",
+            "https://en.wikipedia.org/wiki/Information_technology"
+          ]
+        },
+        {
+          "group": 687,
+          "latents": [
+            477
+          ],
+          "gain_margin": 198.53,
+          "examples": [
+            "http://www.gutenberg.org/files/28142/28142-h/28142-h.htm#Page_67",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_2",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_220"
+          ]
+        }
+      ]
+    }
+  }
+}

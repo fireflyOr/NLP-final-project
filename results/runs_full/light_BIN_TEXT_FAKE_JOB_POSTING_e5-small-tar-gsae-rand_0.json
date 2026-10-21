@@ -1,0 +1,245 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8917650588210084,
+  "test_error": 0.10823494117899157,
+  "course_metric": "auroc",
+  "course_score": 0.8917650588210083,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 48.58654069900513,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2042,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1444,
+      "n_removed": 1444,
+      "var_share_removed": 0.5856,
+      "var_share_sae_error": 0.0768,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            315,
+            480
+          ],
+          "gain_margin": 9141.08,
+          "examples": [
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 2040,
+          "latents": [
+            294
+          ],
+          "gain_margin": 1129.35,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Apply using below link#URL_acc13645508c15bb34a3d8b375e426d8daaa5e816ff9cbbf2e580a9366d886bd#Fayetteville, GAMake an impact, without working weekends and holiday"
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 719.73,
+          "examples": [
+            "Apply using below link#URL_0243c9ffa14e848cbe0f7ddece5deea7c4633fb782960f66e5240a57b802e9aa#The Operating Room Director is responsible for directing the operati",
+            "CASH JOBS, Part Time Workers Needed.Work Minimum 1-2 Hours Per Day Anytime.Won't Required Experience For This Job.You Can Earn $350 to $450 Everyday.Suitable Fo",
+            "The Center Manager must establish and maintain excellent customer service with every existing and potential customer. Work involves but is not limited to: overs"
+          ]
+        },
+        {
+          "group": 487,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 632.63,
+          "examples": [
+            "At Puget SoundEnergy (PSE) we have a long tradition of service, and anexciting and innovative future ahead!Consider PSE for the next step in yourcareer.Senior L",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Apply using below link#URL_ea54d715858cb6aef8dcf8a84ec12d3b856157b887f6192a8fa8ca50c1cbff48#At Puget SoundEnergy (PSE) we have a long tradition of service, and "
+          ]
+        },
+        {
+          "group": 965,
+          "latents": [
+            1322
+          ],
+          "gain_margin": 325.44,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 284,
+      "n_groups": 271,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 227,
+      "n_removed": 240,
+      "var_share_removed": 0.807,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 59,
+          "latents": [
+            1892
+          ],
+          "gain_margin": 126.73,
+          "examples": [
+            "76800-96000",
+            "528000-636000",
+            "21-63000"
+          ]
+        },
+        {
+          "group": 99,
+          "latents": [
+            1456
+          ],
+          "gain_margin": 114.36,
+          "examples": [
+            "44624-53764",
+            "21-31",
+            "22-28"
+          ]
+        },
+        {
+          "group": 26,
+          "latents": [
+            1936
+          ],
+          "gain_margin": 93.11,
+          "examples": [
+            "28000-28000",
+            "200000-280000",
+            "20000-28000"
+          ]
+        },
+        {
+          "group": 127,
+          "latents": [
+            1125
+          ],
+          "gain_margin": 82.5,
+          "examples": [
+            "30000-35000",
+            "30000-35000",
+            "30000-35000"
+          ]
+        },
+        {
+          "group": 230,
+          "latents": [
+            1311
+          ],
+          "gain_margin": 74.06,
+          "examples": [
+            "2000-5000",
+            "1000-5000",
+            "40-50"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2001,
+      "n_groups": 1994,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1513,
+      "n_removed": 1515,
+      "var_share_removed": 0.6922,
+      "var_share_sae_error": 0.0271,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            294,
+            315,
+            386,
+            480
+          ],
+          "gain_margin": 5525.2,
+          "examples": [
+            "Part-Time Administrative/Data Entry I",
+            " Payroll Data Entry Clerk Position - Earn $100-$200 Daily ",
+            "Data Entry Admin/Clerical Positions - Work From Home"
+          ]
+        },
+        {
+          "group": 135,
+          "latents": [
+            1912
+          ],
+          "gain_margin": 345.08,
+          "examples": [
+            "Operating Room Director  ",
+            "Operating Room Technician",
+            "Fine Dining Restaurant Managers"
+          ]
+        },
+        {
+          "group": 1970,
+          "latents": [
+            227
+          ],
+          "gain_margin": 247.43,
+          "examples": [
+            "Cruise Staff Wanted *URGENT*",
+            "Cruise Staff Wanted *URGENT*",
+            "Fisheries Observer"
+          ]
+        },
+        {
+          "group": 851,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 200.19,
+          "examples": [
+            " Payroll Data Entry Clerk Position - Earn $100-$200 Daily ",
+            "Data Entry, Clerical Admin, Administrative Assistant, Customer Service, Accounting, payroll Clerk, Book keeping",
+            "Full Time/ Part Time Dental Assistant"
+          ]
+        },
+        {
+          "group": 994,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 164.14,
+          "examples": [
+            "Manufacturing Engineer",
+            "Manufacturing Engineer",
+            "Manufacturing Engineer"
+          ]
+        }
+      ]
+    }
+  }
+}

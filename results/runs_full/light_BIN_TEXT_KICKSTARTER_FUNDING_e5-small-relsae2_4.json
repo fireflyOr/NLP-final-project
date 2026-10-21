@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7235315455312673,
+  "test_error": 0.2764684544687327,
+  "course_metric": "auroc",
+  "course_score": 0.7235315455312674,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 96.23916792869568,
+  "diagnostics": {
+    "created_at": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 400,
+      "n_kept": 339,
+      "n_removed": 173,
+      "threshold": 0.0391,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.6656,
+      "var_share_kept": 0.4671,
+      "var_share_sae_error": 0.0322,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.0673,
+          "n_active": 194,
+          "examples": [
+            "1970-01-01 00:00:01.405308207",
+            "1970-01-01 00:00:01.405250397",
+            "1970-01-01 00:00:01.405101197"
+          ]
+        },
+        {
+          "latent": 320,
+          "score": 0.0622,
+          "n_active": 735,
+          "examples": [
+            "1970-01-01 00:00:01.412054107",
+            "1970-01-01 00:00:01.412023480",
+            "1970-01-01 00:00:01.412352102"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.0595,
+          "n_active": 230,
+          "examples": [
+            "1970-01-01 00:00:01.405050040",
+            "1970-01-01 00:00:01.405210400",
+            "1970-01-01 00:00:01.405820080"
+          ]
+        },
+        {
+          "latent": 265,
+          "score": 0.0558,
+          "n_active": 653,
+          "examples": [
+            "1970-01-01 00:00:01.423008144",
+            "1970-01-01 00:00:01.424021080",
+            "1970-01-01 00:00:01.423020106"
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0539,
+          "n_active": 795,
+          "examples": [
+            "1970-01-01 00:00:01.424113257",
+            "1970-01-01 00:00:01.428014039",
+            "1970-01-01 00:00:01.428028547"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 409,
+      "n_kept": 395,
+      "n_removed": 117,
+      "threshold": 0.0403,
+      "passed_test": 25,
+      "removed_norm_ratio": 0.4114,
+      "var_share_kept": 0.7692,
+      "var_share_sae_error": 0.0126,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 426,
+          "score": 0.0681,
+          "n_active": 552,
+          "examples": [
+            "1970-01-01 00:00:01.252900740",
+            "1970-01-01 00:00:01.270529940",
+            "1970-01-01 00:00:01.272599940"
+          ]
+        },
+        {
+          "latent": 140,
+          "score": 0.0678,
+          "n_active": 554,
+          "examples": [
+            "1970-01-01 00:00:01.418878740",
+            "1970-01-01 00:00:01.407988740",
+            "1970-01-01 00:00:01.418834040"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.067,
+          "n_active": 2088,
+          "examples": [
+            "1970-01-01 00:00:01.407368046",
+            "1970-01-01 00:00:01.312005866",
+            "1970-01-01 00:00:01.419363566"
+          ]
+        },
+        {
+          "latent": 416,
+          "score": 0.0663,
+          "n_active": 732,
+          "examples": [
+            "1970-01-01 00:00:01.283313540",
+            "1970-01-01 00:00:01.283193240",
+            "1970-01-01 00:00:01.283921940"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.0646,
+          "n_active": 606,
+          "examples": [
+            "1970-01-01 00:00:01.400039940",
+            "1970-01-01 00:00:01.347152340",
+            "1970-01-01 00:00:01.377302340"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 373,
+      "n_removed": 139,
+      "threshold": 0.0411,
+      "passed_test": 25,
+      "removed_norm_ratio": 0.3634,
+      "var_share_kept": 0.4964,
+      "var_share_sae_error": 0.3008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 73,
+          "score": 0.1032,
+          "n_active": 1603,
+          "examples": [
+            "\"I am an aspiring actor/musician just looking to make it in this world and change it in the process.\"",
+            "\"I am looking for Help to kick start my Career\"",
+            "\"I\u2019m a 17 year old potter from Nelson New Zealand. I\u2019m looking for funding to kickstart my passion for pottery.\""
+          ]
+        },
+        {
+          "latent": 16,
+          "score": 0.0808,
+          "n_active": 1352,
+          "examples": [
+            "\"This will be my first collection of short stories, written from ideas and scraps of ideas that I've had since I was a young child.\"",
+            "\"I am in the process of organizing a series of writings on LOVE & COMPASSION & pairing them with photographs taken on Pilgrimage.\"",
+            "\"I've written more than enough material for my follow-up CD.  I have, also, a couple excitingly new ideas for the final product.\""
+          ]
+        },
+        {
+          "latent": 270,
+          "score": 0.0807,
+          "n_active": 638,
+          "examples": [
+            "\"The California Museum is seeking funding to research and produce an exhibit celebrating Ray Eames' centennial.\"",
+            "\"Cary Graham, an aspiring author, is seeking funding to self-publish a supernatural thriller entitled Remnant.\"",
+            "\"I think there are too many literalists out there, so I want to make my own translation of the King James Version of the Bible.\""
+          ]
+        },
+        {
+          "latent": 433,
+          "score": 0.0756,
+          "n_active": 1008,
+          "examples": [
+            "\"Help us create online training to make the web accessible to people with disabilities and the elderly.\"",
+            "\"The most awesome, jaw-droppingly epic how-to web series in the history of the internet - and the WORLD.  And the WORLD INTERNET.\"",
+            "\"Learn to create a website for your business, blog, or portfolio with WordPress in this online course. No coding or experience required.\""
+          ]
+        },
+        {
+          "latent": 60,
+          "score": 0.0745,
+          "n_active": 1071,
+          "examples": [
+            "\"We provide a fun and supportive competition and expo that encourages, inspires, rewards and celebrates high school artists statewide!\"",
+            "\"Let's create fun!\"",
+            "\"Painting with Positivity is an opportunity for people of all skill levels and ages to experience the joy of painting and have FUN!\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 344,
+      "n_removed": 168,
+      "threshold": 0.0378,
+      "passed_test": 14,
+      "removed_norm_ratio": 0.4147,
+      "var_share_kept": 0.4934,
+      "var_share_sae_error": 0.2723,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 102,
+          "score": 0.086,
+          "n_active": 4444,
+          "examples": [
+            "\"kit\"",
+            "\"crest\"",
+            "\"techtable\""
+          ]
+        },
+        {
+          "latent": 375,
+          "score": 0.0634,
+          "n_active": 611,
+          "examples": [
+            "\"butterfly-bag-italian-plexiglass-and-leather-bags\"",
+            "\"babylon-road-backpack-removable-pocket\"",
+            "\"satchel-and-page-leather-bags-guaranteed-for-life\""
+          ]
+        },
+        {
+          "latent": 151,
+          "score": 0.0556,
+          "n_active": 624,
+          "examples": [
+            "\"what-are-you-watching\"",
+            "\"understanding-stanley-looking-through-autism\"",
+            "\"what-youre-looking-for\""
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.0492,
+          "n_active": 553,
+          "examples": [
+            "\"web-weekend\"",
+            "\"sharzet-social-networking-with-no-limits-web-site\"",
+            "\"charlies-the-web-show\""
+          ]
+        },
+        {
+          "latent": 437,
+          "score": 0.0459,
+          "n_active": 958,
+          "examples": [
+            "\"a-desert-rose-feature-film\"",
+            "\"christian-faith-based-feature-film-away\"",
+            "\"a-film-made-by-israelis-arabs-europeans-and-1-amer\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 320,
+      "n_removed": 192,
+      "threshold": 0.0385,
+      "passed_test": 22,
+      "removed_norm_ratio": 0.4624,
+      "var_share_kept": 0.4282,
+      "var_share_sae_error": 0.2923,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 58,
+          "score": 0.0871,
+          "n_active": 969,
+          "examples": [
+            "\"Canceled (Canceled)\"",
+            "\"Canceled (Canceled)\"",
+            "\"Roots Project (Canceled)\""
+          ]
+        },
+        {
+          "latent": 172,
+          "score": 0.0801,
+          "n_active": 947,
+          "examples": [
+            "\"Just Testing Program for Youth (Canceled)\"",
+            "\"My Apps (Canceled)\"",
+            "\"Absolute (Canceled)\""
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0789,
+          "n_active": 3688,
+          "examples": [
+            "\"Entity\"",
+            "\"Tin\"",
+            "\"Home\""
+          ]
+        },
+        {
+          "latent": 41,
+          "score": 0.0668,
+          "n_active": 637,
+          "examples": [
+            "\"Charlie's (the web show)\"",
+            "\"Web Weekend\"",
+            "\"Webenessence\""
+          ]
+        },
+        {
+          "latent": 494,
+          "score": 0.0548,
+          "n_active": 1010,
+          "examples": [
+            "\"Politi-Score:  Vote Smarter\"",
+            "\"Mockery of Democracy\"",
+            "\"The 99 - Political Pop Done Right!\""
+          ]
+        }
+      ]
+    }
+  }
+}

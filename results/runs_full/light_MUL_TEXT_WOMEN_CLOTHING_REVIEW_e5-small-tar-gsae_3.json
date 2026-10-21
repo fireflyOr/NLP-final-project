@@ -1,0 +1,171 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7142308943794297,
+  "test_error": 0.7142308943794297,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9052213234978199,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 69.63871502876282,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1702,
+      "n_groups": 1694,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 827,
+      "n_removed": 829,
+      "var_share_removed": 0.0624,
+      "var_share_sae_error": 0.0299,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            83,
+            698
+          ],
+          "gain_margin": 20797.84,
+          "examples": [
+            "Ordered online, and when it came i was very excited to open it - but the photo doesn't show how incredibly wide the cut is. it is also quite cropped and looked ",
+            "I wanted to love this top, but it unfortunately did not work for me. the material has a nice weight and feel to it, and while i love the pattern, the shape leav",
+            "I loved the look of this blouse online. i really wanted a cute eyelet top for summer. the blouse looked great out of the package but the fit was not good. i am "
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            828,
+            1677,
+            2038
+          ],
+          "gain_margin": 16699.06,
+          "examples": [
+            "I first saw this shirt online and decided to see it in person. so happy i did! i never would have picked it up in the store. it looks much better on than on the",
+            "I absolutely love this top! ordered the moss color in size xxs. i am 5'5 105 lbs. i typically wear xs and 0 in retailer clothing. this top is kinda flared/loose",
+            "I absolutely adore this cardigan. it's easy, so comfortable, stylish and absolutely flattering on every shape!! what i love about it most is how long it is. i'm"
+          ]
+        },
+        {
+          "group": 421,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 5526.13,
+          "examples": [
+            "Overall construction/craftmanship of skirt is poor- the dots were sewn in on the seam- some dots didn't lay flat on side by seam- looked like some dots were mis",
+            "This is so close to perfect, but there's a seam down the middle of the back and they didn't bother to match the polka dots. you can see the mismatch in the seco",
+            "Purchased this item on sale-received it and it had two huge holes on the side.not possible to repair. very disappointed in lack of quality control. :("
+          ]
+        },
+        {
+          "group": 610,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 4641.79,
+          "examples": [
+            "I had such high hopes for this top! the colors! the peplum! the ruffles! the price point! the fit was terrible, unflattering, and laughable! please try again wi",
+            "These pants look nice and are comfortable but the quality of the fabric is terrible! i should not be surprised because i bought another pair of pants by this sa",
+            "I should have listened to the reviews that said this top was too boxy, but i didn't believe them and bought it anyway. i was wrong! this top is so boxy and wide"
+          ]
+        },
+        {
+          "group": 1693,
+          "latents": [
+            106
+          ],
+          "gain_margin": 4554.6,
+          "examples": [
+            "I saw this dress and immediately started daydreaming about wearing it while honeymooning in italy along the amalfi coast or the cinque terre with my husband. an",
+            "I have been continually disappointed in retailer's clothing for the past year. i feel like their prices have soared and the quality has remained so-so, but dres",
+            "I really wished i had heeded the other reviews of this \"dress\". it is so ridiculously oversized i cannot imagine who this possibly would look good on. i ordered"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1531,
+      "n_groups": 1526,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 966,
+      "n_removed": 967,
+      "var_share_removed": 0.229,
+      "var_share_sae_error": 0.0125,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            106,
+            437
+          ],
+          "gain_margin": 12465.42,
+          "examples": [
+            "Looks cheap",
+            "Looks cheap",
+            "Very thin material"
+          ]
+        },
+        {
+          "group": 1511,
+          "latents": [
+            59
+          ],
+          "gain_margin": 4788.44,
+          "examples": [
+            "Too roomy in the bust for me",
+            "Great concept, but snags easily!",
+            "So cute, but tricky fit"
+          ]
+        },
+        {
+          "group": 1518,
+          "latents": [
+            396
+          ],
+          "gain_margin": 3918.15,
+          "examples": [
+            "Poor quality, unflattering fit",
+            "Cheap fabric and terrible fit",
+            "Very unflattering!"
+          ]
+        },
+        {
+          "group": 761,
+          "latents": [
+            828
+          ],
+          "gain_margin": 3037.05,
+          "examples": [
+            "Perfect, comfy, feminine summer dress!",
+            "Love this gorgeous jumpsuit!",
+            "I'm in love with this dress! (the blue green one)"
+          ]
+        },
+        {
+          "group": 381,
+          "latents": [
+            1677
+          ],
+          "gain_margin": 2386.93,
+          "examples": [
+            "Perfect \"wear to all\" spring dress!",
+            "Absolutely stunning!",
+            "T.la's cutest tee. ever!"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,989 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ROTTEN_TOMATOES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8346568015908425,
+  "test_error": 0.8346568015908425,
+  "course_metric": "r2",
+  "course_score": 0.49268250440152017,
+  "n_text_cols": 13,
+  "n_text_features": 390,
+  "n_train": 4772,
+  "n_test": 2386,
+  "runtime_s": 162.245769739151,
+  "diagnostics": {
+    "Actors": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2002,
+      "n_groups": 2000,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1314,
+      "n_removed": 1314,
+      "var_share_removed": 0.6403,
+      "var_share_sae_error": 0.041,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            111,
+            204
+          ],
+          "gain_margin": 2335.35,
+          "examples": [
+            "Al Pacino,Robert De Niro,Robert Duvall",
+            "Lillian Gish,Dorothy Gish,Adolph Lestina",
+            "Cary Grant,Ingrid Bergman,Claude Rains"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            878,
+            1492
+          ],
+          "gain_margin": 1482.19,
+          "examples": [
+            "Brian Matthews,Leah Ayres,Brian Backer",
+            "Heather Langenkamp,Robert Englund,Craig Wasson",
+            "Brittany Snow,Evan Ross,Sharon Conley"
+          ]
+        },
+        {
+          "group": 123,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 200.71,
+          "examples": [
+            "Patrick Stewart,Ian McKellen,Hugh Jackman",
+            "Marlon Brando,Karl Malden,Pina Pellicer",
+            "Brad Pitt,Edward Norton,Helena Bonham Carter"
+          ]
+        },
+        {
+          "group": 1999,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 187.25,
+          "examples": [
+            "Glynis Johns,Steve Railsback,Ronald France",
+            "Luis Guzm\u00e1n,Richard Gere,Chazz Palminteri",
+            "Simon Amstell,Andrew Antonio,Barbara Brand"
+          ]
+        },
+        {
+          "group": 729,
+          "latents": [
+            790
+          ],
+          "gain_margin": 155.12,
+          "examples": [
+            "Emilio Estevez,Mick Jagger,Rene Russo",
+            "Peter Sellers,George C. Scott,Sterling Hayden",
+            "Arnold Schwarzenegger,George Clooney,Chris O'Donnell"
+          ]
+        }
+      ]
+    },
+    "Cast": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2003,
+      "n_groups": 2001,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1306,
+      "n_removed": 1306,
+      "var_share_removed": 0.5989,
+      "var_share_sae_error": 0.0488,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            878,
+            1492
+          ],
+          "gain_margin": 3049.36,
+          "examples": [
+            "B. Bradenton Harper,Blade Yocum,Dariush Moslemi,David Daniel Harper,Jana K. Lensing,William Studer,Chari Eckmann,Jade Cook,Allen Fredrick Voigt,Elizabeth McCorm",
+            "Shane Beasley,Kelsey Carlisle,Ellie Church,Dave Parker,Kaden Miller,Jennifer Lee,Haley Madison,Brian Williams,Matt Keeley,Emily Solt McGee,Jessica Schroeder,Oli",
+            "Maddy Davidson,Alexandria DeBerry,Laura Evans,Lance Henriksen,Carol Hickey,C. Thomas Howell,Tristin Koppie,Quinn Leifur,Jordan LeuVoy,Craig Nigh,Olivia Osteen,V"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            111,
+            204
+          ],
+          "gain_margin": 2309.07,
+          "examples": [
+            "Marlon Brando,Jean Peters,Anthony Quinn,Joseph Wiseman,Arnold Moss,Alan Reed,Margo,Harold Gordon,Lou Gilbert,Frank Silvera,Florenz Ames,Richard Garrick,Fay Roop",
+            "Robert Taylor,Elizabeth Taylor,Joan Fontaine,George Sanders,Emlyn Williams,Robert Douglas,Finlay Currie,Felix Aylmer,Francis De Wolff,Norman Wooland,Basil Sydne",
+            "Michael Caine,Ian Hendry,Britt Ekland,John Osborne,Tony Beckley,George Sewell,Geraldine Moffat,Dorothy White,Rosemarie Dunham,Petra Markham,Alun Armstrong,Bryan"
+          ]
+        },
+        {
+          "group": 999,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 427.54,
+          "examples": [
+            "Frankie Muniz,Hilary Duff,Angie Harmon,Keith David,Cynthia Stevenson,Arnold Vosloo,Daniel Roebuck,Ian McShane,Darrell Hammond,Martin Donovan,Marc Shelton,Chris ",
+            "Sara Paxton,Pat Healy,Alison Bartlett,Jake Ryan,Kelly McGillis,Lena Dunham,Brenda Cooney,George Riddle,John Speredakos,Sean Reid,Kurt Venghaus,Thomas Mahoney,Mi",
+            "Lesley-Anne Down,Andrew Stevens,Trenton Knight,Howard Hesseman,Angus Scrimm,John Byner,Steve Franken,Natanya Ross,Ace Mask,Cory Mendelsohn,Jay Richardson,Andy W"
+          ]
+        },
+        {
+          "group": 1705,
+          "latents": [
+            477
+          ],
+          "gain_margin": 308.85,
+          "examples": [
+            "Jaime Pressly,Cary Elwes,Christopher Lloyd,Cloris Leachman,Garrett Clayton,Chazz Palminteri,Toni Braxton,Maya Stange,Nick Drago,Steve Blackwood,Malerie Grady,Pa",
+            "Melora Slover,Marcia Dangerfield,Devin Healey,David Jensen,Heath Ezell,Isaac Shamy,H.E.D. Redford,Jodi Webb,Mary Bishop,Jonathan Wilde,Vaioliti Purcell,Talia Ar",
+            "Sam Spruell,Peter Stebbings,Christian Camargo,Roman Podhora,Sam Redford,Steve Nicolson,Liam Neeson,Ravil Isyanov,Tim Woodward,Lex Shrapnel,Shaun Benson,Kris Hol"
+          ]
+        },
+        {
+          "group": 1244,
+          "latents": [
+            430
+          ],
+          "gain_margin": 285.25,
+          "examples": [
+            "Mayf Nutter",
+            "Dennis Kucinich",
+            "Robert Redford"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 292,
+      "n_groups": 277,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 261,
+      "n_removed": 276,
+      "var_share_removed": 0.7955,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 41,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 45.58,
+          "examples": [
+            "USA,South Africa",
+            "USA,South Africa",
+            "USA,South Africa"
+          ]
+        },
+        {
+          "group": 70,
+          "latents": [
+            1438
+          ],
+          "gain_margin": 24.74,
+          "examples": [
+            "USA,Botswana",
+            "USA,Albania",
+            "USA,Poland"
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            7
+          ],
+          "gain_margin": 21.45,
+          "examples": [
+            "USA,Italy",
+            "USA,Italy",
+            "USA,Italy"
+          ]
+        },
+        {
+          "group": 130,
+          "latents": [
+            1472
+          ],
+          "gain_margin": 11.39,
+          "examples": [
+            "USA,Netherlands",
+            "USA,Netherlands",
+            "Netherlands,USA"
+          ]
+        },
+        {
+          "group": 128,
+          "latents": [
+            1724
+          ],
+          "gain_margin": 10.45,
+          "examples": [
+            "Panama,USA",
+            "Canada,USA,Italy",
+            "USA,Canada,Japan,Panama"
+          ]
+        }
+      ]
+    },
+    "Creator": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1974,
+      "n_groups": 1974,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1340,
+      "n_removed": 1340,
+      "var_share_removed": 0.6469,
+      "var_share_sae_error": 0.0284,
+      "top": [
+        {
+          "group": 491,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 622.33,
+          "examples": [
+            "Edgar Wright,Joe Cornish",
+            "Michael Bacall,Edgar Wright",
+            "Gustav Hasford,Stanley Kubrick"
+          ]
+        },
+        {
+          "group": 1971,
+          "latents": [
+            111
+          ],
+          "gain_margin": 293.82,
+          "examples": [
+            "Rudyard Kipling,John Lee Mahin",
+            "Truman Capote,George Axelrod",
+            "Robert A. Heinlein,Ted Elliott"
+          ]
+        },
+        {
+          "group": 1941,
+          "latents": [
+            204
+          ],
+          "gain_margin": 257.18,
+          "examples": [
+            "Ernest Hemingway,Jules Furthman",
+            "Arthur Conan Doyle,Billy Wilder",
+            "Roald Dahl,Wes Anderson"
+          ]
+        },
+        {
+          "group": 121,
+          "latents": [
+            1941
+          ],
+          "gain_margin": 234.83,
+          "examples": [
+            "Herman J. Mankiewicz,Orson Welles",
+            "Orson Welles,Whit Masterson",
+            "Tom Hanks,Nia Vardalos"
+          ]
+        },
+        {
+          "group": 744,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 195.27,
+          "examples": [
+            "Mark Protosevich,Paul Gallico",
+            "John D. MacDonald,James R. Webb",
+            "John D. MacDonald,James R. Webb"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2034,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1346,
+      "n_removed": 1346,
+      "var_share_removed": 0.663,
+      "var_share_sae_error": 0.0648,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            1492,
+            1546
+          ],
+          "gain_margin": 2057.98,
+          "examples": [
+            "A demonic force has chosen Freddy Krueger as its portal to the real world. Can Heather play the part of Nancy one last time and trap the evil trying to enter ou",
+            "An 18-year-old college freshman is seduced by a handsome vampire lover who introduce her to a dark world of carnal desires.",
+            "Thirteen year-old city brat Ben (Brandon Tyler Russell) has done it again... and his struggling, single mother (Mira Sorvino) has had enough of him getting into"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            111,
+            204
+          ],
+          "gain_margin": 1449.05,
+          "examples": [
+            "A dramatization of the 20 July assassination and political coup plot by desperate renegade German Army officers against Hitler during World War II.",
+            "A film about the war crimes of the American diplomat, Henry Kissinger.",
+            "In 1948, an American court in occupied Germany tries four Nazi judges for war crimes."
+          ]
+        },
+        {
+          "group": 2033,
+          "latents": [
+            942
+          ],
+          "gain_margin": 403.8,
+          "examples": [
+            "If you could combine the onstage magnetism of Mick Jagger, the lyrical brilliance of Bob Dylan and the personal fragility of Brian Wilson, you would only have b",
+            "A documentary on The Who, featuring interviews with the band's two surviving members, Pete Townshend and Roger Daltrey.",
+            "The pilots of a Royal Air Force squadron in World War I face not only physical but mental dangers in their struggle to survive while fighting the enemy."
+          ]
+        },
+        {
+          "group": 2032,
+          "latents": [
+            878
+          ],
+          "gain_margin": 166.66,
+          "examples": [
+            "Having revived from his wound, Jason Voorhees; now donning a new appearance, refuges at a cabin near Crystal Lake. As a group of co-eds reside there for their v",
+            "Two rival motorcycle gangs terrorize a small town after one of their leaders is thrown in jail.",
+            "Two Los Angeles police detectives, cynical veteran Malloy and cocky rookie Dietz, hunt for a serial killer, an ex-cop named Taylor, whom randomly chooses his vi"
+          ]
+        },
+        {
+          "group": 1809,
+          "latents": [
+            620
+          ],
+          "gain_margin": 148.32,
+          "examples": [
+            "Matt Hunter, a former Military Intelligence man who resigned so that he could take care of his sister following his parents' death, goes to visit Larry Richards",
+            "Synthetic kryptonite laced with tobacco tar splits Superman in two: good Clark Kent and bad Man of Steel.",
+            "Two bumbling service station attendants are left as the sole beneficiaries in a gangster's will. Their trip to claim their fortune is sidetracked when they are "
+          ]
+        }
+      ]
+    },
+    "Director": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1877,
+      "n_groups": 1877,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1231,
+      "n_removed": 1231,
+      "var_share_removed": 0.6695,
+      "var_share_sae_error": 0.0076,
+      "top": [
+        {
+          "group": 1876,
+          "latents": [
+            204
+          ],
+          "gain_margin": 550.12,
+          "examples": [
+            "Alfred Hitchcock",
+            "Alfred Hitchcock",
+            "Alfred Hitchcock"
+          ]
+        },
+        {
+          "group": 1259,
+          "latents": [
+            305
+          ],
+          "gain_margin": 477.69,
+          "examples": [
+            "George Lucas",
+            "George Lucas",
+            "George Lucas"
+          ]
+        },
+        {
+          "group": 1453,
+          "latents": [
+            323
+          ],
+          "gain_margin": 240.32,
+          "examples": [
+            "Sam Raimi",
+            "Sam Raimi",
+            "Sam Raimi"
+          ]
+        },
+        {
+          "group": 1788,
+          "latents": [
+            111
+          ],
+          "gain_margin": 191.63,
+          "examples": [
+            "Charles Reisner,Buster Keaton",
+            "Richard Elfman,Mahatma Kane Sumatra",
+            "David Butler,Sidney Lanfield"
+          ]
+        },
+        {
+          "group": 123,
+          "latents": [
+            1941
+          ],
+          "gain_margin": 144.25,
+          "examples": [
+            "Robert Aldrich",
+            "Robert Aldrich",
+            "Robert Aldrich"
+          ]
+        }
+      ]
+    },
+    "Filming Locations": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1514,
+      "n_groups": 1514,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1236,
+      "n_removed": 1236,
+      "var_share_removed": 0.7267,
+      "var_share_sae_error": 0.004,
+      "top": [
+        {
+          "group": 1506,
+          "latents": [
+            204
+          ],
+          "gain_margin": 224.21,
+          "examples": [
+            "280 Westbourne Park Road, Notting Hill, London, England, UK",
+            "Ashridge Park, Little Gaddesden, Hertfordshire, England, UK",
+            "Ashridge Park, Little Gaddesden, Hertfordshire, England, UK"
+          ]
+        },
+        {
+          "group": 756,
+          "latents": [
+            878
+          ],
+          "gain_margin": 196.85,
+          "examples": [
+            "Canada",
+            "Canada",
+            "Canada"
+          ]
+        },
+        {
+          "group": 377,
+          "latents": [
+            1251
+          ],
+          "gain_margin": 172.39,
+          "examples": [
+            "Minnesota, USA",
+            "Minnesota, USA",
+            "Minnesota, USA"
+          ]
+        },
+        {
+          "group": 202,
+          "latents": [
+            1664
+          ],
+          "gain_margin": 120.7,
+          "examples": [
+            "3333 N Lakewood Blvd, Long Beach, California, USA",
+            "Long Beach, California, USA",
+            "Long Beach, California, USA"
+          ]
+        },
+        {
+          "group": 1508,
+          "latents": [
+            111
+          ],
+          "gain_margin": 114.78,
+          "examples": [
+            "Auschwitz-Birkenau Concentration Camp, Oswiecim, Malopolskie, Poland",
+            "Pearl Harbor, O'ahu, Hawaii, USA",
+            "Chaplin Studios - 1416 N. La Brea Avenue, Hollywood, Los Angeles, California, USA"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 700,
+      "n_groups": 688,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 591,
+      "n_removed": 598,
+      "var_share_removed": 0.7431,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 606,
+          "latents": [
+            878
+          ],
+          "gain_margin": 1350.59,
+          "examples": [
+            "Comedy,Family,Horror",
+            "Comedy,Horror",
+            "Comedy,Horror"
+          ]
+        },
+        {
+          "group": 287,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 1209.13,
+          "examples": [
+            "Comedy",
+            "Comedy",
+            "Comedy"
+          ]
+        },
+        {
+          "group": 127,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 529.1,
+          "examples": [
+            "Comedy,Horror",
+            "Comedy,Horror",
+            "Comedy,Horror"
+          ]
+        },
+        {
+          "group": 59,
+          "latents": [
+            1874
+          ],
+          "gain_margin": 516.36,
+          "examples": [
+            "Action,Horror,Sci-Fi",
+            "Action,Horror,Sci-Fi",
+            "Action,Horror,Sci-Fi"
+          ]
+        },
+        {
+          "group": 534,
+          "latents": [
+            111
+          ],
+          "gain_margin": 448.83,
+          "examples": [
+            "Documentary,History,War",
+            "Documentary,History,War",
+            "Documentary,History,War"
+          ]
+        }
+      ]
+    },
+    "Language": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 263,
+      "n_groups": 259,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 245,
+      "n_removed": 249,
+      "var_share_removed": 0.7319,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 149,
+          "latents": [
+            206
+          ],
+          "gain_margin": 10.13,
+          "examples": [
+            "English,Spanish,French",
+            "English,Spanish,French",
+            "English,Spanish,French"
+          ]
+        },
+        {
+          "group": 226,
+          "latents": [
+            19
+          ],
+          "gain_margin": 9.29,
+          "examples": [
+            "French,English",
+            "Italian,English",
+            "Italian,English"
+          ]
+        },
+        {
+          "group": 108,
+          "latents": [
+            1240
+          ],
+          "gain_margin": 4.92,
+          "examples": [
+            "English,French,Hungarian",
+            "English,Hungarian,Spanish,French",
+            "English,French,Chinese"
+          ]
+        },
+        {
+          "group": 234,
+          "latents": [
+            263
+          ],
+          "gain_margin": 2.88,
+          "examples": [
+            "English,Somali",
+            "English,Somali",
+            "English,Malay,Indonesian"
+          ]
+        },
+        {
+          "group": 72,
+          "latents": [
+            1222
+          ],
+          "gain_margin": 2.21,
+          "examples": [
+            "English,Yiddish",
+            "English,Yiddish",
+            "English,Yiddish"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2031,
+      "n_groups": 2031,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1356,
+      "n_removed": 1356,
+      "var_share_removed": 0.6188,
+      "var_share_sae_error": 0.0494,
+      "top": [
+        {
+          "group": 2030,
+          "latents": [
+            878
+          ],
+          "gain_margin": 495.87,
+          "examples": [
+            "The Pink Panther Strikes Again",
+            "Blowback",
+            "Jason Goes to Hell: The Final Friday"
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            111
+          ],
+          "gain_margin": 406.96,
+          "examples": [
+            "The Chronicles of Narnia: The Voyage of the Dawn Treader",
+            "Abe Lincoln in Illinois",
+            "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe"
+          ]
+        },
+        {
+          "group": 1627,
+          "latents": [
+            204
+          ],
+          "gain_margin": 386.16,
+          "examples": [
+            "Citizen Kane",
+            "Zizek!",
+            "Charlie Wilson's War"
+          ]
+        },
+        {
+          "group": 789,
+          "latents": [
+            1543
+          ],
+          "gain_margin": 244.94,
+          "examples": [
+            "The Last Lovecraft: Relic of Cthulhu",
+            "The Little Shop of Horrors",
+            "Little Shop of Horrors"
+          ]
+        },
+        {
+          "group": 2017,
+          "latents": [
+            115
+          ],
+          "gain_margin": 207.66,
+          "examples": [
+            "Curious George 3: Back to the Jungle",
+            "Bugs Bunny's 3rd Movie: 1001 Rabbit Tales",
+            "Dead Man Walking"
+          ]
+        }
+      ]
+    },
+    "RatingCount": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1369,
+      "n_groups": 1352,
+      "n_multi_groups": 17,
+      "n_groups_dropped": 1020,
+      "n_removed": 1026,
+      "var_share_removed": 0.5685,
+      "var_share_sae_error": 0.0045,
+      "top": [
+        {
+          "group": 1345,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1026.54,
+          "examples": [
+            "115,468",
+            "255,747",
+            "314,933"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            396,
+            1033
+          ],
+          "gain_margin": 925.29,
+          "examples": [
+            "98",
+            "98",
+            "98"
+          ]
+        },
+        {
+          "group": 1241,
+          "latents": [
+            305
+          ],
+          "gain_margin": 507.17,
+          "examples": [
+            "444,494",
+            "411,303",
+            "414,132"
+          ]
+        },
+        {
+          "group": 115,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 402.95,
+          "examples": [
+            "294,769",
+            "281,444",
+            "417,396"
+          ]
+        },
+        {
+          "group": 1317,
+          "latents": [
+            414
+          ],
+          "gain_margin": 344.5,
+          "examples": [
+            "236,599",
+            "326,944",
+            "690,684"
+          ]
+        }
+      ]
+    },
+    "Release Date": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 764,
+      "n_groups": 746,
+      "n_multi_groups": 16,
+      "n_groups_dropped": 566,
+      "n_removed": 576,
+      "var_share_removed": 0.7195,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 494,
+          "latents": [
+            111
+          ],
+          "gain_margin": 477.16,
+          "examples": [
+            "5 January 1919 (USA)",
+            "June 1918 (UK)",
+            "1 June 1919 (USA)"
+          ]
+        },
+        {
+          "group": 418,
+          "latents": [
+            204
+          ],
+          "gain_margin": 397.72,
+          "examples": [
+            "14 February 1944 (Sweden)",
+            "4 May 1943 (USA)",
+            "31 August 1943 (Argentina)"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            45,
+            1289
+          ],
+          "gain_margin": 332.9,
+          "examples": [
+            "May 2002 (USA)",
+            "January 2002 (USA)",
+            "2002 (USA)"
+          ]
+        },
+        {
+          "group": 121,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 303.82,
+          "examples": [
+            "April 2014 (Canada)",
+            "12 May 2006 (Canada)",
+            "25 April 2014 (Canada)"
+          ]
+        },
+        {
+          "group": 717,
+          "latents": [
+            323
+          ],
+          "gain_margin": 291.41,
+          "examples": [
+            "13 March 1956 (USA)",
+            "16 January 1956 (Brazil)",
+            "18 July 1956 (USA)"
+          ]
+        }
+      ]
+    },
+    "ReviewCount": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1232,
+      "n_groups": 1215,
+      "n_multi_groups": 17,
+      "n_groups_dropped": 970,
+      "n_removed": 982,
+      "var_share_removed": 0.5862,
+      "var_share_sae_error": 0.0029,
+      "top": [
+        {
+          "group": 1187,
+          "latents": [
+            125
+          ],
+          "gain_margin": 1170.92,
+          "examples": [
+            "3 user,5 critic",
+            "5 user,3 critic",
+            "5 user,3 critic"
+          ]
+        },
+        {
+          "group": 1014,
+          "latents": [
+            565
+          ],
+          "gain_margin": 510.08,
+          "examples": [
+            "15 user",
+            "13 user",
+            "12 user"
+          ]
+        },
+        {
+          "group": 570,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 447.64,
+          "examples": [
+            "1 user,7 critic",
+            "1 user,7 critic",
+            "1 user,7 critic"
+          ]
+        },
+        {
+          "group": 795,
+          "latents": [
+            305
+          ],
+          "gain_margin": 348.64,
+          "examples": [
+            "443 user,346 critic",
+            "444 user,445 critic",
+            "1,036 user,554 critic"
+          ]
+        },
+        {
+          "group": 610,
+          "latents": [
+            323
+          ],
+          "gain_margin": 310.69,
+          "examples": [
+            "4,398 user,634 critic",
+            "955 user,624 critic",
+            "524 user,248 critic"
+          ]
+        }
+      ]
+    }
+  }
+}

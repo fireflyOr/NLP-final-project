@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.936029563094342,
+  "test_error": 0.06397043690565796,
+  "course_metric": "auroc",
+  "course_score": 0.9360295630943418,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 41.95589733123779,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2046,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1460,
+      "n_removed": 1460,
+      "var_share_removed": 0.3457,
+      "var_share_sae_error": 0.1006,
+      "top": [
+        {
+          "group": 2041,
+          "latents": [
+            227
+          ],
+          "gain_margin": 6801.91,
+          "examples": [
+            "I suggest a match up  between the WWE players and those hairy people that pretend to be uneducated, backward fools, the ones who cosplay in totally inappropriat",
+            "stupid corrupt and economically inept, liberals empowered an idiot , conservatives and canadians are going to enable a real business leader who understands the ",
+            "Trump encouraged such  racist skinhead moronic people with his words and actions/"
+          ]
+        },
+        {
+          "group": 138,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 5459.77,
+          "examples": [
+            "Kenny never learns. A career politician, a long standing bum boy for Harper. What a hypocrite suggesting that Notley is out picking fights with everyone. He sho",
+            "For such a reputedly brilliant surgeon, Carson is a moron in many other ways, almost like an idiot savant. Or exactly like an idiot savant.",
+            "Just what do you expect with Salem full of incompetent,greasy democrats to stupid to to manage anything."
+          ]
+        },
+        {
+          "group": 1977,
+          "latents": [
+            315
+          ],
+          "gain_margin": 2542.02,
+          "examples": [
+            "That's the thing - these losers thought they were \"big time\"...they are really just trash with no conscience. They are about to find out what \"big time\" is in p",
+            "Justine Trudeau is a loser",
+            "Is it not completely obvious to everyone that this woman is mentally ill?  I mean she needs to seek qualified help, maybe spend a little time in a mental ward u"
+          ]
+        },
+        {
+          "group": 59,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 1861.42,
+          "examples": [
+            "You're psycho.",
+            "You sound like an ass.",
+            "You are an imbecile OBS!"
+          ]
+        },
+        {
+          "group": 2044,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 822.96,
+          "examples": [
+            "It is unfortunate for community-minded Kakaako residents like Rechung Fujihira that developers, landowners, and construction companies are already in a frenzy a",
+            "The cost of providing gov. services has not risen even though property values have. Repairing a road here costs the same as is in any other city or town. Theref",
+            "Barak181, the issue is not whether Gorsuch will legislate from the bench.  To the contrary.  He is a Constitutional originalist who interprets the Constitution "
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1521,
+      "n_groups": 1438,
+      "n_multi_groups": 81,
+      "n_groups_dropped": 1060,
+      "n_removed": 1101,
+      "var_share_removed": 0.6281,
+      "var_share_sae_error": 0.0218,
+      "top": [
+        {
+          "group": 447,
+          "latents": [
+            1103
+          ],
+          "gain_margin": 192.21,
+          "examples": [
+            "2017-10-30 16:38:00.183716",
+            "2017-08-19 04:38:01.048185",
+            "2016-12-10 19:38:09.866086"
+          ]
+        },
+        {
+          "group": 78,
+          "latents": [
+            2030
+          ],
+          "gain_margin": 162.37,
+          "examples": [
+            "2016-11-18 04:11:59.070759",
+            "2016-11-15 03:45:50.400750",
+            "2017-06-29 16:01:21.520751"
+          ]
+        },
+        {
+          "group": 619,
+          "latents": [
+            1170
+          ],
+          "gain_margin": 144.57,
+          "examples": [
+            "2017-06-08 19:00:25.357134",
+            "2016-10-14 19:29:25.257311",
+            "2016-09-03 16:30:25.564763"
+          ]
+        },
+        {
+          "group": 759,
+          "latents": [
+            1287
+          ],
+          "gain_margin": 114.39,
+          "examples": [
+            "2017-07-25 20:24:20.678173",
+            "2017-04-25 01:04:24.674533",
+            "2017-01-24 13:20:25.844604"
+          ]
+        },
+        {
+          "group": 782,
+          "latents": [
+            152
+          ],
+          "gain_margin": 109.02,
+          "examples": [
+            "2017-09-04 18:12:20.509241",
+            "2016-03-27 03:07:32.506172",
+            "2016-04-14 00:41:08.508432"
+          ]
+        }
+      ]
+    }
+  }
+}

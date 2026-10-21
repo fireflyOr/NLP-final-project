@@ -1,0 +1,173 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7553776033698294,
+  "test_error": 0.7553776033698294,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8991752798876227,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 69.21032166481018,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1803,
+      "n_groups": 1796,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 919,
+      "n_removed": 921,
+      "var_share_removed": 0.2294,
+      "var_share_sae_error": 0.0336,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            828,
+            1046,
+            2038
+          ],
+          "gain_margin": 19724.0,
+          "examples": [
+            "I love this top! it fits perfect and is of great quality! i ordered the pink and love it so much i'm getting the navy one! colors are so trendy as well. this to",
+            "This is the best ever t-shirt i've ever worn. feels so soft! looks gorgeous! very comfortable and yet has that bit of sparkle that makes it perfect for a specia",
+            "I purchased this jumpsuit for christmas parties this year and have received so many compliments. it's a great fit and very comfortable. i especially love the po"
+          ]
+        },
+        {
+          "group": 892,
+          "latents": [
+            698
+          ],
+          "gain_margin": 12573.19,
+          "examples": [
+            "I think this blouse would work for petites. it is super short and boxy. looked nothing like the fit on the model. sad to return it, love the print.",
+            "Maybe i shouldn't have sized up to an xl but i'm not sure a smaller size would have solved the weird fit. the vee is quite low and i'm busty. it'll be really lo",
+            "I wanted to love this sweater but it is a return. it is a very weird fit, very thick, rug-like material and unfitted. the shoulders are bulky, the top is big an"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1002,
+            1737
+          ],
+          "gain_margin": 10334.53,
+          "examples": [
+            "This looks cute in the web photo, unfortunately it is absolutely huge in person. i got the small and have to return it because it is not wearable for me.",
+            "The cut of the bodice is very strange and unflattering. it is great quality, but designed poorly. returned it.",
+            "Agree with other reviewer that this is massive even for a cape. unflattering overall. i normally wear a size 2 of 4 and bought this in an xs and two of me can e"
+          ]
+        },
+        {
+          "group": 1790,
+          "latents": [
+            83
+          ],
+          "gain_margin": 7649.58,
+          "examples": [
+            "I love the style of this top, and the longer length would be great with leggings and fitted shorts. it's somewhat fitted on the top yet it's a-line shape gives ",
+            "I have the blue and gray and love the look and feel. however, the gray within days ripped at the seam and other areas.",
+            "Nice quality. too big for my taste. really liked the style but sleeves were very long."
+          ]
+        },
+        {
+          "group": 1793,
+          "latents": [
+            437
+          ],
+          "gain_margin": 4777.08,
+          "examples": [
+            "This has such awful proportions. i'm 5'0 and 100 lbs, ordered xxs petite (in the neutral color). the seam at the bust literally hits in the middle of my bust!! ",
+            "This jumpsuit looked so great on the model, and looked so hideous on me. i'm 5'4\" and in great shape, and this jumpsuit looked absolutely ridiculous....not to m",
+            "I'm 5 ft 7 125 lbs true size 4 and these pants made me look like i had boy parts. super disappointed!"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1530,
+      "n_groups": 1523,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 978,
+      "n_removed": 979,
+      "var_share_removed": 0.4771,
+      "var_share_sae_error": 0.0126,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            106,
+            437
+          ],
+          "gain_margin": 13929.71,
+          "examples": [
+            "Very thin material, not flattering",
+            "Horrible fit",
+            "Terrible fit"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            828,
+            1677
+          ],
+          "gain_margin": 6427.67,
+          "examples": [
+            "Feminine and flattering, love this dress!!",
+            "Absolutely love this jacket!",
+            "Loooooove this sweater"
+          ]
+        },
+        {
+          "group": 10,
+          "latents": [
+            59,
+            83
+          ],
+          "gain_margin": 6155.42,
+          "examples": [
+            "Overall, i like it, but some sizing issues...",
+            "Ok, but didn't love the length (on me)",
+            "Nice style, but had some issues..."
+          ]
+        },
+        {
+          "group": 759,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 3974.97,
+          "examples": [
+            "Cute jeans, terrible quality!",
+            "Horrible fabric!",
+            "Terrible!"
+          ]
+        },
+        {
+          "group": 750,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 2346.57,
+          "examples": [
+            "Couldn't get it to work!",
+            "So flimsy",
+            "A dud for me"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -15118.275134360123,
+  "test_error": 15118.275134360123,
+  "course_metric": "r2",
+  "course_score": 0.7105704521912137,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.76541996002197,
+  "diagnostics": {
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 325,
+      "n_removed": 187,
+      "threshold": 0.0429,
+      "passed_test": 6,
+      "removed_norm_ratio": 0.5914,
+      "var_share_kept": 0.5048,
+      "var_share_sae_error": 0.1503,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 124,
+          "score": 0.0884,
+          "n_active": 275,
+          "examples": [
+            "MacDonald, R*",
+            "Jackson, O*",
+            "Uyeyama, W K*"
+          ]
+        },
+        {
+          "latent": 210,
+          "score": 0.0622,
+          "n_active": 412,
+          "examples": [
+            "Marohn, G K",
+            "Marohn, G K",
+            "Marwah, J"
+          ]
+        },
+        {
+          "latent": 55,
+          "score": 0.0492,
+          "n_active": 452,
+          "examples": [
+            "Foster, A",
+            "Foster, A",
+            "Foster, I"
+          ]
+        },
+        {
+          "latent": 296,
+          "score": 0.0466,
+          "n_active": 472,
+          "examples": [
+            "Watson, R S",
+            "Watson, R S",
+            "Watson, S C"
+          ]
+        },
+        {
+          "latent": 420,
+          "score": 0.0448,
+          "n_active": 487,
+          "examples": [
+            "Ng, H C.",
+            "Ng, H C.",
+            "Ng, H C."
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 472,
+      "n_removed": 40,
+      "threshold": 0.0406,
+      "passed_test": 253,
+      "removed_norm_ratio": 0.2242,
+      "var_share_kept": 0.8876,
+      "var_share_sae_error": 0.0078,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 404,
+          "score": 0.2465,
+          "n_active": 484,
+          "examples": [
+            "ASSOCIATE DIRECTOR",
+            "ASSOCIATE DIRECTOR",
+            "ASSOCIATE DIRECTOR"
+          ]
+        },
+        {
+          "latent": 361,
+          "score": 0.2459,
+          "n_active": 437,
+          "examples": [
+            "Director Strategic Initiatives",
+            "SENIOR MANAGER, STRATEGIC INITIATIVES",
+            "Manager Strategic Business Initiatives"
+          ]
+        },
+        {
+          "latent": 238,
+          "score": 0.2432,
+          "n_active": 341,
+          "examples": [
+            "Director - Vancouver East District",
+            "Director - Vancouver East District",
+            "Director Vancouver Service Review"
+          ]
+        },
+        {
+          "latent": 455,
+          "score": 0.2405,
+          "n_active": 488,
+          "examples": [
+            "Director - Corporate FP&A",
+            "Director, Corporate Fp&A",
+            "Corporate Information Analyst"
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.2315,
+          "n_active": 207,
+          "examples": [
+            "General Manager Dbl",
+            "GENERAL MANAGER DBL",
+            "General Manager Dbl"
+          ]
+        }
+      ]
+    }
+  }
+}

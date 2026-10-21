@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6618595833522816,
+  "test_error": 0.6618595833522816,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8596317403332251,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 15.100777626037598,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 373,
+      "n_removed": 139,
+      "threshold": 0.0801,
+      "passed_test": 13,
+      "removed_norm_ratio": 0.4624,
+      "var_share_kept": 0.5975,
+      "var_share_sae_error": 0.1637,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 141,
+          "score": 0.1855,
+          "n_active": 349,
+          "examples": [
+            "The iPhone battery was not made for @mention #sxsw",
+            "Google has now officially denied that Circles will launch at #SXSW, but not that it exists! {link} (cont) {link}",
+            "No launch imminent apparently, so Google Circles probably won't d\u00cc\u00a9but at #SXSW this evening."
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.1536,
+          "n_active": 219,
+          "examples": [
+            "@sxsw I hope this year's festival isn't as crashy as this year's iPhone app. #sxsw",
+            "I meant I also wish I  at #SXSW #dyac stupid iPhone!",
+            "This double buzzing issue with iPhone iOS 4.3 is getting annoying. In other news, an iPhone may fly across the room at #GR2L2 #SXSW"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.142,
+          "n_active": 154,
+          "examples": [
+            "RT @mention Slides from #SXSW talk, &quot;iPad Design Headaches &quot; {link} #tapworthy . Really interesting for designers as well.",
+            "Cashmere of Mashable: Thinks the iPad 2 is not a huge step up. Now waiting for the Apple PR team to parachute into the #SXSW session.",
+            "At #sxsw #tapworthy iPad Design Headaches - avoiding the pitfalls of the new design challenges"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1318,
+          "n_active": 191,
+          "examples": [
+            "RT @mention #killing #sxsw &quot;you can google a canadian tuxedo and lose yourself for hours&quot;",
+            "Neck &amp; shoulders are *killing* me thanks to the 8 hours a day I spend heads-down w/my iPhone at #SXSW. Where 2 get it fixed in Austin?",
+            "&quot;You can Google Canadian Tuxedo and lose yourself for hours&quot; #sxsw"
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.11,
+          "n_active": 222,
+          "examples": [
+            "Per this rumor, Google may preview its big social strategy at an '80s-themed costume party at #SXSW. Yep. http:/... {link}",
+            "RT @mention Google party broke up. At the Tumblr / Funny or Die party. Fun! #sxsw",
+            "New post: Per this rumor, Google may preview its big social strategy at an '80s-themed costume party at #SXSW. Yep {link}"
+          ]
+        }
+      ]
+    }
+  }
+}

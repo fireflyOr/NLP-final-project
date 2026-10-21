@@ -1,0 +1,315 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -19.22717063766831,
+  "test_error": 19.22717063766831,
+  "course_metric": "r2",
+  "course_score": 0.803140655086866,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 248.35935497283936,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 280,
+      "n_groups": 279,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 268,
+      "n_removed": 269,
+      "var_share_removed": 0.9148,
+      "var_share_sae_error": 0.0001,
+      "top": [
+        {
+          "group": 186,
+          "latents": [
+            318
+          ],
+          "gain_margin": 36.22,
+          "examples": [
+            "red / espresso / chocolate",
+            "cream / espresso",
+            "espresso"
+          ]
+        },
+        {
+          "group": 262,
+          "latents": [
+            528
+          ],
+          "gain_margin": 24.62,
+          "examples": [
+            "cream / blue / red",
+            "cream / green",
+            "cream / blue / pink"
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            12
+          ],
+          "gain_margin": 24.34,
+          "examples": [
+            "cream / blue / red",
+            "cream / green / pink",
+            "cream / green / pink"
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            1915
+          ],
+          "gain_margin": 15.63,
+          "examples": [
+            "red / espresso / chocolate",
+            "red / cream / chocolate",
+            "red / cream / chocolate"
+          ]
+        },
+        {
+          "group": 174,
+          "latents": [
+            1114
+          ],
+          "gain_margin": 4.35,
+          "examples": [
+            "orange / green",
+            "orange / green",
+            "orange / green"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 236,
+      "n_groups": 236,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 222,
+      "n_removed": 222,
+      "var_share_removed": 0.6519,
+      "var_share_sae_error": 0.0029,
+      "top": [
+        {
+          "group": 160,
+          "latents": [
+            1147
+          ],
+          "gain_margin": 44.61,
+          "examples": [
+            "Cleveland Artist Sylvia",
+            "Teamson Design Corp.",
+            "Teamson Design Corp."
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            2017
+          ],
+          "gain_margin": 18.88,
+          "examples": [
+            "Minnie.",
+            "Disney's Frozen.",
+            "Delta Children"
+          ]
+        },
+        {
+          "group": 195,
+          "latents": [
+            102
+          ],
+          "gain_margin": 12.87,
+          "examples": [
+            "Wildkin.",
+            "Wildkin.",
+            "Wildkin"
+          ]
+        },
+        {
+          "group": 149,
+          "latents": [
+            289
+          ],
+          "gain_margin": 11.47,
+          "examples": [
+            "JoJo Designs",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 111,
+          "latents": [
+            1121
+          ],
+          "gain_margin": 9.97,
+          "examples": [
+            "Guidecraft",
+            "Pink",
+            "CoCaLo Baby"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 749,
+      "n_groups": 749,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 553,
+      "n_removed": 553,
+      "var_share_removed": 0.5566,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 652,
+          "latents": [
+            360
+          ],
+          "gain_margin": 2468.2,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 746,
+          "latents": [
+            324
+          ],
+          "gain_margin": 1354.35,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 74,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 1078.5,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 496,
+          "latents": [
+            593
+          ],
+          "gain_margin": 794.87,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 183,
+          "latents": [
+            1636
+          ],
+          "gain_margin": 749.6,
+          "examples": [
+            "4moms",
+            "Gallery",
+            "Gallery"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1243,
+      "n_groups": 1243,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 799,
+      "n_removed": 799,
+      "var_share_removed": 0.4454,
+      "var_share_sae_error": 0.0065,
+      "top": [
+        {
+          "group": 54,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 3983.44,
+          "examples": [
+            "Gallery Empire 3 Light Crystal Chandelier",
+            "Disney Baby - Lion King 7 Piece Crib Set",
+            "Avengers Assemble Mural 6' x 10.5' - Ultra-strippable"
+          ]
+        },
+        {
+          "group": 1242,
+          "latents": [
+            108
+          ],
+          "gain_margin": 3269.34,
+          "examples": [
+            "Petit Tresor Nuit 4 Piece Bed Set",
+            "Sweet Potato by Glenna Jean Liam Starter Set",
+            "Sumersault Colorburst 10-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 1240,
+          "latents": [
+            651
+          ],
+          "gain_margin": 3022.96,
+          "examples": [
+            "Wildkin Nap Mat - Olive Kids Under Construction",
+            "Manam Kids Brocade Yellow Rug - Size 2.8 x 4.8",
+            "Manam Kids Brocade Pink Rug - Size 2.8 x 4.8"
+          ]
+        },
+        {
+          "group": 1232,
+          "latents": [
+            324
+          ],
+          "gain_margin": 1573.49,
+          "examples": [
+            "NoJo Butterfly Bouquet 4 Piece Crib Set",
+            "Gallery Wrought Iron & Crystal 4 Light Floral Swag Plug In White Chandelier",
+            "The Peanut Shell Uptown Giraffe 4 Piece Crib Set"
+          ]
+        },
+        {
+          "group": 794,
+          "latents": [
+            200
+          ],
+          "gain_margin": 1478.82,
+          "examples": [
+            "New Orleans Saints, Drew Brees Biggshots Twin Comforter Set",
+            "5ft 3in x 7ft 6in State Capitals Fun Rug",
+            "Carolina Panthers, Cam Newton Biggshots Twin Comforter Set"
+          ]
+        }
+      ]
+    }
+  }
+}

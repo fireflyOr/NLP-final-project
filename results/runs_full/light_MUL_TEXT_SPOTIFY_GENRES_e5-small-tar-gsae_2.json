@@ -1,0 +1,242 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.3635689432985383,
+  "test_error": 3.3635689432985383,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9003360526495778,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1365.7974615097046,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1935,
+      "n_groups": 1932,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 336,
+      "n_removed": 336,
+      "var_share_removed": 0.0341,
+      "var_share_sae_error": 0.0401,
+      "top": [
+        {
+          "group": 745,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 5776.0,
+          "examples": [
+            "MOD\u00c3O",
+            "Pela Porta da Frente",
+            "Pela Porta da Frente"
+          ]
+        },
+        {
+          "group": 1926,
+          "latents": [
+            516
+          ],
+          "gain_margin": 4094.87,
+          "examples": [
+            "Voz Que Sana",
+            "Condenado",
+            "Condenado"
+          ]
+        },
+        {
+          "group": 812,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 3978.12,
+          "examples": [
+            "No Hay Truco (Maqueta 2007)",
+            "No Hay Truco (Maqueta 2007)",
+            "Vida Que Segue"
+          ]
+        },
+        {
+          "group": 963,
+          "latents": [
+            1132
+          ],
+          "gain_margin": 3256.32,
+          "examples": [
+            "Eu & Voc\u00eas",
+            "Esperando Voc\u00ea, Vol. 6",
+            "Esperando Voc\u00ea, Vol. 6"
+          ]
+        },
+        {
+          "group": 502,
+          "latents": [
+            1570
+          ],
+          "gain_margin": 2522.62,
+          "examples": [
+            "ChuChu TV Nursery Rhymes, Vol. 4",
+            "Mr. Chris' Tap Music for Kids",
+            "Alvin And The Chipmunks: The Road Chip (Original Motion Picture Soundtrack)"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1866,
+      "n_groups": 1866,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 76,
+      "n_removed": 76,
+      "var_share_removed": 0.0104,
+      "var_share_sae_error": 0.0341,
+      "top": [
+        {
+          "group": 271,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 6212.9,
+          "examples": [
+            "Thiago Brado",
+            "Henrique & Juliano",
+            "Henrique & Juliano"
+          ]
+        },
+        {
+          "group": 912,
+          "latents": [
+            718
+          ],
+          "gain_margin": 3648.38,
+          "examples": [
+            "Andy Lau",
+            "Andy Lau",
+            "Vicky Chen"
+          ]
+        },
+        {
+          "group": 282,
+          "latents": [
+            1857
+          ],
+          "gain_margin": 3321.95,
+          "examples": [
+            "Nickelback",
+            "Nickelback",
+            "Nickelback"
+          ]
+        },
+        {
+          "group": 1724,
+          "latents": [
+            696
+          ],
+          "gain_margin": 2814.83,
+          "examples": [
+            "Mike Perry;Imani Williams",
+            "Kim Walker-Smith",
+            "Craig Ferguson"
+          ]
+        },
+        {
+          "group": 1802,
+          "latents": [
+            547
+          ],
+          "gain_margin": 2781.59,
+          "examples": [
+            "J Balvin;Bad Bunny;Marciano Cantero",
+            "J Balvin;Bad Bunny;Marciano Cantero",
+            "J Balvin;Bad Bunny;Marciano Cantero"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1917,
+      "n_groups": 1912,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 425,
+      "n_removed": 425,
+      "var_share_removed": 0.0421,
+      "var_share_sae_error": 0.0459,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            516,
+            1868
+          ],
+          "gain_margin": 7978.08,
+          "examples": [
+            "Quejas De Bandoneon",
+            "Te Quiero Pa\u00b4Mi",
+            "Te Quiero Pa\u00b4Mi"
+          ]
+        },
+        {
+          "group": 212,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 6115.42,
+          "examples": [
+            "Mel da Sua Boca",
+            "Bolinha de papel",
+            "Bolinha de papel"
+          ]
+        },
+        {
+          "group": 947,
+          "latents": [
+            506
+          ],
+          "gain_margin": 3439.05,
+          "examples": [
+            "Heavy Metal Do Senhor",
+            "Tu as disparu",
+            "O Sopro do Fole"
+          ]
+        },
+        {
+          "group": 1873,
+          "latents": [
+            577
+          ],
+          "gain_margin": 2695.4,
+          "examples": [
+            "Shohage Adore (From \"Belashuru\")",
+            "Shohage Adore (From \"Belashuru\")",
+            "Uljhe Hue (Raw)"
+          ]
+        },
+        {
+          "group": 1045,
+          "latents": [
+            991
+          ],
+          "gain_margin": 2143.32,
+          "examples": [
+            "\u041b\u044e\u0431\u043e\u0432\u044c \u0443\u0441\u0442\u0430\u0432\u0448\u0438\u0445 \u043b\u0435\u0431\u0435\u0434\u0435\u0439",
+            "\u0412\u0430\u043c \u043d\u0435 \u043f\u043e\u043d\u044f\u0442\u044c \u043c\u043e\u0435\u0439 \u043f\u0435\u0447\u0430\u043b\u0438",
+            "\u0414\u0443\u0448\u0430 \u043d\u0438 \u043f\u043e \u043a\u043e\u043c \u0434\u043e \u0441\u0438\u0445 \u043f\u043e\u0440 \u043d\u0435 \u0441\u0442\u0440\u0430\u0434\u0430\u043b\u0430"
+          ]
+        }
+      ]
+    }
+  }
+}

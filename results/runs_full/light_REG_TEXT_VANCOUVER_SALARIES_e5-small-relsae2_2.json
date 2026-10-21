@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13588.108262000038,
+  "test_error": 13588.108262000038,
+  "course_metric": "r2",
+  "course_score": 0.7473166659581031,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.21796679496765,
+  "diagnostics": {
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 352,
+      "n_removed": 160,
+      "threshold": 0.0408,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.4682,
+      "var_share_kept": 0.6209,
+      "var_share_sae_error": 0.1506,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 266,
+          "score": 0.0738,
+          "n_active": 213,
+          "examples": [
+            "The, R*",
+            "Ayotte, T R*",
+            "Letourneux, F*"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.0565,
+          "n_active": 386,
+          "examples": [
+            "Aujla, K",
+            "Aujla, K",
+            "Autiero, D"
+          ]
+        },
+        {
+          "latent": 25,
+          "score": 0.0513,
+          "n_active": 561,
+          "examples": [
+            "Strand, I",
+            "Strand, I",
+            "Strand, I"
+          ]
+        },
+        {
+          "latent": 157,
+          "score": 0.0479,
+          "n_active": 551,
+          "examples": [
+            "Dubbert, R E",
+            "Dubbert, R G",
+            "Bahr, N"
+          ]
+        },
+        {
+          "latent": 504,
+          "score": 0.0435,
+          "n_active": 785,
+          "examples": [
+            "Godlonton, B D*",
+            "McDonald, G*",
+            "Letourneux, F*"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 451,
+      "n_removed": 61,
+      "threshold": 0.045,
+      "passed_test": 195,
+      "removed_norm_ratio": 0.274,
+      "var_share_kept": 0.879,
+      "var_share_sae_error": 0.0084,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 180,
+          "score": 0.2828,
+          "n_active": 495,
+          "examples": [
+            "Director Legislative Operations",
+            "Director Legislative Operations",
+            "Director Legislative Operations"
+          ]
+        },
+        {
+          "latent": 404,
+          "score": 0.2452,
+          "n_active": 402,
+          "examples": [
+            "Director Collections & Technology",
+            "Director Collections & Technology",
+            "Director Of Policy"
+          ]
+        },
+        {
+          "latent": 420,
+          "score": 0.218,
+          "n_active": 482,
+          "examples": [
+            "Chief of Staff to the Mayor",
+            "Chief of Staff To The Mayor",
+            "Chief Of Staff To The Mayor"
+          ]
+        },
+        {
+          "latent": 399,
+          "score": 0.2126,
+          "n_active": 988,
+          "examples": [
+            "Manager Web Architecture & Design",
+            "Manager Programming & Learning",
+            "MANAGER PROGRAMMING & LEARNING"
+          ]
+        },
+        {
+          "latent": 496,
+          "score": 0.2071,
+          "n_active": 1069,
+          "examples": [
+            "Manager, Housing Review Branch",
+            "Manager, Housing Review Branch",
+            "Manager, Gis Projects"
+          ]
+        }
+      ]
+    }
+  }
+}

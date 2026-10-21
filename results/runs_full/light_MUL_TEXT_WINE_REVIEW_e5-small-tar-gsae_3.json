@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2751136954633502,
+  "test_error": 1.2751136954633502,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9735765671630511,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 180.09564590454102,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1440,
+      "n_groups": 1421,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 178,
+      "n_removed": 178,
+      "var_share_removed": 0.008,
+      "var_share_sae_error": 0.0257,
+      "top": [
+        {
+          "group": 612,
+          "latents": [
+            1795
+          ],
+          "gain_margin": 12507.1,
+          "examples": [
+            "Fragrant and floral, this bright wine would pair well with fried seafood or baked Mediterranean fish. Honey and peach blossom notes lead to a crisp, easy mouthf",
+            "Dusty mineral complexities juxtapose luscious melon, peach and Mandarin orange flavors in this dry-style blend of Gew\u00fcrztraminer and Riesling. Perfumed on the n",
+            "This focused white opens with alluring aromas of citrus, yellow stone fruit and a whiff of baking spice. Made with Malvasia Istriana, Friulano and Riesling Rena"
+          ]
+        },
+        {
+          "group": 23,
+          "latents": [
+            23,
+            2043
+          ],
+          "gain_margin": 9384.63,
+          "examples": [
+            "Quite tart and bone dry, this is made from fruit sourced from the Wallula Benches Vineyard\u2014a site also prominently featured in Pacific Rim's Riesling lineup. Ra",
+            "This is estate grown, from a Lake Chelan winery in an emerging region. Riesling is clearly a strength, as this has a delicate elegance often missing from the fr",
+            "Strong flavors of clove and mint dominate this unusual Riesling. It's quite dry, with good penetration, though a world apart from most of its peers. With the ri"
+          ]
+        },
+        {
+          "group": 690,
+          "latents": [
+            863
+          ],
+          "gain_margin": 9210.27,
+          "examples": [
+            "This wine comes from 35-year-old vines at French Creek Vineyard. Light aromas of spice, herb and candlewax are followed by a medium-bodied palate brightened by ",
+            "This bottling is extremely chalky on the nose, with white rock aromas dusting its Asian pear, buttercream and grapefruit pith scents. The palate is tense and Ch",
+            "Quite yellow in the glass, this twist-top bottling shows a slight hint of reduction, with aromas of beeswax, lemon peel and yellow grapefruit pith. There's a go"
+          ]
+        },
+        {
+          "group": 1288,
+          "latents": [
+            15
+          ],
+          "gain_margin": 8947.4,
+          "examples": [
+            "Forward aromas of game and earthy spice notes are upfront on the bouquet, with notes of mulled berries, red plum and fig providing a concentrated, fruity backdr",
+            "This wine from the pioneering producer deep in the Santa Maria Valley shows sweet cedar, chopped herbs, mocha, licorice, cherry and red berry juice on the nose.",
+            "Fresh smoke from your grandpa's pipe swirls with aromas of cherry pie and cinnamon-vanilla cream on this wine named after the year Mission San Luis Obispo de To"
+          ]
+        },
+        {
+          "group": 1352,
+          "latents": [
+            88
+          ],
+          "gain_margin": 7898.44,
+          "examples": [
+            "You'll love that extra fruity richness that this beautiful Barolo from the warm 2007 vintage proudly puts on display. Black fruit and plum is backed by licorice",
+            "The Anselma family is committed to producing only great Barolo and nothing else. This vintage of its prized product offers beautiful hints of blue flowers and w",
+            "Vigna La Rosa is always among Fontanafredda's best performing wines and this vintage will appeal to those who enjoy a riper, fuller style of Barolo. There are m"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 714,
+      "n_groups": 713,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 595,
+      "n_removed": 596,
+      "var_share_removed": 0.5379,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 508,
+          "latents": [
+            38
+          ],
+          "gain_margin": 4658.5,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "group": 358,
+          "latents": [
+            20
+          ],
+          "gain_margin": 3988.89,
+          "examples": [
+            "Lisboa",
+            "Lisboa",
+            "Lisboa"
+          ]
+        },
+        {
+          "group": 450,
+          "latents": [
+            427
+          ],
+          "gain_margin": 3954.4,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 211,
+          "latents": [
+            166
+          ],
+          "gain_margin": 3317.64,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 118,
+          "latents": [
+            1800
+          ],
+          "gain_margin": 3093.53,
+          "examples": [
+            "Tejo",
+            "Tejo",
+            "Tejo"
+          ]
+        }
+      ]
+    }
+  }
+}

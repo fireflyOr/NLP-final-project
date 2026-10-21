@@ -1,0 +1,315 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -24.50626395242168,
+  "test_error": 24.50626395242168,
+  "course_metric": "r2",
+  "course_score": 0.7312264744870174,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 227.06185150146484,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 219,
+      "n_groups": 218,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 211,
+      "n_removed": 212,
+      "var_share_removed": 0.9553,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 168,
+          "latents": [
+            262
+          ],
+          "gain_margin": 26.43,
+          "examples": [
+            "cream / espresso",
+            "blue / cream / green",
+            "cream / blue / red"
+          ]
+        },
+        {
+          "group": 68,
+          "latents": [
+            789
+          ],
+          "gain_margin": 15.72,
+          "examples": [
+            "orange / blue / pink / red",
+            "grey / gray / purple",
+            "orange / blue / green / pink"
+          ]
+        },
+        {
+          "group": 126,
+          "latents": [
+            1134
+          ],
+          "gain_margin": 11.19,
+          "examples": [
+            "blue / chocolate",
+            "blue / chocolate",
+            "blue / chocolate"
+          ]
+        },
+        {
+          "group": 142,
+          "latents": [
+            732
+          ],
+          "gain_margin": 5.22,
+          "examples": [
+            "orange / grey",
+            "orange / grey",
+            "orange / grey"
+          ]
+        },
+        {
+          "group": 132,
+          "latents": [
+            1329
+          ],
+          "gain_margin": 3.11,
+          "examples": [
+            "blue / chocolate",
+            "blue / chocolate",
+            "blue / chocolate"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 246,
+      "n_groups": 244,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 231,
+      "n_removed": 233,
+      "var_share_removed": 0.6882,
+      "var_share_sae_error": 0.0045,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            2041
+          ],
+          "gain_margin": 104.44,
+          "examples": [
+            "Swarovski&Acirc;&reg; The",
+            "Swarovski",
+            "Munchkin"
+          ]
+        },
+        {
+          "group": 127,
+          "latents": [
+            192
+          ],
+          "gain_margin": 68.53,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Rhythm",
+            "Glenna Jean, Rhythm"
+          ]
+        },
+        {
+          "group": 67,
+          "latents": [
+            1615
+          ],
+          "gain_margin": 33.77,
+          "examples": [
+            "Babies'R'Us.",
+            "Babies'R'Us.",
+            "Babies'R'Us."
+          ]
+        },
+        {
+          "group": 83,
+          "latents": [
+            1652
+          ],
+          "gain_margin": 32.2,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs."
+          ]
+        },
+        {
+          "group": 101,
+          "latents": [
+            453
+          ],
+          "gain_margin": 25.42,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Despicable Me",
+            "Glenna Jean, Wall"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 935,
+      "n_groups": 935,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 617,
+      "n_removed": 617,
+      "var_share_removed": 0.394,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 661,
+          "latents": [
+            36
+          ],
+          "gain_margin": 1103.25,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 178,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 998.51,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "group": 221,
+          "latents": [
+            1785
+          ],
+          "gain_margin": 602.9,
+          "examples": [
+            "Marmont Hill",
+            "Marmont Hill",
+            "Marmont Hill"
+          ]
+        },
+        {
+          "group": 190,
+          "latents": [
+            1667
+          ],
+          "gain_margin": 441.54,
+          "examples": [
+            "Heidi Klum",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 231,
+          "latents": [
+            1265
+          ],
+          "gain_margin": 416.95,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1771,
+      "n_groups": 1757,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 1059,
+      "n_removed": 1070,
+      "var_share_removed": 0.3946,
+      "var_share_sae_error": 0.0088,
+      "top": [
+        {
+          "group": 106,
+          "latents": [
+            1943
+          ],
+          "gain_margin": 1548.3,
+          "examples": [
+            "Lambs & Ivy Little Princess 5 Piece Bedding Set",
+            "Levtex Baby Night Owl 5 Piece Crib Bedding Set",
+            "Levtex Baby Charlotte 5 Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 373,
+          "latents": [
+            1500
+          ],
+          "gain_margin": 796.38,
+          "examples": [
+            "Manam Kids Labyrinth Rug - Size 2.8 x 4.8",
+            "Manam Kids Garden dist Blooming Rug - Size 2.8 x 4.8",
+            "Manam Kids Baby Ball Rug - Size 2.8 x 4.8"
+          ]
+        },
+        {
+          "group": 1122,
+          "latents": [
+            870
+          ],
+          "gain_margin": 735.64,
+          "examples": [
+            "Venetian Style All Crystal 5 Light Chandelier",
+            "Venetian Style All Crystal 5 Light Chandelier",
+            "Gallery Venetian Style All Crystal 5 Light Chandelier with Black Shades"
+          ]
+        },
+        {
+          "group": 21,
+          "latents": [
+            2014
+          ],
+          "gain_margin": 728.86,
+          "examples": [
+            "Gallery All Crystal 5 Light Chandelier with Swarovski Crystal",
+            "Gallery All Crystal 4 Light Chandelier with Swarovski Crystal",
+            "Gallery Venetian Style All Crystal 5 Light Chandelier with Pink Crystal Hearts"
+          ]
+        },
+        {
+          "group": 1298,
+          "latents": [
+            63
+          ],
+          "gain_margin": 581.03,
+          "examples": [
+            "Dallas Cowboys, Tony Romo Biggshots Full Comforter Set",
+            "Biggshots Washington Redskins Full Comforter Set - Robert Griffin III",
+            "Biggshots Oakland Raiders Queen Comforter Set - Darren McFadden"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -24.96435370526356,
+  "test_error": 24.96435370526356,
+  "course_metric": "r2",
+  "course_score": 0.7302286950829628,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 149.26313257217407,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 227,
+      "n_groups": 226,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 213,
+      "n_removed": 214,
+      "var_share_removed": 0.9367,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 75,
+          "latents": [
+            1388
+          ],
+          "gain_margin": 46.38,
+          "examples": [
+            "tan / blue / gray",
+            "blue / green / gray",
+            "blue / green / gray"
+          ]
+        },
+        {
+          "group": 24,
+          "latents": [
+            1926
+          ],
+          "gain_margin": 16.26,
+          "examples": [
+            "cream / green / pink",
+            "cream / black",
+            "cream / grey / pink"
+          ]
+        },
+        {
+          "group": 51,
+          "latents": [
+            1543
+          ],
+          "gain_margin": 9.13,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        },
+        {
+          "group": 115,
+          "latents": [
+            264
+          ],
+          "gain_margin": 6.91,
+          "examples": [
+            "espresso",
+            "espresso",
+            "espresso"
+          ]
+        },
+        {
+          "group": 194,
+          "latents": [
+            722
+          ],
+          "gain_margin": 6.43,
+          "examples": [
+            "cream / blue / grey",
+            "cream / blue / pink",
+            "cream / blue / pink"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 273,
+      "n_groups": 273,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 251,
+      "n_removed": 251,
+      "var_share_removed": 0.6621,
+      "var_share_sae_error": 0.0024,
+      "top": [
+        {
+          "group": 120,
+          "latents": [
+            1652
+          ],
+          "gain_margin": 69.47,
+          "examples": [
+            "Cleveland",
+            "Cleveland",
+            "Cleveland"
+          ]
+        },
+        {
+          "group": 37,
+          "latents": [
+            1380
+          ],
+          "gain_margin": 59.26,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean Lulu",
+            "Glenna Jean Lulu"
+          ]
+        },
+        {
+          "group": 56,
+          "latents": [
+            1670
+          ],
+          "gain_margin": 49.52,
+          "examples": [
+            "Glenna Jean, Rhythm",
+            "Glenna Jean, Swizzle",
+            "Bananafish"
+          ]
+        },
+        {
+          "group": 183,
+          "latents": [
+            418
+          ],
+          "gain_margin": 41.46,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs."
+          ]
+        },
+        {
+          "group": 34,
+          "latents": [
+            1534
+          ],
+          "gain_margin": 40.35,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Hanging",
+            "Glenna Jean, Pillow"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 950,
+      "n_groups": 950,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 634,
+      "n_removed": 634,
+      "var_share_removed": 0.3937,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 267,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 1308.62,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 621,
+          "latents": [
+            359
+          ],
+          "gain_margin": 586.35,
+          "examples": [
+            "Creative Bath Products",
+            "Creative Bath Products",
+            "York Wall Coverings"
+          ]
+        },
+        {
+          "group": 602,
+          "latents": [
+            481
+          ],
+          "gain_margin": 440.35,
+          "examples": [
+            "Sealy Mattresses",
+            "Sealy Mattresses",
+            "Fisher-Price"
+          ]
+        },
+        {
+          "group": 553,
+          "latents": [
+            1779
+          ],
+          "gain_margin": 431.63,
+          "examples": [
+            "My Baby Sam",
+            "My Baby Sam",
+            "My Baby Sam"
+          ]
+        },
+        {
+          "group": 289,
+          "latents": [
+            1108
+          ],
+          "gain_margin": 422.33,
+          "examples": [
+            "Protect-A-Bed",
+            "Protect-A-Bed",
+            "Protect-A-Bed"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1775,
+      "n_groups": 1758,
+      "n_multi_groups": 14,
+      "n_groups_dropped": 1079,
+      "n_removed": 1087,
+      "var_share_removed": 0.4022,
+      "var_share_sae_error": 0.0088,
+      "top": [
+        {
+          "group": 12,
+          "latents": [
+            315,
+            1700
+          ],
+          "gain_margin": 1295.62,
+          "examples": [
+            "Trend Lab Lily 3 Piece Crib Bedding Set",
+            "Trend Lab Lauren 3 Piece Crib Bedding Set",
+            "Trend Lab Marshmallow 3 Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 855,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 954.92,
+          "examples": [
+            "Atlanta Falcons, Matt Ryan Biggshots Full Comforter Set",
+            "Atlanta Falcons, Matt Ryan Biggshots Queen Comforter Set",
+            "Oakland Raiders, Darren McFadden Biggshots Full Comforter Set"
+          ]
+        },
+        {
+          "group": 382,
+          "latents": [
+            1463
+          ],
+          "gain_margin": 632.38,
+          "examples": [
+            "Gallery Contemporary Crystal 3 Light Chandelier with White Shade",
+            "Gallery Contemporary Crystal 3 Light Chandelier with Black Shade",
+            "Modern Raindrop Crystal 3 Light Chandelier Light Fixture"
+          ]
+        },
+        {
+          "group": 1321,
+          "latents": [
+            692
+          ],
+          "gain_margin": 616.27,
+          "examples": [
+            "Atlanta Falcons, Matt Ryan Biggshots Full Comforter Set",
+            "Atlanta Falcons, Matt Ryan Biggshots Queen Comforter Set",
+            "Detroit Lions, Matthew Stafford Biggshots Twin Comforter Set"
+          ]
+        },
+        {
+          "group": 224,
+          "latents": [
+            1667
+          ],
+          "gain_margin": 577.88,
+          "examples": [
+            "Gallery Contemporary Crystal 3 Light Chandelier with Black Shade",
+            "Gallery Contemporary Crystal 3 Light Chandelier with White Shade",
+            "Gallery Wrought Iron and Crystal 4 Light Floral Chandelier"
+          ]
+        }
+      ]
+    }
+  }
+}

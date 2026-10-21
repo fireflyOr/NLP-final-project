@@ -1,0 +1,467 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7153673663512142,
+  "test_error": 0.7153673663512142,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8903332899623976,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 198.30096554756165,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2039,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1042,
+      "n_removed": 1043,
+      "var_share_removed": 0.3511,
+      "var_share_sae_error": 0.1093,
+      "top": [
+        {
+          "group": 11,
+          "latents": [
+            1745,
+            1937,
+            1959
+          ],
+          "gain_margin": 568.88,
+          "examples": [
+            "The Abu Dhabi EDITION Hotel, Al Bateen Marina, Abu Dhabi",
+            "Otto's Apartment Hotel, 640 N. Highland Ave. NE, Atlanta, GA, 30306, USA",
+            "H\u00f4tel de France, place de la Lib\u00e9ration, Auch, 32000, France"
+          ]
+        },
+        {
+          "group": 683,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 265.2,
+          "examples": [
+            "149 Dong Street, Licheng, Quanzhou, China Mainland",
+            "38 Changchun Road, Hanjiang, Yangzhou, China Mainland",
+            "56 Xianhou Road, Licheng, Quanzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 969,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 252.04,
+          "examples": [
+            "1F, Garden City Shinagawa Gotenyama, 6-7-29 Kitashinagawa, Shinagawa-ku, Tokyo, 141-0001, Japan",
+            "4-2-7 Shirokanedai, Minato-ku, Tokyo, 108-0071, Japan",
+            "7F, Tokyo Midtown Hibiya, 1-1-2 Yurakucho, Chiyoda-ku, Tokyo, 100-0006, Japan"
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            503
+          ],
+          "gain_margin": 251.87,
+          "examples": [
+            "Route du Pas de l'Ours 41, Crans-Montana, 3963, Switzerland",
+            "Utoquai 45, Zurich, 8008, Switzerland",
+            "Schiffl\u00e4nde 6, Zurich, 8001, Switzerland"
+          ]
+        },
+        {
+          "group": 778,
+          "latents": [
+            1680
+          ],
+          "gain_margin": 185.83,
+          "examples": [
+            "rue de la Halle 42, Mons, 7000, Belgium",
+            "7 rue de Bernis, N\u00eemes, 30000, France",
+            "rue G\u00e9n\u00e9ral Leman 36, Etterbeek, 1040, Belgium"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1215,
+      "n_groups": 1209,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1034,
+      "n_removed": 1039,
+      "var_share_removed": 0.6287,
+      "var_share_sae_error": 0.0024,
+      "top": [
+        {
+          "group": 290,
+          "latents": [
+            1697
+          ],
+          "gain_margin": 1484.29,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Innovative, Creative"
+          ]
+        },
+        {
+          "group": 1196,
+          "latents": [
+            555
+          ],
+          "gain_margin": 726.41,
+          "examples": [
+            "Korean, Modern Cuisine",
+            "Modern Cuisine, Chinese",
+            "Modern Cuisine, European"
+          ]
+        },
+        {
+          "group": 392,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 708.43,
+          "examples": [
+            "Creative, North African",
+            "Creative, Campanian",
+            "Creative, Andalusian"
+          ]
+        },
+        {
+          "group": 1184,
+          "latents": [
+            292
+          ],
+          "gain_margin": 594.72,
+          "examples": [
+            "Creative, Mexican",
+            "Creative, Mexican",
+            "Creative, Mexican"
+          ]
+        },
+        {
+          "group": 555,
+          "latents": [
+            1215
+          ],
+          "gain_margin": 544.88,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 831,
+      "n_removed": 831,
+      "var_share_removed": 0.2684,
+      "var_share_sae_error": 0.1951,
+      "top": [
+        {
+          "group": 237,
+          "latents": [
+            1933
+          ],
+          "gain_margin": 716.83,
+          "examples": [
+            "This is one of the more recent outlets of the ph\u1edf chain, which prides itself on its rice ribbon noodles made from scratch. Besides the habitual raw beef and bee",
+            "With over 30 years of history, this tiny gem is no secret to locals in search of a bowl of hearty glass noodle soup with braised pork intestines. The toothsome,",
+            "This popular old town stand sells legendary braised beef noodles soup; choose from multiple juicy, slow-cooked cuts like cheek, tongue, tendon, shoulder and sha"
+          ]
+        },
+        {
+          "group": 506,
+          "latents": [
+            1281
+          ],
+          "gain_margin": 464.11,
+          "examples": [
+            "Outdoor service in the summer on the terrace with an exceptional view of the lake. Original furnishings and extremely well kept rooms. Menu including lake speci",
+            "Particularly well-known and frequented by locals, this restaurant with its delightful, rustic, family atmosphere offers delicious regional cuisine that can be e",
+            "An elegant residence with gardens sloping down to the lake. The charming terrace, where meals are served in summer, offers superb views of the lake, while the c"
+          ]
+        },
+        {
+          "group": 1638,
+          "latents": [
+            307
+          ],
+          "gain_margin": 366.55,
+          "examples": [
+            "When American chef Rodney Wages visited Edinburgh on holiday, he fell in love with the city so much that he decided to move himself, his family and his restaura",
+            "The \"Brothers\" in question are the Klaas twins, who have already made a name for themselves as ma\u00eetre d' and sommelier on the restaurant scene; the name also al",
+            "Christine and Pascal couldn\u2019t have found a better name for their establishment. Everything from the warm greeting and service to the wholesome, rustic fare smac"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1557,
+            1800
+          ],
+          "gain_margin": 225.7,
+          "examples": [
+            "This restaurant loves the chic style of Edo culture and values the human touch. Many sushi shops these days offer two time-limited seatings, serving only omakas",
+            "Reservations may be hard to secure, but rest assured that it is completely worth the effort. Cherished by expats yearning for a taste of home as well as sushi p",
+            "Until the previous generation, the shop had focused on sushi deliveries, but the current owner transformed it into a sushi restaurant. He changed the sushi, too"
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            1685
+          ],
+          "gain_margin": 211.71,
+          "examples": [
+            "A restaurant with a strong focus on flavour and the true soul of Peruvian cooking under the baton of chef Irene Guti\u00e9rrez. In the indigenous Quechua language of",
+            "Splashes of earthy colours and cool neutrals adorn the inviting space and the seats at the wave-shaped counter command a fascinating view of the open kitchen. J",
+            "The name means \u2018spirit of fun\u2019 and also refers to the chef\u2019s given name, Shintaro. All occupations have their joys and sorrows, but the chef maintains a spirit "
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 706,
+      "n_groups": 687,
+      "n_multi_groups": 16,
+      "n_groups_dropped": 603,
+      "n_removed": 618,
+      "var_share_removed": 0.7678,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 654,
+          "latents": [
+            239
+          ],
+          "gain_margin": 1564.66,
+          "examples": [
+            "Interesting wine list,Notable sake list",
+            "Counter dining,Interesting wine list",
+            "Counter dining,Interesting wine list"
+          ]
+        },
+        {
+          "group": 184,
+          "latents": [
+            1799
+          ],
+          "gain_margin": 1525.85,
+          "examples": [
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list"
+          ]
+        },
+        {
+          "group": 161,
+          "latents": [
+            1789
+          ],
+          "gain_margin": 1009.07,
+          "examples": [
+            "Air conditioning,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Interesting wine list,Notable sake list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 15,
+          "latents": [
+            334,
+            1578
+          ],
+          "gain_margin": 435.64,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 143,
+          "latents": [
+            1391
+          ],
+          "gain_margin": 406.97,
+          "examples": [
+            "Cash only",
+            "Cash only",
+            "Cash only"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1998,
+      "n_groups": 1998,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1535,
+      "n_removed": 1535,
+      "var_share_removed": 0.7294,
+      "var_share_sae_error": 0.0154,
+      "top": [
+        {
+          "group": 995,
+          "latents": [
+            982
+          ],
+          "gain_margin": 134.95,
+          "examples": [
+            "Camari\u00f1as, Spain",
+            "Bail\u00e9n, Spain",
+            "San Bernardo, Spain"
+          ]
+        },
+        {
+          "group": 590,
+          "latents": [
+            1320
+          ],
+          "gain_margin": 125.47,
+          "examples": [
+            "Para\u00f1aque - Metro Manila, The Philippines",
+            "Hong Kong, Hong Kong SAR China",
+            "Hong Kong, Hong Kong SAR China"
+          ]
+        },
+        {
+          "group": 1450,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 120.34,
+          "examples": [
+            "Sag\u00e0s, Spain",
+            "Newbury, United Kingdom",
+            "Newbury, United Kingdom"
+          ]
+        },
+        {
+          "group": 1328,
+          "latents": [
+            635
+          ],
+          "gain_margin": 108.35,
+          "examples": [
+            "Yens, Switzerland",
+            "Binn, Switzerland",
+            "Losone, Switzerland"
+          ]
+        },
+        {
+          "group": 1008,
+          "latents": [
+            720
+          ],
+          "gain_margin": 105.33,
+          "examples": [
+            "Usclades-et-Rieutord, France",
+            "Taillades, France",
+            "Saint-Bonnet-le-Froid, France"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1030,
+      "n_removed": 1034,
+      "var_share_removed": 0.367,
+      "var_share_sae_error": 0.1059,
+      "top": [
+        {
+          "group": 892,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 280.09,
+          "examples": [
+            "Xin Rong Ji",
+            "Feng Wei Ju",
+            "Xiao Dong Men Niu Rou Shui Fen Lao Dian"
+          ]
+        },
+        {
+          "group": 956,
+          "latents": [
+            742
+          ],
+          "gain_margin": 200.84,
+          "examples": [
+            "Fish Market",
+            "Seafood Ristorante",
+            "Coni'Seafood"
+          ]
+        },
+        {
+          "group": 446,
+          "latents": [
+            1530
+          ],
+          "gain_margin": 149.52,
+          "examples": [
+            "Koer",
+            "K\u014dn\u0101",
+            "Koan"
+          ]
+        },
+        {
+          "group": 624,
+          "latents": [
+            1554
+          ],
+          "gain_margin": 147.05,
+          "examples": [
+            "Oriental Chao",
+            "Chao Yue",
+            "Chao Shang Chao (Chaoyang)"
+          ]
+        },
+        {
+          "group": 760,
+          "latents": [
+            1300
+          ],
+          "gain_margin": 144.19,
+          "examples": [
+            "Ban Ting Jia Yan (Suzhou Industrial Park)",
+            "Fu Ding Zheng Zong Bian Rou (Jianxin Road)",
+            "B\u00e1nh X\u00e8o T\u00f4m Nh\u1ea3y N\u0103m Hi\u1ec1n (Phan Thanh Street)"
+          ]
+        }
+      ]
+    }
+  }
+}

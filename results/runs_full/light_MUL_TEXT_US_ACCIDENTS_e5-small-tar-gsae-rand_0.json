@@ -1,0 +1,688 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.28640050601089606,
+  "test_error": 0.28640050601089606,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9776671439372893,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 678.4506795406342,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1705,
+      "n_groups": 1704,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1259,
+      "n_removed": 1259,
+      "var_share_removed": 0.6024,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 1663,
+          "latents": [
+            732
+          ],
+          "gain_margin": 181.63,
+          "examples": [
+            "KLGA",
+            "KLGA",
+            "KLGA"
+          ]
+        },
+        {
+          "group": 513,
+          "latents": [
+            1170
+          ],
+          "gain_margin": 143.39,
+          "examples": [
+            "KDPL",
+            "KDTL",
+            "KDTL"
+          ]
+        },
+        {
+          "group": 1285,
+          "latents": [
+            433
+          ],
+          "gain_margin": 135.39,
+          "examples": [
+            "KEMT",
+            "KEMT",
+            "KEMT"
+          ]
+        },
+        {
+          "group": 708,
+          "latents": [
+            1730
+          ],
+          "gain_margin": 129.18,
+          "examples": [
+            "KPMD",
+            "KPMD",
+            "KPMD"
+          ]
+        },
+        {
+          "group": 951,
+          "latents": [
+            859
+          ],
+          "gain_margin": 93.08,
+          "examples": [
+            "KFUL",
+            "KFUL",
+            "KFUL"
+          ]
+        }
+      ]
+    },
+    "City": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1908,
+      "n_groups": 1907,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1275,
+      "n_removed": 1276,
+      "var_share_removed": 0.6178,
+      "var_share_sae_error": 0.0049,
+      "top": [
+        {
+          "group": 1782,
+          "latents": [
+            539
+          ],
+          "gain_margin": 282.95,
+          "examples": [
+            "North Hollywood",
+            "North Hollywood",
+            "North Hollywood"
+          ]
+        },
+        {
+          "group": 1562,
+          "latents": [
+            1054
+          ],
+          "gain_margin": 249.14,
+          "examples": [
+            "Soledad",
+            "Soledad",
+            "Chisholm"
+          ]
+        },
+        {
+          "group": 1307,
+          "latents": [
+            591
+          ],
+          "gain_margin": 227.0,
+          "examples": [
+            "Weehawken",
+            "Inglewood",
+            "Inglewood"
+          ]
+        },
+        {
+          "group": 697,
+          "latents": [
+            1277
+          ],
+          "gain_margin": 218.41,
+          "examples": [
+            "Leeds",
+            "Turlock",
+            "Holley"
+          ]
+        },
+        {
+          "group": 1841,
+          "latents": [
+            219
+          ],
+          "gain_margin": 210.08,
+          "examples": [
+            "City Of Industry",
+            "City Of Industry",
+            "City Of Industry"
+          ]
+        }
+      ]
+    },
+    "County": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1506,
+      "n_groups": 1505,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1165,
+      "n_removed": 1166,
+      "var_share_removed": 0.6502,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 72,
+          "latents": [
+            1943
+          ],
+          "gain_margin": 370.33,
+          "examples": [
+            "Gwinnett",
+            "Gwinnett",
+            "Gwinnett"
+          ]
+        },
+        {
+          "group": 1172,
+          "latents": [
+            589
+          ],
+          "gain_margin": 213.2,
+          "examples": [
+            "Fulton",
+            "Fulton",
+            "Fulton"
+          ]
+        },
+        {
+          "group": 724,
+          "latents": [
+            842
+          ],
+          "gain_margin": 210.53,
+          "examples": [
+            "Lorain",
+            "St. Louis County",
+            "St. Louis County"
+          ]
+        },
+        {
+          "group": 1482,
+          "latents": [
+            732
+          ],
+          "gain_margin": 141.62,
+          "examples": [
+            "St Louis",
+            "St Louis",
+            "St Louis"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            2044
+          ],
+          "gain_margin": 132.66,
+          "examples": [
+            "Milwaukee",
+            "Milwaukee",
+            "Milwaukee"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1588,
+      "n_groups": 1571,
+      "n_multi_groups": 13,
+      "n_groups_dropped": 1051,
+      "n_removed": 1054,
+      "var_share_removed": 0.5845,
+      "var_share_sae_error": 0.0189,
+      "top": [
+        {
+          "group": 368,
+          "latents": [
+            1435
+          ],
+          "gain_margin": 14726.77,
+          "examples": [
+            "Two lanes blocked due to accident on I-435 Westbound at Exit 75A Wornall Rd.",
+            "Left lane blocked due to accident on I-75 Southbound between Exits 240 240A 240B FL-674 College Ave and Exit 229 Moccasin Wallow Rd.",
+            "Accident on I-90 Eastbound at Exit 53 I-190 Exits 1-52 54-61."
+          ]
+        },
+        {
+          "group": 773,
+          "latents": [
+            1129
+          ],
+          "gain_margin": 8275.67,
+          "examples": [
+            "Restrictions due to accident on I-80 Eastbound after Exit 50 / Nevada Pacific Pkwy.",
+            "Accident on I-44 Eastbound at Exit 129 63rd St.",
+            "Lane blocked due to accident on I-10 Eastbound at Exits 154 155 US-60."
+          ]
+        },
+        {
+          "group": 763,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 6853.04,
+          "examples": [
+            "Left lane closed due to accident on I-295 Southbound at Exit 30 CR-669 Warwick Rd.",
+            "Right lane blocked due to accident on I-295 Northbound between VA-618 Rivers Bend Blvd and VA-5 New Market Rd.",
+            "Left lane closed due to accident on I-95 Southbound before Exits 61A 61B VA-10 Hundred Rd."
+          ]
+        },
+        {
+          "group": 1494,
+          "latents": [
+            1387
+          ],
+          "gain_margin": 4623.5,
+          "examples": [
+            "#1 lane blocked due to accident on I-75 Northbound before Exit 241 Cleveland Ave.",
+            "Two lanes blocked due to accident on I-465 Westbound between Exits 2A 2B US-31 East St and Exit 4 Harding St.",
+            "Lane blocked due to accident on I-40 Eastbound at Exit 390 Cherry St."
+          ]
+        },
+        {
+          "group": 7,
+          "latents": [
+            232,
+            535,
+            1124
+          ],
+          "gain_margin": 3049.83,
+          "examples": [
+            "Crash on Broadway at 25th St.",
+            "Crash on SC-187 at Keasler Cir.",
+            "Crash on SC-90 at Christy Way."
+          ]
+        }
+      ]
+    },
+    "End_Time": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 469,
+      "n_groups": 417,
+      "n_multi_groups": 41,
+      "n_groups_dropped": 291,
+      "n_removed": 325,
+      "var_share_removed": 0.5925,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 241,
+          "latents": [
+            752
+          ],
+          "gain_margin": 1564.76,
+          "examples": [
+            "2017-08-30 09:00:23",
+            "2017-02-24 08:30:02",
+            "2017-06-01 00:28:01"
+          ]
+        },
+        {
+          "group": 233,
+          "latents": [
+            26
+          ],
+          "gain_margin": 943.03,
+          "examples": [
+            "2018-05-01 08:00:07",
+            "2018-05-01 04:46:17",
+            "2018-05-01 07:50:25"
+          ]
+        },
+        {
+          "group": 178,
+          "latents": [
+            1516
+          ],
+          "gain_margin": 941.78,
+          "examples": [
+            "2019-01-21 06:58:58",
+            "2019-10-28 21:21:12",
+            "2019-01-23 15:01:26"
+          ]
+        },
+        {
+          "group": 210,
+          "latents": [
+            539
+          ],
+          "gain_margin": 827.94,
+          "examples": [
+            "2018-02-17 12:14:16",
+            "2018-01-10 18:16:12",
+            "2018-02-12 16:40:23"
+          ]
+        },
+        {
+          "group": 10,
+          "latents": [
+            219,
+            1770
+          ],
+          "gain_margin": 817.95,
+          "examples": [
+            "2020-04-02 08:32:42",
+            "2020-04-08 09:02:03",
+            "2020-04-27 07:42:10"
+          ]
+        }
+      ]
+    },
+    "Start_Time": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 493,
+      "n_groups": 454,
+      "n_multi_groups": 32,
+      "n_groups_dropped": 319,
+      "n_removed": 345,
+      "var_share_removed": 0.5405,
+      "var_share_sae_error": 0.0023,
+      "top": [
+        {
+          "group": 389,
+          "latents": [
+            1130
+          ],
+          "gain_margin": 2164.14,
+          "examples": [
+            "2023-02-02 07:28:00",
+            "2023-02-27 07:22:00",
+            "2022-02-10 23:38:00"
+          ]
+        },
+        {
+          "group": 343,
+          "latents": [
+            1387
+          ],
+          "gain_margin": 927.43,
+          "examples": [
+            "2018-02-04 01:01:51",
+            "2018-02-28 20:48:58",
+            "2018-02-28 01:33:39"
+          ]
+        },
+        {
+          "group": 157,
+          "latents": [
+            1340
+          ],
+          "gain_margin": 849.51,
+          "examples": [
+            "2019-04-16 17:50:01",
+            "2019-04-04 13:53:17",
+            "2019-04-12 17:08:04"
+          ]
+        },
+        {
+          "group": 434,
+          "latents": [
+            219
+          ],
+          "gain_margin": 838.16,
+          "examples": [
+            "2020-05-02 12:44:26",
+            "2020-05-12 11:12:46",
+            "2020-04-20 10:23:26"
+          ]
+        },
+        {
+          "group": 233,
+          "latents": [
+            752
+          ],
+          "gain_margin": 810.8,
+          "examples": [
+            "2017-02-28 08:42:27",
+            "2017-03-14 08:42:50",
+            "2017-09-13 08:00:35"
+          ]
+        }
+      ]
+    },
+    "Street": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1930,
+      "n_groups": 1919,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1175,
+      "n_removed": 1176,
+      "var_share_removed": 0.5286,
+      "var_share_sae_error": 0.0186,
+      "top": [
+        {
+          "group": 1891,
+          "latents": [
+            682
+          ],
+          "gain_margin": 2274.81,
+          "examples": [
+            "I-240",
+            "I-394 E",
+            "I-394 E"
+          ]
+        },
+        {
+          "group": 1085,
+          "latents": [
+            1129
+          ],
+          "gain_margin": 2219.12,
+          "examples": [
+            "I-385 S",
+            "I-780 W",
+            "I-480N W"
+          ]
+        },
+        {
+          "group": 1818,
+          "latents": [
+            89
+          ],
+          "gain_margin": 1272.21,
+          "examples": [
+            "W Interstate 10",
+            "W Interstate 20",
+            "W Interstate 20"
+          ]
+        },
+        {
+          "group": 930,
+          "latents": [
+            1081
+          ],
+          "gain_margin": 901.38,
+          "examples": [
+            "I-465 N",
+            "I-465 N",
+            "I-465 N"
+          ]
+        },
+        {
+          "group": 93,
+          "latents": [
+            1857
+          ],
+          "gain_margin": 740.96,
+          "examples": [
+            "County Road I W",
+            "County Road I W",
+            "I-10"
+          ]
+        }
+      ]
+    },
+    "Weather_Timestamp": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 485,
+      "n_groups": 439,
+      "n_multi_groups": 36,
+      "n_groups_dropped": 325,
+      "n_removed": 356,
+      "var_share_removed": 0.628,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 257,
+          "latents": [
+            292
+          ],
+          "gain_margin": 1474.09,
+          "examples": [
+            "2016-04-04 14:13:00",
+            "2016-05-04 03:03:00",
+            "2016-06-03 15:51:00"
+          ]
+        },
+        {
+          "group": 304,
+          "latents": [
+            752
+          ],
+          "gain_margin": 1203.01,
+          "examples": [
+            "2017-09-11 08:45:00",
+            "2017-03-09 08:54:00",
+            "2017-08-30 08:54:00"
+          ]
+        },
+        {
+          "group": 357,
+          "latents": [
+            686
+          ],
+          "gain_margin": 759.38,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 58,
+          "latents": [
+            1943
+          ],
+          "gain_margin": 668.94,
+          "examples": [
+            "2018-11-21 05:55:00",
+            "2018-11-20 09:51:00",
+            "2018-11-21 06:47:00"
+          ]
+        },
+        {
+          "group": 126,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 566.0,
+          "examples": [
+            "2020-04-06 05:43:00",
+            "2020-05-27 21:40:00",
+            "2020-04-23 06:51:00"
+          ]
+        }
+      ]
+    },
+    "Zipcode": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1342,
+      "n_groups": 1296,
+      "n_multi_groups": 42,
+      "n_groups_dropped": 742,
+      "n_removed": 759,
+      "var_share_removed": 0.3614,
+      "var_share_sae_error": 0.0068,
+      "top": [
+        {
+          "group": 385,
+          "latents": [
+            780
+          ],
+          "gain_margin": 1290.21,
+          "examples": [
+            "29585-4830",
+            "23832-2545",
+            "32779-5858"
+          ]
+        },
+        {
+          "group": 907,
+          "latents": [
+            918
+          ],
+          "gain_margin": 1276.63,
+          "examples": [
+            "85710-8429",
+            "85705-9322",
+            "60120-8338"
+          ]
+        },
+        {
+          "group": 768,
+          "latents": [
+            828
+          ],
+          "gain_margin": 972.3,
+          "examples": [
+            "13477-3780",
+            "23075-1344",
+            "27587-7235"
+          ]
+        },
+        {
+          "group": 760,
+          "latents": [
+            620
+          ],
+          "gain_margin": 793.22,
+          "examples": [
+            "85739-4206",
+            "65807-2748",
+            "85746-1077"
+          ]
+        },
+        {
+          "group": 1177,
+          "latents": [
+            801
+          ],
+          "gain_margin": 628.68,
+          "examples": [
+            "22660-1825",
+            "23944-2412",
+            "40502-2401"
+          ]
+        }
+      ]
+    }
+  }
+}

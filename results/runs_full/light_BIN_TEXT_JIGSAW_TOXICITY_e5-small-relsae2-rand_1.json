@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8020751397663936,
+  "test_error": 0.19792486023360645,
+  "course_metric": "auroc",
+  "course_score": 0.8020751397663937,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 40.76185894012451,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 396,
+      "n_removed": 116,
+      "threshold": 0.0423,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.3435,
+      "var_share_kept": 0.4846,
+      "var_share_sae_error": 0.3208,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 496,
+          "score": 0.1301,
+          "n_active": 1054,
+          "examples": [
+            "Labeling it as \"typical stupid left racism\" would sound to many like \"typical stupid right racism\". Why not lose the labels and deal with the content?",
+            "Antifa is a gift to the far right, to fascists and racists and all manner of white supremacists, who can point to antifa and say \"They're worse than we are, the",
+            "More BLM violence from this racist anarchist group!"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1147,
+          "n_active": 960,
+          "examples": [
+            "He is much worse than you suggest though",
+            "I tell friends visiting that the 16th street mall is the absolute worst Denver has to offer.",
+            "The hungry mouth of PERS will never be satisfied."
+          ]
+        },
+        {
+          "latent": 304,
+          "score": 0.1078,
+          "n_active": 752,
+          "examples": [
+            "Oh snap. Monty got called out hard.",
+            "The bully in the china shop continues his rampage.",
+            "...makes me wonder what's in the coffee?...but  I do think that civility is a worthy goal. People can disagree without humiliating or denigrating some one else,"
+          ]
+        },
+        {
+          "latent": 202,
+          "score": 0.0766,
+          "n_active": 566,
+          "examples": [
+            "That's hilarious.",
+            "I usually laugh at yours!\n\nGuess we're even.",
+            "Way too funny."
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0733,
+          "n_active": 2401,
+          "examples": [
+            "Nor can you prove what you're saying. You're full of hot air and bullshit. We're just opening a window to get a little clean air in the comments section.",
+            "I am well aware of how to do this.  Don't be ridiculous....\n Nice diversion, though.  You completely missed the point of my remarks, as usual...or, you decided ",
+            "\"No more?\" You haven't provided anything of substance yet. We are agreed not to respond to each other subsequently then? Good."
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 317,
+      "n_kept": 354,
+      "n_removed": 158,
+      "threshold": 0.0438,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6633,
+      "var_share_kept": 0.4334,
+      "var_share_sae_error": 0.0317,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 4,
+          "score": 0.0411,
+          "n_active": 2205,
+          "examples": [
+            "2017-05-17 00:54:00.101928",
+            "2017-05-30 23:26:05.218691",
+            "2017-05-05 12:46:18.909444"
+          ]
+        },
+        {
+          "latent": 472,
+          "score": 0.0364,
+          "n_active": 109,
+          "examples": [
+            "2016-10-20 14:08:00.513756",
+            "2016-11-08 14:18:23.035056",
+            "2017-10-03 18:59:40.005156"
+          ]
+        },
+        {
+          "latent": 448,
+          "score": 0.0314,
+          "n_active": 1283,
+          "examples": [
+            "2016-10-20 13:39:20.800196",
+            "2017-10-14 19:14:25.674220",
+            "2017-10-20 15:13:23.509424"
+          ]
+        },
+        {
+          "latent": 242,
+          "score": 0.0291,
+          "n_active": 107,
+          "examples": [
+            "2016-11-30 02:42:30.877744",
+            "2017-10-23 14:32:12.877250",
+            "2017-02-16 20:06:07.877382"
+          ]
+        },
+        {
+          "latent": 172,
+          "score": 0.0283,
+          "n_active": 37,
+          "examples": [
+            "2016-01-29 06:01:12.119197",
+            "2017-09-28 20:40:06.119208",
+            "2017-05-30 21:41:10.119209"
+          ]
+        }
+      ]
+    }
+  }
+}

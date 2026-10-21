@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13855.841817274195,
+  "test_error": 13855.841817274195,
+  "course_metric": "r2",
+  "course_score": 0.7681335013700408,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.08773136138916,
+  "diagnostics": {
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 317,
+      "n_removed": 195,
+      "threshold": 0.0394,
+      "passed_test": 11,
+      "removed_norm_ratio": 0.545,
+      "var_share_kept": 0.5526,
+      "var_share_sae_error": 0.1498,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 478,
+          "score": 0.0695,
+          "n_active": 199,
+          "examples": [
+            "De Castell, C*",
+            "Chow, L S Y*",
+            "Borger, R*"
+          ]
+        },
+        {
+          "latent": 116,
+          "score": 0.0497,
+          "n_active": 318,
+          "examples": [
+            "Grewal, P",
+            "Grewal, P",
+            "Grewal, P"
+          ]
+        },
+        {
+          "latent": 243,
+          "score": 0.0465,
+          "n_active": 500,
+          "examples": [
+            "Hall, P",
+            "Hall, P",
+            "Hall, J R"
+          ]
+        },
+        {
+          "latent": 273,
+          "score": 0.0453,
+          "n_active": 706,
+          "examples": [
+            "McIntosh, S I",
+            "McIntosh, S I",
+            "McIntosh, S I"
+          ]
+        },
+        {
+          "latent": 510,
+          "score": 0.0431,
+          "n_active": 428,
+          "examples": [
+            "Man-Bourdon, A C",
+            "Bozongwana, L",
+            "Bourdon, K J"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 461,
+      "n_removed": 51,
+      "threshold": 0.0423,
+      "passed_test": 244,
+      "removed_norm_ratio": 0.189,
+      "var_share_kept": 0.916,
+      "var_share_sae_error": 0.0081,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 197,
+          "score": 0.2807,
+          "n_active": 203,
+          "examples": [
+            "General Manager Olympic Operations",
+            "General Manager - Engineering Services",
+            "General Manager - Engineering Services"
+          ]
+        },
+        {
+          "latent": 45,
+          "score": 0.2643,
+          "n_active": 311,
+          "examples": [
+            "Director, Ops Info & Planning",
+            "Director, Ops Info & Planning",
+            "Director, Ops Info & Planning"
+          ]
+        },
+        {
+          "latent": 399,
+          "score": 0.2464,
+          "n_active": 1106,
+          "examples": [
+            "Manager, Programming & Learning",
+            "Manager Climate Adaptation & Equity",
+            "Manager, Access & Telecom Services"
+          ]
+        },
+        {
+          "latent": 361,
+          "score": 0.2415,
+          "n_active": 445,
+          "examples": [
+            "Manager, Strategic Business Advisory",
+            "Manager, Strategic Business Advisory",
+            "Manager, Strategic Business Advisory"
+          ]
+        },
+        {
+          "latent": 404,
+          "score": 0.2415,
+          "n_active": 535,
+          "examples": [
+            "Director Communications",
+            "Director Communications",
+            "Director Departmental Services"
+          ]
+        }
+      ]
+    }
+  }
+}

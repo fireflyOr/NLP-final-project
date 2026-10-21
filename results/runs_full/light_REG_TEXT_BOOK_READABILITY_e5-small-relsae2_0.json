@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8685178348937933,
+  "test_error": 0.8685178348937933,
+  "course_metric": "r2",
+  "course_score": 0.7915457069207501,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 85.24086284637451,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 460,
+      "n_kept": 335,
+      "n_removed": 177,
+      "threshold": 0.074,
+      "passed_test": 10,
+      "removed_norm_ratio": 0.3781,
+      "var_share_kept": 0.5991,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 325,
+          "score": 0.1077,
+          "n_active": 127,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.1041,
+          "n_active": 213,
+          "examples": [
+            "Old-Fashioned Fairy Tales",
+            "Old-Fashioned Fairy Tales",
+            "Myths That Every Child Should Know\nA Selection Of The Classic Myths Of All Times For Young People"
+          ]
+        },
+        {
+          "latent": 34,
+          "score": 0.0938,
+          "n_active": 53,
+          "examples": [
+            "Chambers Elementary Science Reader Book I",
+            "Chambers Elementary Science Reader Book I",
+            "Chambers Elementary Science Reader Book I"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.0912,
+          "n_active": 23,
+          "examples": [
+            "Old-Fashioned Fairy Tales",
+            "Old-Fashioned Fairy Tales",
+            "Russian Fairy Tales\nA Choice Collection of Muscovite Folk-lore"
+          ]
+        },
+        {
+          "latent": 357,
+          "score": 0.0904,
+          "n_active": 72,
+          "examples": [
+            "Famous Affinities of History",
+            "The Memoirs of Sherlock Holmes",
+            "The Memoirs of Sherlock Holmes"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 266,
+      "n_removed": 246,
+      "threshold": 0.0721,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.7084,
+      "var_share_kept": 0.5004,
+      "var_share_sae_error": 0.0873,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 173,
+          "score": 0.0775,
+          "n_active": 182,
+          "examples": [
+            "Charles H. Sylvester (author of anthology?)",
+            "Charles H. Sylvester (author of anthology?)",
+            "Letter from The Daily Atlantis of New York dated Constantinople, Aug. 6"
+          ]
+        },
+        {
+          "latent": 460,
+          "score": 0.0673,
+          "n_active": 181,
+          "examples": [
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes"
+          ]
+        },
+        {
+          "latent": 338,
+          "score": 0.0622,
+          "n_active": 213,
+          "examples": [
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes",
+            "Brothers Grimm translated by Edgar Taylor, Marian Edwardes"
+          ]
+        },
+        {
+          "latent": 103,
+          "score": 0.062,
+          "n_active": 111,
+          "examples": [
+            "PERCY KEESE FITZHUGH",
+            "PERCY KEESE FITZHUGH",
+            "Percy Keese Fitzhugh"
+          ]
+        },
+        {
+          "latent": 99,
+          "score": 0.0591,
+          "n_active": 129,
+          "examples": [
+            "Nicholas Gogol TRANSLATED BY CLAUD FIELD",
+            "Nicholas Gogol TRANSLATED BY CLAUD FIELD",
+            "Nicholas Gogol TRANSLATED BY CLAUD FIELD"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 124,
+      "n_kept": 442,
+      "n_removed": 70,
+      "threshold": 0.0666,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.3792,
+      "var_share_kept": 0.6203,
+      "var_share_sae_error": 0.0077,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 106,
+          "score": 0.0415,
+          "n_active": 41,
+          "examples": [
+            "metres, metres, metres",
+            "metres, metres, metres",
+            "centimetre, centimetres, kilometres"
+          ]
+        },
+        {
+          "latent": 482,
+          "score": 0.0329,
+          "n_active": 20,
+          "examples": [
+            "kilometres",
+            "kilometres",
+            "centimetre, centimetres, kilometres"
+          ]
+        },
+        {
+          "latent": 504,
+          "score": 0.0313,
+          "n_active": 20,
+          "examples": [
+            "recognisable",
+            "prologue",
+            "kilometres"
+          ]
+        },
+        {
+          "latent": 275,
+          "score": 0.0261,
+          "n_active": 21,
+          "examples": [
+            "honour",
+            "honour",
+            "honour"
+          ]
+        },
+        {
+          "latent": 259,
+          "score": 0.025,
+          "n_active": 24,
+          "examples": [
+            "instil",
+            "apologised",
+            "axe"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 322,
+      "n_removed": 190,
+      "threshold": 0.0701,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.5047,
+      "var_share_kept": 0.4457,
+      "var_share_sae_error": 0.2571,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 24,
+          "score": 0.0897,
+          "n_active": 191,
+          "examples": [
+            "Random-access memory (or simply RAM) is the memory or information storage in a computer that is used to store running programs and data for the programs. Data (",
+            "When the butchers opened their shops Robin boldly opened his, but he did not in the least know how to sell, for he had never done anything of the kind before. I",
+            "The Great Migration was the movement of 6 million African-Americans out of the rural Southern United States to the urban Northeast, Midwest, and West that occur"
+          ]
+        },
+        {
+          "latent": 28,
+          "score": 0.0805,
+          "n_active": 237,
+          "examples": [
+            "The principal floor of this design is elevated three feet above the surface of the ground, and is approached by the front steps leading to the platform. The hei",
+            "When Marilla had gone Anne looked around her wistfully. The whitewashed walls were so painfully bare and staring that she thought they must ache over their own ",
+            "The Princess was interested in her embroidery\u2014there's no doubt about that. She spent every moment she could in the tower-room, working and singing. The tower wa"
+          ]
+        },
+        {
+          "latent": 430,
+          "score": 0.0783,
+          "n_active": 185,
+          "examples": [
+            "Morning brought awakening to the two friends with the sounding of reveille from bugles, seemingly just outside their window. Together they sprang from bed, race",
+            "The clever Rabbit was awake inside his hutch. He was thinking, \"I want to explore the outside world.\" The other rabbits were dozing. The door to their hutch ope",
+            "Mr. Jacob saw them coming down the road, and was ready for them this time too. He took two pots and filled them with pitch, and over the top of the pitch he spr"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.0687,
+          "n_active": 190,
+          "examples": [
+            "The lecturer then, by means of diagrams which he placed upon the blackboard, showed the forms of various makes of photographic lenses, and explained the influen",
+            "In chemistry, an electron pair or a Lewis pair consists of two electrons that occupy the same orbital but have opposite spins. The electron pair concept was int",
+            "Why do humans feel the need to be creative and enjoy creative material? While creativity is a basic part of human thinking, what counts as creativity and how do"
+          ]
+        },
+        {
+          "latent": 166,
+          "score": 0.0677,
+          "n_active": 221,
+          "examples": [
+            "Whenever the organ man came into the village of Roncole, in Italy (where Verdi was born, October 10, 1813), he could not be kept indoors. But he followed the wo",
+            "It was a sweet summer evening, and my father asked me, as he sometimes did, to take a little ramble with him along that beautiful forest vista which I have ment",
+            "So, we went into the Home of the Street Sweepers. It is a grey house on a narrow street. There is a sundial in its courtyard, by which the Council of the Home c"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 295,
+      "n_removed": 217,
+      "threshold": 0.0686,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5564,
+      "var_share_kept": 0.4389,
+      "var_share_sae_error": 0.2058,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 209,
+          "score": 0.0625,
+          "n_active": 221,
+          "examples": [
+            "The Battle of New Year's Day",
+            "Battle_of_Waterloo",
+            "Battle_of_Saratoga"
+          ]
+        },
+        {
+          "latent": 279,
+          "score": 0.0581,
+          "n_active": 151,
+          "examples": [
+            "Ways You Can Protect Your Genes From Mutations With a Healthy Lifestyle",
+            "National Morality",
+            "How Can We Help to Prevent Medicines From Polluting the Environment?"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0564,
+          "n_active": 258,
+          "examples": [
+            "LILY AND HER KITTEN",
+            "JESSIE AND HER KITTEN",
+            "THE HARE AND THE HEDGEHOG"
+          ]
+        },
+        {
+          "latent": 479,
+          "score": 0.0542,
+          "n_active": 116,
+          "examples": [
+            "WE THREE",
+            "Three boxes of wealth",
+            "The Three Questions"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.0534,
+          "n_active": 292,
+          "examples": [
+            "Winter Mist",
+            "THE TRIAL-TRIP",
+            "Mirror Stage"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 245,
+      "n_removed": 267,
+      "threshold": 0.0741,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6432,
+      "var_share_kept": 0.4129,
+      "var_share_sae_error": 0.0552,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 158,
+          "score": 0.0802,
+          "n_active": 108,
+          "examples": [
+            "http://www.gutenberg.org/files/18880/18880-h/18880-h.htm#Seeing_Nieuport_Under_Shell_Fire",
+            "http://www.gutenberg.org/files/23405/23405-h/23405-h.htm#TREES_AND_ANTS_THAT_HELP_EACH_OTHER",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#WEEROBIN"
+          ]
+        },
+        {
+          "latent": 28,
+          "score": 0.0725,
+          "n_active": 265,
+          "examples": [
+            "http://www.gutenberg.org/files/18561/18561-h/18561-h.htm#Burning",
+            "http://www.gutenberg.org/files/18561/18561-h/18561-h.htm#Dream",
+            "http://www.gutenberg.org/files/18561/18561-h/18561-h.htm#Radisson"
+          ]
+        },
+        {
+          "latent": 485,
+          "score": 0.0576,
+          "n_active": 101,
+          "examples": [
+            "http://www.gutenberg.org/files/19909/19909-h/19909-h.htm#HOW_WE_KEPT_THANKSGIVING_AT_OLDTOWN",
+            "http://www.gutenberg.org/files/19909/19909-h/19909-h.htm#HOW_OBADIAH_BROUGHT_ABOUT_A_THANKSGIVING",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/igloo-23-text.pdf"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.0564,
+          "n_active": 49,
+          "examples": [
+            "https://www.commonlit.org/texts/charter-of-the-united-nations",
+            "https://www.commonlit.org/texts/general-eisenhower-s-order-of-the-day",
+            "https://en.wikipedia.org/wiki/Compass"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.0563,
+          "n_active": 338,
+          "examples": [
+            "https://www.digitallibrary.io/en/books/read/3718",
+            "https://www.commonlit.org/texts/excerpt-from-bartleby-the-scrivener-a-story-of-wall-street",
+            "https://www.digitallibrary.io/en/books/read/3747/91208"
+          ]
+        }
+      ]
+    }
+  }
+}

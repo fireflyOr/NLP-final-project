@@ -1,0 +1,393 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23927472230922334,
+  "test_error": 0.23927472230922334,
+  "course_metric": "r2",
+  "course_score": 0.48886922608422034,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 48.7930793762207,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1789,
+      "n_groups": 1789,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1156,
+      "n_removed": 1156,
+      "var_share_removed": 0.6015,
+      "var_share_sae_error": 0.0042,
+      "top": [
+        {
+          "group": 1751,
+          "latents": [
+            94
+          ],
+          "gain_margin": 144.51,
+          "examples": [
+            "N.D.V. Prasada Rao",
+            "Subba Rao",
+            "A.K. Thakur"
+          ]
+        },
+        {
+          "group": 1427,
+          "latents": [
+            397
+          ],
+          "gain_margin": 132.07,
+          "examples": [
+            "Outlook",
+            "Michael Goodwin",
+            "Boyd Morrison"
+          ]
+        },
+        {
+          "group": 149,
+          "latents": [
+            1799
+          ],
+          "gain_margin": 125.99,
+          "examples": [
+            "Om Books Editorial Team",
+            "Om Books Editorial Team",
+            "Editorials"
+          ]
+        },
+        {
+          "group": 415,
+          "latents": [
+            1608
+          ],
+          "gain_margin": 120.6,
+          "examples": [
+            "Susan Hill",
+            "Ladybird",
+            "Ladybird"
+          ]
+        },
+        {
+          "group": 940,
+          "latents": [
+            1427
+          ],
+          "gain_margin": 119.01,
+          "examples": [
+            "Lance Armstrong",
+            "Armstrong",
+            "Phil Knight"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 516,
+      "n_groups": 479,
+      "n_multi_groups": 30,
+      "n_groups_dropped": 326,
+      "n_removed": 343,
+      "var_share_removed": 0.3501,
+      "var_share_sae_error": 0.0027,
+      "top": [
+        {
+          "group": 16,
+          "latents": [
+            93,
+            551,
+            1980
+          ],
+          "gain_margin": 700.01,
+          "examples": [
+            "Hardcover,\u2013 1 Jan 1999",
+            "Hardcover,\u2013 1 Dec 1991",
+            "Hardcover,\u2013 28 Dec 1999"
+          ]
+        },
+        {
+          "group": 405,
+          "latents": [
+            946
+          ],
+          "gain_margin": 636.2,
+          "examples": [
+            "Hardcover,\u2013 30 May 2018",
+            "Hardcover,\u2013 20 May 2018",
+            "Hardcover,\u2013 20 May 2018"
+          ]
+        },
+        {
+          "group": 183,
+          "latents": [
+            1091
+          ],
+          "gain_margin": 413.43,
+          "examples": [
+            "Hardcover,\u2013 11 Sep 2014",
+            "Hardcover,\u2013 11 Sep 2014",
+            "Hardcover,\u2013 11 Oct 2012"
+          ]
+        },
+        {
+          "group": 97,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 187.86,
+          "examples": [
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017",
+            "Paperback,\u2013 2017"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            372,
+            1278,
+            1736
+          ],
+          "gain_margin": 137.94,
+          "examples": [
+            "Paperback,\u2013 Import, 30 Sep 1985",
+            "Paperback,\u2013 Import, 13 Sep 2012",
+            "Paperback,\u2013 Import, 1 Jan 2006"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 880,
+      "n_groups": 880,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 652,
+      "n_removed": 652,
+      "var_share_removed": 0.5115,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 790,
+          "latents": [
+            604
+          ],
+          "gain_margin": 220.19,
+          "examples": [
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)"
+          ]
+        },
+        {
+          "group": 665,
+          "latents": [
+            255
+          ],
+          "gain_margin": 202.85,
+          "examples": [
+            "GRE",
+            "Visual Arts",
+            "TOEFL"
+          ]
+        },
+        {
+          "group": 259,
+          "latents": [
+            1656
+          ],
+          "gain_margin": 153.23,
+          "examples": [
+            "Software Architecture",
+            "Software Architecture",
+            "Software Architecture"
+          ]
+        },
+        {
+          "group": 58,
+          "latents": [
+            1948
+          ],
+          "gain_margin": 130.73,
+          "examples": [
+            "Interface Design Programming",
+            "Design Pattern Programming",
+            "Design Pattern Programming"
+          ]
+        },
+        {
+          "group": 272,
+          "latents": [
+            1204
+          ],
+          "gain_margin": 120.86,
+          "examples": [
+            "Radiological & Ultrasound Technology",
+            "Painting Textbooks",
+            "Banks & Banking"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1994,
+      "n_groups": 1994,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1250,
+      "n_removed": 1250,
+      "var_share_removed": 0.666,
+      "var_share_sae_error": 0.0306,
+      "top": [
+        {
+          "group": 1796,
+          "latents": [
+            1255
+          ],
+          "gain_margin": 194.31,
+          "examples": [
+            "Many designers use folding techniques in their work to make three-dimensional forms from two-dimensional sheets of fabric, cardboard, plastic, metal, and many o",
+            "A full-color introduction to the basics of HTML and CSS from the publishers of Wrox! Every day, more and more people want to learn some HTML and CSS. Joining th",
+            "About the book:\nAlgorithm Design Techniques: Recursion, Backtracking, Greedy, Divide and Conquer, and Dynamic Programming.\n\nAlgorithm Design Techniques is a det"
+          ]
+        },
+        {
+          "group": 1405,
+          "latents": [
+            739
+          ],
+          "gain_margin": 167.57,
+          "examples": [
+            "In 2003, Tata Consultancy Services set itself a mission, 'Top Ten by 2010'. In 2009, a year ahead of schedule, TCS made good on that promise. In fourteen years,",
+            "One resource. All of your SAP Business Workflow needs. Reorganized and fine-tuned, the third edition of this #1 best-seller is packed with information and bette",
+            "The speed and efficiency of your organization's software is critical for business success. From monitoring system workloads and optimizing SQL statements, to id"
+          ]
+        },
+        {
+          "group": 1251,
+          "latents": [
+            561
+          ],
+          "gain_margin": 166.01,
+          "examples": [
+            "The Wisden Book of Test Cricket, first published in 1979, is well established as an invaluable and unique source of reference essential to any cricket library. ",
+            "This is your opportunity to take the next step in your career by expanding and validating your skills on the AWS cloud.  AWS has been the frontrunner in cloud c",
+            "\u2018The blessing of an inherently interpretive medium like comics is that it hasn't allowed me to . . . make a virtue of dispassion. For good or for ill, the comic"
+          ]
+        },
+        {
+          "group": 1066,
+          "latents": [
+            1289
+          ],
+          "gain_margin": 140.13,
+          "examples": [
+            "Racing Weight is a proven weight-management program designed specifically for endurance athletes. Revealing new research and drawing from the best practices of ",
+            "Strength training has been proven to have a beneficial effect on our body image and health, so it's not surprising that the number of people participating in th",
+            "This title helps you build the body you've always wanted. Widely regarded as one of America's leading strength and fitness professionals, Brad Schoenfeld has wo"
+          ]
+        },
+        {
+          "group": 234,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 138.24,
+          "examples": [
+            "The illustrator Andrew Loomis (1892-1959) is revered among artists - including comics superstar Alex Ross - for his mastery of figure drawing and clean, Realist",
+            "Sunday Times 1 Bestseller New York Times 1 Bestseller the global bestseller - Origin is the latest Robert Langdon novel from the author of the Da Vinci Code. 'F",
+            "Logophilia Education (estd. August, 2010) is the first and only Etymology Education organisation in the world. We're passionate in our belief that a strong and "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1937,
+      "n_groups": 1937,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1252,
+      "n_removed": 1252,
+      "var_share_removed": 0.6253,
+      "var_share_sae_error": 0.024,
+      "top": [
+        {
+          "group": 1291,
+          "latents": [
+            261
+          ],
+          "gain_margin": 197.01,
+          "examples": [
+            "Understanding Color in Photography",
+            "Photography: The Definitive Visual History",
+            "Beginner's Guide to Digital Painting: Characters"
+          ]
+        },
+        {
+          "group": 415,
+          "latents": [
+            1645
+          ],
+          "gain_margin": 128.7,
+          "examples": [
+            "English Ages 4-5: Collins Easy Learning (Collins Easy Learning Preschool)",
+            "Easy Learning French Complete Grammar, Verbs and Vocabulary (3 books in 1) (Collins Easy Learning French)",
+            "The Art of Shaolin Kung Fu: The Secrets of Kung Fu for Self-Defense, Health, and Enlightenment (Tuttle Martial Arts)"
+          ]
+        },
+        {
+          "group": 204,
+          "latents": [
+            1840
+          ],
+          "gain_margin": 127.14,
+          "examples": [
+            "Tarzan: The Complete Russ Manning Newspaper Strips Volume 2 (1969-1971)",
+            "Tarzan: The Complete Russ Manning Newspaper Strips Volume 2 (1969-1971)",
+            "Best of the Seventies / Book #1 (Archie Americana Series)"
+          ]
+        },
+        {
+          "group": 731,
+          "latents": [
+            1399
+          ],
+          "gain_margin": 115.57,
+          "examples": [
+            "An Introduction to Statistical Learning: with Applications in R (Springer Texts in Statistics)",
+            "Statistics (the Easier Way) with R: An Informal Text on Applied Statistics and Data Science",
+            "Hands-On Recommendation Systems with Python: Start building powerful and personalized, recommendation engines with Python"
+          ]
+        },
+        {
+          "group": 1642,
+          "latents": [
+            827
+          ],
+          "gain_margin": 111.54,
+          "examples": [
+            "Moonwalk",
+            "Moonwalk",
+            "21 Iot Experements"
+          ]
+        }
+      ]
+    }
+  }
+}

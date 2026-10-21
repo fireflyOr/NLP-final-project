@@ -1,0 +1,61 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae-xf",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8932717444875395,
+  "test_error": 0.10672825551246046,
+  "course_metric": "auroc",
+  "course_score": 0.8932717444875393,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 1743.660772562027,
+  "diagnostics": {
+    "description": {
+      "rule": "xfit",
+      "chosen_fraction": 0.75,
+      "n_eligible": 2041,
+      "n_removed": 1530,
+      "inner_losses": {
+        "0.0": 0.17149,
+        "0.1": 0.16582,
+        "0.25": 0.16573,
+        "0.5": 0.1653,
+        "0.75": 0.16287
+      },
+      "var_share_removed": 0.4492
+    },
+    "salary_range": {
+      "rule": "xfit",
+      "chosen_fraction": 0.75,
+      "n_eligible": 287,
+      "n_removed": 215,
+      "inner_losses": {
+        "0.0": 0.17149,
+        "0.1": 0.16582,
+        "0.25": 0.16573,
+        "0.5": 0.1653,
+        "0.75": 0.16287
+      },
+      "var_share_removed": 0.787
+    },
+    "title": {
+      "rule": "xfit",
+      "chosen_fraction": 0.75,
+      "n_eligible": 1991,
+      "n_removed": 1493,
+      "inner_losses": {
+        "0.0": 0.17149,
+        "0.1": 0.16582,
+        "0.25": 0.16573,
+        "0.5": 0.1653,
+        "0.75": 0.16287
+      },
+      "var_share_removed": 0.5401
+    }
+  }
+}

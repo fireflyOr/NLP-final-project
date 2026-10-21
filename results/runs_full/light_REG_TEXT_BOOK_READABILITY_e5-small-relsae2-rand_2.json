@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8911035095853801,
+  "test_error": 0.8911035095853801,
+  "course_metric": "r2",
+  "course_score": 0.7930669183097638,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 83.86955738067627,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 462,
+      "n_kept": 340,
+      "n_removed": 172,
+      "threshold": 0.0711,
+      "passed_test": 11,
+      "removed_norm_ratio": 0.531,
+      "var_share_kept": 0.5158,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 325,
+          "score": 0.1102,
+          "n_active": 127,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0804,
+          "n_active": 48,
+          "examples": [
+            "The Mysterious Stranger and Other Stories\n",
+            "The Mysterious Stranger and Other Stories\n",
+            "The Mantle and Other Stories"
+          ]
+        },
+        {
+          "latent": 176,
+          "score": 0.0799,
+          "n_active": 32,
+          "examples": [
+            "The Beacon Second Reader",
+            "The Child's World Third Reader",
+            "The Child's World Third Reader"
+          ]
+        },
+        {
+          "latent": 61,
+          "score": 0.078,
+          "n_active": 43,
+          "examples": [
+            "THE BOOK OF NATURE MYTHS",
+            "THE BOOK OF NATURE MYTHS",
+            "THE BOOK OF NATURE MYTHS"
+          ]
+        },
+        {
+          "latent": 462,
+          "score": 0.0779,
+          "n_active": 92,
+          "examples": [
+            "Junior Classics Vol. 1",
+            "Junior Classics Vol. 1",
+            "Junior Classics Vol. 1"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 232,
+      "n_removed": 280,
+      "threshold": 0.0733,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7435,
+      "var_share_kept": 0.45,
+      "var_share_sae_error": 0.087,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 493,
+          "score": 0.0531,
+          "n_active": 81,
+          "examples": [
+            "A report issued by the British War Cabinet on March 18, 1918, in the form of a Blue Book of 200 pages or more... As the introductory chapter is in itself a comp",
+            "Upton Sinclair",
+            "Upton Sinclair"
+          ]
+        },
+        {
+          "latent": 478,
+          "score": 0.0525,
+          "n_active": 282,
+          "examples": [
+            "Charles Dickens.",
+            "Charles Dickens",
+            "Charles Dickens"
+          ]
+        },
+        {
+          "latent": 495,
+          "score": 0.0523,
+          "n_active": 135,
+          "examples": [
+            "From the Philadelphia Times",
+            "From the London Times",
+            "The Associated Press"
+          ]
+        },
+        {
+          "latent": 332,
+          "score": 0.0502,
+          "n_active": 132,
+          "examples": [
+            "Commonwealth of Learning",
+            "Commonwealth of Learning",
+            "Edmund Leamy"
+          ]
+        },
+        {
+          "latent": 227,
+          "score": 0.0485,
+          "n_active": 205,
+          "examples": [
+            "G. P. Putnam's Sons?",
+            "Michael A. Signal",
+            "Michael A. Signal"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 146,
+      "n_kept": 412,
+      "n_removed": 100,
+      "threshold": 0.0638,
+      "passed_test": 0,
+      "removed_norm_ratio": 1.73,
+      "var_share_kept": 0.4286,
+      "var_share_sae_error": 0.0013,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 467,
+          "score": 0.0392,
+          "n_active": 27,
+          "examples": [
+            "armour, travelled",
+            "travellers",
+            "travellers"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.0343,
+          "n_active": 20,
+          "examples": [
+            "catalogue",
+            "judgement, judgement",
+            "judgement, judgement, judgement"
+          ]
+        },
+        {
+          "latent": 55,
+          "score": 0.0219,
+          "n_active": 24,
+          "examples": [
+            "behaviour",
+            "behaviour",
+            "neighbouring"
+          ]
+        },
+        {
+          "latent": 5,
+          "score": 0.0218,
+          "n_active": 20,
+          "examples": [
+            "favour, pyjama, favourite",
+            "levelling",
+            "favour"
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.0214,
+          "n_active": 47,
+          "examples": [
+            "favour",
+            "favours",
+            "favourite"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 292,
+      "n_removed": 220,
+      "threshold": 0.0765,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5638,
+      "var_share_kept": 0.3869,
+      "var_share_sae_error": 0.2565,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 289,
+          "score": 0.0975,
+          "n_active": 178,
+          "examples": [
+            "Once upon a time there was a little red hen. She lived in a little white house and she had a little green garden. Every day she worked in the house and garden.\n",
+            "Once upon a time Eagle and Hen were best friends. The two of them were together and chatted from morning till dusk. Eagle's chickens couldn't wait to visit Hen'",
+            "Once upon a time there lived a huntsman. He would go every day in search of game, but it often happened that he killed nothing, and so was obliged to return hom"
+          ]
+        },
+        {
+          "latent": 338,
+          "score": 0.0699,
+          "n_active": 187,
+          "examples": [
+            "The king dwelt for many months in Nottingham, but no man came to claim the knight's lands, nor could he ever hear of Robin Hood in what part of the country he m",
+            "So the land stood long in great peril, for every lord and baron sought but his own advantage; and the Saxons, growing ever more adventurous, wasted and overran ",
+            "I next visited the chapel of Islip, built by the old Abbot of Islip, who dedicated it to St. John the Baptist. One very interesting monument there was to the me"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0691,
+          "n_active": 235,
+          "examples": [
+            "Rinaldo was one of the four sons of Aymon, who married Aya, the sister of Charlemagne. Thus Rinaldo was nephew to Charlemagne and cousin of Orlando. When Rinald",
+            "Chameli's mother had a lot of beautiful jewelry. \nOne day, Chameli's mother showed her all the jewelry and also taught her their names. The next day Chameli sec",
+            "Fatima arrived the next day. Max brought her out in a covered basket, lined with padded crimson satin. Max likes cats and Aunt Cynthia. He explained how we were"
+          ]
+        },
+        {
+          "latent": 493,
+          "score": 0.0661,
+          "n_active": 195,
+          "examples": [
+            "The USA Freedom Act (\"H.R. 2048\"., Pub.L. 114\u201323) is a U.S. law enacted on June 2, 2015 that restored in modified form several provisions of the Patriot Act, wh",
+            "Traumatic brain injury (TBI) is most commonly caused by a hit to the head due to being tackled while playing sports, being involved in a car accident, or gettin",
+            "In the town of Durdlebury, Doggie Trevor began to feel appreciated. He could play the piano, the harp, the viola, the flute, and the clarionette, and sing a mil"
+          ]
+        },
+        {
+          "latent": 497,
+          "score": 0.0648,
+          "n_active": 170,
+          "examples": [
+            "Polly had often had her picture taken, but it was always with her papa or her mamma, and she had never had her picture taken with her pets. So brother Ned had p",
+            "The Crawfurds had a cousin visiting them\u2014an English cousin, Polly Musgrave\u2014from the luxury and comparative gaiety of her rich, childless aunt's house in York. P",
+            "Goat said, \"Ehe, Pig! Come with me to my house. We are having a small party.\" When they were eating, Pig thought, \"This food is so delicious. I think I will sta"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 260,
+      "n_removed": 252,
+      "threshold": 0.0786,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6232,
+      "var_share_kept": 0.3755,
+      "var_share_sae_error": 0.2076,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 166,
+          "score": 0.0569,
+          "n_active": 154,
+          "examples": [
+            "The Skipping Shoes",
+            "Walden, and On The Duty Of Civil Disobedience",
+            "Boycotted\n"
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0548,
+          "n_active": 326,
+          "examples": [
+            "Organism",
+            "Species",
+            "OUR ORIGIN AS A SPECIES."
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.052,
+          "n_active": 294,
+          "examples": [
+            "\u201cTIME TO GET UP!\u201d",
+            "Dive!",
+            "DIVE!"
+          ]
+        },
+        {
+          "latent": 249,
+          "score": 0.0491,
+          "n_active": 150,
+          "examples": [
+            "The Noble Burghers of Calais",
+            "American Aid of France",
+            "Tess of the d'Urbervilles: A Pure Woman"
+          ]
+        },
+        {
+          "latent": 100,
+          "score": 0.0462,
+          "n_active": 137,
+          "examples": [
+            "Briggs in Luck",
+            "The Plea for Eight Hours",
+            "Around the World in Eighty Days"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 255,
+      "n_removed": 257,
+      "threshold": 0.0735,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6789,
+      "var_share_kept": 0.4069,
+      "var_share_sae_error": 0.0579,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 140,
+          "score": 0.0841,
+          "n_active": 119,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Free_drift",
+            "http://www.gutenberg.org/files/18880/18880-h/18880-h.htm#Seeing_Nieuport_Under_Shell_Fire",
+            "http://www.gutenberg.org/files/20521/20521-h/20521-h.htm#Seizures_of_American_Cargoes"
+          ]
+        },
+        {
+          "latent": 14,
+          "score": 0.0637,
+          "n_active": 101,
+          "examples": [
+            "http://www.gutenberg.org/files/19821/19821-h/19821-h.htm#parrot",
+            "http://www.gutenberg.org/files/16540/16540-h/16540-h.htm#THE_BLACKBIRDS_NEST",
+            "http://www.gutenberg.org/files/19821/19821-h/19821-h.htm#keeper"
+          ]
+        },
+        {
+          "latent": 124,
+          "score": 0.062,
+          "n_active": 76,
+          "examples": [
+            "https://www.commonlit.org/texts/lobo-the-king-of-currumpaw",
+            "https://en.wikipedia.org/wiki/Storm_drain",
+            "http://www.gutenberg.org/files/21047/21047-h/21047-h.htm#POMPEY_GUARDING_BABY"
+          ]
+        },
+        {
+          "latent": 148,
+          "score": 0.0484,
+          "n_active": 90,
+          "examples": [
+            "https://www.commonlit.org/texts/learning-about-the-holocaust",
+            "http://www.gutenberg.org/files/26377/26377-h/26377-h.htm#German-American_Dissent",
+            "http://www.gutenberg.org/files/18880/18880-h/18880-h.htm#German_Generals_Talk_of_the_War"
+          ]
+        },
+        {
+          "latent": 419,
+          "score": 0.0483,
+          "n_active": 318,
+          "examples": [
+            "http://www.online-literature.com/elizabeth-arnim/german-garden/1/",
+            "https://www.commonlit.org/texts/jackie-kennedy-onassis-an-icon-for-the-ages",
+            "https://beyondpenguins.ehe.osu.edu/issue/a-sense-of-place/the-top-and-bottom-of-the-world"
+          ]
+        }
+      ]
+    }
+  }
+}

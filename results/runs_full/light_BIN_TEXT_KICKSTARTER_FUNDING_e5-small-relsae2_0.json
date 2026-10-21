@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.724456422968452,
+  "test_error": 0.27554357703154797,
+  "course_metric": "auroc",
+  "course_score": 0.724456422968452,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 96.59954929351807,
+  "diagnostics": {
+    "created_at": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 382,
+      "n_kept": 360,
+      "n_removed": 152,
+      "threshold": 0.039,
+      "passed_test": 21,
+      "removed_norm_ratio": 0.6049,
+      "var_share_kept": 0.5725,
+      "var_share_sae_error": 0.0108,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 265,
+          "score": 0.0655,
+          "n_active": 996,
+          "examples": [
+            "1970-01-01 00:00:01.427450208",
+            "1970-01-01 00:00:01.428782687",
+            "1970-01-01 00:00:01.423203279"
+          ]
+        },
+        {
+          "latent": 19,
+          "score": 0.0629,
+          "n_active": 858,
+          "examples": [
+            "1970-01-01 00:00:01.427145580",
+            "1970-01-01 00:00:01.423214717",
+            "1970-01-01 00:00:01.431490011"
+          ]
+        },
+        {
+          "latent": 414,
+          "score": 0.0618,
+          "n_active": 1095,
+          "examples": [
+            "1970-01-01 00:00:01.358241401",
+            "1970-01-01 00:00:01.353475800",
+            "1970-01-01 00:00:01.353485291"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.0607,
+          "n_active": 255,
+          "examples": [
+            "1970-01-01 00:00:01.404151180",
+            "1970-01-01 00:00:01.404273501",
+            "1970-01-01 00:00:01.404223580"
+          ]
+        },
+        {
+          "latent": 135,
+          "score": 0.0588,
+          "n_active": 814,
+          "examples": [
+            "1970-01-01 00:00:01.424902514",
+            "1970-01-01 00:00:01.424003514",
+            "1970-01-01 00:00:01.424702054"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 405,
+      "n_kept": 395,
+      "n_removed": 117,
+      "threshold": 0.0385,
+      "passed_test": 21,
+      "removed_norm_ratio": 0.47,
+      "var_share_kept": 0.71,
+      "var_share_sae_error": 0.0105,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 265,
+          "score": 0.0732,
+          "n_active": 1267,
+          "examples": [
+            "1970-01-01 00:00:01.427306520",
+            "1970-01-01 00:00:01.423064021",
+            "1970-01-01 00:00:01.427500800"
+          ]
+        },
+        {
+          "latent": 398,
+          "score": 0.062,
+          "n_active": 1243,
+          "examples": [
+            "1970-01-01 00:00:01.427140800",
+            "1970-01-01 00:00:01.423450661",
+            "1970-01-01 00:00:01.427306520"
+          ]
+        },
+        {
+          "latent": 426,
+          "score": 0.0536,
+          "n_active": 580,
+          "examples": [
+            "1970-01-01 00:00:01.343800740",
+            "1970-01-01 00:00:01.406806740",
+            "1970-01-01 00:00:01.344614040"
+          ]
+        },
+        {
+          "latent": 52,
+          "score": 0.0527,
+          "n_active": 549,
+          "examples": [
+            "1970-01-01 00:00:01.409200140",
+            "1970-01-01 00:00:01.408147200",
+            "1970-01-01 00:00:01.408134014"
+          ]
+        },
+        {
+          "latent": 253,
+          "score": 0.0524,
+          "n_active": 1612,
+          "examples": [
+            "1970-01-01 00:00:01.424729547",
+            "1970-01-01 00:00:01.424626114",
+            "1970-01-01 00:00:01.424411276"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 367,
+      "n_removed": 145,
+      "threshold": 0.04,
+      "passed_test": 25,
+      "removed_norm_ratio": 0.3957,
+      "var_share_kept": 0.4645,
+      "var_share_sae_error": 0.2999,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 270,
+          "score": 0.1283,
+          "n_active": 1871,
+          "examples": [
+            "\"I am seeking to produce prints to promote my recent collection of art work and have a starting point for selling my work.\"",
+            "\"I'm a comic artist looking to release a few comics over the coming months, both web-comics and also a graphic novel.\"",
+            "\"I'm an artist with a story to tell & I have a music project that I would like to share with the world.\""
+          ]
+        },
+        {
+          "latent": 103,
+          "score": 0.0824,
+          "n_active": 521,
+          "examples": [
+            "\"A durable metal clip that lets you carry your camera on any backpack strap, belt or bag. The ultimate tool for all photographers.\"",
+            "\"Introducing the Cineik hot shoe handle.  The handle adds not only flexibility, stabilization, durability or as a quick carrying handle.\"",
+            "\"The EDCpen is a custom machined pen with a minimalist design that will fit in your pocket unnoticeably and feels great in your hand.\""
+          ]
+        },
+        {
+          "latent": 63,
+          "score": 0.0808,
+          "n_active": 1244,
+          "examples": [
+            "\"The Market Kitchen is a space for local food businesses to spread their wings and grow at their own pace.\"",
+            "\"We connect entrepreneurs, freelancers and talented people with employers and businesses wanting things done.\"",
+            "\"ShopMap hopes to offer a more efficient shopping  experience. ShopMap will lead you to specific products while in malls or stores\""
+          ]
+        },
+        {
+          "latent": 73,
+          "score": 0.0804,
+          "n_active": 1376,
+          "examples": [
+            "\"My dream is to be a professional fine art photographer. I'm very creative but I really need to learn more about camera techniques.\"",
+            "\"This is a chance for a veteran to begin a second career that will hopefully lead to more careers for more veterans eventually.\"",
+            "\"I've always wanted to become a photographer. Help me grow and watch me progress in my updates.\""
+          ]
+        },
+        {
+          "latent": 152,
+          "score": 0.0714,
+          "n_active": 1150,
+          "examples": [
+            "\"We're so close to releasing our long-awaited debut album! A little help will go a long way... let's do this!\"",
+            "\"Hannah Smith is releasing her first full-length album. Get involved by pre-ordering your copy of the record and other goodies here!\"",
+            "\"Our third full-length studio album is finally complete! Pre-order your vinyl copy today! A dream come true begins with you...\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 308,
+      "n_removed": 204,
+      "threshold": 0.0416,
+      "passed_test": 15,
+      "removed_norm_ratio": 0.473,
+      "var_share_kept": 0.4383,
+      "var_share_sae_error": 0.2713,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 102,
+          "score": 0.08,
+          "n_active": 4762,
+          "examples": [
+            "\"dd612\"",
+            "\"dancers\"",
+            "\"cargo\""
+          ]
+        },
+        {
+          "latent": 39,
+          "score": 0.055,
+          "n_active": 818,
+          "examples": [
+            "\"the-book-called-small\"",
+            "\"small-sir-and-mini-madam\"",
+            "\"little-by-little\""
+          ]
+        },
+        {
+          "latent": 452,
+          "score": 0.0501,
+          "n_active": 1234,
+          "examples": [
+            "\"robin-seecharans-debut-indie-album-tonight\"",
+            "\"b-harms-breakthorugh-debut-album\"",
+            "\"klastics-debut-album\""
+          ]
+        },
+        {
+          "latent": 16,
+          "score": 0.0496,
+          "n_active": 604,
+          "examples": [
+            "\"vindicate-me-my-first-feature\"",
+            "\"my-abstract-world\"",
+            "\"my-life-book\""
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.0494,
+          "n_active": 512,
+          "examples": [
+            "\"squaresville-a-webseries\"",
+            "\"connecting-the-web\"",
+            "\"web-based-ultima-online-clone\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 339,
+      "n_removed": 173,
+      "threshold": 0.0392,
+      "passed_test": 11,
+      "removed_norm_ratio": 0.4102,
+      "var_share_kept": 0.4855,
+      "var_share_sae_error": 0.2916,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 172,
+          "score": 0.0961,
+          "n_active": 931,
+          "examples": [
+            "\"Cancelled. (Canceled)\"",
+            "\"UNIVERSAL (Canceled)\"",
+            "\"Research Study (Canceled)\""
+          ]
+        },
+        {
+          "latent": 58,
+          "score": 0.0842,
+          "n_active": 977,
+          "examples": [
+            "\"After The End\"",
+            "\"Continuing the Legacy: Funding the First Chapter (Canceled)\"",
+            "\"The Late Night Bake (Canceled)\""
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0694,
+          "n_active": 3544,
+          "examples": [
+            "\"Place\"",
+            "\"Native\"",
+            "\"ED\""
+          ]
+        },
+        {
+          "latent": 470,
+          "score": 0.0589,
+          "n_active": 703,
+          "examples": [
+            "\"MISA DE MEDIANOCHE - Debut album by La Misa Negra\"",
+            "\"A New Kevin Minster Studio Album!\"",
+            "\"New Album\""
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.0576,
+          "n_active": 563,
+          "examples": [
+            "\"Connecting the Web\"",
+            "\"Web farm\"",
+            "\"Guide to your (web)site!\""
+          ]
+        }
+      ]
+    }
+  }
+}

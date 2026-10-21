@@ -1,0 +1,669 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -21.040110136760052,
+  "test_error": 21.040110136760052,
+  "course_metric": "r2",
+  "course_score": 0.8690739115921743,
+  "n_text_cols": 10,
+  "n_text_features": 300,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 176.23021793365479,
+  "diagnostics": {
+    "Areas": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 486,
+      "n_kept": 387,
+      "n_removed": 125,
+      "threshold": 0.0517,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.1973,
+      "var_share_kept": 0.8188,
+      "var_share_sae_error": 0.0006,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 431,
+          "score": 0.1208,
+          "n_active": 1126,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology",
+            "Biochemistry, Genetics and Molecular Biology",
+            "Biochemistry, Genetics and Molecular Biology"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.1168,
+          "n_active": 984,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology",
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology",
+            "Biochemistry, Genetics and Molecular Biology; Immunology and Microbiology"
+          ]
+        },
+        {
+          "latent": 453,
+          "score": 0.1138,
+          "n_active": 331,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Energy",
+            "Biochemistry, Genetics and Molecular Biology; Chemistry; Energy",
+            "Biochemistry, Genetics and Molecular Biology"
+          ]
+        },
+        {
+          "latent": 344,
+          "score": 0.113,
+          "n_active": 301,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Mathematics",
+            "Biochemistry, Genetics and Molecular Biology; Mathematics",
+            "Biochemistry, Genetics and Molecular Biology; Mathematics"
+          ]
+        },
+        {
+          "latent": 483,
+          "score": 0.1108,
+          "n_active": 663,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology",
+            "Biochemistry, Genetics and Molecular Biology",
+            "Biochemistry, Genetics and Molecular Biology"
+          ]
+        }
+      ]
+    },
+    "Categories": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 381,
+      "n_removed": 131,
+      "threshold": 0.0429,
+      "passed_test": 31,
+      "removed_norm_ratio": 0.4035,
+      "var_share_kept": 0.7428,
+      "var_share_sae_error": 0.0119,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 121,
+          "score": 0.1048,
+          "n_active": 1352,
+          "examples": [
+            "Hematology (Q2); Cell Biology (Q3); Developmental Biology (Q3)",
+            "Cell Biology (Q3); Physiology (Q3)",
+            "Cell Biology; Developmental Biology"
+          ]
+        },
+        {
+          "latent": 499,
+          "score": 0.0863,
+          "n_active": 1150,
+          "examples": [
+            "Virology (Q3)",
+            "Medicine (miscellaneous) (Q2); Virology (Q2)",
+            "Infectious Diseases (Q1); Virology (Q2)"
+          ]
+        },
+        {
+          "latent": 330,
+          "score": 0.0832,
+          "n_active": 373,
+          "examples": [
+            "Structural Biology (Q1)",
+            "Molecular Biology (Q1); Structural Biology (Q1)",
+            "Molecular Biology (Q1); Structural Biology (Q1)"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.0811,
+          "n_active": 1011,
+          "examples": [
+            "Dermatology (Q1); Immunology and Allergy (Q2)",
+            "Dermatology (Q3); Immunology and Allergy (Q4)",
+            "Health, Toxicology and Mutagenesis (Q1); Public Health, Environmental and Occupational Health (Q1)"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0802,
+          "n_active": 790,
+          "examples": [
+            "Molecular Biology (Q1); Structural Biology (Q1)",
+            "Molecular Biology (Q1); Structural Biology (Q1)",
+            "Biochemistry, Genetics and Molecular Biology (miscellaneous) (Q3); Immunology and Microbiology (miscellaneous)  (Q4)"
+          ]
+        }
+      ]
+    },
+    "Citations / Doc  (2years)": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 496,
+      "n_kept": 265,
+      "n_removed": 247,
+      "threshold": 0.0446,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.5402,
+      "var_share_kept": 0.447,
+      "var_share_sae_error": 0.0011,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 490,
+          "score": 0.0447,
+          "n_active": 152,
+          "examples": [
+            "9,00",
+            "9,76",
+            "9,04"
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.0424,
+          "n_active": 267,
+          "examples": [
+            "9,00",
+            "9,09",
+            "9,09"
+          ]
+        },
+        {
+          "latent": 77,
+          "score": 0.0354,
+          "n_active": 263,
+          "examples": [
+            "12,51",
+            "10,51",
+            "5,51"
+          ]
+        },
+        {
+          "latent": 123,
+          "score": 0.0353,
+          "n_active": 211,
+          "examples": [
+            "6,50",
+            "8,50",
+            "7,50"
+          ]
+        },
+        {
+          "latent": 120,
+          "score": 0.0305,
+          "n_active": 777,
+          "examples": [
+            "4,16",
+            "4,16",
+            "4,16"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 450,
+      "n_kept": 345,
+      "n_removed": 167,
+      "threshold": 0.0486,
+      "passed_test": 52,
+      "removed_norm_ratio": 0.2527,
+      "var_share_kept": 0.7409,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 1,
+          "score": 0.1022,
+          "n_active": 303,
+          "examples": [
+            "Switzerland",
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 42,
+          "score": 0.0982,
+          "n_active": 327,
+          "examples": [
+            "Palestine",
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 490,
+          "score": 0.0979,
+          "n_active": 336,
+          "examples": [
+            "Switzerland",
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 285,
+          "score": 0.0956,
+          "n_active": 338,
+          "examples": [
+            "Switzerland",
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 334,
+          "score": 0.093,
+          "n_active": 412,
+          "examples": [
+            "Sudan",
+            "Egypt",
+            "Egypt"
+          ]
+        }
+      ]
+    },
+    "Coverage": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 453,
+      "n_kept": 463,
+      "n_removed": 49,
+      "threshold": 0.0532,
+      "passed_test": 223,
+      "removed_norm_ratio": 0.2956,
+      "var_share_kept": 0.8008,
+      "var_share_sae_error": 0.0027,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 100,
+          "score": 0.3219,
+          "n_active": 2827,
+          "examples": [
+            "1946-1996, 1998-2025",
+            "1920-2025",
+            "1945-2025"
+          ]
+        },
+        {
+          "latent": 331,
+          "score": 0.3007,
+          "n_active": 2635,
+          "examples": [
+            "1883-2025",
+            "1891-2025",
+            "1920-2025"
+          ]
+        },
+        {
+          "latent": 298,
+          "score": 0.2653,
+          "n_active": 2495,
+          "examples": [
+            "2018-2025",
+            "2018-2025",
+            "2018-2025"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.263,
+          "n_active": 2356,
+          "examples": [
+            "2020-2025",
+            "2020-2025",
+            "2020-2025"
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.261,
+          "n_active": 3198,
+          "examples": [
+            "2020-2024",
+            "2020-2024",
+            "2020-2024"
+          ]
+        }
+      ]
+    },
+    "Issn": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 416,
+      "n_removed": 96,
+      "threshold": 0.046,
+      "passed_test": 76,
+      "removed_norm_ratio": 0.3102,
+      "var_share_kept": 0.7867,
+      "var_share_sae_error": 0.0312,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 99,
+          "score": 0.169,
+          "n_active": 1081,
+          "examples": [
+            "0025004X",
+            "0033698X",
+            "00317144"
+          ]
+        },
+        {
+          "latent": 7,
+          "score": 0.1647,
+          "n_active": 3101,
+          "examples": [
+            "1462317X",
+            "14682737",
+            "14635771"
+          ]
+        },
+        {
+          "latent": 54,
+          "score": 0.1582,
+          "n_active": 4189,
+          "examples": [
+            "10014810",
+            "14281511",
+            "14712164"
+          ]
+        },
+        {
+          "latent": 331,
+          "score": 0.1481,
+          "n_active": 760,
+          "examples": [
+            "2666027X",
+            "2666920X",
+            "26666758"
+          ]
+        },
+        {
+          "latent": 156,
+          "score": 0.1461,
+          "n_active": 2259,
+          "examples": [
+            "1533256X",
+            "15393100",
+            "15313220"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 372,
+      "n_removed": 140,
+      "threshold": 0.0394,
+      "passed_test": 53,
+      "removed_norm_ratio": 0.4715,
+      "var_share_kept": 0.6612,
+      "var_share_sae_error": 0.0815,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 300,
+          "score": 0.079,
+          "n_active": 405,
+          "examples": [
+            "KeAi Communications Co.",
+            "KeAi Communications Co.",
+            "KeAi Communications Co."
+          ]
+        },
+        {
+          "latent": 360,
+          "score": 0.0788,
+          "n_active": 249,
+          "examples": [
+            "Association for Computational Linguistics (ACL)",
+            "Association for Computing Machinery (ACM)",
+            "Association for Computing Machinery (ACM)"
+          ]
+        },
+        {
+          "latent": 111,
+          "score": 0.0766,
+          "n_active": 242,
+          "examples": [
+            "Saint Joseph University of Beirut, Faculty of Dental Medicine",
+            "Federal University of Minas Gerais Faculty of Dentistry",
+            "Cairo University, Faculty of Dentistry"
+          ]
+        },
+        {
+          "latent": 31,
+          "score": 0.0739,
+          "n_active": 1038,
+          "examples": [
+            "Academic Printing and Publishing",
+            "Innovative Research Publishing",
+            "eScholarship"
+          ]
+        },
+        {
+          "latent": 96,
+          "score": 0.0731,
+          "n_active": 1015,
+          "examples": [
+            "EDRA S.p.A",
+            "EDRA S.p.A",
+            "Infinite Science Publishing"
+          ]
+        }
+      ]
+    },
+    "Ref  / Doc ": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 465,
+      "n_kept": 271,
+      "n_removed": 241,
+      "threshold": 0.0471,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.6562,
+      "var_share_kept": 0.2914,
+      "var_share_sae_error": 0.0059,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 152,
+          "score": 0.0541,
+          "n_active": 71,
+          "examples": [
+            "127,29",
+            "127,26",
+            "127,10"
+          ]
+        },
+        {
+          "latent": 14,
+          "score": 0.0515,
+          "n_active": 68,
+          "examples": [
+            "161,71",
+            "169,00",
+            "163,44"
+          ]
+        },
+        {
+          "latent": 459,
+          "score": 0.0498,
+          "n_active": 127,
+          "examples": [
+            "142,00",
+            "142,18",
+            "258,00"
+          ]
+        },
+        {
+          "latent": 305,
+          "score": 0.0417,
+          "n_active": 141,
+          "examples": [
+            "203,00",
+            "112,40",
+            "112,40"
+          ]
+        },
+        {
+          "latent": 334,
+          "score": 0.0353,
+          "n_active": 130,
+          "examples": [
+            "59,94",
+            "59,94",
+            "59,95"
+          ]
+        }
+      ]
+    },
+    "SJR": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 506,
+      "n_kept": 231,
+      "n_removed": 281,
+      "threshold": 0.0422,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.6439,
+      "var_share_kept": 0.4106,
+      "var_share_sae_error": 0.0032,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 137,
+          "score": 0.0954,
+          "n_active": 22,
+          "examples": [
+            "37,353",
+            "30,506",
+            "24,378"
+          ]
+        },
+        {
+          "latent": 335,
+          "score": 0.0874,
+          "n_active": 50,
+          "examples": [
+            "19,006",
+            "19,072",
+            "19,076"
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.0803,
+          "n_active": 90,
+          "examples": [
+            "13,528",
+            "13,441",
+            "17,251"
+          ]
+        },
+        {
+          "latent": 491,
+          "score": 0.0435,
+          "n_active": 29,
+          "examples": [
+            "17,669",
+            "17,251",
+            "16,428"
+          ]
+        },
+        {
+          "latent": 498,
+          "score": 0.0428,
+          "n_active": 69,
+          "examples": [
+            "8,218",
+            "8,188",
+            "8,220"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 352,
+      "n_removed": 160,
+      "threshold": 0.0401,
+      "passed_test": 25,
+      "removed_norm_ratio": 0.435,
+      "var_share_kept": 0.5656,
+      "var_share_sae_error": 0.1584,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.0928,
+          "n_active": 572,
+          "examples": [
+            "Biology",
+            "Biology Open",
+            "Historical Biology"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.0719,
+          "n_active": 882,
+          "examples": [
+            "Zoological Research",
+            "Entomological News",
+            "Proceedings of the Zoological Society"
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.0693,
+          "n_active": 521,
+          "examples": [
+            "Molecular Plant",
+            "Molecular Oncology",
+            "Molecular Brain"
+          ]
+        },
+        {
+          "latent": 344,
+          "score": 0.0677,
+          "n_active": 940,
+          "examples": [
+            "BioSystems",
+            "Bioprinting",
+            "Biofabrication"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0659,
+          "n_active": 1016,
+          "examples": [
+            "Life Metabolism",
+            "Cell Metabolism",
+            "Molecular Metabolism"
+          ]
+        }
+      ]
+    }
+  }
+}

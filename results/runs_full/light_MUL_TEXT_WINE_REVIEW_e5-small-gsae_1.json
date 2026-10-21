@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.314419778998011,
+  "test_error": 1.314419778998011,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9706119545127347,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 305.3480770587921,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2039,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 297,
+      "n_removed": 297,
+      "var_share_removed": 0.0591,
+      "var_share_sae_error": 0.1225,
+      "top": [
+        {
+          "group": 1507,
+          "latents": [
+            52
+          ],
+          "gain_margin": 6400.46,
+          "examples": [
+            "A polished, pretty Syrah. It's black in color and very soft, and tastes like a blackberry- and blueberry-infused chocolate drink, with hints of bacon. Luscious ",
+            "This dark, ripe and modern Syrah features wild berry, leather and cheesy smelling oak on the bouquet. It's plump and grabby, with plenty of oak and raw tannin t",
+            "Made from organic fruit, this Syrah opens with intense aromas of chopped mint, ginger, cola, black pepper and dried berry. The wine's complexity is impressive, "
+          ]
+        },
+        {
+          "group": 461,
+          "latents": [
+            1539
+          ],
+          "gain_margin": 5852.86,
+          "examples": [
+            "This is a basic, no-fuss Chardonnay with aromas of citrus and exotic fruit and a vibrant mouthfeel that is tangy and zesty throughout. There's a touch of spice ",
+            "This is a fairly big, creamy-textured Chardonnay to consume over the next couple of years. Grilled sweet corn features, but it's backed by ample citrus and peac",
+            "A spicy, wood-aged Chardonnay, its ripe tropical fruit deliciously melded into the texture. It is rounded and full-bodied with a fine citrus acidity among all t"
+          ]
+        },
+        {
+          "group": 1004,
+          "latents": [
+            1519
+          ],
+          "gain_margin": 5503.69,
+          "examples": [
+            "The mellowness of baked apple envelops all other aromas. While the baked apple is also apparent on the palate, it is pulled into sharp focus by fresh, lively an",
+            "Generous orange and ripe, red apple meet with the zesty freshness of tangerine peel in this wine. It's dry but fresh, with bouncy, joyful fruitfulness. The supe",
+            "Waxy white florals and lifted apple aromas add freshness to slightly cider-like flavors of pressed apple and mulling spice in this dry Riesling. Delicately ligh"
+          ]
+        },
+        {
+          "group": 1875,
+          "latents": [
+            74
+          ],
+          "gain_margin": 5376.29,
+          "examples": [
+            "This Pinot is not hiding behind anything. It has lots of natural-tasting fruit aromas and flavors without overt oak. Flavors recall cherry, berry and rhubarb; t",
+            "The texture on this Pinot lacks silky sumptuousness. It's a bit brawny, but it's bone dry, with good acidity. The flavors are interesting, veering between raspb",
+            "A very rich, ripe Pinot that merits its high score for the sheer California-ness of flavor. The fruit is enormously attractive with raspberries and cherries, ye"
+          ]
+        },
+        {
+          "group": 1613,
+          "latents": [
+            500
+          ],
+          "gain_margin": 4763.29,
+          "examples": [
+            "This Merlot is round, soft and mellow, with ripe, luscious flavors of cherry pie, mocha, honey and toasty oak, along with a hint of spice. Considering the large",
+            "Made from estate-vineyard fruit, this Merlot is medium bodied, and it has a mix of red fruit flavors, plus grace notes of leaf and mushroom. The finish leaves a",
+            "This Merlot is of everyday quality, with an easy-to-like silky texture and soft, almost sweet flavors of cherry, mocha and spice. It's not a bad value, and it s"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 880,
+      "n_groups": 879,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 745,
+      "n_removed": 746,
+      "var_share_removed": 0.6469,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 821,
+          "latents": [
+            224
+          ],
+          "gain_margin": 5915.08,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "group": 424,
+          "latents": [
+            838
+          ],
+          "gain_margin": 3416.29,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 853,
+          "latents": [
+            268
+          ],
+          "gain_margin": 2896.37,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 685,
+          "latents": [
+            349
+          ],
+          "gain_margin": 2411.4,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 797,
+          "latents": [
+            204
+          ],
+          "gain_margin": 2328.23,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        }
+      ]
+    }
+  }
+}

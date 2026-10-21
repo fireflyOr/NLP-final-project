@@ -1,0 +1,403 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7332444141302437,
+  "test_error": 0.26675558586975634,
+  "course_metric": "auroc",
+  "course_score": 0.7332444141302437,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 90.185218334198,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 567,
+      "n_groups": 471,
+      "n_multi_groups": 70,
+      "n_groups_dropped": 307,
+      "n_removed": 352,
+      "var_share_removed": 0.4484,
+      "var_share_sae_error": 0.0112,
+      "top": [
+        {
+          "group": 31,
+          "latents": [
+            976,
+            1154,
+            1886
+          ],
+          "gain_margin": 394.23,
+          "examples": [
+            "1970-01-01 00:00:01.428000142",
+            "1970-01-01 00:00:01.427452000",
+            "1970-01-01 00:00:01.423012650"
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            458,
+            1807
+          ],
+          "gain_margin": 252.89,
+          "examples": [
+            "1970-01-01 00:00:01.405720177",
+            "1970-01-01 00:00:01.405045030",
+            "1970-01-01 00:00:01.405107137"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            1023,
+            1752,
+            1817
+          ],
+          "gain_margin": 200.53,
+          "examples": [
+            "1970-01-01 00:00:01.404802606",
+            "1970-01-01 00:00:01.404863223",
+            "1970-01-01 00:00:01.404504814"
+          ]
+        },
+        {
+          "group": 462,
+          "latents": [
+            402
+          ],
+          "gain_margin": 134.93,
+          "examples": [
+            "1970-01-01 00:00:01.373514107",
+            "1970-01-01 00:00:01.379612020",
+            "1970-01-01 00:00:01.377652607"
+          ]
+        },
+        {
+          "group": 223,
+          "latents": [
+            1415
+          ],
+          "gain_margin": 134.73,
+          "examples": [
+            "1970-01-01 00:00:01.400555363",
+            "1970-01-01 00:00:01.410555306",
+            "1970-01-01 00:00:01.293535346"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 661,
+      "n_groups": 566,
+      "n_multi_groups": 75,
+      "n_groups_dropped": 389,
+      "n_removed": 444,
+      "var_share_removed": 0.4835,
+      "var_share_sae_error": 0.0078,
+      "top": [
+        {
+          "group": 34,
+          "latents": [
+            112,
+            721,
+            1867,
+            1914,
+            1973
+          ],
+          "gain_margin": 366.36,
+          "examples": [
+            "1970-01-01 00:00:01.426727040",
+            "1970-01-01 00:00:01.371427840",
+            "1970-01-01 00:00:01.419688740"
+          ]
+        },
+        {
+          "group": 230,
+          "latents": [
+            1409
+          ],
+          "gain_margin": 292.88,
+          "examples": [
+            "1970-01-01 00:00:01.409200517",
+            "1970-01-01 00:00:01.408049651",
+            "1970-01-01 00:00:01.408200067"
+          ]
+        },
+        {
+          "group": 423,
+          "latents": [
+            405
+          ],
+          "gain_margin": 279.67,
+          "examples": [
+            "1970-01-01 00:00:01.364878800",
+            "1970-01-01 00:00:01.383577140",
+            "1970-01-01 00:00:01.361726130"
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            235,
+            1303,
+            1339
+          ],
+          "gain_margin": 273.84,
+          "examples": [
+            "1970-01-01 00:00:01.342554780",
+            "1970-01-01 00:00:01.373380680",
+            "1970-01-01 00:00:01.376263080"
+          ]
+        },
+        {
+          "group": 287,
+          "latents": [
+            397
+          ],
+          "gain_margin": 229.53,
+          "examples": [
+            "1970-01-01 00:00:01.362112260",
+            "1970-01-01 00:00:01.362448800",
+            "1970-01-01 00:00:01.361152800"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1267,
+      "n_removed": 1267,
+      "var_share_removed": 0.4096,
+      "var_share_sae_error": 0.1665,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            369,
+            611,
+            1626
+          ],
+          "gain_margin": 891.46,
+          "examples": [
+            "\"A multiplayer RPG set in the Caribbean during the age of sail. Explore, Pirate, Trade or Fight your way to renown and riches!\"",
+            "\"An action-packed platforming adventure game that features permanent death, procedurally generated levels, and cooperative multiplayer.\"",
+            "\"A grid-based, first-person role playing game, painstakingly hand-crafted for lovers of the genre.\""
+          ]
+        },
+        {
+          "group": 1781,
+          "latents": [
+            279
+          ],
+          "gain_margin": 551.33,
+          "examples": [
+            "\"I am a lyricist, and have been writing lyrics for several years. I am unpublished and ready to take the next step.\"",
+            "\"I have always dreamt of writing my own songs for a band project, and after years of playing for other people, I'm ready to prove myself\"",
+            "\"My goal is to start a network of local crafty people and provide them a place to sell their goods along with myself.\""
+          ]
+        },
+        {
+          "group": 2035,
+          "latents": [
+            1076
+          ],
+          "gain_margin": 450.96,
+          "examples": [
+            "\"Brooklyn Rocksteady is a documentary exploring the the roots, the scene and the culture of the Brooklyn, NY based Rocksteady/Ska scene.\"",
+            "\"A documentary film centered on one of the finest and most storied band programs in California - The Arcadia Apache Marching Band\"",
+            "\"A documentary capturing the mystery and spiritual meaning in one of the world's most beautiful pilgrimages.\""
+          ]
+        },
+        {
+          "group": 1962,
+          "latents": [
+            265
+          ],
+          "gain_margin": 265.47,
+          "examples": [
+            "\"Imagine all of the Power Players in the entire world losing their vast wealth and the poor gaining it. While this sounds like a dream, it could happen\"",
+            "\"Being in the service industry has many perks but every server comes to a point where they want, no, NEED some REVENGE! For iOS/Android\"",
+            "\"Imagine a world where you can learn about anything or purchase anything with a single tap of a smartphone...welcome to TapThat\""
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            83
+          ],
+          "gain_margin": 244.87,
+          "examples": [
+            "\"We're recording our first full-length album!\"",
+            "\"We are making our first full-length album and we need your help!\"",
+            "\"Help us release our debut album, A Fair Souvenir!\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1273,
+      "n_removed": 1273,
+      "var_share_removed": 0.3875,
+      "var_share_sae_error": 0.1432,
+      "top": [
+        {
+          "group": 1008,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 417.91,
+          "examples": [
+            "\"the-donut-dollies-documentary\"",
+            "\"where-the-magic-happens-a-new-documentary\"",
+            "\"rich-hill-feature-documentary\""
+          ]
+        },
+        {
+          "group": 947,
+          "latents": [
+            1531
+          ],
+          "gain_margin": 305.11,
+          "examples": [
+            "\"battle-systemstm-fantasy-dungeon-terrain\"",
+            "\"multi-versal-crushed-earth-rpg\"",
+            "\"pasts-personas-and-prophecies-a-tabletop-rpg\""
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            369
+          ],
+          "gain_margin": 245.56,
+          "examples": [
+            "\"jane-austens-matchmaker-a-card-game\"",
+            "\"super-powers-board-game\"",
+            "\"drum-roll-the-board-game\""
+          ]
+        },
+        {
+          "group": 1712,
+          "latents": [
+            1203
+          ],
+          "gain_margin": 200.73,
+          "examples": [
+            "\"la-game-space-a-place-for-re-imagining-video-games\"",
+            "\"aftermath-post-apocalyptic-rpg-survival-game\"",
+            "\"video-game-artwork-posters\""
+          ]
+        },
+        {
+          "group": 1150,
+          "latents": [
+            117
+          ],
+          "gain_margin": 187.72,
+          "examples": [
+            "\"workout-decks-bodyweight-fitness-cards\"",
+            "\"christmas-cards-for-the-holiday-season\"",
+            "\"ebru-playing-cards-deck\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1274,
+      "n_removed": 1275,
+      "var_share_removed": 0.4024,
+      "var_share_sae_error": 0.1554,
+      "top": [
+        {
+          "group": 694,
+          "latents": [
+            1119
+          ],
+          "gain_margin": 1502.48,
+          "examples": [
+            "\"CD (Canceled)\"",
+            "\"Sno Mat (Canceled)\"",
+            "\"project cancelled (Canceled)\""
+          ]
+        },
+        {
+          "group": 1991,
+          "latents": [
+            23
+          ],
+          "gain_margin": 612.97,
+          "examples": [
+            "\"Get behind the launch of this magazine! (Canceled)\"",
+            "\"meBooks (Canceled)\"",
+            "\"Trade Countdown Show Article (Canceled)\""
+          ]
+        },
+        {
+          "group": 2036,
+          "latents": [
+            228
+          ],
+          "gain_margin": 386.59,
+          "examples": [
+            "\"The Donut Dollies Documentary\"",
+            "\"WAIT TILL IT'S FREE - documentary\"",
+            "\"Vegucated Documentary\""
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            369,
+            1203
+          ],
+          "gain_margin": 289.33,
+          "examples": [
+            "\"Super Powers Board Game.\"",
+            "\"FrontRunner: The Board Game About Presidential Politics\"",
+            "\"Mob Ties: The Board Game\""
+          ]
+        },
+        {
+          "group": 425,
+          "latents": [
+            765
+          ],
+          "gain_margin": 276.43,
+          "examples": [
+            "\"PUSH: Your Wallet at the Touch of a Button iPhone 5, 5S, 5C\"",
+            "\"EDC Ink \u2013\u201cEvery Day Carry\u201d Keychain Pen \u2013 Go-With-You Art\"",
+            "\"Spectre Wallets: Revolutionize Your Everyday Carry\""
+          ]
+        }
+      ]
+    }
+  }
+}

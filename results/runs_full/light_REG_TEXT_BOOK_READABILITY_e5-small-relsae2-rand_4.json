@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8415839598232838,
+  "test_error": 0.8415839598232838,
+  "course_metric": "r2",
+  "course_score": 0.8037982084011476,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 83.22675347328186,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 458,
+      "n_kept": 326,
+      "n_removed": 186,
+      "threshold": 0.0711,
+      "passed_test": 17,
+      "removed_norm_ratio": 0.5539,
+      "var_share_kept": 0.4748,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 16,
+          "score": 0.1093,
+          "n_active": 32,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "latent": 83,
+          "score": 0.099,
+          "n_active": 38,
+          "examples": [
+            "Great Epochs in American History, Vol. II The Planting Of The First Colonies: 1562--1733",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "latent": 427,
+          "score": 0.0974,
+          "n_active": 81,
+          "examples": [
+            "Playing Santa Claus and Other Christmas Tales",
+            "Playing Santa Claus and Other Christmas Tales",
+            "Playing Santa Claus and Other Christmas Tales"
+          ]
+        },
+        {
+          "latent": 392,
+          "score": 0.0907,
+          "n_active": 42,
+          "examples": [
+            "Among Malay Pirates:\nAnd Other Tales Of Adventure And Peril",
+            "THE JUNIOR CLASSICS: A LIBRARY FOR BOYS AND GIRLS VOLUME FOUR: HEROES AND HEROINES OF CHIVALRY",
+            "THE JUNIOR CLASSICS: A LIBRARY FOR BOYS AND GIRLS VOLUME FOUR: HEROES AND HEROINES OF CHIVALRY"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.0824,
+          "n_active": 25,
+          "examples": [
+            "Wonderwings and other Fairy Stories",
+            "The Best American Humorous Short Stories",
+            "The Best American Humorous Short Stories"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 254,
+      "n_removed": 258,
+      "threshold": 0.0812,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7088,
+      "var_share_kept": 0.5078,
+      "var_share_sae_error": 0.086,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 377,
+          "score": 0.0612,
+          "n_active": 153,
+          "examples": [
+            "Adapted by Anna McCaleb",
+            "Adapted by Anna McCaleb",
+            "Adapted by Anna McCaleb"
+          ]
+        },
+        {
+          "latent": 384,
+          "score": 0.0563,
+          "n_active": 99,
+          "examples": [
+            "A report issued by the British War Cabinet on March 18, 1918, in the form of a Blue Book of 200 pages or more... As the introductory chapter is in itself a comp",
+            "Merga Debelo and Elizabeth Laird",
+            "Merga Debelo and Elizabeth Laird"
+          ]
+        },
+        {
+          "latent": 140,
+          "score": 0.0508,
+          "n_active": 247,
+          "examples": [
+            "Edith's Papa",
+            "Edith's Papa",
+            "Pierre Loti"
+          ]
+        },
+        {
+          "latent": 10,
+          "score": 0.049,
+          "n_active": 85,
+          "examples": [
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF).",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF).",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF)."
+          ]
+        },
+        {
+          "latent": 19,
+          "score": 0.0476,
+          "n_active": 194,
+          "examples": [
+            "On Dec. 18, 1914, the new Russian Minister to Servia, Prince Troubetzko\u00ef, presented his credentials to the Servian Crown Prince Alexander, whom he addressed as ",
+            "Horatio Alger, Jr.",
+            "Horatio Alger, Jr."
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 127,
+      "n_kept": 454,
+      "n_removed": 58,
+      "threshold": 0.0673,
+      "passed_test": 0,
+      "removed_norm_ratio": 1.4872,
+      "var_share_kept": 0.5688,
+      "var_share_sae_error": 0.0008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 252,
+          "score": 0.04,
+          "n_active": 26,
+          "examples": [
+            "judgement, judgement, judgement",
+            "scrutinising",
+            "humour"
+          ]
+        },
+        {
+          "latent": 187,
+          "score": 0.0378,
+          "n_active": 29,
+          "examples": [
+            "apologise, realised",
+            "offence, rumours",
+            "labour, offence"
+          ]
+        },
+        {
+          "latent": 137,
+          "score": 0.0373,
+          "n_active": 33,
+          "examples": [
+            "traveller, travelled",
+            "traveller, travelled",
+            "quarrelling"
+          ]
+        },
+        {
+          "latent": 401,
+          "score": 0.0353,
+          "n_active": 20,
+          "examples": [
+            "tranquillity",
+            "tranquillity",
+            "travelled"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.0345,
+          "n_active": 21,
+          "examples": [
+            "traveller",
+            "traveller",
+            "traveller"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 313,
+      "n_removed": 199,
+      "threshold": 0.0682,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.5228,
+      "var_share_kept": 0.4284,
+      "var_share_sae_error": 0.2575,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 289,
+          "score": 0.0786,
+          "n_active": 188,
+          "examples": [
+            "Once upon a time there was a little red hen. She lived in a little white house and she had a little green garden. Every day she worked in the house and garden.\n",
+            "Once upon a time there was a little gray kitten, who had wandered far away from home. At first she liked all the strange sights she saw, but by and by she began",
+            "Once upon a time there lived a huntsman. He would go every day in search of game, but it often happened that he killed nothing, and so was obliged to return hom"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0736,
+          "n_active": 201,
+          "examples": [
+            "The pigeons did not seem to be at all disturbed or frightened by the noise of carriages or the press of people; but would fly down, and light on the peddler's w",
+            "On one of her voyages from China, the Pitt, East Indiaman, had on board, among her passengers, a young tiger. He appeared to be as harmless and playful as a kit",
+            "Mr. Canary did not like this at all. \"You've not been invited,\" he squeaked out, ruffling up his feathers, and flying at Flop with all his might. But the bars w"
+          ]
+        },
+        {
+          "latent": 338,
+          "score": 0.0616,
+          "n_active": 193,
+          "examples": [
+            "King James himself, brave and handsome, and in the prime of life, was the blithest of the whole joyous party. He was the most accomplished man in his dominions;",
+            "Monsieur Poopoo pricked up his ears at this, and was lost in astonishment. This was a much easier way certainly of accumulating riches than selling toys in Chat",
+            "Ten different Fantasound setups were built and tested during its development. As many as several hundred designs were detailed on paper, each with different equ"
+          ]
+        },
+        {
+          "latent": 362,
+          "score": 0.0609,
+          "n_active": 152,
+          "examples": [
+            "Although important discoveries have been made and there is much improvement in how laboratory animals are treated, we would all prefer it if we did not have to ",
+            "During the present autumn the woods and roadsides in this neighborhood (New Bloomfield) present a singular appearance in consequence of the ravages of the black",
+            "Agony's eyes traveled over to the group surrounding Pom-pom and rested upon the girl who, next to Pom-pom herself, was the center of the group. She was very muc"
+          ]
+        },
+        {
+          "latent": 104,
+          "score": 0.0589,
+          "n_active": 157,
+          "examples": [
+            "On the day that Margaret left Sardis, Roland began his preparations for descending the shaft. He had so thoroughly considered the machinery and appliances neces",
+            "Men call me \"King Alfred's Viking,\" and I think that I may be proud of that name; for surely to be trusted by such a king is honor enough for any man, whether f",
+            "For a time the operation of chairing Fenn up the steps occupied the active minds of the Kayites. When he had disappeared into the first eleven room, they turned"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 287,
+      "n_removed": 225,
+      "threshold": 0.0713,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.5829,
+      "var_share_kept": 0.4147,
+      "var_share_sae_error": 0.2062,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 252,
+          "score": 0.0837,
+          "n_active": 171,
+          "examples": [
+            "A Christmas Miracle",
+            "The Christmas Tree",
+            "THE JUNIPER-TREE."
+          ]
+        },
+        {
+          "latent": 431,
+          "score": 0.0643,
+          "n_active": 239,
+          "examples": [
+            "Through Forest and Fire:\nWild-Woods Series No. 1",
+            "The Woods of America",
+            "The Mill on the Floss"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.0605,
+          "n_active": 226,
+          "examples": [
+            "The Jackal, The Barber, and the Brahmin",
+            "Tiger, Brahman, and Jackal",
+            "The Jackal and the Partridge"
+          ]
+        },
+        {
+          "latent": 61,
+          "score": 0.0522,
+          "n_active": 210,
+          "examples": [
+            "A Little Book for Christmas",
+            "A Christmas Story",
+            "CHRISTMAS WAITS IN BOSTON"
+          ]
+        },
+        {
+          "latent": 271,
+          "score": 0.0521,
+          "n_active": 204,
+          "examples": [
+            "\"WHY?\"",
+            "For the Sake of the School",
+            "A Curse or a\nBlessing?"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 245,
+      "n_removed": 267,
+      "threshold": 0.078,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7028,
+      "var_share_kept": 0.3751,
+      "var_share_sae_error": 0.0552,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 192,
+          "score": 0.0668,
+          "n_active": 79,
+          "examples": [
+            "https://www.commonlit.org/texts/ancient-egyptian-dynasties",
+            "https://en.wikipedia.org/wiki/Dynasty",
+            "https://simple.wikipedia.org/wiki/Ancestor"
+          ]
+        },
+        {
+          "latent": 382,
+          "score": 0.0556,
+          "n_active": 59,
+          "examples": [
+            "https://www.commonlit.org/texts/the-little-girl-who-would-not-work-1",
+            "https://www.commonlit.org/texts/the-economic-bill-of-rights",
+            "https://www.commonlit.org/texts/maslow-s-hierarchy-of-needs"
+          ]
+        },
+        {
+          "latent": 241,
+          "score": 0.0543,
+          "n_active": 672,
+          "examples": [
+            "http://www.gutenberg.org/files/160/160-h/160-h.htm",
+            "http://www.gutenberg.org/files/219/219-h/219-h.htm",
+            "http://www.gutenberg.org/files/203/203-h/203-h.htm"
+          ]
+        },
+        {
+          "latent": 253,
+          "score": 0.0539,
+          "n_active": 70,
+          "examples": [
+            "https://www.commonlit.org/texts/god-sees-the-truth-but-waits",
+            "https://www.digitallibrary.io/en/books/read/1123",
+            "https://www.digitallibrary.io/en/books/read/1117/9927"
+          ]
+        },
+        {
+          "latent": 349,
+          "score": 0.0489,
+          "n_active": 36,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Surround_sound",
+            "https://freekidsbooks.org/wp-content/uploads/2020/06/have-you-ever-heard-a-whale-sing-Pratham-FKB.pdf",
+            "https://en.wikipedia.org/wiki/Hearing_aid"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -19.02520811938978,
+  "test_error": 19.02520811938978,
+  "course_metric": "r2",
+  "course_score": 0.8072545623640242,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 57.52734565734863,
+  "diagnostics": {
+    "colors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 271,
+      "n_kept": 418,
+      "n_removed": 94,
+      "threshold": 0.0693,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.6507,
+      "var_share_kept": 0.4651,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 326,
+          "score": 0.091,
+          "n_active": 69,
+          "examples": [
+            "cream / espresso",
+            "cream / pink",
+            "cream / pink"
+          ]
+        },
+        {
+          "latent": 464,
+          "score": 0.0562,
+          "n_active": 55,
+          "examples": [
+            "green / pink",
+            "green / pink",
+            "green / pink"
+          ]
+        },
+        {
+          "latent": 339,
+          "score": 0.0556,
+          "n_active": 29,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 60,
+          "score": 0.0498,
+          "n_active": 42,
+          "examples": [
+            "green / pink",
+            "green / pink",
+            "green / pink"
+          ]
+        },
+        {
+          "latent": 83,
+          "score": 0.0481,
+          "n_active": 1340,
+          "examples": [
+            "gold",
+            "gold",
+            "gold"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 292,
+      "n_kept": 454,
+      "n_removed": 58,
+      "threshold": 0.0745,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.2756,
+      "var_share_kept": 0.7874,
+      "var_share_sae_error": 0.0005,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 226,
+          "score": 0.0767,
+          "n_active": 49,
+          "examples": [
+            "Kate Mawdsley",
+            "Kate Mawdsley",
+            "Glenna Jean, Diaper"
+          ]
+        },
+        {
+          "latent": 92,
+          "score": 0.0743,
+          "n_active": 41,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean Lil'",
+            "Glenna Jean Lil'"
+          ]
+        },
+        {
+          "latent": 7,
+          "score": 0.0701,
+          "n_active": 32,
+          "examples": [
+            "Glenna Jean Fiona",
+            "Glenna Jean Fiona",
+            "Glenna Jean Fiona"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.07,
+          "n_active": 36,
+          "examples": [
+            "Glenna Jean, Diaper",
+            "Glenna Jean, Pillow",
+            "Glenna Jean, Pillow"
+          ]
+        },
+        {
+          "latent": 193,
+          "score": 0.0666,
+          "n_active": 50,
+          "examples": [
+            "RoomMates! This",
+            "RoomMates! Simply",
+            "RoomMates! Simply"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 489,
+      "n_kept": 436,
+      "n_removed": 76,
+      "threshold": 0.0805,
+      "passed_test": 90,
+      "removed_norm_ratio": 0.3285,
+      "var_share_kept": 0.7964,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 115,
+          "score": 0.3097,
+          "n_active": 33,
+          "examples": [
+            "Candide",
+            "Candide",
+            "Candide"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.2957,
+          "n_active": 63,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 370,
+          "score": 0.2878,
+          "n_active": 121,
+          "examples": [
+            "Marmont Hill",
+            "Marmont Hill",
+            "Marmont Hill"
+          ]
+        },
+        {
+          "latent": 509,
+          "score": 0.2139,
+          "n_active": 65,
+          "examples": [
+            "Nautica Kids",
+            "Nautica Kids",
+            "Nautica Kids"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.213,
+          "n_active": 78,
+          "examples": [
+            "Uncle Milton",
+            "Uncle Milton",
+            "Uncle Milton"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 402,
+      "n_removed": 110,
+      "threshold": 0.0727,
+      "passed_test": 70,
+      "removed_norm_ratio": 0.4531,
+      "var_share_kept": 0.7306,
+      "var_share_sae_error": 0.0793,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 354,
+          "score": 0.2344,
+          "n_active": 358,
+          "examples": [
+            "Dream On Me Naptime Friends 4 Piece Reversible Full Size Crib Bedding Set",
+            "Dream On Me Sea Friends 4 Piece Reversible Full Size Crib Bedding Set",
+            "Dream On Me Spring Garden 4 Piece Reversible Portable Crib Bedding Set"
+          ]
+        },
+        {
+          "latent": 490,
+          "score": 0.2088,
+          "n_active": 111,
+          "examples": [
+            "Atlanta Falcons, Matt Ryan Biggshots Queen Comforter Set",
+            "Atlanta Falcons, Matt Ryan Biggshots Full Comforter Set",
+            "Atlanta Falcons, Matt Ryan Biggshots Twin Comforter Set"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.2029,
+          "n_active": 123,
+          "examples": [
+            "Gallery Wrought Iron Crystal 6 Light Swag Plug In White Chandelier",
+            "Gallery Wrought Iron & Crystal Swag Plug In White 3 Light Chandelier",
+            "Gallery Wrought Iron and Crystal Chandelier"
+          ]
+        },
+        {
+          "latent": 362,
+          "score": 0.1904,
+          "n_active": 238,
+          "examples": [
+            "Tulip Garden 6-Piece Bedding Set",
+            "Fleeting Flora 6-Piece Bedding Set",
+            "Desert Dreams 6-Piece Bedding Set"
+          ]
+        },
+        {
+          "latent": 445,
+          "score": 0.1756,
+          "n_active": 89,
+          "examples": [
+            "babyletto Alphabets 5-Piece Set",
+            "babyletto In Bloom 5-Piece Set",
+            "Summer Infant Bassinet Essentials 5-Piece Set"
+          ]
+        }
+      ]
+    }
+  }
+}

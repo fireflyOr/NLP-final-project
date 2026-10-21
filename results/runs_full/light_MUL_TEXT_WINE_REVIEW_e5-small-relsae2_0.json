@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3382593648454608,
+  "test_error": 1.3382593648454608,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9686425990053906,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 56.43146562576294,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 497,
+      "n_removed": 15,
+      "threshold": 0.0544,
+      "passed_test": 230,
+      "removed_norm_ratio": 0.0682,
+      "var_share_kept": 0.7546,
+      "var_share_sae_error": 0.2152,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 364,
+          "score": 0.3746,
+          "n_active": 336,
+          "examples": [
+            "Dry Creek's basic Zin is a dark, big, softly tannic wine, the kind beloved by Zinfanatics. The flavors of blackberries, boysenberries, loganberries and many oth",
+            "This is an old-style, rustic Zin. It's tannic and high in alcohol, with wild berry jam, currant, spice and heady liqueur flavors. A little pricy, but a sound, r",
+            "A good, rich, flashy Zinfandel. There's not much to get excited about, but it delivers Zin's personality in a most attractive way. It's spicy, rich and sweet in"
+          ]
+        },
+        {
+          "latent": 103,
+          "score": 0.3524,
+          "n_active": 726,
+          "examples": [
+            "This unoaked, tank-fermented, straightforward Chardonnay has a certain steely precision that underscores crisp flavors of apple flesh and skin. Botanical highli",
+            "Delicately structured, this Chardonnay has simple citrus peach flavors, with an undertow of green herbs. It's dry and tart with acidity.",
+            "This pleasant, easy-to-drink Chardonnay features subtle oak notes framing white peach and sweet-corn flavors. It's medium bodied, with a tender texture and ampl"
+          ]
+        },
+        {
+          "latent": 318,
+          "score": 0.3262,
+          "n_active": 560,
+          "examples": [
+            "Made in the modern style of oaky creaminess and very flashy fruit, this Chardonnay erupts in a burst of oranges and rum punch, buttered toast and honey. It's ri",
+            "This is an unoaked Chardonnay, but it's so rich and forward in fruit, you may not even miss that smoky wood edge. Explodes with pineapple, peach, pear, apple, v",
+            "Chardonnay and Arinto make a particularly satisfying blend with the roundness of the Chardonnay given a fresh, crisp lift by Arinto. This wine is soft while sho"
+          ]
+        },
+        {
+          "latent": 337,
+          "score": 0.3146,
+          "n_active": 537,
+          "examples": [
+            "This is a clean, refreshing ros\u00e9 from the generally higher altitudes of Luberon. In the modern, cold-fermented style, it's a bit confectionary in fruity esters\u2014",
+            "This is a very pale ros\u00e9 from a relatively high elevation site, so it shows ample crispness and elegance. Delicate aromas of herbs and citrus lead into flavors ",
+            "Pale in color, this is a light, bright style of ros\u00e9. It is clean and crisp, with touches of red fruit that float through the attractive fresh acidity. The afte"
+          ]
+        },
+        {
+          "latent": 267,
+          "score": 0.3073,
+          "n_active": 501,
+          "examples": [
+            "Pervaded by lively, friendly, zippy freshness, this easy-drinking Riesling comes with a sprightly, fruity balance on its dry palate that is made all the more su",
+            "Fresh and fragrant, this apple-scented Riesling offers loads of brisk lemon-lime flavors augmented by a subtle vein of smoke. Dry in style, it's delicately text",
+            "A lovely Riesling, made in the German style. It's dryish, low in alcohol, high in racy acidity and tantalizing in flavor, with suggestions of citrus fruits, wil"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 477,
+      "n_kept": 491,
+      "n_removed": 21,
+      "threshold": 0.0582,
+      "passed_test": 366,
+      "removed_norm_ratio": 0.0413,
+      "var_share_kept": 0.9746,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 311,
+          "score": 0.6309,
+          "n_active": 133,
+          "examples": [
+            "Champagne",
+            "Champagne",
+            "Champagne"
+          ]
+        },
+        {
+          "latent": 68,
+          "score": 0.6286,
+          "n_active": 157,
+          "examples": [
+            "Lontu\u00e9 Valley",
+            "Peloponnese",
+            "Peloponnese"
+          ]
+        },
+        {
+          "latent": 261,
+          "score": 0.6228,
+          "n_active": 164,
+          "examples": [
+            "Martinborough",
+            "Martinborough",
+            "Martinborough"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.6198,
+          "n_active": 274,
+          "examples": [
+            "Tokaji",
+            "Puente Alto",
+            "Puente Alto"
+          ]
+        },
+        {
+          "latent": 370,
+          "score": 0.6131,
+          "n_active": 141,
+          "examples": [
+            "Dealu Mare",
+            "Dealu Mare",
+            "Goumenissa"
+          ]
+        }
+      ]
+    }
+  }
+}

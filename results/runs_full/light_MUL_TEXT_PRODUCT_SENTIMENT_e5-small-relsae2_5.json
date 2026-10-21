@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6179441999597504,
+  "test_error": 0.6179441999597504,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8765415683994715,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 13.106057167053223,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 365,
+      "n_removed": 147,
+      "threshold": 0.0834,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.4632,
+      "var_share_kept": 0.6055,
+      "var_share_sae_error": 0.1618,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 141,
+          "score": 0.1495,
+          "n_active": 357,
+          "examples": [
+            "Austin Hookers:  please do not accept apple products for the coochie.  #SXSW",
+            "Google Circles will not launch at #SXSW - {link}",
+            "Google will not launch Facebook competitor Circles @mention #sxsw today as thought, creeper half-friends the world over disappointed."
+          ]
+        },
+        {
+          "latent": 86,
+          "score": 0.1459,
+          "n_active": 193,
+          "examples": [
+            "The bad apple shows up late shoots down ideas and leaves early - meeting personality #2 #gamestorming #sxsw",
+            "RT @mention #SXSW: iPad Design Headaches (Take Two Tablet and Call Me in the Morning) {link}",
+            "Wow folks, make sure that iPhone ringer is turned ALL the way up when u have to be up pre-sunrise for a flight. #internalalarmclockFTW #sxsw"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.1235,
+          "n_active": 190,
+          "examples": [
+            "Reminder: Charles Chen will be talking about Android and ChromeOS access today @mention 1PM @mention the Google booth in Exhibit Hall 3. #sxsw",
+            "Tomorrow, Charles Chen will be speaking about Android and ChromeOS access @mention the Google booth in Exhibit Hall 3 @mention 1PM #sxsw",
+            "I7: Releasing the Demons {link} [codes valid: 4:00-7:59:59p 03/11/11] #infektd #sxsw #zomb"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.1114,
+          "n_active": 197,
+          "examples": [
+            "HootSuite News: HootSuite Mobile for #SXSW ~ Updates for iPhone, BlackBerry &amp; Android {link}",
+            "Get (down)loaded Hoot! - RT #HootSuite Mobile for #SXSW ~ Updates for iPhone, BlackBerry &amp; Android {link}",
+            "LinkedIn Nelson Medina HootSuite News: HootSuite Mobile for #SXSW ~ Updates for iPhone, BlackBerry &amp; Android h... {link}"
+          ]
+        },
+        {
+          "latent": 312,
+          "score": 0.1079,
+          "n_active": 252,
+          "examples": [
+            "The volume is overwhelming but the market will self-police. That's why users picked Google over Bing.  #curatedebate #SXSW",
+            "Google is focusing on bridging the digital/physical divide. Eg. maps, streetview, hotpot &amp; autonomous driving. #sxsw @mention",
+            "RT @mention &quot;Google before you tweet is the new think before you speak&quot; -- Belinsky of Digital Democracy #sxsw /via @mention"
+          ]
+        }
+      ]
+    }
+  }
+}

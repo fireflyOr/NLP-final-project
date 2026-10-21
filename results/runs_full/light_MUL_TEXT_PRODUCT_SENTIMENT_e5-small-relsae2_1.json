@@ -1,0 +1,84 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6445592351097673,
+  "test_error": 0.6445592351097673,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8788814569766454,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 15.542837142944336,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 367,
+      "n_removed": 145,
+      "threshold": 0.0838,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.4524,
+      "var_share_kept": 0.6106,
+      "var_share_sae_error": 0.1632,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 18,
+          "score": 0.1872,
+          "n_active": 185,
+          "examples": [
+            "Apple autocorrect is so weird. Ogilvy autocorrects to idiocy. #ogilvynotes #sxsw :)",
+            "RT @mention Apple autocorrect is so weird. Ogilvy autocorrects to idiocy. #ogilvynotes #sxsw :)",
+            "HootSuite - HootSuite Mobile for #SXSW ~ Updates for iPhone, BlackBerry &amp; Android: Whether you\u0089\u00db\u00aare getting friend... {link}"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.176,
+          "n_active": 143,
+          "examples": [
+            "First up: iPad Design Headaches (2 Tablets, Call in the Morning). #SXSW #tapworthy",
+            "Checking out iPad Design Headaches (2 Tablets, Call in the Morning).\n{link} #SXSW #tapworthy #fb",
+            "SXSW 2011: The Google and Bing smackdown in all its bloody banality (Guardian) {link} #SXSW"
+          ]
+        },
+        {
+          "latent": 86,
+          "score": 0.1754,
+          "n_active": 276,
+          "examples": [
+            "I agree with @mention on their @mention concerns, but your #sxsw #microformats panelist is just condescending and rude.",
+            "&quot;This is the first of 11 shows this week,&quot; says Elliott Frazier of Ringo Deathstarr at Red 7 just now.  Location: {link}  #sxsw",
+            "Idle time on a #SXSW Friday can be an expensive thing. (@mention Apple Store, SXSW w/ 80 others) [pic]: {link}"
+          ]
+        },
+        {
+          "latent": 141,
+          "score": 0.1649,
+          "n_active": 366,
+          "examples": [
+            "Nope, @mention Is NOT Launching Its Own Social Network at #SXSW {link}",
+            "Google is not launching anything during #sxsw, just partying {link} #circles",
+            "RT @mention Ok so Google Circles is not officially going to launch at #SXSW but no denial that it exists."
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.1203,
+          "n_active": 227,
+          "examples": [
+            "@mention my iPhone crashed &amp; I had to do a fresh restore &amp; lost my fave Dali/canvas pak? Can I ever get it back? Also are you @mention #sxsw?",
+            "Per this rumor, Google may preview its big social strategy at an '80s-themed costume party at #SXSW. Yep. http:/... {link}",
+            "New post: Per this rumor, Google may preview its big social strategy at an '80s-themed costume party at #SXSW. Yep {link}"
+          ]
+        }
+      ]
+    }
+  }
+}

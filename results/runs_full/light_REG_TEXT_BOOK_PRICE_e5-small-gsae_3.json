@@ -1,0 +1,395 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.24316318221376018,
+  "test_error": 0.24316318221376018,
+  "course_metric": "r2",
+  "course_score": 0.46194568863976937,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 49.98098874092102,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1823,
+      "n_groups": 1823,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1186,
+      "n_removed": 1186,
+      "var_share_removed": 0.6128,
+      "var_share_sae_error": 0.0036,
+      "top": [
+        {
+          "group": 1631,
+          "latents": [
+            94
+          ],
+          "gain_margin": 170.13,
+          "examples": [
+            "N.D.V. Prasada Rao",
+            "Rajendra Prasad",
+            "Rekha Chandra"
+          ]
+        },
+        {
+          "group": 1198,
+          "latents": [
+            734
+          ],
+          "gain_margin": 145.35,
+          "examples": [
+            "Walter Andersen, Shridhar Damle",
+            "Payal Gidwani Tiwari",
+            "Payal Gidwani Tiwari"
+          ]
+        },
+        {
+          "group": 396,
+          "latents": [
+            1644
+          ],
+          "gain_margin": 106.5,
+          "examples": [
+            "Barbara Taylor Bradford",
+            "Nevil Shute Norway",
+            "Jenny Balfour-Paul"
+          ]
+        },
+        {
+          "group": 690,
+          "latents": [
+            996
+          ],
+          "gain_margin": 94.17,
+          "examples": [
+            "M.H. Abrams, Geoffrey Galt Harpham",
+            "R.F. Kuang",
+            "R.F. Kuang"
+          ]
+        },
+        {
+          "group": 40,
+          "latents": [
+            1887
+          ],
+          "gain_margin": 93.02,
+          "examples": [
+            "Wonder House Books",
+            "Wonder House Books",
+            "Stylist Magazine"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 525,
+      "n_groups": 497,
+      "n_multi_groups": 22,
+      "n_groups_dropped": 335,
+      "n_removed": 346,
+      "var_share_removed": 0.3376,
+      "var_share_sae_error": 0.0029,
+      "top": [
+        {
+          "group": 13,
+          "latents": [
+            237,
+            946
+          ],
+          "gain_margin": 794.16,
+          "examples": [
+            "Hardcover,\u2013 5 Oct 1995",
+            "Hardcover,\u2013 9 Feb 2014",
+            "Hardcover,\u2013 18 May 2012"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            648,
+            1502
+          ],
+          "gain_margin": 486.53,
+          "examples": [
+            "Cards,\u2013 2015",
+            "Paperback,\u2013 2014",
+            "Paperback,\u2013 2014"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            399,
+            660,
+            1148
+          ],
+          "gain_margin": 172.08,
+          "examples": [
+            "Paperback,\u2013 27 Jun 2016",
+            "Paperback,\u2013 26 Apr 2016",
+            "Paperback,\u2013 23 Aug 2016"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            342,
+            1419
+          ],
+          "gain_margin": 140.96,
+          "examples": [
+            "Hardcover,\u2013 Sep 2017",
+            "Hardcover,\u2013 12 Sep 2017",
+            "Hardcover,\u2013 8 Dec 2017"
+          ]
+        },
+        {
+          "group": 10,
+          "latents": [
+            372,
+            1736
+          ],
+          "gain_margin": 97.6,
+          "examples": [
+            "Paperback,\u2013 Large Print, Import",
+            "Paperback,\u2013 Abridged, Import",
+            "Paperback,\u2013 Illustrated, Import"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 886,
+      "n_groups": 886,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 674,
+      "n_removed": 674,
+      "var_share_removed": 0.5275,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 656,
+          "latents": [
+            1123
+          ],
+          "gain_margin": 231.32,
+          "examples": [
+            "Software Programming Compilers",
+            "Game Programming",
+            "CSS Programming"
+          ]
+        },
+        {
+          "group": 826,
+          "latents": [
+            342
+          ],
+          "gain_margin": 136.57,
+          "examples": [
+            "Game Programming",
+            "Software & Business Applications (Books)",
+            "Software & Business Applications (Books)"
+          ]
+        },
+        {
+          "group": 860,
+          "latents": [
+            925
+          ],
+          "gain_margin": 131.59,
+          "examples": [
+            "TOEFL",
+            "GRE",
+            "FPC"
+          ]
+        },
+        {
+          "group": 44,
+          "latents": [
+            1975
+          ],
+          "gain_margin": 116.17,
+          "examples": [
+            "Romance (Books)",
+            "Romance (Books)",
+            "Romance (Books)"
+          ]
+        },
+        {
+          "group": 277,
+          "latents": [
+            1617
+          ],
+          "gain_margin": 111.96,
+          "examples": [
+            "Essay, Letter & Review Writing",
+            "Sociology (Books)",
+            "Sociology (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2001,
+      "n_groups": 2001,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1245,
+      "n_removed": 1245,
+      "var_share_removed": 0.6617,
+      "var_share_sae_error": 0.0303,
+      "top": [
+        {
+          "group": 346,
+          "latents": [
+            1913
+          ],
+          "gain_margin": 262.32,
+          "examples": [
+            "Python Programming is designed as a textbook to fulfil the requirements of the first-level course in Python programming. It is suited for undergraduate degree s",
+            "If you've ever spent hours renaming files or updating hundreds of spreadsheet cells, you know how tedious tasks like these can be. But what if you could have yo",
+            "Python for Everybody is designed to introduce students to programming and software development through the lens of exploring data.You can think of the Python pr"
+          ]
+        },
+        {
+          "group": 1601,
+          "latents": [
+            561
+          ],
+          "gain_margin": 215.04,
+          "examples": [
+            "Vividly illustrating the techniques of a legendary innovator, this definitive examination explains how to survive attacks on the street, increase training aware",
+            "CISSP (ISC)2 Certified Information Systems Security Professional Official Study Guide, 7th Edition has been completely updated for the latest 2015 CISSP Body of",
+            "In practice, following the money isn't always easy. This hands-on guide is your tutorial to the complexities of using Financial Accounting with SAP (FI). Follow"
+          ]
+        },
+        {
+          "group": 1929,
+          "latents": [
+            261
+          ],
+          "gain_margin": 190.89,
+          "examples": [
+            "(Music Sales America). Express yourself through the beautiful voice of the solo guitar. Solo Guitar Playing can teach even the person with no previous musical t",
+            "Veteran photographer and instructor Bryan Peterson is best known for his arresting imagery using bold, graphic color and composition. Here he explores his signa",
+            "The fourth edition of the authoritative guide to producing, directing, shooting, editing, and distributing your video or film.\n\nWidely acknowledged as the \u201cbibl"
+          ]
+        },
+        {
+          "group": 679,
+          "latents": [
+            1543
+          ],
+          "gain_margin": 167.52,
+          "examples": [
+            "Over the years, Sudha Murty has come across some fascinating people whose lives make for interesting stories and have astonishing lessons to reveal. Take Vishnu",
+            "There\u2019s more than petty theft going on in a London youth hostel\u2026\n\nAn outbreak of kleptomania at a student hostel was not normally the sort of crime that aroused",
+            "There\u2019s more than petty theft going on in a London youth hostel\u2026\n\nAn outbreak of kleptomania at a student hostel was not normally the sort of crime that aroused"
+          ]
+        },
+        {
+          "group": 31,
+          "latents": [
+            2020
+          ],
+          "gain_margin": 140.3,
+          "examples": [
+            "This is not your typical boy-meets-girl story. Okay, they do meet, but there are some complications. Trish is twenty-eight. She's unemployed, overweight, single",
+            "Aspiring actress Priya is dead. It\u2019s a suicide, and rumour has it that Anil, son of politician and former Telugu-movie superstar Mohan Krishna, drove her to it.",
+            "You don\u2019t find true love. You build it.\nPaarth has just turned 18, and instead of celebrating, he is driving his father\u2019s taxi to make ends meet. When he picks "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1938,
+      "n_groups": 1938,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1240,
+      "n_removed": 1240,
+      "var_share_removed": 0.6272,
+      "var_share_sae_error": 0.0243,
+      "top": [
+        {
+          "group": 603,
+          "latents": [
+            1394
+          ],
+          "gain_margin": 232.7,
+          "examples": [
+            "Piano Exam Pieces 2019 & 2020, ABRSM Grade 2: Selected from the 2019 & 2020 syllabus (ABRSM Exam Pieces)",
+            "Bride Test (Kiss Quotient Series)",
+            "Lego: Star Wars in 100 Scenes"
+          ]
+        },
+        {
+          "group": 1194,
+          "latents": [
+            712
+          ],
+          "gain_margin": 191.48,
+          "examples": [
+            "Rip Kirby, Vol. 10: 1970-1973",
+            "The Survival Handbook",
+            "Fundamentals of Power Electronics with MATLAB"
+          ]
+        },
+        {
+          "group": 1880,
+          "latents": [
+            261
+          ],
+          "gain_margin": 173.36,
+          "examples": [
+            "The Beginner's Photography Guide: The Ultimate Step-by-Step Manual for Getting the Most from Your Digital Camera",
+            "National Geographic Stunning Photographs",
+            "Cinematography: Theory and Practice: Image Making for Cinematographers and Directors: Volume 3"
+          ]
+        },
+        {
+          "group": 1226,
+          "latents": [
+            1289
+          ],
+          "gain_margin": 141.67,
+          "examples": [
+            "High-Intensity Training the Mike Mentzer Way",
+            "Every Day Is Game Day: Train Like the Pros With a No-Holds-Barred Exercise and Nutrition Plan for Peak Performance",
+            "Brain Training For Runners: A Revolutionary New Training System To Improve Endurance, Speed, Health, And Results"
+          ]
+        },
+        {
+          "group": 612,
+          "latents": [
+            1557
+          ],
+          "gain_margin": 139.89,
+          "examples": [
+            "The Filmmaker's Handbook",
+            "Geronimo Stilton #65 the Bollywood Burglary",
+            "Tomie: Complete Deluxe Edition"
+          ]
+        }
+      ]
+    }
+  }
+}

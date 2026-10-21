@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5748267843132334,
+  "test_error": 0.5748267843132334,
+  "course_metric": "r2",
+  "course_score": 0.4281325952082684,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 98.97193622589111,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 437,
+      "n_removed": 75,
+      "threshold": 0.0391,
+      "passed_test": 194,
+      "removed_norm_ratio": 0.2339,
+      "var_share_kept": 0.9337,
+      "var_share_sae_error": 0.0073,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 231,
+          "score": 0.1747,
+          "n_active": 3906,
+          "examples": [
+            "FOREVER 21",
+            "FOREVER 21",
+            "FOREVER 21"
+          ]
+        },
+        {
+          "latent": 98,
+          "score": 0.1722,
+          "n_active": 4133,
+          "examples": [
+            "Lime Crime",
+            "Lime Crime",
+            "Lime Crime"
+          ]
+        },
+        {
+          "latent": 3,
+          "score": 0.1651,
+          "n_active": 3946,
+          "examples": [
+            "Logitech",
+            "Logitech",
+            "Dolce & Gabbana"
+          ]
+        },
+        {
+          "latent": 236,
+          "score": 0.1562,
+          "n_active": 3947,
+          "examples": [
+            "Faded Glory",
+            "Faded Glory",
+            "Faded Glory"
+          ]
+        },
+        {
+          "latent": 141,
+          "score": 0.1559,
+          "n_active": 3807,
+          "examples": [
+            "No Boundaries",
+            "No Boundaries",
+            "Nerf"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 496,
+      "n_kept": 411,
+      "n_removed": 101,
+      "threshold": 0.0372,
+      "passed_test": 169,
+      "removed_norm_ratio": 0.2379,
+      "var_share_kept": 0.7965,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.1801,
+          "n_active": 1719,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 457,
+          "score": 0.1401,
+          "n_active": 729,
+          "examples": [
+            "Weddings",
+            "Weddings",
+            "Weddings"
+          ]
+        },
+        {
+          "latent": 71,
+          "score": 0.14,
+          "n_active": 687,
+          "examples": [
+            "Footwear",
+            "Footwear",
+            "Diapering"
+          ]
+        },
+        {
+          "latent": 337,
+          "score": 0.1393,
+          "n_active": 310,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.1388,
+          "n_active": 1446,
+          "examples": [
+            "Tops & Blouses",
+            "Tops & Blouses",
+            "Tops & Blouses"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 452,
+      "n_removed": 60,
+      "threshold": 0.0404,
+      "passed_test": 179,
+      "removed_norm_ratio": 0.3135,
+      "var_share_kept": 0.9135,
+      "var_share_sae_error": 0.0007,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 132,
+          "score": 0.1651,
+          "n_active": 449,
+          "examples": [
+            "Varsity/Baseball",
+            "Varsity/Baseball",
+            "Baseball & Softball"
+          ]
+        },
+        {
+          "latent": 92,
+          "score": 0.1599,
+          "n_active": 1953,
+          "examples": [
+            "Bottle-Feeding",
+            "Bottle-Feeding",
+            "Bottle-Feeding"
+          ]
+        },
+        {
+          "latent": 409,
+          "score": 0.127,
+          "n_active": 793,
+          "examples": [
+            "Baby Gyms & Playmats",
+            "Baby",
+            "Baby"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.1229,
+          "n_active": 940,
+          "examples": [
+            "Boot Cut",
+            "Boot Cut",
+            "Boot Cut"
+          ]
+        },
+        {
+          "latent": 462,
+          "score": 0.1145,
+          "n_active": 602,
+          "examples": [
+            "Girls",
+            "Girls",
+            "Animal"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 435,
+      "n_removed": 77,
+      "threshold": 0.0381,
+      "passed_test": 184,
+      "removed_norm_ratio": 0.3222,
+      "var_share_kept": 0.8387,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.1698,
+          "n_active": 766,
+          "examples": [
+            "Handmade/Bags and Purses/Purse",
+            "Handmade/Bags and Purses/Purse",
+            "Handmade/Bags and Purses/Purse"
+          ]
+        },
+        {
+          "latent": 79,
+          "score": 0.1483,
+          "n_active": 1575,
+          "examples": [
+            "Women/Shoes/Slippers",
+            "Women/Shoes/Slippers",
+            "Women/Shoes/Slippers"
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.1425,
+          "n_active": 958,
+          "examples": [
+            "Women/Shoes/Work & Safety",
+            "Women/Shoes/Work & Safety",
+            "Sports & Outdoors/Footwear/Cleats"
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.1352,
+          "n_active": 293,
+          "examples": [
+            "Women/Women's Handbags/Hobo",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "latent": 133,
+          "score": 0.1285,
+          "n_active": 1558,
+          "examples": [
+            "Men/Tops/Button-Front",
+            "Men/Tops/Button-Front",
+            "Men/Tops/Button-Front"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 404,
+      "n_removed": 108,
+      "threshold": 0.0403,
+      "passed_test": 65,
+      "removed_norm_ratio": 0.2887,
+      "var_share_kept": 0.6242,
+      "var_share_sae_error": 0.2301,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 28,
+          "score": 0.1306,
+          "n_active": 852,
+          "examples": [
+            "New in box.",
+            "JEWELRY BOX LARGE 3 DRAWERS , MEASURING ABOUT 21 X 8 X 7 DRAWERS DEEP ABOUT 6 . THE JEWELRY BOX HAS A FEW MARKS ON TOP , AND THE DRAWERS NEED TO BE CLEANED UP A",
+            "Box shows some wear"
+          ]
+        },
+        {
+          "latent": 30,
+          "score": 0.1097,
+          "n_active": 568,
+          "examples": [
+            "A classic purse, have used it for a while. Comes with a chain Crossbody strap. Shows sign of wear on the handles and hardware, has stains inside. Please see pic",
+            "Super cute brown leather purse with DUSTBAG! Used, some wrinkling in leather on bottom see corner and some broken threads on handles but works perfect! I still ",
+            "Beautiful and very spacious. Olive color leather with gunmetal rivets,chain. Used once. Comes with dust bag.retail 495"
+          ]
+        },
+        {
+          "latent": 314,
+          "score": 0.1075,
+          "n_active": 649,
+          "examples": [
+            "Authentic New, unworn Comes with box and receipt Size 8 Offer.",
+            "Authentic white and pink nike Air Force one with box. Only worn a few times. Some dirt marks on the soles but overall shoe looks great.",
+            "Brand New!!!! Authentic"
+          ]
+        },
+        {
+          "latent": 351,
+          "score": 0.0996,
+          "n_active": 3380,
+          "examples": [
+            "Backpack used",
+            "Sunglasses",
+            "Price is Negotiable"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.092,
+          "n_active": 254,
+          "examples": [
+            "Used Space grey 16gb ATT carrier. Phone is unlocked, reset, find my phone is off. Has small chip in screen but not cracked (see picture #2) chip can hardly be s",
+            "Great condition no cracks, few scratches on the screen and everything still works well. This is the 2nd generation iPad with the newest update. It is 64GB so it",
+            "Gently used apple iPhone 6, 64gb, has been reset. I used on att but can be used for any network. I upgraded to new iPhone, nothing wrong besides crack to screen"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 412,
+      "n_removed": 100,
+      "threshold": 0.0408,
+      "passed_test": 74,
+      "removed_norm_ratio": 0.3314,
+      "var_share_kept": 0.6354,
+      "var_share_sae_error": 0.1936,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.1257,
+          "n_active": 1025,
+          "examples": [
+            "Shirt",
+            "Women's shirt",
+            "Women's shirt"
+          ]
+        },
+        {
+          "latent": 18,
+          "score": 0.1148,
+          "n_active": 668,
+          "examples": [
+            "Lularoe",
+            "LulaRoe",
+            "LuLaroe"
+          ]
+        },
+        {
+          "latent": 251,
+          "score": 0.0907,
+          "n_active": 781,
+          "examples": [
+            "Lularoe Amelia L - BNWT",
+            "Lularoe Amelia large",
+            "Lularoe elegant large Amelia"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.0906,
+          "n_active": 1058,
+          "examples": [
+            "LuLaRoe French bulldog leggings TC EUC",
+            "Lularoe Disney TC Aztec Minnie Mouse",
+            "TC LULAROE LEGGINGS"
+          ]
+        },
+        {
+          "latent": 393,
+          "score": 0.0898,
+          "n_active": 1308,
+          "examples": [
+            "Girl pirate costume.",
+            "Tunic",
+            "Wonder Woman Dog Costume"
+          ]
+        }
+      ]
+    }
+  }
+}

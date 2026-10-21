@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7986969233068038,
+  "test_error": 0.20130307669319625,
+  "course_metric": "auroc",
+  "course_score": 0.7986969233068038,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 39.11418628692627,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1364,
+      "n_removed": 1364,
+      "var_share_removed": 0.4296,
+      "var_share_sae_error": 0.1731,
+      "top": [
+        {
+          "group": 1521,
+          "latents": [
+            599
+          ],
+          "gain_margin": 518.58,
+          "examples": [
+            "And Democrats not, funny how that works.",
+            "Ray Troll is a Ketchikan, Alaska treasure.  I took one community college class from him years ago and will never forget his teaching style.  Get 'em Ray.",
+            "Where are you going to find \"future\" looking political leader and where were they when the fund was set up? El paso natural gas tried to run a line down when th"
+          ]
+        },
+        {
+          "group": 328,
+          "latents": [
+            1859
+          ],
+          "gain_margin": 436.99,
+          "examples": [
+            "too little too late, the idiots in Sudbury voted for the fly in liberal.",
+            "Henry Paulson is looking beyond the election and what he sees if Trump is elected is chaos.  DT is a product of a reality show mentality being projected onto a ",
+            "They will hire three 747's and fly the Liberal party to paris to vote"
+          ]
+        },
+        {
+          "group": 2026,
+          "latents": [
+            614
+          ],
+          "gain_margin": 383.21,
+          "examples": [
+            "Oh the horror!",
+            "All Canadians bear the shame of this vile crime!",
+            "More victims of a bad aircraft....the Ospry."
+          ]
+        },
+        {
+          "group": 2023,
+          "latents": [
+            67
+          ],
+          "gain_margin": 367.7,
+          "examples": [
+            "haha",
+            "Oh no my friend\nThat is \"fake news\"",
+            "Lmao! This is actual fake news at its finest!"
+          ]
+        },
+        {
+          "group": 1018,
+          "latents": [
+            1086
+          ],
+          "gain_margin": 317.83,
+          "examples": [
+            "Very true.  In the 'New SAfrica' Black is supposed to encompass all ethnic groups besides Whites.  (Which, by the way, is one of the fundamental flaws in cultiv",
+            "Islam is not a race. Being a Muslim is not part of a \"race.\" So this is not extreme racism on my part. Race is not a choice.",
+            "Jims comment is ridiculous. There are Muslims through out the world, and the religion includes all skin colors."
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 842,
+      "n_groups": 787,
+      "n_multi_groups": 46,
+      "n_groups_dropped": 562,
+      "n_removed": 593,
+      "var_share_removed": 0.5393,
+      "var_share_sae_error": 0.016,
+      "top": [
+        {
+          "group": 30,
+          "latents": [
+            714,
+            1558
+          ],
+          "gain_margin": 182.29,
+          "examples": [
+            "2017-05-25 00:47:47.840830",
+            "2016-10-06 16:15:47.100025",
+            "2016-12-14 00:47:47.688582"
+          ]
+        },
+        {
+          "group": 117,
+          "latents": [
+            1535
+          ],
+          "gain_margin": 172.84,
+          "examples": [
+            "2017-01-11 20:00:51.070965",
+            "2017-03-02 23:00:51.728124",
+            "2017-05-28 14:29:51.500140"
+          ]
+        },
+        {
+          "group": 447,
+          "latents": [
+            152
+          ],
+          "gain_margin": 138.04,
+          "examples": [
+            "2017-06-13 14:42:50.978407",
+            "2016-12-18 00:40:49.676471",
+            "2017-11-07 01:12:50.497251"
+          ]
+        },
+        {
+          "group": 400,
+          "latents": [
+            1458
+          ],
+          "gain_margin": 98.92,
+          "examples": [
+            "2016-08-18 12:00:34.201882",
+            "2017-04-10 14:30:34.432841",
+            "2016-05-09 05:20:34.007825"
+          ]
+        },
+        {
+          "group": 457,
+          "latents": [
+            513
+          ],
+          "gain_margin": 92.45,
+          "examples": [
+            "2016-12-01 17:13:50.708001",
+            "2017-08-03 03:21:50.150445",
+            "2016-11-15 03:45:50.400750"
+          ]
+        }
+      ]
+    }
+  }
+}

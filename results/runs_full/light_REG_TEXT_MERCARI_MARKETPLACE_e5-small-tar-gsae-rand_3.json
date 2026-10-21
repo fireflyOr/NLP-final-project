@@ -1,0 +1,464 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5774690313605548,
+  "test_error": 0.5774690313605548,
+  "course_metric": "r2",
+  "course_score": 0.4035044848645404,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 95.28445100784302,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1040,
+      "n_groups": 1040,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 850,
+      "n_removed": 850,
+      "var_share_removed": 0.6314,
+      "var_share_sae_error": 0.0018,
+      "top": [
+        {
+          "group": 1034,
+          "latents": [
+            305
+          ],
+          "gain_margin": 5328.48,
+          "examples": [
+            "Air Jordan",
+            "Air Jordan",
+            "Air Jordan"
+          ]
+        },
+        {
+          "group": 1010,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1732.42,
+          "examples": [
+            "Tory Burch",
+            "Tory Burch",
+            "Tory Burch"
+          ]
+        },
+        {
+          "group": 113,
+          "latents": [
+            1784
+          ],
+          "gain_margin": 817.21,
+          "examples": [
+            "Celine",
+            "Celine",
+            "Kodak"
+          ]
+        },
+        {
+          "group": 949,
+          "latents": [
+            377
+          ],
+          "gain_margin": 701.79,
+          "examples": [
+            "Kendra Scott",
+            "Kendra Scott",
+            "Kendra Scott"
+          ]
+        },
+        {
+          "group": 681,
+          "latents": [
+            654
+          ],
+          "gain_margin": 437.78,
+          "examples": [
+            "Earl Jean",
+            "Yves Saint Laurent",
+            "Yves Saint Laurent"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 803,
+      "n_groups": 803,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 722,
+      "n_removed": 722,
+      "var_share_removed": 0.8483,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 795,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2000.52,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 43,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 1372.98,
+          "examples": [
+            "Cameras & Photography",
+            "Cameras & Photography",
+            "Cameras & Photography"
+          ]
+        },
+        {
+          "group": 364,
+          "latents": [
+            377
+          ],
+          "gain_margin": 1157.77,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 801,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 370.33,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 604,
+          "latents": [
+            111
+          ],
+          "gain_margin": 320.04,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1267,
+      "n_groups": 1267,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1032,
+      "n_removed": 1032,
+      "var_share_removed": 0.6361,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 268,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 2395.59,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 1260,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1887.98,
+          "examples": [
+            "Handbag",
+            "Handbag",
+            "Handbag"
+          ]
+        },
+        {
+          "group": 138,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 973.58,
+          "examples": [
+            "Microphones & Accessories",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 895,
+          "latents": [
+            778
+          ],
+          "gain_margin": 836.4,
+          "examples": [
+            "Handbag",
+            "Handbag",
+            "Handbag"
+          ]
+        },
+        {
+          "group": 136,
+          "latents": [
+            1865
+          ],
+          "gain_margin": 737.47,
+          "examples": [
+            "Shoulder Bag",
+            "Shoulder Bag",
+            "Shoulder Bag"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1209,
+      "n_groups": 1206,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 964,
+      "n_removed": 964,
+      "var_share_removed": 0.6514,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 1142,
+          "latents": [
+            559
+          ],
+          "gain_margin": 3372.62,
+          "examples": [
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer"
+          ]
+        },
+        {
+          "group": 320,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 2792.91,
+          "examples": [
+            "Sports & Outdoors/Exercise/Fitness technology",
+            "Sports & Outdoors/Exercise/Fitness technology",
+            "Sports & Outdoors/Exercise/Fitness technology"
+          ]
+        },
+        {
+          "group": 428,
+          "latents": [
+            778
+          ],
+          "gain_margin": 1361.57,
+          "examples": [
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        },
+        {
+          "group": 524,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 1283.68,
+          "examples": [
+            "Sports & Outdoors/Exercise/Fitness technology",
+            "Sports & Outdoors/Exercise/Fitness technology",
+            "Sports & Outdoors/Exercise/Fitness technology"
+          ]
+        },
+        {
+          "group": 602,
+          "latents": [
+            911
+          ],
+          "gain_margin": 560.1,
+          "examples": [
+            "Electronics/Cameras & Photography/Digital Cameras",
+            "Electronics/Cameras & Photography/Digital Cameras",
+            "Electronics/Cameras & Photography/Digital Cameras"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2044,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1377,
+      "n_removed": 1379,
+      "var_share_removed": 0.6466,
+      "var_share_sae_error": 0.0787,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            305,
+            1529
+          ],
+          "gain_margin": 11859.73,
+          "examples": [
+            "BEAUTIFUL and flawless PINK Kate Spade handbag with original dust bag. 100% guaranteed authentic! I bought this myself but after becoming a parent I need a much",
+            "NWOT Authentic Michael Kors handbag. A very beautiful and practical bag. Never carried! Inside has two pockets. Inside lining at the bottom has a couple Lil pen",
+            "Air Jordan 12s blue (obsidian) and white Amazing condition Negotiable"
+          ]
+        },
+        {
+          "group": 1071,
+          "latents": [
+            396
+          ],
+          "gain_margin": 3967.45,
+          "examples": [
+            "NEW white Phone Grip Holder Stand with Car Mount clip ( like a Popsocket ) Works for iPhone , Samsung , lg , HTC , and android phones Rain 2 for [rm] 3 for [rm]",
+            "1 Sticker/ Decal Matte Finish Use on your laptop, car, binder, pretty much anywhere you can use a sticker! I cannot go any lower, I am paying for shipping. Howe",
+            "7 random Brandy Melville stickers shipped in a regular envelope w/ a stamp (repeats may be included)"
+          ]
+        },
+        {
+          "group": 2040,
+          "latents": [
+            93
+          ],
+          "gain_margin": 1307.64,
+          "examples": [
+            "Hot pink and super cute. Cup size is a C.",
+            "Cute white top",
+            "Pink Cheeky Panties Medium 2 for [rm]"
+          ]
+        },
+        {
+          "group": 1979,
+          "latents": [
+            344
+          ],
+          "gain_margin": 805.39,
+          "examples": [
+            "IMEI: 357991053948609 Unlocked for Any Carrier Great Condition NO HAGGLE PRICING! This mean's we agressively price our phones to be the best in the market. WE D",
+            "[rm] EACH iPhone 6, 16GB AT&T Like Brand new , no scratches or dents iCloud unlocked Ready to be activated Price is firm Please message what color you would lik",
+            "AT&T UNLOCKED. Works for any carrier. Comes with OEM: 6 S Plus Box, Wall Plug, Headphones & a Speck Case. No charger cable Included. Please see photos. Screen i"
+          ]
+        },
+        {
+          "group": 2007,
+          "latents": [
+            204
+          ],
+          "gain_margin": 615.58,
+          "examples": [
+            "Brand New guess watch",
+            "Cast Is listed above. Grabbed a couple when I saw it! It was christopher Jackson's last performance as George Washington in the Show. Little Crease in the botto",
+            "Great watch, we no longer have the links. Battery still works, no damage."
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2046,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1188,
+      "n_removed": 1188,
+      "var_share_removed": 0.4067,
+      "var_share_sae_error": 0.063,
+      "top": [
+        {
+          "group": 621,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 8792.45,
+          "examples": [
+            "Macbook Air 11\" 2013",
+            "Air Jordan Retro 7 Fireberry",
+            "2012 Air Jordan 12 \"obsidian\""
+          ]
+        },
+        {
+          "group": 2041,
+          "latents": [
+            396
+          ],
+          "gain_margin": 4508.57,
+          "examples": [
+            "Blue line Velcro patch",
+            "Starbucks sticker",
+            "Travel Decal Sticker"
+          ]
+        },
+        {
+          "group": 510,
+          "latents": [
+            892
+          ],
+          "gain_margin": 3254.19,
+          "examples": [
+            "BNWT TC HTF Shooting Star Lularoe",
+            "BNWT Lularoe Classic T 3XL",
+            "Lularoe Top classic T"
+          ]
+        },
+        {
+          "group": 479,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 2931.13,
+          "examples": [
+            "Floral Light Blouse",
+            "Short sleeve blouse",
+            "Heart blouse"
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1559.88,
+          "examples": [
+            "Tons of records! Around [rm]/piece!",
+            "Black Beats Solo hd Headphones",
+            "Custom Listing Rasha Sunburst Dark Berr"
+          ]
+        }
+      ]
+    }
+  }
+}

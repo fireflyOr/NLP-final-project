@@ -1,0 +1,93 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6348146801568721,
+  "test_error": 0.6348146801568721,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8781282988689965,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 24.128411531448364,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1834,
+      "n_groups": 1829,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 858,
+      "n_removed": 858,
+      "var_share_removed": 0.454,
+      "var_share_sae_error": 0.0196,
+      "top": [
+        {
+          "group": 411,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 265.16,
+          "examples": [
+            "we're all frankenstein! the amalgamation of our fragmented digital identities, becoming anti-schizophrenic, google as AI. SM is sci-fi #sxsw",
+            "Smartphone breakdown at #sxsw (unofficial) - 98.5% iPhones, 1% Android, .03% Blackberry, .02% Symbian / Windows / Other",
+            "Totalitarian thought in action: People worldwide come to Austin, TX for #SXSW and decide to spend their time in line at an Apple Store."
+          ]
+        },
+        {
+          "group": 1085,
+          "latents": [
+            356
+          ],
+          "gain_margin": 179.16,
+          "examples": [
+            "Oh no utter @mention #sxsw fail. Can't see the letter of the ballroom in the iPhone app as it is too long and doesn't wrap /cc @mention",
+            "Tech Check podcast -- #SxSW #Android passes #BlackBerry, a big Twitter #fail! -- {link} by @mention #sxsw #cnn",
+            "just walked by the line for the iPad 2. Bahahahaha! at least 5 blocks long. #fail #SXSW"
+          ]
+        },
+        {
+          "group": 490,
+          "latents": [
+            1551
+          ],
+          "gain_margin": 162.62,
+          "examples": [
+            "\u0089\u00db\u00cfThe classiest fascist company in existence\u0089\u00db\u009d - Kara Swisher #sxsw #apple",
+            "Apple is &quot;the classiest, fascist company in America,&quot; says @mention #sxsw",
+            "RT @mention &quot;Apple is the most elegant fascist company in America.&quot; #flipboard #SXSW"
+          ]
+        },
+        {
+          "group": 398,
+          "latents": [
+            1618
+          ],
+          "gain_margin": 154.52,
+          "examples": [
+            "Wonder when Google's #impactdashboard (being demoed now) will become part of Google Analytics #bavcid #SXSW",
+            "RT @mention Length of Google penalty based on severity of breach of webmaster guidelines. i.e.white text on white bgr might get 30 day pen. #sxsw #qagb",
+            "RT @mention D/L @mention come to the UJ* booth in ACC hall 2! Snap pics &amp; send em to us #FightThePaddle! {link} #SXSW"
+          ]
+        },
+        {
+          "group": 438,
+          "latents": [
+            1065
+          ],
+          "gain_margin": 135.83,
+          "examples": [
+            "Agencies push Google in directions they never would have gone otherwise says Creative Lab Strategy Director @mention #SXSW",
+            "MT \u0089\u00db\u00cf@mention Agencies push Google in directions they never would have gone says Creative Lab Strategy Director @mention #SXSW\u0089\u00db\u009d",
+            "Leaving Google's Marissa Mayer Keynote. Interesting details on user adoption of location-aware services. #sxsw"
+          ]
+        }
+      ]
+    }
+  }
+}

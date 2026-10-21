@@ -1,0 +1,391 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7381379134264685,
+  "test_error": 0.2618620865735315,
+  "course_metric": "auroc",
+  "course_score": 0.7381379134264685,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 93.2478563785553,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 969,
+      "n_groups": 943,
+      "n_multi_groups": 22,
+      "n_groups_dropped": 659,
+      "n_removed": 671,
+      "var_share_removed": 0.3986,
+      "var_share_sae_error": 0.006,
+      "top": [
+        {
+          "group": 145,
+          "latents": [
+            1920
+          ],
+          "gain_margin": 156.28,
+          "examples": [
+            "1970-01-01 00:00:01.354136400",
+            "1970-01-01 00:00:01.308000003",
+            "1970-01-01 00:00:01.331060120"
+          ]
+        },
+        {
+          "group": 560,
+          "latents": [
+            1023
+          ],
+          "gain_margin": 148.49,
+          "examples": [
+            "1970-01-01 00:00:01.404856027",
+            "1970-01-01 00:00:01.404880451",
+            "1970-01-01 00:00:01.404802145"
+          ]
+        },
+        {
+          "group": 666,
+          "latents": [
+            579
+          ],
+          "gain_margin": 123.11,
+          "examples": [
+            "1970-01-01 00:00:01.404972012",
+            "1970-01-01 00:00:01.404791037",
+            "1970-01-01 00:00:01.404802606"
+          ]
+        },
+        {
+          "group": 126,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 115.68,
+          "examples": [
+            "1970-01-01 00:00:01.370240208",
+            "1970-01-01 00:00:01.376210558",
+            "1970-01-01 00:00:01.382977998"
+          ]
+        },
+        {
+          "group": 831,
+          "latents": [
+            183
+          ],
+          "gain_margin": 113.39,
+          "examples": [
+            "1970-01-01 00:00:01.421707720",
+            "1970-01-01 00:00:01.421700777",
+            "1970-01-01 00:00:01.354219777"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 963,
+      "n_groups": 932,
+      "n_multi_groups": 28,
+      "n_groups_dropped": 683,
+      "n_removed": 704,
+      "var_share_removed": 0.4493,
+      "var_share_sae_error": 0.0061,
+      "top": [
+        {
+          "group": 781,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 298.24,
+          "examples": [
+            "1970-01-01 00:00:01.280721540",
+            "1970-01-01 00:00:01.366527540",
+            "1970-01-01 00:00:01.414825140"
+          ]
+        },
+        {
+          "group": 730,
+          "latents": [
+            789
+          ],
+          "gain_margin": 276.84,
+          "examples": [
+            "1970-01-01 00:00:01.428302017",
+            "1970-01-01 00:00:01.428132414",
+            "1970-01-01 00:00:01.426205350"
+          ]
+        },
+        {
+          "group": 513,
+          "latents": [
+            1055
+          ],
+          "gain_margin": 191.46,
+          "examples": [
+            "1970-01-01 00:00:01.397430000",
+            "1970-01-01 00:00:01.367370000",
+            "1970-01-01 00:00:01.315800000"
+          ]
+        },
+        {
+          "group": 340,
+          "latents": [
+            1557
+          ],
+          "gain_margin": 167.54,
+          "examples": [
+            "1970-01-01 00:00:01.321516740",
+            "1970-01-01 00:00:01.405862040",
+            "1970-01-01 00:00:01.386568740"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            626,
+            714
+          ],
+          "gain_margin": 133.15,
+          "examples": [
+            "1970-01-01 00:00:01.410041424",
+            "1970-01-01 00:00:01.414113267",
+            "1970-01-01 00:00:01.416020400"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1246,
+      "n_removed": 1246,
+      "var_share_removed": 0.3465,
+      "var_share_sae_error": 0.1414,
+      "top": [
+        {
+          "group": 948,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 1603.95,
+          "examples": [
+            "\"A social network based around happy hours. Find happy hours and build your network at the times people want to connect.\"",
+            "\"A mobile app to help students around the world learn and better their Math and Life skills, through video, games, and live streaming.\"",
+            "\"Nonprofit organization  platform for college students to connect and receive funds to cover their educational costs from the public.\""
+          ]
+        },
+        {
+          "group": 2037,
+          "latents": [
+            793
+          ],
+          "gain_margin": 673.71,
+          "examples": [
+            "\"The ULTIMATE movement tray GRIP surfacing kit for tabletop fantasy wargaming. Perfect for curing your boring trays and falling figures!\"",
+            "\"Impudent Mortal is back with our 3rd Kickstarter. A 28mm Near Future Sci Fi Tabletop City perfect for any Sci Fi / Modern gaming system\"",
+            "\"'Stamp & Create' incredibly varied detailed textured bases easily - for ANY & EVERY miniature wargame figure base shape & size.\""
+          ]
+        },
+        {
+          "group": 186,
+          "latents": [
+            1769
+          ],
+          "gain_margin": 462.08,
+          "examples": [
+            "\"LITTLE STEPS written & illustrated by Ryan Hipp \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
+            "\"Treeverse follows two climbers' unparalleled adventure as they attempt to navigate a 1 km transect through a forest canopy over 5 days.\"",
+            "\"Lord Karnage Book 1 is a 76-page comic book written and drawn by Mark Bussler, creator of Lord Karnage and Classic Game Room.\""
+          ]
+        },
+        {
+          "group": 711,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 359.01,
+          "examples": [
+            "\"The sprout board is a board designed to help you to create permanent high quality projects with a simple but feature filled platform.\"",
+            "\"A new way to CNC - single board with 4 powerful motor drivers, power from ATX PSU, and... wait for it... integrated wireless comms!\"",
+            "\"StickyBUGs are small, modular boards that enable you to quickly make your own Arduino shield, with no wiring or soldering required!\""
+          ]
+        },
+        {
+          "group": 1017,
+          "latents": [
+            1395
+          ],
+          "gain_margin": 358.13,
+          "examples": [
+            "\"A collection of hand crafted prints, rendered in Copics, Watercolor, and Photoshop from the portfolio of Rob Duenas.\"",
+            "\"Alaskan animals covered in tiny inked designs, hand drawn with micron pens on smooth bristol board.\"",
+            "\"A girl and a piano get together to create a sonic revolution with a cast of Orcas Island musicians and a place to record it all.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1286,
+      "n_removed": 1286,
+      "var_share_removed": 0.3784,
+      "var_share_sae_error": 0.1259,
+      "top": [
+        {
+          "group": 251,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 913.84,
+          "examples": [
+            "\"cubit-perfect-cubes-of-tungsten-titanium-and-more\"",
+            "\"titanium-sea-creature-inspired-multi-tool-keychain\"",
+            "\"titanium-bottle-grenade-20-ridiculously-awesome\""
+          ]
+        },
+        {
+          "group": 986,
+          "latents": [
+            1034
+          ],
+          "gain_margin": 341.44,
+          "examples": [
+            "\"manufactured-river-fine-art-about-waste-water-trea\"",
+            "\"ghostsn-djs-edm-retro-arcade-lampoon\"",
+            "\"making-of-godsrevenge-1-and-2-and-mixtapemagic-pt\""
+          ]
+        },
+        {
+          "group": 1950,
+          "latents": [
+            369
+          ],
+          "gain_margin": 229.95,
+          "examples": [
+            "\"mytemple-the-fitness-training-game\"",
+            "\"inceptor-the-game-of-your-dreams\"",
+            "\"follow-me-a-biblically-inspired-game-in-a-western\""
+          ]
+        },
+        {
+          "group": 558,
+          "latents": [
+            886
+          ],
+          "gain_margin": 217.78,
+          "examples": [
+            "\"too-funky-for-the-rock-and-the-roll-the-album-by-j\"",
+            "\"nothin-but-a-g-twang-new-album-from-jason-whitton\"",
+            "\"the-coal-and-the-rake-a-solo-album-by-arthur-lipat\""
+          ]
+        },
+        {
+          "group": 1898,
+          "latents": [
+            875
+          ],
+          "gain_margin": 192.8,
+          "examples": [
+            "\"mardi-gras-playing-cards\"",
+            "\"excellence-bicycle-playing-cards-deck\"",
+            "\"zombie-black-playing-cards-back-from-the-dead\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1279,
+      "n_removed": 1279,
+      "var_share_removed": 0.3838,
+      "var_share_sae_error": 0.1362,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            23,
+            38
+          ],
+          "gain_margin": 1917.96,
+          "examples": [
+            "\"The Education Enterprise (Canceled)\"",
+            "\"Pursuits Of Whimsey (Canceled)\"",
+            "\"connectME (Canceled)\""
+          ]
+        },
+        {
+          "group": 2019,
+          "latents": [
+            510
+          ],
+          "gain_margin": 808.0,
+          "examples": [
+            "\"Mazing Deck - Playing Cards with a twist... and a turn.\"",
+            "\"Density Playing Card Deck \u2014 Printed by USPCC\"",
+            "\"Canasta Cl\u00e1sico Double Deck Set of Playing Cards-Hand & Foot\""
+          ]
+        },
+        {
+          "group": 527,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 537.09,
+          "examples": [
+            "\"Food For Recovery: Eating For Recovery\"",
+            "\"Look Them App - Missing person App\"",
+            "\"Market | The Perfect Stock Market App for iPhone\""
+          ]
+        },
+        {
+          "group": 186,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 508.73,
+          "examples": [
+            "\"Paddock to plate\"",
+            "\"Fermetropy Devices - Temperature Controllers and Stir Plates\"",
+            "\"FEST Nerd Booth at the FEST 13 flea market\""
+          ]
+        },
+        {
+          "group": 352,
+          "latents": [
+            1748
+          ],
+          "gain_margin": 351.34,
+          "examples": [
+            "\"Lake Dog Games LLC\"",
+            "\"+ORMOLYCKA+ oo1 synt.tofs LP\"",
+            "\"Artist's Studio\""
+          ]
+        }
+      ]
+    }
+  }
+}

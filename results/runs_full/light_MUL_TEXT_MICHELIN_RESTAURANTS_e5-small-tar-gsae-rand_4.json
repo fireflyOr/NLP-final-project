@@ -1,0 +1,468 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7165172952321067,
+  "test_error": 0.7165172952321067,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9015181822437308,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 191.89684891700745,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2038,
+      "n_groups": 2035,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1052,
+      "n_removed": 1052,
+      "var_share_removed": 0.3655,
+      "var_share_sae_error": 0.0613,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            563,
+            1271
+          ],
+          "gain_margin": 613.84,
+          "examples": [
+            "22 Bao'an Street, Xindian District, New Taipei, Taiwan",
+            "26 Yuandong Street, Guangling, Yangzhou, China Mainland",
+            "88, Section 1, Huilai Road, Xitun District, Taichung, Taiwan"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            950,
+            1502
+          ],
+          "gain_margin": 580.68,
+          "examples": [
+            "Hendrik Baelskaai 21, Oostende, 8400, Belgium",
+            "Marktplein 19, Nieuwpoort, 8620, Belgium",
+            "Marianne Thomsens Gade 2F, Aarhus, 8000, Denmark"
+          ]
+        },
+        {
+          "group": 187,
+          "latents": [
+            1861
+          ],
+          "gain_margin": 299.81,
+          "examples": [
+            "66 Qingzhou Road, Mawei District, Fuzhou, China Mainland",
+            "819 Renmin Road, Xiaoshan, Hangzhou, China Mainland",
+            "91 Chongfu Road, Licheng, Quanzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 108,
+          "latents": [
+            1754
+          ],
+          "gain_margin": 252.89,
+          "examples": [
+            "8F, 18 On Lan Street, Central, Hong Kong, Hong Kong SAR China",
+            "5F, The Henderson, 2 Murray Road, Central, Hong Kong, Hong Kong SAR China",
+            "3-4F, Building Raidy Boer, 222 Shanbanqiao Road, Chenghua, Chengdu, China Mainland"
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            750
+          ],
+          "gain_margin": 238.9,
+          "examples": [
+            "63/1-2 Phichit Rangsan Road, Nai Mueang, Mueang Ubon Ratchathani, Ubon Ratchathani, 34000, Thailand",
+            "5/2 Tonpo Road, Talat, Mueang Surat Thani, Surat Thani, 84000, Thailand",
+            "122I Jalan Hutton, George Town, 10050, Malaysia"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1153,
+      "n_groups": 1149,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1000,
+      "n_removed": 1003,
+      "var_share_removed": 0.8039,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 194,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 3394.31,
+          "examples": [
+            "Hunanese",
+            "Hunanese",
+            "Hunanese"
+          ]
+        },
+        {
+          "group": 572,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1941.26,
+          "examples": [
+            "Creative, Japanese Contemporary",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1120,
+          "latents": [
+            107
+          ],
+          "gain_margin": 1514.12,
+          "examples": [
+            "Small eats, Rice Dishes",
+            "Noodles, Rice Dishes",
+            "Noodles, Small eats"
+          ]
+        },
+        {
+          "group": 368,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 679.47,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 401,
+          "latents": [
+            1444
+          ],
+          "gain_margin": 539.89,
+          "examples": [
+            "Creative, Japanese",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2028,
+      "n_groups": 2022,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 952,
+      "n_removed": 953,
+      "var_share_removed": 0.2618,
+      "var_share_sae_error": 0.0814,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            249,
+            950,
+            1502
+          ],
+          "gain_margin": 14505.27,
+          "examples": [
+            "This restaurant, known simply as \"Crissier\" by its regulars, boasts a star-studded history. The success of the restaurant, which was first awarded three stars i",
+            "A meal by Gert De Mangeleer and sommelier Joachim Bouden is in a class of its own, starting with the swish Botanic Sanctuary Hotel, which immerses you in a worl",
+            "2027 will mark forty years of business: a story made up of aromas, flavours and traditions, the story of the Portinari family, who have carved their name among "
+          ]
+        },
+        {
+          "group": 698,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 7399.35,
+          "examples": [
+            "Oreno Ramen blends its broth just before serving, creating a frothy soup that pleasantly coats the palate. The paitan, made by boiling a whole chicken, is a mil",
+            "For over 50 years, this family-run eatery has been serving bowls of noodles to those seeking comforting nourishment. The fresh buckwheat noodles, one of its bes",
+            "This simple shop has been selling authentic Hakkanese food in an unremarkable neighbourhood for over 20 years. The must-try Hor Poh lui cha is a sheeny green so"
+          ]
+        },
+        {
+          "group": 1008,
+          "latents": [
+            632
+          ],
+          "gain_margin": 2917.91,
+          "examples": [
+            "Karl-Louis K\u00f6mmler, an ambitious chef who also happens to be self-taught, is at work in this small restaurant in Kreuzberg. He has the support of a motivated yo",
+            "Here at 1789, chef Florian Stolte has carved out a niche for himself that perfectly complements the culinary portfolio of Hotel Traube Tonbach. He showcases his",
+            "It\u2019s impossible to describe this restaurant without mentioned the delightful welcome offered by the Izzo family, all of whom work hard to ensure that your dinin"
+          ]
+        },
+        {
+          "group": 171,
+          "latents": [
+            1900
+          ],
+          "gain_margin": 2559.02,
+          "examples": [
+            "As the Florentine lily on the glass at the entrance implies, the specialities of this place are Tuscan in origin as well as seafood. Friendly atmosphere, ample ",
+            "This centrally located gastro-bar boasts an attractive dining room plus a glass-fronted wine cellar in the basement. Contemporary tapas and \u201craciones\u201d, plus a t",
+            "Despite its location in the town centre, the attractive outdoor terrace of this restaurant offers a peaceful atmosphere with its decor of light drapes. The red "
+          ]
+        },
+        {
+          "group": 1952,
+          "latents": [
+            622
+          ],
+          "gain_margin": 1247.85,
+          "examples": [
+            "Located on a street corner, the signage is inconspicuous, but its popularity with locals mean that it can\u2019t be missed. This simple eatery has been open for some",
+            "Since moving here in 2024, the queues in front of this eatery have far from dwindled. In a cheerful, cosy interior, the regulars, who used to enjoy watching the",
+            "The rice cake with a sauce of preserved vegetables, sesame, dried shrimp and chilli is spicy and delicious."
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 676,
+      "n_groups": 666,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 579,
+      "n_removed": 589,
+      "var_share_removed": 0.8025,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 433,
+          "latents": [
+            166
+          ],
+          "gain_margin": 1355.61,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 386,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1124.03,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Notable sake list,Valet parking",
+            "Air conditioning,Car park,Great view,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking"
+          ]
+        },
+        {
+          "group": 122,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 891.13,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 256,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 576.49,
+          "examples": [
+            "Cash only,Terrace",
+            "Cash only,Terrace",
+            "Cash only,Terrace"
+          ]
+        },
+        {
+          "group": 172,
+          "latents": [
+            1626
+          ],
+          "gain_margin": 520.18,
+          "examples": [
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Valet parking",
+            "Air conditioning,Car park,Garden or park,Interesting wine list,Valet parking",
+            "Air conditioning,Car park,Garden or park,Interesting wine list,Valet parking"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1876,
+      "n_groups": 1876,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1448,
+      "n_removed": 1448,
+      "var_share_removed": 0.7019,
+      "var_share_sae_error": 0.0091,
+      "top": [
+        {
+          "group": 387,
+          "latents": [
+            1774
+          ],
+          "gain_margin": 236.2,
+          "examples": [
+            "Ningde, China Mainland",
+            "Ningde, China Mainland",
+            "Quanzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 779,
+          "latents": [
+            572
+          ],
+          "gain_margin": 130.99,
+          "examples": [
+            "Embourg, Belgium",
+            "Embourg, Belgium",
+            "Ostuni, Italy"
+          ]
+        },
+        {
+          "group": 374,
+          "latents": [
+            1800
+          ],
+          "gain_margin": 124.45,
+          "examples": [
+            "Osaka, Japan",
+            "Osaka, Japan",
+            "Osaka, Japan"
+          ]
+        },
+        {
+          "group": 1434,
+          "latents": [
+            1011
+          ],
+          "gain_margin": 104.73,
+          "examples": [
+            "Naxxar, Malta",
+            "Hoeven, Netherlands",
+            "Anacapri, Italy"
+          ]
+        },
+        {
+          "group": 1228,
+          "latents": [
+            185
+          ],
+          "gain_margin": 97.11,
+          "examples": [
+            "Anderlecht, Belgium",
+            "Anderlecht, Belgium",
+            "Anderlecht, Belgium"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2043,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1062,
+      "n_removed": 1062,
+      "var_share_removed": 0.3963,
+      "var_share_sae_error": 0.0887,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            750,
+            1271
+          ],
+          "gain_margin": 1372.72,
+          "examples": [
+            "Lao Shan Dong Homemade Noodles",
+            "Baan Chik Pork Noodles",
+            "Ah Hock Fried Hokkien Noodles"
+          ]
+        },
+        {
+          "group": 295,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 336.02,
+          "examples": [
+            "Eyckerhof by Nicolas Mylle",
+            "FZN by Bj\u00f6rn Frantz\u00e9n",
+            "Above & Beyond"
+          ]
+        },
+        {
+          "group": 125,
+          "latents": [
+            1814
+          ],
+          "gain_margin": 238.53,
+          "examples": [
+            "Paolo Teverini",
+            "Jiki Miyazawa",
+            "Ichigo Ichie"
+          ]
+        },
+        {
+          "group": 1012,
+          "latents": [
+            747
+          ],
+          "gain_margin": 196.82,
+          "examples": [
+            "Le Louis XV - Alain Ducasse \u00e0 l'H\u00f4tel de Paris",
+            "Alain Ducasse at Morpheus",
+            "Transparence - La Table de Patrick Fr\u00e9chin"
+          ]
+        },
+        {
+          "group": 185,
+          "latents": [
+            1861
+          ],
+          "gain_margin": 195.08,
+          "examples": [
+            "Beiyuan Cuisine",
+            "Hong Fan Qie (Yuyuantan South Road)",
+            "Zhu Ji Zhi Mian Pu (Jinjiang)"
+          ]
+        }
+      ]
+    }
+  }
+}

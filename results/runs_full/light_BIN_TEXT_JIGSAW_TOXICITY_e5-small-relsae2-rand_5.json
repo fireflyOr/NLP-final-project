@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7642599781786811,
+  "test_error": 0.23574002182131892,
+  "course_metric": "auroc",
+  "course_score": 0.7642599781786811,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 42.23941087722778,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 384,
+      "n_removed": 128,
+      "threshold": 0.0414,
+      "passed_test": 29,
+      "removed_norm_ratio": 0.3656,
+      "var_share_kept": 0.4686,
+      "var_share_sae_error": 0.3209,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 369,
+          "score": 0.1252,
+          "n_active": 824,
+          "examples": [
+            "She is gross.",
+            "This has gone from VERY bad to worse yet to come.",
+            "EUGREEN  is in Horrible trouble."
+          ]
+        },
+        {
+          "latent": 458,
+          "score": 0.081,
+          "n_active": 699,
+          "examples": [
+            "For the record, the AFC pre-De Vos invited Rose. It's credibility, through no fault of the other members, went out the window when he joined last year, I believ",
+            "Another head buried in the sand that can't handle the truth.",
+            "So unfair."
+          ]
+        },
+        {
+          "latent": 187,
+          "score": 0.0768,
+          "n_active": 785,
+          "examples": [
+            "\u201cWho alone has immortality, who dwells in unapproachable light, and whom no human being has seen or can see.  To him be honor and eternal power. Amen\u201d (1 Timoth",
+            "Attack the messenger.",
+            "'\nThis is all about Trump teasing Mitt and he will continue to draw him in until he sees the best opportunity to attempt to publicly humiliate him.\n\nMitt is on "
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.0741,
+          "n_active": 1136,
+          "examples": [
+            "The animosity between people and bears? What science are you basing that on? Animosity is \"strong hostility.\" Most wild bears have little to no feelings about h",
+            "Safeway has the best donuts and are very reasonably priced.",
+            "Speaking for women and saying you aren't sexist, two sure signs a person definitely isn't even a little sexist."
+          ]
+        },
+        {
+          "latent": 145,
+          "score": 0.0732,
+          "n_active": 1321,
+          "examples": [
+            "Trump had to close his foundation.",
+            "Trump is the product of American CONSERVATISM.",
+            "Trump's fans are mindless sheep."
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 327,
+      "n_kept": 334,
+      "n_removed": 178,
+      "threshold": 0.0439,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6471,
+      "var_share_kept": 0.4664,
+      "var_share_sae_error": 0.0308,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 498,
+          "score": 0.0241,
+          "n_active": 409,
+          "examples": [
+            "2017-01-12 15:30:40.587660",
+            "2016-12-14 08:12:16.037660",
+            "2017-02-06 14:41:11.009663"
+          ]
+        },
+        {
+          "latent": 215,
+          "score": 0.0238,
+          "n_active": 35,
+          "examples": [
+            "2017-10-03 02:00:01.657173",
+            "2017-01-05 21:04:02.655800",
+            "2017-05-05 21:09:03.658140"
+          ]
+        },
+        {
+          "latent": 6,
+          "score": 0.0229,
+          "n_active": 1259,
+          "examples": [
+            "2016-08-26 15:14:01.100159",
+            "2017-10-23 01:40:07.013079",
+            "2016-09-08 22:46:00.060879"
+          ]
+        },
+        {
+          "latent": 322,
+          "score": 0.0223,
+          "n_active": 378,
+          "examples": [
+            "2017-03-01 00:03:48.057270",
+            "2017-10-03 04:16:48.365222",
+            "2017-05-04 09:01:48.234790"
+          ]
+        },
+        {
+          "latent": 439,
+          "score": 0.0202,
+          "n_active": 2212,
+          "examples": [
+            "2016-08-28 19:01:59.406320",
+            "2016-09-30 23:15:30.590941",
+            "2017-01-30 17:18:00.475166"
+          ]
+        }
+      ]
+    }
+  }
+}

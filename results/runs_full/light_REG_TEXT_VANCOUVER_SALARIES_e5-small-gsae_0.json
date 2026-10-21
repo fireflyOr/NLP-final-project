@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13744.199785025112,
+  "test_error": 13744.199785025112,
+  "course_metric": "r2",
+  "course_score": 0.7266670815122764,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.2695198059082,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2040,
+      "n_groups": 2022,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 1225,
+      "n_removed": 1226,
+      "var_share_removed": 0.5372,
+      "var_share_sae_error": 0.0288,
+      "top": [
+        {
+          "group": 1435,
+          "latents": [
+            1060
+          ],
+          "gain_margin": 499.99,
+          "examples": [
+            "Novak, R*",
+            "Harvey, I*",
+            "Williams, R*"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            13,
+            694,
+            746,
+            1090,
+            1645,
+            1968
+          ],
+          "gain_margin": 399.13,
+          "examples": [
+            "Black, J",
+            "Black, J",
+            "Fan, J"
+          ]
+        },
+        {
+          "group": 344,
+          "latents": [
+            1486
+          ],
+          "gain_margin": 286.44,
+          "examples": [
+            "MacLean, L",
+            "McMillan, S",
+            "McMillan, S"
+          ]
+        },
+        {
+          "group": 520,
+          "latents": [
+            1511
+          ],
+          "gain_margin": 282.52,
+          "examples": [
+            "Letourneux, F*",
+            "Duggan, A P*",
+            "Wong, B*"
+          ]
+        },
+        {
+          "group": 762,
+          "latents": [
+            1482
+          ],
+          "gain_margin": 272.28,
+          "examples": [
+            "Ryan, P",
+            "Ryan, C",
+            "Ryan, C"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1433,
+      "n_groups": 1429,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 796,
+      "n_removed": 797,
+      "var_share_removed": 0.1686,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 1418,
+          "latents": [
+            119
+          ],
+          "gain_margin": 2912.65,
+          "examples": [
+            "Director Branches East",
+            "Director Branches East",
+            "Director Financial Services"
+          ]
+        },
+        {
+          "group": 253,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 2243.74,
+          "examples": [
+            "General Manager - Engineering Services",
+            "General Manager - Engineering Services",
+            "General Manager Financial Services"
+          ]
+        },
+        {
+          "group": 956,
+          "latents": [
+            796
+          ],
+          "gain_margin": 2040.14,
+          "examples": [
+            "Director Social Policy",
+            "Director Social Policy",
+            "Director Social Policy"
+          ]
+        },
+        {
+          "group": 99,
+          "latents": [
+            1863
+          ],
+          "gain_margin": 1585.28,
+          "examples": [
+            "Manager Non-Market Housing",
+            "Manager SE False Creek Development",
+            "Manager Urban Forestry/Standards"
+          ]
+        },
+        {
+          "group": 1405,
+          "latents": [
+            228
+          ],
+          "gain_margin": 1557.67,
+          "examples": [
+            "Director Communications",
+            "Director - Access To Information",
+            "A/Director Communications (T)"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6290371070542992,
+  "test_error": 0.6290371070542992,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8831922061272168,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 25.241378784179688,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1832,
+      "n_groups": 1827,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 863,
+      "n_removed": 868,
+      "var_share_removed": 0.454,
+      "var_share_sae_error": 0.0202,
+      "top": [
+        {
+          "group": 822,
+          "latents": [
+            873
+          ],
+          "gain_margin": 329.84,
+          "examples": [
+            "Part of Journalsim is the support of democracy, yes? Informed populous, yes? iPad, as a focus, does not support that #newsapps #sxsw",
+            "It's not all Apple love here at #sxsw. Heard quite a bit of grumbling about holding back features on iPad 1 so people would have to buy v2.",
+            ".@mention &quot;Google launched checkins a month ago.&quot; Check ins are ok, but CHECK OUTS are the future. #sxsw #Bizzy"
+          ]
+        },
+        {
+          "group": 1184,
+          "latents": [
+            356
+          ],
+          "gain_margin": 223.8,
+          "examples": [
+            "just walked by the line for the iPad 2. Bahahahaha! at least 5 blocks long. #fail #SXSW",
+            "I love my @mention iPhone case from #Sxsw but I can't get my phone out of it #fail",
+            "Wow. Shakespeare's Pub on 6th St. Here's to the delete button on the iPhone video camera. #SXSW"
+          ]
+        },
+        {
+          "group": 645,
+          "latents": [
+            1136
+          ],
+          "gain_margin": 179.96,
+          "examples": [
+            "IPad design talk was great, but ran late, had to haul ass to get to Ballroom A Innovative Design through Biomimicry #sxsw",
+            "Best iPad design: Big chunky elements. Generous space. Clarity trumps density. Tap quality trumps tap quantity. #tapworthy #sxsw",
+            "RT @mention Apple Store has had a line down the block all week long at #sxsw amazing"
+          ]
+        },
+        {
+          "group": 1732,
+          "latents": [
+            278
+          ],
+          "gain_margin": 176.9,
+          "examples": [
+            "Shoe on other foot. Newspapers always chasing young readers. At #SXSW, young developers pack panel on iPad design for boomers. #yourmom",
+            "RT @mention Shoe on other foot. Newspapers always chasing young readers. At #SXSW, young developers pack panel on iPad design for boomers. #yourmom",
+            "Epicurious, flipboard, CNN, wired, and MOMA as examples of good iPad design #SXSW  {link}"
+          ]
+        },
+        {
+          "group": 87,
+          "latents": [
+            1972
+          ],
+          "gain_margin": 165.78,
+          "examples": [
+            "Andrew K of PRX equates the homogeneity of the Apple ecosystem w predictability, vs Android's wild west. #imaconf #sxsw #drumbeat #MoJo",
+            "So Annoyed with #SXSW schedule app that has bad #ui for iPad. My fingers ain't THAT fat, y'all.",
+            "RT @mention Evidence against NFC in the iPhone 5 via @mention {link} #checkins #sxsw cc: @mention"
+          ]
+        }
+      ]
+    }
+  }
+}

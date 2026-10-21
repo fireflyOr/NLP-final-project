@@ -1,0 +1,55 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae-cv",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2614245421511645,
+  "test_error": 1.2614245421511645,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9738873684433368,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 516.5941712856293,
+  "diagnostics": {
+    "description": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 1337,
+      "n_groups": 1324,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.5,
+      "n_removed": 668,
+      "val_loss": {
+        "0.0": 1.74206,
+        "0.1": 1.74347,
+        "0.25": 1.67751,
+        "0.5": 1.61215,
+        "0.75": 1.80787
+      },
+      "frac_groups_no_signal": 0.49,
+      "var_share_removed": 0.3486
+    },
+    "province": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 693,
+      "n_groups": 693,
+      "n_val_rows": 900,
+      "chosen_fraction": 0.0,
+      "n_removed": 0,
+      "val_loss": {
+        "0.0": 2.33603,
+        "0.1": 2.35365,
+        "0.25": 2.33922,
+        "0.5": 2.34858,
+        "0.75": 2.34132
+      },
+      "frac_groups_no_signal": 0.631,
+      "var_share_removed": 0.0
+    }
+  }
+}

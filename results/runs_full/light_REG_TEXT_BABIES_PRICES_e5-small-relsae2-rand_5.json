@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -19.043640773506795,
+  "test_error": 19.043640773506795,
+  "course_metric": "r2",
+  "course_score": 0.7824728384869886,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 62.45288348197937,
+  "diagnostics": {
+    "colors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 261,
+      "n_kept": 445,
+      "n_removed": 67,
+      "threshold": 0.0591,
+      "passed_test": 3,
+      "removed_norm_ratio": 1.0316,
+      "var_share_kept": 0.6733,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 326,
+          "score": 0.0928,
+          "n_active": 66,
+          "examples": [
+            "cream / black",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 271,
+          "score": 0.0582,
+          "n_active": 23,
+          "examples": [
+            "beige",
+            "beige",
+            "beige"
+          ]
+        },
+        {
+          "latent": 14,
+          "score": 0.0581,
+          "n_active": 113,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        },
+        {
+          "latent": 459,
+          "score": 0.0571,
+          "n_active": 111,
+          "examples": [
+            "black",
+            "black",
+            "black"
+          ]
+        },
+        {
+          "latent": 335,
+          "score": 0.0548,
+          "n_active": 53,
+          "examples": [
+            "blue / cream",
+            "red / cream",
+            "cream"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 299,
+      "n_kept": 452,
+      "n_removed": 60,
+      "threshold": 0.079,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.4209,
+      "var_share_kept": 0.7405,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 263,
+          "score": 0.0977,
+          "n_active": 44,
+          "examples": [
+            "Glenna Jean Heaven",
+            "Glenna Jean, Diaper",
+            "Glenna Jean, Pillow"
+          ]
+        },
+        {
+          "latent": 226,
+          "score": 0.0906,
+          "n_active": 30,
+          "examples": [
+            "Kate Mawdsley",
+            "Kate Mawdsley",
+            "Glenna Jean, Diaper"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0896,
+          "n_active": 56,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Swizzle",
+            "Johannes Brahms."
+          ]
+        },
+        {
+          "latent": 92,
+          "score": 0.082,
+          "n_active": 46,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Swizzle",
+            "Glenna Jean Lil'"
+          ]
+        },
+        {
+          "latent": 252,
+          "score": 0.0807,
+          "n_active": 42,
+          "examples": [
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Pillow"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 485,
+      "n_kept": 426,
+      "n_removed": 86,
+      "threshold": 0.0758,
+      "passed_test": 99,
+      "removed_norm_ratio": 0.3771,
+      "var_share_kept": 0.7639,
+      "var_share_sae_error": 0.0,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 366,
+          "score": 0.2765,
+          "n_active": 219,
+          "examples": [
+            "Uncle Milton",
+            "Uncle Milton",
+            "RiverRidge Kids"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.2428,
+          "n_active": 161,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.2376,
+          "n_active": 58,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.2309,
+          "n_active": 32,
+          "examples": [
+            "Learning Carpets",
+            "Learning Carpets",
+            "Learning Carpets"
+          ]
+        },
+        {
+          "latent": 509,
+          "score": 0.2231,
+          "n_active": 58,
+          "examples": [
+            "Nautica Kids",
+            "Nautica Kids",
+            "Nautica Kids"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 398,
+      "n_removed": 114,
+      "threshold": 0.0724,
+      "passed_test": 63,
+      "removed_norm_ratio": 0.4546,
+      "var_share_kept": 0.7233,
+      "var_share_sae_error": 0.0773,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 414,
+          "score": 0.222,
+          "n_active": 378,
+          "examples": [
+            "Lambs & Ivy Safari Express 9 Piece Bedding Set",
+            "Pam Grace Creations 10 Piece Crib Bedding Set - Mr. & Mrs. Pond",
+            "Just Born Antique Chic 7-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "latent": 278,
+          "score": 0.173,
+          "n_active": 83,
+          "examples": [
+            "Manam Kids Retro Ball Rug - Size 2.8 x 4.8",
+            "Manam Kids Labyrinth Rug - Size 2.8 x 4.8",
+            "Manam Kids Lion Rug - Size 2.8 x 4.8"
+          ]
+        },
+        {
+          "latent": 240,
+          "score": 0.1388,
+          "n_active": 248,
+          "examples": [
+            "Trend Lab Maya Tab Top Window Valance - 53\" L x 15\" W",
+            "Monsters Inc. Window Valance - 60\" L x 14\" W",
+            "Trend Lab Monaco Window Valance - 60\" L x 15\" W"
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.1362,
+          "n_active": 332,
+          "examples": [
+            "NoJo Zoobilee 4 Piece Crib Set",
+            "Sassy Shaylee Toddler 4 Piece Set",
+            "babyletto In Bloom 4-Piece Set"
+          ]
+        },
+        {
+          "latent": 74,
+          "score": 0.1341,
+          "n_active": 186,
+          "examples": [
+            "Out of the Blue Changing Pad Cover",
+            "NoJo Kulala Changing Pad Cover",
+            "Fleeting Flora Changing Pad Cover"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.6019344258963029,
+  "test_error": 0.6019344258963029,
+  "course_metric": "r2",
+  "course_score": 0.37489769396655914,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 100.99970936775208,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 441,
+      "n_removed": 71,
+      "threshold": 0.0394,
+      "passed_test": 184,
+      "removed_norm_ratio": 0.3968,
+      "var_share_kept": 0.8315,
+      "var_share_sae_error": 0.0062,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 354,
+          "score": 0.1367,
+          "n_active": 3946,
+          "examples": [
+            "Daytrip",
+            "Daytrip",
+            "Daytrip"
+          ]
+        },
+        {
+          "latent": 495,
+          "score": 0.1345,
+          "n_active": 3941,
+          "examples": [
+            "Freshman",
+            "Frontline",
+            "Twenty One"
+          ]
+        },
+        {
+          "latent": 3,
+          "score": 0.134,
+          "n_active": 3931,
+          "examples": [
+            "Maybelline",
+            "Maybelline",
+            "Maybelline"
+          ]
+        },
+        {
+          "latent": 236,
+          "score": 0.1338,
+          "n_active": 3956,
+          "examples": [
+            "Steve Madden",
+            "Steve Madden",
+            "Steve Madden"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.1311,
+          "n_active": 3862,
+          "examples": [
+            "GUESS",
+            "GUESS",
+            "GUESS"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 491,
+      "n_kept": 406,
+      "n_removed": 106,
+      "threshold": 0.0399,
+      "passed_test": 134,
+      "removed_norm_ratio": 0.3552,
+      "var_share_kept": 0.7054,
+      "var_share_sae_error": 0.0,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.1371,
+          "n_active": 2670,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 456,
+          "score": 0.1352,
+          "n_active": 904,
+          "examples": [
+            "Tops",
+            "Tops",
+            "Tops"
+          ]
+        },
+        {
+          "latent": 447,
+          "score": 0.1348,
+          "n_active": 815,
+          "examples": [
+            "Tops & Blouses",
+            "Tops & Blouses",
+            "Tops & Blouses"
+          ]
+        },
+        {
+          "latent": 198,
+          "score": 0.1323,
+          "n_active": 790,
+          "examples": [
+            "Tops & Blouses",
+            "Tops & Blouses",
+            "Tops & Blouses"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.1315,
+          "n_active": 1573,
+          "examples": [
+            "Tops & Blouses",
+            "Tops & Blouses",
+            "Tops & Blouses"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 433,
+      "n_removed": 79,
+      "threshold": 0.0403,
+      "passed_test": 177,
+      "removed_norm_ratio": 0.3973,
+      "var_share_kept": 0.8447,
+      "var_share_sae_error": 0.0008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.152,
+          "n_active": 1873,
+          "examples": [
+            "Pumps",
+            "Pumps",
+            "Pumps"
+          ]
+        },
+        {
+          "latent": 132,
+          "score": 0.1511,
+          "n_active": 376,
+          "examples": [
+            "Souvenir",
+            "Souvenir",
+            "Souvenir"
+          ]
+        },
+        {
+          "latent": 462,
+          "score": 0.1318,
+          "n_active": 379,
+          "examples": [
+            "Tank",
+            "Tank",
+            "Tank"
+          ]
+        },
+        {
+          "latent": 409,
+          "score": 0.1291,
+          "n_active": 667,
+          "examples": [
+            "Fans",
+            "Baby Seats",
+            "Baby Seats"
+          ]
+        },
+        {
+          "latent": 129,
+          "score": 0.1169,
+          "n_active": 502,
+          "examples": [
+            "Dance/Ballet",
+            "Dance/Ballet",
+            "Dance/Ballet"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 424,
+      "n_removed": 88,
+      "threshold": 0.0389,
+      "passed_test": 178,
+      "removed_norm_ratio": 0.3869,
+      "var_share_kept": 0.784,
+      "var_share_sae_error": 0.0014,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 79,
+          "score": 0.1458,
+          "n_active": 1337,
+          "examples": [
+            "Women/Shoes/Slippers",
+            "Women/Shoes/Slippers",
+            "Women/Shoes/Slippers"
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.1354,
+          "n_active": 928,
+          "examples": [
+            "Women/Shoes/Work & Safety",
+            "Women/Shoes/Mules & Clogs",
+            "Men/Shoes/Boots"
+          ]
+        },
+        {
+          "latent": 133,
+          "score": 0.1347,
+          "n_active": 1697,
+          "examples": [
+            "Kids/Boys 2T-5T/Bottoms",
+            "Kids/Boys 2T-5T/Bottoms",
+            "Kids/Boys 2T-5T/Bottoms"
+          ]
+        },
+        {
+          "latent": 42,
+          "score": 0.123,
+          "n_active": 669,
+          "examples": [
+            "Women/Underwear/Thermal Underwear",
+            "Women/Underwear/Thermal Underwear",
+            "Women/Underwear/Thermal Underwear"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.1229,
+          "n_active": 1004,
+          "examples": [
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 377,
+      "n_removed": 135,
+      "threshold": 0.0407,
+      "passed_test": 64,
+      "removed_norm_ratio": 0.3818,
+      "var_share_kept": 0.5478,
+      "var_share_sae_error": 0.231,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 503,
+          "score": 0.1162,
+          "n_active": 778,
+          "examples": [
+            "New in box.",
+            "Brand new in box.",
+            "Comes with box , great condition"
+          ]
+        },
+        {
+          "latent": 112,
+          "score": 0.0976,
+          "n_active": 2236,
+          "examples": [
+            "Like new",
+            "Like new",
+            "Like new"
+          ]
+        },
+        {
+          "latent": 351,
+          "score": 0.0942,
+          "n_active": 3755,
+          "examples": [
+            "Women's XL",
+            "Victoria secret",
+            "Victoria Secret"
+          ]
+        },
+        {
+          "latent": 397,
+          "score": 0.0889,
+          "n_active": 709,
+          "examples": [
+            "Tote bag for holding craft supplies. Lots of packets and space. Pink and black",
+            "Neiman Marcus tote bag in leopard print with outside side pockets on both sides and black handles. 11\" H x 15\" W",
+            "Great Camera bag for delight daily carry. Holds a body with an attached lens, has space for spare batteries and some SD cards. Willing to negotiate."
+          ]
+        },
+        {
+          "latent": 25,
+          "score": 0.0827,
+          "n_active": 1152,
+          "examples": [
+            "Not too sure about the info on it.",
+            "I am unsure if it works...",
+            "This is a pink dressmaker brand sewing machine. It is bubble gum pink with a working light and has white thread that comes with it I can thread it if you'd like"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 401,
+      "n_removed": 111,
+      "threshold": 0.0394,
+      "passed_test": 93,
+      "removed_norm_ratio": 0.3546,
+      "var_share_kept": 0.622,
+      "var_share_sae_error": 0.1933,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 251,
+          "score": 0.1179,
+          "n_active": 541,
+          "examples": [
+            "LuLaRoe",
+            "Lularoe",
+            "Lularoe"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.1144,
+          "n_active": 969,
+          "examples": [
+            "Lularoe TC",
+            "Lularoe TC",
+            "Lularoe TC"
+          ]
+        },
+        {
+          "latent": 395,
+          "score": 0.0918,
+          "n_active": 881,
+          "examples": [
+            "Yoga leggings",
+            "\"Pink\" yoga leggings",
+            "Pink Victoria's Secret Yoga Leggings!!!"
+          ]
+        },
+        {
+          "latent": 295,
+          "score": 0.0894,
+          "n_active": 513,
+          "examples": [
+            "i5-6GB-750GB SAMSUNG Win 10 Laptop",
+            "Corsair Vengeance DDR3 RAM 8GB 1600MHz",
+            "HP Laptop"
+          ]
+        },
+        {
+          "latent": 225,
+          "score": 0.0889,
+          "n_active": 897,
+          "examples": [
+            "Nike Airmax",
+            "Nike Airmax",
+            "Nike Air Max"
+          ]
+        }
+      ]
+    }
+  }
+}

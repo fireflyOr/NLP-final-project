@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5581334088466764,
+  "test_error": 0.5581334088466764,
+  "course_metric": "r2",
+  "course_score": 0.4168399534216267,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 95.71848273277283,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1238,
+      "n_groups": 1238,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 901,
+      "n_removed": 901,
+      "var_share_removed": 0.4087,
+      "var_share_sae_error": 0.0021,
+      "top": [
+        {
+          "group": 767,
+          "latents": [
+            573
+          ],
+          "gain_margin": 1036.37,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 1230,
+          "latents": [
+            8
+          ],
+          "gain_margin": 628.61,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 990,
+          "latents": [
+            826
+          ],
+          "gain_margin": 418.54,
+          "examples": [
+            "Michael Kors",
+            "Michael Kors",
+            "Michael Kors"
+          ]
+        },
+        {
+          "group": 506,
+          "latents": [
+            1397
+          ],
+          "gain_margin": 413.2,
+          "examples": [
+            "Louis Vuitton",
+            "Louis Vuitton",
+            "Louis Vuitton"
+          ]
+        },
+        {
+          "group": 1213,
+          "latents": [
+            11
+          ],
+          "gain_margin": 362.86,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 912,
+      "n_groups": 912,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 743,
+      "n_removed": 743,
+      "var_share_removed": 0.5954,
+      "var_share_sae_error": 0.0024,
+      "top": [
+        {
+          "group": 148,
+          "latents": [
+            1265
+          ],
+          "gain_margin": 662.24,
+          "examples": [
+            "Cameras & Photography",
+            "Cameras & Photography",
+            "Cameras & Photography"
+          ]
+        },
+        {
+          "group": 590,
+          "latents": [
+            1125
+          ],
+          "gain_margin": 464.16,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 806,
+          "latents": [
+            109
+          ],
+          "gain_margin": 278.31,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 842,
+          "latents": [
+            534
+          ],
+          "gain_margin": 264.95,
+          "examples": [
+            "Strollers",
+            "Strollers",
+            "Strollers"
+          ]
+        },
+        {
+          "group": 52,
+          "latents": [
+            1985
+          ],
+          "gain_margin": 208.91,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1482,
+      "n_groups": 1482,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1085,
+      "n_removed": 1085,
+      "var_share_removed": 0.4656,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 605,
+          "latents": [
+            1124
+          ],
+          "gain_margin": 774.61,
+          "examples": [
+            "Cell Phones & Smartphones",
+            "Cell Phones & Smartphones",
+            "Cell Phones & Smartphones"
+          ]
+        },
+        {
+          "group": 1397,
+          "latents": [
+            664
+          ],
+          "gain_margin": 441.24,
+          "examples": [
+            "iPad/Tablet/eBook Access",
+            "iPad/Tablet/eBook Access",
+            "iPad/Tablet/eBook Access"
+          ]
+        },
+        {
+          "group": 1396,
+          "latents": [
+            1471
+          ],
+          "gain_margin": 387.44,
+          "examples": [
+            "Khakis, Chinos",
+            "Khakis, Chinos",
+            "Khakis, Chinos"
+          ]
+        },
+        {
+          "group": 689,
+          "latents": [
+            534
+          ],
+          "gain_margin": 384.25,
+          "examples": [
+            "Car",
+            "Car",
+            "Car"
+          ]
+        },
+        {
+          "group": 1392,
+          "latents": [
+            284
+          ],
+          "gain_margin": 379.53,
+          "examples": [
+            "GPS Units & Equipment",
+            "GPS Units & Equipment",
+            "Cell Phones & Smartphones"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1452,
+      "n_groups": 1452,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1065,
+      "n_removed": 1065,
+      "var_share_removed": 0.4361,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 696,
+          "latents": [
+            1289
+          ],
+          "gain_margin": 956.95,
+          "examples": [
+            "Women/Athletic Apparel/Socks",
+            "Women/Athletic Apparel/Socks",
+            "Women/Athletic Apparel/Socks"
+          ]
+        },
+        {
+          "group": 689,
+          "latents": [
+            1648
+          ],
+          "gain_margin": 626.93,
+          "examples": [
+            "Vintage & Collectibles/Paper Ephemera/Stamps",
+            "Kids/Pregnancy & Maternity/Family Planning Tests",
+            "Kids/Pregnancy & Maternity/Family Planning Tests"
+          ]
+        },
+        {
+          "group": 550,
+          "latents": [
+            1296
+          ],
+          "gain_margin": 490.74,
+          "examples": [
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            1489
+          ],
+          "gain_margin": 430.27,
+          "examples": [
+            "Men/Sweats & Hoodies/Track & Sweat Suits",
+            "Men/Sweats & Hoodies/Track & Sweat Suits",
+            "Men/Sweats & Hoodies/Track & Sweat Pants"
+          ]
+        },
+        {
+          "group": 1365,
+          "latents": [
+            664
+          ],
+          "gain_margin": 401.47,
+          "examples": [
+            "Electronics/Cameras & Photography/Tripods & Supports",
+            "Electronics/Cell Phones & Accessories/Screen Protectors",
+            "Electronics/Cell Phones & Accessories/Screen Protectors"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2040,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1220,
+      "n_removed": 1222,
+      "var_share_removed": 0.3758,
+      "var_share_sae_error": 0.1165,
+      "top": [
+        {
+          "group": 1861,
+          "latents": [
+            593
+          ],
+          "gain_margin": 953.56,
+          "examples": [
+            "100% authentic",
+            "100% Authentic",
+            "Brand new, authentic"
+          ]
+        },
+        {
+          "group": 1732,
+          "latents": [
+            411
+          ],
+          "gain_margin": 639.07,
+          "examples": [
+            "Comes in box",
+            "Worn once. Comes with box.",
+            "New with box"
+          ]
+        },
+        {
+          "group": 734,
+          "latents": [
+            1454
+          ],
+          "gain_margin": 441.81,
+          "examples": [
+            "An old iPhone 5S that I haven't gotten around to selling until now. It works perfectly, but the only flaws are the cracked screen and scratches on the back. The",
+            "Gold iPhone 5s 16gb, great condition no scratches at all. Everything works with no problems! Comes with the original box but no charger or headphones. I just up",
+            "iPhone 5s, 16gb,space gray, Verizon unlocked,great condition"
+          ]
+        },
+        {
+          "group": 1551,
+          "latents": [
+            406
+          ],
+          "gain_margin": 404.18,
+          "examples": [
+            "16gb Unlocked",
+            "Unlocked 16 gb Two slight cracks",
+            "iPhone 5s, 16gb,space gray, Verizon unlocked,great condition"
+          ]
+        },
+        {
+          "group": 864,
+          "latents": [
+            1674
+          ],
+          "gain_margin": 353.59,
+          "examples": [
+            "Brand: Lularoe Size: OS Color: purple and Brown's Condition: like new(never worn) Free shipping!!! Buy soon these won't be here tomorrow!",
+            "Lularoe os Heathered green leggings. Made in China. Price is firm and no free shipping.",
+            "NWT LuLaRoe OS leggings. Red with cream colored diamond pattern."
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1108,
+      "n_removed": 1110,
+      "var_share_removed": 0.3366,
+      "var_share_sae_error": 0.0811,
+      "top": [
+        {
+          "group": 490,
+          "latents": [
+            1674
+          ],
+          "gain_margin": 733.7,
+          "examples": [
+            "Lularoe",
+            "Lularoe Outfit",
+            "Lularoe outfit"
+          ]
+        },
+        {
+          "group": 492,
+          "latents": [
+            1105
+          ],
+          "gain_margin": 620.8,
+          "examples": [
+            "LuMee LED Light Selfie Cases ROSE GOLD .",
+            "iPhone 6 Plus Lumee Case (Pink color)",
+            "Lularoe TC & Lootcrate Goonies shirt"
+          ]
+        },
+        {
+          "group": 1294,
+          "latents": [
+            142
+          ],
+          "gain_margin": 556.27,
+          "examples": [
+            "Lululemon",
+            "Lululemon",
+            "Lululemon"
+          ]
+        },
+        {
+          "group": 992,
+          "latents": [
+            1104
+          ],
+          "gain_margin": 541.68,
+          "examples": [
+            "New watch",
+            "Garmin watch",
+            "Men's and women's watches"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            2036
+          ],
+          "gain_margin": 535.8,
+          "examples": [
+            "iPhone 4, Sprint, Unlocked",
+            "iPhone 6, Cracked Screen Unlocked &Works",
+            "Sprint iPhone 5"
+          ]
+        }
+      ]
+    }
+  }
+}

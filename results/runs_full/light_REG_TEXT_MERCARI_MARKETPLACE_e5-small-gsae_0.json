@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5823983155603035,
+  "test_error": 0.5823983155603035,
+  "course_metric": "r2",
+  "course_score": 0.41491050798560136,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 94.9363784790039,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1156,
+      "n_groups": 1156,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 841,
+      "n_removed": 841,
+      "var_share_removed": 0.4711,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 1155,
+          "latents": [
+            8
+          ],
+          "gain_margin": 653.36,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 868,
+          "latents": [
+            826
+          ],
+          "gain_margin": 393.26,
+          "examples": [
+            "Michael Kors",
+            "Michael Kors",
+            "Michael Kors"
+          ]
+        },
+        {
+          "group": 778,
+          "latents": [
+            1156
+          ],
+          "gain_margin": 392.35,
+          "examples": [
+            "Wildfox Couture",
+            "Wildfox Couture",
+            "Wildfox Couture"
+          ]
+        },
+        {
+          "group": 1027,
+          "latents": [
+            927
+          ],
+          "gain_margin": 340.37,
+          "examples": [
+            "Lands' End",
+            "Lands' End",
+            "e.l.f."
+          ]
+        },
+        {
+          "group": 820,
+          "latents": [
+            1143
+          ],
+          "gain_margin": 335.85,
+          "examples": [
+            "Texas Instruments",
+            "Texas Instruments",
+            "Dell"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 837,
+      "n_groups": 834,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 695,
+      "n_removed": 697,
+      "var_share_removed": 0.6353,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 761,
+          "latents": [
+            634
+          ],
+          "gain_margin": 341.79,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 317.93,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "group": 794,
+          "latents": [
+            365
+          ],
+          "gain_margin": 316.99,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 778,
+          "latents": [
+            534
+          ],
+          "gain_margin": 313.28,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "group": 692,
+          "latents": [
+            316
+          ],
+          "gain_margin": 289.78,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1497,
+      "n_groups": 1497,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1095,
+      "n_removed": 1095,
+      "var_share_removed": 0.4883,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 824,
+          "latents": [
+            664
+          ],
+          "gain_margin": 626.67,
+          "examples": [
+            "Digital Cameras",
+            "Digital Cameras",
+            "Digital Cameras"
+          ]
+        },
+        {
+          "group": 1103,
+          "latents": [
+            811
+          ],
+          "gain_margin": 334.86,
+          "examples": [
+            "Baggy, Loose",
+            "Pants, Tights, Leggings",
+            "Pants, Tights, Leggings"
+          ]
+        },
+        {
+          "group": 150,
+          "latents": [
+            1823
+          ],
+          "gain_margin": 314.67,
+          "examples": [
+            "Puffer",
+            "Puffer",
+            "Puffer"
+          ]
+        },
+        {
+          "group": 691,
+          "latents": [
+            1296
+          ],
+          "gain_margin": 306.54,
+          "examples": [
+            "Shoulder Bag",
+            "Shoulder Bag",
+            "Shoulder Bag"
+          ]
+        },
+        {
+          "group": 119,
+          "latents": [
+            1729
+          ],
+          "gain_margin": 290.73,
+          "examples": [
+            "Vest, Sleeveless",
+            "Vest, Sleeveless",
+            "Vest, Sleeveless"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1456,
+      "n_groups": 1454,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1072,
+      "n_removed": 1073,
+      "var_share_removed": 0.445,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 260,
+          "latents": [
+            1346
+          ],
+          "gain_margin": 756.13,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "group": 369,
+          "latents": [
+            1648
+          ],
+          "gain_margin": 716.94,
+          "examples": [
+            "Vintage & Collectibles/Paper Ephemera/Stamps",
+            "Other/Office supplies/Ink & Toner",
+            "Other/Office supplies/Ink & Toner"
+          ]
+        },
+        {
+          "group": 304,
+          "latents": [
+            1679
+          ],
+          "gain_margin": 469.2,
+          "examples": [
+            "Women/Shoes/Athletic",
+            "Women/Shoes/Athletic",
+            "Women/Shoes/Athletic"
+          ]
+        },
+        {
+          "group": 1429,
+          "latents": [
+            467
+          ],
+          "gain_margin": 435.48,
+          "examples": [
+            "Women/Shoes/Fashion Sneakers",
+            "Women/Shoes/Fashion Sneakers",
+            "Women/Shoes/Fashion Sneakers"
+          ]
+        },
+        {
+          "group": 226,
+          "latents": [
+            1650
+          ],
+          "gain_margin": 427.65,
+          "examples": [
+            "Women/Athletic Apparel/Skirts, Skorts & Dresses",
+            "Women/Athletic Apparel/Skirts, Skorts & Dresses",
+            "Women/Athletic Apparel/Skirts, Skorts & Dresses"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1199,
+      "n_removed": 1201,
+      "var_share_removed": 0.3199,
+      "var_share_sae_error": 0.1176,
+      "top": [
+        {
+          "group": 1553,
+          "latents": [
+            1025
+          ],
+          "gain_margin": 1350.93,
+          "examples": [
+            "Authentic. Size 8-9 NO FREE SHIPPING.",
+            "New. Sealed. Authentic",
+            "Cute Authentic"
+          ]
+        },
+        {
+          "group": 1975,
+          "latents": [
+            411
+          ],
+          "gain_margin": 612.05,
+          "examples": [
+            "Worn once. Comes with box.",
+            "Brand new in box.",
+            "Brand new with box"
+          ]
+        },
+        {
+          "group": 1584,
+          "latents": [
+            391
+          ],
+          "gain_margin": 536.17,
+          "examples": [
+            "Listing is now for both note 5 and galaxy s7 edge CRACKED SCREEN absolutely NO POWER. Don't know if LCD is bad or not since no power. Back is not cracked. IMEI:",
+            "Cracked screen. Only charges in a specific position besides that works. Only phone for sell No Charger 16GB SPRINT NEED IT SOLD ASAP... Send offers",
+            "Screen needs to be replaced. Cracked, screen occasionally is unresponsive because it is cracked. Otherwise perfect condition. Easy fix of screen. AT&T is the pr"
+          ]
+        },
+        {
+          "group": 717,
+          "latents": [
+            1674
+          ],
+          "gain_margin": 389.25,
+          "examples": [
+            "Super cute new with tags LulaRoe skirt size small. Length from top of skirt to bottom hem is 23.7 inches.",
+            "Black on top white on the bottom Lularoe Amelia. NWT never worn.",
+            "This listing is for a LuLaRoe NWT Amelia M with pattern. This item has only been out for photographs and it comes from a smoke and pet free home. Any questions,"
+          ]
+        },
+        {
+          "group": 1149,
+          "latents": [
+            512
+          ],
+          "gain_margin": 366.31,
+          "examples": [
+            "Unicorn print!!!! Brand new with tags puckered material but has some stretch to it, and pockets!!!",
+            "Brand new. Unicorn. Ships fast. Tall and curvy",
+            "BNWT!! Unicorn!"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2044,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1156,
+      "n_removed": 1157,
+      "var_share_removed": 0.3489,
+      "var_share_sae_error": 0.0806,
+      "top": [
+        {
+          "group": 1897,
+          "latents": [
+            166
+          ],
+          "gain_margin": 936.02,
+          "examples": [
+            "Lularoe",
+            "LulaRoe",
+            "Lularoe os"
+          ]
+        },
+        {
+          "group": 2033,
+          "latents": [
+            664
+          ],
+          "gain_margin": 706.0,
+          "examples": [
+            "16 GB Apple Ipad 2",
+            "Apple Tv 3rd Generation",
+            "IPad"
+          ]
+        },
+        {
+          "group": 580,
+          "latents": [
+            1307
+          ],
+          "gain_margin": 531.93,
+          "examples": [
+            "LG G Flex 2, 32gb (Grey)",
+            "Newest Hidden Spy Camera With 8GB Memory",
+            "Gold iPhone 6 Verizon 16GB"
+          ]
+        },
+        {
+          "group": 88,
+          "latents": [
+            1862
+          ],
+          "gain_margin": 482.92,
+          "examples": [
+            "Louis Vuitton",
+            "Louis Vuitton",
+            "Authentic Louis Vuitton"
+          ]
+        },
+        {
+          "group": 1598,
+          "latents": [
+            149
+          ],
+          "gain_margin": 430.27,
+          "examples": [
+            "Cat sticker",
+            "TEN STONER DECAL STICKERS",
+            "Brandy stickers"
+          ]
+        }
+      ]
+    }
+  }
+}

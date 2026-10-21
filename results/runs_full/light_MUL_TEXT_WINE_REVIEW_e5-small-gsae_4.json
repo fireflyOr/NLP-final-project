@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4038414461285171,
+  "test_error": 1.4038414461285171,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9655341809842833,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 200.6573748588562,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2039,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 295,
+      "n_removed": 295,
+      "var_share_removed": 0.0587,
+      "var_share_sae_error": 0.1232,
+      "top": [
+        {
+          "group": 216,
+          "latents": [
+            1539
+          ],
+          "gain_margin": 5734.97,
+          "examples": [
+            "This unoaked Chardonnay starts with aromas of citrus and stalky greens. It's plump in the mouth, with soft acids and flavors of pineapple and other tropical fru",
+            "While stridently oak driven, this Chardonnay keenly maintains a core of fresh pear and apple flavor amidst layers of spice and caramel. It's supple and silky in",
+            "A light and crisp Chardonnay that leans more to the style of M\u00e2con than Monterey. Mild apple, peach, tropical fruit and citrus notes on the nose open to a dry, "
+          ]
+        },
+        {
+          "group": 1701,
+          "latents": [
+            74
+          ],
+          "gain_margin": 5638.27,
+          "examples": [
+            "Pinot Noir is a relative rarity in Washington, this one coming from the highlands above the town of Husum. It brings aromas of earth, game, dried mushroom and s",
+            "The personality of Pinot Noir comes through in this charming, medium-bodied, lighter-colored and aromatic offering. Nuances are reminiscent of cherry, herb and ",
+            "Pinot Noir in name only, a dry, silky wine whose berry flavors are definitely on the thin side. It's somewhat sweet."
+          ]
+        },
+        {
+          "group": 1503,
+          "latents": [
+            630
+          ],
+          "gain_margin": 5494.71,
+          "examples": [
+            "This is a tight, monstrous Syrah, with a pocket of black fruit flavor and a dollop of earthiness. It veers into raisiny territory on the finish.",
+            "This dark, ripe and modern Syrah features wild berry, leather and cheesy smelling oak on the bouquet. It's plump and grabby, with plenty of oak and raw tannin t",
+            "Here's a big, rich, densely layered Syrah, the kind of wine that Cab or Merlot lovers who are looking for alternatives should discover. It's full-bodied, dry an"
+          ]
+        },
+        {
+          "group": 892,
+          "latents": [
+            500
+          ],
+          "gain_margin": 5465.26,
+          "examples": [
+            "Composed and dry Merlot made somewhat in an Old World style. Cola, tobacco and basic berry fruit aromas come in front of a juicy, high-acid palate. Tastes spicy",
+            "Intensely ripe, almost raisinated in tone, this full-bodied Merlot offers loads of fleshy black-cherry and berry flavors. Yielding acidity accentuates its round",
+            "This is the kind of Merlot people will love. It's smooth, soft and silky, with rich, sweet flavors of raspberries and cherries. There's even a candied note of c"
+          ]
+        },
+        {
+          "group": 743,
+          "latents": [
+            1774
+          ],
+          "gain_margin": 4488.07,
+          "examples": [
+            "This is a beautiful Cabernet that's soft, subtle and delicious. It has balanced blackberry, plum and licorice flavors, touched with oak, and finishes with low-a",
+            "Here's a rustic Cabernet. With the right foods, at the right time, it's fine. By itself it's awkward, with some elements out of balance, but the cherry-berry no",
+            "A nice everyday Cabernet, with a simple structure framing blackberry, currant and chocolate flavors. From Forth."
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 852,
+      "n_groups": 849,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 710,
+      "n_removed": 713,
+      "var_share_removed": 0.6832,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 783,
+          "latents": [
+            838
+          ],
+          "gain_margin": 4752.94,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 834,
+          "latents": [
+            884
+          ],
+          "gain_margin": 3921.68,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 518,
+          "latents": [
+            1363
+          ],
+          "gain_margin": 3540.48,
+          "examples": [
+            "Santa Cruz",
+            "Aconcagua Costa",
+            "Canelones"
+          ]
+        },
+        {
+          "group": 715,
+          "latents": [
+            204
+          ],
+          "gain_margin": 2852.82,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 610,
+          "latents": [
+            360
+          ],
+          "gain_margin": 2701.76,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        }
+      ]
+    }
+  }
+}

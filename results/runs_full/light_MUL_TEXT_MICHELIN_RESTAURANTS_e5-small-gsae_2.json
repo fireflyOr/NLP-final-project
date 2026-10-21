@@ -1,0 +1,464 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7221045434972548,
+  "test_error": 0.7221045434972548,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8874054280763218,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 189.815434217453,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2039,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1048,
+      "n_removed": 1051,
+      "var_share_removed": 0.3413,
+      "var_share_sae_error": 0.1085,
+      "top": [
+        {
+          "group": 11,
+          "latents": [
+            1130,
+            1745
+          ],
+          "gain_margin": 491.25,
+          "examples": [
+            "H\u00f4tel du Palais, 1 avenue de l'Imp\u00e9ratrice, Biarritz, 64200, France",
+            "26F, The Ritz-Carlton Hotel, 269 Shuncheng Avenue, Qingyang, Chengdu, China Mainland",
+            "Hotel Californian, 36 State St., Santa Barbara, CA, 93101, USA"
+          ]
+        },
+        {
+          "group": 682,
+          "latents": [
+            1557
+          ],
+          "gain_margin": 204.06,
+          "examples": [
+            "Lobby floor, Hotel New Otani Tokyo (The Main), 4-1 Kioicho, Chiyoda-ku, Tokyo, 102-8578, Japan",
+            "5F, The Ritz-Carlton, Osaka, 2-5-25 Umeda, Kita-ku, Osaka, 530-0001, Japan",
+            "2F, Azabudai Hills Garden Plaza D, 5-10-7 Toranomon, Minato-ku, Tokyo, 105-0001, Japan"
+          ]
+        },
+        {
+          "group": 253,
+          "latents": [
+            1703
+          ],
+          "gain_margin": 185.53,
+          "examples": [
+            "Grabenstrasse 1, Sigigen, 6019, Switzerland",
+            "Seestrasse 108, Interlaken, 3800, Switzerland",
+            "Seestrasse 182, Thalwil, 8800, Switzerland"
+          ]
+        },
+        {
+          "group": 508,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 159.1,
+          "examples": [
+            "7 Buzhengya Lane, Wudianshi, Jinjiang, Quanzhou, China Mainland",
+            "49 Longzhou East Alley, Jinjiang, Chengdu, China Mainland",
+            "No. 26, 100 Qinglongzheng Street, Jinjiang, Chengdu, China Mainland"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            2041
+          ],
+          "gain_margin": 143.93,
+          "examples": [
+            "Shops 403-410, 4F, Landmark Atrium, 15 Queen's Road Central, Central, Hong Kong, Hong Kong SAR China",
+            "Shop 403, 4F, Ocean Centre, Harbour City, 3-27 Canton Road, Tsim Sha Tsui, Hong Kong, Hong Kong SAR China",
+            "Shop B, GF, 183 Ma Tau Wai Road, To Kwa Wan, Hong Kong, Hong Kong SAR China"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1222,
+      "n_groups": 1215,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1018,
+      "n_removed": 1025,
+      "var_share_removed": 0.6328,
+      "var_share_sae_error": 0.0023,
+      "top": [
+        {
+          "group": 98,
+          "latents": [
+            1697
+          ],
+          "gain_margin": 1528.58,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1154,
+          "latents": [
+            292
+          ],
+          "gain_margin": 966.47,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 548,
+          "latents": [
+            1215
+          ],
+          "gain_margin": 617.88,
+          "examples": [
+            "Ligurian, Creative",
+            "Ligurian, Creative",
+            "Sicilian, Creative"
+          ]
+        },
+        {
+          "group": 183,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 501.74,
+          "examples": [
+            "Creative, Umbrian",
+            "Creative, Calabrian",
+            "Creative, Andalusian"
+          ]
+        },
+        {
+          "group": 61,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 443.3,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 842,
+      "n_removed": 842,
+      "var_share_removed": 0.2653,
+      "var_share_sae_error": 0.195,
+      "top": [
+        {
+          "group": 1020,
+          "latents": [
+            765
+          ],
+          "gain_margin": 526.06,
+          "examples": [
+            "Alongside wanton or dumpling noodle soup, this stall serves deep-fried wanton and char siew. The springy noodles are best enjoyed with a dollop of chilli sauce,",
+            "These speciality rice noodles from H\u01b0ng Y\u00ean Province are topped with crispy deep-fried climbing perch and bouncy fish cakes for umami; mustard greens and green ",
+            "Those lucky enough to secure a spot are treated to signature noodle dishes, Shio Soba and Shoyu Tsuke Soba, each with over 30 ingredients. The seasonal noodle a"
+          ]
+        },
+        {
+          "group": 1012,
+          "latents": [
+            1281
+          ],
+          "gain_margin": 452.63,
+          "examples": [
+            "An attractive restaurant with a pleasant terrace offering delightful views of the marina. A mix of Mediterranean and international cuisine with French influence",
+            "The terrace of this restaurant boasts a superb panoramic view over the valley's 16 church towers. The new, young and energetic team swear by local and organic p",
+            "Particularly well-known and frequented by locals, this restaurant with its delightful, rustic, family atmosphere offers delicious regional cuisine that can be e"
+          ]
+        },
+        {
+          "group": 403,
+          "latents": [
+            1307
+          ],
+          "gain_margin": 417.77,
+          "examples": [
+            "A family-run restaurant that has been keeping its customers happy since 1978! Maritime-inspired cuisine that is particularly renowned for its wild-caught fish a",
+            "Imaginative cuisine in a long - established family restaurant, which is constantly updated by each generation. Situated away from the town centre, yet easily ac",
+            "This modern, minimalist - style restaurant is practically on the beach and almost within touching distance of the sea. It specialises in fish dishes with a cont"
+          ]
+        },
+        {
+          "group": 1150,
+          "latents": [
+            741
+          ],
+          "gain_margin": 313.42,
+          "examples": [
+            "Villa Morelia exudes a certain discreet charm. The setting offsets the refined, tasty and inventive market - based cuisine. You can really taste the freshness a",
+            "At first glance, this stylish izakaya and sushi bar could be another in a line of similar places that dot the San Francisco landscape were it not for a major tw",
+            "If you\u2019re unfamiliar with the concept of Japan\u2019s traditional pubs (izakayas), you\u2019ll be pleasantly surprised by Yugo, which replicates the feel of this typical "
+          ]
+        },
+        {
+          "group": 1890,
+          "latents": [
+            317
+          ],
+          "gain_margin": 269.28,
+          "examples": [
+            "After studying at Ath Catering School, then working together (and becoming brothers-in-law), for the last few years Maxence Bouralha and Charles-Maxime Legrand ",
+            "Music and nature enjoy guest-star status at Cuchara. The former adds a relaxed lounge mood, while the latter, embodied by a wood- and leather-rich interior, pai",
+            "Behind an attractive fa\u00e7ade of historic wooden frames and glass, Tanguy Laviale rolls out a laid-back, down-to-earth version of his fine dining establishment, R"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 704,
+      "n_groups": 688,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 595,
+      "n_removed": 609,
+      "var_share_removed": 0.8023,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 570,
+          "latents": [
+            1006
+          ],
+          "gain_margin": 2261.96,
+          "examples": [
+            "Car park,Counter dining,Interesting wine list",
+            "Car park,Interesting wine list,Wheelchair access",
+            "Car park,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 81,
+          "latents": [
+            1799
+          ],
+          "gain_margin": 1137.48,
+          "examples": [
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list"
+          ]
+        },
+        {
+          "group": 619,
+          "latents": [
+            239
+          ],
+          "gain_margin": 1019.86,
+          "examples": [
+            "Counter dining,Interesting wine list",
+            "Counter dining,Interesting wine list",
+            "Counter dining,Interesting wine list"
+          ]
+        },
+        {
+          "group": 630,
+          "latents": [
+            334
+          ],
+          "gain_margin": 901.32,
+          "examples": [
+            "Car park,Garden or park,Interesting wine list,Notable sake list,Valet parking,Wheelchair access",
+            "Car park,Interesting wine list,Wheelchair access",
+            "Car park,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 144,
+          "latents": [
+            1789
+          ],
+          "gain_margin": 491.52,
+          "examples": [
+            "Air conditioning,Garden or park,Interesting wine list,Terrace,Wheelchair access",
+            "Garden or park,Interesting wine list,Terrace,Wheelchair access",
+            "Car park,Garden or park,Interesting wine list,Terrace,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1995,
+      "n_groups": 1995,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1486,
+      "n_removed": 1486,
+      "var_share_removed": 0.6669,
+      "var_share_sae_error": 0.0152,
+      "top": [
+        {
+          "group": 282,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 179.9,
+          "examples": [
+            "Xiamen, China Mainland",
+            "Xiamen, China Mainland",
+            "Xiamen, China Mainland"
+          ]
+        },
+        {
+          "group": 1043,
+          "latents": [
+            550
+          ],
+          "gain_margin": 123.29,
+          "examples": [
+            "Tokyo, Japan",
+            "Tokyo, Japan",
+            "Tokyo, Japan"
+          ]
+        },
+        {
+          "group": 1129,
+          "latents": [
+            304
+          ],
+          "gain_margin": 92.68,
+          "examples": [
+            "Naples, Italy",
+            "Naples, Italy",
+            "Naples, Italy"
+          ]
+        },
+        {
+          "group": 43,
+          "latents": [
+            1990
+          ],
+          "gain_margin": 90.75,
+          "examples": [
+            "Le Croisic, France",
+            "Le Croisic, France",
+            "Le Croisic, France"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            2039
+          ],
+          "gain_margin": 84.35,
+          "examples": [
+            "Howe Street, United Kingdom",
+            "Cascais, Portugal",
+            "Cascais, Portugal"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2041,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1032,
+      "n_removed": 1037,
+      "var_share_removed": 0.364,
+      "var_share_sae_error": 0.1055,
+      "top": [
+        {
+          "group": 1223,
+          "latents": [
+            1213
+          ],
+          "gain_margin": 227.98,
+          "examples": [
+            "Restaurant H\u00f4tel de Ville",
+            "The Restaurant",
+            "Restaurant de l'H\u00f4tel DuPeyrou"
+          ]
+        },
+        {
+          "group": 1004,
+          "latents": [
+            1144
+          ],
+          "gain_margin": 187.4,
+          "examples": [
+            "Chinese Noodles ROKU",
+            "Lao Shih Kuan Noodles",
+            "Tian Tian Hainanese Chicken Rice"
+          ]
+        },
+        {
+          "group": 950,
+          "latents": [
+            1093
+          ],
+          "gain_margin": 163.87,
+          "examples": [
+            "TU.REStAURANT",
+            "The Restaurant",
+            "Gruber's Restaurant"
+          ]
+        },
+        {
+          "group": 267,
+          "latents": [
+            1466
+          ],
+          "gain_margin": 157.12,
+          "examples": [
+            "isolata",
+            "Adda",
+            "Isol\u00e9"
+          ]
+        },
+        {
+          "group": 2010,
+          "latents": [
+            622
+          ],
+          "gain_margin": 151.18,
+          "examples": [
+            "Khanom Mho Kaeng Mae Yai (Phai Ling)",
+            "Supanniga Eating Room (Phra Nakhon)",
+            "Wolfgang's Steakhouse (Gongrentiyuchang North Road)"
+          ]
+        }
+      ]
+    }
+  }
+}

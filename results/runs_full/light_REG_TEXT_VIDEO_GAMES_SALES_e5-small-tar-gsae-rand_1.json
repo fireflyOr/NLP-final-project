@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.114034941165188,
+  "test_error": 1.114034941165188,
+  "course_metric": "r2",
+  "course_score": 0.21169815997565833,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.732141733169556,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2043,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1641,
+      "n_removed": 1641,
+      "var_share_removed": 0.796,
+      "var_share_sae_error": 0.0502,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            1233,
+            1439
+          ],
+          "gain_margin": 9276.17,
+          "examples": [
+            "The Legend of Zelda",
+            "Far Cry 2",
+            "Far Cry 2"
+          ]
+        },
+        {
+          "group": 160,
+          "latents": [
+            1885
+          ],
+          "gain_margin": 4291.01,
+          "examples": [
+            "Donkey Kong Jr.",
+            "Madden NFL 12",
+            "Madden NFL 12"
+          ]
+        },
+        {
+          "group": 159,
+          "latents": [
+            1800
+          ],
+          "gain_margin": 4010.4,
+          "examples": [
+            "Yoga Wii",
+            "Wii Sports Resort",
+            "Wii Sports Club"
+          ]
+        },
+        {
+          "group": 178,
+          "latents": [
+            1751
+          ],
+          "gain_margin": 3267.76,
+          "examples": [
+            "Mr Bean's Wacky World of Wii",
+            "BioShock The Collection",
+            "BioShock The Collection"
+          ]
+        },
+        {
+          "group": 1963,
+          "latents": [
+            472
+          ],
+          "gain_margin": 2800.17,
+          "examples": [
+            "Super Smash Bros. for Wii U and 3DS",
+            "Super Mario World 2: Yoshi's Island",
+            "Super Mario RPG: Legend of the Seven Stars"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 996,
+      "n_groups": 996,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 940,
+      "n_removed": 940,
+      "var_share_removed": 0.8659,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 622,
+          "latents": [
+            998
+          ],
+          "gain_margin": 1398.69,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 986,
+          "latents": [
+            200
+          ],
+          "gain_margin": 1339.04,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 509,
+          "latents": [
+            472
+          ],
+          "gain_margin": 1109.07,
+          "examples": [
+            "Microsoft Game Studios",
+            "Microsoft Game Studios",
+            "Microsoft Game Studios"
+          ]
+        },
+        {
+          "group": 961,
+          "latents": [
+            111
+          ],
+          "gain_margin": 1040.92,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 872,
+          "latents": [
+            218
+          ],
+          "gain_margin": 1011.68,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9315250395405682,
+  "test_error": 0.0684749604594318,
+  "course_metric": "auroc",
+  "course_score": 0.9315250395405682,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 37.9427764415741,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2043,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1397,
+      "n_removed": 1399,
+      "var_share_removed": 0.3086,
+      "var_share_sae_error": 0.1092,
+      "top": [
+        {
+          "group": 2040,
+          "latents": [
+            227
+          ],
+          "gain_margin": 5510.49,
+          "examples": [
+            "What an idiot crook.\nHe'll make a fine democrat politician.",
+            "Awh gee wiz, to bad...maybe she should cowgirl up!  What a snowflake!  Go stay in your \"safe place\" sweetie.  If you can't play with the big dogs, maybe you sho",
+            "What a loser.\n\nSomeone has to start teaching these stupid kids that ascension to the lofty ranks of College Football Player does not absolve them of the respons"
+          ]
+        },
+        {
+          "group": 126,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 4784.58,
+          "examples": [
+            "He is now officially an Idiot Savant.",
+            "Awh gee wiz, to bad...maybe she should cowgirl up!  What a snowflake!  Go stay in your \"safe place\" sweetie.  If you can't play with the big dogs, maybe you sho",
+            "Trump and his regime are morons."
+          ]
+        },
+        {
+          "group": 1259,
+          "latents": [
+            315
+          ],
+          "gain_margin": 1881.44,
+          "examples": [
+            "No use debating with these Chumpsters. Like the idiot himself said he could shoot somebody in the middle of a street and get away with it. That tells you how mu",
+            "I'm beginning to think Tancredo is actually a Democrat. No one does more to elect Democrats to state office than this clown.",
+            "What a loser.\n\nSomeone has to start teaching these stupid kids that ascension to the lofty ranks of College Football Player does not absolve them of the respons"
+          ]
+        },
+        {
+          "group": 1068,
+          "latents": [
+            510
+          ],
+          "gain_margin": 1370.67,
+          "examples": [
+            "He is now officially an Idiot Savant.",
+            "Freaking moron!",
+            "There seems to be more brain dead idiots on the loose daily."
+          ]
+        },
+        {
+          "group": 412,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 736.16,
+          "examples": [
+            "Barak181, the issue is not whether Gorsuch will legislate from the bench.  To the contrary.  He is a Constitutional originalist who interprets the Constitution ",
+            "The Russians did not give Crimea to Ukraine. It was transferred in Soviet times and that was perfectly legal and a reality for decadesl. After the (happy days) ",
+            "I agree that it's incumbent on the Spanish government to discuss the relationship Catalonia has with the rest of the country. However, it's absolutely essential"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 995,
+      "n_groups": 910,
+      "n_multi_groups": 73,
+      "n_groups_dropped": 685,
+      "n_removed": 738,
+      "var_share_removed": 0.5705,
+      "var_share_sae_error": 0.0168,
+      "top": [
+        {
+          "group": 851,
+          "latents": [
+            447
+          ],
+          "gain_margin": 117.1,
+          "examples": [
+            "2017-05-04 23:32:00.725072",
+            "2017-08-16 14:12:54.343726",
+            "2017-09-16 22:15:58.351754"
+          ]
+        },
+        {
+          "group": 610,
+          "latents": [
+            316
+          ],
+          "gain_margin": 90.54,
+          "examples": [
+            "2017-01-12 16:30:16.192624",
+            "2017-07-16 16:30:00.299790",
+            "2017-04-16 16:34:50.425328"
+          ]
+        },
+        {
+          "group": 328,
+          "latents": [
+            1341
+          ],
+          "gain_margin": 87.46,
+          "examples": [
+            "2017-05-28 22:12:09.105071",
+            "2017-05-03 14:12:26.902742",
+            "2016-05-03 01:41:31.904002"
+          ]
+        },
+        {
+          "group": 495,
+          "latents": [
+            1157
+          ],
+          "gain_margin": 87.26,
+          "examples": [
+            "2017-08-17 05:06:19.817348",
+            "2017-06-19 17:55:09.713490",
+            "2016-10-07 17:18:53.350343"
+          ]
+        },
+        {
+          "group": 557,
+          "latents": [
+            41
+          ],
+          "gain_margin": 75.22,
+          "examples": [
+            "2016-12-11 09:30:00.594003",
+            "2016-09-23 20:16:59.120040",
+            "2016-12-12 23:15:12.900851"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.2274196308181766,
+  "test_error": 3.2274196308181766,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9029001619269089,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 143.86998867988586,
+  "diagnostics": {
+    "album_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 452,
+      "n_removed": 60,
+      "threshold": 0.0583,
+      "passed_test": 81,
+      "removed_norm_ratio": 0.2291,
+      "var_share_kept": 0.6841,
+      "var_share_sae_error": 0.2331,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 404,
+          "score": 0.2507,
+          "n_active": 514,
+          "examples": [
+            "\u6211\u9084\u662f\u4f60\u7684 (\u60c5\u6b4c\u738b)",
+            "\u611b\u4f60\u591a\u4e00\u4e9b\u7cbe\u9078-\u5f35\u5b78\u53cb",
+            "\u5531\u7740\u90a3\u65e0\u4eba\u95ee\u6d25\u7684\u6b4c\u8c23 / Chang Zhe Na Wu Ren Wen Jin De Ge Yao"
+          ]
+        },
+        {
+          "latent": 203,
+          "score": 0.2189,
+          "n_active": 639,
+          "examples": [
+            "\u5149\u9670\u7368\u767d (\u96fb\u8996\u5287\u300a\u4f60\u662f\u6211\u7684\u69ae\u8000\u300b\u7247\u5c3e\u66f2)",
+            "\u9752\u6625\u71b1\u8840\u7af6\u6280\u5076\u50cf\u5287\u300a\u9752\u6625\u629b\u7269\u7dda\u300b\u539f\u8072\u5e36",
+            "\u5f90\u4f73\u7469LaLa\u9996\u5f35\u5275\u4f5c\u5c08\u8f2f"
+          ]
+        },
+        {
+          "latent": 30,
+          "score": 0.2126,
+          "n_active": 298,
+          "examples": [
+            "\u0420\u0435\u043c\u0430\u0441\u0442\u0438\u0440\u043e\u0432\u0430\u043d\u043d\u044b\u0435 \u041e\u0440\u0438\u0433\u0438\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0420\u0435\u0442\u0440\u043e \u041f\u0435\u0441\u043d\u0438 \u0421\u043e\u0432\u0435\u0442\u0441\u043a\u043e\u0439 \u0420\u043e\u0441\u0441\u0438\u0438: \u0411\u0430\u043b\u043b\u0430\u0434\u0430, \u0420\u043e\u043c\u0430\u043d\u0441\u044b, \u0420\u0430\u0434\u0438\u043e\u0445\u0438\u0442\u044b Vol. 01, Ballads, Romances, Radio Hits of Soviet Russia",
+            "\u0421\u043c\u0435\u0439\u0441\u044f, \u0441\u043c\u0435\u0439\u0441\u044f \u0433\u0440\u043e\u043c\u0447\u0435 \u0432\u0441\u0435\u0445",
+            "\u0412\u0435\u043b\u0438\u043a\u0438\u0435 \u0438\u0441\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u0438 \u0440\u043e\u0441\u0441\u0438\u0438: \u043d\u0430\u0434\u0435\u0436\u0434\u0430 \u043e\u0431\u0443\u0445\u043e\u0432\u0430"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.1955,
+          "n_active": 795,
+          "examples": [
+            "\u30b3\u30f3\u30d7\u30ea\u30fc\u30c8\u30fb\u30b7\u30f3\u30b0\u30eb\u30fb\u30b3\u30ec\u30af\u30b7\u30e7\u30f3\u30ba\u301c\u30d5\u30a1\u30fc\u30b9\u30c8\u30fb\u30c6\u30f3\u30fb\u30a4\u30e4\u30fc\u30ba<\u30e9\u30a4\u30ce\u30fb\u30d7\u30ec\u30df\u30a2\u30e0\u30fb\u30a8\u30c7\u30a3\u30b7\u30e7\u30f3>",
+            "\u30d9\u30b9\u30c8\u30fb\u30b3\u30ec\u30af\u30b7\u30e7\u30f3 \u301c\u30e9\u30d6\u30fb\u30bd\u30f3\u30b0\u30b9&\u30dd\u30c3\u30d7\u30fb\u30bd\u30f3\u30b0\u30b9\u301c",
+            "TV\u30a2\u30cb\u30e1\u300e\u546a\u8853\u5efb\u6226\u300f\u30aa\u30ea\u30b8\u30ca\u30eb\u30fb\u30b5\u30a6\u30f3\u30c9\u30c8\u30e9\u30c3\u30af"
+          ]
+        },
+        {
+          "latent": 366,
+          "score": 0.1703,
+          "n_active": 363,
+          "examples": [
+            "Kid Hits",
+            "What Child Is This (Greensleeves)",
+            "Kids Poop"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 507,
+      "n_removed": 5,
+      "threshold": 0.057,
+      "passed_test": 205,
+      "removed_norm_ratio": 0.0339,
+      "var_share_kept": 0.736,
+      "var_share_sae_error": 0.248,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 70,
+          "score": 0.2008,
+          "n_active": 388,
+          "examples": [
+            "Musical Youth",
+            "Teen Idols",
+            "Teen Idols"
+          ]
+        },
+        {
+          "latent": 21,
+          "score": 0.1701,
+          "n_active": 211,
+          "examples": [
+            "\u79c0\u862d\u746a\u96c5",
+            "\u897f\u537f",
+            "\u897f\u537f"
+          ]
+        },
+        {
+          "latent": 313,
+          "score": 0.1455,
+          "n_active": 612,
+          "examples": [
+            "Wang Feng",
+            "Wang Chung",
+            "Huang Yee Ling"
+          ]
+        },
+        {
+          "latent": 75,
+          "score": 0.1428,
+          "n_active": 459,
+          "examples": [
+            "Shane & Shane",
+            "Shane & Shane",
+            "krissy & ericka"
+          ]
+        },
+        {
+          "latent": 366,
+          "score": 0.1362,
+          "n_active": 410,
+          "examples": [
+            "Toddler Tunes",
+            "Toddler Tunes",
+            "Toddler Tunes"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 424,
+      "n_removed": 88,
+      "threshold": 0.0604,
+      "passed_test": 65,
+      "removed_norm_ratio": 0.2681,
+      "var_share_kept": 0.6377,
+      "var_share_sae_error": 0.2406,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 161,
+          "score": 0.2585,
+          "n_active": 480,
+          "examples": [
+            "\u7121\u754f\u7684\u80a9\u818a - \u5287\u96c6 \"\u8df3\u8e8d\u751f\u547d\u7dda\" \u4e3b\u984c\u66f2",
+            "\u5728\u4f60\u8eab\u908a\u7684\u6211 (\u9752\u6625\u71b1\u8840\u7af6\u6280\u5076\u50cf\u5287\u300a\u9752\u6625\u62cb\u7269\u7dda\u300b\u63d2\u66f2)",
+            "\u611b\u4e0d\u7531\u6211 (\u96fb\u8996\u5287\u300a\u89aa\u611b\u7684, \u71b1\u611b\u7684\u300b\u63d2\u66f2)"
+          ]
+        },
+        {
+          "latent": 325,
+          "score": 0.2299,
+          "n_active": 642,
+          "examples": [
+            "\u5358\u7d14\u306a\u4f5c\u696d",
+            "\u82b1\u306b\u4ea1\u970a",
+            "\u4e0d\u6f6e\u4e0d\u7528\u82b1\u9322"
+          ]
+        },
+        {
+          "latent": 404,
+          "score": 0.2254,
+          "n_active": 663,
+          "examples": [
+            "\u7d05\u73ab\u7470(\u570b)",
+            "ABC's Song",
+            "ABC Song"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.2102,
+          "n_active": 770,
+          "examples": [
+            "\u96e2\u5bb6\u51fa\u8d70",
+            "\u51fa\u9022\u3044\u306e\u7d9a\u304d",
+            "\u6563\u6b65\u4e4b\u5e74"
+          ]
+        },
+        {
+          "latent": 215,
+          "score": 0.1792,
+          "n_active": 481,
+          "examples": [
+            "Superman",
+            "Superman",
+            "Superman"
+          ]
+        }
+      ]
+    }
+  }
+}

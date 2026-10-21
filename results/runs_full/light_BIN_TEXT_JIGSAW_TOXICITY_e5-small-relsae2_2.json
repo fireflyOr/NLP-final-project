@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8261596452203136,
+  "test_error": 0.1738403547796864,
+  "course_metric": "auroc",
+  "course_score": 0.8261596452203135,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 40.53828191757202,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 373,
+      "n_removed": 139,
+      "threshold": 0.0411,
+      "passed_test": 31,
+      "removed_norm_ratio": 0.3618,
+      "var_share_kept": 0.4748,
+      "var_share_sae_error": 0.3191,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 329,
+          "score": 0.1504,
+          "n_active": 844,
+          "examples": [
+            "She is such an IDIOT",
+            "Nonsense.",
+            "These two ladies are either ignorant or hopelessly stupid."
+          ]
+        },
+        {
+          "latent": 475,
+          "score": 0.109,
+          "n_active": 3408,
+          "examples": [
+            "DONT BE SHOCKED!! THIS HAPPENS ALL THE TIME AT ALL THE JAILS EVERYWHERE, ITS EASY TO GET DRUGS IN JAIL YOU JUST NEED MONEY..",
+            "You are dead wrong about the Chinese. You are thinking in military terms. Economically the Chinese are a world power and they are starting to flex their muscles",
+            "Do you know why glaciers advance?  I do, and it can actually be attributed to a warming climate.  Look it up."
+          ]
+        },
+        {
+          "latent": 371,
+          "score": 0.1023,
+          "n_active": 466,
+          "examples": [
+            "Let me tell you what's on Trudeau and Sofie's agenda while in Mexico. Visit Plaza de la Constituci\u00f3n, Catedral Metropolitana and Templo Mayor. Ride a coloured b",
+            "It was more likely that it was the Russian embassy's communications were being monitored and Flynn was scooped up in the net.",
+            "It's an isolated island owned by a friend, so he should have canoed there for opposition MP's approval; topless for the ladies'."
+          ]
+        },
+        {
+          "latent": 496,
+          "score": 0.0959,
+          "n_active": 880,
+          "examples": [
+            "Huh. They're \"history\", hm? When were they erected? Why were statues of the losers erected in the first place, do you think? Could these beautiful works of trai",
+            "Why should an American exercising his first amendment right leave? Did you leave during the Obama presidency? The Right-Wing movement marching with the Confeder",
+            "Do you support the War of Southern Treason?"
+          ]
+        },
+        {
+          "latent": 39,
+          "score": 0.0941,
+          "n_active": 1353,
+          "examples": [
+            "Nah, just a grumpy old fart.",
+            "Uh, nope, still not there.",
+            "well now isn't that nice. freddy the stalker"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 334,
+      "n_kept": 342,
+      "n_removed": 170,
+      "threshold": 0.0436,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7052,
+      "var_share_kept": 0.3941,
+      "var_share_sae_error": 0.0309,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 492,
+          "score": 0.0364,
+          "n_active": 37,
+          "examples": [
+            "2017-10-30 02:34:30.380555",
+            "2017-10-30 02:28:01.724049",
+            "2017-07-26 14:52:30.920080"
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.0355,
+          "n_active": 70,
+          "examples": [
+            "2016-11-10 23:23:30.770026",
+            "2017-11-04 03:45:00.022426",
+            "2017-09-14 13:34:30.807926"
+          ]
+        },
+        {
+          "latent": 89,
+          "score": 0.0323,
+          "n_active": 49,
+          "examples": [
+            "2017-05-19 04:00:35.525139",
+            "2016-12-14 19:29:35.525805",
+            "2016-12-06 14:24:08.525797"
+          ]
+        },
+        {
+          "latent": 0,
+          "score": 0.0257,
+          "n_active": 437,
+          "examples": [
+            "2017-01-03 21:13:00.706063",
+            "2016-10-24 22:39:35.702072",
+            "2017-01-31 20:26:17.708047"
+          ]
+        },
+        {
+          "latent": 131,
+          "score": 0.0251,
+          "n_active": 156,
+          "examples": [
+            "2016-10-31 20:06:58.187606",
+            "2017-08-15 21:42:31.187623",
+            "2017-10-20 12:59:48.187827"
+          ]
+        }
+      ]
+    }
+  }
+}

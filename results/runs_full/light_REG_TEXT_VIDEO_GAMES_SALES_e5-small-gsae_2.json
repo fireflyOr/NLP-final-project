@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.3901979083182068,
+  "test_error": 1.3901979083182068,
+  "course_metric": "r2",
+  "course_score": 0.3293675022996875,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.800671339035034,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1585,
+      "n_removed": 1585,
+      "var_share_removed": 0.5872,
+      "var_share_sae_error": 0.0743,
+      "top": [
+        {
+          "group": 1901,
+          "latents": [
+            256
+          ],
+          "gain_margin": 4515.79,
+          "examples": [
+            "Super Mario Maker",
+            "Super Mario Bros.",
+            "Mario Bros."
+          ]
+        },
+        {
+          "group": 261,
+          "latents": [
+            1251
+          ],
+          "gain_margin": 4419.32,
+          "examples": [
+            "Wii Sports",
+            "Wii Sports Resort",
+            "Jinsei Game Wii"
+          ]
+        },
+        {
+          "group": 585,
+          "latents": [
+            1467
+          ],
+          "gain_margin": 2448.92,
+          "examples": [
+            "Sports Champions",
+            "Racquet Sports",
+            "Deca Sports"
+          ]
+        },
+        {
+          "group": 90,
+          "latents": [
+            2008
+          ],
+          "gain_margin": 1703.31,
+          "examples": [
+            "Call of Duty: Modern Warfare 3: Defiance",
+            "Legacy of Kain: Defiance",
+            "Legacy of Kain: Defiance"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            2017
+          ],
+          "gain_margin": 1672.1,
+          "examples": [
+            "Dr. Mario",
+            "Mario Bros.",
+            "Mario Bros."
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1188,
+      "n_groups": 1188,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1075,
+      "n_removed": 1075,
+      "var_share_removed": 0.7081,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 909,
+          "latents": [
+            205
+          ],
+          "gain_margin": 1832.98,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1183,
+          "latents": [
+            95
+          ],
+          "gain_margin": 933.65,
+          "examples": [
+            "Sweets",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1179,
+          "latents": [
+            347
+          ],
+          "gain_margin": 759.61,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 568,
+          "latents": [
+            620
+          ],
+          "gain_margin": 675.62,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 425,
+          "latents": [
+            1205
+          ],
+          "gain_margin": 477.74,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

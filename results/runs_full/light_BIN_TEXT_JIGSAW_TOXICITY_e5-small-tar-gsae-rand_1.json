@@ -1,0 +1,169 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.909297037770053,
+  "test_error": 0.090702962229947,
+  "course_metric": "auroc",
+  "course_score": 0.9092970377700528,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 36.7581627368927,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2045,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1441,
+      "n_removed": 1441,
+      "var_share_removed": 0.442,
+      "var_share_sae_error": 0.1027,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            227,
+            315
+          ],
+          "gain_margin": 10506.54,
+          "examples": [
+            "His dumb ads to stupid to realize that colorado was part of Mexico for a long time so some  Hispanic can trace their roots to back then.i doubt your redkneck tr",
+            "you are the stupid one loser, they are not trying to bring peace to the terrorist in Afghanistan, they are trying to eliminate them for the sake of the world!",
+            "LOL at all the low-info that voted for this stupid game show host.\n\n\nYou. Got. Conned."
+          ]
+        },
+        {
+          "group": 508,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 2683.92,
+          "examples": [
+            "And so the \"Americhristian Church of Anger and Fear\" keeps exuding its repugnant sulfurous, hellish stench.  It is the most dangerous sect right behind Scientol",
+            "The mooch is another fast-talking rip off artist from NYC.  He is as disgusting as his sleazy boss.",
+            "The bleating and tears from the tin foil hat crowd are beyond hilarious!  Bring back Harper? BWaahahahahahahah! Just keep checking after you flush twice and it'"
+          ]
+        },
+        {
+          "group": 242,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 2089.53,
+          "examples": [
+            "There is bribe written all over this. We were told when EWEB initially bribed the city for permission to foul this buffer lane that eventual hyper-development w",
+            "Fools names and faces end up in public places.",
+            "the SWAMP  is getting worried.  The more Trump is despised more scum(Weinstein, Oreilly, clinton)  floats to the top,"
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 1992.99,
+          "examples": [
+            "Idiot.",
+            "obama is a fool",
+            "Obama was a fool"
+          ]
+        },
+        {
+          "group": 1366,
+          "latents": [
+            510
+          ],
+          "gain_margin": 924.42,
+          "examples": [
+            "They don't have a clue what a \"Hero\" is, Being a spoiled overpaid athlete that bounces a ball around is a Hero??? Disgusting and wrong way to use the term!! Scr",
+            "Can she be the Cheechako of The Year? She is certainly no Alaskan. Dumb as a post. Guess she hasn't gone outside in Alaska lately.",
+            "Kenny never learns. A career politician, a long standing bum boy for Harper. What a hypocrite suggesting that Notley is out picking fights with everyone. He sho"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 688,
+      "n_groups": 628,
+      "n_multi_groups": 55,
+      "n_groups_dropped": 436,
+      "n_removed": 470,
+      "var_share_removed": 0.5417,
+      "var_share_sae_error": 0.0173,
+      "top": [
+        {
+          "group": 22,
+          "latents": [
+            942,
+            1776
+          ],
+          "gain_margin": 128.73,
+          "examples": [
+            "2016-10-08 01:15:41.860091",
+            "2016-05-16 22:01:27.871447",
+            "2017-01-26 01:45:45.874602"
+          ]
+        },
+        {
+          "group": 142,
+          "latents": [
+            1471
+          ],
+          "gain_margin": 90.69,
+          "examples": [
+            "2016-10-31 16:16:28.955756",
+            "2017-07-08 19:02:42.026956",
+            "2017-06-23 16:50:36.061856"
+          ]
+        },
+        {
+          "group": 313,
+          "latents": [
+            840
+          ],
+          "gain_margin": 85.29,
+          "examples": [
+            "2016-12-20 02:23:57.100999",
+            "2017-01-06 18:05:15.009997",
+            "2016-12-28 15:13:37.422995"
+          ]
+        },
+        {
+          "group": 225,
+          "latents": [
+            1363
+          ],
+          "gain_margin": 85.07,
+          "examples": [
+            "2016-11-14 14:42:51.222085",
+            "2016-10-14 01:16:50.955531",
+            "2016-10-14 01:39:09.962731"
+          ]
+        },
+        {
+          "group": 226,
+          "latents": [
+            1438
+          ],
+          "gain_margin": 80.87,
+          "examples": [
+            "2016-10-17 17:10:51.277641",
+            "2016-04-17 17:52:39.108391",
+            "2016-04-17 17:09:41.395077"
+          ]
+        }
+      ]
+    }
+  }
+}

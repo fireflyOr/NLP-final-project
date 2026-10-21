@@ -1,0 +1,241 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9033216727023378,
+  "test_error": 0.09667832729766224,
+  "course_metric": "auroc",
+  "course_score": 0.9033216727023379,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 48.625463247299194,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2046,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1303,
+      "n_removed": 1303,
+      "var_share_removed": 0.5036,
+      "var_share_sae_error": 0.1057,
+      "top": [
+        {
+          "group": 1007,
+          "latents": [
+            509
+          ],
+          "gain_margin": 643.77,
+          "examples": [
+            "Part Time Workers Wanted, Urgent Jobs.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra Per Da",
+            "We're looking for an hourly, part-time\u00a0team member with at least 1 to 2 years of\u00a0experience in web development. You will work approximately 10 to 25 hours per w",
+            "We're looking for an\u00a0hourly, part-time\u00a0graphic designer with at least 1 to 3 years of experience designing websites, ads, and other print materials to join our "
+          ]
+        },
+        {
+          "group": 1472,
+          "latents": [
+            592
+          ],
+          "gain_margin": 504.53,
+          "examples": [
+            "Library DirectorDelavan, WI\u00a0The Board of Trustees of Aram Public Library (Delavan, Wisconsin) is seeking a dynamic individual to serve as Library Director. The ",
+            "Rapidly expanding Water Transfer Services Company is seeking a sharp Operations Manager who will be responsible for all aspects of oilfield water transfer opera",
+            "Major Oil &amp; Gas Company in the Kingdom of Saudi Arabia is seeking highly skilled Construction Engineer I, (Architect, Civil, Mechanical, Piping) to work in "
+          ]
+        },
+        {
+          "group": 852,
+          "latents": [
+            776
+          ],
+          "gain_margin": 439.19,
+          "examples": [
+            "We have solo and teams available.Some OTR and some Regional.Home weekly or longer on the road.$45-60k/year available with benefits.Experienced and New Drivers.C",
+            "Rent Rebate is a technology startup in Austin that is redefining the way renters find apartments. We are looking for a full-time or part-time customer service/s",
+            "If you are in a consulting, advising, commission, service, non-profit job, this is a tool that you need to have in your kit for your clients, associates, friend"
+          ]
+        },
+        {
+          "group": 1906,
+          "latents": [
+            241
+          ],
+          "gain_margin": 327.06,
+          "examples": [
+            "Are you a seasoned Reservoir Engineer who thrives on establishing resource potential? Are you looking to join a fantastic, strategically expanding and well-posi",
+            "This is a fantastic\u00a0opportunity to join a highly respected and fast growing E&amp;P leader!Opportunities for advancement are extensive as the company is current",
+            "Take your career to the next level with this fantastic job opportunity with one of the fastest growing companies in the Energy Industry!Opportunities for advanc"
+          ]
+        },
+        {
+          "group": 131,
+          "latents": [
+            1898
+          ],
+          "gain_margin": 266.91,
+          "examples": [
+            "Duties / Responsibilities:- Data entry, general filing - Type documents and correspondence - Assist ordering materials / parts - Assist with LogisticsMonday thr",
+            "Professionally and courteously answers incoming calls and directs callers as appropriateHandles inquiries from customers and publicGreets and directs visitors u",
+            "Front Desk/Security:\u00a0 Looking for a full time Front Desk/Security person for midnight to 8:00 a.m. shift every weekend to serve on our existing TEAM in a reside"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 244,
+      "n_groups": 225,
+      "n_multi_groups": 15,
+      "n_groups_dropped": 203,
+      "n_removed": 222,
+      "var_share_removed": 0.9173,
+      "var_share_sae_error": 0.0018,
+      "top": [
+        {
+          "group": 16,
+          "latents": [
+            1890
+          ],
+          "gain_margin": 101.65,
+          "examples": [
+            "13-20",
+            "17-20",
+            "17-20"
+          ]
+        },
+        {
+          "group": 148,
+          "latents": [
+            864
+          ],
+          "gain_margin": 47.84,
+          "examples": [
+            "2500-5000",
+            "2000-2500",
+            "2000-5000"
+          ]
+        },
+        {
+          "group": 31,
+          "latents": [
+            1532
+          ],
+          "gain_margin": 39.87,
+          "examples": [
+            "24960-27040",
+            "24900-31200",
+            "93600-114400"
+          ]
+        },
+        {
+          "group": 184,
+          "latents": [
+            623
+          ],
+          "gain_margin": 39.22,
+          "examples": [
+            "1517-1517",
+            "15750-15750",
+            "15750-15750"
+          ]
+        },
+        {
+          "group": 223,
+          "latents": [
+            300
+          ],
+          "gain_margin": 32.99,
+          "examples": [
+            "35-40",
+            "35-40",
+            "35-40"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1992,
+      "n_groups": 1982,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1389,
+      "n_removed": 1389,
+      "var_share_removed": 0.4807,
+      "var_share_sae_error": 0.0248,
+      "top": [
+        {
+          "group": 461,
+          "latents": [
+            1699
+          ],
+          "gain_margin": 307.44,
+          "examples": [
+            "Data Entry, Clerical Admin, Administrative Assistant, Customer Service, Accounting, payroll Clerk, Book keeping",
+            "Data Entry",
+            "Data Entry"
+          ]
+        },
+        {
+          "group": 696,
+          "latents": [
+            1636
+          ],
+          "gain_margin": 280.87,
+          "examples": [
+            "Administrative Assistant ",
+            "Administrative Assistant ",
+            "Administrative Assistant "
+          ]
+        },
+        {
+          "group": 1099,
+          "latents": [
+            1247
+          ],
+          "gain_margin": 277.07,
+          "examples": [
+            "Typist / Data Processing Clerical",
+            "Typist/Stenographer",
+            "Receptionist Entry Level position"
+          ]
+        },
+        {
+          "group": 1262,
+          "latents": [
+            559
+          ],
+          "gain_margin": 253.6,
+          "examples": [
+            "Employee for incoming department",
+            "Administrative Assitstant",
+            "Administrative"
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            1420
+          ],
+          "gain_margin": 244.9,
+          "examples": [
+            "CONTRACT: Design Engineer , North Hollywood, CA",
+            "Graduate Client Engineer 2015",
+            "Senior Engineer - Water Resources Management"
+          ]
+        }
+      ]
+    }
+  }
+}

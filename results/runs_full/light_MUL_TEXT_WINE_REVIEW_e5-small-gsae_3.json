@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.424644717550286,
+  "test_error": 1.424644717550286,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.965258490455369,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 196.93824791908264,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2033,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 308,
+      "n_removed": 308,
+      "var_share_removed": 0.0628,
+      "var_share_sae_error": 0.1233,
+      "top": [
+        {
+          "group": 4,
+          "latents": [
+            52,
+            1759
+          ],
+          "gain_margin": 7172.5,
+          "examples": [
+            "This 100% Syrah is a supple and juicy, fruit-laden wine, bursting with blackberry, black cherry and cassis fruit. It is dense enough to add layers of mineral an",
+            "This plush and easy expression of Syrah opens with distinct aromas of cured meat, spice, black fruit, white pepper and mature cherry. The wine is smooth and ric",
+            "This is a very distinct and unique Syrah, starting with subdued black fruit, minty chocolate, crushed pepper and grapeseed aromas. The palate is light and savor"
+          ]
+        },
+        {
+          "group": 691,
+          "latents": [
+            1774
+          ],
+          "gain_margin": 6526.59,
+          "examples": [
+            "This is a proper Cabernet, showing some rich flavors of black currants and dark chocolate, wrapped into sturdy tannins. Ready to drink now.",
+            "Drink this Cabernet with burgers. It's dry, robust and fruity, with a strong cut of acidity.",
+            "Here's a soft, luscious Cabernet. It has soft tannins and is very delicious, with a milk chocolate edge to the black and red sour-cherry candy fruit, enriched w"
+          ]
+        },
+        {
+          "group": 1054,
+          "latents": [
+            500
+          ],
+          "gain_margin": 6363.11,
+          "examples": [
+            "Intensely ripe, almost raisinated in tone, this full-bodied Merlot offers loads of fleshy black-cherry and berry flavors. Yielding acidity accentuates its round",
+            "This 100% Merlot is juicy in black cherry and plum flavors, followed by outbursts of dusty tannin that provide just enough grip. The savory cinnamon and clove a",
+            "Made from estate-vineyard fruit, this Merlot is medium bodied, and it has a mix of red fruit flavors, plus grace notes of leaf and mushroom. The finish leaves a"
+          ]
+        },
+        {
+          "group": 1100,
+          "latents": [
+            461
+          ],
+          "gain_margin": 5897.3,
+          "examples": [
+            "A light and crisp Chardonnay that leans more to the style of M\u00e2con than Monterey. Mild apple, peach, tropical fruit and citrus notes on the nose open to a dry, ",
+            "A lush, crisp Chardonnay from a cool-ish vintage that tastes most specifically of green apple with a tropical twist on the finish.",
+            "Stainless steel fermented and aged Chardonnay (eg \u2018naked') is becoming commonplace, but few offer as much snap and juicy fruitiness as this one. It's a great, r"
+          ]
+        },
+        {
+          "group": 1262,
+          "latents": [
+            74
+          ],
+          "gain_margin": 5587.38,
+          "examples": [
+            "A pale, crisp, cranberryish rendering of Pinot Noir, this is the sort of light-bodied, red-fruited Pinot that could be served with salmon or other fish dishes.",
+            "Earthy and rustic, this Pinot Noir is lightweight, with a hint of red cherry. There is an unpleasant bitter aftertaste.",
+            "Sturdy and basic, this Pinot Noir has vegetal aromas, modest fruit flavors, and a dry, lean texture. Aromas suggest tomato and herbs, while flavors are more ric"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 883,
+      "n_groups": 882,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 740,
+      "n_removed": 740,
+      "var_share_removed": 0.6249,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 669,
+          "latents": [
+            351
+          ],
+          "gain_margin": 6555.52,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "group": 776,
+          "latents": [
+            204
+          ],
+          "gain_margin": 4427.31,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 841,
+          "latents": [
+            360
+          ],
+          "gain_margin": 3974.12,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 834,
+          "latents": [
+            744
+          ],
+          "gain_margin": 3008.89,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 264,
+          "latents": [
+            838
+          ],
+          "gain_margin": 2458.05,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        }
+      ]
+    }
+  }
+}

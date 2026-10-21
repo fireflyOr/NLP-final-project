@@ -1,0 +1,604 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.2761735523772881,
+  "test_error": 0.2761735523772881,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9719015256721231,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 166.37090396881104,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 279,
+      "n_removed": 233,
+      "threshold": 0.0488,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.674,
+      "var_share_kept": 0.5235,
+      "var_share_sae_error": 0.0048,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 253,
+          "score": 0.0506,
+          "n_active": 110,
+          "examples": [
+            "K2J9",
+            "K2J9",
+            "K9A1"
+          ]
+        },
+        {
+          "latent": 385,
+          "score": 0.044,
+          "n_active": 121,
+          "examples": [
+            "KUZA",
+            "KUZA",
+            "KUZA"
+          ]
+        },
+        {
+          "latent": 249,
+          "score": 0.0401,
+          "n_active": 326,
+          "examples": [
+            "KSGF",
+            "KSGF",
+            "KSGF"
+          ]
+        },
+        {
+          "latent": 34,
+          "score": 0.0365,
+          "n_active": 990,
+          "examples": [
+            "K9MN",
+            "K9MN",
+            "KMMK"
+          ]
+        },
+        {
+          "latent": 422,
+          "score": 0.0361,
+          "n_active": 861,
+          "examples": [
+            "KPSP",
+            "KPSP",
+            "KPSP"
+          ]
+        }
+      ]
+    },
+    "City": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 307,
+      "n_removed": 205,
+      "threshold": 0.047,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.6149,
+      "var_share_kept": 0.5752,
+      "var_share_sae_error": 0.0787,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 183,
+          "score": 0.0508,
+          "n_active": 273,
+          "examples": [
+            "Detroit",
+            "Detroit",
+            "Detroit"
+          ]
+        },
+        {
+          "latent": 89,
+          "score": 0.0481,
+          "n_active": 445,
+          "examples": [
+            "Marysville",
+            "Marysville",
+            "Marysville"
+          ]
+        },
+        {
+          "latent": 401,
+          "score": 0.0465,
+          "n_active": 548,
+          "examples": [
+            "Ontario",
+            "Ontario",
+            "Ontario"
+          ]
+        },
+        {
+          "latent": 490,
+          "score": 0.0458,
+          "n_active": 338,
+          "examples": [
+            "Escondido",
+            "Escondido",
+            "Escondido"
+          ]
+        },
+        {
+          "latent": 286,
+          "score": 0.0439,
+          "n_active": 368,
+          "examples": [
+            "Myrtle Beach",
+            "Myrtle Beach",
+            "Myrtle Beach"
+          ]
+        }
+      ]
+    },
+    "County": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 326,
+      "n_removed": 186,
+      "threshold": 0.0486,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.6412,
+      "var_share_kept": 0.7398,
+      "var_share_sae_error": 0.0052,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 201,
+          "score": 0.0551,
+          "n_active": 557,
+          "examples": [
+            "Coffee",
+            "Coffee",
+            "Coffee"
+          ]
+        },
+        {
+          "latent": 301,
+          "score": 0.0537,
+          "n_active": 444,
+          "examples": [
+            "Bullitt",
+            "Bullitt",
+            "Westmoreland"
+          ]
+        },
+        {
+          "latent": 270,
+          "score": 0.0493,
+          "n_active": 173,
+          "examples": [
+            "Yolo",
+            "Yolo",
+            "Yolo"
+          ]
+        },
+        {
+          "latent": 404,
+          "score": 0.0471,
+          "n_active": 894,
+          "examples": [
+            "Vance",
+            "Vance",
+            "DeKalb"
+          ]
+        },
+        {
+          "latent": 424,
+          "score": 0.0448,
+          "n_active": 340,
+          "examples": [
+            "McHenry",
+            "Mchenry",
+            "St. Mary's"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 442,
+      "n_removed": 70,
+      "threshold": 0.0489,
+      "passed_test": 76,
+      "removed_norm_ratio": 0.2136,
+      "var_share_kept": 0.7524,
+      "var_share_sae_error": 0.1534,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 448,
+          "score": 0.4851,
+          "n_active": 644,
+          "examples": [
+            "The road is closed near Acton Circle.\u00a0",
+            "The road is closed near Hudlin Gap Road.\u00a0",
+            "The Lane is closed near Kernersville Rd."
+          ]
+        },
+        {
+          "latent": 432,
+          "score": 0.2686,
+          "n_active": 2025,
+          "examples": [
+            "Accident on 60th St at Grover St.",
+            "Accident on Stearns St at Simplex St.",
+            "Accident on Grant St at Eppinger Blvd."
+          ]
+        },
+        {
+          "latent": 219,
+          "score": 0.2472,
+          "n_active": 1458,
+          "examples": [
+            "Right lane blocked and right hand shoulder blocked due to crash on I-20 Eastbound at Exit 44 GA-6 Thornton Rd.",
+            "Lane blocked due to accident on I-59 Northbound from Exit 222 US-11 Greenhill Blvd to Exit 224 49th St.",
+            "Slow lane blocked due to accident on CA-91 Eastbound at Exit 54 Pierce St."
+          ]
+        },
+        {
+          "latent": 298,
+          "score": 0.2244,
+          "n_active": 2206,
+          "examples": [
+            "Middle lane blocked due to accident on CA-91 Westbound after CA-71.",
+            "Lane blocked due to accident on US-80 Westbound at Fork Rd.",
+            "#1 &#2 lane blocked due to accident on I-110 Northbound at I-405."
+          ]
+        },
+        {
+          "latent": 252,
+          "score": 0.2164,
+          "n_active": 532,
+          "examples": [
+            "Crash on Edwards Rd at Landmark Dr.",
+            "Crash on Base Line St at H St.",
+            "Crash on 27th St at Penn Ave."
+          ]
+        }
+      ]
+    },
+    "End_Time": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 218,
+      "n_kept": 458,
+      "n_removed": 54,
+      "threshold": 0.0552,
+      "passed_test": 15,
+      "removed_norm_ratio": 0.2632,
+      "var_share_kept": 0.9449,
+      "var_share_sae_error": 0.0081,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 11,
+          "score": 0.1311,
+          "n_active": 180,
+          "examples": [
+            "2022-07-02 11:01:00",
+            "2022-07-07 10:02:06",
+            "2022-07-02 18:26:00"
+          ]
+        },
+        {
+          "latent": 175,
+          "score": 0.1095,
+          "n_active": 1724,
+          "examples": [
+            "2022-07-05 08:48:35",
+            "2022-07-05 06:48:01",
+            "2022-08-07 00:48:00"
+          ]
+        },
+        {
+          "latent": 510,
+          "score": 0.1077,
+          "n_active": 1512,
+          "examples": [
+            "2022-03-01 06:04:00",
+            "2022-08-12 16:00:00",
+            "2022-02-09 10:00:00"
+          ]
+        },
+        {
+          "latent": 136,
+          "score": 0.1067,
+          "n_active": 1526,
+          "examples": [
+            "2022-04-19 19:53:00",
+            "2022-04-29 19:00:27",
+            "2022-06-19 23:18:08"
+          ]
+        },
+        {
+          "latent": 386,
+          "score": 0.1067,
+          "n_active": 1459,
+          "examples": [
+            "2022-05-19 10:40:17",
+            "2022-05-17 17:29:32",
+            "2022-12-17 11:44:12"
+          ]
+        }
+      ]
+    },
+    "Start_Time": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 218,
+      "n_kept": 458,
+      "n_removed": 54,
+      "threshold": 0.0454,
+      "passed_test": 22,
+      "removed_norm_ratio": 0.275,
+      "var_share_kept": 0.928,
+      "var_share_sae_error": 0.0075,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 175,
+          "score": 0.1111,
+          "n_active": 1589,
+          "examples": [
+            "2022-07-01 22:53:37",
+            "2022-12-12 22:49:38",
+            "2022-12-12 14:26:14"
+          ]
+        },
+        {
+          "latent": 136,
+          "score": 0.1098,
+          "n_active": 1539,
+          "examples": [
+            "2022-10-06 19:36:47",
+            "2022-04-19 18:29:37",
+            "2022-05-19 12:19:39"
+          ]
+        },
+        {
+          "latent": 31,
+          "score": 0.1062,
+          "n_active": 1585,
+          "examples": [
+            "2022-08-16 08:08:00",
+            "2022-07-21 14:45:00",
+            "2022-07-24 22:21:00"
+          ]
+        },
+        {
+          "latent": 497,
+          "score": 0.1025,
+          "n_active": 1710,
+          "examples": [
+            "2022-07-29 07:14:00",
+            "2022-07-16 14:00:00",
+            "2022-07-30 08:22:00"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0985,
+          "n_active": 1720,
+          "examples": [
+            "2022-10-07 12:01:00",
+            "2022-10-08 07:19:07",
+            "2022-12-30 13:00:09"
+          ]
+        }
+      ]
+    },
+    "Street": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 444,
+      "n_removed": 68,
+      "threshold": 0.0484,
+      "passed_test": 61,
+      "removed_norm_ratio": 0.28,
+      "var_share_kept": 0.7876,
+      "var_share_sae_error": 0.0968,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 352,
+          "score": 0.2067,
+          "n_active": 2384,
+          "examples": [
+            "I-12",
+            "I-4",
+            "I-4"
+          ]
+        },
+        {
+          "latent": 144,
+          "score": 0.1032,
+          "n_active": 1744,
+          "examples": [
+            "I-5",
+            "I-5",
+            "I-5"
+          ]
+        },
+        {
+          "latent": 325,
+          "score": 0.1031,
+          "n_active": 892,
+          "examples": [
+            "I-78 E",
+            "I-78 E",
+            "I-78 E"
+          ]
+        },
+        {
+          "latent": 246,
+          "score": 0.0891,
+          "n_active": 743,
+          "examples": [
+            "I-526 W",
+            "I-526 E",
+            "SR-528-TOLL"
+          ]
+        },
+        {
+          "latent": 183,
+          "score": 0.0869,
+          "n_active": 970,
+          "examples": [
+            "I-35W N",
+            "I-35W N",
+            "I-35W N"
+          ]
+        }
+      ]
+    },
+    "Weather_Timestamp": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 205,
+      "n_kept": 458,
+      "n_removed": 54,
+      "threshold": 0.0515,
+      "passed_test": 17,
+      "removed_norm_ratio": 0.278,
+      "var_share_kept": 0.8957,
+      "var_share_sae_error": 0.0051,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 336,
+          "score": 0.0877,
+          "n_active": 2126,
+          "examples": [
+            "2022-12-19 07:15:00",
+            "2022-09-18 07:55:00",
+            "2022-09-13 07:07:00"
+          ]
+        },
+        {
+          "latent": 175,
+          "score": 0.0843,
+          "n_active": 2133,
+          "examples": [
+            "2022-12-15 14:51:00",
+            "2022-11-10 16:52:00",
+            "2022-11-10 05:51:00"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.0825,
+          "n_active": 2355,
+          "examples": [
+            "2023-03-28 07:53:00",
+            "2023-03-29 16:50:00",
+            "2023-03-30 06:53:00"
+          ]
+        },
+        {
+          "latent": 11,
+          "score": 0.0809,
+          "n_active": 2179,
+          "examples": [
+            "2022-10-05 10:53:00",
+            "2022-10-10 09:55:00",
+            "2022-10-08 11:53:00"
+          ]
+        },
+        {
+          "latent": 140,
+          "score": 0.0804,
+          "n_active": 2448,
+          "examples": [
+            "2022-06-02 06:02:00",
+            "2022-06-08 12:53:00",
+            "2022-06-08 14:53:00"
+          ]
+        }
+      ]
+    },
+    "Zipcode": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 338,
+      "n_removed": 174,
+      "threshold": 0.0487,
+      "passed_test": 6,
+      "removed_norm_ratio": 0.4566,
+      "var_share_kept": 0.6282,
+      "var_share_sae_error": 0.0194,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 470,
+          "score": 0.1487,
+          "n_active": 4851,
+          "examples": [
+            "76087-7690",
+            "91789-3831",
+            "90280-5557"
+          ]
+        },
+        {
+          "latent": 71,
+          "score": 0.0571,
+          "n_active": 2641,
+          "examples": [
+            "97015",
+            "97015",
+            "20012-2736"
+          ]
+        },
+        {
+          "latent": 20,
+          "score": 0.0539,
+          "n_active": 274,
+          "examples": [
+            "21801-4203",
+            "21871",
+            "21871"
+          ]
+        },
+        {
+          "latent": 167,
+          "score": 0.0534,
+          "n_active": 839,
+          "examples": [
+            "93727",
+            "93927",
+            "10027"
+          ]
+        },
+        {
+          "latent": 234,
+          "score": 0.0519,
+          "n_active": 46,
+          "examples": [
+            "15563",
+            "85713-1557",
+            "15533"
+          ]
+        }
+      ]
+    }
+  }
+}

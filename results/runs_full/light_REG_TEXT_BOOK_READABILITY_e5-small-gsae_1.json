@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.888216183698819,
+  "test_error": 0.888216183698819,
+  "course_metric": "r2",
+  "course_score": 0.7969273477685466,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 54.674739360809326,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 569,
+      "n_groups": 569,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 449,
+      "n_removed": 449,
+      "var_share_removed": 0.5001,
+      "var_share_sae_error": 0.0029,
+      "top": [
+        {
+          "group": 206,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 55.66,
+          "examples": [
+            "The Nursery, August 1877, Vol. XXII, No. 2\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, August 1877, Vol. XXII, No. 2\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, August 1877, Vol. XXII, No. 2\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 394,
+          "latents": [
+            905
+          ],
+          "gain_margin": 37.37,
+          "examples": [
+            "Favorite Fairy Tales",
+            "Favorite Fairy Tales",
+            "Favorite Fairy Tales"
+          ]
+        },
+        {
+          "group": 172,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 35.65,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 557,
+          "latents": [
+            117
+          ],
+          "gain_margin": 31.47,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 42,
+          "latents": [
+            1832
+          ],
+          "gain_margin": 29.86,
+          "examples": [
+            "The Talking Beasts",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1537,
+      "n_groups": 1537,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1228,
+      "n_removed": 1228,
+      "var_share_removed": 0.5827,
+      "var_share_sae_error": 0.0031,
+      "top": [
+        {
+          "group": 523,
+          "latents": [
+            1055
+          ],
+          "gain_margin": 215.19,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1281,
+          "latents": [
+            582
+          ],
+          "gain_margin": 109.4,
+          "examples": [
+            "USHistory.org",
+            "USHistory.org",
+            "USHistory.org"
+          ]
+        },
+        {
+          "group": 1373,
+          "latents": [
+            792
+          ],
+          "gain_margin": 58.69,
+          "examples": [
+            "Unknown",
+            "Unknown",
+            "Unknown"
+          ]
+        },
+        {
+          "group": 152,
+          "latents": [
+            1984
+          ],
+          "gain_margin": 54.07,
+          "examples": [
+            "Boston Journal?",
+            "Ph<U+1EA1>m Quang Ph\u00fac",
+            "Carlo Collodi"
+          ]
+        },
+        {
+          "group": 552,
+          "latents": [
+            1048
+          ],
+          "gain_margin": 48.7,
+          "examples": [
+            "Charles H. Sylvester?",
+            "Charles H. Sylvester?",
+            "Charles H. Sylvester?"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 86,
+      "n_groups": 82,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 73,
+      "n_removed": 77,
+      "var_share_removed": 0.3345,
+      "var_share_sae_error": 0.0104,
+      "top": [
+        {
+          "group": 23,
+          "latents": [
+            847
+          ],
+          "gain_margin": 4.66,
+          "examples": [
+            "litres, litres, litre, litre, litre, litres, litre, litre, litres",
+            "metres, metres",
+            "metre, metres"
+          ]
+        },
+        {
+          "group": 65,
+          "latents": [
+            179
+          ],
+          "gain_margin": 1.69,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 15,
+          "latents": [
+            1535
+          ],
+          "gain_margin": 0.46,
+          "examples": [
+            "travellers",
+            "travellers",
+            "traveller, travelled"
+          ]
+        },
+        {
+          "group": 33,
+          "latents": [
+            1225
+          ],
+          "gain_margin": 0.31,
+          "examples": [
+            "travelled",
+            "travelled",
+            "travelled"
+          ]
+        },
+        {
+          "group": 76,
+          "latents": [
+            554
+          ],
+          "gain_margin": 0.3,
+          "examples": [
+            "kilometres",
+            "kilometres",
+            "kilometres"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1950,
+      "n_groups": 1950,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1425,
+      "n_removed": 1425,
+      "var_share_removed": 0.6614,
+      "var_share_sae_error": 0.0424,
+      "top": [
+        {
+          "group": 1877,
+          "latents": [
+            1110
+          ],
+          "gain_margin": 172.53,
+          "examples": [
+            "A number of other benefits to video game play have been documented in the past 10 years. Beyond vision, action video game play changes for the better skills as ",
+            "It is often useful to quickly make approximate answers for calculations. Imagine you buy items for R34 and R58 and do not have time to accurately calculate R34 ",
+            "On February 1, 1960, the peaceful activists introduced a new tactic into their set of strategies. Four African American college students walked up to a whites-o"
+          ]
+        },
+        {
+          "group": 1161,
+          "latents": [
+            57
+          ],
+          "gain_margin": 53.73,
+          "examples": [
+            "Mrs. S. had a new cook; and one day she set a pan of custard on the back porch to cool. When she went out to get it, an hour or two after, she found nothing but",
+            "Of all the creatures that walked or swam or flew, Timothy Turtle liked boys the least of all. He said that if they ever did anything except throw stones he had ",
+            "There once lived in a small town in China a man named Hok Lee. He was a steady, industrious man, who not only worked hard at his trade, but did all his own hous"
+          ]
+        },
+        {
+          "group": 1129,
+          "latents": [
+            124
+          ],
+          "gain_margin": 37.87,
+          "examples": [
+            "Once upon a time Eagle and Hen were best friends. The two of them were together and chatted from morning till dusk. Eagle's chickens couldn't wait to visit Hen'",
+            "Once upon a time in the middle of winter, when the flakes of snow were falling like feathers from the clouds, a Queen sat at her palace window, which had an ebo",
+            "Once upon a time Jackal was walking around the bush. He was very hungry. He saw Crow flying above the trees with a big piece of cheese in his mouth. \n\"Hmmm that"
+          ]
+        },
+        {
+          "group": 398,
+          "latents": [
+            1774
+          ],
+          "gain_margin": 37.15,
+          "examples": [
+            "Dog is in his house. Dog is sitting in his house. Then someone knocks on the door. Dog opens the door. Dog sees someone yellow! Dog asks, \"Who are you?\" It is C",
+            "When an animal dies, its body changes in appearance. It will gradually disappear as it is eaten by other animals and bacteria. This process is called decomposit",
+            "At last the donkey grew so old that he was no longer of any use for work, and his master wished to get rid of him.\nThe donkey, fearing he might be killed, ran a"
+          ]
+        },
+        {
+          "group": 633,
+          "latents": [
+            966
+          ],
+          "gain_margin": 36.59,
+          "examples": [
+            "The king of the north once said to himself, \"I am master of the country of ice and snow, but what is that if I cannot be ruler of the land of sunshine and flowe",
+            "It is stated in the Gewerbeblatte fur Hessen that paint can be renewed and refreshed in the following manner:\nWhen cracks and checks appear in the paint on wood",
+            "Clouds, whether they are big gray layers, fluffy white lumps, or streaks in the sky from aeroplanes, all have a few things in common. Most importantly, they are"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1945,
+      "n_groups": 1945,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1480,
+      "n_removed": 1480,
+      "var_share_removed": 0.6694,
+      "var_share_sae_error": 0.0326,
+      "top": [
+        {
+          "group": 964,
+          "latents": [
+            1353
+          ],
+          "gain_margin": 82.82,
+          "examples": [
+            "Rosetta_Stone",
+            "Marco_Polo",
+            "Homo_sapiens"
+          ]
+        },
+        {
+          "group": 138,
+          "latents": [
+            1748
+          ],
+          "gain_margin": 55.79,
+          "examples": [
+            "Digital_data",
+            "Internet_Protocol",
+            "Software"
+          ]
+        },
+        {
+          "group": 154,
+          "latents": [
+            1806
+          ],
+          "gain_margin": 36.98,
+          "examples": [
+            "THE RED SPIDER",
+            "THE FOX AND THE LITTLE RED HEN",
+            "Four lambs and\na fox"
+          ]
+        },
+        {
+          "group": 1778,
+          "latents": [
+            58
+          ],
+          "gain_margin": 34.6,
+          "examples": [
+            "THE LITTLE TEACHER.",
+            "THE LITTLE SHEPHERD",
+            "THE LITTLE SAILOR"
+          ]
+        },
+        {
+          "group": 1398,
+          "latents": [
+            940
+          ],
+          "gain_margin": 21.33,
+          "examples": [
+            "Area - Apprenticeship and Workplace Math",
+            "Austrian Heir and Wife Shot to Death After Escaping Bombing",
+            "Goat, Dog and Cow (Colour-in)"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 921,
+      "n_groups": 918,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 672,
+      "n_removed": 675,
+      "var_share_removed": 0.3432,
+      "var_share_sae_error": 0.0057,
+      "top": [
+        {
+          "group": 821,
+          "latents": [
+            719
+          ],
+          "gain_margin": 284.85,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Moon",
+            "https://en.wikipedia.org/wiki/Organic_chemistry",
+            "https://en.wikipedia.org/wiki/Mercury_(planet)"
+          ]
+        },
+        {
+          "group": 566,
+          "latents": [
+            383
+          ],
+          "gain_margin": 115.51,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Automotive_head-up_display",
+            "https://en.wikipedia.org/wiki/Software_as_a_service",
+            "https://en.wikipedia.org/wiki/Technology_assessment"
+          ]
+        },
+        {
+          "group": 415,
+          "latents": [
+            941
+          ],
+          "gain_margin": 70.16,
+          "examples": [
+            "http://www.gutenberg.org/files/794/794-h/794-h.htm",
+            "http://www.gutenberg.org/files/6932/6932-h/6932-h.htm",
+            "http://www.gutenberg.org/files/6932/6932-h/6932-h.htm"
+          ]
+        },
+        {
+          "group": 890,
+          "latents": [
+            155
+          ],
+          "gain_margin": 61.37,
+          "examples": [
+            "http://www.gutenberg.org/files/28133/28133-h/28133-h.htm#Page_138",
+            "http://www.gutenberg.org/files/28136/28136-h/28136-h.htm#Page_38",
+            "http://www.gutenberg.org/files/28142/28142-h/28142-h.htm#Page_87"
+          ]
+        },
+        {
+          "group": 416,
+          "latents": [
+            255
+          ],
+          "gain_margin": 51.63,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_306",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_220",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_276"
+          ]
+        }
+      ]
+    }
+  }
+}

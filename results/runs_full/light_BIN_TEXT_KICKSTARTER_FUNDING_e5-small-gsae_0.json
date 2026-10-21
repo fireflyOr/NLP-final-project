@@ -1,0 +1,405 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7154681152734274,
+  "test_error": 0.28453188472657265,
+  "course_metric": "auroc",
+  "course_score": 0.7154681152734275,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 89.28880620002747,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 543,
+      "n_groups": 438,
+      "n_multi_groups": 80,
+      "n_groups_dropped": 277,
+      "n_removed": 322,
+      "var_share_removed": 0.4343,
+      "var_share_sae_error": 0.0112,
+      "top": [
+        {
+          "group": 13,
+          "latents": [
+            458,
+            1407,
+            1459,
+            1807
+          ],
+          "gain_margin": 409.97,
+          "examples": [
+            "1970-01-01 00:00:01.405720177",
+            "1970-01-01 00:00:01.405143908",
+            "1970-01-01 00:00:01.405054147"
+          ]
+        },
+        {
+          "group": 48,
+          "latents": [
+            414,
+            1023,
+            1164,
+            1752,
+            1817
+          ],
+          "gain_margin": 384.93,
+          "examples": [
+            "1970-01-01 00:00:01.404010007",
+            "1970-01-01 00:00:01.404151180",
+            "1970-01-01 00:00:01.404321460"
+          ]
+        },
+        {
+          "group": 71,
+          "latents": [
+            976,
+            1886
+          ],
+          "gain_margin": 331.52,
+          "examples": [
+            "1970-01-01 00:00:01.427132002",
+            "1970-01-01 00:00:01.423214717",
+            "1970-01-01 00:00:01.427145580"
+          ]
+        },
+        {
+          "group": 398,
+          "latents": [
+            804
+          ],
+          "gain_margin": 195.88,
+          "examples": [
+            "1970-01-01 00:00:01.327565969",
+            "1970-01-01 00:00:01.408558565",
+            "1970-01-01 00:00:01.340565616"
+          ]
+        },
+        {
+          "group": 343,
+          "latents": [
+            186
+          ],
+          "gain_margin": 181.55,
+          "examples": [
+            "1970-01-01 00:00:01.362603571",
+            "1970-01-01 00:00:01.362514530",
+            "1970-01-01 00:00:01.361940581"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 665,
+      "n_groups": 569,
+      "n_multi_groups": 81,
+      "n_groups_dropped": 388,
+      "n_removed": 440,
+      "var_share_removed": 0.4461,
+      "var_share_sae_error": 0.0123,
+      "top": [
+        {
+          "group": 100,
+          "latents": [
+            976,
+            1154,
+            1886
+          ],
+          "gain_margin": 412.3,
+          "examples": [
+            "1970-01-01 00:00:01.427140517",
+            "1970-01-01 00:00:01.427140800",
+            "1970-01-01 00:00:01.428091401"
+          ]
+        },
+        {
+          "group": 60,
+          "latents": [
+            274,
+            841
+          ],
+          "gain_margin": 196.36,
+          "examples": [
+            "1970-01-01 00:00:01.410720377",
+            "1970-01-01 00:00:01.410102000",
+            "1970-01-01 00:00:01.410847140"
+          ]
+        },
+        {
+          "group": 50,
+          "latents": [
+            601,
+            1135,
+            1167
+          ],
+          "gain_margin": 194.31,
+          "examples": [
+            "1970-01-01 00:00:01.433014581",
+            "1970-01-01 00:00:01.433005220",
+            "1970-01-01 00:00:01.433012141"
+          ]
+        },
+        {
+          "group": 188,
+          "latents": [
+            1281
+          ],
+          "gain_margin": 187.01,
+          "examples": [
+            "1970-01-01 00:00:01.408134014",
+            "1970-01-01 00:00:01.409407020",
+            "1970-01-01 00:00:01.408540703"
+          ]
+        },
+        {
+          "group": 319,
+          "latents": [
+            692
+          ],
+          "gain_margin": 176.44,
+          "examples": [
+            "1970-01-01 00:00:01.426716000",
+            "1970-01-01 00:00:01.396818000",
+            "1970-01-01 00:00:01.418400000"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1276,
+      "n_removed": 1276,
+      "var_share_removed": 0.3925,
+      "var_share_sae_error": 0.1664,
+      "top": [
+        {
+          "group": 1067,
+          "latents": [
+            279
+          ],
+          "gain_margin": 720.5,
+          "examples": [
+            "\"I have a passion for cooking, and have wanted to own and run a food truck for many years. I would have a variety menu.\"",
+            "\"I am seeking to produce prints to promote my recent collection of art work and have a starting point for selling my work.\"",
+            "\"I am a full-time firefighter trying to start up a small backyard family run wood engraving business.\""
+          ]
+        },
+        {
+          "group": 1014,
+          "latents": [
+            560
+          ],
+          "gain_margin": 397.66,
+          "examples": [
+            "\"A dynamic, first-of-its-kind documentary about life before and after the diagnosis of Celiac Disease.\"",
+            "\"Documentary about a Taekwondo school in a Syrian Refugee Camp.\"",
+            "\"A feature documentary on cannabis culture in Colorado as told through The Denver Post & The Cannabist following legalization on 1.1.14.\""
+          ]
+        },
+        {
+          "group": 322,
+          "latents": [
+            1624
+          ],
+          "gain_margin": 366.68,
+          "examples": [
+            "\"FPGA based multiple I/O port shield for any I2C bus. Ready to use, or develop your own control logic with free VHDL/Verilog software.\"",
+            "\"The X Pen houses the Pilot Hi Tec C pen refill in a strong and attractive carbon fiber and stainless steel housing.\"",
+            "\"Turnikit is a DOF Lens Adapter that allows you to mount Canon or Nikon lenses to your iPhone 6 & 6 plus\""
+          ]
+        },
+        {
+          "group": 2044,
+          "latents": [
+            271
+          ],
+          "gain_margin": 359.0,
+          "examples": [
+            "\"3rd generation Italian music school dropout to record penultimate album in 20's era ballroom, aided and abetted by romantics and a harpsichord. Film.\"",
+            "\"I want to record an excellent album of songs -with your help!\"",
+            "\"Help fund the recording and pressing of my first (properly released) solo album. I'm jobless, eager, and full of songs. Maybe a tour...\""
+          ]
+        },
+        {
+          "group": 532,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 273.4,
+          "examples": [
+            "\"Satan's Angel is a documentary feature film chronicling the life and times of burlesque legend Satan's Angel.\"",
+            "\"A documentary that I am making about the difficult, but inspiring, life of a late friend of mine.\"",
+            "\"Our buddy, Tom, destroyed his life following his dreams. We made a documentary about it. Help us show him there's still hope!\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1276,
+      "n_removed": 1277,
+      "var_share_removed": 0.4134,
+      "var_share_sae_error": 0.1427,
+      "top": [
+        {
+          "group": 215,
+          "latents": [
+            1760
+          ],
+          "gain_margin": 305.36,
+          "examples": [
+            "\"a-foundation-workshop-documentary\"",
+            "\"where-the-magic-happens-a-new-documentary\"",
+            "\"ma-maison-a-documentary\""
+          ]
+        },
+        {
+          "group": 2037,
+          "latents": [
+            394
+          ],
+          "gain_margin": 302.76,
+          "examples": [
+            "\"the-bold-type-records-their-first-album\"",
+            "\"the-official-music-album\"",
+            "\"thulium-new-album\""
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            959,
+            993,
+            1111,
+            1618
+          ],
+          "gain_margin": 194.07,
+          "examples": [
+            "\"narz\"",
+            "\"picu\"",
+            "\"quitters\""
+          ]
+        },
+        {
+          "group": 1299,
+          "latents": [
+            190
+          ],
+          "gain_margin": 189.33,
+          "examples": [
+            "\"low-shoulders-a-short-film\"",
+            "\"gai-a-short-film\"",
+            "\"acquara-short-film\""
+          ]
+        },
+        {
+          "group": 2003,
+          "latents": [
+            1226
+          ],
+          "gain_margin": 173.59,
+          "examples": [
+            "\"headtunes-recordings-first-dj-mix-and-retrospectiv\"",
+            "\"i-want-to-become-a-dj\"",
+            "\"free-kids-dj-music-class-non-profit-educational-dj\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1247,
+      "n_removed": 1249,
+      "var_share_removed": 0.3925,
+      "var_share_sae_error": 0.1552,
+      "top": [
+        {
+          "group": 2035,
+          "latents": [
+            23
+          ],
+          "gain_margin": 1513.72,
+          "examples": [
+            "\"i'm having a party (Canceled)\"",
+            "\"Cancelled. (Canceled)\"",
+            "\"Instant Reply Text Messaging Application (Canceled)\""
+          ]
+        },
+        {
+          "group": 1189,
+          "latents": [
+            929
+          ],
+          "gain_margin": 441.62,
+          "examples": [
+            "\"Jennifer.Pink Print JumpStart Project (Canceled)\"",
+            "\"Billy Goat Ice Cream Company (Canceled)\"",
+            "\"Jersey Style BBQ's Smoke House Lunch Truck (Canceled)\""
+          ]
+        },
+        {
+          "group": 2033,
+          "latents": [
+            346
+          ],
+          "gain_margin": 279.1,
+          "examples": [
+            "\"New Album\"",
+            "\"Album of songs\"",
+            "\"The Official Music Album\""
+          ]
+        },
+        {
+          "group": 2027,
+          "latents": [
+            228
+          ],
+          "gain_margin": 259.62,
+          "examples": [
+            "\"A Foundation Workshop Documentary\"",
+            "\"Vegas Knights--The Documentary\"",
+            "\"Who Is A Geek Documentary\""
+          ]
+        },
+        {
+          "group": 122,
+          "latents": [
+            1977
+          ],
+          "gain_margin": 252.22,
+          "examples": [
+            "\"Support the short film \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"The Land",
+            "\"REBECCA - A short film about love, sacrifice, & letting go.\"",
+            "\"Lucid (a short film)\""
+          ]
+        }
+      ]
+    }
+  }
+}

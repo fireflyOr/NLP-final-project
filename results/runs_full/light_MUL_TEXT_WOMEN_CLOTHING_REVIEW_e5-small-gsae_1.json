@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7467524883433919,
+  "test_error": 0.7467524883433919,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8953418444392222,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 73.93134117126465,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2030,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 815,
+      "n_removed": 820,
+      "var_share_removed": 0.2434,
+      "var_share_sae_error": 0.1124,
+      "top": [
+        {
+          "group": 1005,
+          "latents": [
+            944
+          ],
+          "gain_margin": 5073.94,
+          "examples": [
+            "Really unattractive shirt. nothing good i can say about it. horrible fit. i can't imagine this would look good on anyone.",
+            "Material is strange. triangle top is funky. this is just not awesome in any way.",
+            "This sweater coat is very bulky and has an odd and unflattering shape when on."
+          ]
+        },
+        {
+          "group": 27,
+          "latents": [
+            2016
+          ],
+          "gain_margin": 2664.91,
+          "examples": [
+            "I found it hard to pair with bottoms. fit wasn't very flattering for me.",
+            "I am returning the dress. it has too much volume and is not flattering at all",
+            "Color is not like photo and fit doesn't work if you're busty"
+          ]
+        },
+        {
+          "group": 260,
+          "latents": [
+            1775
+          ],
+          "gain_margin": 1625.28,
+          "examples": [
+            "Way too big and unflattering. i would love it to look like it does online but it's huge in person.",
+            "This looks cute in the web photo, unfortunately it is absolutely huge in person. i got the small and have to return it because it is not wearable for me.",
+            "I'm 5'3 and ordered the small. as soon as i saw it in person, i knew it was an item to return. the material is too transparent, and designed to wear with underg"
+          ]
+        },
+        {
+          "group": 436,
+          "latents": [
+            1598
+          ],
+          "gain_margin": 1475.01,
+          "examples": [
+            "This is one of the best things i have ever bought from anrtho. it is very flattering, and i always get compliments when i wear it. must have!",
+            "I bought this in the store and love it. seeing it online - i would never think to buy it. much more flattering in person!",
+            "For me, this is the perfect tshirt. love the shape, size, material etc. just really like it. flattering and good quality."
+          ]
+        },
+        {
+          "group": 1000,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 1348.82,
+          "examples": [
+            "I was able to get this on sale. when it arrived, it was missing half of the rhinestones. i am very surprised that this top would be sent out this way. it also w",
+            "I agree with the other reviewers, this top is completely disappointing in every way, i could not believe it was the same top i pulled from the bag. where to beg",
+            "I loved the look of this top when i saw it online, however, when i received it i was kinda disappointed. the color of the top was different than what i perceive"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1846,
+      "n_groups": 1832,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 1065,
+      "n_removed": 1072,
+      "var_share_removed": 0.4213,
+      "var_share_sae_error": 0.0181,
+      "top": [
+        {
+          "group": 1813,
+          "latents": [
+            76
+          ],
+          "gain_margin": 6064.59,
+          "examples": [
+            "Really, really bad",
+            "Completely disappointed!",
+            "Terrible!"
+          ]
+        },
+        {
+          "group": 1446,
+          "latents": [
+            1141
+          ],
+          "gain_margin": 4029.81,
+          "examples": [
+            "Amazing everything !!!",
+            "Absolutely love this jacket!",
+            "Perfect in every way!"
+          ]
+        },
+        {
+          "group": 1827,
+          "latents": [
+            870
+          ],
+          "gain_margin": 2289.14,
+          "examples": [
+            "Not as described",
+            "Not as described",
+            "Not true to size"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            91,
+            826,
+            995,
+            1034,
+            1147
+          ],
+          "gain_margin": 1911.7,
+          "examples": [
+            "Awesome shirt but doesn't hold up well after washi",
+            "Gorgeous fabric, but fit is loose",
+            "Beautiful, well made dress but little flexibility"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            843,
+            1005
+          ],
+          "gain_margin": 1455.77,
+          "examples": [
+            "Beautiful dress but..",
+            "Nice dress but",
+            "Love this sweater but..."
+          ]
+        }
+      ]
+    }
+  }
+}

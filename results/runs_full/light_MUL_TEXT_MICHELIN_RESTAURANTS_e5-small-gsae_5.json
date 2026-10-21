@@ -1,0 +1,464 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7373293416458243,
+  "test_error": 0.7373293416458243,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.891570605389092,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 194.08481335639954,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2044,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1015,
+      "n_removed": 1015,
+      "var_share_removed": 0.3427,
+      "var_share_sae_error": 0.1091,
+      "top": [
+        {
+          "group": 1279,
+          "latents": [
+            1130
+          ],
+          "gain_margin": 427.14,
+          "examples": [
+            "Hotel Rum Budapest, Kir\u00e1lyi P\u00e1l utca 4, Budapest, 1053, Hungary",
+            "The Hotel Seiryu Kyoto Kiyomizu, 2-204-2 Kiyomizu, Higashiyama-ku, Kyoto, 605-0862, Japan",
+            "Hotel Cru, Viru 8, Tallinn, 10104, Estonia"
+          ]
+        },
+        {
+          "group": 2031,
+          "latents": [
+            503
+          ],
+          "gain_margin": 310.15,
+          "examples": [
+            "Stauffacherstrasse 163, Zurich, 8004, Switzerland",
+            "St. Annagasse 2, Zurich, 8001, Switzerland",
+            "Route du Pas de l'Ours 41, Crans-Montana, 3963, Switzerland"
+          ]
+        },
+        {
+          "group": 1511,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 245.29,
+          "examples": [
+            "Inside Yangzhou State Guesthouse,1 Changchun Road, Hanjiang, Yangzhou, China Mainland",
+            "38 Changchun Road, Hanjiang, Yangzhou, China Mainland",
+            "37 Yile Road, Xihu, Hangzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 2012,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 222.79,
+          "examples": [
+            "The Hotel Seiryu Kyoto Kiyomizu, 2-204-2 Kiyomizu, Higashiyama-ku, Kyoto, 605-0862, Japan",
+            "10F, MARUNOUCHI TERRACE, 1-3-4 Marunouchi, Chiyoda-ku, Tokyo, 100-0005, Japan",
+            "1F, Toranomon Hills Station Tower, 2-6-4 Toranomon, Minato-ku, Tokyo, 105-0001, Japan"
+          ]
+        },
+        {
+          "group": 198,
+          "latents": [
+            1716
+          ],
+          "gain_margin": 212.64,
+          "examples": [
+            "Bahnhofstra\u00dfe 15, Salzburg, 5020, Austria",
+            "Zugallistra\u00dfe 7, Salzburg, 5020, Austria",
+            "Getreidegasse 50, Salzburg, 5020, Austria"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1223,
+      "n_groups": 1215,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 1033,
+      "n_removed": 1037,
+      "var_share_removed": 0.5934,
+      "var_share_sae_error": 0.0025,
+      "top": [
+        {
+          "group": 57,
+          "latents": [
+            1697
+          ],
+          "gain_margin": 1584.15,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1166,
+          "latents": [
+            292
+          ],
+          "gain_margin": 1377.38,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 567,
+          "latents": [
+            1215
+          ],
+          "gain_margin": 619.89,
+          "examples": [
+            "Ligurian, Creative",
+            "Tuscan, Creative",
+            "Tuscan, Creative"
+          ]
+        },
+        {
+          "group": 594,
+          "latents": [
+            1291
+          ],
+          "gain_margin": 442.36,
+          "examples": [
+            "Cuisine from Valtellina, Modern Cuisine",
+            "Emilian, Modern Cuisine",
+            "Emilian, Modern Cuisine"
+          ]
+        },
+        {
+          "group": 1204,
+          "latents": [
+            555
+          ],
+          "gain_margin": 428.17,
+          "examples": [
+            "Modern Cuisine, European",
+            "Modern Cuisine, European",
+            "Korean, Modern Cuisine"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 765,
+      "n_removed": 765,
+      "var_share_removed": 0.2416,
+      "var_share_sae_error": 0.1948,
+      "top": [
+        {
+          "group": 78,
+          "latents": [
+            1933
+          ],
+          "gain_margin": 618.24,
+          "examples": [
+            "Its sign could use a new coat of paint and the room is nothing to write home about, but the regulars have been returning for its hearty beef soup for nearly thr",
+            "With over 30 years of history, this tiny gem is no secret to locals in search of a bowl of hearty glass noodle soup with braised pork intestines. The toothsome,",
+            "While eating ramen, salt water from the noodles gradually dilutes the soup. You can experience this for yourself. First, pour a little of the soup into a separa"
+          ]
+        },
+        {
+          "group": 1587,
+          "latents": [
+            307
+          ],
+          "gain_margin": 563.06,
+          "examples": [
+            "Micha\u00ebl Vrijmoed is light years from your run-of-the-mill chef. Committed body and soul, he harnesses his phenomenal creativity and extensive technical know-how",
+            "A wonderful example of an honest, highly dedicated chef who also trained as a teacher, and who has been rewarded with a Michelin star. Miguel Barrera, who grew ",
+            "Philippe Fauchet enjoys straying from his comfort zone and since 1996, he has been finetuning his distinctive signature in this snug yet buzzy eatery deep in th"
+          ]
+        },
+        {
+          "group": 2045,
+          "latents": [
+            66
+          ],
+          "gain_margin": 274.91,
+          "examples": [
+            "Enjoy modern, Mediterranean-influenced cuisine in an elegant restaurant with an attractive vintage-style ambience, where the excellent menu is announced at your",
+            "This restaurant has long been one of the most interesting in the area. It has a pleasing combination of traditional and modern cuisine created by the expert che",
+            "Now here is a restaurant that has a sense of the original! The interior design is very contemporary and, similarly, the chef keeps his ear to the ground for the"
+          ]
+        },
+        {
+          "group": 512,
+          "latents": [
+            1178
+          ],
+          "gain_margin": 240.86,
+          "examples": [
+            "Jan Marrees's trademark is his relaxed approach to gastronomy. A glance at his extensive menu (there are also two set menus, one of them vegetarian) will bring ",
+            "The secluded, quiet location up here at Burg Staufeneck is wonderful, as is the view of Fils Valley. Head to the fine dining restaurant of Burghotel to drink it",
+            "Bringing a little part of Devon into St James\u2019s, this first London venture from renowned chef Michael Caines is a discreet, intimate sort of place inside a hote"
+          ]
+        },
+        {
+          "group": 738,
+          "latents": [
+            1077
+          ],
+          "gain_margin": 205.21,
+          "examples": [
+            "Tripe is enjoyed the world over, but not everyone would go so far as to patent a recipe, as the owner of this century-old hotpot joint has done. Four types of b",
+            "You can tell from the name that this restaurant is serious about the national beverage \u2013 professional tea masters brew the perfect cup, using top quality loose ",
+            "Chef Daniel Humm presides over this temple of modern elegance with a zealous dedication to masterful precision. Nothing is out of place and everything is custom"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 671,
+      "n_groups": 642,
+      "n_multi_groups": 25,
+      "n_groups_dropped": 567,
+      "n_removed": 591,
+      "var_share_removed": 0.7842,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 566,
+          "latents": [
+            1006
+          ],
+          "gain_margin": 1735.65,
+          "examples": [
+            "Air conditioning,Bring your own bottle,Interesting wine list,Valet parking,Wheelchair access",
+            "Car park,Great view,Interesting wine list,Wheelchair access",
+            "Car park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 628,
+          "latents": [
+            239
+          ],
+          "gain_margin": 1637.55,
+          "examples": [
+            "Interesting wine list,Notable sake list",
+            "Air conditioning,Counter dining,Interesting wine list",
+            "Air conditioning,Counter dining,Interesting wine list"
+          ]
+        },
+        {
+          "group": 109,
+          "latents": [
+            1789
+          ],
+          "gain_margin": 1042.03,
+          "examples": [
+            "Air conditioning,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Great view,Interesting wine list,Notable sake list,Terrace,Wheelchair access"
+          ]
+        },
+        {
+          "group": 484,
+          "latents": [
+            1034
+          ],
+          "gain_margin": 964.25,
+          "examples": [
+            "Interesting wine list,Valet parking",
+            "Interesting wine list,Valet parking",
+            "Interesting wine list,Valet parking"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            334,
+            1620
+          ],
+          "gain_margin": 471.04,
+          "examples": [
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2001,
+      "n_groups": 2001,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1557,
+      "n_removed": 1557,
+      "var_share_removed": 0.7357,
+      "var_share_sae_error": 0.0155,
+      "top": [
+        {
+          "group": 1661,
+          "latents": [
+            3
+          ],
+          "gain_margin": 136.95,
+          "examples": [
+            "Shanghai, China Mainland",
+            "Shanghai, China Mainland",
+            "Shanghai, China Mainland"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            1733
+          ],
+          "gain_margin": 133.27,
+          "examples": [
+            "Dietikon, Switzerland",
+            "Wilderswil, Switzerland",
+            "Wilderswil, Switzerland"
+          ]
+        },
+        {
+          "group": 1891,
+          "latents": [
+            982
+          ],
+          "gain_margin": 127.33,
+          "examples": [
+            "Ch\u00eda, Spain",
+            "Tudela, Spain",
+            "Irun, Spain"
+          ]
+        },
+        {
+          "group": 996,
+          "latents": [
+            1538
+          ],
+          "gain_margin": 116.57,
+          "examples": [
+            "Decatur, GA, USA",
+            "Decatur, GA, USA",
+            "Decatur, GA, USA"
+          ]
+        },
+        {
+          "group": 961,
+          "latents": [
+            1445
+          ],
+          "gain_margin": 103.14,
+          "examples": [
+            "Soultz-sous-For\u00eats, France",
+            "Athens, Greece",
+            "Athens, Greece"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1010,
+      "n_removed": 1011,
+      "var_share_removed": 0.349,
+      "var_share_sae_error": 0.104,
+      "top": [
+        {
+          "group": 899,
+          "latents": [
+            1300
+          ],
+          "gain_margin": 627.1,
+          "examples": [
+            "Poetry\u2027Wine (Dongsanhuan Middle Road)",
+            "Da-Qiao-Tou Tube Rice Pudding (Yanping North Road)",
+            "Fortune Long Beijing Bean Sauce Noodles (East Xinglong Street)"
+          ]
+        },
+        {
+          "group": 690,
+          "latents": [
+            812
+          ],
+          "gain_margin": 180.06,
+          "examples": [
+            "MAK",
+            "Kruk",
+            "Mamak"
+          ]
+        },
+        {
+          "group": 177,
+          "latents": [
+            1728
+          ],
+          "gain_margin": 158.89,
+          "examples": [
+            "Flux - Biorestaurant Werratal",
+            "Fauna",
+            "Hispania"
+          ]
+        },
+        {
+          "group": 1796,
+          "latents": [
+            806
+          ],
+          "gain_margin": 146.93,
+          "examples": [
+            "La Trattoria Enrico Bartolini",
+            "Pementa Rosa",
+            "Aux Pesked"
+          ]
+        },
+        {
+          "group": 2004,
+          "latents": [
+            1093
+          ],
+          "gain_margin": 145.81,
+          "examples": [
+            "The Restaurant",
+            "TU.REStAURANT",
+            "Reserved Restaurant"
+          ]
+        }
+      ]
+    }
+  }
+}

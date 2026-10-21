@@ -1,0 +1,390 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23244467321839168,
+  "test_error": 0.23244467321839168,
+  "course_metric": "r2",
+  "course_score": 0.4906697587784319,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 49.90869927406311,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1662,
+      "n_groups": 1662,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1123,
+      "n_removed": 1123,
+      "var_share_removed": 0.5821,
+      "var_share_sae_error": 0.0031,
+      "top": [
+        {
+          "group": 263,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1185.33,
+          "examples": [
+            "Manohar Pandey",
+            "S Meenakshi Ammal",
+            "Satish Jain, Shalini Jain, M. Geetha"
+          ]
+        },
+        {
+          "group": 1285,
+          "latents": [
+            305
+          ],
+          "gain_margin": 794.87,
+          "examples": [
+            "Andrew Minteer",
+            "Andrew M. Colman",
+            "Dean Miller"
+          ]
+        },
+        {
+          "group": 1660,
+          "latents": [
+            477
+          ],
+          "gain_margin": 479.58,
+          "examples": [
+            "Ritu Arora",
+            "Supratim Sarkar",
+            "Arundhati Roy"
+          ]
+        },
+        {
+          "group": 708,
+          "latents": [
+            1523
+          ],
+          "gain_margin": 271.5,
+          "examples": [
+            "Ramchandra Guha",
+            "Ramachandra Guha",
+            "Ramachandra Guha"
+          ]
+        },
+        {
+          "group": 222,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 227.21,
+          "examples": [
+            "Tim Weiner",
+            "James D. Miller",
+            "Dice Media"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 701,
+      "n_groups": 674,
+      "n_multi_groups": 23,
+      "n_groups_dropped": 476,
+      "n_removed": 490,
+      "var_share_removed": 0.554,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 541,
+          "latents": [
+            204
+          ],
+          "gain_margin": 692.94,
+          "examples": [
+            "Flexibound,\u2013 27 Sep 2011",
+            "Flexibound,\u2013 21 Oct 2014",
+            "Flexibound,\u2013 18 Oct 2016"
+          ]
+        },
+        {
+          "group": 57,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 536.54,
+          "examples": [
+            "Hardcover,\u2013 11 Jun 2009",
+            "Hardcover,\u2013 18 Jun 2013",
+            "Hardcover,\u2013 29 Mar 2012"
+          ]
+        },
+        {
+          "group": 530,
+          "latents": [
+            305
+          ],
+          "gain_margin": 389.14,
+          "examples": [
+            "Hardcover,\u2013 Deckle Edge, 18 Oct 2011",
+            "Hardcover,\u2013 Deckle Edge, 7 Mar 2017",
+            "Hardcover,\u2013 Box set, 2 Aug 2009"
+          ]
+        },
+        {
+          "group": 8,
+          "latents": [
+            878,
+            1546
+          ],
+          "gain_margin": 322.68,
+          "examples": [
+            "(Kannada),Paperback,\u2013 2014",
+            "Mass Market Paperback,\u2013 31 Jul 2018",
+            "Paperback,\u2013 2018"
+          ]
+        },
+        {
+          "group": 475,
+          "latents": [
+            205
+          ],
+          "gain_margin": 241.88,
+          "examples": [
+            "Hardcover,\u2013 Deckle Edge, 7 Mar 2017",
+            "Hardcover,\u2013 Deckle Edge, 18 Oct 2011",
+            "Hardcover,\u2013 24 Dec 2018"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 715,
+      "n_groups": 715,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 601,
+      "n_removed": 601,
+      "var_share_removed": 0.7144,
+      "var_share_sae_error": 0.0005,
+      "top": [
+        {
+          "group": 470,
+          "latents": [
+            867
+          ],
+          "gain_margin": 506.7,
+          "examples": [
+            "Software Testing",
+            "Calculus",
+            "Environmental Engineering"
+          ]
+        },
+        {
+          "group": 184,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 460.15,
+          "examples": [
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        },
+        {
+          "group": 549,
+          "latents": [
+            655
+          ],
+          "gain_margin": 194.12,
+          "examples": [
+            "Visual C++ Programming",
+            "Design Pattern Programming",
+            "Design Pattern Programming"
+          ]
+        },
+        {
+          "group": 665,
+          "latents": [
+            305
+          ],
+          "gain_margin": 159.79,
+          "examples": [
+            "Arts, Film & Photography (Books)",
+            "Arts, Film & Photography (Books)",
+            "Theory"
+          ]
+        },
+        {
+          "group": 678,
+          "latents": [
+            529
+          ],
+          "gain_margin": 149.45,
+          "examples": [
+            "Photography Textbooks",
+            "Photography Textbooks",
+            "Photography Textbooks"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1736,
+      "n_groups": 1736,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1233,
+      "n_removed": 1233,
+      "var_share_removed": 0.6999,
+      "var_share_sae_error": 0.0199,
+      "top": [
+        {
+          "group": 1732,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2695.03,
+          "examples": [
+            "A New York Times, Wall Street Journal, Publishers Weekly, and USA Today bestseller\n\n\"Newport is making a bid to be the Marie Kondo of technology: someone with a",
+            "Arguably the most influential, imaginative, and provocative designer of his generation, Alexander McQueen both challenged and expanded fashion conventions to ex",
+            "After nearly twenty years of comics, specials and mini-series, Sonic the Hedgehog has told hundreds of stories. Through the laughs and thrills, the action and a"
+          ]
+        },
+        {
+          "group": 470,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 2356.51,
+          "examples": [
+            "Six months have passed since Prisha was pushed to death by the person she loved the most, Saveer. But she doesn't believes that it was him till she stumbles upo",
+            "A single betrayal can cost you everything... 1998. Twenty-two-year-old Mina is moving to the US from Bangalore to begin a new life with her husband. Then there\u2019",
+            "Aimee Sinclair: The actress everyone thinks they know but can\u2019t remember where from. But I know exactly who you are. I know what you\u2019ve done. And I am watching "
+          ]
+        },
+        {
+          "group": 1735,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1224.98,
+          "examples": [
+            "Running is America\u2019s most popular participatory sport, yet more than half of those who identify as runners get injured every year. Falling prey to injuries from",
+            "A Number One New York Times bestseller, Humans of New York began in the summer of 2010, when photographer Brandon Stanton set out on an ambitious project: to si",
+            "Now revised, expanded and updated, \"Lore of Running\" gives you incomparable detail on physiology, training, racing, injuries, world-class athletes, and races. A"
+          ]
+        },
+        {
+          "group": 866,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1171.17,
+          "examples": [
+            "The Data Warehouse ETL Toolkit: Practical Techniques for Extracting, Cleaning, Conforming and Delivering Data has been authored by Ralph Kimball and Joe Caserta",
+            "The new edition of bestselling CCNA Cert Library by Wendell Odom is a comprehensive review and practice package for the latest CCNA exams. The two books contain",
+            "Validate your AWS skills. This is your opportunity to take the next step in your career by expanding and validating your skills on the AWS cloud. AWS has been t"
+          ]
+        },
+        {
+          "group": 1684,
+          "latents": [
+            529
+          ],
+          "gain_margin": 1160.65,
+          "examples": [
+            "Tibetan Thangka Painting is the only detailed description of the techniques and principles of the sacred art of Tibetan scroll painting. It is the distillation ",
+            "Legendary trainer Tim Grover\u2019s internationally acclaimed training program used by the pros, including Michael Jordan and Kobe Bryant\u2014now completely revised, upd",
+            "The multiple stresses of contemporary life\u2014whether from excessive sports play, overwork, or overuse of technology\u2014are increasingly taking a toll on the body. Sy"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1812,
+      "n_groups": 1812,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1276,
+      "n_removed": 1276,
+      "var_share_removed": 0.6698,
+      "var_share_sae_error": 0.0198,
+      "top": [
+        {
+          "group": 905,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2393.08,
+          "examples": [
+            "Stan Lee's How to Draw Superheroes: From the Legendary Co-creator of the Avengers, Spider-Man, the Incredible Hulk, the Fantastic Four, the X-Men, and Iron Man",
+            "A Game of Thrones: Graphic Novel, Volume One",
+            "Star Wars: Original Trilogy Graphic Novel"
+          ]
+        },
+        {
+          "group": 450,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1618.86,
+          "examples": [
+            "The Last Mrs Parrish",
+            "Private: No. 1 Suspect: (Private 4)",
+            "The Boy is Back"
+          ]
+        },
+        {
+          "group": 404,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 681.08,
+          "examples": [
+            "Complete Screenwriting Course: A complete guide to writing, developing and marketing a script for TV or film (Teach Yourself)",
+            "The Animator's Survival Kit: A Manual of Methods, Principles and Formulas for Classical, Computer, Games, Stop Motion and Internet Animators",
+            "Screenplay: The Foundations of Screenwriting"
+          ]
+        },
+        {
+          "group": 1806,
+          "latents": [
+            204
+          ],
+          "gain_margin": 537.53,
+          "examples": [
+            "On Film-making: An Introduction to the Craft of the Director",
+            "Hal Higdon's Half Marathon Training",
+            "Justice League Vol. 4: The Grid (The New 52)"
+          ]
+        },
+        {
+          "group": 904,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 419.85,
+          "examples": [
+            "Marvel's Avengers: Infinity War Prelude",
+            "Python Tricks: A Buffet of Awesome Python Features",
+            "Data Structures & Algorithms Interview Questions You'll Most Likely Be Asked: 6 (Job Interview Questions)"
+          ]
+        }
+      ]
+    }
+  }
+}

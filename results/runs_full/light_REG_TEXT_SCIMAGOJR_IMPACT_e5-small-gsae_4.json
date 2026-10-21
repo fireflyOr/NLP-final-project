@@ -1,0 +1,784 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -23.71933169307794,
+  "test_error": 23.71933169307794,
+  "course_metric": "r2",
+  "course_score": 0.8424417581764538,
+  "n_text_cols": 10,
+  "n_text_features": 300,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 153.0958857536316,
+  "diagnostics": {
+    "Areas": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 920,
+      "n_groups": 909,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 692,
+      "n_removed": 698,
+      "var_share_removed": 0.3229,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 173,
+          "latents": [
+            1384
+          ],
+          "gain_margin": 733.4,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience; Psychology",
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience",
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience"
+          ]
+        },
+        {
+          "group": 421,
+          "latents": [
+            1229
+          ],
+          "gain_margin": 150.64,
+          "examples": [
+            "Medicine",
+            "Medicine",
+            "Medicine"
+          ]
+        },
+        {
+          "group": 320,
+          "latents": [
+            1320
+          ],
+          "gain_margin": 134.39,
+          "examples": [
+            "Immunology and Microbiology",
+            "Immunology and Microbiology",
+            "Immunology and Microbiology"
+          ]
+        },
+        {
+          "group": 223,
+          "latents": [
+            1836
+          ],
+          "gain_margin": 130.62,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Computer Science",
+            "Biochemistry, Genetics and Molecular Biology; Mathematics",
+            "Biochemistry, Genetics and Molecular Biology; Mathematics"
+          ]
+        },
+        {
+          "group": 814,
+          "latents": [
+            1071
+          ],
+          "gain_margin": 128.47,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Medicine; Nursing",
+            "Biochemistry, Genetics and Molecular Biology; Medicine; Nursing",
+            "Biochemistry, Genetics and Molecular Biology; Medicine; Nursing"
+          ]
+        }
+      ]
+    },
+    "Categories": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1323,
+      "n_groups": 1280,
+      "n_multi_groups": 37,
+      "n_groups_dropped": 909,
+      "n_removed": 920,
+      "var_share_removed": 0.3936,
+      "var_share_sae_error": 0.0051,
+      "top": [
+        {
+          "group": 1135,
+          "latents": [
+            263
+          ],
+          "gain_margin": 3046.83,
+          "examples": [
+            "History (Q1)",
+            "History (Q1)",
+            "History (Q1)"
+          ]
+        },
+        {
+          "group": 812,
+          "latents": [
+            947
+          ],
+          "gain_margin": 752.92,
+          "examples": [
+            "Hematology (Q2); Cell Biology (Q3); Developmental Biology (Q3)",
+            "Embryology (Q3); Developmental Biology (Q4)",
+            "Cell Biology (Q1); Histology (Q1)"
+          ]
+        },
+        {
+          "group": 75,
+          "latents": [
+            1866
+          ],
+          "gain_margin": 543.53,
+          "examples": [
+            "Epidemiology (Q4)",
+            "Surgery (Q4)",
+            "Surgery (Q4)"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            296,
+            1211
+          ],
+          "gain_margin": 352.01,
+          "examples": [
+            "Analytical Chemistry (Q2); Chemistry (miscellaneous) (Q2)",
+            "Neurology (Q2); Neurology (clinical) (Q2); Neuroscience (miscellaneous) (Q3)",
+            "Medicine (miscellaneous) (Q2); Pharmacology (Q2); Pharmacology (medical) (Q2)"
+          ]
+        },
+        {
+          "group": 1098,
+          "latents": [
+            886
+          ],
+          "gain_margin": 237.98,
+          "examples": [
+            "Forestry (Q1)",
+            "Forestry (Q1)",
+            "Forestry (Q1)"
+          ]
+        }
+      ]
+    },
+    "Citations / Doc  (2years)": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1219,
+      "n_groups": 1201,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 960,
+      "n_removed": 962,
+      "var_share_removed": 0.409,
+      "var_share_sae_error": 0.003,
+      "top": [
+        {
+          "group": 294,
+          "latents": [
+            1111
+          ],
+          "gain_margin": 1583.15,
+          "examples": [
+            "15,01",
+            "16,00",
+            "13,76"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            1391,
+            1534
+          ],
+          "gain_margin": 1070.89,
+          "examples": [
+            "0,33",
+            "0,33",
+            "0,33"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            81,
+            384,
+            830,
+            1682
+          ],
+          "gain_margin": 598.35,
+          "examples": [
+            "3,00",
+            "3,00",
+            "3,00"
+          ]
+        },
+        {
+          "group": 281,
+          "latents": [
+            1583
+          ],
+          "gain_margin": 369.46,
+          "examples": [
+            "25,86",
+            "25,91",
+            "25,28"
+          ]
+        },
+        {
+          "group": 186,
+          "latents": [
+            1875
+          ],
+          "gain_margin": 365.02,
+          "examples": [
+            "9,62",
+            "9,62",
+            "9,09"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 658,
+      "n_groups": 652,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 605,
+      "n_removed": 609,
+      "var_share_removed": 0.7047,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 126,
+          "latents": [
+            1458
+          ],
+          "gain_margin": 725.36,
+          "examples": [
+            "Nepal",
+            "Nepal",
+            "Nepal"
+          ]
+        },
+        {
+          "group": 623,
+          "latents": [
+            192
+          ],
+          "gain_margin": 426.16,
+          "examples": [
+            "United States",
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "group": 365,
+          "latents": [
+            862
+          ],
+          "gain_margin": 277.68,
+          "examples": [
+            "Bhutan",
+            "Tajikistan",
+            "Ethiopia"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            70,
+            358,
+            1275
+          ],
+          "gain_margin": 204.11,
+          "examples": [
+            "United Kingdom",
+            "United Kingdom",
+            "United Kingdom"
+          ]
+        },
+        {
+          "group": 287,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 146.9,
+          "examples": [
+            "China",
+            "China",
+            "China"
+          ]
+        }
+      ]
+    },
+    "Coverage": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1028,
+      "n_groups": 939,
+      "n_multi_groups": 71,
+      "n_groups_dropped": 705,
+      "n_removed": 741,
+      "var_share_removed": 0.2175,
+      "var_share_sae_error": 0.0025,
+      "top": [
+        {
+          "group": 30,
+          "latents": [
+            421,
+            761
+          ],
+          "gain_margin": 1436.29,
+          "examples": [
+            "1961, 1980-2023",
+            "1960-1985, 1987-2024",
+            "1980, 1988, 2009, 2011-2025"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            836,
+            1586
+          ],
+          "gain_margin": 760.69,
+          "examples": [
+            "1919-1924, 1927-1935, 1937-2025",
+            "1930, 1932-2025",
+            "1919-1921, 1924-1925, 1928-1932, 1934-1937, 1939, 1975-2002, 2004, 2006-2025"
+          ]
+        },
+        {
+          "group": 406,
+          "latents": [
+            1082
+          ],
+          "gain_margin": 690.4,
+          "examples": [
+            "1966-1984, 1986-2025",
+            "1986-2025",
+            "1986-2025"
+          ]
+        },
+        {
+          "group": 41,
+          "latents": [
+            547,
+            1568
+          ],
+          "gain_margin": 675.1,
+          "examples": [
+            "2019-2024",
+            "2019-2024",
+            "2019-2024"
+          ]
+        },
+        {
+          "group": 59,
+          "latents": [
+            25,
+            1487
+          ],
+          "gain_margin": 649.21,
+          "examples": [
+            "1973-2025",
+            "1973-2025",
+            "1973-2025"
+          ]
+        }
+      ]
+    },
+    "Issn": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1504,
+      "n_groups": 1373,
+      "n_multi_groups": 115,
+      "n_groups_dropped": 1045,
+      "n_removed": 1105,
+      "var_share_removed": 0.3586,
+      "var_share_sae_error": 0.0157,
+      "top": [
+        {
+          "group": 922,
+          "latents": [
+            385
+          ],
+          "gain_margin": 1207.92,
+          "examples": [
+            "16463714",
+            "21520801",
+            "10242708"
+          ]
+        },
+        {
+          "group": 51,
+          "latents": [
+            647,
+            1667
+          ],
+          "gain_margin": 1148.72,
+          "examples": [
+            "0073277X",
+            "00497878",
+            "0091679X"
+          ]
+        },
+        {
+          "group": 581,
+          "latents": [
+            87
+          ],
+          "gain_margin": 674.62,
+          "examples": [
+            "26737140",
+            "26738112",
+            "27658511"
+          ]
+        },
+        {
+          "group": 152,
+          "latents": [
+            55,
+            238
+          ],
+          "gain_margin": 556.15,
+          "examples": [
+            "1537209X",
+            "15313220",
+            "1537260X"
+          ]
+        },
+        {
+          "group": 1128,
+          "latents": [
+            470
+          ],
+          "gain_margin": 321.67,
+          "examples": [
+            "1536013X, 01622870",
+            "00103624, 15322416",
+            "15318249, 03645134"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1923,
+      "n_groups": 1923,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1599,
+      "n_removed": 1599,
+      "var_share_removed": 0.6237,
+      "var_share_sae_error": 0.0142,
+      "top": [
+        {
+          "group": 1908,
+          "latents": [
+            7
+          ],
+          "gain_margin": 516.55,
+          "examples": [
+            "European Association for American Studies",
+            "American Journal of Science",
+            "American Museum of Natural History"
+          ]
+        },
+        {
+          "group": 798,
+          "latents": [
+            910
+          ],
+          "gain_margin": 263.18,
+          "examples": [
+            "Elsevier",
+            "Elsevier Inc.",
+            "Elsevier Inc."
+          ]
+        },
+        {
+          "group": 508,
+          "latents": [
+            1563
+          ],
+          "gain_margin": 232.55,
+          "examples": [
+            "Copernicus Publications",
+            "Copernicus Publications",
+            "Copernicus Publications"
+          ]
+        },
+        {
+          "group": 886,
+          "latents": [
+            1542
+          ],
+          "gain_margin": 182.66,
+          "examples": [
+            "African Center for Research and Information on Substance Abuse",
+            "International Association for Identification",
+            "National Association of Social Workers"
+          ]
+        },
+        {
+          "group": 1313,
+          "latents": [
+            827
+          ],
+          "gain_margin": 159.32,
+          "examples": [
+            "Cold Spring Harbor Laboratory Press",
+            "Cold Spring Harbor Laboratory Press",
+            "Forest Herbarium"
+          ]
+        }
+      ]
+    },
+    "Ref  / Doc ": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 946,
+      "n_groups": 764,
+      "n_multi_groups": 117,
+      "n_groups_dropped": 561,
+      "n_removed": 670,
+      "var_share_removed": 0.5446,
+      "var_share_sae_error": 0.0031,
+      "top": [
+        {
+          "group": 58,
+          "latents": [
+            925,
+            1368,
+            1669,
+            1712,
+            1850
+          ],
+          "gain_margin": 206.59,
+          "examples": [
+            "56,01",
+            "56,00",
+            "56,00"
+          ]
+        },
+        {
+          "group": 174,
+          "latents": [
+            1595
+          ],
+          "gain_margin": 191.78,
+          "examples": [
+            "65,66",
+            "66,55",
+            "65,65"
+          ]
+        },
+        {
+          "group": 247,
+          "latents": [
+            1120
+          ],
+          "gain_margin": 91.72,
+          "examples": [
+            "70,92",
+            "70,90",
+            "90,92"
+          ]
+        },
+        {
+          "group": 370,
+          "latents": [
+            590
+          ],
+          "gain_margin": 88.24,
+          "examples": [
+            "83,00",
+            "83,06",
+            "83,06"
+          ]
+        },
+        {
+          "group": 422,
+          "latents": [
+            1071
+          ],
+          "gain_margin": 73.84,
+          "examples": [
+            "146,00",
+            "131,00",
+            "131,00"
+          ]
+        }
+      ]
+    },
+    "SJR": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1420,
+      "n_groups": 1411,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 1114,
+      "n_removed": 1114,
+      "var_share_removed": 0.4808,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 14,
+          "latents": [
+            259,
+            384,
+            1538
+          ],
+          "gain_margin": 1648.26,
+          "examples": [
+            "3,137",
+            "1,137",
+            "1,139"
+          ]
+        },
+        {
+          "group": 698,
+          "latents": [
+            1513
+          ],
+          "gain_margin": 1568.81,
+          "examples": [
+            "4,383",
+            "4,483",
+            "4,866"
+          ]
+        },
+        {
+          "group": 10,
+          "latents": [
+            543,
+            703
+          ],
+          "gain_margin": 1253.87,
+          "examples": [
+            "1,000",
+            "1,019",
+            "1,019"
+          ]
+        },
+        {
+          "group": 1187,
+          "latents": [
+            424
+          ],
+          "gain_margin": 1089.14,
+          "examples": [
+            "18,333",
+            "18,288",
+            "5,100"
+          ]
+        },
+        {
+          "group": 1338,
+          "latents": [
+            888
+          ],
+          "gain_margin": 503.13,
+          "examples": [
+            "17,669",
+            "17,458",
+            "7,543"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2029,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 1584,
+      "n_removed": 1590,
+      "var_share_removed": 0.4924,
+      "var_share_sae_error": 0.0626,
+      "top": [
+        {
+          "group": 4,
+          "latents": [
+            41,
+            536
+          ],
+          "gain_margin": 682.72,
+          "examples": [
+            "Work",
+            "Power",
+            "Animal"
+          ]
+        },
+        {
+          "group": 545,
+          "latents": [
+            1136
+          ],
+          "gain_margin": 560.2,
+          "examples": [
+            "Biology Open",
+            "Biochemist",
+            "Biophysical Chemistry"
+          ]
+        },
+        {
+          "group": 2026,
+          "latents": [
+            306
+          ],
+          "gain_margin": 534.06,
+          "examples": [
+            "Journal of Geology",
+            "Journal of Cytology",
+            "Journal of Ecology"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            381,
+            483,
+            1543,
+            1622,
+            1633
+          ],
+          "gain_margin": 307.51,
+          "examples": [
+            "General Relativity and Gravitation",
+            "Sexual Offending: Theory, Research, and Prevention",
+            "Cardiovascular Endocrinology and Metabolism"
+          ]
+        },
+        {
+          "group": 961,
+          "latents": [
+            960
+          ],
+          "gain_margin": 239.76,
+          "examples": [
+            "American Journalism",
+            "Journal of American Studies",
+            "American Art"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13331.19400350651,
+  "test_error": 13331.19400350651,
+  "course_metric": "r2",
+  "course_score": 0.742847283269854,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.68003010749817,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2035,
+      "n_groups": 2025,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1224,
+      "n_removed": 1225,
+      "var_share_removed": 0.5597,
+      "var_share_sae_error": 0.0259,
+      "top": [
+        {
+          "group": 882,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 759.56,
+          "examples": [
+            "Underwood, C*",
+            "Williams, R*",
+            "Brown, C*"
+          ]
+        },
+        {
+          "group": 97,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 553.45,
+          "examples": [
+            "Kellner, B W",
+            "Kellner, B W",
+            "Kellner, B W"
+          ]
+        },
+        {
+          "group": 2024,
+          "latents": [
+            204
+          ],
+          "gain_margin": 504.19,
+          "examples": [
+            "Goldsmith, S",
+            "Goldsmith, S",
+            "Goldsmith, S"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            813,
+            1492
+          ],
+          "gain_margin": 383.48,
+          "examples": [
+            "Scully, J",
+            "Price, E",
+            "Ruz Hernandez, R"
+          ]
+        },
+        {
+          "group": 616,
+          "latents": [
+            1482
+          ],
+          "gain_margin": 365.72,
+          "examples": [
+            "Wray, B A",
+            "Wray, B A",
+            "Wray, B A"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 952,
+      "n_groups": 950,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 633,
+      "n_removed": 633,
+      "var_share_removed": 0.5412,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 825,
+          "latents": [
+            204
+          ],
+          "gain_margin": 9690.05,
+          "examples": [
+            "Technical Director",
+            "Technical Director",
+            "Technical Director"
+          ]
+        },
+        {
+          "group": 839,
+          "latents": [
+            323
+          ],
+          "gain_margin": 4772.31,
+          "examples": [
+            "Director Social Policy",
+            "Director Social Policy",
+            "Director Social Policy"
+          ]
+        },
+        {
+          "group": 152,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 4623.14,
+          "examples": [
+            "DEPUTY GENERAL MANAGER, ACT",
+            "Deputy General Manager",
+            "Deputy General Manager"
+          ]
+        },
+        {
+          "group": 848,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3489.05,
+          "examples": [
+            "Chief Information Officer (IT)",
+            "Chief Human Resources Officer",
+            "Chief Communications Officer"
+          ]
+        },
+        {
+          "group": 214,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 2666.18,
+          "examples": [
+            "Auditor General",
+            "Deputy Chief Election Officer (T)",
+            "Deputy City Engineer"
+          ]
+        }
+      ]
+    }
+  }
+}

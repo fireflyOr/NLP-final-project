@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.3665507589879793,
+  "test_error": 1.3665507589879793,
+  "course_metric": "r2",
+  "course_score": 0.3428644767787593,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.49672293663025,
+  "diagnostics": {
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 398,
+      "n_removed": 114,
+      "threshold": 0.0471,
+      "passed_test": 34,
+      "removed_norm_ratio": 0.3921,
+      "var_share_kept": 0.5893,
+      "var_share_sae_error": 0.2145,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 283,
+          "score": 0.15,
+          "n_active": 651,
+          "examples": [
+            "Kirby's Epic Yarn",
+            "Kirby Tilt 'n' Tumble",
+            "Super Princess Peach"
+          ]
+        },
+        {
+          "latent": 212,
+          "score": 0.1431,
+          "n_active": 966,
+          "examples": [
+            "Dark Souls",
+            "Dark Souls",
+            "Bleach: Dark Souls"
+          ]
+        },
+        {
+          "latent": 80,
+          "score": 0.136,
+          "n_active": 640,
+          "examples": [
+            "Grand Theft Auto 2",
+            "Grand Theft Auto V",
+            "Grand Theft Auto V"
+          ]
+        },
+        {
+          "latent": 450,
+          "score": 0.1323,
+          "n_active": 595,
+          "examples": [
+            "Mario Bros.",
+            "Dr. Mario",
+            "Dr. Mario"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.1273,
+          "n_active": 1308,
+          "examples": [
+            "Tom Clancy's Rainbow Six: Siege",
+            "Tom Clancy's Rainbow Six: Siege",
+            "Military History: Commander - Europe at War"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 505,
+      "n_kept": 475,
+      "n_removed": 37,
+      "threshold": 0.0527,
+      "passed_test": 46,
+      "removed_norm_ratio": 0.222,
+      "var_share_kept": 0.9386,
+      "var_share_sae_error": 0.0009,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 244,
+          "score": 0.2201,
+          "n_active": 409,
+          "examples": [
+            "Indie Games",
+            "Indie Games",
+            "JVC"
+          ]
+        },
+        {
+          "latent": 60,
+          "score": 0.2029,
+          "n_active": 1182,
+          "examples": [
+            "Jack of All Games",
+            "Jack of All Games",
+            "Jack of All Games"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1951,
+          "n_active": 461,
+          "examples": [
+            "2D Boy",
+            "Phantagram",
+            "XS Games"
+          ]
+        },
+        {
+          "latent": 190,
+          "score": 0.1922,
+          "n_active": 492,
+          "examples": [
+            "Alchemist",
+            "Alchemist",
+            "Alchemist"
+          ]
+        },
+        {
+          "latent": 26,
+          "score": 0.1902,
+          "n_active": 548,
+          "examples": [
+            "Paradox Development",
+            "Paradox Interactive",
+            "Paradox Interactive"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13740.88530272268,
+  "test_error": 13740.88530272268,
+  "course_metric": "r2",
+  "course_score": 0.726798896808493,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.80425453186035,
+  "diagnostics": {
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 343,
+      "n_removed": 169,
+      "threshold": 0.0422,
+      "passed_test": 4,
+      "removed_norm_ratio": 0.5396,
+      "var_share_kept": 0.5486,
+      "var_share_sae_error": 0.1511,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 124,
+          "score": 0.0768,
+          "n_active": 124,
+          "examples": [
+            "Novak, R*",
+            "Williams, R*",
+            "Kapoor, S*"
+          ]
+        },
+        {
+          "latent": 438,
+          "score": 0.0477,
+          "n_active": 661,
+          "examples": [
+            "Kidds, C",
+            "Kidds, C",
+            "Kidds, C"
+          ]
+        },
+        {
+          "latent": 420,
+          "score": 0.0409,
+          "n_active": 588,
+          "examples": [
+            "Schmidt, F",
+            "Schmidt, F",
+            "Schmidt, F"
+          ]
+        },
+        {
+          "latent": 387,
+          "score": 0.0395,
+          "n_active": 491,
+          "examples": [
+            "Kang, H",
+            "Graves, L*",
+            "Yu, T T.L."
+          ]
+        },
+        {
+          "latent": 227,
+          "score": 0.0384,
+          "n_active": 463,
+          "examples": [
+            "Barker, S",
+            "Barker, S",
+            "Barker, S"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 463,
+      "n_removed": 49,
+      "threshold": 0.0416,
+      "passed_test": 261,
+      "removed_norm_ratio": 0.2033,
+      "var_share_kept": 0.9145,
+      "var_share_sae_error": 0.0084,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 180,
+          "score": 0.2874,
+          "n_active": 372,
+          "examples": [
+            "Director Carnegie & Comm Centre Programs",
+            "Director Carnegie & Comm Centre Programs",
+            "Director Public Space & Street Use"
+          ]
+        },
+        {
+          "latent": 399,
+          "score": 0.2556,
+          "n_active": 817,
+          "examples": [
+            "Manager Budget & Financial Strategy",
+            "Manager Budget & Financial Strategy",
+            "Manager, Programming & Learning"
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.2426,
+          "n_active": 224,
+          "examples": [
+            "General Manager-Parks & Recreation",
+            "Deputy General Manager",
+            "Deputy General Manager"
+          ]
+        },
+        {
+          "latent": 386,
+          "score": 0.2423,
+          "n_active": 715,
+          "examples": [
+            "Corporate Compliance Analyst",
+            "Chief Of Staff",
+            "Chief Communications Officer"
+          ]
+        },
+        {
+          "latent": 338,
+          "score": 0.2226,
+          "n_active": 466,
+          "examples": [
+            "Sr Mgr Technology Planning",
+            "Sr Mgr Technology Planning",
+            "Director Civic Theatres"
+          ]
+        }
+      ]
+    }
+  }
+}

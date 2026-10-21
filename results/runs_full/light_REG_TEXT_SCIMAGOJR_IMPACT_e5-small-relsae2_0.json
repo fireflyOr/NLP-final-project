@@ -1,0 +1,669 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -21.02324286936901,
+  "test_error": 21.02324286936901,
+  "course_metric": "r2",
+  "course_score": 0.8494287575735691,
+  "n_text_cols": 10,
+  "n_text_features": 300,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 175.42836046218872,
+  "diagnostics": {
+    "Areas": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 483,
+      "n_kept": 404,
+      "n_removed": 108,
+      "threshold": 0.0533,
+      "passed_test": 31,
+      "removed_norm_ratio": 0.3298,
+      "var_share_kept": 0.6792,
+      "var_share_sae_error": 0.0005,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 104,
+          "score": 0.0853,
+          "n_active": 55,
+          "examples": [
+            "Multidisciplinary; Social Sciences",
+            "Multidisciplinary; Social Sciences",
+            "Multidisciplinary; Social Sciences"
+          ]
+        },
+        {
+          "latent": 431,
+          "score": 0.0772,
+          "n_active": 961,
+          "examples": [
+            "Veterinary",
+            "Veterinary",
+            "Veterinary"
+          ]
+        },
+        {
+          "latent": 95,
+          "score": 0.0753,
+          "n_active": 64,
+          "examples": [
+            "Engineering; Multidisciplinary",
+            "Engineering; Multidisciplinary",
+            "Medicine; Multidisciplinary"
+          ]
+        },
+        {
+          "latent": 42,
+          "score": 0.0744,
+          "n_active": 789,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology",
+            "Biochemistry, Genetics and Molecular Biology",
+            "Biochemistry, Genetics and Molecular Biology"
+          ]
+        },
+        {
+          "latent": 211,
+          "score": 0.0725,
+          "n_active": 68,
+          "examples": [
+            "Multidisciplinary",
+            "Multidisciplinary",
+            "Multidisciplinary"
+          ]
+        }
+      ]
+    },
+    "Categories": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 504,
+      "n_kept": 373,
+      "n_removed": 139,
+      "threshold": 0.0469,
+      "passed_test": 11,
+      "removed_norm_ratio": 0.4691,
+      "var_share_kept": 0.6728,
+      "var_share_sae_error": 0.0116,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 121,
+          "score": 0.0745,
+          "n_active": 771,
+          "examples": [
+            "Histology (Q1); Cell Biology (Q2)",
+            "Histology (Q4)",
+            "Histology (Q2); Medicine (miscellaneous) (Q2); Cell Biology (Q3); Physiology (Q3)"
+          ]
+        },
+        {
+          "latent": 497,
+          "score": 0.0717,
+          "n_active": 71,
+          "examples": [
+            "Multidisciplinary",
+            "Multidisciplinary (Q2)",
+            "Multidisciplinary (Q2)"
+          ]
+        },
+        {
+          "latent": 138,
+          "score": 0.0616,
+          "n_active": 543,
+          "examples": [
+            "Plant Science (Q1)",
+            "Plant Science (Q1)",
+            "Plant Science (Q1)"
+          ]
+        },
+        {
+          "latent": 178,
+          "score": 0.0542,
+          "n_active": 140,
+          "examples": [
+            "Physiology (Q1)",
+            "Physiology (Q2); Physiology (medical) (Q2)",
+            "Physiology (medical) (Q4)"
+          ]
+        },
+        {
+          "latent": 327,
+          "score": 0.0523,
+          "n_active": 5299,
+          "examples": [
+            "Oral Surgery (Q2); Surgery (Q2)",
+            "Oral Surgery (Q2); Surgery (Q2)",
+            "Oral Surgery (Q3); Surgery (Q3)"
+          ]
+        }
+      ]
+    },
+    "Citations / Doc  (2years)": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 493,
+      "n_kept": 287,
+      "n_removed": 225,
+      "threshold": 0.0481,
+      "passed_test": 2,
+      "removed_norm_ratio": 0.6175,
+      "var_share_kept": 0.4261,
+      "var_share_sae_error": 0.0011,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 166,
+          "score": 0.0564,
+          "n_active": 294,
+          "examples": [
+            "6,06",
+            "6,06",
+            "6,06"
+          ]
+        },
+        {
+          "latent": 176,
+          "score": 0.0551,
+          "n_active": 261,
+          "examples": [
+            "6,75",
+            "6,75",
+            "6,75"
+          ]
+        },
+        {
+          "latent": 467,
+          "score": 0.047,
+          "n_active": 198,
+          "examples": [
+            "6,45",
+            "6,45",
+            "6,30"
+          ]
+        },
+        {
+          "latent": 405,
+          "score": 0.047,
+          "n_active": 476,
+          "examples": [
+            "6,00",
+            "6,09",
+            "6,09"
+          ]
+        },
+        {
+          "latent": 328,
+          "score": 0.04,
+          "n_active": 164,
+          "examples": [
+            "13,56",
+            "13,49",
+            "13,05"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 454,
+      "n_kept": 334,
+      "n_removed": 178,
+      "threshold": 0.0578,
+      "passed_test": 27,
+      "removed_norm_ratio": 0.2749,
+      "var_share_kept": 0.7279,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 490,
+          "score": 0.1057,
+          "n_active": 309,
+          "examples": [
+            "Switzerland",
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 108,
+          "score": 0.103,
+          "n_active": 348,
+          "examples": [
+            "Bahrain",
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 310,
+          "score": 0.0996,
+          "n_active": 356,
+          "examples": [
+            "Mauritius",
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 42,
+          "score": 0.0996,
+          "n_active": 338,
+          "examples": [
+            "Switzerland",
+            "Switzerland",
+            "Switzerland"
+          ]
+        },
+        {
+          "latent": 313,
+          "score": 0.0904,
+          "n_active": 828,
+          "examples": [
+            "Taiwan",
+            "Taiwan",
+            "Taiwan"
+          ]
+        }
+      ]
+    },
+    "Coverage": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 445,
+      "n_kept": 475,
+      "n_removed": 37,
+      "threshold": 0.0511,
+      "passed_test": 247,
+      "removed_norm_ratio": 0.0879,
+      "var_share_kept": 0.9242,
+      "var_share_sae_error": 0.0028,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 331,
+          "score": 0.2878,
+          "n_active": 2735,
+          "examples": [
+            "1961-2025",
+            "1961-2025",
+            "1961-2025"
+          ]
+        },
+        {
+          "latent": 273,
+          "score": 0.282,
+          "n_active": 2439,
+          "examples": [
+            "2015-2025",
+            "2015-2025",
+            "2015-2025"
+          ]
+        },
+        {
+          "latent": 100,
+          "score": 0.2814,
+          "n_active": 3850,
+          "examples": [
+            "1972, 1996-2025",
+            "1923-2025",
+            "1922-2025"
+          ]
+        },
+        {
+          "latent": 323,
+          "score": 0.2754,
+          "n_active": 2567,
+          "examples": [
+            "2020-2025",
+            "2020-2025",
+            "2020-2025"
+          ]
+        },
+        {
+          "latent": 141,
+          "score": 0.2626,
+          "n_active": 3107,
+          "examples": [
+            "1974-1976, 1996-2025",
+            "1963-1965, 1967-2025",
+            "1974-1994, 1996-2025"
+          ]
+        }
+      ]
+    },
+    "Issn": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 379,
+      "n_removed": 133,
+      "threshold": 0.0582,
+      "passed_test": 46,
+      "removed_norm_ratio": 0.3572,
+      "var_share_kept": 0.7445,
+      "var_share_sae_error": 0.0312,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 99,
+          "score": 0.1781,
+          "n_active": 1156,
+          "examples": [
+            "00914169",
+            "0029814X",
+            "0032681X"
+          ]
+        },
+        {
+          "latent": 54,
+          "score": 0.1661,
+          "n_active": 4326,
+          "examples": [
+            "14712164",
+            "02541416",
+            "11791314"
+          ]
+        },
+        {
+          "latent": 7,
+          "score": 0.1624,
+          "n_active": 3064,
+          "examples": [
+            "1463578X",
+            "14678802",
+            "14665123"
+          ]
+        },
+        {
+          "latent": 329,
+          "score": 0.1512,
+          "n_active": 1760,
+          "examples": [
+            "27723682",
+            "27732169",
+            "27709329"
+          ]
+        },
+        {
+          "latent": 156,
+          "score": 0.1463,
+          "n_active": 1732,
+          "examples": [
+            "1537209X",
+            "15523373, 1532673X",
+            "1530437X"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 352,
+      "n_removed": 160,
+      "threshold": 0.0488,
+      "passed_test": 21,
+      "removed_norm_ratio": 0.5079,
+      "var_share_kept": 0.642,
+      "var_share_sae_error": 0.0827,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 241,
+          "score": 0.1005,
+          "n_active": 626,
+          "examples": [
+            "Sweet and Maxwell-Thomson Reuters",
+            "Sweet and Maxwell-Thomson Reuters",
+            "Annual Reviews Inc."
+          ]
+        },
+        {
+          "latent": 111,
+          "score": 0.0741,
+          "n_active": 195,
+          "examples": [
+            "Seventh Sense Research Group",
+            "Seventh Sense Research Group",
+            "Seventh Sense Research Group"
+          ]
+        },
+        {
+          "latent": 360,
+          "score": 0.0704,
+          "n_active": 368,
+          "examples": [
+            "Royal Institution of Naval Architects",
+            "Royal Institution of Naval Architects",
+            "Multidisciplinary Digital Publishing Institute (MDPI)"
+          ]
+        },
+        {
+          "latent": 148,
+          "score": 0.0688,
+          "n_active": 426,
+          "examples": [
+            "Multidisciplinary Digital Publishing Institute (MDPI)",
+            "Multidisciplinary Digital Publishing Institute (MDPI)",
+            "Multidisciplinary Digital Publishing Institute (MDPI)"
+          ]
+        },
+        {
+          "latent": 219,
+          "score": 0.0634,
+          "n_active": 645,
+          "examples": [
+            "Studio D - akustika s. r. o.",
+            "Element D.O.O.",
+            "Element D.O.O."
+          ]
+        }
+      ]
+    },
+    "Ref  / Doc ": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 462,
+      "n_kept": 300,
+      "n_removed": 212,
+      "threshold": 0.0546,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5823,
+      "var_share_kept": 0.3708,
+      "var_share_sae_error": 0.0057,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 60,
+          "score": 0.0366,
+          "n_active": 191,
+          "examples": [
+            "12,39",
+            "12,00",
+            "12,77"
+          ]
+        },
+        {
+          "latent": 490,
+          "score": 0.0342,
+          "n_active": 118,
+          "examples": [
+            "102,00",
+            "124,45",
+            "124,19"
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.0331,
+          "n_active": 282,
+          "examples": [
+            "71,38",
+            "71,38",
+            "71,00"
+          ]
+        },
+        {
+          "latent": 333,
+          "score": 0.03,
+          "n_active": 57,
+          "examples": [
+            "11,40",
+            "11,29",
+            "11,36"
+          ]
+        },
+        {
+          "latent": 439,
+          "score": 0.029,
+          "n_active": 294,
+          "examples": [
+            "70,00",
+            "70,00",
+            "70,00"
+          ]
+        }
+      ]
+    },
+    "SJR": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 243,
+      "n_removed": 269,
+      "threshold": 0.0483,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6543,
+      "var_share_kept": 0.3788,
+      "var_share_sae_error": 0.0031,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 358,
+          "score": 0.0723,
+          "n_active": 92,
+          "examples": [
+            "19,027",
+            "19,076",
+            "19,430"
+          ]
+        },
+        {
+          "latent": 304,
+          "score": 0.045,
+          "n_active": 71,
+          "examples": [
+            "5,100",
+            "5,666",
+            "5,166"
+          ]
+        },
+        {
+          "latent": 131,
+          "score": 0.0427,
+          "n_active": 268,
+          "examples": [
+            "6,237",
+            "6,089",
+            "6,799"
+          ]
+        },
+        {
+          "latent": 226,
+          "score": 0.04,
+          "n_active": 472,
+          "examples": [
+            "37,353",
+            "2,359",
+            "2,359"
+          ]
+        },
+        {
+          "latent": 374,
+          "score": 0.0394,
+          "n_active": 394,
+          "examples": [
+            "4,006",
+            "2,046",
+            "5,076"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 316,
+      "n_removed": 196,
+      "threshold": 0.0462,
+      "passed_test": 9,
+      "removed_norm_ratio": 0.4911,
+      "var_share_kept": 0.5043,
+      "var_share_sae_error": 0.1604,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 393,
+          "score": 0.0669,
+          "n_active": 2628,
+          "examples": [
+            "Syria",
+            "Music in Art",
+            "Iran"
+          ]
+        },
+        {
+          "latent": 476,
+          "score": 0.065,
+          "n_active": 915,
+          "examples": [
+            "Diabetes Aktuell",
+            "Diabetologia",
+            "Diabetes Mellitus"
+          ]
+        },
+        {
+          "latent": 344,
+          "score": 0.0642,
+          "n_active": 716,
+          "examples": [
+            "Journal of Microbiology and Biotechnology",
+            "MicrobiologyOpen",
+            "Microbiology and Biotechnology Letters"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.0567,
+          "n_active": 1370,
+          "examples": [
+            "Molecular Metabolism",
+            "Molecular Genetics and Metabolism",
+            "Plant Physiology"
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.0548,
+          "n_active": 404,
+          "examples": [
+            "Molecular Medicine",
+            "Molecular Plant",
+            "Molecular Therapy Methods and Clinical Development"
+          ]
+        }
+      ]
+    }
+  }
+}

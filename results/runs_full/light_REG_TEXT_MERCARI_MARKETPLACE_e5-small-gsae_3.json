@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5858075041483997,
+  "test_error": 0.5858075041483997,
+  "course_metric": "r2",
+  "course_score": 0.38615369424350043,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 96.3480715751648,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1283,
+      "n_groups": 1283,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 924,
+      "n_removed": 924,
+      "var_share_removed": 0.4012,
+      "var_share_sae_error": 0.0018,
+      "top": [
+        {
+          "group": 1184,
+          "latents": [
+            383
+          ],
+          "gain_margin": 678.75,
+          "examples": [
+            "Bath & Body Works",
+            "Bath & Body Works",
+            "Bath & Body Works"
+          ]
+        },
+        {
+          "group": 1278,
+          "latents": [
+            8
+          ],
+          "gain_margin": 547.93,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 345,
+          "latents": [
+            1620
+          ],
+          "gain_margin": 281.48,
+          "examples": [
+            "Chico's",
+            "Chico's",
+            "Ice Clothing"
+          ]
+        },
+        {
+          "group": 343,
+          "latents": [
+            1346
+          ],
+          "gain_margin": 274.8,
+          "examples": [
+            "All",
+            "All",
+            "Fila"
+          ]
+        },
+        {
+          "group": 272,
+          "latents": [
+            1420
+          ],
+          "gain_margin": 270.08,
+          "examples": [
+            "Zella",
+            "Bare Minerals",
+            "Wet n Wild"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 921,
+      "n_groups": 921,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 767,
+      "n_removed": 767,
+      "var_share_removed": 0.6144,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 298,
+          "latents": [
+            800
+          ],
+          "gain_margin": 695.27,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "group": 855,
+          "latents": [
+            109
+          ],
+          "gain_margin": 496.19,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 446,
+          "latents": [
+            534
+          ],
+          "gain_margin": 419.31,
+          "examples": [
+            "Dresses",
+            "Dresses",
+            "Dresses"
+          ]
+        },
+        {
+          "group": 754,
+          "latents": [
+            205
+          ],
+          "gain_margin": 290.34,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 793,
+          "latents": [
+            275
+          ],
+          "gain_margin": 228.01,
+          "examples": [
+            "Video Games & Consoles",
+            "Video Games & Consoles",
+            "Video Games & Consoles"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1465,
+      "n_groups": 1465,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1065,
+      "n_removed": 1065,
+      "var_share_removed": 0.4574,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 1313,
+          "latents": [
+            664
+          ],
+          "gain_margin": 803.47,
+          "examples": [
+            "Digital Cameras",
+            "Digital Cameras",
+            "Digital Cameras"
+          ]
+        },
+        {
+          "group": 1120,
+          "latents": [
+            289
+          ],
+          "gain_margin": 622.94,
+          "examples": [
+            "Collared",
+            "Collared",
+            "Collared"
+          ]
+        },
+        {
+          "group": 644,
+          "latents": [
+            1003
+          ],
+          "gain_margin": 566.95,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 1263,
+          "latents": [
+            1132
+          ],
+          "gain_margin": 552.05,
+          "examples": [
+            "Trench",
+            "Trench",
+            "Trench"
+          ]
+        },
+        {
+          "group": 1233,
+          "latents": [
+            485
+          ],
+          "gain_margin": 359.77,
+          "examples": [
+            "Cables & Adapters",
+            "Cables & Adapters",
+            "Cables & Adapters"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1426,
+      "n_groups": 1425,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1035,
+      "n_removed": 1036,
+      "var_share_removed": 0.423,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 173,
+          "latents": [
+            1840
+          ],
+          "gain_margin": 791.86,
+          "examples": [
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        },
+        {
+          "group": 641,
+          "latents": [
+            365
+          ],
+          "gain_margin": 569.28,
+          "examples": [
+            "Women/Shoes/Boots",
+            "Women/Shoes/Boots",
+            "Women/Shoes/Boots"
+          ]
+        },
+        {
+          "group": 432,
+          "latents": [
+            1422
+          ],
+          "gain_margin": 454.1,
+          "examples": [
+            "Other/Automotive/Tools & Equipment",
+            "Other/Automotive/Tools & Equipment",
+            "Other/Automotive/Motorcycle & Powersports"
+          ]
+        },
+        {
+          "group": 904,
+          "latents": [
+            1656
+          ],
+          "gain_margin": 449.93,
+          "examples": [
+            "Men/Shoes/Athletic",
+            "Men/Shoes/Athletic",
+            "Men/Shoes/Athletic"
+          ]
+        },
+        {
+          "group": 1167,
+          "latents": [
+            931
+          ],
+          "gain_margin": 394.03,
+          "examples": [
+            "Electronics/Cell Phones & Accessories/Cell Phones & Smartphones",
+            "Electronics/Cell Phones & Accessories/Cell Phones & Smartphones",
+            "Electronics/Cell Phones & Accessories/Cell Phones & Smartphones"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1241,
+      "n_removed": 1242,
+      "var_share_removed": 0.3967,
+      "var_share_sae_error": 0.1157,
+      "top": [
+        {
+          "group": 614,
+          "latents": [
+            1085
+          ],
+          "gain_margin": 1067.36,
+          "examples": [
+            "Authentic",
+            "Authentic",
+            "100% authentic"
+          ]
+        },
+        {
+          "group": 428,
+          "latents": [
+            1716
+          ],
+          "gain_margin": 716.59,
+          "examples": [
+            "New in box.",
+            "Box flaw.",
+            "New in box"
+          ]
+        },
+        {
+          "group": 1796,
+          "latents": [
+            496
+          ],
+          "gain_margin": 565.13,
+          "examples": [
+            "Apple Ipad 3rd Gen, perfect condition! Ipad 3rd Gen 16 GB + 4g. I bought this a while ago but got a laptop soon after, so I've barely used it at all! Will come ",
+            "***REDUCED FROM [rm]*** iPad 2 16 GB, great condition, just a minor crack on the edge, which is not even on the display. Has been in a case most of its life, an",
+            "This is the newest fire tablet that goes for [rm] retail. I bought this in July but never use it bc I already have a laptop. No scratches or anything, just sits"
+          ]
+        },
+        {
+          "group": 395,
+          "latents": [
+            1709
+          ],
+          "gain_margin": 465.73,
+          "examples": [
+            "I'm selling my IPod Touch 2nd generation 8gb. Has it's scratches on the back and front. Works perfectly fine.",
+            "Looking to sell my iphone 6 64gb unlocked. Phone is in great condition and will work on any carrier. Battery life is great, phone was well taken care of. Imei -",
+            "New and sealed Crest 3D no slip white strips Classic Vivid Just can't use them. 20 in box Less than [rm] per strip"
+          ]
+        },
+        {
+          "group": 1414,
+          "latents": [
+            878
+          ],
+          "gain_margin": 306.26,
+          "examples": [
+            "- Does not turn on. - For parts, unless you can diagnose and repair the issue. - Phone itself is in good condition as showed on photos above. - Storage: 64GB - ",
+            "Metro Pcs phone 2GB ram Cracked screen Works great. As is With charger.",
+            "Has 128 GB. Just got a new screen for it. It's in very good condition, has minor scratches and wear. Only probably is the battery isn't the best. Comes with 2 c"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2039,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1133,
+      "n_removed": 1133,
+      "var_share_removed": 0.3606,
+      "var_share_sae_error": 0.0802,
+      "top": [
+        {
+          "group": 465,
+          "latents": [
+            1307
+          ],
+          "gain_margin": 994.52,
+          "examples": [
+            "iPad 4th Gen 16gb Buy Now, Ship Now!",
+            "*REDUCED* iPad 2 16 GB",
+            "iPhone 6 , 16GB AT&T, Black Or White"
+          ]
+        },
+        {
+          "group": 634,
+          "latents": [
+            820
+          ],
+          "gain_margin": 637.01,
+          "examples": [
+            "Michael kors",
+            "Michael kors",
+            "Michael Kors"
+          ]
+        },
+        {
+          "group": 1848,
+          "latents": [
+            1620
+          ],
+          "gain_margin": 605.91,
+          "examples": [
+            "Jordan's",
+            "Jordan's",
+            "Jordan"
+          ]
+        },
+        {
+          "group": 1956,
+          "latents": [
+            664
+          ],
+          "gain_margin": 592.53,
+          "examples": [
+            "iPhone camera tripod",
+            "Android Smart watch",
+            "ZTE ZMAX Pro 32GB Metro"
+          ]
+        },
+        {
+          "group": 1002,
+          "latents": [
+            1541
+          ],
+          "gain_margin": 559.03,
+          "examples": [
+            "Shirt",
+            "Men's shirt",
+            "Women's shirt"
+          ]
+        }
+      ]
+    }
+  }
+}

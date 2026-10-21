@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7855963789015474,
+  "test_error": 0.21440362109845257,
+  "course_metric": "auroc",
+  "course_score": 0.7855963789015475,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 41.917176961898804,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 388,
+      "n_removed": 124,
+      "threshold": 0.0414,
+      "passed_test": 32,
+      "removed_norm_ratio": 0.3332,
+      "var_share_kept": 0.4992,
+      "var_share_sae_error": 0.319,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 329,
+          "score": 0.2014,
+          "n_active": 734,
+          "examples": [
+            "Trump and his regime are morons.",
+            "This is ridiculous.",
+            "Defiant stupidity defines many Zuptoids."
+          ]
+        },
+        {
+          "latent": 234,
+          "score": 0.1111,
+          "n_active": 471,
+          "examples": [
+            "To continue Lynn's thought:\nINCOMPETENT\nin\u00b7com\u00b7pe\u00b7tence.\n[in\u02c8k\u00e4mp\u0259d\u0259ns]\nNOUN\n1.inability to do something successfully; ineptitude: \n\"allegations of professional",
+            "He is now officially an Idiot Savant.",
+            "You first have to assume that there is 'corrective action' that can be taken.  I have yet to see any publication as to what that might be.\n\nThe only thing comin"
+          ]
+        },
+        {
+          "latent": 86,
+          "score": 0.1001,
+          "n_active": 458,
+          "examples": [
+            "Life is a series of intelligence tests.  The people that bought (and buy) tickets on Frontier flights are not scoring well.",
+            "David Brooks has called President Trump a coward. Let's think about how this mild conservative Brooks, a man of moderation, might have come to this conclusion. ",
+            "Catherine Rampell is an opinion columnist for the Washington Post \u2013 of course she has never met a moderate Republican, she is part of the Beltway-Manhattan (BM)"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.0926,
+          "n_active": 641,
+          "examples": [
+            "This is snowflakery at its worst.",
+            "This kind of trash is why I hate the Globe.",
+            "poor management and changing habits in office rentals"
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0836,
+          "n_active": 2049,
+          "examples": [
+            "Good on you, sir.  Your post is succinct, to the point and has nothing to do with what I posted.",
+            "Nasty.\n\nI have no reason to lie.  You just don't like what I've said here and elsewhere because it doesn't support your position.  So yes.  You don't know what ",
+            "You forgot to add \"sarcasm\" in brackets......er, you weren't serious, were you?"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 307,
+      "n_kept": 351,
+      "n_removed": 161,
+      "threshold": 0.0408,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.7423,
+      "var_share_kept": 0.3679,
+      "var_share_sae_error": 0.0315,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 428,
+          "score": 0.0266,
+          "n_active": 1185,
+          "examples": [
+            "2017-03-20 18:40:12.552308",
+            "2017-03-30 18:00:34.102084",
+            "2017-03-24 16:00:25.139895"
+          ]
+        },
+        {
+          "latent": 201,
+          "score": 0.0247,
+          "n_active": 1354,
+          "examples": [
+            "2016-12-05 00:15:28.009644",
+            "2016-05-04 16:30:13.020504",
+            "2017-11-07 00:16:18.978384"
+          ]
+        },
+        {
+          "latent": 178,
+          "score": 0.0231,
+          "n_active": 222,
+          "examples": [
+            "2017-01-13 21:46:20.781072",
+            "2016-10-25 04:29:15.787719",
+            "2017-01-10 15:51:00.787887"
+          ]
+        },
+        {
+          "latent": 141,
+          "score": 0.0215,
+          "n_active": 1294,
+          "examples": [
+            "2017-06-06 17:17:54.042018",
+            "2017-09-18 14:11:32.336925",
+            "2017-09-18 12:16:32.988682"
+          ]
+        },
+        {
+          "latent": 210,
+          "score": 0.0212,
+          "n_active": 79,
+          "examples": [
+            "2016-05-03 00:23:05.630994",
+            "2017-10-01 14:16:18.630720",
+            "2017-07-18 13:12:41.630307"
+          ]
+        }
+      ]
+    }
+  }
+}

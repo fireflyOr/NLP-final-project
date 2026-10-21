@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8193369589426528,
+  "test_error": 0.1806630410573472,
+  "course_metric": "auroc",
+  "course_score": 0.8193369589426527,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 42.521987438201904,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 380,
+      "n_removed": 132,
+      "threshold": 0.0387,
+      "passed_test": 36,
+      "removed_norm_ratio": 0.3569,
+      "var_share_kept": 0.477,
+      "var_share_sae_error": 0.3185,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 329,
+          "score": 0.2051,
+          "n_active": 722,
+          "examples": [
+            "Trump is an idiot.",
+            "Religion is stupid.",
+            "Nonsense."
+          ]
+        },
+        {
+          "latent": 66,
+          "score": 0.1663,
+          "n_active": 555,
+          "examples": [
+            "I think you are right.  He isn't stupid, but he is ignorant and arrogant.  He is ignorant in that he doesn't fully understand the repercusions of what he says a",
+            "Speaking about who's dumb, it's clear that you don't have a clue regarding the criminal code in Colorado.",
+            "The idiots don;t have a clue"
+          ]
+        },
+        {
+          "latent": 3,
+          "score": 0.1226,
+          "n_active": 558,
+          "examples": [
+            "We are going to pay for decades for the Closet Dweller's stupidity!",
+            "That's pretty cheap for plane we'll fly for at least the next 20-30 years.",
+            "Religion is stupid."
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0961,
+          "n_active": 2287,
+          "examples": [
+            "This is your third post of the same garbage.  Exactly what is expected from a repulsive left wing troll.",
+            "\" misogynistic\"? Give us a break.",
+            "Lol.  Just a bizarre angry post void of facts."
+          ]
+        },
+        {
+          "latent": 508,
+          "score": 0.0791,
+          "n_active": 1526,
+          "examples": [
+            "Who is this chucker? Of course you know that falling bond yields are generally good for bond prices and bond proxies. right?",
+            "Devilfish! That being said, \"Christians\" always crack me up saying the things that they do.",
+            "Hey guys....(and its always the same 5-6 guys)....I just threw that last sentence about dividend stocks acting very much like bonds in  as an afterthought.\nIt i"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 332,
+      "n_kept": 344,
+      "n_removed": 168,
+      "threshold": 0.0427,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.6245,
+      "var_share_kept": 0.5017,
+      "var_share_sae_error": 0.0313,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 93,
+          "score": 0.0471,
+          "n_active": 34,
+          "examples": [
+            "2017-07-01 04:14:50.120133",
+            "2017-02-04 14:50:28.777065",
+            "2017-01-12 02:20:50.802145"
+          ]
+        },
+        {
+          "latent": 1,
+          "score": 0.0333,
+          "n_active": 3333,
+          "examples": [
+            "2016-10-16 01:10:53.016808",
+            "2016-12-16 23:38:00.751602",
+            "2017-09-30 00:54:35.757207"
+          ]
+        },
+        {
+          "latent": 15,
+          "score": 0.0296,
+          "n_active": 44,
+          "examples": [
+            "2017-02-11 19:20:23.298519",
+            "2017-08-02 19:00:23.298889",
+            "2017-07-03 13:41:33.298267"
+          ]
+        },
+        {
+          "latent": 178,
+          "score": 0.0279,
+          "n_active": 5059,
+          "examples": [
+            "2016-10-30 13:30:12.006773",
+            "2017-05-30 12:00:29.007158",
+            "2017-06-30 14:04:00.095706"
+          ]
+        },
+        {
+          "latent": 142,
+          "score": 0.0263,
+          "n_active": 20,
+          "examples": [
+            "2016-04-05 04:00:57.975711",
+            "2017-06-14 12:00:53.231982",
+            "2017-06-24 19:00:56.188879"
+          ]
+        }
+      ]
+    }
+  }
+}

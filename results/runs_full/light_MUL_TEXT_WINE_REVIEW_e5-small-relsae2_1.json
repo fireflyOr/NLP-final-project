@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3142681945740875,
+  "test_error": 1.3142681945740875,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9691126340042264,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 55.36697554588318,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 504,
+      "n_removed": 8,
+      "threshold": 0.0557,
+      "passed_test": 205,
+      "removed_norm_ratio": 0.0313,
+      "var_share_kept": 0.7654,
+      "var_share_sae_error": 0.2195,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 390,
+          "score": 0.3662,
+          "n_active": 852,
+          "examples": [
+            "Made in the popular style, this Chardonnay features buttered popcorn, pineapple jam and buttered toast flavors. Turns cloyingly sweet on the finish.",
+            "This is a fairly big, creamy-textured Chardonnay to consume over the next couple of years. Grilled sweet corn features, but it's backed by ample citrus and peac",
+            "Richness and elegance go toe-to-toe in this creamy yet crisp, fruity Chardonnay. It's lavishly textured, enriched by streaks of butter and cream, yet pristine a"
+          ]
+        },
+        {
+          "latent": 103,
+          "score": 0.3146,
+          "n_active": 747,
+          "examples": [
+            "Some kind of magic is happening here. As the lowest-priced Chardonnay in Stoller's lineup, this may turn out to be your favorite. Using all-stainless steel, thi",
+            "A few years of age have turned this South Australia Chardonnay into a highly nuanced tipple. Kerosene, hay and coconut aromas play off fragrant blood orange sce",
+            "Nutty and dry, this Chardonnay-only sparkler tastes of almond paste, dried apple, dried citrus peel and toasty oak. It's vibrantly balanced and fulfilling."
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.3071,
+          "n_active": 127,
+          "examples": [
+            "While a bit savory on the nose, with notes of pressed apple, lemon and stem, this off-dry Gew\u00fcrztraminer is fresh and bright on the palate, with crisp pear flav",
+            "Delightfully fresh, this off-dry Gew\u00fcrztraminer wafts of zesty tangerine peels, lychee and blossom. Sweet citrus flavors are concentrated but brisk, tinged by h",
+            "Voluptuous and a bit brawny, this ebulliently perfumed Gew\u00fcrztraminer is hardly a wall flower. It's lavishly fruity, bursting of sun-kissed grapefruit, lychee a"
+          ]
+        },
+        {
+          "latent": 267,
+          "score": 0.2989,
+          "n_active": 495,
+          "examples": [
+            "A dry, light-bodied, easy-drinking Riesling, this has zesty lemon and grapefruit flavors, plus undertones of flower and spiced tangerine. The palate shows depth",
+            "Riesling has an ability to unite opposites: ripeness and tartness of fruit, a slender frame and unexpected weight. This dry and harmonious wine shows off these ",
+            "Steely and sharp yet delicately sweet, this medium-bodied Riesling keeps a balance between austerity and forward fruitiness. It's vibrantly fresh, with crisp gr"
+          ]
+        },
+        {
+          "latent": 432,
+          "score": 0.2949,
+          "n_active": 224,
+          "examples": [
+            "This Zin is so ripe and rich in milk chocolate, cappuccino and blackberry jam flavors, you hardly know what to make of it. You could drink it on its own, for it",
+            "Sweet and candied, this Zin, which is a blend of Mount Veeder and Oakville fruit, is obviously superripe in blackberries, cherries, raspberries, mocha and dusty",
+            "Earthy, soft and dry, this Zin has tobacco, cherry, blackberry and spice flavors, with an edge of sweet leather and pine. It's a refreshingly simple country-sty"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 478,
+      "n_kept": 496,
+      "n_removed": 16,
+      "threshold": 0.0657,
+      "passed_test": 355,
+      "removed_norm_ratio": 0.0319,
+      "var_share_kept": 0.981,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 336,
+          "score": 0.7031,
+          "n_active": 121,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "latent": 256,
+          "score": 0.6736,
+          "n_active": 235,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.6498,
+          "n_active": 253,
+          "examples": [
+            "Puente Alto",
+            "Puente Alto",
+            "\u00d6sterreichischer Sekt"
+          ]
+        },
+        {
+          "latent": 17,
+          "score": 0.6288,
+          "n_active": 273,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "latent": 84,
+          "score": 0.5825,
+          "n_active": 315,
+          "examples": [
+            "Goriska Brda",
+            "Goriska Brda",
+            "Lombardy"
+          ]
+        }
+      ]
+    }
+  }
+}

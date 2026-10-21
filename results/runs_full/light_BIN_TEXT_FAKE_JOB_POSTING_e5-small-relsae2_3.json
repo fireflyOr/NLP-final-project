@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-relsae2",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9251786594381469,
+  "test_error": 0.07482134056185308,
+  "course_metric": "auroc",
+  "course_score": 0.9251786594381469,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 57.632330894470215,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 371,
+      "n_removed": 141,
+      "threshold": 0.0434,
+      "passed_test": 34,
+      "removed_norm_ratio": 0.396,
+      "var_share_kept": 0.5309,
+      "var_share_sae_error": 0.2595,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 342,
+          "score": 0.1174,
+          "n_active": 558,
+          "examples": [
+            "Green Street Advisors is the preeminent independent research, trading and consulting firm concentrating on Real Estate Investment Trusts (REITs) and other publi",
+            "Open to graduating Seniors of the Class of 2015 only.Founded in 1985, Green Street Advisors is the preeminent independent research, trading, and consulting firm",
+            "Green Street Advisors is the preeminent independent research, trading and consulting firm concentrating on Real Estate Investment Trusts (REITs) and other publi"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.0953,
+          "n_active": 529,
+          "examples": [
+            "We are currently seeking a General Clerk I. The right candidate will be an integral part of our talented team, supporting our continued growth. This position wi",
+            "The Accounting Clerk will work in a team environment providing general clerical, accounting and office support. Primary duties will include but are not limited ",
+            "Data Entry ClerkData Entry Clerk Job Purpose: Maintains database by entering new and updated customer and account information.Data Entry Clerk Job Duties:Prepar"
+          ]
+        },
+        {
+          "latent": 426,
+          "score": 0.0923,
+          "n_active": 426,
+          "examples": [
+            "PART TIMERS Required For Cash Pay Jobs.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cas",
+            "URGENT Job Full Time &amp; Part Time, Cash Pay.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get big",
+            "Hiring Part-Time Workers (CASH PAYING)You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cash"
+          ]
+        },
+        {
+          "latent": 164,
+          "score": 0.0906,
+          "n_active": 629,
+          "examples": [
+            "Play with kids, get paid for it\u00a0Love travel? Jobs in Asia$1500 USD + monthly ($200 Cost of living)Housing providedAirfare ReimbursedExcellent for student loans/",
+            "Play with kids, get paid for it :-)Love travel? Jobs in Asia$1500 USD + monthly ($200 Cost of living)Housing providedAirfare ReimbursedExcellent for student loa",
+            "Salary--ranges to $125KBrief DescriptionResponsible for the effectiveness of the hospitial-wide case management program. Develops staff adept and efficient at m"
+          ]
+        },
+        {
+          "latent": 436,
+          "score": 0.0856,
+          "n_active": 621,
+          "examples": [
+            "Answer Call Center incoming telephone calls, e-mail inquiries and instant message chats from clients and participants in a professional, courteous and timely ma",
+            "Duties and Responsibilities:Answer Call Center incoming telephone calls, e-mail inquiries and instant message chats from clients and participants in a professio",
+            "May answer telephone and/or greets visitors giving general information in response to inquiries. May deliver oral and written messages to unit members. May sort"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 320,
+      "n_kept": 462,
+      "n_removed": 50,
+      "threshold": 0.0468,
+      "passed_test": 58,
+      "removed_norm_ratio": 0.066,
+      "var_share_kept": 0.9311,
+      "var_share_sae_error": 0.0016,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 142,
+          "score": 0.0837,
+          "n_active": 25,
+          "examples": [
+            "2000-5000",
+            "1000-2000",
+            "1000-2000"
+          ]
+        },
+        {
+          "latent": 161,
+          "score": 0.0829,
+          "n_active": 32,
+          "examples": [
+            "13-20",
+            "13-15",
+            "13-15"
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.0784,
+          "n_active": 62,
+          "examples": [
+            "2800-3500",
+            "28000-28000",
+            "28000-45000"
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.0761,
+          "n_active": 1271,
+          "examples": [
+            "168000-216000",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 316,
+          "score": 0.0753,
+          "n_active": 51,
+          "examples": [
+            "27000-34280",
+            "23000-27000",
+            "23040-28800"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 380,
+      "n_removed": 132,
+      "threshold": 0.0463,
+      "passed_test": 31,
+      "removed_norm_ratio": 0.4193,
+      "var_share_kept": 0.6689,
+      "var_share_sae_error": 0.1011,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 373,
+          "score": 0.1053,
+          "n_active": 287,
+          "examples": [
+            "Administrative Assistant ",
+            "Administrative Assistant ",
+            "Administrative Assistant "
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.1045,
+          "n_active": 313,
+          "examples": [
+            "Office Manager",
+            "Office Manager",
+            "Office Manager"
+          ]
+        },
+        {
+          "latent": 64,
+          "score": 0.102,
+          "n_active": 348,
+          "examples": [
+            " Accounting Clerk ",
+            "Accounting Clerk",
+            "Accounting Clerk"
+          ]
+        },
+        {
+          "latent": 232,
+          "score": 0.0939,
+          "n_active": 294,
+          "examples": [
+            "Payroll Clerk ",
+            "Payroll Clerk",
+            "Payroll  Clerk $20/hr"
+          ]
+        },
+        {
+          "latent": 244,
+          "score": 0.0932,
+          "n_active": 371,
+          "examples": [
+            "Linux Sysadmin (intermediate)",
+            "Linux System Admin || Uniondale NY or Herndon VA || 4+ Months ||",
+            "Sysadmin"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,17 @@
+
+=== light ===
+mean course score (AUROC / R^2) per dataset:
+encoder                         e5-small-tar  e5-small-tar-gsae-xf
+dataset                                                           
+BIN_TEXT_FAKE_JOB_POSTING             0.9124                0.9108
+BIN_TEXT_JIGSAW_TOXICITY              0.9315                0.9268
+BIN_TEXT_KICKSTARTER_FUNDING          0.7342                0.7342
+MUL_TEXT_DATA_SCIENTIST_SALARY        0.8065                0.8065
+REG_TEXT_BABIES_PRICES                0.7905                0.7937
+
+paired comparison vs e5-small-tar over (dataset, fold) pairs:
+                      n_pairs  mean_delta  wins  losses  wilcoxon_p datasets_improved
+encoder                                                                              
+e5-small-tar-gsae-xf       30     -0.0006     8       9      0.5862               1/5
+
+Note: with few datasets the p-values are indicative only; 6 folds per dataset are not independent (2 repeats of 3-fold CV), so treat dataset-level wins as the primary signal.

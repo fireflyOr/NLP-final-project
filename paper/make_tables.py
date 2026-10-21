@@ -29,7 +29,6 @@ SHORT = {
 MAIN = [("e5-small", "Frozen"), ("e5-small-tar", "TAR"), ("e5-small-tar-gsae", "TAR+prune"),
         ("e5-small-tar-gsae-rand", "TAR+rand"), ("e5-small-pls", "PLS"), ("e5-small-stack", "Stack")]
 VS_TAR = [("e5-small-tar-gsae", "TAR + concept pruning (ours)"), ("e5-small-tar-gsae-rand", "TAR + random pruning"),
-          ("e5-small-tar-gsae-cv", "TAR + held-out pruning"), ("e5-small-relsae2", "Frozen + relevance pruning"),
           ("e5-small-gsae", "Frozen + concept pruning"), ("e5-small-pls", "Frozen + PLS"),
           ("e5-small-stack", "Frozen + stacking"), ("e5-small", "Joint Frozen")]
 
@@ -79,7 +78,7 @@ def summary_table(df, out, base="e5-small-tar"):
             continue
         p = wilcoxon(d_ds).pvalue if len(d_ds) >= 5 and (d_ds != 0).any() else np.nan
         lines.append(f"{name} & {d_ds.mean():+.4f} & {(d_ds > 0).sum()}/{len(d_ds)} & "
-                     f"{(d_f > 0).sum()}/{(d_f < 0).sum()} & {'--' if np.isnan(p) else f'{p:.3g}'}" + r" \\")
+                     f"{(d_f > 0).sum()}/{(d_f < 0).sum()} & {'--' if np.isnan(p) else ('$<$0.001' if p < 1e-3 else f'{p:.3f}')}" + r" \\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     open(os.path.join(out, "summary.tex"), "w").write("\n".join(lines) + "\n")
 

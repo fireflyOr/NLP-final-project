@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.73547024454804,
+  "test_error": 0.73547024454804,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8992388019052043,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 74.93075442314148,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2036,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 817,
+      "n_removed": 820,
+      "var_share_removed": 0.2604,
+      "var_share_sae_error": 0.1116,
+      "top": [
+        {
+          "group": 2028,
+          "latents": [
+            76
+          ],
+          "gain_margin": 5183.83,
+          "examples": [
+            "Awful color, horribly wrinkled and just a mess...so disappointed",
+            "I am very disappointed with this order. the shirt looks and feels cheap, is not flattering in any way. i am sending it back right away.",
+            "This is the worst shirt i have ever tried on from retailer. it is basically a big shaggy box from the front, and from the side it looks like a tent. it is also "
+          ]
+        },
+        {
+          "group": 121,
+          "latents": [
+            2016
+          ],
+          "gain_margin": 2609.42,
+          "examples": [
+            "I found it hard to pair with bottoms. fit wasn't very flattering for me.",
+            "I had high hopes for this top but it was too big and too much fabric.",
+            "This sweater coat is very bulky and has an odd and unflattering shape when on."
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            1775
+          ],
+          "gain_margin": 2121.51,
+          "examples": [
+            "I look like i put a baggy bag over my head. also, the material really seemed like fake velvet to me.",
+            "I would have liked it but it was too small for me.",
+            "I think these are amazing for anyone over, say, 5'5\". the way these hung on me (at 5'2\") were very unflattering in the front. they had an unfortunate masculine "
+          ]
+        },
+        {
+          "group": 999,
+          "latents": [
+            903
+          ],
+          "gain_margin": 1226.98,
+          "examples": [
+            "I tried on this top and it looked fine until i tried to move. you can't lift your arms. i tried on a larger size but still felt like the movement was limited in",
+            "I liked the idea of the diagonal color block but the fit of this tee was odd on me.  too tight around arms and way big and boxy around the mid-section.  going b",
+            "Loved this dress until i tried it on! it was too big in the body and tight on top in the arm area. from the reviews already posted stating the guy was great, i'"
+          ]
+        },
+        {
+          "group": 913,
+          "latents": [
+            944
+          ],
+          "gain_margin": 953.64,
+          "examples": [
+            "Material is strange. triangle top is funky. this is just not awesome in any way.",
+            "Fits very strange. odd cut. does not look well on.",
+            "This top is very strange. i agree with the other reviewer in that i think it's not cotton. it clung and got bunched up around my chest. like in a static cling w"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1832,
+      "n_groups": 1820,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 1048,
+      "n_removed": 1050,
+      "var_share_removed": 0.4105,
+      "var_share_sae_error": 0.019,
+      "top": [
+        {
+          "group": 1816,
+          "latents": [
+            76
+          ],
+          "gain_margin": 6666.48,
+          "examples": [
+            "Really, really bad",
+            "Very unflattering!",
+            "Bad fit and bad construction"
+          ]
+        },
+        {
+          "group": 948,
+          "latents": [
+            1141
+          ],
+          "gain_margin": 4298.08,
+          "examples": [
+            "Absolutely amazing!!",
+            "Perfect in every way!",
+            "Absolutely perfect!!!"
+          ]
+        },
+        {
+          "group": 1273,
+          "latents": [
+            356
+          ],
+          "gain_margin": 2325.09,
+          "examples": [
+            "Fell short",
+            "Disappointed.",
+            "Couldn't get it to work!"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            1034,
+            1147
+          ],
+          "gain_margin": 1933.77,
+          "examples": [
+            "Very cute dress, but odd sizing",
+            "Awesome shirt but doesn't hold up well after washi",
+            "Great quality and color but boxy and ill-fitting"
+          ]
+        },
+        {
+          "group": 1808,
+          "latents": [
+            870
+          ],
+          "gain_margin": 1622.91,
+          "examples": [
+            "Not as advertised",
+            "Not as pictured and described",
+            "Not as pictured."
+          ]
+        }
+      ]
+    }
+  }
+}

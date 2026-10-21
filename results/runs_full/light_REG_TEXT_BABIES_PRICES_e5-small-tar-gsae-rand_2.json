@@ -1,0 +1,315 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -25.760397614686035,
+  "test_error": 25.760397614686035,
+  "course_metric": "r2",
+  "course_score": 0.7127498775480151,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 250.8958728313446,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 271,
+      "n_groups": 271,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 249,
+      "n_removed": 249,
+      "var_share_removed": 0.8075,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 258,
+          "latents": [
+            388
+          ],
+          "gain_margin": 46.73,
+          "examples": [
+            "red / tan",
+            "red / pink",
+            "red / pink"
+          ]
+        },
+        {
+          "group": 77,
+          "latents": [
+            1450
+          ],
+          "gain_margin": 11.58,
+          "examples": [
+            "orange / pink / blue / black / purple",
+            "orange / blue / green / pink",
+            "orange / blue / pink / red"
+          ]
+        },
+        {
+          "group": 152,
+          "latents": [
+            967
+          ],
+          "gain_margin": 10.09,
+          "examples": [
+            "tan / cream",
+            "tan / cream / pink",
+            "cream"
+          ]
+        },
+        {
+          "group": 20,
+          "latents": [
+            1765
+          ],
+          "gain_margin": 8.61,
+          "examples": [
+            "cream / green",
+            "cream / green",
+            "orange / cream"
+          ]
+        },
+        {
+          "group": 56,
+          "latents": [
+            1145
+          ],
+          "gain_margin": 7.34,
+          "examples": [
+            "blue / black",
+            "blue / black",
+            "blue / black"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 259,
+      "n_groups": 259,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 238,
+      "n_removed": 238,
+      "var_share_removed": 0.736,
+      "var_share_sae_error": 0.0021,
+      "top": [
+        {
+          "group": 255,
+          "latents": [
+            314
+          ],
+          "gain_margin": 79.3,
+          "examples": [
+            "RoomMates! Simply",
+            "RoomMates! Simply",
+            "RoomMates! Simply"
+          ]
+        },
+        {
+          "group": 64,
+          "latents": [
+            1191
+          ],
+          "gain_margin": 76.02,
+          "examples": [
+            "Glenna Jean, Pillow",
+            "Glenna Jean Cacti,",
+            "Glenna Jean, Hanging"
+          ]
+        },
+        {
+          "group": 92,
+          "latents": [
+            987
+          ],
+          "gain_margin": 63.79,
+          "examples": [
+            "Teamson Design Corp.<br>",
+            "Teamson Design Corp.",
+            "Teamson Design Corp."
+          ]
+        },
+        {
+          "group": 72,
+          "latents": [
+            1081
+          ],
+          "gain_margin": 21.28,
+          "examples": [
+            "Cuddletime",
+            "The Northwest Co.",
+            "The Northwest Co."
+          ]
+        },
+        {
+          "group": 43,
+          "latents": [
+            925
+          ],
+          "gain_margin": 18.68,
+          "examples": [
+            "Kids Line",
+            "Kids Line",
+            "Kidsline."
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 744,
+      "n_groups": 744,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 548,
+      "n_removed": 548,
+      "var_share_removed": 0.5725,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 554,
+          "latents": [
+            360
+          ],
+          "gain_margin": 2522.49,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 742,
+          "latents": [
+            324
+          ],
+          "gain_margin": 1681.1,
+          "examples": [
+            "Snuggleberry Baby",
+            "Snuggleberry Baby",
+            "Snuggleberry Baby"
+          ]
+        },
+        {
+          "group": 121,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 934.45,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 667,
+          "latents": [
+            108
+          ],
+          "gain_margin": 862.78,
+          "examples": [
+            "Environmental Graphics",
+            "Environmental Graphics",
+            "Environmental Graphics"
+          ]
+        },
+        {
+          "group": 325,
+          "latents": [
+            1708
+          ],
+          "gain_margin": 630.21,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1288,
+      "n_groups": 1288,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 849,
+      "n_removed": 849,
+      "var_share_removed": 0.4526,
+      "var_share_sae_error": 0.0066,
+      "top": [
+        {
+          "group": 1279,
+          "latents": [
+            108
+          ],
+          "gain_margin": 3643.85,
+          "examples": [
+            "Tranquil Woods 5-Piece Bedding Set",
+            "Trend Lab Maya 4-Piece Toddler Bedding Set - Pink",
+            "One Grace Place - Jazzie Jungle Boy 4-Piece Full Bedding Set"
+          ]
+        },
+        {
+          "group": 75,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 3476.46,
+          "examples": [
+            "Arizona Cardinals, Larry Fitzgerald Biggshots Full Comforter Set",
+            "Tadpoles 1 Bulb Shaded Chandelier - Black",
+            "Venetian Style All Crystal 5 Light Chandelier"
+          ]
+        },
+        {
+          "group": 1286,
+          "latents": [
+            651
+          ],
+          "gain_margin": 2671.94,
+          "examples": [
+            "Lambs & Ivy French Lavender 4 Piece Crib Set",
+            "Desert Dreams 4-Piece Mini Crib Bedding Set",
+            "Levtex Baby Baby Ely 5 Piece Crib Bedding Set - Pink"
+          ]
+        },
+        {
+          "group": 624,
+          "latents": [
+            324
+          ],
+          "gain_margin": 1944.45,
+          "examples": [
+            "NoJo Zambia 4-Peice Crib Bedding Set",
+            "Peanut Shell Mila 4 Piece Crib Bedding Set",
+            "RoomMates Paw Patrol Chair Rail Prepasted Mural"
+          ]
+        },
+        {
+          "group": 1193,
+          "latents": [
+            289
+          ],
+          "gain_margin": 1045.51,
+          "examples": [
+            "Gallery 3 Light Swag Plug In Chandelier with Crystals and White Shade",
+            "Gallery Contemporary Crystal 3 Light Chandelier with White Shade",
+            "Gallery Contemporary Crystal 3 Light Chandelier with Black Shade"
+          ]
+        }
+      ]
+    }
+  }
+}

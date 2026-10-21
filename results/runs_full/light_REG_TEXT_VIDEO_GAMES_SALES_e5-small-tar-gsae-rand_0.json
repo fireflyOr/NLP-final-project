@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.540240668684133,
+  "test_error": 1.540240668684133,
+  "course_metric": "r2",
+  "course_score": 0.25898563133017094,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.77269244194031,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2043,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1648,
+      "n_removed": 1648,
+      "var_share_removed": 0.6206,
+      "var_share_sae_error": 0.0523,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            1439
+          ],
+          "gain_margin": 12439.86,
+          "examples": [
+            "Final Fantasy",
+            "Far Cry",
+            "Pokemon Red/Pokemon Blue"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1810
+          ],
+          "gain_margin": 5524.26,
+          "examples": [
+            "Mario Tennis Open",
+            "Mario Strikers Charged",
+            "Tennis"
+          ]
+        },
+        {
+          "group": 2042,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 5385.79,
+          "examples": [
+            "Star Wars: Battlefront II",
+            "Star Wars: Battlefront II",
+            "Star Wars: Battlefront II"
+          ]
+        },
+        {
+          "group": 986,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 4917.07,
+          "examples": [
+            "Yowamushi Pedal",
+            "Harry Potter and the Deathly Hallows - Part 2",
+            "Harry Potter and the Deathly Hallows - Part 2"
+          ]
+        },
+        {
+          "group": 253,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 2912.31,
+          "examples": [
+            "Scene It? Lights Camera Action",
+            "Tiger Woods PGA Tour 12: The Masters",
+            "Tiger Woods PGA Tour 13"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1036,
+      "n_groups": 1034,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 964,
+      "n_removed": 966,
+      "var_share_removed": 0.8319,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 532,
+          "latents": [
+            612
+          ],
+          "gain_margin": 1798.14,
+          "examples": [
+            "Red Orb",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 640,
+          "latents": [
+            99
+          ],
+          "gain_margin": 1473.6,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1005,
+          "latents": [
+            168
+          ],
+          "gain_margin": 881.83,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 949,
+          "latents": [
+            324
+          ],
+          "gain_margin": 606.08,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 840,
+          "latents": [
+            344
+          ],
+          "gain_margin": 605.39,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

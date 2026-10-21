@@ -1,0 +1,109 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-cv",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7032274690806188,
+  "test_error": 0.29677253091938116,
+  "course_metric": "auroc",
+  "course_score": 0.7032274690806188,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 164.81962656974792,
+  "diagnostics": {
+    "created_at": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 851,
+      "n_groups": 837,
+      "n_val_rows": 901,
+      "chosen_fraction": 0.75,
+      "n_removed": 638,
+      "val_loss": {
+        "0.0": 0.61421,
+        "0.1": 0.6132,
+        "0.25": 0.61544,
+        "0.5": 0.59955,
+        "0.75": 0.59716
+      },
+      "frac_groups_no_signal": 0.658,
+      "var_share_removed": 0.5964
+    },
+    "deadline": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 823,
+      "n_groups": 805,
+      "n_val_rows": 901,
+      "chosen_fraction": 0.75,
+      "n_removed": 617,
+      "val_loss": {
+        "0.0": 0.59516,
+        "0.1": 0.58477,
+        "0.25": 0.59127,
+        "0.5": 0.5846,
+        "0.75": 0.57859
+      },
+      "frac_groups_no_signal": 0.662,
+      "var_share_removed": 0.5634
+    },
+    "desc": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_val_rows": 901,
+      "chosen_fraction": 0.75,
+      "n_removed": 1536,
+      "val_loss": {
+        "0.0": 0.5678,
+        "0.1": 0.56846,
+        "0.25": 0.56505,
+        "0.5": 0.55684,
+        "0.75": 0.54591
+      },
+      "frac_groups_no_signal": 0.643,
+      "var_share_removed": 0.5808
+    },
+    "keywords": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_val_rows": 901,
+      "chosen_fraction": 0.75,
+      "n_removed": 1536,
+      "val_loss": {
+        "0.0": 0.59496,
+        "0.1": 0.58504,
+        "0.25": 0.56895,
+        "0.5": 0.56166,
+        "0.75": 0.55712
+      },
+      "frac_groups_no_signal": 0.644,
+      "var_share_removed": 0.6213
+    },
+    "name": {
+      "rule": "heldout_cv",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_val_rows": 901,
+      "chosen_fraction": 0.75,
+      "n_removed": 1536,
+      "val_loss": {
+        "0.0": 0.56777,
+        "0.1": 0.56618,
+        "0.25": 0.55909,
+        "0.5": 0.56625,
+        "0.75": 0.55242
+      },
+      "frac_groups_no_signal": 0.636,
+      "var_share_removed": 0.5959
+    }
+  }
+}

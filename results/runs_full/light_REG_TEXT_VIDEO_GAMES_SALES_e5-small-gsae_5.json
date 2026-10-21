@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.3430931453054311,
+  "test_error": 1.3430931453054311,
+  "course_metric": "r2",
+  "course_score": 0.36523105044441073,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.825156688690186,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2045,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1589,
+      "n_removed": 1589,
+      "var_share_removed": 0.6101,
+      "var_share_sae_error": 0.0742,
+      "top": [
+        {
+          "group": 1736,
+          "latents": [
+            256
+          ],
+          "gain_margin": 5122.57,
+          "examples": [
+            "Mario vs. Donkey Kong: Tipping Stars",
+            "Hyrule Warriors",
+            "Hyrule Warriors"
+          ]
+        },
+        {
+          "group": 1059,
+          "latents": [
+            1251
+          ],
+          "gain_margin": 4264.03,
+          "examples": [
+            "Wii Play",
+            "Wii Music",
+            "Wii Fit"
+          ]
+        },
+        {
+          "group": 1345,
+          "latents": [
+            1210
+          ],
+          "gain_margin": 2697.44,
+          "examples": [
+            "Mario Bros.",
+            "Dr. Mario",
+            "Dr. Mario"
+          ]
+        },
+        {
+          "group": 438,
+          "latents": [
+            1420
+          ],
+          "gain_margin": 2110.0,
+          "examples": [
+            "Pokemon HeartGold/Pokemon SoulSilver",
+            "Pokemon Mystery Dungeon: Red/Blue Rescue Team",
+            "Pokemon Black/Pokemon White"
+          ]
+        },
+        {
+          "group": 37,
+          "latents": [
+            2017
+          ],
+          "gain_margin": 1457.82,
+          "examples": [
+            "Mario & Sonic at the Olympic Games",
+            "Mario & Sonic at the Olympic Winter Games",
+            "Sonic Riders: Zero Gravity"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1132,
+      "n_groups": 1132,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1033,
+      "n_removed": 1033,
+      "var_share_removed": 0.7286,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 655,
+          "latents": [
+            95
+          ],
+          "gain_margin": 1763.26,
+          "examples": [
+            "Coconuts Japan",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 920,
+          "latents": [
+            205
+          ],
+          "gain_margin": 1631.65,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1092,
+          "latents": [
+            347
+          ],
+          "gain_margin": 1293.08,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 578,
+          "latents": [
+            620
+          ],
+          "gain_margin": 1000.43,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 527,
+          "latents": [
+            510
+          ],
+          "gain_margin": 946.22,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

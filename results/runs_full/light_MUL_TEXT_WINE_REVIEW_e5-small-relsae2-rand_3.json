@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.4067356288451738,
+  "test_error": 1.4067356288451738,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9640389324588582,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 55.6911416053772,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 497,
+      "n_removed": 15,
+      "threshold": 0.0551,
+      "passed_test": 227,
+      "removed_norm_ratio": 0.0844,
+      "var_share_kept": 0.7513,
+      "var_share_sae_error": 0.2167,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 390,
+          "score": 0.4193,
+          "n_active": 726,
+          "examples": [
+            "This organically grown, no-sulfites-added Chardonnay is forward and fruity, with a nice scent of green apples and just a hint of butterscotch. Lively and made f",
+            "This has everything that many people love about Chardonnay: It's creamy, buttery and toasty, with sweet tropical fruit and pear flavors. It's pretty flashy.",
+            "Golden apple, butterscotch and white peach notes dominate this Chardonnay's nose. The bright acidity gives the creamy palate some lift, and the finish entices w"
+          ]
+        },
+        {
+          "latent": 40,
+          "score": 0.3578,
+          "n_active": 758,
+          "examples": [
+            "This is a full and chunky type of New World Chardonnay, with an oily, mildly stalky nose that offers corn and apple aromas. It feels big across the palate and t",
+            "Here's a good example of a value Chardonnay. It's clean and fruity, with spicy apple flavors, a focused and lengthy finish, and proper acidity. The whole is bet",
+            "For ten bucks, you get a good, everyday Chardonnay. It has creamy, fruity flavors and a clean finish."
+          ]
+        },
+        {
+          "latent": 364,
+          "score": 0.3518,
+          "n_active": 358,
+          "examples": [
+            "Big, ripe and rich with gusto, this Zin, from century vines that probably contain other field varieties, shows a myriad of wild cherry, boysenberry, mulberry, l",
+            "Rich and exotic, this Zin offers a blast of ripe wild blackberry, briary currants, mulberry, mocha, pepper and spice flavors that are wrapped into sturdy tannin",
+            "When it comes to sheer extracted power, Zinfandel doesn't get more massive than this. Several things come together. Zin's wild, briary flavors of currants and r"
+          ]
+        },
+        {
+          "latent": 100,
+          "score": 0.3082,
+          "n_active": 862,
+          "examples": [
+            "This Pinot is a full, fragrant, fetching wine with spongy citrus and cherry fruit, underscored with leesy minerality. It's ready for immediate enjoyment, and sh",
+            "Shows Pinot's dry, silky texture, but turns unripe and green, with cherry-mint flavors and high acidity. With Pinot, you get what you pay for.",
+            "A surprisingly tasty and well-balanced Pinot for this price category, this smells lightly spicy and ripely fruity. It feels smooth but not overly soft in textur"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.2906,
+          "n_active": 362,
+          "examples": [
+            "This is 100% Grenache, aged in one-third new oak. It's a modern style wine, but an immensely seductive one. Baking spices and vanilla frame superripe black cher",
+            "Grenache, Cinsault and Syrah form a soft warm blend that is ready to drink. It has acidity and spice as well as red berries. It's a fine ap\u00e9ritif style with its",
+            "This is a blend of Grenache and Cinsault from the organic vineyard of Ch\u00e2teau Gabriel. It is a lively, crisp wine with fine acidity and refreshing red-currant f"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 483,
+      "n_kept": 498,
+      "n_removed": 14,
+      "threshold": 0.064,
+      "passed_test": 348,
+      "removed_norm_ratio": 0.0522,
+      "var_share_kept": 0.9729,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 68,
+          "score": 0.7285,
+          "n_active": 106,
+          "examples": [
+            "Thermenregion",
+            "Thermenregion",
+            "Thermenregion"
+          ]
+        },
+        {
+          "latent": 336,
+          "score": 0.6969,
+          "n_active": 117,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "latent": 256,
+          "score": 0.6472,
+          "n_active": 241,
+          "examples": [
+            "Steiermark",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.6153,
+          "n_active": 268,
+          "examples": [
+            "Puente Alto",
+            "Tokaji",
+            "North Carolina"
+          ]
+        },
+        {
+          "latent": 84,
+          "score": 0.5619,
+          "n_active": 327,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7258796657034244,
+  "test_error": 0.7258796657034244,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8885828782970245,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 99.83886218070984,
+  "diagnostics": {
+    "Address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 213,
+      "n_removed": 299,
+      "threshold": 0.0487,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6904,
+      "var_share_kept": 0.2528,
+      "var_share_sae_error": 0.2335,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 423,
+          "score": 0.036,
+          "n_active": 662,
+          "examples": [
+            "The Inn at Mattei's Tavern, Auberge Collection, 2350 Railway Ave., Los Olivos, CA, 93441, USA",
+            "233 Chestnut St., Philadelphia, PA, 19106, USA",
+            "Sluisplein 11, Leidschendam, 2266 AV, Netherlands"
+          ]
+        },
+        {
+          "latent": 59,
+          "score": 0.0354,
+          "n_active": 540,
+          "examples": [
+            "12 Tsing Ha Lane, Castle Peak Road, Tuen Mun, Hong Kong, Hong Kong SAR China",
+            "Hampton Manor, Shadowbrook Lane, Hampton in Arden, B92 0EN, United Kingdom",
+            "Hampton Manor, Shadowbrook Lane, Hampton in Arden, B92 0EN, United Kingdom"
+          ]
+        },
+        {
+          "latent": 376,
+          "score": 0.031,
+          "n_active": 734,
+          "examples": [
+            "909 Xingye Avenue, Nancun Town, Panyu, Guangzhou, China Mainland",
+            "Fort Cornwallis, Jalan Tun Syed Sheh Barakbah, George Town, 10200, Malaysia",
+            "Fort St. Angelo, Birgu Waterfront, Birgu, BRG 1734, Malta"
+          ]
+        },
+        {
+          "latent": 411,
+          "score": 0.03,
+          "n_active": 568,
+          "examples": [
+            "18-19 Parnell Square North, Rotunda, Dublin City, D01 T3V8, Ireland",
+            "5F, The Henderson, 2 Murray Road, Central, Hong Kong, Hong Kong SAR China",
+            "7F, The Landmark Mandarin Oriental, 15 Queen's Road Central, Central, Hong Kong, Hong Kong SAR China"
+          ]
+        },
+        {
+          "latent": 482,
+          "score": 0.0298,
+          "n_active": 453,
+          "examples": [
+            "Carr. Tulum-Boca Paila 7-6 km, Tulum Beach, Tulum, 77780, Mexico",
+            "Carretera AS 19 Km 9, Prendes, 33438, Spain",
+            "Carretera A-492 km 6,5, Aljaraque, 21110, Spain"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 501,
+      "n_kept": 371,
+      "n_removed": 141,
+      "threshold": 0.0522,
+      "passed_test": 26,
+      "removed_norm_ratio": 0.3359,
+      "var_share_kept": 0.7261,
+      "var_share_sae_error": 0.0028,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 65,
+          "score": 0.0859,
+          "n_active": 311,
+          "examples": [
+            "Creative, Farm to table",
+            "Creative, Farm to table",
+            "Creative, Farm to table"
+          ]
+        },
+        {
+          "latent": 309,
+          "score": 0.0857,
+          "n_active": 941,
+          "examples": [
+            "Creative",
+            "Creative",
+            "Creative"
+          ]
+        },
+        {
+          "latent": 224,
+          "score": 0.0856,
+          "n_active": 806,
+          "examples": [
+            "Creative, Seafood",
+            "Creative, Seafood",
+            "Creative, Seafood"
+          ]
+        },
+        {
+          "latent": 413,
+          "score": 0.0851,
+          "n_active": 1114,
+          "examples": [
+            "Alpine, Creative",
+            "Alpine, Creative",
+            "Creative, Alpine"
+          ]
+        },
+        {
+          "latent": 201,
+          "score": 0.0822,
+          "n_active": 999,
+          "examples": [
+            "Creative, Bakery",
+            "Creative",
+            "Creative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 332,
+      "n_removed": 180,
+      "threshold": 0.046,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.4529,
+      "var_share_kept": 0.3605,
+      "var_share_sae_error": 0.3714,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 155,
+          "score": 0.0738,
+          "n_active": 559,
+          "examples": [
+            "A veritable culinary institution, De Bokkedoorns was established in 1961 and has held on to its two MICHELIN stars for the past 30 years. Owner Pascal Beeren, w",
+            "Rustic wood features and original decorative touches combine to create an upscale, minimalist setting. Beautifully situated in the Bayerwaldhof spa hotel, which",
+            "The charm of this authentic watermill, whose machinery is visible inside, is flanked by a stylish modern \u201cbarn\u201d, whose huge windows overlook the stunning countr"
+          ]
+        },
+        {
+          "latent": 115,
+          "score": 0.0692,
+          "n_active": 1011,
+          "examples": [
+            "A restaurant not to be missed if you are in the area. The moment you walk through the door, the rooms overflowing with decorations will surprise you, but then i",
+            "Everyone is asked to arrive at this well-run restaurant at 7pm \u2013 and that usually includes a loyal band of locals. The 3-hour menu takes on a surprise tasting f",
+            "The welcome is warm, the room elegant, and the food heartening and eminently satisfying. The passion and experience of the two chef-owners is evident in all are"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.0672,
+          "n_active": 878,
+          "examples": [
+            "Situated in a central yet secluded location, this intimate and elegant restaurant serves typical Sicilian cuisine with a focus on fish, vegetables from the kitc",
+            "A restaurant that goes beyond an enjoyable experience by also focusing on a sense of place. Here, the chef serves traditional Catalan and seasonal cuisine, incl",
+            "Offering quality and professionalism in a tourist setting, this small restaurant is popular with locals as well as visitors. The menu focuses on imaginatively p"
+          ]
+        },
+        {
+          "latent": 79,
+          "score": 0.0593,
+          "n_active": 626,
+          "examples": [
+            "The Tourteaux brothers, Ga\u00ebl and Micka\u00ebl, are inseparable. Not only did they attend the same hotel school in Nice (and sit exams in the same room) and both trai",
+            "The name Somm is an abbreviation of sommelier, giving a strong clue as to where Owner Narimantas Mie\u017eys\u2019 passion lies. He is one of the top sommeliers in the Ba",
+            "Kasteel Engelburg is a gem of a castle estate that boasts charming guestrooms and top-tier golf facilities. First, make your way to the 19C greenhouse, where yo"
+          ]
+        },
+        {
+          "latent": 206,
+          "score": 0.054,
+          "n_active": 1533,
+          "examples": [
+            "The terrace of this restaurant boasts a superb panoramic view over the valley's 16 church towers. The new, young and energetic team swear by local and organic p",
+            "The authentic d\u00e9cor of this handsome town house is perfectly paired with modern comforts. Wooden floors, elegant mirrors and a trendy vibe. The lovely terrace i",
+            "Mirrors and fabrics add to the luxurious atmosphere in the dining room at this restaurant, but it is the outdoor terrace (open between May and October) with its"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 423,
+      "n_kept": 418,
+      "n_removed": 94,
+      "threshold": 0.0527,
+      "passed_test": 30,
+      "removed_norm_ratio": 0.1431,
+      "var_share_kept": 0.852,
+      "var_share_sae_error": 0.0004,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 242,
+          "score": 0.119,
+          "n_active": 1288,
+          "examples": [
+            "Car park,Credit cards not accepted,Garden or park,Great view,Interesting wine list",
+            "Air conditioning,Brunch,Car park,Counter dining,Interesting wine list,Valet parking,Wheelchair access",
+            "Car park,Garden or park,Great view,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 326,
+          "score": 0.1158,
+          "n_active": 1545,
+          "examples": [
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list",
+            "Air conditioning,Interesting wine list"
+          ]
+        },
+        {
+          "latent": 389,
+          "score": 0.1148,
+          "n_active": 782,
+          "examples": [
+            "Credit cards not accepted,Interesting wine list,Wheelchair access",
+            "Air conditioning,Interesting wine list,Wheelchair access",
+            "Air conditioning,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "latent": 127,
+          "score": 0.112,
+          "n_active": 1691,
+          "examples": [
+            "Interesting wine list",
+            "Interesting wine list",
+            "Interesting wine list"
+          ]
+        },
+        {
+          "latent": 466,
+          "score": 0.1105,
+          "n_active": 1705,
+          "examples": [
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list",
+            "Car park,Interesting wine list"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 98,
+      "n_removed": 414,
+      "threshold": 0.0467,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.9121,
+      "var_share_kept": 0.1424,
+      "var_share_sae_error": 0.0841,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 1,
+          "score": 0.039,
+          "n_active": 680,
+          "examples": [
+            "Montoro, Italy",
+            "Montner, France",
+            "Montichiari, Italy"
+          ]
+        },
+        {
+          "latent": 30,
+          "score": 0.0303,
+          "n_active": 595,
+          "examples": [
+            "Sal\u00f2, Italy",
+            "Salou, Spain",
+            "Salou, Spain"
+          ]
+        },
+        {
+          "latent": 156,
+          "score": 0.0248,
+          "n_active": 342,
+          "examples": [
+            "Houston, TX, USA",
+            "Houston, TX, USA",
+            "Houston, TX, USA"
+          ]
+        },
+        {
+          "latent": 420,
+          "score": 0.0246,
+          "n_active": 713,
+          "examples": [
+            "San Piero in Bagno, Italy",
+            "Bagnolo in Piano, Italy",
+            "San Casciano dei Bagni, Italy"
+          ]
+        },
+        {
+          "latent": 309,
+          "score": 0.0242,
+          "n_active": 498,
+          "examples": [
+            "Le Grand-Village-Plage, France",
+            "Sint Willebrord, Netherlands",
+            "Sint-Amands, Belgium"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 234,
+      "n_removed": 278,
+      "threshold": 0.0444,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6115,
+      "var_share_kept": 0.3368,
+      "var_share_sae_error": 0.2369,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 99,
+          "score": 0.0408,
+          "n_active": 194,
+          "examples": [
+            "Ortica",
+            "Orsay",
+            "Oriole"
+          ]
+        },
+        {
+          "latent": 371,
+          "score": 0.0378,
+          "n_active": 736,
+          "examples": [
+            "Bell's",
+            "Tailor",
+            "Kumsu Bokguk"
+          ]
+        },
+        {
+          "latent": 22,
+          "score": 0.0365,
+          "n_active": 645,
+          "examples": [
+            "Komal",
+            "Koan",
+            "Kogo"
+          ]
+        },
+        {
+          "latent": 468,
+          "score": 0.0349,
+          "n_active": 355,
+          "examples": [
+            "Boys Hall",
+            "The Gibson Room",
+            "The Dining Room"
+          ]
+        },
+        {
+          "latent": 113,
+          "score": 0.0346,
+          "n_active": 703,
+          "examples": [
+            "SEM",
+            "SeBE",
+            "sein"
+          ]
+        }
+      ]
+    }
+  }
+}

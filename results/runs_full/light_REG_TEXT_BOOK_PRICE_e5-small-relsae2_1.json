@@ -1,0 +1,344 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23933490987143022,
+  "test_error": 0.23933490987143022,
+  "course_metric": "r2",
+  "course_score": 0.4886120523708246,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 73.3309235572815,
+  "diagnostics": {
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 331,
+      "n_removed": 181,
+      "threshold": 0.0744,
+      "passed_test": 9,
+      "removed_norm_ratio": 0.579,
+      "var_share_kept": 0.6088,
+      "var_share_sae_error": 0.123,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 163,
+          "score": 0.1172,
+          "n_active": 167,
+          "examples": [
+            "Vibrant Publishers",
+            "Vibrant Publishers",
+            "Lonely Planet"
+          ]
+        },
+        {
+          "latent": 0,
+          "score": 0.1094,
+          "n_active": 239,
+          "examples": [
+            "Herg\u00e9",
+            "Herge",
+            "Herge"
+          ]
+        },
+        {
+          "latent": 290,
+          "score": 0.0936,
+          "n_active": 289,
+          "examples": [
+            "Charles Goren",
+            "Charles Allen",
+            "Charles Montgomery"
+          ]
+        },
+        {
+          "latent": 24,
+          "score": 0.0895,
+          "n_active": 195,
+          "examples": [
+            "Chambers",
+            "Ladybird",
+            "Ladybird"
+          ]
+        },
+        {
+          "latent": 136,
+          "score": 0.0841,
+          "n_active": 205,
+          "examples": [
+            "Running Press",
+            "Running Press",
+            "Scholastic"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 296,
+      "n_kept": 414,
+      "n_removed": 98,
+      "threshold": 0.0676,
+      "passed_test": 15,
+      "removed_norm_ratio": 0.3983,
+      "var_share_kept": 0.6522,
+      "var_share_sae_error": 0.0026,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 261,
+          "score": 0.1658,
+          "n_active": 499,
+          "examples": [
+            "Hardcover,\u2013 20 May 1993",
+            "Hardcover,\u2013 2016",
+            "Hardcover,\u2013 2013"
+          ]
+        },
+        {
+          "latent": 34,
+          "score": 0.1656,
+          "n_active": 1030,
+          "examples": [
+            "Hardcover,\u2013 22 Apr 2014",
+            "Hardcover,\u2013 Facsimile, 31 May 2011",
+            "Hardcover,\u2013 22 Apr 2015"
+          ]
+        },
+        {
+          "latent": 161,
+          "score": 0.1268,
+          "n_active": 216,
+          "examples": [
+            "Paperback,\u2013 2001",
+            "Paperback,\u2013 1999",
+            "Paperback,\u2013 1999"
+          ]
+        },
+        {
+          "latent": 275,
+          "score": 0.1067,
+          "n_active": 246,
+          "examples": [
+            "(Kannada),Paperback,\u2013 2014",
+            "Paperback,\u2013 2014",
+            "Paperback,\u2013 2014"
+          ]
+        },
+        {
+          "latent": 314,
+          "score": 0.0983,
+          "n_active": 357,
+          "examples": [
+            "Paperback,\u2013 Import, 2 Sep 2016",
+            "Paperback,\u2013 2 Sep 2014",
+            "Paperback,\u2013 2 Sep 2010"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 493,
+      "n_kept": 365,
+      "n_removed": 147,
+      "threshold": 0.0713,
+      "passed_test": 27,
+      "removed_norm_ratio": 0.5264,
+      "var_share_kept": 0.6209,
+      "var_share_sae_error": 0.0003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 349,
+          "score": 0.1398,
+          "n_active": 89,
+          "examples": [
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)",
+            "Computer Hardware & Handheld Devices (Books)"
+          ]
+        },
+        {
+          "latent": 290,
+          "score": 0.1176,
+          "n_active": 165,
+          "examples": [
+            "CBSE",
+            "French",
+            "Foreign Languages"
+          ]
+        },
+        {
+          "latent": 261,
+          "score": 0.0959,
+          "n_active": 155,
+          "examples": [
+            "Physician & Patient",
+            "Medicine`",
+            "Development & Growth"
+          ]
+        },
+        {
+          "latent": 118,
+          "score": 0.0937,
+          "n_active": 193,
+          "examples": [
+            "Occupational Therapy",
+            "Japanese",
+            "Media Studies"
+          ]
+        },
+        {
+          "latent": 391,
+          "score": 0.0936,
+          "n_active": 401,
+          "examples": [
+            "Speech",
+            "Dictionaries",
+            "Dictionaries"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 341,
+      "n_removed": 171,
+      "threshold": 0.0704,
+      "passed_test": 17,
+      "removed_norm_ratio": 0.5015,
+      "var_share_kept": 0.5066,
+      "var_share_sae_error": 0.2511,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 368,
+          "score": 0.0896,
+          "n_active": 198,
+          "examples": [
+            "In late l991 and early 1992, at the time of the first Intifada, Joe Sacco spent two months with the Palestinians in the West Bank and Gaza Strip, travelling and",
+            "This is football comic-ery, but not as you know it. Welcome to the inimitable work of illustrator David Squires. Football and comics. Once a hearty Saturday com",
+            "Kobo Abe, the internationally acclaimed author of Woman in the Dunes, combines wildly imaginative fantasies and naturalistic prose to create narratives reminisc"
+          ]
+        },
+        {
+          "latent": 195,
+          "score": 0.0889,
+          "n_active": 181,
+          "examples": [
+            "\u2018Tahir spins a captivating, heart-pounding fantasy\u2019 Us Weekly\n\nThe sequel to the explosive New York Times bestselling debut AN EMBER IN THE ASHES, that\u2019s captiv",
+            "A dramatic encounter with a belligerent tiger a near-death experience, hunting for missing tigers, a mystifying leopard who attacks humans at will with no fear,",
+            "A dramatic encounter with a belligerent tiger a near-death experience, hunting for missing tigers, a mystifying leopard who attacks humans at will with no fear,"
+          ]
+        },
+        {
+          "latent": 423,
+          "score": 0.0875,
+          "n_active": 191,
+          "examples": [
+            "Geralt the Witcher-revered and hated-holds the line against the monsters plaguing humanity in this NYT bestselling series that inspired the blockbuster Witcher ",
+            "HBO\u2019s hit series A Game of Thrones is based on George R R Martin\u2019s internationally bestselling series A Song of Ice and Fire, the greatest fantasy epic of the m",
+            "HBO\u2019s hit series A GAME OF THRONES is based on George R R Martin\u2019s internationally bestselling series A SONG OF ICE AND FIRE, the greatest fantasy epic of the m"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.0847,
+          "n_active": 178,
+          "examples": [
+            "Pattern Magic 2 is the cult pattern-cutting book from Japan, partner to the original title Pattern Magic. Inspiring and exciting, this volume takes a creative a",
+            "Impact Index is a revolutionary new way of examining numbers in cricket. It is a deep dive into the very mechanics of the game, which results in the unearthing ",
+            "Winner of the Reddit Fantasy Award for Best Debut 2018\n\u2018The best fantasy debut of 2018\u2019 WIRED\nA brilliantly imaginative epic fantasy debut, inspired by the bloo"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.0844,
+          "n_active": 162,
+          "examples": [
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. ",
+            "Key Words with Peter and Jane uses the most frequently met words in the English language as a starting point for learning to read successfully and confidently. "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 357,
+      "n_removed": 155,
+      "threshold": 0.0712,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.4698,
+      "var_share_kept": 0.5614,
+      "var_share_sae_error": 0.195,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 455,
+          "score": 0.1121,
+          "n_active": 263,
+          "examples": [
+            "Dr. Jordan Metzl's Running Strong: The Sports Doctor's Complete Guide to Staying Healthy and Injury-Free for Life (Runners World)",
+            "Easy Learning French Complete Grammar, Verbs and Vocabulary (3 books in 1) (Collins Easy Learning French)",
+            "CCNA Routing and Switching Complete Study Guide, 2ed: Exam 100-105, Exam 200-105, Exam 200-125"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.1027,
+          "n_active": 320,
+          "examples": [
+            "Japanese Martial Art Judo Karate (Along with Jojutsu and Boxing) (CHA)",
+            "Arabic Alphabet Flash Cards",
+            "Red, White & Royal Blue: A Novel"
+          ]
+        },
+        {
+          "latent": 295,
+          "score": 0.0992,
+          "n_active": 180,
+          "examples": [
+            "Pyjama Profit: The Millennial's Guide to a Sustainable Freelance Career",
+            "Pyjama Profit: The Millennial's Guide to a Sustainable Freelance Career",
+            "From the Tanjore Court to the Madras Music Academy: A Social History of Music in South India"
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.0958,
+          "n_active": 519,
+          "examples": [
+            "Seo Step-by-step: The Complete Beginner's Guide to Getting Traffic from Google",
+            "Data Structures & Algorithms Interview Questions You'll Most Likely Be Asked: 6 (Job Interview Questions)",
+            "The Most Common Mistakes in English Usage"
+          ]
+        },
+        {
+          "latent": 258,
+          "score": 0.0919,
+          "n_active": 167,
+          "examples": [
+            "The Bront\u00eb Sisters Boxed Set: Jane Eyre, Wuthering Heights, The Tenant of Wildfell Hall, Villette (Penguin Clothbound Classics)",
+            "Modern Labor Economics: Theory and Public Policy (The Addison-Wesley Series in Economics)",
+            "Best of Agatha Christie Box Set (And Then There Were None, Murder on the Orient Express)"
+          ]
+        }
+      ]
+    }
+  }
+}

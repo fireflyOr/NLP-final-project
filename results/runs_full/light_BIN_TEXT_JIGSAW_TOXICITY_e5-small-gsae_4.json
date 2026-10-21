@@ -1,0 +1,168 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8097718065176389,
+  "test_error": 0.19022819348236109,
+  "course_metric": "auroc",
+  "course_score": 0.8097718065176389,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 38.25544548034668,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1375,
+      "n_removed": 1378,
+      "var_share_removed": 0.4436,
+      "var_share_sae_error": 0.1728,
+      "top": [
+        {
+          "group": 1231,
+          "latents": [
+            653
+          ],
+          "gain_margin": 1868.05,
+          "examples": [
+            "You can't fix stupid",
+            "Religion is stupid.",
+            "Trump is an idiot."
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1049,
+            1799
+          ],
+          "gain_margin": 429.93,
+          "examples": [
+            "Trump U.",
+            "If base entertainment is the definition of \"Great\", Trump is a man who knows how to deliver on a promise.",
+            "I believe that if President Trump personally reviewed this plan, his businessman instincts would kick in and he would reject it immediately, if not sooner."
+          ]
+        },
+        {
+          "group": 632,
+          "latents": [
+            1224
+          ],
+          "gain_margin": 367.55,
+          "examples": [
+            "Mr. Katul, you are exactly correct, but unfortunately your thoughtful insights are wasted on Lynn Porter. Based on all his comments thus far, he plans to go ful",
+            "Look at Facebook.  Scharber's residence is in Wasilla.  Don't know why he was in Mountain View.  Could be where Silva lived.  Scharber has a child, also.  The p",
+            "It is amazing how stupid and cowardly tancredo is and he got elected several times.\nHe was a draft dodger.\nHe knowingly hired illegals.\nEven when pointed out th"
+          ]
+        },
+        {
+          "group": 1701,
+          "latents": [
+            614
+          ],
+          "gain_margin": 335.61,
+          "examples": [
+            "Good! Now charge them with murder!",
+            "I lost a leg you puke!",
+            "Do you know what happens then? You spend the night in jail."
+          ]
+        },
+        {
+          "group": 124,
+          "latents": [
+            1919
+          ],
+          "gain_margin": 333.96,
+          "examples": [
+            "A rough ride on this issue only from the hypocrites, parasites and perverts on the left.  Hope they all walk or ride a horse to their protests as these people s",
+            "Identify \"culture.\"  Don't look now, muffin, but yer sitting smack square in America's culture of a melting pot.  Deal with it.  Trying to blame liberalism, whi",
+            "So any young person who is here Illegally is now a citizen ?  What are the requirements, is it for any country ?  Crazy people.  Enforce the LAWS of the land. Y"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 882,
+      "n_groups": 831,
+      "n_multi_groups": 44,
+      "n_groups_dropped": 610,
+      "n_removed": 639,
+      "var_share_removed": 0.4976,
+      "var_share_sae_error": 0.016,
+      "top": [
+        {
+          "group": 105,
+          "latents": [
+            1687
+          ],
+          "gain_margin": 130.93,
+          "examples": [
+            "2017-09-09 20:14:19.018642",
+            "2017-09-09 21:12:38.857655",
+            "2017-09-30 14:50:18.942929"
+          ]
+        },
+        {
+          "group": 827,
+          "latents": [
+            311
+          ],
+          "gain_margin": 123.78,
+          "examples": [
+            "2016-09-10 09:37:09.384954",
+            "2017-09-15 00:09:27.391587",
+            "2017-09-13 00:31:09.450116"
+          ]
+        },
+        {
+          "group": 34,
+          "latents": [
+            2028
+          ],
+          "gain_margin": 97.07,
+          "examples": [
+            "2017-06-15 17:24:39.399611",
+            "2016-12-03 20:00:39.116412",
+            "2016-12-11 17:00:39.882332"
+          ]
+        },
+        {
+          "group": 364,
+          "latents": [
+            313
+          ],
+          "gain_margin": 96.72,
+          "examples": [
+            "2016-10-14 17:14:10.258034",
+            "2017-05-09 04:50:28.090004",
+            "2017-05-30 16:04:10.920005"
+          ]
+        },
+        {
+          "group": 407,
+          "latents": [
+            1342
+          ],
+          "gain_margin": 95.45,
+          "examples": [
+            "2017-04-21 15:38:18.185162",
+            "2017-03-15 17:01:23.250845",
+            "2017-03-24 02:05:11.270018"
+          ]
+        }
+      ]
+    }
+  }
+}

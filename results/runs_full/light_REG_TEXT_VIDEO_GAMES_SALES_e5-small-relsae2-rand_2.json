@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.3319964783174227,
+  "test_error": 1.3319964783174227,
+  "course_metric": "r2",
+  "course_score": 0.38434489286383733,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 31.567217350006104,
+  "diagnostics": {
+    "Name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 404,
+      "n_removed": 108,
+      "threshold": 0.0557,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.3986,
+      "var_share_kept": 0.5734,
+      "var_share_sae_error": 0.2133,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 162,
+          "score": 0.1547,
+          "n_active": 558,
+          "examples": [
+            "Tom Clancy's Rainbow Six: Rogue Spear",
+            "Tom Clancy's Rainbow Six: Rogue Spear",
+            "Tom Clancy's Rainbow Six: Siege"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1237,
+          "n_active": 703,
+          "examples": [
+            "Kirby's Dream Land",
+            "Scooby-Doo",
+            "Kirby's Epic Yarn"
+          ]
+        },
+        {
+          "latent": 429,
+          "score": 0.1154,
+          "n_active": 533,
+          "examples": [
+            "Brave: The Video Game",
+            "Brave: The Video Game",
+            "The Naked Brothers Band: The Video Game"
+          ]
+        },
+        {
+          "latent": 180,
+          "score": 0.1086,
+          "n_active": 410,
+          "examples": [
+            "Grand Theft Auto",
+            "Grand Theft Auto V",
+            "Grand Theft Auto V"
+          ]
+        },
+        {
+          "latent": 368,
+          "score": 0.0868,
+          "n_active": 472,
+          "examples": [
+            "Madden NFL 25",
+            "Madden NFL 25",
+            "Madden NFL 25"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 508,
+      "n_kept": 483,
+      "n_removed": 29,
+      "threshold": 0.0833,
+      "passed_test": 27,
+      "removed_norm_ratio": 0.2082,
+      "var_share_kept": 0.9489,
+      "var_share_sae_error": 0.0008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 414,
+          "score": 0.1837,
+          "n_active": 421,
+          "examples": [
+            "LEGO Media",
+            "LEGO Media",
+            "LEGO Media"
+          ]
+        },
+        {
+          "latent": 198,
+          "score": 0.1817,
+          "n_active": 423,
+          "examples": [
+            "Sweets",
+            "Gust",
+            "Gust"
+          ]
+        },
+        {
+          "latent": 254,
+          "score": 0.1763,
+          "n_active": 449,
+          "examples": [
+            "Magical Company",
+            "Performance Designed Products",
+            "Marvelous Interactive"
+          ]
+        },
+        {
+          "latent": 488,
+          "score": 0.1543,
+          "n_active": 641,
+          "examples": [
+            "Yacht Club Games",
+            "XS Games",
+            "XS Games"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.1515,
+          "n_active": 523,
+          "examples": [
+            "Aksys Games",
+            "Aksys Games",
+            "Aksys Games"
+          ]
+        }
+      ]
+    }
+  }
+}

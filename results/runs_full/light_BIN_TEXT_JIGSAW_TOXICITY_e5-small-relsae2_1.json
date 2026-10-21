@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8210306485217043,
+  "test_error": 0.17896935147829574,
+  "course_metric": "auroc",
+  "course_score": 0.8210306485217043,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 41.414955854415894,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 396,
+      "n_removed": 116,
+      "threshold": 0.0423,
+      "passed_test": 35,
+      "removed_norm_ratio": 0.3367,
+      "var_share_kept": 0.4872,
+      "var_share_sae_error": 0.3208,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 329,
+          "score": 0.1818,
+          "n_active": 987,
+          "examples": [
+            "Ridiculous.",
+            "bizarre illogical argument.",
+            "Ridiculous nonsense!"
+          ]
+        },
+        {
+          "latent": 496,
+          "score": 0.1301,
+          "n_active": 1054,
+          "examples": [
+            "Labeling it as \"typical stupid left racism\" would sound to many like \"typical stupid right racism\". Why not lose the labels and deal with the content?",
+            "Antifa is a gift to the far right, to fascists and racists and all manner of white supremacists, who can point to antifa and say \"They're worse than we are, the",
+            "More BLM violence from this racist anarchist group!"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.1147,
+          "n_active": 960,
+          "examples": [
+            "He is much worse than you suggest though",
+            "I tell friends visiting that the 16th street mall is the absolute worst Denver has to offer.",
+            "The hungry mouth of PERS will never be satisfied."
+          ]
+        },
+        {
+          "latent": 304,
+          "score": 0.1078,
+          "n_active": 752,
+          "examples": [
+            "Oh snap. Monty got called out hard.",
+            "The bully in the china shop continues his rampage.",
+            "...makes me wonder what's in the coffee?...but  I do think that civility is a worthy goal. People can disagree without humiliating or denigrating some one else,"
+          ]
+        },
+        {
+          "latent": 371,
+          "score": 0.0927,
+          "n_active": 408,
+          "examples": [
+            "Turkish President Recep Tayyip Erdogan vowed to \u201cchop off the heads\u201d of traitors during a speech in Istanbul commemorating the victims of last year\u2019s botched co",
+            "RT will announce Pooty is  just offering free tours of the Lubyanka.",
+            "What it is going to do:\nApply regulation t0 the sale of product which should in time improve quality, content accuracy and labelling for those that appreciate t"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 317,
+      "n_kept": 354,
+      "n_removed": 158,
+      "threshold": 0.0438,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.6884,
+      "var_share_kept": 0.4262,
+      "var_share_sae_error": 0.0317,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 4,
+          "score": 0.0411,
+          "n_active": 2205,
+          "examples": [
+            "2017-05-17 00:54:00.101928",
+            "2017-05-30 23:26:05.218691",
+            "2017-05-05 12:46:18.909444"
+          ]
+        },
+        {
+          "latent": 472,
+          "score": 0.0364,
+          "n_active": 109,
+          "examples": [
+            "2016-10-20 14:08:00.513756",
+            "2016-11-08 14:18:23.035056",
+            "2017-10-03 18:59:40.005156"
+          ]
+        },
+        {
+          "latent": 408,
+          "score": 0.0318,
+          "n_active": 1309,
+          "examples": [
+            "2017-10-01 17:55:00.303546",
+            "2017-10-17 00:16:29.395143",
+            "2017-10-31 15:31:27.624895"
+          ]
+        },
+        {
+          "latent": 448,
+          "score": 0.0314,
+          "n_active": 1283,
+          "examples": [
+            "2016-10-20 13:39:20.800196",
+            "2017-10-14 19:14:25.674220",
+            "2017-10-20 15:13:23.509424"
+          ]
+        },
+        {
+          "latent": 334,
+          "score": 0.0312,
+          "n_active": 806,
+          "examples": [
+            "2017-09-26 14:35:33.978996",
+            "2016-04-11 17:35:14.202976",
+            "2016-07-30 22:58:00.030796"
+          ]
+        }
+      ]
+    }
+  }
+}

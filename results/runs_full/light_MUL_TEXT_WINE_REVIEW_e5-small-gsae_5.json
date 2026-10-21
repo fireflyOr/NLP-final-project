@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.422279875352456,
+  "test_error": 1.422279875352456,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9646122012044533,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 201.80305767059326,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2036,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 308,
+      "n_removed": 308,
+      "var_share_removed": 0.0592,
+      "var_share_sae_error": 0.1221,
+      "top": [
+        {
+          "group": 552,
+          "latents": [
+            1519
+          ],
+          "gain_margin": 8396.25,
+          "examples": [
+            "Light, clean, gently spicy pear and apple fruit flavors are set in a crisp white wine with fine acidity. The hints of white pepper give it detail and interest; ",
+            "This is a bright, effusive, full-bodied wine, with underlying acidity that keeps it fresh in the glass. Apple and pear flavors combine with firm texture, provid",
+            "Earthy notes of forest floor and white field mushroom precede the fruitier notions of ripe fresh and dried pear on nose and palate. This wine has a balm-like qu"
+          ]
+        },
+        {
+          "group": 1876,
+          "latents": [
+            74
+          ],
+          "gain_margin": 5998.36,
+          "examples": [
+            "Here's a friendly, fairly sophisticated Pinot for drinking now. It's dry, silky and crisp in acidity, with flavors of rich raspberry, cherry pie, vanilla and to",
+            "Delicately floral in aroma, this soft, earthy Pinot offers blue and red berry fruit that are layered and generous on the finish. Food-friendly, it has the heft ",
+            "Esterlina's Pinot is very perfumey, light in body and soul at first, as it gathers steam with a tasty backbone of lush red fruit, spice and plenty of staying po"
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            2011
+          ],
+          "gain_margin": 5686.6,
+          "examples": [
+            "Add this new winery to the growing list of Walla Walla-based boutiques. The Syrah is plump and juicy, a round, fruity red wine that is perfectly enjoyable. \u2014P.G",
+            "This subtle, graceful Syrah acknowledges the cool vintage and takes full advantage of what it has to offer. It's based upon elegantly-layered citrus and sappy b",
+            "A wonderful Syrah, one of the most drinkable on the market. It's delicious, with thick, soft tannins housing dry, complex flavors of blackberries, black currant"
+          ]
+        },
+        {
+          "group": 399,
+          "latents": [
+            1377
+          ],
+          "gain_margin": 5510.36,
+          "examples": [
+            "This is a beautiful Chardonnay\u2014dry, sleek and refined. Beyond the subtle tropical fruit, citrus and green apple flavors is a steely minerality and lemony acidit",
+            "This pale yellow Chardonnay begins with aromas of lemon, lime and spice and offers flavors of lush tropical fruit and crisp acids. Balanced and alluring, with a",
+            "Delicately structured, this Chardonnay has simple citrus peach flavors, with an undertow of green herbs. It's dry and tart with acidity."
+          ]
+        },
+        {
+          "group": 1215,
+          "latents": [
+            500
+          ],
+          "gain_margin": 5388.26,
+          "examples": [
+            "This is a fine bottle of Merlot, released under Woodward Canyon's second label, Nelms Road. Firm blackberry and cassis fruit flavors anchor a substantial wine t",
+            "A nice Merlot whose rich tannins and elegance mark its Napa origins. Although it finishes dry, it fills the mouth with ripe, sweet cherry, red currant, toast an",
+            "This Merlot smells warm and inviting with strong aromas and flavors of black plum, jammy berry preserves and a touch of almond paste. Medium weight with good ba"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 876,
+      "n_groups": 873,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 726,
+      "n_removed": 729,
+      "var_share_removed": 0.6638,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 460,
+          "latents": [
+            268
+          ],
+          "gain_margin": 6899.48,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 821,
+          "latents": [
+            95
+          ],
+          "gain_margin": 3161.61,
+          "examples": [
+            "Champagne",
+            "Champagne",
+            "Champagne"
+          ]
+        },
+        {
+          "group": 668,
+          "latents": [
+            360
+          ],
+          "gain_margin": 2917.74,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 516,
+          "latents": [
+            266
+          ],
+          "gain_margin": 2782.25,
+          "examples": [
+            "Northern Spain",
+            "Northern Spain",
+            "Northern Spain"
+          ]
+        },
+        {
+          "group": 566,
+          "latents": [
+            20
+          ],
+          "gain_margin": 2656.8,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        }
+      ]
+    }
+  }
+}

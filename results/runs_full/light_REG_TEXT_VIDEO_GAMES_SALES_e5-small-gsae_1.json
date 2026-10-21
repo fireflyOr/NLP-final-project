@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.9625949424771313,
+  "test_error": 0.9625949424771313,
+  "course_metric": "r2",
+  "course_score": 0.41145175855618354,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.61747121810913,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2044,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1560,
+      "n_removed": 1560,
+      "var_share_removed": 0.5991,
+      "var_share_sae_error": 0.0736,
+      "top": [
+        {
+          "group": 1956,
+          "latents": [
+            29
+          ],
+          "gain_margin": 6046.14,
+          "examples": [
+            "Yattaman Wii: BikkuriDokkiri Machine de Mou Race da Koron",
+            "G1 Jockey Wii",
+            "Wii Sports Resort"
+          ]
+        },
+        {
+          "group": 465,
+          "latents": [
+            1673
+          ],
+          "gain_margin": 5848.86,
+          "examples": [
+            "Jinsei Game Wii",
+            "Wii Play",
+            "J Stars Victory Vs."
+          ]
+        },
+        {
+          "group": 1940,
+          "latents": [
+            396
+          ],
+          "gain_margin": 4193.39,
+          "examples": [
+            "Pok\u00e9Park Wii: Pikachu's Adventure",
+            "Banjo-Kazooie: Grunty's Revenge",
+            "Banjo-Kazooie"
+          ]
+        },
+        {
+          "group": 1078,
+          "latents": [
+            1210
+          ],
+          "gain_margin": 3355.53,
+          "examples": [
+            "Mario Paint",
+            "Dr. Mario",
+            "Dr. Mario"
+          ]
+        },
+        {
+          "group": 1994,
+          "latents": [
+            341
+          ],
+          "gain_margin": 1918.11,
+          "examples": [
+            "Super Mario Bros.",
+            "Mario Bros.",
+            "Mahjong"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1193,
+      "n_groups": 1193,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1097,
+      "n_removed": 1097,
+      "var_share_removed": 0.7223,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 1164,
+          "latents": [
+            95
+          ],
+          "gain_margin": 2193.9,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1104,
+          "latents": [
+            347
+          ],
+          "gain_margin": 1488.93,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1191,
+          "latents": [
+            432
+          ],
+          "gain_margin": 1239.82,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 839,
+          "latents": [
+            558
+          ],
+          "gain_margin": 1231.36,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1102,
+          "latents": [
+            542
+          ],
+          "gain_margin": 378.35,
+          "examples": [
+            "Fox Interactive",
+            "Fox Interactive",
+            "Fox Interactive"
+          ]
+        }
+      ]
+    }
+  }
+}

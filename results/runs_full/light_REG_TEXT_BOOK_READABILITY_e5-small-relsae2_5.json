@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-relsae2",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.9158430599991214,
+  "test_error": 0.9158430599991214,
+  "course_metric": "r2",
+  "course_score": 0.7864602555582958,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 82.78465437889099,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 461,
+      "n_kept": 329,
+      "n_removed": 183,
+      "threshold": 0.0756,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.3952,
+      "var_share_kept": 0.5734,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 186,
+          "score": 0.087,
+          "n_active": 38,
+          "examples": [
+            "Fairy Tales from Brazil",
+            "The Indian Fairy Book\nFrom the Original Legends",
+            "Indian Fairy Tales"
+          ]
+        },
+        {
+          "latent": 357,
+          "score": 0.0809,
+          "n_active": 71,
+          "examples": [
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales",
+            "My Book of Favorite Fairy Tales"
+          ]
+        },
+        {
+          "latent": 145,
+          "score": 0.0792,
+          "n_active": 35,
+          "examples": [
+            "The Book of Nature Myths",
+            "THE BOOK OF NATURE MYTHS",
+            "THE BOOK OF NATURE MYTHS"
+          ]
+        },
+        {
+          "latent": 266,
+          "score": 0.0659,
+          "n_active": 309,
+          "examples": [
+            "The Crimson Fairy Book",
+            "THE FAIRY BOOK.",
+            "Journeys Through Bookland, Vol. 10."
+          ]
+        },
+        {
+          "latent": 383,
+          "score": 0.0657,
+          "n_active": 347,
+          "examples": [
+            "The Indian Fairy Book\nFrom the Original Legends",
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers",
+            "The Literary World Seventh Reader by Browne, Metcalf, and Withers"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 266,
+      "n_removed": 246,
+      "threshold": 0.0701,
+      "passed_test": 3,
+      "removed_norm_ratio": 0.698,
+      "var_share_kept": 0.5037,
+      "var_share_sae_error": 0.0864,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 479,
+          "score": 0.0741,
+          "n_active": 186,
+          "examples": [
+            "G. K. Chesterton",
+            "G. K. Chesterton",
+            "G. K. Chesterton"
+          ]
+        },
+        {
+          "latent": 197,
+          "score": 0.0705,
+          "n_active": 181,
+          "examples": [
+            "Prime Minister Asquith",
+            "Prime Minister Asquith",
+            "R.M. Ballantyne"
+          ]
+        },
+        {
+          "latent": 362,
+          "score": 0.0704,
+          "n_active": 117,
+          "examples": [
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF).",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF).",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF)."
+          ]
+        },
+        {
+          "latent": 30,
+          "score": 0.0686,
+          "n_active": 165,
+          "examples": [
+            "Haitham Hajjo and Asya Rolls",
+            "On Dec. 18, 1914, the new Russian Minister to Servia, Prince Troubetzko\u00ef, presented his credentials to the Servian Crown Prince Alexander, whom he addressed as ",
+            "Gertrude Franklin Horn Atherton"
+          ]
+        },
+        {
+          "latent": 28,
+          "score": 0.0683,
+          "n_active": 261,
+          "examples": [
+            "Traditional San story",
+            "Traditional San story",
+            "Traditional San story"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 158,
+      "n_kept": 416,
+      "n_removed": 96,
+      "threshold": 0.0666,
+      "passed_test": 0,
+      "removed_norm_ratio": 2.4978,
+      "var_share_kept": 0.3558,
+      "var_share_sae_error": 0.0009,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 267,
+          "score": 0.0421,
+          "n_active": 23,
+          "examples": [
+            "metres",
+            "metres",
+            "metres"
+          ]
+        },
+        {
+          "latent": 88,
+          "score": 0.0377,
+          "n_active": 20,
+          "examples": [
+            "practising",
+            "practising",
+            "practising"
+          ]
+        },
+        {
+          "latent": 367,
+          "score": 0.0355,
+          "n_active": 24,
+          "examples": [
+            "sulphurous",
+            "cypher, cypher, cyphers, cypher",
+            "colour, vigour, homoeopathy"
+          ]
+        },
+        {
+          "latent": 181,
+          "score": 0.0348,
+          "n_active": 23,
+          "examples": [
+            "candour, candour",
+            "grey, disembowelling, harbour",
+            "centimetre, centimetres, kilometres"
+          ]
+        },
+        {
+          "latent": 150,
+          "score": 0.0343,
+          "n_active": 21,
+          "examples": [
+            "programme",
+            "programme",
+            "programme"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 327,
+      "n_removed": 185,
+      "threshold": 0.0748,
+      "passed_test": 5,
+      "removed_norm_ratio": 0.5039,
+      "var_share_kept": 0.4482,
+      "var_share_sae_error": 0.2565,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 195,
+          "score": 0.1015,
+          "n_active": 236,
+          "examples": [
+            "Many animals came from the bush to join in the dancing and singing. Lion brought his fire sticks. He rubbed the sticks, rubbed and rubbed. Soon a little smoke a",
+            "Civil rights are rights that all people in a country have. The civil rights of a country apply to all the citizens within its borders. These rights are given by",
+            "About six weeks after the beginning of the half, as Tom and Arthur were sitting one night before supper beginning their verses, Arthur suddenly stopped, and loo"
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.0947,
+          "n_active": 289,
+          "examples": [
+            "There lived a beautiful girl. One day she was very hungry. She thought of ways of getting something to eat. She met a man who asked her, \"How are you, young gir",
+            "There was a hyena and a donkey who lived near a city. They met by chance and became friends. They made an agreement to share food, and to defend themselves toge",
+            "Cat and Dog walk. They walk in their village. Then they see an egg. The egg is in the grass. The egg is alone in the grass. The egg is all alone. Cat and Dog wa"
+          ]
+        },
+        {
+          "latent": 454,
+          "score": 0.0886,
+          "n_active": 324,
+          "examples": [
+            "There was a terrible hubbub in the henhouse. The Rooster squalled so loudly that he waked up every hen in the place. And when they heard him crying that a skunk",
+            "One day last summer, as I sat on the bank of the river, looking at the pretty blue rippling water, who should come walking proudly down to the water's-edge but,",
+            "Mrs. F., a lady living not far from Boston, has a bantam hen, who, every spring morning, walks into the house, and lays an egg in a rocking-chair.\nAfter laying "
+          ]
+        },
+        {
+          "latent": 23,
+          "score": 0.0842,
+          "n_active": 213,
+          "examples": [
+            "On the day the American troops landed on the coast of Cuba, the Cubans informed General Wheeler that the enemy were intrenched at Guasimas, blocking the way to ",
+            "The ulster and the felt hat soon came off again, for a head wind lay waiting in the offing, and the \"Spartacus\" began to pitch and toss in a manner which made a",
+            "Sweetest Susan had black hair and dark eyes like her father, while Buster John had golden hair and brown eyes like his mother. As for Drusilla, she was as black"
+          ]
+        },
+        {
+          "latent": 377,
+          "score": 0.0769,
+          "n_active": 220,
+          "examples": [
+            "Sif was Thor's wife.\nSif had long golden hair. Thor was very proud of Sif's golden hair.\nThor was always going on long journeys. One day he went off and left Si",
+            "Early last spring, Mistress Jenny Wren took possession of the little box nailed to a tree immediately in front of Mr. Philip's house. She had not really moved i",
+            "Thor was always going on long journeys. One day he went off and left Sif alone. She went out on the porch and fell asleep.\nLoki came along. He was always playin"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 278,
+      "n_removed": 234,
+      "threshold": 0.0768,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.5801,
+      "var_share_kept": 0.4114,
+      "var_share_sae_error": 0.2076,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 184,
+          "score": 0.0626,
+          "n_active": 173,
+          "examples": [
+            "Cat and Dog:\nCat is yellow",
+            "HOW TINY HARE MET CAT",
+            "THE BLACK CAT"
+          ]
+        },
+        {
+          "latent": 69,
+          "score": 0.0555,
+          "n_active": 166,
+          "examples": [
+            "Havelok Wins Back His Kingdom",
+            "The Lost Rabbit",
+            "Hare and Tortoise (Again!)"
+          ]
+        },
+        {
+          "latent": 107,
+          "score": 0.0552,
+          "n_active": 203,
+          "examples": [
+            "The Hyena's funeral",
+            "Rip Van Winkle",
+            "COST OF POWER TO MAKE FLOUR."
+          ]
+        },
+        {
+          "latent": 70,
+          "score": 0.0497,
+          "n_active": 167,
+          "examples": [
+            "First House",
+            "First Day At\nSchool.",
+            "A MORNING RIDE"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.0475,
+          "n_active": 147,
+          "examples": [
+            "A Special Nest",
+            "THE WHITE TURKEY'S WING",
+            "THE THANKSGIVING GOOSE"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 510,
+      "n_kept": 226,
+      "n_removed": 286,
+      "threshold": 0.0807,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.705,
+      "var_share_kept": 0.3505,
+      "var_share_sae_error": 0.0556,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 211,
+          "score": 0.0631,
+          "n_active": 119,
+          "examples": [
+            "http://www.gutenberg.org/files/20521/20521-h/20521-h.htm#Servia_and_Her_Neighbors",
+            "http://www.gutenberg.org/files/20521/20521-h/20521-h.htm#Servia_and_Her_Neighbors",
+            "http://www.gutenberg.org/files/20521/20521-h/20521-h.htm#Servia_and_Her_Neighbors"
+          ]
+        },
+        {
+          "latent": 196,
+          "score": 0.0615,
+          "n_active": 31,
+          "examples": [
+            "https://www.commonlit.org/texts/superman-s-secret-identity",
+            "https://www.commonlit.org/texts/the-forgotten-man",
+            "https://www.commonlit.org/texts/excerpt-from-the-adventures-of-huckleberry-finn"
+          ]
+        },
+        {
+          "latent": 492,
+          "score": 0.0575,
+          "n_active": 43,
+          "examples": [
+            "http://www.gutenberg.org/files/16331/16331-h/16331-h.htm#ATROCITIES_OF_THE_WAR",
+            "http://www.gutenberg.org/files/16331/16331-h/16331-h.htm#ATROCITIES_OF_THE_WAR",
+            "https://en.wikipedia.org/wiki/Seven_Years%27_War"
+          ]
+        },
+        {
+          "latent": 110,
+          "score": 0.0572,
+          "n_active": 44,
+          "examples": [
+            "http://www.online-literature.com/oliver-holmes/john-lothrop-motley/",
+            "http://www.online-literature.com/bulfinch/oregon-and-eldorado/2/",
+            "http://www.online-literature.com/h-rider-haggard/cetywayo/"
+          ]
+        },
+        {
+          "latent": 152,
+          "score": 0.0551,
+          "n_active": 425,
+          "examples": [
+            "http://www.gutenberg.org/files/22420/22420-h/22420-h.htm",
+            "http://www.gutenberg.org/files/22420/22420-h/22420-h.htm",
+            "http://www.gutenberg.org/files/22420/22420-h/22420-h.htm#Page_86"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-relsae2",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -21.412514608970422,
+  "test_error": 21.412514608970422,
+  "course_metric": "r2",
+  "course_score": 0.8029161368049885,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 71.69771695137024,
+  "diagnostics": {
+    "colors": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 277,
+      "n_kept": 406,
+      "n_removed": 106,
+      "threshold": 0.0862,
+      "passed_test": 0,
+      "removed_norm_ratio": 0.2958,
+      "var_share_kept": 0.6559,
+      "var_share_sae_error": 0.0002,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 326,
+          "score": 0.0801,
+          "n_active": 60,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 355,
+          "score": 0.0699,
+          "n_active": 52,
+          "examples": [
+            "mauve / cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 247,
+          "score": 0.0646,
+          "n_active": 50,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "latent": 24,
+          "score": 0.0554,
+          "n_active": 41,
+          "examples": [
+            "cream / gray",
+            "cream / green",
+            "cream / green"
+          ]
+        },
+        {
+          "latent": 287,
+          "score": 0.0491,
+          "n_active": 23,
+          "examples": [
+            "cream / green",
+            "cream / green",
+            "gold / blue"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 299,
+      "n_kept": 447,
+      "n_removed": 65,
+      "threshold": 0.0758,
+      "passed_test": 4,
+      "removed_norm_ratio": 0.1339,
+      "var_share_kept": 0.858,
+      "var_share_sae_error": 0.0012,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 363,
+          "score": 0.0817,
+          "n_active": 58,
+          "examples": [
+            "Glenna Jean, Pillow",
+            "Glenna Jean, Pillow",
+            "Glenna Jean, Pillow"
+          ]
+        },
+        {
+          "latent": 86,
+          "score": 0.0795,
+          "n_active": 46,
+          "examples": [
+            "Nature Organic Muslin",
+            "Nature Organic Muslin",
+            "Nature Organic Muslin"
+          ]
+        },
+        {
+          "latent": 359,
+          "score": 0.0792,
+          "n_active": 41,
+          "examples": [
+            "Peru",
+            "Peru",
+            "Glenna Jean Cacti,"
+          ]
+        },
+        {
+          "latent": 9,
+          "score": 0.0779,
+          "n_active": 252,
+          "examples": [
+            "Trend Lab Rise",
+            "Trend Lab Rise",
+            "Trend Lab Rise"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0742,
+          "n_active": 59,
+          "examples": [
+            "Johannes Brahms.",
+            "Johannes Brahms.",
+            "Glenna Jean, Swizzle"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 495,
+      "n_kept": 426,
+      "n_removed": 86,
+      "threshold": 0.0755,
+      "passed_test": 91,
+      "removed_norm_ratio": 0.2906,
+      "var_share_kept": 0.8298,
+      "var_share_sae_error": 0.0001,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 115,
+          "score": 0.2897,
+          "n_active": 32,
+          "examples": [
+            "Candide",
+            "Candide",
+            "Candide"
+          ]
+        },
+        {
+          "latent": 208,
+          "score": 0.2567,
+          "n_active": 170,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 307,
+          "score": 0.2319,
+          "n_active": 74,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "latent": 366,
+          "score": 0.2216,
+          "n_active": 202,
+          "examples": [
+            "RiverRidge Kids",
+            "RiverRidge Kids",
+            "RiverRidge Kids"
+          ]
+        },
+        {
+          "latent": 32,
+          "score": 0.2018,
+          "n_active": 44,
+          "examples": [
+            "Heidi Klum",
+            "Heidi Klum",
+            "Disney Baby Classic Pooh"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 388,
+      "n_removed": 124,
+      "threshold": 0.07,
+      "passed_test": 72,
+      "removed_norm_ratio": 0.4204,
+      "var_share_kept": 0.7482,
+      "var_share_sae_error": 0.0783,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 38,
+          "score": 0.2159,
+          "n_active": 232,
+          "examples": [
+            "Snuggleberry Baby Sunflower Love 5 Piece Crib Bedding Set with Storybook",
+            "Snuggleberry Baby Sun And Sand 5 Piece Crib Bedding Set with Storybook",
+            "Snuggleberry Baby Sun And Sand 6 Piece Crib Bedding Set with Storybook"
+          ]
+        },
+        {
+          "latent": 469,
+          "score": 0.2079,
+          "n_active": 93,
+          "examples": [
+            "Gallery Wrought Iron & Crystal White 3 Light Swag Plug in Chandelier with Pink Crystal Hearts",
+            "Gallery Wrought Iron & Crystal 3 Light Swag Plug in Chandelier with Pink Crystal Hearts",
+            "Gallery Wrought Iron & Crystal Swag Plug In White 3 Light Chandelier"
+          ]
+        },
+        {
+          "latent": 354,
+          "score": 0.1977,
+          "n_active": 310,
+          "examples": [
+            "babyletto In Bloom 4-Piece Set",
+            "Koala Baby Canvas Closet Set - 4 Piece",
+            "Simplicity Hot Pink Toddler 4 Piece Set"
+          ]
+        },
+        {
+          "latent": 445,
+          "score": 0.1891,
+          "n_active": 93,
+          "examples": [
+            "babyletto Alphabets 5-Piece Set",
+            "babyletto In Bloom 5-Piece Set",
+            "Trend Lab Serena 5 Piece Gift Set"
+          ]
+        },
+        {
+          "latent": 414,
+          "score": 0.1738,
+          "n_active": 367,
+          "examples": [
+            "Lambs & Ivy Safari Express 9 Piece Bedding Set",
+            "Pam Grace Creations Cheetah 10-Piece Bedding Set",
+            "Fleeting Flora 6-Piece Bedding Set"
+          ]
+        }
+      ]
+    }
+  }
+}

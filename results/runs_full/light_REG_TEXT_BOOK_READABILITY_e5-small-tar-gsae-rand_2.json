@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8708301977884808,
+  "test_error": 0.8708301977884808,
+  "course_metric": "r2",
+  "course_score": 0.8023755935929925,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 57.2986319065094,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 449,
+      "n_groups": 448,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 366,
+      "n_removed": 366,
+      "var_share_removed": 0.635,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 305,
+          "latents": [
+            477
+          ],
+          "gain_margin": 316.01,
+          "examples": [
+            "The Nursery, September 1881, Vol. XXX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, September 1881, Vol. XXX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, September 1881, Vol. XXX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 303,
+          "latents": [
+            813
+          ],
+          "gain_margin": 223.56,
+          "examples": [
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 163,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 167.37,
+          "examples": [
+            "The Orange Fairy Book",
+            "The Nursery, July 1877, XXII. No. 1\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, July 1877, XXII. No. 1\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 310,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 142.53,
+          "examples": [
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers"
+          ]
+        },
+        {
+          "group": 333,
+          "latents": [
+            298
+          ],
+          "gain_margin": 127.93,
+          "examples": [
+            "African Storybook Level 3",
+            "African Storybook Level 3",
+            "African Storybook Level 3"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1275,
+      "n_groups": 1275,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1028,
+      "n_removed": 1028,
+      "var_share_removed": 0.5836,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 1264,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 224.17,
+          "examples": [
+            "Alice Nakasango",
+            "W. G., in The Garden",
+            "LITTLE CHICK"
+          ]
+        },
+        {
+          "group": 478,
+          "latents": [
+            581
+          ],
+          "gain_margin": 217.4,
+          "examples": [
+            "National Archives",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF).",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF)."
+          ]
+        },
+        {
+          "group": 75,
+          "latents": [
+            1844
+          ],
+          "gain_margin": 203.53,
+          "examples": [
+            "an editorial article published Oct. 15, (28,) 1914, in the Mir, the organ of the Nationalists, and signed by A. Bouroff, ex-Minister and ex-Vice President of th",
+            "Decree of Sept. 23, 1914. MM. Georges Payelle, First President of the Cour des Comptes; Armand Mollard, Minister Plenipotentiary; Georges Maringer, Counselor of",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 298,
+          "latents": [
+            1672
+          ],
+          "gain_margin": 113.56,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 540,
+          "latents": [
+            477
+          ],
+          "gain_margin": 109.03,
+          "examples": [
+            "LITTLE CHICK",
+            "Haitham Hajjo and Asya Rolls",
+            "Little Zebra Books"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 113,
+      "n_groups": 109,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 103,
+      "n_removed": 107,
+      "var_share_removed": 0.451,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 49,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1.67,
+          "examples": [
+            "sulphide, sulphides, sulphide, sulphide, sulphide, sulphate",
+            "kilometres, metres, metres",
+            "sulphate, sulphate, sulphate"
+          ]
+        },
+        {
+          "group": 30,
+          "latents": [
+            1417
+          ],
+          "gain_margin": 0.55,
+          "examples": [
+            "travellers",
+            "travellers",
+            "travellers, traveller"
+          ]
+        },
+        {
+          "group": 89,
+          "latents": [
+            245
+          ],
+          "gain_margin": 0.2,
+          "examples": [
+            "travelling",
+            "travelling",
+            "travelling"
+          ]
+        },
+        {
+          "group": 36,
+          "latents": [
+            825
+          ],
+          "gain_margin": 0.18,
+          "examples": [
+            "travelling",
+            "travelling",
+            "travelling"
+          ]
+        },
+        {
+          "group": 102,
+          "latents": [
+            174
+          ],
+          "gain_margin": 0.1,
+          "examples": [
+            "kilometres, centimetre",
+            "centimetre, centimetres, kilometres",
+            "kilometres, metres, metres"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1246,
+      "n_groups": 1246,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 970,
+      "n_removed": 970,
+      "var_share_removed": 0.5102,
+      "var_share_sae_error": 0.0094,
+      "top": [
+        {
+          "group": 1231,
+          "latents": [
+            200
+          ],
+          "gain_margin": 3297.2,
+          "examples": [
+            "It is true that, to a traveller approaching the Himalayas from any part of the great plain of India, these mountains present the appearance of a single range, s",
+            "After the great crisis of the first world war, which terminated in the Congress of Vienna, the relations of England to the German States were fairly good. Peopl",
+            "Electric lamps on the arc principle are almost as numerous as the trees in the forest, and it is somewhat fresh to come upon something that is novel. In these l"
+          ]
+        },
+        {
+          "group": 616,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 2342.06,
+          "examples": [
+            "On the edge of a forest in Karnataka I came across these women collecting firewood. They are wandering Romani people from a tribe called the Banjara tribe. Look",
+            "Elizabeth Eliza had heard at Philadelphia how much women had done, and she felt they ought to contribute to such a cause. She had an idea, but she would not spe",
+            "Dotty continued to go to Mrs. Gray's every night with the milk. Sometimes Katie went with her, and then they always paused a while under the acorn-tree and play"
+          ]
+        },
+        {
+          "group": 606,
+          "latents": [
+            867
+          ],
+          "gain_margin": 1259.54,
+          "examples": [
+            "Fossil fuels are fuels formed by natural processes such as anaerobic decomposition of buried dead organisms, containing energy originating in ancient photosynth",
+            "Carbon monoxide is produced from the partial oxidation of carbon-containing compounds; it forms when there is not enough oxygen to produce carbon dioxide (CO2),",
+            "Biodiesel can also be used as a heating fuel in domestic and commercial boilers, a mix of heating oil and biofuel which is standardized and taxed slightly diffe"
+          ]
+        },
+        {
+          "group": 495,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 1189.44,
+          "examples": [
+            "If you asked Dora to do any thing, she would reply, \"In a minute.\" It was a bad habit she had. \"Dora, please bring me a drink of water.\"\u2014\"In a minute.\"\u2014\"Dora, g",
+            "They made a big fire but the meat would not cook. They made the fire bigger and bigger, but the meat would not cook.\nThen the gods were very cross.\nSome one sai",
+            "Hare used to sit all day doing nothing and when Hyena came home after work, Hare would always ask him for nuts from his farm. But Hyena didn't like this very mu"
+          ]
+        },
+        {
+          "group": 1220,
+          "latents": [
+            298
+          ],
+          "gain_margin": 1052.41,
+          "examples": [
+            "Little by little they saw that there was a high mountain in the west where the light had been, and above the mountain floated a dark blue smoke. \"Come,\" said on",
+            "Did you ever hear of the boy who had a drum and a trumpet and a rocking-horse for his Christmas presents, and cried, after all, because Santa Claus had given hi",
+            "One day Little Boy Blue's mother said to him: \"Do you want to go and visit Aunt Polly?\" \"Who is Aunt Polly?\" asked Little Boy Blue. \"Aunt Polly lives on a farm,"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1633,
+      "n_groups": 1633,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1310,
+      "n_removed": 1310,
+      "var_share_removed": 0.6716,
+      "var_share_sae_error": 0.0191,
+      "top": [
+        {
+          "group": 911,
+          "latents": [
+            477
+          ],
+          "gain_margin": 606.94,
+          "examples": [
+            "THE BLACKBIRD'S NEST",
+            "A Story of Bird Life",
+            "Havilah's first book"
+          ]
+        },
+        {
+          "group": 1631,
+          "latents": [
+            349
+          ],
+          "gain_margin": 483.35,
+          "examples": [
+            "Arion and the Dolphin",
+            "King of the birds",
+            "HOW A BOY CAUGHT A FISH WITH HIS NOSE"
+          ]
+        },
+        {
+          "group": 811,
+          "latents": [
+            688
+          ],
+          "gain_margin": 315.41,
+          "examples": [
+            "The Sheep and the Pig",
+            "HOW THE SHEEP WERE SAVED",
+            "A Special Nest"
+          ]
+        },
+        {
+          "group": 794,
+          "latents": [
+            867
+          ],
+          "gain_margin": 256.38,
+          "examples": [
+            "Hydroelectricity",
+            "CRYSTALLIZATION AND ITS EFFECTS UPON IRON",
+            "Continental_crust"
+          ]
+        },
+        {
+          "group": 1629,
+          "latents": [
+            410
+          ],
+          "gain_margin": 137.28,
+          "examples": [
+            "The Sheep and the Pig",
+            "The Goat and Her Kid",
+            "The Child\u2019s Story"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 883,
+      "n_groups": 879,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 670,
+      "n_removed": 673,
+      "var_share_removed": 0.5826,
+      "var_share_sae_error": 0.0035,
+      "top": [
+        {
+          "group": 412,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 434.21,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_110",
+            "http://www.gutenberg.org/files/28138/28138-h/28138-h.htm#Page_110",
+            "http://www.gutenberg.org/files/28143/28143-h/28143-h.htm#Page_110"
+          ]
+        },
+        {
+          "group": 368,
+          "latents": [
+            1672
+          ],
+          "gain_margin": 238.69,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Unstructured_data",
+            "https://en.wikipedia.org/wiki/Aurora",
+            "https://en.wikipedia.org/wiki/Data_visualization"
+          ]
+        },
+        {
+          "group": 866,
+          "latents": [
+            349
+          ],
+          "gain_margin": 210.4,
+          "examples": [
+            "http://www.gutenberg.org/files/40757/40757-h/40757-h.htm#Page_168",
+            "http://www.gutenberg.org/files/28134/28134-h/28134-h.htm#Page_168",
+            "http://www.gutenberg.org/files/42158/42158-h/42158-h.htm#Page_270"
+          ]
+        },
+        {
+          "group": 188,
+          "latents": [
+            1782
+          ],
+          "gain_margin": 187.67,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Continental_crust",
+            "https://en.wikipedia.org/wiki/Geocentric_model",
+            "https://en.wikipedia.org/wiki/Carbon_dioxide"
+          ]
+        },
+        {
+          "group": 852,
+          "latents": [
+            410
+          ],
+          "gain_margin": 186.29,
+          "examples": [
+            "http://www.gutenberg.org/files/14170/14170-h/14170-h.htm#THE_BOY_WHO_LOVED_HIS_MOTHER",
+            "https://www.commonlit.org/texts/the-sheep-and-the-pig",
+            "https://www.commonlit.org/texts/the-three-little-pigs"
+          ]
+        }
+      ]
+    }
+  }
+}

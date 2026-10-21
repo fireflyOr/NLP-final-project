@@ -1,0 +1,169 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -14684.233181744326,
+  "test_error": 14684.233181744326,
+  "course_metric": "r2",
+  "course_score": 0.726950791854533,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.27948069572449,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2037,
+      "n_groups": 2029,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1259,
+      "n_removed": 1259,
+      "var_share_removed": 0.5385,
+      "var_share_sae_error": 0.0234,
+      "top": [
+        {
+          "group": 8,
+          "latents": [
+            1439,
+            1672
+          ],
+          "gain_margin": 1021.9,
+          "examples": [
+            "Kohli, R*",
+            "Wong, C*",
+            "Wong, B*"
+          ]
+        },
+        {
+          "group": 47,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 598.26,
+          "examples": [
+            "Connelly, T",
+            "Connelly, T",
+            "Connelly, T"
+          ]
+        },
+        {
+          "group": 417,
+          "latents": [
+            1245
+          ],
+          "gain_margin": 475.71,
+          "examples": [
+            "Mathar, S",
+            "Mathar, S",
+            "Mathar, S"
+          ]
+        },
+        {
+          "group": 826,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 473.47,
+          "examples": [
+            "Rai, H",
+            "Aujla, K",
+            "Aujla, K"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            813,
+            1492
+          ],
+          "gain_margin": 424.08,
+          "examples": [
+            "Campbell, I",
+            "Campbell, I",
+            "Campbell, I"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1000,
+      "n_groups": 999,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 676,
+      "n_removed": 676,
+      "var_share_removed": 0.3845,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 876,
+          "latents": [
+            305
+          ],
+          "gain_margin": 7536.74,
+          "examples": [
+            "Chief Technology Officer",
+            "Chief Information Officer (IT)",
+            "Chief Human Resources Officer"
+          ]
+        },
+        {
+          "group": 827,
+          "latents": [
+            911
+          ],
+          "gain_margin": 6835.29,
+          "examples": [
+            "Chief Of Internal Audit",
+            "Chief Of Internal Audit",
+            "A/Chief Manager EMS"
+          ]
+        },
+        {
+          "group": 964,
+          "latents": [
+            323
+          ],
+          "gain_margin": 3435.99,
+          "examples": [
+            "Director Social Policy",
+            "Director Social Policy",
+            "Director Hr Business Partners"
+          ]
+        },
+        {
+          "group": 31,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 3288.28,
+          "examples": [
+            "Deputy General Manager",
+            "Deputy General Manager",
+            "Deputy General Manager"
+          ]
+        },
+        {
+          "group": 966,
+          "latents": [
+            457
+          ],
+          "gain_margin": 2728.15,
+          "examples": [
+            "General Manager, Community Services",
+            "General Manager Community Services",
+            "General Manager Community Services"
+          ]
+        }
+      ]
+    }
+  }
+}

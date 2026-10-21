@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7322955684647366,
+  "test_error": 0.7322955684647366,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8989400203941799,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.6347918510437,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 423,
+      "n_removed": 89,
+      "threshold": 0.0465,
+      "passed_test": 84,
+      "removed_norm_ratio": 0.2788,
+      "var_share_kept": 0.6516,
+      "var_share_sae_error": 0.1961,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 18,
+          "score": 0.283,
+          "n_active": 4179,
+          "examples": [
+            "Poor quality. i expected much more from the material.",
+            "What a disappointment and for the price, it's outrageous!",
+            "The dress is beautiful but runs small so unfortunately i have to return it."
+          ]
+        },
+        {
+          "latent": 274,
+          "score": 0.2076,
+          "n_active": 2243,
+          "examples": [
+            "This is the perfect holiday dress. my best purchase of the season!",
+            "Very versatile skirt that's suitable for any occasion or any season.",
+            "Great piece. using as a night gown. slept in it last night. like a dream."
+          ]
+        },
+        {
+          "latent": 213,
+          "score": 0.1626,
+          "n_active": 2741,
+          "examples": [
+            "I love this shirt. it is great quality and hangs perfectly! please make more colors in this one. i would buy all of them!!",
+            "Love this top!!!! it is just gorgeous and fits great!",
+            "Wish this site had \"ask a question about the product\" feature like amazon does. just wondering if anyone has seen this product in person to verify color? it loo"
+          ]
+        },
+        {
+          "latent": 347,
+          "score": 0.1222,
+          "n_active": 1754,
+          "examples": [
+            "Very poorly made- wide and short, very unflattering. the material is advertised as cotton, but it felt very synthetic.",
+            "This is the worst shirt i have ever tried on from retailer. it is basically a big shaggy box from the front, and from the side it looks like a tent. it is also ",
+            "I am not sure who would look good in this dress. it is extremely oversized with tons of fabric that will not flatter anyone!"
+          ]
+        },
+        {
+          "latent": 250,
+          "score": 0.1114,
+          "n_active": 1186,
+          "examples": [
+            "So much right but then....too short.",
+            "I really love this camisole, but it's shorter than i expected.",
+            "This is a beautiful long midi blazer that happens to feel like a sweatshirt. buy it! you'll look super classy and put together. i wear to work and going out. i'"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 420,
+      "n_removed": 92,
+      "threshold": 0.0469,
+      "passed_test": 129,
+      "removed_norm_ratio": 0.3271,
+      "var_share_kept": 0.6967,
+      "var_share_sae_error": 0.0658,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 217,
+          "score": 0.2463,
+          "n_active": 1303,
+          "examples": [
+            "Cute but big",
+            "Cute but big!",
+            "Cute but big!"
+          ]
+        },
+        {
+          "latent": 369,
+          "score": 0.2091,
+          "n_active": 1910,
+          "examples": [
+            "Bad fit and bad construction",
+            "Poor quality, unflattering fit",
+            "Poor fabric quality"
+          ]
+        },
+        {
+          "latent": 154,
+          "score": 0.1631,
+          "n_active": 1495,
+          "examples": [
+            "5-star fantastic!",
+            "Would definitely recommend",
+            "Excellent"
+          ]
+        },
+        {
+          "latent": 271,
+          "score": 0.1548,
+          "n_active": 2320,
+          "examples": [
+            "Buy it!!",
+            "Love!!",
+            "Love!!"
+          ]
+        },
+        {
+          "latent": 448,
+          "score": 0.148,
+          "n_active": 725,
+          "examples": [
+            "Tight in all the wrong places...",
+            "Not sure...",
+            "Great every day, just needs a tuck..."
+          ]
+        }
+      ]
+    }
+  }
+}

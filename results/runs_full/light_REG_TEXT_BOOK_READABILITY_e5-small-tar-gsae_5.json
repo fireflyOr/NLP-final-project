@@ -1,0 +1,463 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8836785787042032,
+  "test_error": 0.8836785787042032,
+  "course_metric": "r2",
+  "course_score": 0.8011959370706994,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 56.815932512283325,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 435,
+      "n_groups": 435,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 353,
+      "n_removed": 353,
+      "var_share_removed": 0.3426,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 304,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 259.48,
+          "examples": [
+            "African Storybook Level 3",
+            "African Storybook Level 3",
+            "African Storybook Level 3"
+          ]
+        },
+        {
+          "group": 320,
+          "latents": [
+            298
+          ],
+          "gain_margin": 241.15,
+          "examples": [
+            "THE FAIRY BOOK.",
+            "African Storybook Level 4",
+            "African Storybook Level 4"
+          ]
+        },
+        {
+          "group": 179,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 180.52,
+          "examples": [
+            "The Nursery, April 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, April 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, April 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 407,
+          "latents": [
+            455
+          ],
+          "gain_margin": 155.59,
+          "examples": [
+            "The Nursery, June 1873, Vol. XIII.\nA Monthly Magazine for Youngest People",
+            "The Nursery, June 1873, Vol. XIII.\nA Monthly Magazine for Youngest People",
+            "The Nursery, June 1873, Vol. XIII.\nA Monthly Magazine for Youngest People"
+          ]
+        },
+        {
+          "group": 8,
+          "latents": [
+            1874
+          ],
+          "gain_margin": 118.14,
+          "examples": [
+            "African Storybook Level 2",
+            "African Storybook Level 2",
+            "African Storybook Level 2"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1257,
+      "n_groups": 1257,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1032,
+      "n_removed": 1032,
+      "var_share_removed": 0.3809,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 824,
+          "latents": [
+            477
+          ],
+          "gain_margin": 253.18,
+          "examples": [
+            "Addison Gifty Naana",
+            "Freddie's Papa",
+            "LITTLE CHICK"
+          ]
+        },
+        {
+          "group": 1234,
+          "latents": [
+            911
+          ],
+          "gain_margin": 251.14,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 623,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 250.26,
+          "examples": [
+            "Alice Nakasango",
+            "African Storybook and Paul Walugo",
+            "LITTLE CHICK"
+          ]
+        },
+        {
+          "group": 627,
+          "latents": [
+            349
+          ],
+          "gain_margin": 155.96,
+          "examples": [
+            "D.K., The Garden",
+            "Freddie's Papa",
+            "Aunt Abbie"
+          ]
+        },
+        {
+          "group": 77,
+          "latents": [
+            1874
+          ],
+          "gain_margin": 129.74,
+          "examples": [
+            "A.L.T.",
+            "LITTLE CHICK",
+            "Mrs. F. A. B. D."
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 90,
+      "n_groups": 87,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 75,
+      "n_removed": 78,
+      "var_share_removed": 0.4099,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 46,
+          "latents": [
+            686
+          ],
+          "gain_margin": 3.68,
+          "examples": [
+            "woollen",
+            "woolly",
+            "woolly"
+          ]
+        },
+        {
+          "group": 35,
+          "latents": [
+            1300
+          ],
+          "gain_margin": 1.36,
+          "examples": [
+            "labourer",
+            "labour",
+            "labouring"
+          ]
+        },
+        {
+          "group": 24,
+          "latents": [
+            801
+          ],
+          "gain_margin": 0.76,
+          "examples": [
+            "centimetre, centimetres, kilometres",
+            "kilometres",
+            "kilometres"
+          ]
+        },
+        {
+          "group": 79,
+          "latents": [
+            200
+          ],
+          "gain_margin": 0.64,
+          "examples": [
+            "micrometres, millilitre, sulphide",
+            "endeavoured, neutralise, odours",
+            "colour, vigour, homoeopathy"
+          ]
+        },
+        {
+          "group": 60,
+          "latents": [
+            306
+          ],
+          "gain_margin": 0.45,
+          "examples": [
+            "woollen",
+            "parlour",
+            "parlour"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1280,
+      "n_groups": 1280,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1012,
+      "n_removed": 1012,
+      "var_share_removed": 0.064,
+      "var_share_sae_error": 0.0086,
+      "top": [
+        {
+          "group": 1257,
+          "latents": [
+            200
+          ],
+          "gain_margin": 2460.22,
+          "examples": [
+            "Innovation is defined simply as a \"new idea, device, or method\". However, innovation is often also viewed as the application of better solutions that meet new r",
+            "People may not wish for their medical records to be revealed to others. This may be because they have concern that it might affect their insurance coverage or e",
+            "A microcontroller (abbreviated MCU or \u00b5C) is a computer system on a chip that does a job. It contains an integrated processor, memory (a small amount of RAM, pr"
+          ]
+        },
+        {
+          "group": 315,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 2235.67,
+          "examples": [
+            "Today is the big day! After 9 months of waiting, Thabi's mother is going to hospital to have her baby. She will be back in 3 days. Can you read the date and day",
+            "Today, I am not going to school. It is a holiday! Today I am not going to watch TV. There is no electricity anyway. What am I going to do? Today I am going to l",
+            "Chicken and Millipede were friends. But they were always competing with each other. One day they decided to play football to see who was the best player. They w"
+          ]
+        },
+        {
+          "group": 1252,
+          "latents": [
+            1072
+          ],
+          "gain_margin": 1506.29,
+          "examples": [
+            "A parliament is a type of legislature.\nThe most famous parliament is probably the one in the United Kingdom, which is sometimes called the \"Mother of all Parlia",
+            "An earthquake (also known as a quake, tremor or temblor) is the perceptible shaking of the surface of the Earth, resulting from the sudden release of energy in ",
+            "In biology, the importance of networks has been recognized because biological processes and systems need to be studied holistically (concerning every part). Tha"
+          ]
+        },
+        {
+          "group": 523,
+          "latents": [
+            688
+          ],
+          "gain_margin": 1411.36,
+          "examples": [
+            "Cat and Dog walk. They walk in their village. Then they see an egg. The egg is in the grass. The egg is alone in the grass. The egg is all alone. Cat and Dog wa",
+            "Winter is approaching. A bird decides to build a nest. She gathers little twigs and builds her nest carefully. After a lot of care and hard work, the nest is re",
+            "Tired as they were, they did not have time to go to sleep before they heard a bear calling \"Ugh! Ugh!\" in the woods. They sprang up and ran out of the woods, an"
+          ]
+        },
+        {
+          "group": 800,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 1170.55,
+          "examples": [
+            "If you asked Dora to do any thing, she would reply, \"In a minute.\" It was a bad habit she had. \"Dora, please bring me a drink of water.\"\u2014\"In a minute.\"\u2014\"Dora, g",
+            "Thor was always going on long journeys. One day he went off and left Sif alone. She went out on the porch and fell asleep.\nLoki came along. He was always playin",
+            "Grandma is coming to visit. And always she brings Thabo some peanuts and wild fruits or mealies and a melon, sometimes. Thabo wants to give Grandma something sp"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1621,
+      "n_groups": 1621,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1306,
+      "n_removed": 1306,
+      "var_share_removed": 0.3516,
+      "var_share_sae_error": 0.0197,
+      "top": [
+        {
+          "group": 1616,
+          "latents": [
+            349
+          ],
+          "gain_margin": 398.02,
+          "examples": [
+            "Sly Jackal tricks the silly Donkey",
+            "Peck's Uncle Ike and The Red Headed",
+            "Brownie and the Cook"
+          ]
+        },
+        {
+          "group": 919,
+          "latents": [
+            911
+          ],
+          "gain_margin": 326.78,
+          "examples": [
+            "Treaty_of_Versailles",
+            "THE MINERALOGICAL LOCALITIES IN AND AROUND NEW YORK CITY, AND THE MINERALS OCCURRING THEREIN.",
+            "German Aggression in Russia"
+          ]
+        },
+        {
+          "group": 1614,
+          "latents": [
+            477
+          ],
+          "gain_margin": 231.14,
+          "examples": [
+            "THE STOLEN BIRD'S-NEST",
+            "THE CHILD'S RETURN",
+            "THE MOCK TURTLE'S STORY"
+          ]
+        },
+        {
+          "group": 808,
+          "latents": [
+            867
+          ],
+          "gain_margin": 220.41,
+          "examples": [
+            "Phosphate",
+            "ON THE FLUID DENSITY OF CERTAIN METALS.",
+            "Continental_crust"
+          ]
+        },
+        {
+          "group": 1613,
+          "latents": [
+            688
+          ],
+          "gain_margin": 191.04,
+          "examples": [
+            "THE SWALLOWS' NEST",
+            "IDA'S MOUSE",
+            "Monkey and the shoes"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 886,
+      "n_groups": 883,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 700,
+      "n_removed": 703,
+      "var_share_removed": 0.2418,
+      "var_share_sae_error": 0.0036,
+      "top": [
+        {
+          "group": 852,
+          "latents": [
+            911
+          ],
+          "gain_margin": 464.68,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Mesopotamia",
+            "https://en.wikipedia.org/wiki/USA_Freedom_Act",
+            "https://en.wikipedia.org/wiki/French_Revolution"
+          ]
+        },
+        {
+          "group": 438,
+          "latents": [
+            349
+          ],
+          "gain_margin": 449.83,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#WINDBALL",
+            "http://www.gutenberg.org/files/28134/28134-h/28134-h.htm#Page_175",
+            "http://www.gutenberg.org/files/28131/28131-h/28131-h.htm#Page_71"
+          ]
+        },
+        {
+          "group": 863,
+          "latents": [
+            200
+          ],
+          "gain_margin": 351.34,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Acropolis",
+            "https://en.wikipedia.org/wiki/Mercury_(planet)",
+            "https://en.wikipedia.org/wiki/Brain_implant"
+          ]
+        },
+        {
+          "group": 259,
+          "latents": [
+            813
+          ],
+          "gain_margin": 312.2,
+          "examples": [
+            "https://freekidsbooks.org/wp-content/uploads/2016/12/Pink-Flowers-FKB-Kids-Stories.pdf",
+            "https://www.commonlit.org/texts/excerpt-from-peter-pan-when-wendy-grew-up",
+            "http://www.gutenberg.org/files/28132/28132-h/28132-h.htm#Page_101"
+          ]
+        },
+        {
+          "group": 84,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 286.95,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Gamification",
+            "https://en.wikipedia.org/wiki/Metabolism",
+            "https://en.wikipedia.org/wiki/Internet_Protocol"
+          ]
+        }
+      ]
+    }
+  }
+}

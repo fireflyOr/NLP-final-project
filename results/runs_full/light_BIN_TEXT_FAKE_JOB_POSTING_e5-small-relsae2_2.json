@@ -1,0 +1,214 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8944902735472265,
+  "test_error": 0.10550972645277346,
+  "course_metric": "auroc",
+  "course_score": 0.8944902735472264,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 57.54944443702698,
+  "diagnostics": {
+    "description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 374,
+      "n_removed": 138,
+      "threshold": 0.0447,
+      "passed_test": 32,
+      "removed_norm_ratio": 0.4142,
+      "var_share_kept": 0.5207,
+      "var_share_sae_error": 0.2594,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 426,
+          "score": 0.1622,
+          "n_active": 269,
+          "examples": [
+            "Weekly PART TIME Cash Job, Staff Required.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest ",
+            "Hiring Part-Time Workers (CASH PAYING)You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cash",
+            "Weekly CASH Jobs, Hiring Part Time Workers.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest"
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.0979,
+          "n_active": 874,
+          "examples": [
+            "18 Hours Per Week2 Days out of 7Catering for residents of 25 bed care homeResponsible to Home Manager",
+            "This is for the KMC project.We are looking for someone who is reliable and has the ability to work between 8-11 hours each week. \u00a0This would include potentially",
+            "The Writer shall properly complete all daily tasks. These daily tasks include but are not limited to: adhering to the appropriate newswriting style (fails not m"
+          ]
+        },
+        {
+          "latent": 188,
+          "score": 0.0881,
+          "n_active": 353,
+          "examples": [
+            "The Data Entry Specialist is responsible for performing high volume data entry that includes tallying and proofing merchandise order forms.",
+            "The Data Entry Clerk is responsible for verifying and accurately entering information in the computer during her/his assigned duty times. The Data Entry Clerk w",
+            "The Data Entry duties will include data entry, billing, filling, answering phones, and providing exceptional customer service. You may be cross-trained in other"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.0858,
+          "n_active": 470,
+          "examples": [
+            "Seeking full and part-time day janitors and supervisors to clean commercial office buildings in San Francisco. Duties include vacuuming, dusting, cleaning restr",
+            "Seeking PART-TIME day and night janitors to clean commercial office buildings in Antioch, Emeryville, Hayward, Martinez, Oakland, San Francisco and Santa Clara.",
+            "We are seeking a high energy and confident Office Manager for the San Mateo headquartered office.\u00a0 In an Office Manager role, you are the lynchpin of the office"
+          ]
+        },
+        {
+          "latent": 301,
+          "score": 0.0815,
+          "n_active": 478,
+          "examples": [
+            "The accountant will complete various accounting functions on an accurate and timely basis within the framework of the objectives and policies established by the",
+            "Looking for an Assistant Accountant to join a professional and highly regarded company. The suitable candidate will receive high quality training and experience",
+            "We are looking for an\u00a0Intermediate/Senior Accountant to assist in providing excellent client service by preparing financial statements, income tax returns, quar"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 299,
+      "n_kept": 456,
+      "n_removed": 56,
+      "threshold": 0.0521,
+      "passed_test": 64,
+      "removed_norm_ratio": 0.0789,
+      "var_share_kept": 0.913,
+      "var_share_sae_error": 0.0016,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 282,
+          "score": 0.1128,
+          "n_active": 28,
+          "examples": [
+            "Oct-20",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 351,
+          "score": 0.0982,
+          "n_active": 24,
+          "examples": [
+            "2000-6000",
+            "3000-6000",
+            "2000-5000"
+          ]
+        },
+        {
+          "latent": 254,
+          "score": 0.0929,
+          "n_active": 25,
+          "examples": [
+            "20-3075",
+            "1000-2000",
+            "1000-2000"
+          ]
+        },
+        {
+          "latent": 90,
+          "score": 0.0913,
+          "n_active": 1310,
+          "examples": [
+            "168000-216000",
+            "168000-216000",
+            "20-25"
+          ]
+        },
+        {
+          "latent": 372,
+          "score": 0.088,
+          "n_active": 1310,
+          "examples": [
+            "45000-95000",
+            "41000-45000",
+            "41000-45000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 381,
+      "n_removed": 131,
+      "threshold": 0.0443,
+      "passed_test": 37,
+      "removed_norm_ratio": 0.4374,
+      "var_share_kept": 0.6517,
+      "var_share_sae_error": 0.1003,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 427,
+          "score": 0.1305,
+          "n_active": 370,
+          "examples": [
+            "Administrative Assistant",
+            "Administrative Assistant",
+            "Administrative Assistant"
+          ]
+        },
+        {
+          "latent": 342,
+          "score": 0.1278,
+          "n_active": 365,
+          "examples": [
+            "Part Time Staff Needed, Weekend Cash Job.",
+            "Weekend Cash Jobs Part time & Full time.",
+            "Weekend Caregiver Need ASAP"
+          ]
+        },
+        {
+          "latent": 76,
+          "score": 0.118,
+          "n_active": 674,
+          "examples": [
+            "Administration Assistant",
+            "Administration Assistant",
+            "Administration Assistant"
+          ]
+        },
+        {
+          "latent": 373,
+          "score": 0.1082,
+          "n_active": 381,
+          "examples": [
+            "Cleaning Consultant",
+            "Cleaner Recruitment Associate",
+            "Maid Sailor - Home Cleaner"
+          ]
+        },
+        {
+          "latent": 264,
+          "score": 0.0914,
+          "n_active": 353,
+          "examples": [
+            "Office Manager",
+            "Office Manager",
+            "Office Manager"
+          ]
+        }
+      ]
+    }
+  }
+}

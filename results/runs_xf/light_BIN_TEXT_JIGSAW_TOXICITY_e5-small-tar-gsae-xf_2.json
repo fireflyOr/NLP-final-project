@@ -1,0 +1,47 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-xf",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9346283750447564,
+  "test_error": 0.06537162495524362,
+  "course_metric": "auroc",
+  "course_score": 0.9346283750447563,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 716.2935793399811,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "xfit",
+      "chosen_fraction": 0.75,
+      "n_eligible": 2047,
+      "n_removed": 1535,
+      "inner_losses": {
+        "0.0": 0.17881,
+        "0.1": 0.18008,
+        "0.25": 0.17639,
+        "0.5": 0.17074,
+        "0.75": 0.1611
+      },
+      "var_share_removed": 0.343
+    },
+    "created_date": {
+      "rule": "xfit",
+      "chosen_fraction": 0.75,
+      "n_eligible": 1369,
+      "n_removed": 1026,
+      "inner_losses": {
+        "0.0": 0.17881,
+        "0.1": 0.18008,
+        "0.25": 0.17639,
+        "0.5": 0.17074,
+        "0.75": 0.1611
+      },
+      "var_share_removed": 0.7661
+    }
+  }
+}

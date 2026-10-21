@@ -1,0 +1,469 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7266153670055872,
+  "test_error": 0.7266153670055872,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.898440671571311,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 200.17236137390137,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2038,
+      "n_groups": 2035,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1024,
+      "n_removed": 1024,
+      "var_share_removed": 0.2734,
+      "var_share_sae_error": 0.0683,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            750,
+            1271
+          ],
+          "gain_margin": 1735.64,
+          "examples": [
+            "224-103 Lvling Road, Siming, Xiamen, China Mainland",
+            "65 Siming East Road, Siming, Xiamen, China Mainland",
+            "3-102 Dayuan Road, Siming, Xiamen, China Mainland"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1502,
+            1652,
+            1904
+          ],
+          "gain_margin": 679.4,
+          "examples": [
+            "Josef von Eichendorff-Str. 5, Salzburg, 5020, Austria",
+            "Am Olympiapark 1, Munich, 80809, Germany",
+            "17F, Palais de Chine Hotel, 3, Section 1, Chengde Road, Datong District, Taipei, 103, Taiwan"
+          ]
+        },
+        {
+          "group": 2027,
+          "latents": [
+            219
+          ],
+          "gain_margin": 274.55,
+          "examples": [
+            "B2F, Eaton Hotel, 380 Nathan Road, Jordan, Hong Kong, Hong Kong SAR China",
+            "Mercure ICON Hotel, #01-08, 8 Club Street, 069472, Singapore",
+            "1F, Mandarin Oriental Hotel, 5 Connaught Road Central, Central, Hong Kong, Hong Kong SAR China"
+          ]
+        },
+        {
+          "group": 266,
+          "latents": [
+            1745
+          ],
+          "gain_margin": 236.64,
+          "examples": [
+            "5B, Four Seasons Hotel, 145 Jalan Ampang, Kuala Lumpur, Kuala Lumpur, 50450, Malaysia",
+            "27F, Ad Lib Hotel, 999 Sri Chant Road, Nai Mueang, Mueang Khon Kaen, Khon Kaen, 40000, Thailand",
+            "23F The Shilla Hotel, 249 Dongho-ro, Jung-gu, Seoul, 04605, South Korea"
+          ]
+        },
+        {
+          "group": 762,
+          "latents": [
+            1591
+          ],
+          "gain_margin": 224.85,
+          "examples": [
+            "Shop 113A, 1F, K11 Musea, 18 Salisbury Road, Tsim Sha Tsui, Hong Kong, Hong Kong SAR China",
+            "Shop 306, 3F, Silvercord, 30 Canton Road, Tsim Sha Tsui, Hong Kong, Hong Kong SAR China",
+            "L3-17 & 18, IFC Mall, 8 Century Avenue, Pudong, Shanghai, China Mainland"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1183,
+      "n_groups": 1180,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1017,
+      "n_removed": 1020,
+      "var_share_removed": 0.5376,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 609,
+          "latents": [
+            249
+          ],
+          "gain_margin": 2036.17,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 167,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 1922.59,
+          "examples": [
+            "Dwaeji-gukbap",
+            "Dwaeji-gukbap",
+            "Seolleongtang"
+          ]
+        },
+        {
+          "group": 1162,
+          "latents": [
+            563
+          ],
+          "gain_margin": 1621.45,
+          "examples": [
+            "Street Food, Pa Thong Ko",
+            "Malaysian, Californian",
+            "Noodles and Congee"
+          ]
+        },
+        {
+          "group": 534,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 860.99,
+          "examples": [
+            "Creative, Scandinavian",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1156,
+          "latents": [
+            950
+          ],
+          "gain_margin": 789.41,
+          "examples": [
+            "Campanian, Creative",
+            "Creative, Regional Cuisine",
+            "Creative, Regional Cuisine"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2041,
+      "n_groups": 2036,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 964,
+      "n_removed": 964,
+      "var_share_removed": 0.1493,
+      "var_share_sae_error": 0.0842,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            764,
+            950,
+            1502
+          ],
+          "gain_margin": 20803.83,
+          "examples": [
+            "2027 will mark forty years of business: a story made up of aromas, flavours and traditions, the story of the Portinari family, who have carved their name among ",
+            "A meal by Gert De Mangeleer and sommelier Joachim Bouden is in a class of its own, starting with the swish Botanic Sanctuary Hotel, which immerses you in a worl",
+            "Once you have made your way up the driveway, you are welcomed by the hostess with a drink. You then walk through the neat kitchen garden and, finally, enter the"
+          ]
+        },
+        {
+          "group": 1064,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 4924.21,
+          "examples": [
+            "Queues form daily in front of this popular restaurant. The earthen wall made by a plasterer and counter seating with wooden trays are typical of neighbourhood J",
+            "Tucked deep within the Haeridan-gil area, this establishment stands out with a long line of diners waiting to be seated. This ramen joint in Busan is the first ",
+            "One of the essential processes of wheat cultivation is treading the wheat. When the wheat plants bud, farmers tread them down so they grow up strong. The owner-"
+          ]
+        },
+        {
+          "group": 2018,
+          "latents": [
+            378
+          ],
+          "gain_margin": 3904.67,
+          "examples": [
+            "This gem of a place serves fresh seafood with Thai flavours, featuring house-made curry and chilli paste. Order in advance or call to check availability. Try th",
+            "Soft, crispy, non-oily roti emerge from a huge charcoal pan. At this 70-year-old Halal breakfast spot, they're shaped, fried and served in the blink of an eye a",
+            "In a quiet street in the Asian quarter, Mr and Mrs T\u00e9 keep a watchful eye over their little Vietnamese canteen, which has its fair share of regulars. In a boist"
+          ]
+        },
+        {
+          "group": 2032,
+          "latents": [
+            885
+          ],
+          "gain_margin": 2687.36,
+          "examples": [
+            "This wildly popular Chinatown spot is still packed to the gills most days, and for good reason: the made-to-order dim sum and Cantonese fare remain consistently",
+            "\"Briemm\" is a contraction of Brice and Emmanuelle, who have partnered up (in business and in life) to found this dinky eatery in a lovely stone-built house, whi",
+            "This family bistro overflows in good humour, as Jelle in the kitchen and Magali in the dining room are still regularly helped out by the restaurant\u2019s founders, "
+          ]
+        },
+        {
+          "group": 2016,
+          "latents": [
+            1242
+          ],
+          "gain_margin": 1957.57,
+          "examples": [
+            "In their brick villa, Tim Boury and Inge Waeles have clearly puzzled, pondered and finetuned each detail from the attentive service and felicitous food-wine pai",
+            "A meal by Gert De Mangeleer and sommelier Joachim Bouden is in a class of its own, starting with the swish Botanic Sanctuary Hotel, which immerses you in a worl",
+            "Surrealist art by Marcel Duchamp and Jacques Charlier sets the distinctive arty scene in this colourful restaurant, enhanced by a warm welcome and a cornucopia "
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 699,
+      "n_groups": 690,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 623,
+      "n_removed": 631,
+      "var_share_removed": 0.5771,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 330,
+          "latents": [
+            521
+          ],
+          "gain_margin": 1610.65,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 447,
+          "latents": [
+            494
+          ],
+          "gain_margin": 1222.17,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list"
+          ]
+        },
+        {
+          "group": 249,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1139.6,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 235,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 1006.79,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 604,
+          "latents": [
+            249
+          ],
+          "gain_margin": 627.3,
+          "examples": [
+            "Air conditioning,Great view,Interesting wine list,Valet parking",
+            "Air conditioning,Great view,Interesting wine list,Valet parking",
+            "Air conditioning,Car park,Great view,Interesting wine list"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1923,
+      "n_groups": 1923,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1464,
+      "n_removed": 1464,
+      "var_share_removed": 0.6538,
+      "var_share_sae_error": 0.0109,
+      "top": [
+        {
+          "group": 1909,
+          "latents": [
+            304
+          ],
+          "gain_margin": 138.54,
+          "examples": [
+            "L'Albenc, France",
+            "Auxerre, France",
+            "Quissac, France"
+          ]
+        },
+        {
+          "group": 1742,
+          "latents": [
+            191
+          ],
+          "gain_margin": 120.97,
+          "examples": [
+            "Sk\u00f3rzewo, Poland",
+            "Luc-sur-Orbieu, France",
+            "Houffalize, Belgium"
+          ]
+        },
+        {
+          "group": 1314,
+          "latents": [
+            791
+          ],
+          "gain_margin": 104.51,
+          "examples": [
+            "Villeneuve-Loubet, France",
+            "Valdemorillo, Spain",
+            "Coulanges-la-Vineuse, France"
+          ]
+        },
+        {
+          "group": 693,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 94.52,
+          "examples": [
+            "Yangzhou, China Mainland",
+            "Yangzhou, China Mainland",
+            "Yangzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 225,
+          "latents": [
+            1777
+          ],
+          "gain_margin": 91.57,
+          "examples": [
+            "St. Julian's, Malta",
+            "St. Julian's, Malta",
+            "St. Julian's, Malta"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1021,
+      "n_removed": 1021,
+      "var_share_removed": 0.3084,
+      "var_share_sae_error": 0.0957,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            750,
+            1271
+          ],
+          "gain_margin": 1580.51,
+          "examples": [
+            "Xing Yun Hainanese Boneless Chicken Rice",
+            "Lai Foong Lala Noodles",
+            "Zhi Wei Xian Zion Road Big Prawn Noodle"
+          ]
+        },
+        {
+          "group": 371,
+          "latents": [
+            1814
+          ],
+          "gain_margin": 322.71,
+          "examples": [
+            "Jiki Miyazawa",
+            "Alessandro Maino",
+            "Martin Wishart"
+          ]
+        },
+        {
+          "group": 2044,
+          "latents": [
+            249
+          ],
+          "gain_margin": 308.97,
+          "examples": [
+            "Maison Ronan Kervarrec",
+            "Martin Wishart",
+            "New Heights"
+          ]
+        },
+        {
+          "group": 2041,
+          "latents": [
+            473
+          ],
+          "gain_margin": 283.84,
+          "examples": [
+            "\u00d1",
+            "Song",
+            "Member"
+          ]
+        },
+        {
+          "group": 1008,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 279.61,
+          "examples": [
+            "Frederiksh\u00f8j",
+            "Kadeau Copenhagen",
+            "Albert 1er"
+          ]
+        }
+      ]
+    }
+  }
+}

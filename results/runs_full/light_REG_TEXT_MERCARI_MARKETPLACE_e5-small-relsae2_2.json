@@ -1,0 +1,409 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.55586752769435,
+  "test_error": 0.55586752769435,
+  "course_metric": "r2",
+  "course_score": 0.42156530804069614,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 99.23351526260376,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 421,
+      "n_removed": 91,
+      "threshold": 0.044,
+      "passed_test": 176,
+      "removed_norm_ratio": 0.2469,
+      "var_share_kept": 0.9392,
+      "var_share_sae_error": 0.0067,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 231,
+          "score": 0.1777,
+          "n_active": 4085,
+          "examples": [
+            "Guy Harvey",
+            "Stamped",
+            "Stamped"
+          ]
+        },
+        {
+          "latent": 194,
+          "score": 0.1722,
+          "n_active": 3910,
+          "examples": [
+            "Pyrex",
+            "Pyrex",
+            "Pyrex"
+          ]
+        },
+        {
+          "latent": 417,
+          "score": 0.1688,
+          "n_active": 3918,
+          "examples": [
+            "Advantage",
+            "Advantage",
+            "7 For All Mankind\u00ae"
+          ]
+        },
+        {
+          "latent": 458,
+          "score": 0.1688,
+          "n_active": 4069,
+          "examples": [
+            "Poof!",
+            "Independent",
+            "Independent"
+          ]
+        },
+        {
+          "latent": 192,
+          "score": 0.1678,
+          "n_active": 4006,
+          "examples": [
+            "Almost Famous",
+            "Almost Famous",
+            "Advantage"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 497,
+      "n_kept": 418,
+      "n_removed": 94,
+      "threshold": 0.0393,
+      "passed_test": 158,
+      "removed_norm_ratio": 0.2741,
+      "var_share_kept": 0.7683,
+      "var_share_sae_error": 0.0,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 476,
+          "score": 0.1634,
+          "n_active": 1566,
+          "examples": [
+            "Children",
+            "Children",
+            "Children"
+          ]
+        },
+        {
+          "latent": 102,
+          "score": 0.1397,
+          "n_active": 1597,
+          "examples": [
+            "Tops & Blouses",
+            "Tops & Blouses",
+            "Tops & Blouses"
+          ]
+        },
+        {
+          "latent": 294,
+          "score": 0.1336,
+          "n_active": 295,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "latent": 447,
+          "score": 0.1328,
+          "n_active": 812,
+          "examples": [
+            "Tops & Blouses",
+            "Tops & Blouses",
+            "Tops & Blouses"
+          ]
+        },
+        {
+          "latent": 198,
+          "score": 0.1321,
+          "n_active": 779,
+          "examples": [
+            "Tops & Blouses",
+            "Tops & Blouses",
+            "Tops & Blouses"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 509,
+      "n_kept": 442,
+      "n_removed": 70,
+      "threshold": 0.0392,
+      "passed_test": 193,
+      "removed_norm_ratio": 0.328,
+      "var_share_kept": 0.8942,
+      "var_share_sae_error": 0.0008,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.2116,
+          "n_active": 1744,
+          "examples": [
+            "Purse",
+            "Purse",
+            "Purse"
+          ]
+        },
+        {
+          "latent": 132,
+          "score": 0.1579,
+          "n_active": 528,
+          "examples": [
+            "Fashion Sneakers",
+            "Fashion Sneakers",
+            "Fashion Sneakers"
+          ]
+        },
+        {
+          "latent": 205,
+          "score": 0.1319,
+          "n_active": 936,
+          "examples": [
+            "Action Figure",
+            "Action Figure",
+            "Action Figure"
+          ]
+        },
+        {
+          "latent": 409,
+          "score": 0.1236,
+          "n_active": 673,
+          "examples": [
+            "Oxfords",
+            "Oxfords",
+            "Oxfords"
+          ]
+        },
+        {
+          "latent": 462,
+          "score": 0.1229,
+          "n_active": 526,
+          "examples": [
+            "Animal",
+            "Tank",
+            "Tank"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 422,
+      "n_removed": 90,
+      "threshold": 0.0425,
+      "passed_test": 156,
+      "removed_norm_ratio": 0.355,
+      "var_share_kept": 0.786,
+      "var_share_sae_error": 0.0015,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 92,
+          "score": 0.2027,
+          "n_active": 775,
+          "examples": [
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        },
+        {
+          "latent": 79,
+          "score": 0.1472,
+          "n_active": 1362,
+          "examples": [
+            "Sports & Outdoors/Footwear/Cleats",
+            "Sports & Outdoors/Footwear/Cleats",
+            "Women/Shoes/Oxfords"
+          ]
+        },
+        {
+          "latent": 507,
+          "score": 0.1409,
+          "n_active": 905,
+          "examples": [
+            "Men/Shoes/Boots",
+            "Men/Shoes/Boots",
+            "Men/Shoes/Boots"
+          ]
+        },
+        {
+          "latent": 133,
+          "score": 0.1353,
+          "n_active": 1629,
+          "examples": [
+            "Kids/Boys (4+)/Bottoms",
+            "Kids/Boys (4+)/Bottoms",
+            "Kids/Boys (4+)/Bottoms"
+          ]
+        },
+        {
+          "latent": 314,
+          "score": 0.1328,
+          "n_active": 1388,
+          "examples": [
+            "Women/Swimwear/Two-Piece",
+            "Women/Swimwear/Two-Piece",
+            "Women/Swimwear/Two-Piece"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 382,
+      "n_removed": 130,
+      "threshold": 0.0427,
+      "passed_test": 62,
+      "removed_norm_ratio": 0.3323,
+      "var_share_kept": 0.5878,
+      "var_share_sae_error": 0.2319,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 241,
+          "score": 0.1176,
+          "n_active": 780,
+          "examples": [
+            "100% Authentic",
+            "100% authentic",
+            "New 100% authentic."
+          ]
+        },
+        {
+          "latent": 351,
+          "score": 0.1017,
+          "n_active": 3116,
+          "examples": [
+            "Great price",
+            "Not carters",
+            "Price is firm"
+          ]
+        },
+        {
+          "latent": 30,
+          "score": 0.1015,
+          "n_active": 472,
+          "examples": [
+            "Kate Spade crossbody bag / purse. Pure black with white stitching and silver metal detail. One large pocket and one smaller pocket. Magnetic closure. Used but s",
+            "Authentic Kate Spade Wellesley Hanna Leather Handbag Shoulder Bag Crossbody! Barely used, just don't use small bags.",
+            "Authentic Gucci leather bag. Minimal wear on lining and hardware. Light scuffs on leather. Comes with dust bag. Measures approx. 9x16x12."
+          ]
+        },
+        {
+          "latent": 28,
+          "score": 0.0961,
+          "n_active": 822,
+          "examples": [
+            "Comes in box",
+            "Worn once. Comes with box.",
+            "Box flaw."
+          ]
+        },
+        {
+          "latent": 84,
+          "score": 0.0853,
+          "n_active": 401,
+          "examples": [
+            "16 GB Rose Gold IPhone 6 with cracked screen Charges and works great but freezes on the lock screen periodically Device and iCloud unlocked AT&T is current prov",
+            "IPhone 4s Black. 16gb. Few minor bumps/scratches on the edges and back. Screen is perfect. No cracks. Was originally ATT but I had it unlocked, it can go to any",
+            "\u26a1Models Available : iPhone 6/6s,iPhone 7 , iPhone 7 Plus \u26a1 0.33 mm Tempered Glass protects screen well against scratches and drops. \u26a1Privacy protection at a spe"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 427,
+      "n_removed": 85,
+      "threshold": 0.0414,
+      "passed_test": 79,
+      "removed_norm_ratio": 0.2863,
+      "var_share_kept": 0.668,
+      "var_share_sae_error": 0.1953,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 445,
+          "score": 0.1153,
+          "n_active": 1087,
+          "examples": [
+            "Shirt",
+            "Shirts",
+            "Tee shirt"
+          ]
+        },
+        {
+          "latent": 29,
+          "score": 0.1144,
+          "n_active": 619,
+          "examples": [
+            "Lularoe OS",
+            "Lularoe OS",
+            "Lularoe Os (please read)"
+          ]
+        },
+        {
+          "latent": 203,
+          "score": 0.0952,
+          "n_active": 311,
+          "examples": [
+            "Authentic Louis Vuitton bucket",
+            "Authentic Louis Vuitton adjustable strap",
+            "Authentic Gucci sunglasses"
+          ]
+        },
+        {
+          "latent": 133,
+          "score": 0.0914,
+          "n_active": 583,
+          "examples": [
+            "Women's Top",
+            "Women's top",
+            "Army Top"
+          ]
+        },
+        {
+          "latent": 64,
+          "score": 0.0851,
+          "n_active": 698,
+          "examples": [
+            "College Sweatshirt",
+            "Vs pink small begonia campus Tshirt",
+            "Purdue University Two Piece Lot"
+          ]
+        }
+      ]
+    }
+  }
+}

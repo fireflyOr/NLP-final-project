@@ -1,0 +1,246 @@
+{
+  "model": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9065787922943407,
+  "test_error": 0.09342120770565931,
+  "course_metric": "auroc",
+  "course_score": 0.9065787922943408,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 48.75911521911621,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2042,
+      "n_groups": 2040,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1454,
+      "n_removed": 1455,
+      "var_share_removed": 0.622,
+      "var_share_sae_error": 0.0733,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            315,
+            1912
+          ],
+          "gain_margin": 6302.84,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "CASH JOBS, Part Time Workers Needed.Work Minimum 1-2 Hours Per Day Anytime.Won't Required Experience For This Job.You Can Earn $350 to $450 Everyday.Suitable Fo",
+            "Looking for customer service reps who want to work from homemake 80 - 100 dollars a day posting ads on the internet and taking calls. (NO START UP FEES. NO MONE"
+          ]
+        },
+        {
+          "group": 2035,
+          "latents": [
+            480
+          ],
+          "gain_margin": 2824.56,
+          "examples": [
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 114,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 1809.86,
+          "examples": [
+            "Job DescriptionCompany Overview:INTECSEA is a global company within the WorleyParsons Group and offers all the Group\u2019s capabilities for floating systems, offsho",
+            "Why Choose AECOM? Imagine working for a truly global company whose 45,000 employees share a singular passion: to make the world a better place. We enjoy what we",
+            "Job Responsibilities;The Project Engineer is responsible for everyday project activities, quality control and project delivery, overseeing all phases of the pro"
+          ]
+        },
+        {
+          "group": 2020,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 1242.21,
+          "examples": [
+            "Our company\u00a0\u00a0is seeking applications for a (temporary) full time motivated Data Entry/Receptionist. On a daily basis, the receptionist will be responsible for a",
+            "CASH JOBS, Part Time Workers Needed.Work Minimum 1-2 Hours Per Day Anytime.Won't Required Experience For This Job.You Can Earn $350 to $450 Everyday.Suitable Fo",
+            "Our company is seeking Receptionist/ Administrative Assistant to monitor multi-line phones, greet visitors, and assist with various clerical duties as needed. M"
+          ]
+        },
+        {
+          "group": 1068,
+          "latents": [
+            294
+          ],
+          "gain_margin": 1027.4,
+          "examples": [
+            "Find more jobs at #URL_4708e598004bb0a85bf09f9eecc0a8f1fdc0f496e68deb05ee2432ff63e13767#Apply with below link#URL_6f8cb24d580e88d19d1863709df52806cee08a83aa8f48",
+            "DRS Technologies is a leading supplier of integrated products, services and support to military forces, intelligence agencies and prime contractors worldwide. F",
+            "Apply using below link#URL_bf5807d8a593623148ad42c27ba5e13bc3be41e074f2c1c533d8878be6bb2e7a#RN First Assist- Surgery, Full-time (Hours: Variable with call respo"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 323,
+      "n_groups": 305,
+      "n_multi_groups": 13,
+      "n_groups_dropped": 246,
+      "n_removed": 263,
+      "var_share_removed": 0.6742,
+      "var_share_sae_error": 0.0048,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            294,
+            1440
+          ],
+          "gain_margin": 300.85,
+          "examples": [
+            "1000-2000",
+            "1000-2000",
+            "1000-2000"
+          ]
+        },
+        {
+          "group": 144,
+          "latents": [
+            1338
+          ],
+          "gain_margin": 75.96,
+          "examples": [
+            "18-22",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "group": 214,
+          "latents": [
+            589
+          ],
+          "gain_margin": 61.03,
+          "examples": [
+            "21120-30000",
+            "13-20",
+            "17-20"
+          ]
+        },
+        {
+          "group": 237,
+          "latents": [
+            11
+          ],
+          "gain_margin": 52.16,
+          "examples": [
+            "13-20",
+            "17-20",
+            "21120-30000"
+          ]
+        },
+        {
+          "group": 136,
+          "latents": [
+            1079
+          ],
+          "gain_margin": 50.83,
+          "examples": [
+            "0-2000",
+            "1000-2000",
+            "1000-2000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1970,
+      "n_groups": 1964,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1456,
+      "n_removed": 1456,
+      "var_share_removed": 0.696,
+      "var_share_sae_error": 0.0275,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            294,
+            315,
+            480,
+            1912
+          ],
+          "gain_margin": 4504.99,
+          "examples": [
+            "Well Paid Cash Jobs To Start Immediately. ",
+            "URGENT Job Full Time & Part Time, Cash Pay.",
+            "Data Entry Admin/Clerical Positions - Work From Home"
+          ]
+        },
+        {
+          "group": 1953,
+          "latents": [
+            227
+          ],
+          "gain_margin": 1321.07,
+          "examples": [
+            "Cruise Staff Wanted *URGENT*",
+            "JOB VACANCY IN ST.ERMIN'S HOTEL LONDON",
+            "Remote Admin Clerk"
+          ]
+        },
+        {
+          "group": 1930,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 707.34,
+          "examples": [
+            "Hiring Part-Time Workers (CASH PAYING)",
+            "Home Based Payroll Typist/Data Entry Clerks Positions Available",
+            "CASH JOBS, Part Time Workers Needed."
+          ]
+        },
+        {
+          "group": 1962,
+          "latents": [
+            386
+          ],
+          "gain_margin": 383.36,
+          "examples": [
+            "URGENT Part Timers & Full Timers Required.",
+            "Cruise Staff Wanted *URGENT*",
+            "Urgent requirement for Specialist Licensed Doctors @Gulf"
+          ]
+        },
+        {
+          "group": 216,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 228.53,
+          "examples": [
+            "Work From Home (Easy Money)",
+            "RN, SURGERY UNIT DIRECTOR  ",
+            "RNFA - St. Joseph Medical Center  "
+          ]
+        }
+      ]
+    }
+  }
+}

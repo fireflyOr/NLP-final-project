@@ -1,0 +1,149 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-relsae2-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13679.323675813617,
+  "test_error": 13679.323675813617,
+  "course_metric": "r2",
+  "course_score": 0.7213137678480832,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.676021099090576,
+  "diagnostics": {
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 345,
+      "n_removed": 167,
+      "threshold": 0.0413,
+      "passed_test": 7,
+      "removed_norm_ratio": 0.5414,
+      "var_share_kept": 0.5496,
+      "var_share_sae_error": 0.1527,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 55,
+          "score": 0.054,
+          "n_active": 370,
+          "examples": [
+            "Dulko, R J",
+            "Dulko, R J",
+            "Dulko, R J"
+          ]
+        },
+        {
+          "latent": 432,
+          "score": 0.0474,
+          "n_active": 635,
+          "examples": [
+            "Walls, J A.",
+            "Walls, J A.",
+            "Walls, J A."
+          ]
+        },
+        {
+          "latent": 422,
+          "score": 0.0464,
+          "n_active": 558,
+          "examples": [
+            "Day, D L",
+            "Day, D L",
+            "Day, D L"
+          ]
+        },
+        {
+          "latent": 365,
+          "score": 0.0451,
+          "n_active": 389,
+          "examples": [
+            "Jackson, O",
+            "Jackson, M J",
+            "Jackson, M J"
+          ]
+        },
+        {
+          "latent": 464,
+          "score": 0.045,
+          "n_active": 513,
+          "examples": [
+            "Korstrom, D",
+            "Korstrom, D",
+            "Korstrom, D"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 458,
+      "n_removed": 54,
+      "threshold": 0.0391,
+      "passed_test": 250,
+      "removed_norm_ratio": 0.2976,
+      "var_share_kept": 0.8347,
+      "var_share_sae_error": 0.0082,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 192,
+          "score": 0.2376,
+          "n_active": 336,
+          "examples": [
+            "Deputy General Manager",
+            "Deputy General Manager",
+            "DEPUTY GENERAL MANAGER"
+          ]
+        },
+        {
+          "latent": 126,
+          "score": 0.219,
+          "n_active": 472,
+          "examples": [
+            "Managing Director Of Social Development",
+            "Managing Director of Social Development",
+            "Manager Animal Control"
+          ]
+        },
+        {
+          "latent": 404,
+          "score": 0.2147,
+          "n_active": 443,
+          "examples": [
+            "Director Departmental Services",
+            "Director Strategic Ops & Board Relations",
+            "Director Strategic Ops & Board Relations"
+          ]
+        },
+        {
+          "latent": 180,
+          "score": 0.2036,
+          "n_active": 310,
+          "examples": [
+            "Director Digital Platforms",
+            "Director Digital Business Services",
+            "Director Digital Business Services"
+          ]
+        },
+        {
+          "latent": 197,
+          "score": 0.1968,
+          "n_active": 246,
+          "examples": [
+            "General Manager - Engineering Services",
+            "General Manager - Engineering Services",
+            "General Manager - Engineering Services"
+          ]
+        }
+      ]
+    }
+  }
+}

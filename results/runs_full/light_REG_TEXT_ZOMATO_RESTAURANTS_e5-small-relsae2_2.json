@@ -1,0 +1,474 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-relsae2",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2086088981239821,
+  "test_error": 0.2086088981239821,
+  "course_metric": "r2",
+  "course_score": 0.7767006184349463,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 125.29186677932739,
+  "diagnostics": {
+    "address": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 318,
+      "n_removed": 194,
+      "threshold": 0.0411,
+      "passed_test": 1,
+      "removed_norm_ratio": 0.5894,
+      "var_share_kept": 0.5029,
+      "var_share_sae_error": 0.126,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 402,
+          "score": 0.0427,
+          "n_active": 371,
+          "examples": [
+            "Quality Inn - Shravanthi, 60, 13th Cross, 2nd Main, 3rd Phase, JP Nagar, Bangalore",
+            "Quality Inn - Shravanthi, 60, 13th Cross, 2nd Main, 3rd Phase, JP Nagar, Bangalore",
+            "Quality Inn - Shravanthi, 60, 13th Cross, 2nd Main, 3rd Phase, JP Nagar, Bangalore"
+          ]
+        },
+        {
+          "latent": 80,
+          "score": 0.0386,
+          "n_active": 1387,
+          "examples": [
+            "1st Floor, Pattandur Agrahara Road, Opposite Foyer Infinity, Beside Gold Ganesha Temple, Whitefield, Bangalore",
+            "2nd Floor, Sai Durga Enclave, 833/1, Outer Ring Road, Bellandur, Bangalore",
+            "1st Floor, 173, Bannerghatta Road, Bilekahalli, Bangalore"
+          ]
+        },
+        {
+          "latent": 210,
+          "score": 0.0385,
+          "n_active": 1036,
+          "examples": [
+            "MGM Mark Whitefield, 23, EPIP Zone, Whitefield, Bangalore",
+            "MGM Mark Whitefield, 23, EPIP Zone, Whitefield, Bangalore",
+            "MGM Mark Whitefield, 23, EPIP Zone, Whitefield, Bangalore"
+          ]
+        },
+        {
+          "latent": 133,
+          "score": 0.0368,
+          "n_active": 448,
+          "examples": [
+            "172/1, Unit 3, 3rd Floor, Vega City Mall, Srinivasa Industrial Estate, Bannerghatta Road, Bangalore",
+            "172/1, 2nd Floor, Vega City Mall, Srinivas Industrial Estate, Bannerghatta Road, Bangalore",
+            "172/1, GF K 03, Kiosk Unit, Vega City Mall, Srinivas Industrial Estate, Bilekahalli, Bannerghatta Road, Bangalore"
+          ]
+        },
+        {
+          "latent": 147,
+          "score": 0.0364,
+          "n_active": 432,
+          "examples": [
+            "No 4, Ground Floor, 29th Main Road, Kuvempu Nagar, Stage 2, BTM Layout, Bengaluru",
+            "Shangri-La Hotel, 56-6B, Palace Road, Bengaluru",
+            "LN Complex, Subedarchatram Rd, Dr.Ambedkar Nagar, Yeshwanthpur, Bengaluru"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 492,
+      "n_kept": 405,
+      "n_removed": 107,
+      "threshold": 0.041,
+      "passed_test": 65,
+      "removed_norm_ratio": 0.3047,
+      "var_share_kept": 0.7492,
+      "var_share_sae_error": 0.0023,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 440,
+          "score": 0.0852,
+          "n_active": 3368,
+          "examples": [
+            "Parsi, North Indian",
+            "Parsi, North Indian",
+            "Parsi, North Indian"
+          ]
+        },
+        {
+          "latent": 191,
+          "score": 0.0797,
+          "n_active": 1738,
+          "examples": [
+            "Parsi",
+            "Parsi",
+            "Parsi"
+          ]
+        },
+        {
+          "latent": 262,
+          "score": 0.0795,
+          "n_active": 3848,
+          "examples": [
+            "North Indian",
+            "North Indian",
+            "North Indian"
+          ]
+        },
+        {
+          "latent": 132,
+          "score": 0.0777,
+          "n_active": 724,
+          "examples": [
+            "Chinese, Mongolian",
+            "North Eastern, Chinese",
+            "North Eastern, Chinese"
+          ]
+        },
+        {
+          "latent": 66,
+          "score": 0.0771,
+          "n_active": 4001,
+          "examples": [
+            "North Indian",
+            "North Indian",
+            "North Indian"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 511,
+      "n_kept": 398,
+      "n_removed": 114,
+      "threshold": 0.0401,
+      "passed_test": 36,
+      "removed_norm_ratio": 0.228,
+      "var_share_kept": 0.823,
+      "var_share_sae_error": 0.0238,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 393,
+          "score": 0.0733,
+          "n_active": 5246,
+          "examples": [
+            "Indian Sweets",
+            "Cocktails, Beer",
+            "Cocktails, Beer"
+          ]
+        },
+        {
+          "latent": 271,
+          "score": 0.0586,
+          "n_active": 452,
+          "examples": [
+            "Waffles, Vanilla Ice Cream, Brownie, Nutella Waffle, Velvet Crunch, Belgian Chocolate Waffle",
+            "Red Velvet Cake, Chocolate Truffle",
+            "Cheesecake, Red Velvet, Chocolate Cake"
+          ]
+        },
+        {
+          "latent": 191,
+          "score": 0.0562,
+          "n_active": 4934,
+          "examples": [
+            "Strawberry Cake",
+            "Chicken Sandwich",
+            "Chicken Sandwich"
+          ]
+        },
+        {
+          "latent": 407,
+          "score": 0.0494,
+          "n_active": 417,
+          "examples": [
+            "Momos",
+            "Momos",
+            "Momos"
+          ]
+        },
+        {
+          "latent": 82,
+          "score": 0.0483,
+          "n_active": 4031,
+          "examples": [
+            "Rolls, Cinnamon Roll, Cinnamon Bun",
+            "Thin Crust Pizza",
+            "Thin Crust Pizza"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 507,
+      "n_kept": 359,
+      "n_removed": 153,
+      "threshold": 0.0403,
+      "passed_test": 12,
+      "removed_norm_ratio": 0.2753,
+      "var_share_kept": 0.7902,
+      "var_share_sae_error": 0.0352,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 233,
+          "score": 0.0532,
+          "n_active": 408,
+          "examples": [
+            "['Green Lady', 'Crispy Corn Chilly Pepper', 'Paneer Tawa Fry Paneer', 'Malai Kofta', 'Gulab Jamun [4 Pieces]', 'Family Main Course Combo [Serves 4]', 'Roti Curr",
+            "['Peshawari Tandoori Chicken', 'Mutton Seekh Kebab', 'Chicken Kebab', 'Al Faham Chicken', 'Veg Kofta Curry', 'Veg Manchow Soup', 'Veg Hot N Sour Soup', 'Veg Swe",
+            "['Chicken Steak with Mushroom Sauce', 'Chicken Hakka Noodles', 'Mashed Potato', 'Arrabiata Pasta', 'Creamy Garlic Pasta', 'Veg Noodles Soup', 'Veg Sweet Corn So"
+          ]
+        },
+        {
+          "latent": 177,
+          "score": 0.0503,
+          "n_active": 136,
+          "examples": [
+            "['Big Joy Veg Burger', 'Big Joy Mayo Veg Burger', 'Big Joy Mayo Chicken Burger', 'Dunkin Classic Chicken Burger', 'Tex Mex Potato Wedges', 'Classic Dunkaccino',",
+            "['All Time Favourite Donuts [Pack of 3]', 'All Time Favourite Donuts [Pack of 6]', 'All Time Favourite Donuts [Pack of 12]', 'Breakup Party Eclair Donut', 'Deat",
+            "[\"Valentine's Day Special [Pack of 6 Donuts]\", 'Big Joy Veg Burger', 'Big Joy Mayo Veg Burger', 'Double Big Joy Original Veg Burger', 'Big Joy Mayo Chicken Burg"
+          ]
+        },
+        {
+          "latent": 439,
+          "score": 0.0484,
+          "n_active": 462,
+          "examples": [
+            "['Crispy Chicken', 'Grilled Chicken', 'Chicken Kabab Oil Fried', 'Boneless Malai Tikka [5 Pieces]', 'Tandoori Chicken', 'Kalmi Kabab', 'Chicken Tandoori Kabab [",
+            "['Tandoori Roti [Plain]', 'Naan [Butter]', 'Amritsari Kulcha', 'Chicken Tikka Masala', 'Kadhai Chicken', 'Tandoori Chicken [Full]', 'Afghani Chicken [Full]', 'B",
+            "['Dum Biryani Combo', 'Special Thali', 'Taza Thali', 'Tandoori Chicken', 'Grilled Chicken', 'Chicken Lollipop Dry [4 Piece]', 'Chicken Wings [8 Piece]', 'Chicke"
+          ]
+        },
+        {
+          "latent": 435,
+          "score": 0.0451,
+          "n_active": 178,
+          "examples": [
+            "['Kitkat Special', 'Assorted Box of 12 Donuts', 'Classic Box of 3 Donuts', 'Classic Box of 6 Donuts', 'Assorted Box of 3 Donuts', 'Assorted Box of 12 Donuts', '",
+            "['Valentine Donuts [Box of 3]', 'Signature Bites', 'Assorted Box of 12 Donuts', 'Box of 4 Eclairs', 'Classic Box of 3 Donuts', 'Classic Box of 6 Donuts', 'Assor",
+            "['Kitkat Special', 'The Holi Donut Pack [Pack of 3]', 'Kitkat Special', 'Signature Bites', 'Assorted Box of 12 Donuts', 'Classic Box of 3 Donuts', 'Classic Box "
+          ]
+        },
+        {
+          "latent": 481,
+          "score": 0.0443,
+          "n_active": 402,
+          "examples": [
+            "['Executive Combo', 'Premium Combo', 'Tandoori Chicken Platter', 'Boneless Chicken Tikka [8 Pieces]', 'Paneer Butter Masala', 'Paneer Pasanda', 'Boneless Butter",
+            "['Chicken Tandoori', 'Chicken Reshmi Kabab', 'Veg Biryani', 'Mughlai Chicken Biryani', 'Chicken Biryani', 'Chicken Chaap', 'Boneless Chicken Bharta', 'Chicken R",
+            "['Veg Carrier Meal', 'Chicken Chilli', 'Chicken 65', 'Chicken Tandoori', 'Chicken Lollypop', 'Veg Biryani', 'Egg Biryani', 'Boneless Chicken Biryani', 'Boneless"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 363,
+      "n_removed": 149,
+      "threshold": 0.0411,
+      "passed_test": 16,
+      "removed_norm_ratio": 0.504,
+      "var_share_kept": 0.5723,
+      "var_share_sae_error": 0.1593,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 165,
+          "score": 0.0634,
+          "n_active": 417,
+          "examples": [
+            "Bake-ooh",
+            "Bake-ooh",
+            "Brew Bakes"
+          ]
+        },
+        {
+          "latent": 245,
+          "score": 0.0616,
+          "n_active": 546,
+          "examples": [
+            "Jonah's",
+            "Jonah's",
+            "Jonah's"
+          ]
+        },
+        {
+          "latent": 162,
+          "score": 0.0543,
+          "n_active": 1272,
+          "examples": [
+            "Biryani Rooh-e-Khaas",
+            "Hyderabad Biryani",
+            "Hyderabad Biryani"
+          ]
+        },
+        {
+          "latent": 406,
+          "score": 0.0528,
+          "n_active": 659,
+          "examples": [
+            "Art of Delight",
+            "Art of Delight",
+            "Art of Delight"
+          ]
+        },
+        {
+          "latent": 357,
+          "score": 0.0479,
+          "n_active": 1205,
+          "examples": [
+            "HomeDeli Kitchen",
+            "Home Food",
+            "Home Food"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 485,
+      "n_kept": 364,
+      "n_removed": 148,
+      "threshold": 0.0393,
+      "passed_test": 36,
+      "removed_norm_ratio": 0.4164,
+      "var_share_kept": 0.6818,
+      "var_share_sae_error": 0.0132,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 475,
+          "score": 0.0784,
+          "n_active": 1524,
+          "examples": [
+            "080 25250500\r\n080 25214749",
+            "080 25250500\r\n080 25214749",
+            "080 25250500\n080 25214749"
+          ]
+        },
+        {
+          "latent": 193,
+          "score": 0.0687,
+          "n_active": 836,
+          "examples": [
+            "080 49653320",
+            "080 49653320",
+            "080 49653320"
+          ]
+        },
+        {
+          "latent": 292,
+          "score": 0.0633,
+          "n_active": 760,
+          "examples": [
+            "080 48661724\n080 48661727",
+            "065535 43666\n065535 43666",
+            "080 65351313\r\r\n080 65351414"
+          ]
+        },
+        {
+          "latent": 50,
+          "score": 0.0632,
+          "n_active": 564,
+          "examples": [
+            "080 49653010",
+            "080 49653013",
+            "080 49653013"
+          ]
+        },
+        {
+          "latent": 346,
+          "score": 0.0599,
+          "n_active": 1107,
+          "examples": [
+            "080 40001234\n+91 9008001193",
+            "080 40001234\n+91 9008001193",
+            "080 22224802\r\n+91 9448277751"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "drop_irrelevant",
+      "sae": "512/k32",
+      "n_eligible": 512,
+      "n_kept": 399,
+      "n_removed": 113,
+      "threshold": 0.0394,
+      "passed_test": 79,
+      "removed_norm_ratio": 0.3616,
+      "var_share_kept": 0.5532,
+      "var_share_sae_error": 0.2337,
+      "mode": "sub",
+      "top": [
+        {
+          "latent": 298,
+          "score": 0.2203,
+          "n_active": 1288,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  Never got the food because the restaurant along with Zomato delivery stole my order and never provided a refund. I called the delivery ",
+            "[('Rated 1.0', \"RATED\\n  Never got the food because the restaurant along with Zomato delivery stole my order and never provided a refund. I called the delivery ",
+            "[('Rated 1.0', 'RATED\\n  Worst food and delivery service. Very late delivery plus he refused to come to upstairs. Forced me to come down. I ate the worst chicke"
+          ]
+        },
+        {
+          "latent": 334,
+          "score": 0.1853,
+          "n_active": 883,
+          "examples": [
+            "[('Rated 1.0', 'RATED\\n  The worst restaurant to order food. I actually ordered Panner masala full they give me half and the Panner masala was extremely bad to ",
+            "[('Rated 3.0', \"RATED\\n  I ordered four variety of dosa. All of them were too spicy, we couldn't eat them properly. While ordering mention in instructions secti",
+            "[('Rated 1.0', 'RATED\\n  How can I be polite? Wrong food item got delivered, I had ordered for kalmi kabab masala\\nAlso the taste sucks what else am I to descri"
+          ]
+        },
+        {
+          "latent": 283,
+          "score": 0.1249,
+          "n_active": 840,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  Quantity was very less.. Don't order from here.. Not worthy for money.. Packing also not good..\\nI ordered fruits and nuts overload ice",
+            "[('Rated 3.0', 'RATED\\n  Tried mini South Indian meals . Just ordinary. Nothing exceptional . The only thing which was prepared nice was bisibilibath but they m",
+            "[('Rated 2.0', 'RATED\\n  It was Just a random plan going to mad over fires as it was quite close to us and we were starving.\\n\\nWe ordered\\nchessy chilli fries\\"
+          ]
+        },
+        {
+          "latent": 308,
+          "score": 0.1237,
+          "n_active": 601,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  Sorry to say this but this place's food is not worth eating. I had ordered a combo and guess what I found a strand of hair in my food.\\",
+            "[('Rated 1.0', \"RATED\\n  Sorry to say this but this place's food is not worth eating. I had ordered a combo and guess what I found a strand of hair in my food.\\",
+            "[('Rated 1.0', \"RATED\\n  Sorry to say this but this place's food is not worth eating. I had ordered a combo and guess what I found a strand of hair in my food.\\"
+          ]
+        },
+        {
+          "latent": 235,
+          "score": 0.1159,
+          "n_active": 847,
+          "examples": [
+            "[('Rated 5.0', \"RATED\\n  Buff buffet buff they stand as per their name when come to food and service. A very good dining experience at this restaurant, we were ",
+            "[('Rated 5.0', \"RATED\\n  Buff buffet buff they stand as per their name when come to food and service. A very good dining experience at this restaurant, we were ",
+            "[('Rated 5.0', \"RATED\\n  Buff buffet buff they stand as per their name when come to food and service. A very good dining experience at this restaurant, we were "
+          ]
+        }
+      ]
+    }
+  }
+}

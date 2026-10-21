@@ -1,0 +1,170 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7219008302049802,
+  "test_error": 0.7219008302049802,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9028953131636666,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 68.53073859214783,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1829,
+      "n_groups": 1822,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 974,
+      "n_removed": 976,
+      "var_share_removed": 0.3897,
+      "var_share_sae_error": 0.0347,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            83,
+            1419
+          ],
+          "gain_margin": 17774.51,
+          "examples": [
+            "Nice vest, pretty olive color, hangs nice but...its just kinda funny. just hangs and really looks odd when tied. i like the laying piece just wished it had more",
+            "I first have to agree with other reviewers about the quality of this sweater: the stitch is pretty, but the fabric isn't nearly as soft as i expected. it has th",
+            "I wish these fit more like joggers, but they are slightly poofier. with the big buttons, i felt a bit too clownish. however, it's a great statement piece if you"
+          ]
+        },
+        {
+          "group": 1814,
+          "latents": [
+            698
+          ],
+          "gain_margin": 11951.48,
+          "examples": [
+            "Why do designers keep making crop tops??!! i can't imagine this would be flattering on anyone, especially someone average height and well endowed on top. i look",
+            "Saw this on line and decided to \"splurge\" for the holidays. arrived today and is going right back. runs very small especially in the waist. trim is a cheap ribb",
+            "I had high hopes for this sweater and when i found it on sale online, i jumped at the opportunity. i am 5'11\", slender and always wear a small in retailer tops."
+          ]
+        },
+        {
+          "group": 850,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 9499.55,
+          "examples": [
+            "And the bottom looks like a tutu. first, i have high tolerance for scratchy fabric but this one i could feel it even through long sleeves. there is no way i cou",
+            "Way too big and unflattering. i would love it to look like it does online but it's huge in person.",
+            "This has such awful proportions. i'm 5'0 and 100 lbs, ordered xxs petite (in the neutral color). the seam at the bust literally hits in the middle of my bust!! "
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            828,
+            2038
+          ],
+          "gain_margin": 8270.19,
+          "examples": [
+            "I absolutely adore this cardigan. it's easy, so comfortable, stylish and absolutely flattering on every shape!! what i love about it most is how long it is. i'm",
+            "These jeans are amazing! i just got them from retailer the other day and i have worn them almost every day since! i have washed them once. the tag says to turn ",
+            "I bought the blue/green color. it was absolutely beautiful...i paired it with a green sweater jacket for inside and took the sweater off as it warmed up. very c"
+          ]
+        },
+        {
+          "group": 1820,
+          "latents": [
+            531
+          ],
+          "gain_margin": 5516.15,
+          "examples": [
+            "Retailer consistently provides unique, sophisticated and quality made clothing. with the exception of an occasional purchase at their sister companies, i shop w",
+            "This dress is awesome! love everything about it, except the colors! the pink is ridiculous, it is like pepto on crack, there's no way, outside of being a brides",
+            "Three strikes and retailer is out for me! i am so disappointed. i really liked this dress and was looking for a fun, distinctive new shift dress. got it, tried "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1577,
+      "n_groups": 1574,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1051,
+      "n_removed": 1052,
+      "var_share_removed": 0.4725,
+      "var_share_sae_error": 0.0131,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            106,
+            437
+          ],
+          "gain_margin": 12032.23,
+          "examples": [
+            "Ugly design",
+            "Looks cheap",
+            "Huge arm holes"
+          ]
+        },
+        {
+          "group": 1569,
+          "latents": [
+            828
+          ],
+          "gain_margin": 6656.19,
+          "examples": [
+            "Flattering and comfy - my perfect jean!",
+            "Perfect, comfy, feminine summer dress!",
+            "Super chic skirt..perfect for fall!"
+          ]
+        },
+        {
+          "group": 840,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 3126.51,
+          "examples": [
+            "So disappointing!",
+            "So disappointed.",
+            "Soooo disappointed!"
+          ]
+        },
+        {
+          "group": 1571,
+          "latents": [
+            59
+          ],
+          "gain_margin": 2648.12,
+          "examples": [
+            "Lovely but shrinks a lot",
+            "Stretch out a lot",
+            "Good in theory but too large"
+          ]
+        },
+        {
+          "group": 1573,
+          "latents": [
+            396
+          ],
+          "gain_margin": 2512.1,
+          "examples": [
+            "Does not look good in person- strawberry shortcake",
+            "Poor quality, unflattering fit",
+            "Very poor quality"
+          ]
+        }
+      ]
+    }
+  }
+}

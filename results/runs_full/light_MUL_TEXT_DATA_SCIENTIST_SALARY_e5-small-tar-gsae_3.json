@@ -1,0 +1,391 @@
+{
+  "model": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.415777281726029,
+  "test_error": 1.415777281726029,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7988611961836294,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 166.00514960289001,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 443,
+      "n_groups": 442,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 423,
+      "n_removed": 424,
+      "var_share_removed": 0.6589,
+      "var_share_sae_error": 0.0001,
+      "top": [
+        {
+          "group": 29,
+          "latents": [
+            1776
+          ],
+          "gain_margin": 4209.17,
+          "examples": [
+            "10-20 yrs",
+            "10-20 yrs",
+            "10-20 yrs"
+          ]
+        },
+        {
+          "group": 316,
+          "latents": [
+            208
+          ],
+          "gain_margin": 3493.82,
+          "examples": [
+            "0-2 yrs",
+            "0-2 yrs",
+            "0-2 yrs"
+          ]
+        },
+        {
+          "group": 368,
+          "latents": [
+            28
+          ],
+          "gain_margin": 3160.38,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "group": 382,
+          "latents": [
+            83
+          ],
+          "gain_margin": 2459.37,
+          "examples": [
+            "12-18 yrs",
+            "12-18 yrs",
+            "12-18 yrs"
+          ]
+        },
+        {
+          "group": 257,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 2328.36,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2016,
+      "n_groups": 2015,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1258,
+      "n_removed": 1258,
+      "var_share_removed": 0.3615,
+      "var_share_sae_error": 0.04,
+      "top": [
+        {
+          "group": 2002,
+          "latents": [
+            208
+          ],
+          "gain_margin": 8979.58,
+          "examples": [
+            "Have experience working on MSOffice;Good communication skills written and ...",
+            "You should demonstrate good  written & verbal communication;0  - 2 years work experience in back ...",
+            " Experience    :  0.6 - 5 years; Note : Only Medical Billing experience candidate can apply ..."
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            83,
+            431
+          ],
+          "gain_margin": 8646.81,
+          "examples": [
+            "- Should be a team player & work towards achieving the company goal & objectives;- 15+ years of ...",
+            "- Should be a team player & work towards achieving the company goal & objectives;- 15+ years of ...",
+            "- Should be a team player & work towards achieving the company goal & objectives;- 15+ years of ..."
+          ]
+        },
+        {
+          "group": 1000,
+          "latents": [
+            510
+          ],
+          "gain_margin": 7453.07,
+          "examples": [
+            "Head - Strategy & Customer Acquisition - Telecom/ Media/ FMCG/ Online (10-12 yrs)  - Shaping ...",
+            "Head - Strategy & Customer Acquisition - Telecom/ Media/ FMCG/ Online (10-12 yrs)  - Shaping ...",
+            "Manager - Analytics - KPO (6-10 yrs)  Key Responsibilities :  - Understand the business ..."
+          ]
+        },
+        {
+          "group": 124,
+          "latents": [
+            1677
+          ],
+          "gain_margin": 1442.77,
+          "examples": [
+            "Good knowledge of Blogging;Good knowledge of Google Local ...",
+            "Solid working experience in working in Infor M3 ERP at least about 5 years in complex business critical ...",
+            "4 to 5 years of experience in Digital Marketing ;Must have knowledge of SEO/SEM/PPC ;Must have knowledge ..."
+          ]
+        },
+        {
+          "group": 1903,
+          "latents": [
+            329
+          ],
+          "gain_margin": 1400.64,
+          "examples": [
+            "Knowledge of Call Center Inbound/Back Office (preferred) KPIs and calculation thereof;Knowledge (What ...",
+            "The candidates should be:;(Fresher) with minimum 70\\%, ...",
+            "Produce regular and ad hoc reports in line with the teams agreed reporting schedule and ensures that ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1988,
+      "n_groups": 1983,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1143,
+      "n_removed": 1144,
+      "var_share_removed": 0.2493,
+      "var_share_sae_error": 0.0285,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            208,
+            1100
+          ],
+          "gain_margin": 21291.36,
+          "examples": [
+            "Immediate Hiring - AR Callers/freshers - Night Shift",
+            "KPO / Process Associates / Medical Billing Process / Night Shift",
+            "KPO / BPO / Medical Billing Process / Process Associates (US Shift)"
+          ]
+        },
+        {
+          "group": 1978,
+          "latents": [
+            83
+          ],
+          "gain_margin": 9564.64,
+          "examples": [
+            "Head - Consumer Insights Marketing - Cement Firm",
+            "Senior Director - Transformation - Insurance",
+            "Senior Associate Vice President - Retail Analytics - Iim/isb/mdi/fms"
+          ]
+        },
+        {
+          "group": 1770,
+          "latents": [
+            431
+          ],
+          "gain_margin": 5756.34,
+          "examples": [
+            "Avp/vp/associate Director - Real Estate Advisory - Investment Bank",
+            "Avp/vp/associate Director - Real Estate Advisory - Investment Bank",
+            "Delivery Head - Advanced Analytics - Utilities (13-18 Years)"
+          ]
+        },
+        {
+          "group": 487,
+          "latents": [
+            1007
+          ],
+          "gain_margin": 3624.65,
+          "examples": [
+            "Quality Analyst - Day Shift - 5 Days Working (vashi)-call Monitoring",
+            "MIS Coordinator  - Pharma Company, Ranjit Nagar, Delhi",
+            "Assistant Sales Officer / Fresher (trainee ASO)"
+          ]
+        },
+        {
+          "group": 569,
+          "latents": [
+            1308
+          ],
+          "gain_margin": 1977.39,
+          "examples": [
+            "Associate - Asset Management - Strategy & Algorithm - High Frequency",
+            "Senior Role - Financial Planning & Analysis - Bfs/bpo/fmcg/infra",
+            "Consultant/ Senior Consultant - Demand Planner - Solution"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2002,
+      "n_groups": 1984,
+      "n_multi_groups": 15,
+      "n_groups_dropped": 1068,
+      "n_removed": 1075,
+      "var_share_removed": 0.2682,
+      "var_share_sae_error": 0.0347,
+      "top": [
+        {
+          "group": 1339,
+          "latents": [
+            83
+          ],
+          "gain_margin": 8980.26,
+          "examples": [
+            "canada, australia, information technology, it management, systems manager...",
+            "Microsoft Cloud Analytics Azure Architect, HDInsight Stack...",
+            "insurance analytics, sas, team leading, analytics, analytics head..."
+          ]
+        },
+        {
+          "group": 1942,
+          "latents": [
+            208
+          ],
+          "gain_margin": 8172.36,
+          "examples": [
+            "data entry operation, typing, excel, notepad, freelancing, content writing,...",
+            "data entry operation, typing, excel, notepad, freelancing, content writing,...",
+            "data entry operation, typing, excel, notepad, freelancing, content writing,..."
+          ]
+        },
+        {
+          "group": 1416,
+          "latents": [
+            535
+          ],
+          "gain_margin": 3156.8,
+          "examples": [
+            "accounts receivable, Accounts Receivable Executive...",
+            "qa, quality analyst, quality coach, quality executive, BPO, voice process...",
+            "Data Analysis, mis, mis executive, mis excel"
+          ]
+        },
+        {
+          "group": 1268,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 2428.49,
+          "examples": [
+            "Advanced Excel, MIS, Mail",
+            "Back Office, Backend, Computer Operating",
+            "Back Office, Backend, Computer Operating"
+          ]
+        },
+        {
+          "group": 1964,
+          "latents": [
+            15
+          ],
+          "gain_margin": 1640.72,
+          "examples": [
+            "director, risk management, financial analysis, credit risk modelling",
+            "Team Lead, AVP, VP, Credit Risk, Credit Policy, Credit Analysis...",
+            "Team Lead, AVP, VP, Credit Risk, Credit Policy, Credit Analysis..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 807,
+      "n_groups": 806,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 734,
+      "n_removed": 735,
+      "var_share_removed": 0.7941,
+      "var_share_sae_error": 0.0023,
+      "top": [
+        {
+          "group": 802,
+          "latents": [
+            620
+          ],
+          "gain_margin": 2367.72,
+          "examples": [
+            "Agra, Amritsar, Anand, Belgaum, Cuttack, Dehradun, Indore, Kota, Port Blair",
+            "Rajkot, Ranchi, Dhanbad, Thane, Surat, Orai, Nizamabad, Bijnor, Bilaspur",
+            "Haridwar, Haldwani, Hisar, Hoshiarpur, Hospet, Hubli, Hosur, Dadra and Nagar Haveli, Hyderabad"
+          ]
+        },
+        {
+          "group": 798,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 864.65,
+          "examples": [
+            "jaunpur, azamgarh, pratapgarh, pilibhit, sambhal, chandauli, shamli, bulandshahr, farrukhabad",
+            "jaunpur, azamgarh, pratapgarh, pilibhit, sambhal, chandauli, shamli, bulandshahr, farrukhabad",
+            "hazaribagh, gumla, khunti, koderma, pakur, palamu, ramgarh, chaibasa, sahebganj"
+          ]
+        },
+        {
+          "group": 383,
+          "latents": [
+            1007
+          ],
+          "gain_margin": 333.57,
+          "examples": [
+            "kushinagar, lalitpur, maharajganj, mahoba, mainpuri, mau, hapur, raebareli, rampur",
+            "kushinagar, lalitpur, maharajganj, mahoba, mainpuri, mau, hapur, raebareli, rampur",
+            "morigaon, nagaon, nalbari, sivasagar, tezpur, tinsukia, udalguri, sankardev nagar, majuli"
+          ]
+        },
+        {
+          "group": 232,
+          "latents": [
+            1763
+          ],
+          "gain_margin": 217.52,
+          "examples": [
+            "Bengaluru(7th Phase JP Nagar+3)",
+            "Pune(Viman Nagar+4)",
+            "Rajkot, Ranchi, Dhanbad, Thane, Surat, Orai, Nizamabad, Bijnor, Bilaspur"
+          ]
+        },
+        {
+          "group": 362,
+          "latents": [
+            751
+          ],
+          "gain_margin": 193.77,
+          "examples": [
+            "Munger, Haridwar, Roorkee, Varanasi, Satna, Rewa, Jabalpur, Kolkata, Bhagalpur",
+            "Bhopal, Moradabad, Jaipur",
+            "Haridwar, Hyderabad, Valsad, Chandigarh, Ahmedabad, Jhansi, Varanasi, Gurgaon, Ludhiana"
+          ]
+        }
+      ]
+    }
+  }
+}

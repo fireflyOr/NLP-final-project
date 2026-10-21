@@ -1,0 +1,167 @@
+{
+  "model": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13120.90487618668,
+  "test_error": 13120.90487618668,
+  "course_metric": "r2",
+  "course_score": 0.792078334896354,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 37.905125856399536,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2033,
+      "n_groups": 2022,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 1261,
+      "n_removed": 1262,
+      "var_share_removed": 0.5909,
+      "var_share_sae_error": 0.0258,
+      "top": [
+        {
+          "group": 1853,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 843.38,
+          "examples": [
+            "Peterson, D R*",
+            "Chow, L S Y*",
+            "Bearblock, K*"
+          ]
+        },
+        {
+          "group": 66,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 624.87,
+          "examples": [
+            "Knezevic, N",
+            "Knezevic, N",
+            "Connelly, P"
+          ]
+        },
+        {
+          "group": 1995,
+          "latents": [
+            23
+          ],
+          "gain_margin": 456.59,
+          "examples": [
+            "Wong, C*",
+            "Peterson, D R*",
+            "Ross, A*"
+          ]
+        },
+        {
+          "group": 112,
+          "latents": [
+            1834
+          ],
+          "gain_margin": 365.54,
+          "examples": [
+            "Nadalini, R D",
+            "Nadalini, R D",
+            "Nadalini, R D"
+          ]
+        },
+        {
+          "group": 1812,
+          "latents": [
+            587
+          ],
+          "gain_margin": 321.89,
+          "examples": [
+            "Norton, P C",
+            "Norton, P C",
+            "Norton, J A"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 989,
+      "n_groups": 989,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 692,
+      "n_removed": 692,
+      "var_share_removed": 0.5495,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 942,
+          "latents": [
+            305
+          ],
+          "gain_margin": 8327.14,
+          "examples": [
+            "Chief Communications Officer",
+            "Chief Communications Officer",
+            "CHIEF HUMAN RESOURCES OFFICER"
+          ]
+        },
+        {
+          "group": 833,
+          "latents": [
+            204
+          ],
+          "gain_margin": 6353.61,
+          "examples": [
+            "Solicitor III",
+            "Solicitor Iii",
+            "Solicitor III"
+          ]
+        },
+        {
+          "group": 95,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 5391.14,
+          "examples": [
+            "General Manager-Parks & Recreation",
+            "General Manager-Parks & Recreation",
+            "Deputy General Manager Park Board"
+          ]
+        },
+        {
+          "group": 915,
+          "latents": [
+            564
+          ],
+          "gain_margin": 3695.76,
+          "examples": [
+            "Assoc Director Non-Market Housing Dev",
+            "Assoc Director Non-Market Housing Dev",
+            "Director Non Market Housing"
+          ]
+        },
+        {
+          "group": 951,
+          "latents": [
+            457
+          ],
+          "gain_margin": 2895.02,
+          "examples": [
+            "General Manager Olympic Operations",
+            "CHIEF HUMAN RESOURCES OFFICER",
+            "Chief Human Resources Officer"
+          ]
+        }
+      ]
+    }
+  }
+}
