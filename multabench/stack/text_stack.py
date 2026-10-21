@@ -239,7 +239,8 @@ class StackEncoder:
         self.n_duplicate_rows = int(len(groups) - len(np.unique(groups)))
         if self.n_duplicate_rows:
             print(f"🧱 text stack: {self.n_duplicate_rows} training rows duplicate another row's text; kept in one fold")
-        for k, (tr, ho) in enumerate(self._splitter(yy, groups)):
+        self.folds_ = [(np.asarray(tr), np.asarray(ho)) for tr, ho in self._splitter(yy, groups)]
+        for k, (tr, ho) in enumerate(self.folds_):
             print(f"🧱 text stack ({self.kind}): fitting split {k + 1}/{self.n_splits} on {len(tr)} rows")
             if self.kind == "frozen":
                 m = self._fit_frozen(feats[tr], yy[tr], seed=k)

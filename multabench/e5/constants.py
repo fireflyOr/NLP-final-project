@@ -36,6 +36,9 @@ E5_TRANSFORMS = {
 E5_SMALL_STACK = "e5-small-v2|stack"        # MLP on frozen E5 embeddings, 5-fold cross-fitted
 E5_SMALL_TAR_STACK = "e5-small-v2|tarstack" # LoRA-fine-tuned E5 + head (as in TAR), 3-fold cross-fitted
 E5_SMALL_TAR_FSTACK = "e5-small-v2|tar-fstack"  # Joint TAR's PCA-30 columns + out-of-fold frozen-MLP text predictions
+E5_SMALL_TAR_PLS = "e5-small-v2|tar-pls"      # TAR embeddings -> PLS-30 (target-aware reduction instead of PCA-30)
+E5_SMALL_TAR_FULL = "e5-small-v2|tar-full"    # TAR embeddings, all 384 dimensions (no reduction)
+TAR_TRANSFORM_ENCODERS = {E5_SMALL_TAR_PLS: "pls", E5_SMALL_TAR_FULL: "full"}
 TAR_STACK_ENCODERS = {E5_SMALL_TAR_FSTACK: ("frozen", 5)}
 STACK_ENCODERS = {E5_SMALL_STACK: ("frozen", 5), E5_SMALL_TAR_STACK: ("finetuned", 3)}
 
@@ -79,6 +82,8 @@ TEXT_ENCODERS = {
     "e5-small-pca50": Encoder(encoder_name=E5_SMALL_PCA50, tune_encoder=False),
     # tune_encoder=True so the pipeline passes y (and the LoRA args) to the text encoder
     "e5-small-stack": Encoder(encoder_name=E5_SMALL_STACK, tune_encoder=True),
+    "e5-small-tar-pls": Encoder(encoder_name=E5_SMALL_TAR_PLS, tune_encoder=True),
+    "e5-small-tar-full": Encoder(encoder_name=E5_SMALL_TAR_FULL, tune_encoder=True),
     "e5-small-tar-fstack": Encoder(encoder_name=E5_SMALL_TAR_FSTACK, tune_encoder=True),
     "e5-small-tar-stack": Encoder(encoder_name=E5_SMALL_TAR_STACK, tune_encoder=True),
     "e5-small-relsae": Encoder(encoder_name=E5_SMALL_RELSAE, tune_encoder=True),

@@ -8,12 +8,13 @@
 #SBATCH --mem=48G
 #SBATCH --time=2-00:00:00
 #SBATCH --output=tstack_%A_%a.out
-# Final pre-declared test: Joint TAR vs Joint TAR + out-of-fold text stacking (same TAR fine-tune per fold).
+# Final paired run (LightGBM): Joint TAR and every TAR-based arm share one fine-tune per fold.
+# The fine-tune's LoRA adapters are saved to tar_ckpt/<dataset>/ so learners.sbatch reuses the exact same TAR.
 # All 20 MulTaBench text datasets x 6 folds, LightGBM. One array task per dataset; finished runs are skipped,
 # so resubmitting resumes. Order matters: e5-small-tar first, then its pruned arms reuse the same fine-tuned E5.
 set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"
-export MULTABENCH_DYNAMIC_PADDING=1 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK PYTHONUNBUFFERED=1
+export MULTABENCH_TAR_DIR=tar_ckpt/${SLURM_ARRAY_TASK_ID} MULTABENCH_DYNAMIC_PADDING=1 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK PYTHONUNBUFFERED=1
 
 # the environment is built ONCE beforehand (see setup in the instructions); array tasks only use it
 [ -f .venv_cu126/.ok ] || { echo "missing .venv_cu126 - run the setup srun first"; exit 1; }
@@ -29,4 +30,5 @@ ds=${DS[$SLURM_ARRAY_TASK_ID]}
 echo "== $ds on $(hostname)"; nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
 
 PYTHONPATH=. python sae_pilot.py run --out_dir runs_tarstack --emb_cache emb_cache/$ds --datasets $ds \
-  --encoders e5-small-tar e5-small-tar-fstack e5-small-tar-gsae e5-small-tar-gsae-randvar e5-small-tar-gsae-rand
+  --encoders e5-small-tar e5-small-tar-fstack e5-small-tar-pls e5-small-tar-full \
+             e5-small-tar-gsae e5-small-tar-gsae-randvar e5-small-tar-gsae-rand

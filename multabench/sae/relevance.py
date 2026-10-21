@@ -220,6 +220,20 @@ class DimRelevanceTransform:
         return self.pca.transform(emb[:, self.keep])
 
 
+class FullTransform:
+    """No compression: all embedding dimensions go to the tree model."""
+
+    def __init__(self):
+        self.diag: Dict = {}
+
+    def fit(self, emb: np.ndarray, texts=None) -> "FullTransform":
+        self.n_components = emb.shape[1]
+        return self
+
+    def transform(self, emb: np.ndarray) -> np.ndarray:
+        return emb
+
+
 class PLSTransform:
     """Control: partial least squares to 30 components, using the (univariate) target matrix."""
 

@@ -14,7 +14,7 @@ import pandas as pd
 from pandas import DataFrame, Series
 import torch
 
-from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, PRUNE_ENCODERS, RELEVANCE_ENCODERS, STACK_ENCODERS, TAR_STACK_ENCODERS, TF_IDF
+from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, PRUNE_ENCODERS, RELEVANCE_ENCODERS, STACK_ENCODERS, TAR_STACK_ENCODERS, TAR_TRANSFORM_ENCODERS, TF_IDF
 from multabench.e5.e5_finetune import encode_texts_with_e5, get_vanilla_e5
 
 PCA_COMPONENTS = 30
@@ -328,9 +328,19 @@ def fit_text_encoders_tuned(
     val_y_arr = np.array(val_y)
 
     key = _tuned_key(train_texts, train_y_arr, val_texts, val_y_arr, e5_model_name, kwargs)
+    tar_dir = os.getenv("MULTABENCH_TAR_DIR") if use_memo else None
+    tar_path = os.path.join(tar_dir, f"tar_{key}.pt") if tar_dir else None
     if use_memo and _TUNED_MEMO.get("key") == key:   # same fold, another TAR-based arm: reuse the identical fine-tuned model
         tuned_model, tuned_tokenizer = _TUNED_MEMO["model"]
         print(f"Reusing the fine-tuned E5 of this fold ({len(train_texts)} train examples)")
+    elif tar_path and os.path.exists(tar_path):      # same fold in an earlier process: restore the saved LoRA adapters
+        from multabench.e5.e5_finetune import load_lora_backbone
+        _TUNED_MEMO.clear()
+        tuned_model = load_lora_backbone(tar_path, device, model_name=e5_model_name,
+                                         **{k: kwargs[k] for k in ("lora_rank", "text_layers") if k in kwargs})
+        tuned_tokenizer = AutoTokenizer.from_pretrained(e5_model_name)
+        _TUNED_MEMO.update(key=key, model=(tuned_model, tuned_tokenizer))
+        print(f"Restored the saved fine-tuned E5 of this fold from {tar_path}")
     else:
         if use_memo:
             _TUNED_MEMO.clear()
@@ -349,6 +359,10 @@ def fit_text_encoders_tuned(
         tuned_model.to(device)
         if use_memo:
             _TUNED_MEMO.update(key=key, model=(tuned_model, tuned_tokenizer))
+        if tar_path:
+            from multabench.e5.e5_finetune import save_lora_backbone
+            os.makedirs(tar_dir, exist_ok=True)
+            save_lora_backbone(tuned_model, tar_path)
     if return_model:
         return tuned_model, tuned_tokenizer
     if transform_factory is not None:
@@ -404,6 +418,17 @@ def fit_text_encoders(
         assert y is not None, "relevance filtering needs the target"
         return fit_text_encoders_relevance(x=x, text_features_list=text_features_list, device=device, y=y,
                                            is_cls=is_cls, variant=RELEVANCE_ENCODERS[e5_model_name])
+    if e5_model_name in TAR_TRANSFORM_ENCODERS:
+        # the fold's TAR fine-tune (shared with the e5-small-tar arm); only the reduction after it changes
+        from multabench.sae import relevance as rel
+        assert y is not None, "TAR needs the target"
+        kind = TAR_TRANSFORM_ENCODERS[e5_model_name]
+        T, _ = rel.target_matrix(y, is_cls)
+        factory = (lambda col, val_mask=None: rel.PLSTransform(T)) if kind == "pls" else \
+                  (lambda col, val_mask=None: rel.FullTransform())
+        return fit_text_encoders_tuned(x=x, text_features_list=text_features_list, device=device, y=y,
+                                       e5_train_kwargs=e5_train_kwargs or {}, is_cls=is_cls, d_output=d_output,
+                                       transform_factory=factory)
     if e5_model_name in TAR_STACK_ENCODERS:
         # Joint TAR unchanged (same fine-tuned E5 as the e5-small-tar arm of this fold) + stacked text predictions
         from multabench.stack.text_stack import STACK_KEY, StackEncoder

@@ -45,6 +45,12 @@ def _model_cls(short: str):
     if short == "light":
         from multabench.baselines.lgbm import LightGBM
         return LightGBM
+    if short == "lgbt":
+        from multabench.baselines.lgbm_tuned import LightGBMTuned
+        return LightGBMTuned
+    if short == "late":
+        from multabench.stack.late_fusion import LateFusion
+        return LateFusion
     if short == "cat":
         from multabench.baselines.catboost import CatBoost
         return CatBoost
@@ -180,14 +186,19 @@ def run(args):
                 model.fit(split.x_train.copy(), split.y_train.copy())
                 y_true = np.asarray(transform_preprocess_y(y=split.y_test.copy(), scaler=model.target_transformer))
                 y_pred = np.asarray(model.predict(split.x_test.copy()))
+                # late fusion is a different pipeline, not a text encoder: file it as a LightGBM-family arm of its
+                # own name so it is compared, paired by fold, with the LightGBM baselines
+                arm = "late-fusion" if args.model == "late" else enc_name
                 res = {
-                    "model": args.model, "dataset": ds_name, "encoder": enc_name, "fold": fold, "size": args.size,
+                    "model": "light" if args.model == "late" else args.model, "learner": args.model,
+                    "dataset": ds_name, "encoder": arm, "fold": fold, "size": args.size,
                     **calculate_metric(y_true=y_true, y_pred=y_pred, d_output=model.d_output),
                     **course_metric(y_true, y_pred, model.is_cls),
                     "n_text_cols": len([k for k in model.text_transformers if not k.startswith("__")]),
                     "n_text_features": int(sum(t.n_components for t in model.text_transformers.values())),
                     "n_train": len(split.y_train), "n_test": len(split.y_test),
                     "runtime_s": time.time() - t0,
+                    "learner_params": getattr(model, "best_params_", None),
                     "diagnostics": {c: getattr(t.encoder, "diag", None) for c, t in model.text_transformers.items()
                                     if getattr(getattr(t, "encoder", None), "diag", None)},
                 }

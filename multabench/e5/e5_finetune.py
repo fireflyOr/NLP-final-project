@@ -343,3 +343,29 @@ def finetune_e5_with_lora(
         trainer.model.eval()
         return trainer.model, tokenizer, label_encoder
     return backbone, tokenizer
+
+
+# ---------------------------------------------------------------- saving / restoring a TAR fine-tune (LoRA adapters only)
+def build_lora_e5(device, model_name: str = E5_SMALL_V2, lora_rank: int = 16, text_layers: int = 3, **_):
+    """The exact backbone finetune_e5_with_lora trains: fresh E5 + LoRA on the last `text_layers` layers."""
+    d_model, num_layers = E5_DIM[model_name], E5_NUM_LAYERS[model_name]
+    e5_model, _ = _load_fresh_e5(device, model_name=model_name)
+    n_layers = min(max(1, text_layers), num_layers)
+    cfg = LoraConfig(r=lora_rank, lora_alpha=lora_rank * 2, lora_dropout=0.1, bias="none",
+                     target_modules=_get_lora_target_modules(list(range(num_layers))[-n_layers:]))
+    return get_peft_model(e5_model, cfg)
+
+
+def save_lora_backbone(backbone, path: str) -> None:
+    from peft import get_peft_model_state_dict
+    tmp = path + ".tmp"
+    torch.save({k: v.detach().cpu() for k, v in get_peft_model_state_dict(backbone).items()}, tmp)
+    os.replace(tmp, path)
+
+
+def load_lora_backbone(path: str, device, model_name: str = E5_SMALL_V2, **lora_kwargs):
+    from peft import set_peft_model_state_dict
+    backbone = build_lora_e5(device, model_name=model_name, **lora_kwargs)
+    set_peft_model_state_dict(backbone, torch.load(path, map_location="cpu"))
+    backbone.to(device)
+    return backbone.eval()

@@ -28,15 +28,20 @@ SHORT = {
 }
 MAIN = [("e5-small", "Frozen"), ("e5-small-tar", "TAR"), ("e5-small-tar-gsae", "TAR+prune"),
         ("e5-small-tar-gsae-rand", "TAR+rand"), ("e5-small-pls", "PLS"), ("e5-small-stack", "Stack")]
-VS_TAR = [("e5-small-tar-gsae", "TAR + concept pruning (ours)"), ("e5-small-tar-gsae-rand", "TAR + random pruning"),
+VS_TAR = [("e5-small-tar-fstack", "TAR + text stacking"), ("e5-small-tar-pls", "TAR + PLS-30 (instead of PCA)"),
+          ("e5-small-tar-full", "TAR, all 384 dims"), ("late-fusion", "Late fusion (frozen text model)"),
+          ("e5-small-tar-gsae-randvar", "TAR + random pruning (variance-matched)"),
+          ("e5-small-tar-gsae", "TAR + concept pruning (ours)"), ("e5-small-tar-gsae-rand", "TAR + random pruning"),
           ("e5-small-gsae", "Frozen + concept pruning"), ("e5-small-pls", "Frozen + PLS"),
           ("e5-small-stack", "Frozen + stacking"), ("e5-small", "Joint Frozen")]
 
 
-def load(d):
+def load(d, model="light"):
     rows = [json.load(open(p)) for p in glob.glob(os.path.join(d, "*.json"))] if d and os.path.isdir(d) else []
     df = pd.DataFrame(rows)
-    return df[df.model == "light"] if len(df) else df
+    if not len(df) or model is None:
+        return df
+    return df[df.model == model]
 
 
 def task(ds):
@@ -67,8 +72,9 @@ def main_table(df, out):
 def summary_table(df, out, base="e5-small-tar"):
     wide = df.pivot_table(index=["dataset", "fold"], columns="encoder", values="course_score")
     means = df.pivot_table(index="dataset", columns="encoder", values="course_score", aggfunc="mean")
-    lines = [r"\begin{tabular}{lcccc}", r"\toprule",
-             r"Method & $\Delta$ vs.\ TAR & datasets won & folds won/lost & $p$ (datasets) \\", r"\midrule"]
+    lines = [r"\begin{tabular}{lccccc}", r"\toprule",
+             r"Method & $\Delta$ vs.\ TAR & datasets won & folds won/lost & $p$ & $p_{\text{Holm}}$ \\", r"\midrule"]
+    rows = []
     for e, name in VS_TAR:
         if e not in wide or base not in wide:
             continue
@@ -77,10 +83,52 @@ def summary_table(df, out, base="e5-small-tar"):
         if d_ds.empty:
             continue
         p = wilcoxon(d_ds).pvalue if len(d_ds) >= 5 and (d_ds != 0).any() else np.nan
-        lines.append(f"{name} & {d_ds.mean():+.4f} & {(d_ds > 0).sum()}/{len(d_ds)} & "
-                     f"{(d_f > 0).sum()}/{(d_f < 0).sum()} & {'--' if np.isnan(p) else ('$<$0.001' if p < 1e-3 else f'{p:.3f}')}" + r" \\")
+        rows.append([name, d_ds.mean(), f"{(d_ds > 0).sum()}/{len(d_ds)}", f"{(d_f > 0).sum()}/{(d_f < 0).sum()}", p])
+    holm = _holm([r[4] for r in rows])
+    fmt = lambda p: "--" if np.isnan(p) else ("$<$0.001" if p < 1e-3 else f"{p:.3f}")
+    for (name, d, won, folds, p), ph in zip(rows, holm):
+        lines.append(f"{name} & {d:+.4f} & {won} & {folds} & {fmt(p)} & {fmt(ph)}" + r" \\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     open(os.path.join(out, "summary.tex"), "w").write("\n".join(lines) + "\n")
+
+
+def _holm(ps):
+    """Holm-Bonferroni adjusted p-values (NaNs ignored)."""
+    ps = np.asarray(ps, dtype=float)
+    out = np.full_like(ps, np.nan)
+    idx = [i for i in np.argsort(ps) if np.isfinite(ps[i])]
+    m, running = len(idx), 0.0
+    for rank, i in enumerate(idx):
+        running = max(running, min(1.0, (m - rank) * ps[i]))
+        out[i] = running
+    return out
+
+
+def learners_table(df, out):
+    """Does the picture hold for other learners? Mean difference vs the same learner's Joint TAR, datasets won, p."""
+    arms = [("e5-small", "Joint Frozen"), ("e5-small-tar-fstack", "TAR + text stacking"),
+            ("e5-small-tar-pls", "TAR + PLS-30")]
+    learners = [m for m in ("light", "lgbt", "cat") if m in set(df.model)]
+    if len(learners) < 2:
+        return
+    lines = [r"\begin{tabular}{l" + "c" * len(learners) + "}", r"\toprule",
+             "Arm ($\\Delta$ vs.\\ TAR, datasets won, $p$) & " + " & ".join(
+                 {"light": "LightGBM", "lgbt": "LightGBM tuned", "cat": "CatBoost"}[m] for m in learners) + r" \\",
+             r"\midrule"]
+    for e, name in arms:
+        cells = []
+        for mdl in learners:
+            means = df[df.model == mdl].pivot_table(index="dataset", columns="encoder", values="course_score",
+                                                    aggfunc="mean")
+            if e not in means or "e5-small-tar" not in means:
+                cells.append("--")
+                continue
+            d = (means[e] - means["e5-small-tar"]).dropna()
+            p = wilcoxon(d).pvalue if len(d) >= 5 and (d != 0).any() else np.nan
+            cells.append(f"{d.mean():+.4f}, {(d > 0).sum()}/{len(d)}, " + ("--" if np.isnan(p) else f"{p:.3f}"))
+        lines.append(f"{name} & " + " & ".join(cells) + r" \\")
+    lines += [r"\bottomrule", r"\end{tabular}"]
+    open(os.path.join(out, "learners.tex"), "w").write("\n".join(lines) + "\n")
 
 
 def removal_table(df, out):
@@ -130,6 +178,7 @@ if __name__ == "__main__":
     a = argparse.ArgumentParser()
     a.add_argument("--full", default="runs_full")
     a.add_argument("--xf", default="runs_xf")
+    a.add_argument("--final", default="runs_tarstack", help="the final paired run (all TAR arms, all learners)")
     a.add_argument("--out", default="paper/tables")
     args = a.parse_args()
     os.makedirs(args.out, exist_ok=True)
@@ -139,4 +188,11 @@ if __name__ == "__main__":
         summary_table(full, args.out)
         removal_table(full, args.out)
     xf_table(load(args.xf), args.out)
+    final_all = load(args.final, model=None)
+    if len(final_all):
+        final = final_all[final_all.model == "light"]
+        os.makedirs(os.path.join(args.out, "final"), exist_ok=True)
+        summary_table(final, os.path.join(args.out, "final"))
+        removal_table(final, os.path.join(args.out, "final"))
+        learners_table(final_all, os.path.join(args.out, "final"))
     print("tables written to", args.out)

@@ -450,6 +450,113 @@ def test_tar_plus_stack_shares_tar_and_adds_oof_columns(fake_e5, fake_tar, task)
         assert feats["e5-small-tar-fstack"][col].model is feats["e5-small-tar"][col].model
 
 
+def test_lora_adapter_roundtrip(monkeypatch, tmp_path):
+    """A saved TAR fine-tune restores to exactly the same encoder."""
+    from transformers import BertConfig, BertModel
+    import multabench.e5.e5_finetune as ef
+    cfg = BertConfig(vocab_size=50, hidden_size=32, num_hidden_layers=12, num_attention_heads=2, intermediate_size=64)
+    monkeypatch.setattr(ef, "_load_fresh_e5", lambda device, model_name=None: (BertModel(cfg).eval(), None))
+    torch.manual_seed(0)
+    a = ef.build_lora_e5("cpu")
+    with torch.no_grad():
+        for n, p_ in a.named_parameters():
+            if "lora_" in n:
+                p_.add_(torch.randn_like(p_) * 0.1)          # pretend training moved the adapters
+    torch.manual_seed(1)                                     # a different base init would show up as a mismatch...
+    monkeypatch.setattr(ef, "_load_fresh_e5", lambda device, model_name=None: (_same_base(a), None))
+    path = str(tmp_path / "tar.pt")
+    ef.save_lora_backbone(a, path)
+    b = ef.load_lora_backbone(path, "cpu")
+    ids = torch.randint(0, 50, (3, 7))
+    a.eval()
+    with torch.no_grad():
+        assert torch.allclose(a(input_ids=ids).last_hidden_state, b(input_ids=ids).last_hidden_state, atol=1e-6)
+
+
+def _same_base(peft_model):
+    """The pretrained base the adapters sit on (E5's weights are fixed, so a fresh load returns the same base)."""
+    import copy
+    base = copy.deepcopy(peft_model.get_base_model())
+    for mod in base.modules():                       # strip the LoRA wrappers back to plain Linear layers
+        for name, child in list(mod.named_children()):
+            if hasattr(child, "base_layer"):
+                setattr(mod, name, child.base_layer)
+    return base.eval()
+
+
+def test_tar_dir_restores_fine_tune_across_processes(fake_e5, fake_tar, monkeypatch, tmp_path):
+    import pickle
+    import multabench.e5.e5_finetune as ef
+    import multabench.baselines.preprocessing.text_embeddings as te
+    from multabench.baselines.lgbm import LightGBM
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.e5.constants import TEXT_ENCODERS
+    monkeypatch.setenv("MULTABENCH_TAR_DIR", str(tmp_path))
+    monkeypatch.setattr(ef, "save_lora_backbone", lambda m, path: pickle.dump("adapters", open(path, "wb")))
+    loads = []
+    monkeypatch.setattr(ef, "load_lora_backbone", lambda path, device, **kw: (loads.append(path), torch.nn.Identity())[1])
+    x, y = _toy_task("bin")
+    for enc in ("e5-small-tar", "e5-small-tar-pls", "e5-small-tar-full"):
+        te._TUNED_MEMO.clear()                        # a new process each time
+        model = LightGBM(problem_type=SupervisedTask.BINARY, device=torch.device("cpu"), verbose=False, tune_e5=True,
+                         e5_train_kwargs={}, e5_model_name=TEXT_ENCODERS[enc].encoder_name)
+        model.fit(x.iloc[:1000], y.iloc[:1000])
+        n = model.text_transformers["review"].n_components
+        assert n == {"e5-small-tar": 30, "e5-small-tar-pls": 30, "e5-small-tar-full": 384}[enc]
+        assert np.isfinite(model.predict(x.iloc[1000:])).all()
+    assert len(fake_tar) == 1 and len(loads) == 2      # fine-tuned once, restored twice
+
+
+@pytest.mark.parametrize("task", ["bin", "mul", "reg"])
+def test_late_fusion(fake_e5, task):
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.stack.late_fusion import LateFusion
+    x, y = _toy_task(task)
+    problem = {"bin": SupervisedTask.BINARY, "mul": SupervisedTask.MULTICLASS, "reg": SupervisedTask.REGRESSION}[task]
+    m = LateFusion(problem_type=problem, device=torch.device("cpu"), verbose=False)
+    m.fit(x.iloc[:1000], y.iloc[:1000])
+    assert set(m.text_cols) == {"review", "title"} and m.has_tab
+    assert m.text_model.n_ensemble_rows == 0           # the meta-learner only ever saw out-of-fold text outputs
+    p = m.predict(x.iloc[1000:])
+    assert np.isfinite(p).all() and len(p) == 500
+    if task == "bin":
+        from sklearn.metrics import roc_auc_score
+        assert roc_auc_score(y.iloc[1000:], p) > 0.75   # 'great' in the review and the price both drive y
+    if task == "mul":
+        assert p.shape == (500, 4) and np.allclose(p.sum(1), 1, atol=1e-6)
+
+
+@pytest.mark.parametrize("task", ["bin", "mul", "reg"])
+def test_catboost_with_tar_arms(fake_e5, fake_tar, task):
+    """The CatBoost learner runs on the same text arms and reuses the fold's TAR fine-tune."""
+    pytest.importorskip("catboost")
+    from multabench.baselines.catboost import CatBoost
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.e5.constants import TEXT_ENCODERS
+    x, y = _toy_task(task)
+    problem = {"bin": SupervisedTask.BINARY, "mul": SupervisedTask.MULTICLASS, "reg": SupervisedTask.REGRESSION}[task]
+    for enc in ("e5-small-tar", "e5-small-tar-pls", "e5-small-tar-fstack"):
+        m = CatBoost(problem_type=problem, device=torch.device("cpu"), verbose=False, tune_e5=True, e5_train_kwargs={},
+                     e5_model_name=TEXT_ENCODERS[enc].encoder_name)
+        m.model_.set_params(iterations=50)
+        m.fit(x.iloc[:1000], y.iloc[:1000])
+        p = m.predict(x.iloc[1000:])
+        assert np.isfinite(p).all() and len(p) == 500
+    assert len(fake_tar) == 1
+
+
+@pytest.mark.parametrize("task", ["bin", "mul", "reg"])
+def test_tuned_lightgbm(fake_e5, task):
+    from multabench.baselines.lgbm_tuned import LightGBMTuned, GRID
+    from multabench.datasets.objects import SupervisedTask
+    x, y = _toy_task(task)
+    problem = {"bin": SupervisedTask.BINARY, "mul": SupervisedTask.MULTICLASS, "reg": SupervisedTask.REGRESSION}[task]
+    m = LightGBMTuned(problem_type=problem, device=torch.device("cpu"), verbose=False)
+    m.fit(x.iloc[:1000], y.iloc[:1000])
+    assert set(m.best_params_) == set(GRID) | {"n_trees"} and m.best_params_["n_trees"] >= 1
+    assert np.isfinite(m.predict(x.iloc[1000:])).all()
+
+
 # ---------------- TabSTAR + SAE pruning (phase 1 mocked: tiny random TabSTAR, no download) ----------------
 
 @pytest.fixture()
