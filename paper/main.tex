@@ -28,8 +28,9 @@
 \maketitle
 
 \begin{abstract}
-In text--tabular learning, each free-text column is embedded and compressed before a tree model sees it, and Joint
-TAR fine-tunes the encoder on the target so that the compression keeps target-relevant variation. We ask how the
+In the embedding baselines of the MulTaBench text--tabular benchmark, each free-text column is embedded, compressed
+with PCA, and given to a tree model together with the table; Joint TAR first fine-tunes the text encoder on the target,
+making the embeddings target-aware before compression. We ask how the
 target can be used further on top of TAR. Our first approach \emph{removes} information: a sparse autoencoder (SAE)
 splits each column's embeddings into concepts, each concept is tested against a shuffled copy of itself inside one
 model with the table and all other concepts, and the concepts that fail are subtracted before compression. On the 20
