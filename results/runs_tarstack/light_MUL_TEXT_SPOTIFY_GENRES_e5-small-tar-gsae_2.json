@@ -1,0 +1,248 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.3301372717794786,
+  "test_error": 3.3301372717794786,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9018138145482597,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1305.4751470088959,
+  "learner_params": null,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1941,
+      "n_groups": 1940,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 359,
+      "n_groups_unused": 0,
+      "n_removed": 359,
+      "var_share_removed": 0.0379,
+      "var_share_sae_error": 0.04,
+      "top": [
+        {
+          "group": 386,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 6358.21,
+          "examples": [
+            "O Samba Pocon\u00e9",
+            "MOD\u00c3O",
+            "Pela Porta da Frente"
+          ]
+        },
+        {
+          "group": 1932,
+          "latents": [
+            516
+          ],
+          "gain_margin": 3554.87,
+          "examples": [
+            "Mis Primeros 20 \u00c9xitos",
+            "L\u00ednea Azul - Vol. X - P\u00e1jaro Herido",
+            "Voz Que Sana"
+          ]
+        },
+        {
+          "group": 721,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 3244.95,
+          "examples": [
+            "Vida Que Segue",
+            "No Hay Lugar Para Dudar",
+            "Nada es como Ayer"
+          ]
+        },
+        {
+          "group": 260,
+          "latents": [
+            1570
+          ],
+          "gain_margin": 2965.75,
+          "examples": [
+            "ChuChu TV Nursery Rhymes, Vol. 4",
+            "Alvin And The Chipmunks: The Road Chip (Original Motion Picture Soundtrack)",
+            "Mr. Chris' Tap Music for Kids"
+          ]
+        },
+        {
+          "group": 961,
+          "latents": [
+            1132
+          ],
+          "gain_margin": 2748.17,
+          "examples": [
+            "Energia positiva",
+            "Tanda de En\u00e9rgia",
+            "Esperando Voc\u00ea, Vol. 6"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1901,
+      "n_groups": 1901,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 92,
+      "n_groups_unused": 0,
+      "n_removed": 92,
+      "var_share_removed": 0.0115,
+      "var_share_sae_error": 0.034,
+      "top": [
+        {
+          "group": 297,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 5910.07,
+          "examples": [
+            "Thiago Brado",
+            "Henrique & Juliano",
+            "Henrique & Juliano"
+          ]
+        },
+        {
+          "group": 1830,
+          "latents": [
+            1162
+          ],
+          "gain_margin": 3923.17,
+          "examples": [
+            "Ignacio Corsini",
+            "Alberto Stylee",
+            "Mariano Barba"
+          ]
+        },
+        {
+          "group": 598,
+          "latents": [
+            1102
+          ],
+          "gain_margin": 3792.18,
+          "examples": [
+            "Prashant Soni",
+            "Abhijeet",
+            "Vidyasagar;Kalyani Pradeep"
+          ]
+        },
+        {
+          "group": 1876,
+          "latents": [
+            478
+          ],
+          "gain_margin": 3550.1,
+          "examples": [
+            "Horace Andy",
+            "Robert Earl Keen",
+            "Harry Gregson-Williams;John Powell"
+          ]
+        },
+        {
+          "group": 1880,
+          "latents": [
+            120
+          ],
+          "gain_margin": 3465.67,
+          "examples": [
+            "Fernandinho;Andr\u00e9 Leono;Lito Atalaia",
+            "Bruno & Barretto",
+            "Bruno & Barretto"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1945,
+      "n_groups": 1939,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 422,
+      "n_groups_unused": 0,
+      "n_removed": 422,
+      "var_share_removed": 0.0401,
+      "var_share_sae_error": 0.0457,
+      "top": [
+        {
+          "group": 8,
+          "latents": [
+            516,
+            1868
+          ],
+          "gain_margin": 7883.65,
+          "examples": [
+            "Quejas De Bandoneon",
+            "Te Estoy Mirando",
+            "Te Quiero Pa\u00b4Mi"
+          ]
+        },
+        {
+          "group": 409,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 6499.56,
+          "examples": [
+            "Mel da Sua Boca",
+            "Bolinha de papel",
+            "Bolinha de papel"
+          ]
+        },
+        {
+          "group": 1856,
+          "latents": [
+            577
+          ],
+          "gain_margin": 3500.06,
+          "examples": [
+            "Shohage Adore (From \"Belashuru\")",
+            "Shohage Adore (From \"Belashuru\")",
+            "Uljhe Hue (Raw)"
+          ]
+        },
+        {
+          "group": 1928,
+          "latents": [
+            506
+          ],
+          "gain_margin": 3146.0,
+          "examples": [
+            "Tu as disparu",
+            "Heavy Metal Do Senhor",
+            "Hipnotizou - Ao Vivo"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            120,
+            1838
+          ],
+          "gain_margin": 3015.16,
+          "examples": [
+            "Quem Sou Eu?",
+            "Oh, Qu\u00e3o Lindo Esse Nome \u00c9",
+            "Nenhuma condena\u00e7\u00e3o h\u00e1"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -2.079470462528532,
+  "test_error": 2.079470462528532,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.96105968873745,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1056.0213911533356,
+  "learner_params": null,
+  "diagnostics": {}
+}

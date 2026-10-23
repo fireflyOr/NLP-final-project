@@ -1,0 +1,250 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9273362333126192,
+  "test_error": 0.07266376668738084,
+  "course_metric": "auroc",
+  "course_score": 0.9273362333126192,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 45.57339024543762,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2043,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1448,
+      "n_groups_unused": 345,
+      "n_removed": 1449,
+      "var_share_removed": 0.4229,
+      "var_share_sae_error": 0.0735,
+      "top": [
+        {
+          "group": 1207,
+          "latents": [
+            480
+          ],
+          "gain_margin": 3611.47,
+          "examples": [
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 2042,
+          "latents": [
+            315
+          ],
+          "gain_margin": 2728.33,
+          "examples": [
+            "URGENT Job Full Time &amp; Part Time, Cash Pay.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get big",
+            "WEEKLY JOBS, Part Time Workers Required.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest ca",
+            "Looking for customer service reps who want to work from homemake 80 - 100 dollars a day posting ads on the internet and taking calls. (NO START UP FEES. NO MONE"
+          ]
+        },
+        {
+          "group": 234,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 2182.66,
+          "examples": [
+            "Job DescriptionCompany Overview:INTECSEA is a global company within the WorleyParsons Group and offers all the Group\u2019s capabilities for floating systems, offsho",
+            "Why Choose AECOM? Imagine working for a truly global company whose 45,000 employees share a singular passion: to make the world a better place. We enjoy what we",
+            "Anthony Warren Consultant hires Military acitve duty and Veterans only. \u00a0We are presently hiring 10 Management consultant trainees to assist in the promotion of"
+          ]
+        },
+        {
+          "group": 1018,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 1590.1,
+          "examples": [
+            "Our company\u00a0\u00a0is seeking applications for a (temporary) full time motivated Data Entry/Receptionist. On a daily basis, the receptionist will be responsible for a",
+            "URGENT Job Full Time &amp; Part Time, Cash Pay.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get big",
+            "CASH JOBS, Part Time Workers Needed.Work Minimum 1-2 Hours Per Day Anytime.Won't Required Experience For This Job.You Can Earn $350 to $450 Everyday.Suitable Fo"
+          ]
+        },
+        {
+          "group": 222,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 1399.58,
+          "examples": [
+            "Are you openly friendly and energetic? Are you comfortable talking with &amp; starting conversations with people? Do you smile easily?\u00a0We are a long term well e",
+            "Find more jobs at #URL_1efb08d6a6da1c56afb2d0c686e1ed0dc14d0fbcb22482369e8a69999aa0d278#/Apply using below link#URL_1efb08d6a6da1c56afb2d0c686e1ed0dc14d0fbcb224",
+            "General PurposeProvides\u00a0administrative, secretarial and clerical support to others in the office to maintain an efficient office environment.Main Job Tasks and "
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 314,
+      "n_groups": 298,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 260,
+      "n_groups_unused": 40,
+      "n_removed": 273,
+      "var_share_removed": 0.7035,
+      "var_share_sae_error": 0.0035,
+      "top": [
+        {
+          "group": 10,
+          "latents": [
+            294,
+            1440
+          ],
+          "gain_margin": 465.43,
+          "examples": [
+            "1000-2000",
+            "1000-2000",
+            "1000-2000"
+          ]
+        },
+        {
+          "group": 55,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 186.88,
+          "examples": [
+            "20800-22880",
+            "528000-636000",
+            "33280-37440"
+          ]
+        },
+        {
+          "group": 251,
+          "latents": [
+            582
+          ],
+          "gain_margin": 156.9,
+          "examples": [
+            "13-20",
+            "17-20",
+            "20-25"
+          ]
+        },
+        {
+          "group": 158,
+          "latents": [
+            941
+          ],
+          "gain_margin": 43.99,
+          "examples": [
+            "17-20",
+            "13-20",
+            "31181-37566"
+          ]
+        },
+        {
+          "group": 56,
+          "latents": [
+            1585
+          ],
+          "gain_margin": 18.62,
+          "examples": [
+            "7200-1380000",
+            "7200-1380000",
+            "7200-1380000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1972,
+      "n_groups": 1966,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1463,
+      "n_groups_unused": 441,
+      "n_removed": 1463,
+      "var_share_removed": 0.4427,
+      "var_share_sae_error": 0.0274,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            294,
+            315,
+            386,
+            480
+          ],
+          "gain_margin": 4684.98,
+          "examples": [
+            "URGENT Job Full Time & Part Time, Cash Pay.",
+            "Data Entry Admin/Clerical Positions - Work From Home",
+            "Well Paid Cash Jobs To Start Immediately. "
+          ]
+        },
+        {
+          "group": 1945,
+          "latents": [
+            227
+          ],
+          "gain_margin": 1046.14,
+          "examples": [
+            "Cruise Staff Wanted *URGENT*",
+            "Remote Admin Clerk",
+            "JOB VACANCY IN ST.ERMIN'S HOTEL LONDON"
+          ]
+        },
+        {
+          "group": 1925,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 742.97,
+          "examples": [
+            "Hiring Part-Time Workers (CASH PAYING)",
+            "Home Based Payroll Typist/Data Entry Clerks Positions Available",
+            "URGENT Job Full Time & Part Time, Cash Pay."
+          ]
+        },
+        {
+          "group": 923,
+          "latents": [
+            1079
+          ],
+          "gain_margin": 329.43,
+          "examples": [
+            "Customer Service Representative to Enroll People in NO COST Cell Phone Program ",
+            "Well Paid Cash Jobs To Start Immediately. ",
+            "Payroll Data Coordinator Positions - Earn $100-$200 Daily "
+          ]
+        },
+        {
+          "group": 243,
+          "latents": [
+            1749
+          ],
+          "gain_margin": 231.49,
+          "examples": [
+            "Engineer - Head of Department Hydrodynamics",
+            "Engineering Manager ",
+            "GPS/GNSS signal processing"
+          ]
+        }
+      ]
+    }
+  }
+}

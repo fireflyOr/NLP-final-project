@@ -1,0 +1,397 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7175649088109107,
+  "test_error": 0.28243509118908927,
+  "course_metric": "auroc",
+  "course_score": 0.7175649088109107,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 88.60584807395935,
+  "learner_params": null,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 970,
+      "n_groups": 947,
+      "n_multi_groups": 22,
+      "n_groups_dropped": 685,
+      "n_groups_unused": 91,
+      "n_removed": 659,
+      "var_share_removed": 0.4687,
+      "var_share_sae_error": 0.0059,
+      "top": [
+        {
+          "group": 789,
+          "latents": [
+            579
+          ],
+          "gain_margin": 188.37,
+          "examples": [
+            "1970-01-01 00:00:01.404065961",
+            "1970-01-01 00:00:01.404796037",
+            "1970-01-01 00:00:01.404791037"
+          ]
+        },
+        {
+          "group": 635,
+          "latents": [
+            508
+          ],
+          "gain_margin": 134.05,
+          "examples": [
+            "1970-01-01 00:00:01.427702012",
+            "1970-01-01 00:00:01.428000142",
+            "1970-01-01 00:00:01.405615320"
+          ]
+        },
+        {
+          "group": 722,
+          "latents": [
+            732
+          ],
+          "gain_margin": 129.06,
+          "examples": [
+            "1970-01-01 00:00:01.422201700",
+            "1970-01-01 00:00:01.405631010",
+            "1970-01-01 00:00:01.405045030"
+          ]
+        },
+        {
+          "group": 511,
+          "latents": [
+            1023
+          ],
+          "gain_margin": 118.15,
+          "examples": [
+            "1970-01-01 00:00:01.404838131",
+            "1970-01-01 00:00:01.404802606",
+            "1970-01-01 00:00:01.404827008"
+          ]
+        },
+        {
+          "group": 782,
+          "latents": [
+            1278
+          ],
+          "gain_margin": 108.24,
+          "examples": [
+            "1970-01-01 00:00:01.420380613",
+            "1970-01-01 00:00:01.420442760",
+            "1970-01-01 00:00:01.420582570"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 949,
+      "n_groups": 911,
+      "n_multi_groups": 27,
+      "n_groups_dropped": 649,
+      "n_groups_unused": 121,
+      "n_removed": 564,
+      "var_share_removed": 0.4133,
+      "var_share_sae_error": 0.0065,
+      "top": [
+        {
+          "group": 343,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 291.84,
+          "examples": [
+            "1970-01-01 00:00:01.414825140",
+            "1970-01-01 00:00:01.364875140",
+            "1970-01-01 00:00:01.401483600"
+          ]
+        },
+        {
+          "group": 531,
+          "latents": [
+            789
+          ],
+          "gain_margin": 232.49,
+          "examples": [
+            "1970-01-01 00:00:01.428302017",
+            "1970-01-01 00:00:01.428451665",
+            "1970-01-01 00:00:01.428132414"
+          ]
+        },
+        {
+          "group": 76,
+          "latents": [
+            1974
+          ],
+          "gain_margin": 217.14,
+          "examples": [
+            "1970-01-01 00:00:01.397430000",
+            "1970-01-01 00:00:01.367370000",
+            "1970-01-01 00:00:01.405260000"
+          ]
+        },
+        {
+          "group": 119,
+          "latents": [
+            1888
+          ],
+          "gain_margin": 159.87,
+          "examples": [
+            "1970-01-01 00:00:01.362865658",
+            "1970-01-01 00:00:01.376592666",
+            "1970-01-01 00:00:01.370654738"
+          ]
+        },
+        {
+          "group": 457,
+          "latents": [
+            245
+          ],
+          "gain_margin": 144.38,
+          "examples": [
+            "1970-01-01 00:00:01.357106400",
+            "1970-01-01 00:00:01.421807640",
+            "1970-01-01 00:00:01.427641200"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1244,
+      "n_groups_unused": 153,
+      "n_removed": 1061,
+      "var_share_removed": 0.3549,
+      "var_share_sae_error": 0.1413,
+      "top": [
+        {
+          "group": 902,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 1552.65,
+          "examples": [
+            "\"A social network based around happy hours. Find happy hours and build your network at the times people want to connect.\"",
+            "\"A mobile app to help students around the world learn and better their Math and Life skills, through video, games, and live streaming.\"",
+            "\"Change world of payments, choose freedom, sell, buy and pay everywhere using the same method. no delivery=money return + ensure income\""
+          ]
+        },
+        {
+          "group": 504,
+          "latents": [
+            1395
+          ],
+          "gain_margin": 458.07,
+          "examples": [
+            "\"A collection of hand crafted prints, rendered in Copics, Watercolor, and Photoshop from the portfolio of Rob Duenas.\"",
+            "\"The Pixie Stix combine folk story telling with jazz and blues in a fun and interesting musical bouquet designed for children ages 2 - 6.\"",
+            "\"Jazz meets Bluegrass, Celtic, and Classical music in the mind and musical instruments of Mark Shilansky and friends.\""
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            793
+          ],
+          "gain_margin": 456.64,
+          "examples": [
+            "\"The ULTIMATE movement tray GRIP surfacing kit for tabletop fantasy wargaming. Perfect for curing your boring trays and falling figures!\"",
+            "\"'Stamp & Create' incredibly varied detailed textured bases easily - for ANY & EVERY miniature wargame figure base shape & size.\"",
+            "\"Impudent Mortal is back with our 3rd Kickstarter. A 28mm Near Future Sci Fi Tabletop City perfect for any Sci Fi / Modern gaming system\""
+          ]
+        },
+        {
+          "group": 505,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 408.21,
+          "examples": [
+            "\"The sprout board is a board designed to help you to create permanent high quality projects with a simple but feature filled platform.\"",
+            "\"Smithopoly is the customized version of the world's favorite board game, for Smith College alumnae, friends and parents!\"",
+            "\"The BEST political board game is an Electoral College competition! Campaign, fund raise, & advertise to win swing states.\""
+          ]
+        },
+        {
+          "group": 1012,
+          "latents": [
+            873
+          ],
+          "gain_margin": 314.98,
+          "examples": [
+            "\"A feature-length documentary that exposes how popular culture fosters fat prejudice and then offers an alternative way of thinking.\"",
+            "\"A Malaysian documentary on the issue of statelessness among Filipino migrants in Sabah, Malaysia\"",
+            "\"This documentary portrays the unseen world of several nonconformist individuals pursuing breathtaking visions of alternative living.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1259,
+      "n_groups_unused": 138,
+      "n_removed": 1060,
+      "var_share_removed": 0.3933,
+      "var_share_sae_error": 0.1258,
+      "top": [
+        {
+          "group": 116,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 765.0,
+          "examples": [
+            "\"cubit-perfect-cubes-of-tungsten-titanium-and-more\"",
+            "\"timag-engineered-titanium-magnets\"",
+            "\"meet-pinch-the-smallest-ti-tool-made-with-11-funct\""
+          ]
+        },
+        {
+          "group": 1690,
+          "latents": [
+            294
+          ],
+          "gain_margin": 237.38,
+          "examples": [
+            "\"le-petit-cartable-leather-messenger-bags-for-idevi-0\"",
+            "\"ori-every-day-carry-leather-pouch\"",
+            "\"safia-italiana-designer-bag-rental\""
+          ]
+        },
+        {
+          "group": 1914,
+          "latents": [
+            875
+          ],
+          "gain_margin": 229.46,
+          "examples": [
+            "\"canasta-clasico-double-deck-set-of-playing-cards\"",
+            "\"golden-sky-stories-heartwarming-role-playing\"",
+            "\"butterflies-sign-the-miraculous-journey-of-finding\""
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            803
+          ],
+          "gain_margin": 228.08,
+          "examples": [
+            "\"collar-perfect-let-us-iron-out-the-wrinkles-in-you\"",
+            "\"serenity-rings-custom-chainmaille-accessories\"",
+            "\"australian-designed-single-aa-battery-phone-power\""
+          ]
+        },
+        {
+          "group": 1977,
+          "latents": [
+            369
+          ],
+          "gain_margin": 217.48,
+          "examples": [
+            "\"mytemple-the-fitness-training-game\"",
+            "\"aftermath-post-apocalyptic-rpg-survival-game\"",
+            "\"follow-me-a-biblically-inspired-game-in-a-western\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1277,
+      "n_groups_unused": 152,
+      "n_removed": 1110,
+      "var_share_removed": 0.4055,
+      "var_share_sae_error": 0.1359,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            23,
+            38
+          ],
+          "gain_margin": 1844.81,
+          "examples": [
+            "\"Send Craig To Vegas (Canceled)\"",
+            "\"connectME (Canceled)\"",
+            "\"The Education Enterprise (Canceled)\""
+          ]
+        },
+        {
+          "group": 1523,
+          "latents": [
+            510
+          ],
+          "gain_margin": 918.52,
+          "examples": [
+            "\"Density Playing Card Deck \u2014 Printed by USPCC\"",
+            "\"Mazing Deck - Playing Cards with a twist... and a turn.\"",
+            "\"The Mirror Deck Gaffed Playing Cards\""
+          ]
+        },
+        {
+          "group": 719,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 553.64,
+          "examples": [
+            "\"Food For Recovery: Eating For Recovery\"",
+            "\"KickDish: save time & money with the chief of meal apps\"",
+            "\"A New Kind Of Soda: Better Health From Bottle To Belly.\""
+          ]
+        },
+        {
+          "group": 82,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 461.86,
+          "examples": [
+            "\"nICE mug: a reusable kit to make your own ice mugs.\"",
+            "\"Dropship Custom LEGO Element Kit\"",
+            "\"Heavy Gear Blitz -War for Terra Nova- Miniatures Starter Set\""
+          ]
+        },
+        {
+          "group": 330,
+          "latents": [
+            1769
+          ],
+          "gain_margin": 249.42,
+          "examples": [
+            "\"What Fates Impose: Tales of Divination. Anthology of Fiction\"",
+            "\"Snow White - An Adventure for Pathfinder RPG and D&D 3.5\"",
+            "\"Fantasy Saga D-Type\""
+          ]
+        }
+      ]
+    }
+  }
+}

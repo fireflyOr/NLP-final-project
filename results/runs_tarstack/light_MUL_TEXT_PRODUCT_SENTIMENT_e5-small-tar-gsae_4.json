@@ -1,0 +1,96 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6102736162851542,
+  "test_error": 0.6102736162851542,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8734207059366603,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 17.72789430618286,
+  "learner_params": null,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1458,
+      "n_groups": 1458,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 769,
+      "n_groups_unused": 51,
+      "n_removed": 769,
+      "var_share_removed": 0.2327,
+      "var_share_sae_error": 0.0126,
+      "top": [
+        {
+          "group": 1433,
+          "latents": [
+            668
+          ],
+          "gain_margin": 1594.6,
+          "examples": [
+            "My tweets are stalled. Data sluggish. Come on AT&amp;T, Verizon is embarrassing iPhone customers who haven't switched. #SXSW #iPhone",
+            "There at not even words for how much the wireless at #SXSW sucks.  Thank goodness for my iPhone.",
+            "How bad is the line @mention the temporary apple store at #sxsw? #ipad2"
+          ]
+        },
+        {
+          "group": 1444,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 992.19,
+          "examples": [
+            "Oh no utter @mention #sxsw fail. Can't see the letter of the ballroom in the iPhone app as it is too long and doesn't wrap /cc @mention",
+            "Cant handle #SxSW traffic? RT @mention Dear @mention your own app for iPhone has sucked all day. #crashing",
+            "@mention really disappointed with the iPad app - lots of error messages have to switch to tweet deck for the rest of #sxsw"
+          ]
+        },
+        {
+          "group": 222,
+          "latents": [
+            1930
+          ],
+          "gain_margin": 926.75,
+          "examples": [
+            "Four hours down. Six and a half to go. But the adventure has been worth it.  #apple #SXSW",
+            "The @mention / @mention party was without a doubt the best party I've ever been to in #SXSW. Well done!",
+            "Love my new iPad 2-Seems much faster and more fluid then original and it's seems more natural to hold. Excited to use during #sxsw this week"
+          ]
+        },
+        {
+          "group": 1452,
+          "latents": [
+            227
+          ],
+          "gain_margin": 873.31,
+          "examples": [
+            "Google will not launch Facebook competitor Circles @mention #sxsw today as thought, creeper half-friends the world over disappointed.",
+            "Google lost its way by caring too much for the business vs. the users' - @mention #psych #sxsw",
+            "Austin Hookers:  please do not accept apple products for the coochie.  #SXSW"
+          ]
+        },
+        {
+          "group": 728,
+          "latents": [
+            967
+          ],
+          "gain_margin": 801.33,
+          "examples": [
+            "Z33: Ounce of Prevention {link} [codes valid: 12:00-3:59:59p 03/14/11] #infektd #sxsw #zlf",
+            "If you are heading to #sxsw make sure you have the @mention holler gram  {link}",
+            "How to improve website rankings: Advice from #Google and #Bing at #SXSW | Poynter. {link}"
+          ]
+        }
+      ]
+    }
+  }
+}

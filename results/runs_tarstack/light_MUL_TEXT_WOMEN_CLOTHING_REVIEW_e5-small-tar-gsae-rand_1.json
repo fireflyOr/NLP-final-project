@@ -1,0 +1,178 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7486014831174264,
+  "test_error": 0.7486014831174264,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8992716158474001,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 67.45766878128052,
+  "learner_params": null,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1793,
+      "n_groups": 1787,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 913,
+      "n_groups_unused": 60,
+      "n_removed": 913,
+      "var_share_removed": 0.3253,
+      "var_share_sae_error": 0.0335,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            828,
+            1046,
+            2038
+          ],
+          "gain_margin": 19969.55,
+          "examples": [
+            "This top is just as pretty in person as it is online. i usually buy petites, but ordered this one in the regular length and i'm glad i did. perfect on me at 5'2",
+            "I tried on this sweater in the store and immediately ordered my size. i got the petite small in natural delivered to my door several days later and am extremely",
+            "I ordered the dark turquoise skirt and it fits perfectly! the materials is a very high quality corduroy and the color is beautiful. i really like the buttons on"
+          ]
+        },
+        {
+          "group": 787,
+          "latents": [
+            698
+          ],
+          "gain_margin": 14494.18,
+          "examples": [
+            "I wanted to love this sweater but it is a return. it is a very weird fit, very thick, rug-like material and unfitted. the shoulders are bulky, the top is big an",
+            "I think this blouse would work for petites. it is super short and boxy. looked nothing like the fit on the model. sad to return it, love the print.",
+            "Maybe i shouldn't have sized up to an xl but i'm not sure a smaller size would have solved the weird fit. the vee is quite low and i'm busty. it'll be really lo"
+          ]
+        },
+        {
+          "group": 1785,
+          "latents": [
+            83
+          ],
+          "gain_margin": 10708.5,
+          "examples": [
+            "But-the problem is i cannot get the color to stay below the shoulders. the large appeal of this top is the over the shoulder look-but in just trying it on it wo",
+            "I was very excited to get this piece, but it wasn't quite right for me. very well constructed and nice material, but the open sides were a bit too open toward t",
+            "I love the look and design of this piece but the fit is awkward. the m gapes open and is much boxier than it looks on the model but the s is too tight in the el"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            1002,
+            1100
+          ],
+          "gain_margin": 8952.1,
+          "examples": [
+            "I should have read the reviews first before ordering this top/!. ***buyers beware**: you will not get the same top delivered to you, as is shown in this picture",
+            "I have a pair of mih jeans that are the only jeans i own that i absolutely love. everything about them. this jumper looked versatile, useful and fun, so i splur",
+            "Retailer consistently provides unique, sophisticated and quality made clothing. with the exception of an occasional purchase at their sister companies, i shop w"
+          ]
+        },
+        {
+          "group": 1782,
+          "latents": [
+            437
+          ],
+          "gain_margin": 3189.09,
+          "examples": [
+            "This has such awful proportions. i'm 5'0 and 100 lbs, ordered xxs petite (in the neutral color). the seam at the bust literally hits in the middle of my bust!! ",
+            "I thought it was going to be so pretty. it is ugly on. the macrame is thick, stiff and rough. the top fits awkward on top where the macrame is and the rest is s",
+            "I saw this dress and was immediately drawn to it. the pictures others posted of themselves wearing it just made me want it more. i knew the color said ivory whe"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1547,
+      "n_groups": 1542,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1011,
+      "n_groups_unused": 62,
+      "n_removed": 1011,
+      "var_share_removed": 0.5031,
+      "var_share_sae_error": 0.0126,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            106,
+            437
+          ],
+          "gain_margin": 15479.86,
+          "examples": [
+            "Very thin material, not flattering",
+            "Ugly shirt",
+            "Not flattering"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            59,
+            83
+          ],
+          "gain_margin": 6088.32,
+          "examples": [
+            "Nice style, but had some issues...",
+            "Overall, i like it, but some sizing issues...",
+            "Ok, but didn't love the length (on me)"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            828,
+            1677
+          ],
+          "gain_margin": 5170.5,
+          "examples": [
+            "Absolutely gorgeous dress!",
+            "Absolutely love this jacket!",
+            "Feminine and flattering, love this dress!!"
+          ]
+        },
+        {
+          "group": 769,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 4759.88,
+          "examples": [
+            "So disappointing!",
+            "Horrible fabric!",
+            "Nice top, awful fabric"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            153,
+            2017
+          ],
+          "gain_margin": 3777.67,
+          "examples": [
+            "Lovely, flattering, comfortable",
+            "Comfortable and fun!",
+            "Warm & stylish"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.5938956560997491,
+  "test_error": 0.5938956560997491,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9211347569651211,
+  "n_text_cols": 6,
+  "n_text_features": 185,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 40.335659980773926,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "colsample_bytree": 0.6,
+    "n_trees": 169
+  },
+  "diagnostics": {}
+}

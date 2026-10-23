@@ -1,0 +1,397 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2439417041954911,
+  "test_error": 0.2439417041954911,
+  "course_metric": "r2",
+  "course_score": 0.4584948564153213,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 48.46603298187256,
+  "learner_params": null,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1681,
+      "n_groups": 1681,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1135,
+      "n_groups_unused": 418,
+      "n_removed": 1135,
+      "var_share_removed": 0.617,
+      "var_share_sae_error": 0.0032,
+      "top": [
+        {
+          "group": 1680,
+          "latents": [
+            305
+          ],
+          "gain_margin": 931.05,
+          "examples": [
+            "Wizards RPG Team",
+            "Douglas R. Hofstadter",
+            "Garrett Grolemund"
+          ]
+        },
+        {
+          "group": 1679,
+          "latents": [
+            477
+          ],
+          "gain_margin": 860.19,
+          "examples": [
+            "Anjali Hooda Sangwan",
+            "Sharma, R K",
+            "Anand Gopal"
+          ]
+        },
+        {
+          "group": 244,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 330.29,
+          "examples": [
+            "S. Bashir S. and Hashmi M. Saran",
+            "H. S. Bhatia, P. S. Bhatia",
+            "K. Neihsial, 2"
+          ]
+        },
+        {
+          "group": 835,
+          "latents": [
+            1464
+          ],
+          "gain_margin": 207.22,
+          "examples": [
+            "Rajendra Prasad",
+            "Kiran Millwood Hargrave",
+            "Manjushree Thapa"
+          ]
+        },
+        {
+          "group": 36,
+          "latents": [
+            2020
+          ],
+          "gain_margin": 192.19,
+          "examples": [
+            "Raghu Srinivasan",
+            "Raghu Srinivasan",
+            "Karan Johar"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 766,
+      "n_groups": 734,
+      "n_multi_groups": 30,
+      "n_groups_dropped": 506,
+      "n_groups_unused": 171,
+      "n_removed": 520,
+      "var_share_removed": 0.4571,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 667,
+          "latents": [
+            200
+          ],
+          "gain_margin": 581.34,
+          "examples": [
+            "Hardcover,\u2013 6 Jan 2010",
+            "Hardcover,\u2013 6 Jan 2016",
+            "Hardcover,\u2013 11 Jun 2009"
+          ]
+        },
+        {
+          "group": 542,
+          "latents": [
+            305
+          ],
+          "gain_margin": 497.75,
+          "examples": [
+            "Hardcover,\u2013 Deckle Edge, 18 Oct 2011",
+            "Hardcover,\u2013 Illustrated, 19 Feb 2001",
+            "Hardcover,\u2013 Box set, 7 Nov 2013"
+          ]
+        },
+        {
+          "group": 21,
+          "latents": [
+            1546,
+            1719
+          ],
+          "gain_margin": 453.9,
+          "examples": [
+            "Mass Market Paperback,\u2013 1 Oct 1961",
+            "Mass Market Paperback,\u2013 1 Nov 1986",
+            "Mass Market Paperback,\u2013 10 Jan 2018"
+          ]
+        },
+        {
+          "group": 570,
+          "latents": [
+            764
+          ],
+          "gain_margin": 320.85,
+          "examples": [
+            "Hardcover,\u2013 5 Jan 2017",
+            "Hardcover,\u2013 5 Jan 2017",
+            "Hardcover,\u2013 2017"
+          ]
+        },
+        {
+          "group": 582,
+          "latents": [
+            1072
+          ],
+          "gain_margin": 196.71,
+          "examples": [
+            "Hardcover,\u2013 16 Jun 2005",
+            "Hardcover,\u2013 11 Jun 2009",
+            "Hardcover,\u2013 14 Jun 2010"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 692,
+      "n_groups": 692,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 559,
+      "n_groups_unused": 96,
+      "n_removed": 559,
+      "var_share_removed": 0.6276,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 317,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 917.98,
+          "examples": [
+            "Children's Crime & Thriller (Books)",
+            "Children's Crime & Thriller (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        },
+        {
+          "group": 664,
+          "latents": [
+            679
+          ],
+          "gain_margin": 580.99,
+          "examples": [
+            "Operating Systems Textbooks",
+            "Operating Systems Textbooks",
+            "Software Design & Engineering"
+          ]
+        },
+        {
+          "group": 133,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 369.01,
+          "examples": [
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)"
+          ]
+        },
+        {
+          "group": 147,
+          "latents": [
+            1667
+          ],
+          "gain_margin": 303.29,
+          "examples": [
+            "Software Architecture",
+            "Software Architecture",
+            "Software Architecture"
+          ]
+        },
+        {
+          "group": 678,
+          "latents": [
+            620
+          ],
+          "gain_margin": 184.27,
+          "examples": [
+            "Grammar (Books)",
+            "Grammar (Books)",
+            "Grammar (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1764,
+      "n_groups": 1764,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1245,
+      "n_groups_unused": 525,
+      "n_removed": 1245,
+      "var_share_removed": 0.7127,
+      "var_share_sae_error": 0.0196,
+      "top": [
+        {
+          "group": 1761,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3263.35,
+          "examples": [
+            "The perfect one-on-one photography course, this week-by-week tutorial develops your photography skills - from how to focus to using lenses and flash effectively",
+            "The perfect one-on-one photography course, this week-by-week tutorial develops your photography skills - from how to focus to using lenses and flash effectively",
+            "Photographic lighting is a topic that will never go out of style, no matter how sophisticated cameras and other technology get. Even with the most high-tech gea"
+          ]
+        },
+        {
+          "group": 175,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 2670.75,
+          "examples": [
+            "Write modern natural language processing applications using deep learning algorithms and TensorFlow Key Features Focuses on more efficient natural language proc",
+            "An Introduction to Statistical Learning provides an accessible overview of the field of statistical learning, an essential toolset for making sense of the vast ",
+            "\"Much of the data available today is unstructured and text-heavy, making it challenging for analysts to apply their usual data wrangling and visualization tools"
+          ]
+        },
+        {
+          "group": 439,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 1561.87,
+          "examples": [
+            "Product Dimensions: 8.4 x 5.5 x 2 inches",
+            "This kit will be a must-have for millions of dedicated fans of Game of Thrones, HBO's global television phenomenon. It includes a 4\u201d replica of Jon Snow's sword",
+            "Following in the footsteps of the all-time best-selling The Big Book of Logos, this deluxe, full-color volume is packed with 2,500 superior new logo designs, cu"
+          ]
+        },
+        {
+          "group": 238,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 808.74,
+          "examples": [
+            "The best thing happened to her . . . but in the worst way possible . . .\nPrisha Srivastav turned eighteen two months back. Hailing from Faridabad, she\nstudies m",
+            "The fast-paced new novel from the internationally bestselling author of The Best Laid Plans, Morning, Noon & Night and Bloodline.\nSomeone was following her. She",
+            "Madhurima Pandey is twenty-five, single and gradually coming to terms with\nthe annoying 'you're next' nudges from family and friends. But soon they realize\nthat"
+          ]
+        },
+        {
+          "group": 1762,
+          "latents": [
+            477
+          ],
+          "gain_margin": 475.78,
+          "examples": [
+            "When Namita is ten, her mother takes her to Dhondutai, a respected Mumbai music teacher from the great Jaipur Gharana. Dhondutai has dedicated herself to music ",
+            "For Milli Bajwa, life is at a stand-still. Grounded in the Chandigarh airport where she works day after day, she watches flights leaving for destinations she kn",
+            "From Amartya Sen to Aamir Khan, Raghuram Rajan, Sachin Tendulkar, His Holiness the Dalai Lama, Pranab Mukherjee, Arun Jaitley, Nirmala Sitharaman and Sania Mirz"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1805,
+      "n_groups": 1805,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1251,
+      "n_groups_unused": 487,
+      "n_removed": 1251,
+      "var_share_removed": 0.6719,
+      "var_share_sae_error": 0.0193,
+      "top": [
+        {
+          "group": 1803,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2234.0,
+          "examples": [
+            "The Art of God of War",
+            "Digital Photography Complete Course",
+            "Digital Photography Complete Course"
+          ]
+        },
+        {
+          "group": 243,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 1469.59,
+          "examples": [
+            "Fashion Designer\u2032s Handbook for Adobe Illustrator",
+            "Mastering Composition: The Definitive Guide for Photographers",
+            "Fundamentals of Machine Learning for Predictive Data Analytics \u2013 Algorithms, Worked Examples, and Case Studies (The MIT Press)"
+          ]
+        },
+        {
+          "group": 900,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1061.39,
+          "examples": [
+            "Private: No. 1 Suspect: (Private 4)",
+            "Death In The Afternoon",
+            "Draupadi"
+          ]
+        },
+        {
+          "group": 1800,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 493.61,
+          "examples": [
+            "Effective C++: 55 Specific Ways To Improve Your Programs And Designs, 3/e",
+            "The Illuminated Tarot: 53 Cards for Divination & Gameplay (The Illuminated Art Series)",
+            "Head First Python: A Brain-Friendly Guide"
+          ]
+        },
+        {
+          "group": 1794,
+          "latents": [
+            679
+          ],
+          "gain_margin": 415.28,
+          "examples": [
+            "One Piece, Vol. 58",
+            "He-Man: The Eternity War Vol. 2 (He-Man and the Masters of the Universe)",
+            "One Piece - Vol. 89"
+          ]
+        }
+      ]
+    }
+  }
+}

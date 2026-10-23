@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3440686742531502,
+  "test_error": 1.3440686742531502,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8114866259227441,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 154.49453449249268,
+  "learner_params": null,
+  "diagnostics": {}
+}

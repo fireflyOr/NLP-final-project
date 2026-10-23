@@ -1,0 +1,321 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -23.701827941781517,
+  "test_error": 23.701827941781517,
+  "course_metric": "r2",
+  "course_score": 0.7485822378439413,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 37.53163290023804,
+  "learner_params": null,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 289,
+      "n_groups": 289,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 277,
+      "n_groups_unused": 9,
+      "n_removed": 277,
+      "var_share_removed": 0.9101,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 154,
+          "latents": [
+            574
+          ],
+          "gain_margin": 49.48,
+          "examples": [
+            "cream / green / black / pink / chocolate",
+            "red / cream / chocolate",
+            "cream / pink / chocolate"
+          ]
+        },
+        {
+          "group": 45,
+          "latents": [
+            1249
+          ],
+          "gain_margin": 37.89,
+          "examples": [
+            "orange / cream / pink",
+            "orange / pink",
+            "orange / pink"
+          ]
+        },
+        {
+          "group": 71,
+          "latents": [
+            1677
+          ],
+          "gain_margin": 32.87,
+          "examples": [
+            "orange / gold / cream / chocolate",
+            "orange / blue / cream / chocolate",
+            "cream / blue / red"
+          ]
+        },
+        {
+          "group": 15,
+          "latents": [
+            2009
+          ],
+          "gain_margin": 9.96,
+          "examples": [
+            "orange / tan / green / black",
+            "orange / blue / pink / red",
+            "orange / blue / green / pink"
+          ]
+        },
+        {
+          "group": 28,
+          "latents": [
+            1996
+          ],
+          "gain_margin": 5.59,
+          "examples": [
+            "grey / pink",
+            "grey / pink",
+            "grey / pink"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 264,
+      "n_groups": 264,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 250,
+      "n_groups_unused": 36,
+      "n_removed": 250,
+      "var_share_removed": 0.6952,
+      "var_share_sae_error": 0.0025,
+      "top": [
+        {
+          "group": 194,
+          "latents": [
+            654
+          ],
+          "gain_margin": 232.16,
+          "examples": [
+            "JoJo Designs.",
+            "JoJo Designs.",
+            "JoJo Designs."
+          ]
+        },
+        {
+          "group": 151,
+          "latents": [
+            1147
+          ],
+          "gain_margin": 118.1,
+          "examples": [
+            "Ron Burns",
+            "Steve O'Connell",
+            "Steve O'Connell"
+          ]
+        },
+        {
+          "group": 152,
+          "latents": [
+            477
+          ],
+          "gain_margin": 58.14,
+          "examples": [
+            "Tomorrowland Pillowtime Pal",
+            "Brewster",
+            "Brewster"
+          ]
+        },
+        {
+          "group": 94,
+          "latents": [
+            1501
+          ],
+          "gain_margin": 51.7,
+          "examples": [
+            "Peru",
+            "Peru",
+            "Peru"
+          ]
+        },
+        {
+          "group": 17,
+          "latents": [
+            1937
+          ],
+          "gain_margin": 50.15,
+          "examples": [
+            "My Baby Sam!",
+            "My Baby Sam.",
+            "My Baby Sam."
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 774,
+      "n_groups": 774,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 571,
+      "n_groups_unused": 104,
+      "n_removed": 571,
+      "var_share_removed": 0.4293,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 365,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 2174.95,
+          "examples": [
+            "Ace Baby Furniture",
+            "Ace Baby Furniture",
+            "Ace Baby Furniture"
+          ]
+        },
+        {
+          "group": 565,
+          "latents": [
+            324
+          ],
+          "gain_margin": 2086.48,
+          "examples": [
+            "KidKraft",
+            "KidKraft",
+            "KidKraft"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            2046
+          ],
+          "gain_margin": 925.64,
+          "examples": [
+            "My Baby Sam",
+            "My Baby Sam",
+            "My Baby Sam"
+          ]
+        },
+        {
+          "group": 770,
+          "latents": [
+            998
+          ],
+          "gain_margin": 904.33,
+          "examples": [
+            "La Rug",
+            "La Rug",
+            "La Rug"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1499
+          ],
+          "gain_margin": 621.4,
+          "examples": [
+            "Go Mama Go",
+            "Go Mama Go",
+            "Go Mama Go"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1287,
+      "n_groups": 1286,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 866,
+      "n_groups_unused": 412,
+      "n_removed": 866,
+      "var_share_removed": 0.2302,
+      "var_share_sae_error": 0.0064,
+      "top": [
+        {
+          "group": 134,
+          "latents": [
+            1475
+          ],
+          "gain_margin": 4197.77,
+          "examples": [
+            "Manam Kids First Friends 9 Piece Crib Set",
+            "Manam Kids - 1853 ,size 2.8x4.8 ft",
+            "My Baby Sam Penny Lane 3 Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 159,
+          "latents": [
+            1922
+          ],
+          "gain_margin": 3429.6,
+          "examples": [
+            "Cotton Tale Pirates Cove Wall Art 3 Piece Set",
+            "Gallery Wrought Iron & Crystal Swag Plug In White 3 Light Chandelier",
+            "Gallery All Crystal 4 Light Chandelier with Swarovski Crystal"
+          ]
+        },
+        {
+          "group": 79,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 2237.67,
+          "examples": [
+            "Gallery Royal Crystal Chrome 5 Light Chandelier",
+            "Sumersault Little Prince 4-Piece Crib Bedding Set",
+            "Gallery Venetian Style All Crystal 5 Light Chandelier with White Shade"
+          ]
+        },
+        {
+          "group": 1285,
+          "latents": [
+            998
+          ],
+          "gain_margin": 2097.95,
+          "examples": [
+            "Thomas & Friends 4-Piece Toddler Bed Set",
+            "Tulip Garden 4-Piece Mini Crib Bedding Set",
+            "Sumersault Colorburst 10-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 636,
+          "latents": [
+            346
+          ],
+          "gain_margin": 1488.45,
+          "examples": [
+            "Trademark Games The Stand Off Ready to hang Gallery Wrapped",
+            "Sweet Potato by Glenna Jean Uptown Traffic Wall Art - Circles",
+            "Trademark Games Bee at Play-Ready to hang Gallery Wrapped"
+          ]
+        }
+      ]
+    }
+  }
+}

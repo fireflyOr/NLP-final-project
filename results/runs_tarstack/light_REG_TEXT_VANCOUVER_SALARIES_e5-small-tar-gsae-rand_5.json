@@ -1,0 +1,174 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13450.364836715691,
+  "test_error": 13450.364836715691,
+  "course_metric": "r2",
+  "course_score": 0.7590074276323763,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.564101457595825,
+  "learner_params": null,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2026,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1251,
+      "n_groups_unused": 366,
+      "n_removed": 1251,
+      "var_share_removed": 0.578,
+      "var_share_sae_error": 0.0264,
+      "top": [
+        {
+          "group": 1886,
+          "latents": [
+            204
+          ],
+          "gain_margin": 502.57,
+          "examples": [
+            "Zelter, C T*",
+            "Zelter, C T",
+            "Zelter, C T"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            305,
+            403,
+            1629,
+            1673
+          ],
+          "gain_margin": 298.76,
+          "examples": [
+            "Lamb, J B",
+            "Bishop, J A",
+            "Cole, J M"
+          ]
+        },
+        {
+          "group": 768,
+          "latents": [
+            1425
+          ],
+          "gain_margin": 272.69,
+          "examples": [
+            "Porteous, C",
+            "Porteous, C",
+            "Porteous, C"
+          ]
+        },
+        {
+          "group": 2016,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 272.56,
+          "examples": [
+            "Gunderson, M",
+            "Godlonton, B D",
+            "Gunderson, J"
+          ]
+        },
+        {
+          "group": 1601,
+          "latents": [
+            472
+          ],
+          "gain_margin": 241.47,
+          "examples": [
+            "Hogan, P",
+            "Hogan, P",
+            "Ferris, D R"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1020,
+      "n_groups": 1017,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 684,
+      "n_groups_unused": 251,
+      "n_removed": 685,
+      "var_share_removed": 0.5918,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 986,
+          "latents": [
+            305
+          ],
+          "gain_margin": 7090.63,
+          "examples": [
+            "Senior Manager, Information Technology",
+            "SENIOR MANAGER, INFORMATION TECHNOLOGY",
+            "A/Chief Manager Communications"
+          ]
+        },
+        {
+          "group": 148,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 5472.74,
+          "examples": [
+            "DEPUTY GENERAL MANAGER, ACT",
+            "General Manager Planning, Urban Des& Sustain",
+            "General Manager Real Estate & Facilities"
+          ]
+        },
+        {
+          "group": 912,
+          "latents": [
+            204
+          ],
+          "gain_margin": 5211.34,
+          "examples": [
+            "City Archivist",
+            "City Archivist",
+            "CITY ARCHIVIST"
+          ]
+        },
+        {
+          "group": 964,
+          "latents": [
+            564
+          ],
+          "gain_margin": 3941.05,
+          "examples": [
+            "Managing Director Dept Svc & Ptr Agree",
+            "Managing Director Dept Svc & Ptr Agree",
+            "Director Parks"
+          ]
+        },
+        {
+          "group": 693,
+          "latents": [
+            323
+          ],
+          "gain_margin": 2832.7,
+          "examples": [
+            "Director IT Infrastructure",
+            "Director IT Infrastructure",
+            "Director It Applications"
+          ]
+        }
+      ]
+    }
+  }
+}

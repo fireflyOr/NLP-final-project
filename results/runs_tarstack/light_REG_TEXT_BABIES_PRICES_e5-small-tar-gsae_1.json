@@ -1,0 +1,321 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -17.54410563165174,
+  "test_error": 17.54410563165174,
+  "course_metric": "r2",
+  "course_score": 0.8496058842175388,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 37.8999924659729,
+  "learner_params": null,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 283,
+      "n_groups": 283,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 272,
+      "n_groups_unused": 17,
+      "n_removed": 272,
+      "var_share_removed": 0.8804,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 14,
+          "latents": [
+            2009
+          ],
+          "gain_margin": 40.05,
+          "examples": [
+            "orange / pink / blue / black / purple",
+            "orange / blue / green / pink",
+            "orange / tan / green / black"
+          ]
+        },
+        {
+          "group": 270,
+          "latents": [
+            91
+          ],
+          "gain_margin": 32.42,
+          "examples": [
+            "blue / cream / green",
+            "cream / green",
+            "cream / green / pink"
+          ]
+        },
+        {
+          "group": 177,
+          "latents": [
+            358
+          ],
+          "gain_margin": 31.49,
+          "examples": [
+            "red / cream",
+            "cream / green / pink",
+            "cream / green / pink"
+          ]
+        },
+        {
+          "group": 256,
+          "latents": [
+            1249
+          ],
+          "gain_margin": 19.29,
+          "examples": [
+            "orange / black / pink",
+            "orange / tan / green / pink",
+            "orange / pink"
+          ]
+        },
+        {
+          "group": 221,
+          "latents": [
+            71
+          ],
+          "gain_margin": 12.06,
+          "examples": [
+            "cream / green",
+            "cream / green / pink",
+            "cream / green / pink"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 253,
+      "n_groups": 253,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 237,
+      "n_groups_unused": 32,
+      "n_removed": 237,
+      "var_share_removed": 0.6339,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 202,
+          "latents": [
+            204
+          ],
+          "gain_margin": 144.89,
+          "examples": [
+            "Sophie Harding",
+            "Sophie Harding",
+            "Sophie Harding"
+          ]
+        },
+        {
+          "group": 159,
+          "latents": [
+            654
+          ],
+          "gain_margin": 124.65,
+          "examples": [
+            "JoJo Designs",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 155,
+          "latents": [
+            324
+          ],
+          "gain_margin": 44.46,
+          "examples": [
+            "Glenna Jean Lil'",
+            "KidKraft",
+            "Glenna Jean, Swizzle"
+          ]
+        },
+        {
+          "group": 246,
+          "latents": [
+            1274
+          ],
+          "gain_margin": 29.47,
+          "examples": [
+            "CoCaLo Baby.",
+            "CoCaLo Baby",
+            "CoCaLo Baby"
+          ]
+        },
+        {
+          "group": 19,
+          "latents": [
+            1899
+          ],
+          "gain_margin": 24.54,
+          "examples": [
+            "JoJo Designs",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 805,
+      "n_groups": 805,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 580,
+      "n_groups_unused": 116,
+      "n_removed": 580,
+      "var_share_removed": 0.3954,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 59,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 1352.67,
+          "examples": [
+            "Sumersault Ltd",
+            "Sumersault Ltd",
+            "Sumersault Ltd"
+          ]
+        },
+        {
+          "group": 761,
+          "latents": [
+            957
+          ],
+          "gain_margin": 1215.9,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "group": 317,
+          "latents": [
+            1252
+          ],
+          "gain_margin": 902.02,
+          "examples": [
+            "Ace Baby Furniture",
+            "Ace Baby Furniture",
+            "Ace Baby Furniture"
+          ]
+        },
+        {
+          "group": 804,
+          "latents": [
+            714
+          ],
+          "gain_margin": 786.15,
+          "examples": [
+            "Ace Baby Furniture",
+            "Ace Baby Furniture",
+            "Ace Baby Furniture"
+          ]
+        },
+        {
+          "group": 100,
+          "latents": [
+            1922
+          ],
+          "gain_margin": 626.96,
+          "examples": [
+            "Cotton Tale",
+            "Cotton Tale",
+            "Cotton Tale"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1258,
+      "n_groups": 1256,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 849,
+      "n_groups_unused": 422,
+      "n_removed": 850,
+      "var_share_removed": 0.251,
+      "var_share_sae_error": 0.0066,
+      "top": [
+        {
+          "group": 224,
+          "latents": [
+            1922
+          ],
+          "gain_margin": 5379.14,
+          "examples": [
+            "Ace Baby Furniture Kids Bear Mobile Dress-Up Closet - White",
+            "Ace Baby Furniture Kids Rabbit Mobile Dress-Up Closet - Natural Maple",
+            "Ace Baby Furniture Kids Lion Mobile Dress-Up Closet - Natural Maple"
+          ]
+        },
+        {
+          "group": 306,
+          "latents": [
+            1252
+          ],
+          "gain_margin": 2703.22,
+          "examples": [
+            "Snuggleberry Baby African Dream 6 Piece Crib Bedding Set with Storybook",
+            "Violet 4-Piece Crib Bedding Set",
+            "Levtex Baby Charlotte 5 Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 152,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 2214.14,
+          "examples": [
+            "KidKraft Princess Sweetheart Toddler Bedding Set",
+            "Sofia the First Princess in Training Twin Comforter Set",
+            "Disney's Princess Shine All The Time Full Comforter Set"
+          ]
+        },
+        {
+          "group": 627,
+          "latents": [
+            654
+          ],
+          "gain_margin": 1200.36,
+          "examples": [
+            "Manam Kids Mini Zebra Teal Rug - Size 2.8 x 4.8",
+            "Manam Kids Shaggy Raggy Cafe Au Lait Rug - Size 4 x 4 Round",
+            "Manam Kids Shaggy Raggy Bubble Gum Rug - Size 4 x 4 Round"
+          ]
+        },
+        {
+          "group": 150,
+          "latents": [
+            1667
+          ],
+          "gain_margin": 1158.01,
+          "examples": [
+            "Baby's First by Nemcor 4 Piece Crib Set- Plum Owl Meadow",
+            "Marmont Hill 'I Heart Caterpillars 2' Eric Carle Framed Art Print",
+            "Marmont Hill 'I Heart Caterpillars 2' Eric Carle Framed Art Print"
+          ]
+        }
+      ]
+    }
+  }
+}

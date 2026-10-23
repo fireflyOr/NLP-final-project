@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6707173554065097,
+  "test_error": 0.6707173554065097,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.906727694084875,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 20.198039531707764,
+  "learner_params": null,
+  "diagnostics": {}
+}

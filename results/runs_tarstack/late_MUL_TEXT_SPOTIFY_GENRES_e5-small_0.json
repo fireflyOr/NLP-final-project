@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -4.4152753741365665,
+  "test_error": 4.4152753741365665,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.942591914455797,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 378.3342218399048,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-tar-pls",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -4040.7516129457117,
+  "test_error": 4040.7516129457117,
+  "course_metric": "r2",
+  "course_score": 0.9807469581790024,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 2.09329891204834,
+  "learner_params": null,
+  "diagnostics": {}
+}

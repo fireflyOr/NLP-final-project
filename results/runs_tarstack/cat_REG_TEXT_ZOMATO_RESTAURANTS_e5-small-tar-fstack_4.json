@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.166458709754828,
+  "test_error": 0.166458709754828,
+  "course_metric": "r2",
+  "course_score": 0.857285447870108,
+  "n_text_cols": 7,
+  "n_text_features": 211,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 56.15028738975525,
+  "learner_params": null,
+  "diagnostics": {}
+}

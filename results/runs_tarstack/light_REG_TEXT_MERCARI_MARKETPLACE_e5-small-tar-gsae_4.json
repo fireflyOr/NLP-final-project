@@ -1,0 +1,472 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5802950307313394,
+  "test_error": 0.5802950307313394,
+  "course_metric": "r2",
+  "course_score": 0.41903437075452843,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 104.20200300216675,
+  "learner_params": null,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1077,
+      "n_groups": 1077,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 886,
+      "n_groups_unused": 173,
+      "n_removed": 886,
+      "var_share_removed": 0.5266,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 612,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3473.94,
+          "examples": [
+            "lululemon athletica",
+            "lululemon athletica",
+            "lululemon athletica"
+          ]
+        },
+        {
+          "group": 1073,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1712.53,
+          "examples": [
+            "Yves Saint Laurent",
+            "Yves Saint Laurent",
+            "Yves Saint Laurent"
+          ]
+        },
+        {
+          "group": 497,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1236.06,
+          "examples": [
+            "kate spade new york",
+            "Kate Spade",
+            "Kate Spade"
+          ]
+        },
+        {
+          "group": 800,
+          "latents": [
+            111
+          ],
+          "gain_margin": 1103.06,
+          "examples": [
+            "Wendy Bellissimo",
+            "MARC BY MARC JACOBS",
+            "MARC BY MARC JACOBS"
+          ]
+        },
+        {
+          "group": 225,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 498.05,
+          "examples": [
+            "adidas NEO",
+            "adidas NEO",
+            "Air Jordan"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 792,
+      "n_groups": 792,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 706,
+      "n_groups_unused": 62,
+      "n_removed": 706,
+      "var_share_removed": 0.6582,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 66,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 1649.06,
+          "examples": [
+            "Cameras & Photography",
+            "Cameras & Photography",
+            "Cameras & Photography"
+          ]
+        },
+        {
+          "group": 775,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1211.09,
+          "examples": [
+            "Cameras & Photography",
+            "Cameras & Photography",
+            "Cameras & Photography"
+          ]
+        },
+        {
+          "group": 134,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 694.88,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 214,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 538.96,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 719,
+          "latents": [
+            344
+          ],
+          "gain_margin": 261.89,
+          "examples": [
+            "Cell Phones & Accessories",
+            "Cell Phones & Accessories",
+            "Cell Phones & Accessories"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1251,
+      "n_groups": 1251,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1037,
+      "n_groups_unused": 172,
+      "n_removed": 1037,
+      "var_share_removed": 0.49,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 325,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 3293.57,
+          "examples": [
+            "Swings, Jumpers & Bouncers",
+            "Swings, Jumpers & Bouncers",
+            "Swings, Jumpers & Bouncers"
+          ]
+        },
+        {
+          "group": 144,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 1577.01,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 635,
+          "latents": [
+            396
+          ],
+          "gain_margin": 1173.82,
+          "examples": [
+            "Sticker",
+            "Sticker",
+            "Sticker"
+          ]
+        },
+        {
+          "group": 1232,
+          "latents": [
+            174
+          ],
+          "gain_margin": 1102.09,
+          "examples": [
+            "Motorcycle & Powersports",
+            "Swings, Jumpers & Bouncers",
+            "Swings, Jumpers & Bouncers"
+          ]
+        },
+        {
+          "group": 1005,
+          "latents": [
+            354
+          ],
+          "gain_margin": 582.95,
+          "examples": [
+            "Desktops & All-In-Ones",
+            "Monitors",
+            "Monitors"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1225,
+      "n_groups": 1224,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 992,
+      "n_groups_unused": 200,
+      "n_removed": 992,
+      "var_share_removed": 0.4361,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 547,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 3499.91,
+          "examples": [
+            "Women/Shoes/Athletic",
+            "Women/Shoes/Athletic",
+            "Women/Shoes/Athletic"
+          ]
+        },
+        {
+          "group": 433,
+          "latents": [
+            892
+          ],
+          "gain_margin": 3049.61,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "group": 633,
+          "latents": [
+            559
+          ],
+          "gain_margin": 1637.36,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "group": 1221,
+          "latents": [
+            396
+          ],
+          "gain_margin": 930.83,
+          "examples": [
+            "Handmade/Accessories/Pinback Button",
+            "Handmade/Accessories/Pinback Button",
+            "Handmade/Paper Goods/Sticker"
+          ]
+        },
+        {
+          "group": 1173,
+          "latents": [
+            305
+          ],
+          "gain_margin": 534.08,
+          "examples": [
+            "Electronics/Cameras & Photography/Digital Cameras",
+            "Electronics/Cameras & Photography/Digital Cameras",
+            "Electronics/Cameras & Photography/Digital Cameras"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2040,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1291,
+      "n_groups_unused": 262,
+      "n_removed": 1294,
+      "var_share_removed": 0.2879,
+      "var_share_sae_error": 0.0768,
+      "top": [
+        {
+          "group": 944,
+          "latents": [
+            305
+          ],
+          "gain_margin": 8268.48,
+          "examples": [
+            "NWT auth MICHAEL KORS Jet Set Item Nylon Large Tote Bag Color Dusk. \u2022Interior has three compartments. \u2022Middle compartment with zip closure \u2022second ompartment wi",
+            "Excelkenr condition Micheal kors Hamilton bag. Can be carried as a satchel or on shoulder. This bag is very clean inside and out. Color is called luggage",
+            "Authentic Slate Blue Prada Chevre Leather Satchel. Beautiful rich vitello shine with gold-tone hardware, protective metal feet, front zip pocket, removable lugg"
+          ]
+        },
+        {
+          "group": 1311,
+          "latents": [
+            93
+          ],
+          "gain_margin": 3583.66,
+          "examples": [
+            "Cute sleeveless plaid shirt dress with a keyhole back",
+            "Used once. It has been washed with baby liquid detergent. Coming from a smoke-free and pet-free home. Open for bundle with other items on my listing",
+            "Super cute blue button up blouse with white bows..like new.. *smoke free pet free home*"
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            396
+          ],
+          "gain_margin": 2610.08,
+          "examples": [
+            "please read \u2728 15 random Brandy Melville stickers [rm] for 15 stickers. If you would like more, let me know! I can also do [rm] for 22, or [rm] for 30 stickers. ",
+            "BM stickers \u2728 Brand new from Brandy Melville \u2728 includes 15 Brandy Melville stickers! \u2728 DISCLAIMER: you will receive one or multiple of the same sticker. ALSO, t",
+            "(20) 10x13 Pink Hawaiian Blue Hawaiian Floral Pink Flower Rose Hearts \u26a1\ufe0fAdd 25 Neon Thank You Stickers for [rm] more \u26ab\ufe0f HIGH QUALITY Self Sealing Mailers. \u26ab\ufe0f UP"
+          ]
+        },
+        {
+          "group": 163,
+          "latents": [
+            1865
+          ],
+          "gain_margin": 608.87,
+          "examples": [
+            "Alcatel Black T-Mobile cellular and WiFi. Comes with screen protector",
+            "Brand new unopened motorola video baby monitor with 5\" screen and wifi capability, night vision and high sensor microphone",
+            "Space place. Tokidoki. Jujube. Ju ju be. Ju-Ju-Be. Space place messenger strap. Bought but never needed it."
+          ]
+        },
+        {
+          "group": 418,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 548.82,
+          "examples": [
+            "BRAND NEW WITH BOX FUCHSIA COLOR SIZE 7.5 \u203cFINAL PRICE\u203c\ufe0f Style: Loafers Material: Faux Leather Toe shape: Round Heel height/type: 0.5-inch Platform height: 0.2-",
+            "2 - Dulcolax DulcEase Stool Softener, 25 ct 2 - Phazyme 180mg Anti-Gas. 12 ct 1 - Rolaids Antacid 3 pk, 30 tablets All Items Come From Smoke Free Home Check out",
+            "Walgreens exclusive and HARD to find!"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2041,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1162,
+      "n_groups_unused": 280,
+      "n_removed": 1162,
+      "var_share_removed": 0.2561,
+      "var_share_sae_error": 0.0574,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            892
+          ],
+          "gain_margin": 10982.46,
+          "examples": [
+            "Tory Burch Ella Tote",
+            "Kendra Scott Elisa Iridescent Drusy Gold",
+            "100%Authentic Ugg boot size 6"
+          ]
+        },
+        {
+          "group": 1343,
+          "latents": [
+            396
+          ],
+          "gain_margin": 6737.72,
+          "examples": [
+            "Adorable cat stickers",
+            "BABY CHANGING PADS FREE SHIPPING",
+            "H&M eyelet tank top"
+          ]
+        },
+        {
+          "group": 1349,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 565.36,
+          "examples": [
+            "Kojie San Whitening Soap 2x65g",
+            "Sam Edelman penny boot",
+            "Adidas Derrick Roses Men\u2019s"
+          ]
+        },
+        {
+          "group": 1453,
+          "latents": [
+            174
+          ],
+          "gain_margin": 457.12,
+          "examples": [
+            "For Jamiep on Friday",
+            "Fila skela toes",
+            "Magic Colombian Girdle faja en powernet"
+          ]
+        },
+        {
+          "group": 2031,
+          "latents": [
+            714
+          ],
+          "gain_margin": 451.87,
+          "examples": [
+            "Fuji film instax mini camera",
+            "Marc Jacobs Casual bag",
+            "Fujifilm instax share printer"
+          ]
+        }
+      ]
+    }
+  }
+}

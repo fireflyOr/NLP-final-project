@@ -130,7 +130,8 @@ def learners_table(df, out):
                 continue
             d = (means[e] - means["e5-small-tar"]).dropna()
             p = wilcoxon(d).pvalue if len(d) >= 5 and (d != 0).any() else np.nan
-            cells.append(f"{d.mean():+.4f}, {(d > 0).sum()}/{len(d)}, " + ("--" if np.isnan(p) else f"{p:.3f}"))
+            cells.append(f"{d.mean():+.4f}, {(d > 0).sum()}/{len(d)}, " +
+                         ("--" if np.isnan(p) else ("$<$0.001" if p < 1e-3 else f"{p:.3f}")))
         lines.append(f"{name} & " + " & ".join(cells) + r" \\")
     lines += [r"\bottomrule", r"\end{tabular}"]
     open(os.path.join(out, "learners.tex"), "w").write("\n".join(lines) + "\n")

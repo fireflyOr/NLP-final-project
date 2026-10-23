@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8819280573105648,
+  "test_error": 0.11807194268943522,
+  "course_metric": "auroc",
+  "course_score": 0.8819280573105648,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 21.26450753211975,
+  "learner_params": null,
+  "diagnostics": {}
+}

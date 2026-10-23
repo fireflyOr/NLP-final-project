@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.8079933609171781,
+  "test_error": 0.8079933609171781,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9798168231230844,
+  "n_text_cols": 2,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 79.67344188690186,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "colsample_bytree": 0.6,
+    "n_trees": 111
+  },
+  "diagnostics": {}
+}

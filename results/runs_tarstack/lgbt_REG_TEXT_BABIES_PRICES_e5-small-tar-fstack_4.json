@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -19.58453717606433,
+  "test_error": 19.58453717606433,
+  "course_metric": "r2",
+  "course_score": 0.8351297306311989,
+  "n_text_cols": 4,
+  "n_text_features": 121,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 21.107481718063354,
+  "learner_params": {
+    "learning_rate": 0.1,
+    "max_depth": -1,
+    "colsample_bytree": 0.3,
+    "n_trees": 160
+  },
+  "diagnostics": {}
+}

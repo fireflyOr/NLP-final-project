@@ -1,0 +1,471 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.819997801054759,
+  "test_error": 0.819997801054759,
+  "course_metric": "r2",
+  "course_score": 0.8229261474326559,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 57.98198223114014,
+  "learner_params": null,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 432,
+      "n_groups": 431,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 345,
+      "n_groups_unused": 96,
+      "n_removed": 345,
+      "var_share_removed": 0.3427,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 153,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 376.04,
+          "examples": [
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, March 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 350,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 337.68,
+          "examples": [
+            "African Storybook Level 2",
+            "African Storybook Level 2",
+            "African Storybook Level 2"
+          ]
+        },
+        {
+          "group": 351,
+          "latents": [
+            813
+          ],
+          "gain_margin": 285.51,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 334,
+          "latents": [
+            298
+          ],
+          "gain_margin": 170.87,
+          "examples": [
+            "African Storybook Level 3",
+            "African Storybook Level 3",
+            "African Storybook Level 3"
+          ]
+        },
+        {
+          "group": 377,
+          "latents": [
+            496
+          ],
+          "gain_margin": 148.45,
+          "examples": [
+            "The Nursery, February 1878, Vol. XXIII, No. 2\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, February 1878, Vol. XXIII, No. 2\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, February 1878, Vol. XXIII, No. 2\nA Monthly Magazine for Youngest Readers"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1351,
+      "n_groups": 1351,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1093,
+      "n_groups_unused": 490,
+      "n_removed": 1093,
+      "var_share_removed": 0.4317,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 870,
+          "latents": [
+            477
+          ],
+          "gain_margin": 249.65,
+          "examples": [
+            "Kaka Gana Abba",
+            "Freddie's Papa",
+            "LITTLE CHICK"
+          ]
+        },
+        {
+          "group": 671,
+          "latents": [
+            1575
+          ],
+          "gain_margin": 136.15,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 106,
+          "latents": [
+            1867
+          ],
+          "gain_margin": 128.87,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 655,
+          "latents": [
+            911
+          ],
+          "gain_margin": 116.68,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1345,
+          "latents": [
+            688
+          ],
+          "gain_margin": 74.17,
+          "examples": [
+            "Mamma",
+            "Mamma",
+            "Daisy's Mamma"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 100,
+      "n_groups": 97,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 93,
+      "n_groups_unused": 24,
+      "n_removed": 96,
+      "var_share_removed": 0.4076,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 90,
+          "latents": [
+            1413
+          ],
+          "gain_margin": 1.24,
+          "examples": [
+            "parlour",
+            "parlour",
+            "parlour"
+          ]
+        },
+        {
+          "group": 73,
+          "latents": [
+            344
+          ],
+          "gain_margin": 1.21,
+          "examples": [
+            "analyses",
+            "analyses",
+            "analyses"
+          ]
+        },
+        {
+          "group": 63,
+          "latents": [
+            373
+          ],
+          "gain_margin": 0.48,
+          "examples": [
+            "sceptre",
+            "sceptre, sceptre",
+            "favour, sceptre, sceptre"
+          ]
+        },
+        {
+          "group": 29,
+          "latents": [
+            1592
+          ],
+          "gain_margin": 0.25,
+          "examples": [
+            "manoeuvred, axe",
+            "ploughman",
+            "ploughed"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 0.0,
+          "examples": [
+            "grey, neighbourhood",
+            "grey",
+            "grey"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1174,
+      "n_groups": 1174,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 951,
+      "n_groups_unused": 551,
+      "n_removed": 951,
+      "var_share_removed": 0.0588,
+      "var_share_sae_error": 0.0078,
+      "top": [
+        {
+          "group": 388,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 3373.41,
+          "examples": [
+            "Lion said to Hyena, \"Can't we even find peace in our dens? You throw dust into our eyes!\" Hyena answered, \"King, I did not mean to disrespect you! I am only run",
+            "I am very fond of babies. One reason of it, I think, is, that they cannot hurt me with their little hands. They pull my ears, but not so hard as to give me pain",
+            "Goat, Dog and Cow were great friends. One day they went on a journey in a taxi. They reached the end of their journey. The driver asked them to pay their fares."
+          ]
+        },
+        {
+          "group": 1158,
+          "latents": [
+            200
+          ],
+          "gain_margin": 3293.72,
+          "examples": [
+            "About 600 B.C., the Greek cities of Ionia were the intellectual and cultural leaders of Greece and the number one sea-traders of the Mediterranean. Miletus, the",
+            "It is true that, to a traveller approaching the Himalayas from any part of the great plain of India, these mountains present the appearance of a single range, s",
+            "The Andromeda Galaxy is the nearest spiral galaxy to the Milky Way, our galaxy. Andromeda is sometimes called M31 or NGC 324 by astronomers. It is about 2.6 mil"
+          ]
+        },
+        {
+          "group": 526,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 977.8,
+          "examples": [
+            "Today is the big day! After 9 months of waiting, Thabi's mother is going to hospital to have her baby. She will be back in 3 days. Can you read the date and day",
+            "Grandma is coming to visit. And always she brings Thabo some peanuts and wild fruits or mealies and a melon, sometimes. Thabo wants to give Grandma something sp",
+            "The cow is in the pasture, feeding. The pasture has been wet with the rain, and the grass is fresh and sweet. The rain makes the grass grow. The sun is hot, and"
+          ]
+        },
+        {
+          "group": 576,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 833.09,
+          "examples": [
+            "One beautiful afternoon, the rabbit arrived. He thought he would like to visit the hyena too. He almost went into the hyena's cave. But suddenly he stopped, and",
+            "The oldest hyena said, \"Let the strongest hyena stand on the ground and then let the rest of us stand on each other's backs. We will climb on one another's back",
+            "Bear was decorating his home. \nHe wanted to catch some fish for the fishbowl he just bought. \n\"Fish would look beautiful,\" he thought. He picked up his fishing "
+          ]
+        },
+        {
+          "group": 582,
+          "latents": [
+            867
+          ],
+          "gain_margin": 731.39,
+          "examples": [
+            "Up to recent times, chloride of methyl in a free state had received scarcely any industrial application, by reason of the difficulty of preparing it in a state ",
+            "Intel Core is the name of a family of 32-bit dual-core microprocessors. It was made by the technology company Intel. Intel Core processors are based on Pentium ",
+            "Artificial photosynthesis is a chemical process that replicates the natural process of photosynthesis, a process that converts sunlight, water, and carbon dioxi"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1663,
+      "n_groups": 1663,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1333,
+      "n_groups_unused": 666,
+      "n_removed": 1333,
+      "var_share_removed": 0.3812,
+      "var_share_sae_error": 0.0202,
+      "top": [
+        {
+          "group": 1226,
+          "latents": [
+            779
+          ],
+          "gain_margin": 420.09,
+          "examples": [
+            "THE LADY WITH THE DOG",
+            "The Poet and the Peasant",
+            "THE FISHERMAN AND HIS WIFE"
+          ]
+        },
+        {
+          "group": 1662,
+          "latents": [
+            867
+          ],
+          "gain_margin": 348.33,
+          "examples": [
+            "Phosphate",
+            "Density",
+            "Geocentric_model"
+          ]
+        },
+        {
+          "group": 682,
+          "latents": [
+            911
+          ],
+          "gain_margin": 300.89,
+          "examples": [
+            "Treaty_of_Versailles",
+            "French_Revolution",
+            "Mexican%E2%80%93American_War"
+          ]
+        },
+        {
+          "group": 946,
+          "latents": [
+            477
+          ],
+          "gain_margin": 149.55,
+          "examples": [
+            "THE BIRDS AND I",
+            "What Sami Sings with the Birds",
+            "HOW MY BOYS HELPED THEIR MOTHER"
+          ]
+        },
+        {
+          "group": 1660,
+          "latents": [
+            349
+          ],
+          "gain_margin": 127.63,
+          "examples": [
+            "TINY HARE AND THE WIND BALL",
+            "PRINCESS FINOLA AND THE DWARF",
+            "Lion and Warthog"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 941,
+      "n_groups": 936,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 734,
+      "n_groups_unused": 315,
+      "n_removed": 737,
+      "var_share_removed": 0.2738,
+      "var_share_sae_error": 0.0043,
+      "top": [
+        {
+          "group": 784,
+          "latents": [
+            688
+          ],
+          "gain_margin": 279.72,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_102",
+            "http://www.gutenberg.org/files/42160/42160-h/42160-h.htm#Page_324",
+            "https://www.commonlit.org/texts/the-sheep-and-the-pig"
+          ]
+        },
+        {
+          "group": 806,
+          "latents": [
+            396
+          ],
+          "gain_margin": 247.0,
+          "examples": [
+            "https://www.commonlit.org/texts/desiree-s-baby",
+            "http://www.gutenberg.org/files/14170/14170-h/14170-h.htm#THE_STOLEN_BIRDS_NEST",
+            "https://www.commonlit.org/texts/the-little-red-hen"
+          ]
+        },
+        {
+          "group": 766,
+          "latents": [
+            870
+          ],
+          "gain_margin": 239.74,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Artificial_photosynthesis",
+            "https://en.wikipedia.org/wiki/Android_(operating_system)",
+            "https://en.wikipedia.org/wiki/Telecommunication"
+          ]
+        },
+        {
+          "group": 274,
+          "latents": [
+            1782
+          ],
+          "gain_margin": 209.67,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Oil_refinery",
+            "https://en.wikipedia.org/wiki/Civil_law_(legal_system)",
+            "https://en.wikipedia.org/wiki/Pulmonary_circulation"
+          ]
+        },
+        {
+          "group": 930,
+          "latents": [
+            349
+          ],
+          "gain_margin": 201.25,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#WINDBALL",
+            "http://www.gutenberg.org/files/28141/28141-h/28141-h.htm#Page_51",
+            "http://www.gutenberg.org/files/25545/25545-h/25545-h.htm#Page_64"
+          ]
+        }
+      ]
+    }
+  }
+}

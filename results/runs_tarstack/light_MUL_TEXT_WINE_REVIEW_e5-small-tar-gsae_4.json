@@ -1,0 +1,173 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3130017594392702,
+  "test_error": 1.3130017594392702,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9751322114203342,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 190.6856164932251,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1425,
+      "n_groups": 1404,
+      "n_multi_groups": 20,
+      "n_groups_dropped": 196,
+      "n_groups_unused": 0,
+      "n_removed": 196,
+      "var_share_removed": 0.0092,
+      "var_share_sae_error": 0.0257,
+      "top": [
+        {
+          "group": 633,
+          "latents": [
+            1795
+          ],
+          "gain_margin": 11117.86,
+          "examples": [
+            "Delicate but inviting aromas suggest Spanish broom, stone fruit and lychee. The palate is round but vibrant, boasting juicy white peach, creamy green apple, ene",
+            "This opens with subtle scents of citrus, pear and white spring flower while the vivacious palate doles out ripe golden apple and a hint of lemon zest. Vigorous ",
+            "A blend of Vermentino, Viognier and Petit Manseng, this charming white opens with aromas of Spanish broom, Mediterranean brush, beeswax and apricot. The palate "
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            746,
+            1444
+          ],
+          "gain_margin": 10908.18,
+          "examples": [
+            "A ripe and fruity wine, it is full of bright red fruits, very soft tannins and juicy acidity. It's just the wine for drinking young, so drink this summer throug",
+            "A delicious wine, so fruity. It does have the proper tannins but it is a wine that is already approachable with its sweet fruits\u2014a pleasure to taste. However, f",
+            "While there are firm tannins here, the wine also has rich fruit. The two together, allied to the concentration, promise some good aging for a solidly made wine."
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            564,
+            1293
+          ],
+          "gain_margin": 10237.22,
+          "examples": [
+            "This Hungarian red blend has smoke, charcuterie and black raspberry aromas. Black plum, smoked meat and black raspberry flavors mark the palate, which finishes ",
+            "This blend of Syrah (57%), Merlot (29%) and Sangiovese suggests candied raspberries, blue fruit, vanilla, cola and fruit leather. Rich, concentrated flavors giv",
+            "This blend is comprised of Grenache, Syrah, Mourv\u00e8dre and Cabernet Sauvignon. The GSM combination gives it rich, accessible flavors of cherries, raspberries and"
+          ]
+        },
+        {
+          "group": 807,
+          "latents": [
+            15
+          ],
+          "gain_margin": 9494.45,
+          "examples": [
+            "There's no denying this wine's appeal with its aromas and flavors of dark fruit, caf\u00e9 au lait, earth and herbs. It's restrained yet flavorful, with a lingering,",
+            "Spicy clove, pepper and a crunch of tannin characterize this full-bodied, 100% varietal wine that feels both leathery and herbal. Cassis and red currant notes a",
+            "L'Ecole's Columbia Valley Cabernet is again 100% varietal; the blending magic comes from a mix of excellent vineyards. This is a classy, classic wine, with pinp"
+          ]
+        },
+        {
+          "group": 425,
+          "latents": [
+            694
+          ],
+          "gain_margin": 8844.66,
+          "examples": [
+            "The wine is pretty basic, with buttered toast, vanilla bean, brown sugar and juicy pineapple and orange flavors.",
+            "With apricot, orange, honey, butter cream and vanilla flavors, it's a simple wine at a fair price.",
+            "Here's an herbal, floral Chardonnay from Northern Italy with a fresh, garden green intensity rounded off by soft notes of exotic fruit, citrus and peach blossom"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 718,
+      "n_groups": 717,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 612,
+      "n_groups_unused": 0,
+      "n_removed": 613,
+      "var_share_removed": 0.5666,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 403,
+          "latents": [
+            165
+          ],
+          "gain_margin": 6390.13,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "group": 604,
+          "latents": [
+            565
+          ],
+          "gain_margin": 6061.59,
+          "examples": [
+            "Portuguese Table Wine",
+            "Portuguese Table Wine",
+            "Portuguese Table Wine"
+          ]
+        },
+        {
+          "group": 545,
+          "latents": [
+            40
+          ],
+          "gain_margin": 3419.88,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 238,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 3092.54,
+          "examples": [
+            "Vill\u00e1ny",
+            "Vill\u00e1ny",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 683,
+          "latents": [
+            25
+          ],
+          "gain_margin": 2543.2,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        }
+      ]
+    }
+  }
+}

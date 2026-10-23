@@ -1,0 +1,173 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13067.370494144445,
+  "test_error": 13067.370494144445,
+  "course_metric": "r2",
+  "course_score": 0.7456904486923708,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.293577432632446,
+  "learner_params": null,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2022,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 1262,
+      "n_groups_unused": 389,
+      "n_removed": 1263,
+      "var_share_removed": 0.5968,
+      "var_share_sae_error": 0.027,
+      "top": [
+        {
+          "group": 14,
+          "latents": [
+            23,
+            1983
+          ],
+          "gain_margin": 756.06,
+          "examples": [
+            "Kapoor, S*",
+            "Drain, C*",
+            "Underwood, C*"
+          ]
+        },
+        {
+          "group": 1985,
+          "latents": [
+            316
+          ],
+          "gain_margin": 534.12,
+          "examples": [
+            "Singh, S",
+            "Singh, S",
+            "Singh, S"
+          ]
+        },
+        {
+          "group": 1563,
+          "latents": [
+            911
+          ],
+          "gain_margin": 529.61,
+          "examples": [
+            "Oldfield, T B",
+            "Oldfield, T B",
+            "Oehlschlager, C K"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            813,
+            1546
+          ],
+          "gain_margin": 480.89,
+          "examples": [
+            "Ostrander, B R",
+            "Ostrander, B R",
+            "Fleming, A"
+          ]
+        },
+        {
+          "group": 1768,
+          "latents": [
+            200
+          ],
+          "gain_margin": 475.46,
+          "examples": [
+            "Chant, C",
+            "Chant, C",
+            "Creswell, S N"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1025,
+      "n_groups": 1022,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 719,
+      "n_groups_unused": 277,
+      "n_removed": 721,
+      "var_share_removed": 0.47,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 85,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 7786.92,
+          "examples": [
+            "General Manager Planning, Urban Des& Sustain",
+            "Deputy General Manager",
+            "Deputy General Manager"
+          ]
+        },
+        {
+          "group": 141,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 7372.92,
+          "examples": [
+            "Director Public Space & Street Use",
+            "Director Public Space & Street Use",
+            "DIRECTOR PUBLIC SPACE & STREET USE"
+          ]
+        },
+        {
+          "group": 957,
+          "latents": [
+            305
+          ],
+          "gain_margin": 6236.31,
+          "examples": [
+            "Manager, Strategic Initiatives",
+            "CHIEF OF STAFF",
+            "Chief Of Staff"
+          ]
+        },
+        {
+          "group": 160,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 3121.06,
+          "examples": [
+            "DEPUTY AUDIT GENERAL",
+            "Deputy City Engineer",
+            "Deputy General Manager HR"
+          ]
+        },
+        {
+          "group": 876,
+          "latents": [
+            323
+          ],
+          "gain_margin": 2547.32,
+          "examples": [
+            "SENIOR TECHNICAL SPECIALIST",
+            "Senior Technical Specialist",
+            "Senior Technical Specialist"
+          ]
+        }
+      ]
+    }
+  }
+}

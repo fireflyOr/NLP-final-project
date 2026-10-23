@@ -1,0 +1,171 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8455838612457323,
+  "test_error": 0.15441613875426774,
+  "course_metric": "auroc",
+  "course_score": 0.8455838612457324,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.55577826499939,
+  "learner_params": null,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2047,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1403,
+      "n_groups_unused": 263,
+      "n_removed": 1404,
+      "var_share_removed": 0.6398,
+      "var_share_sae_error": 0.1091,
+      "top": [
+        {
+          "group": 2043,
+          "latents": [
+            227
+          ],
+          "gain_margin": 6509.77,
+          "examples": [
+            "What an idiot crook.\nHe'll make a fine democrat politician.",
+            "The cast of Hamilton has no understanding of decency.  People don't go to theater productions to be singled out and lectured to.  Respect the audience and leave",
+            "Trump and his regime are morons."
+          ]
+        },
+        {
+          "group": 242,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 5034.55,
+          "examples": [
+            "He is now officially an Idiot Savant.",
+            "Awh gee wiz, to bad...maybe she should cowgirl up!  What a snowflake!  Go stay in your \"safe place\" sweetie.  If you can't play with the big dogs, maybe you sho",
+            "Kelly is considered to be a \"garbage clown\"  by some of the Jays Blogger fan base. There is hope that Shapiro can rebuild the Jays within the next 3 years to ge"
+          ]
+        },
+        {
+          "group": 2039,
+          "latents": [
+            315
+          ],
+          "gain_margin": 1712.55,
+          "examples": [
+            "No use debating with these Chumpsters. Like the idiot himself said he could shoot somebody in the middle of a street and get away with it. That tells you how mu",
+            "What an idiot crook.\nHe'll make a fine democrat politician.",
+            "Shannyn Moore is an Idiot, and a Fool. RR, you have and do write better than she. Unfortunately if you wrote her column for her, ADN would be dead. She's here f"
+          ]
+        },
+        {
+          "group": 1990,
+          "latents": [
+            510
+          ],
+          "gain_margin": 997.31,
+          "examples": [
+            "He is now officially an Idiot Savant.",
+            "oh! wait! you already burned down to a crisp in fort mac by your own stupidity, already. Stay the hell away from BC, you f*cking idiots.",
+            "Freaking moron!"
+          ]
+        },
+        {
+          "group": 2020,
+          "latents": [
+            480
+          ],
+          "gain_margin": 901.04,
+          "examples": [
+            "What is your point?  If he invasion would have occurred Charles may have fought.\nBut the real difference is that Charles may have fought to defend his country, ",
+            "Mohammad married a 6 year old girl. Allah Akbar Islam was founded by a pedophile.",
+            "The Troll family came and has contributed to Alaska since long before the current cadre of on-line nonproductive nasty and not-very-bright  lunatics snitched th"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1044,
+      "n_groups": 966,
+      "n_multi_groups": 64,
+      "n_groups_dropped": 725,
+      "n_groups_unused": 274,
+      "n_removed": 768,
+      "var_share_removed": 0.5966,
+      "var_share_sae_error": 0.0168,
+      "top": [
+        {
+          "group": 602,
+          "latents": [
+            447
+          ],
+          "gain_margin": 108.58,
+          "examples": [
+            "2016-05-26 02:28:05.705102",
+            "2017-04-19 13:48:18.012352",
+            "2017-05-04 23:32:00.725072"
+          ]
+        },
+        {
+          "group": 640,
+          "latents": [
+            1157
+          ],
+          "gain_margin": 108.51,
+          "examples": [
+            "2017-08-17 05:06:19.817348",
+            "2017-08-01 19:47:18.050347",
+            "2017-01-06 18:40:17.305347"
+          ]
+        },
+        {
+          "group": 953,
+          "latents": [
+            780
+          ],
+          "gain_margin": 101.74,
+          "examples": [
+            "2016-12-25 18:18:25.827843",
+            "2017-03-30 05:44:48.177887",
+            "2016-12-31 17:50:48.743549"
+          ]
+        },
+        {
+          "group": 324,
+          "latents": [
+            1312
+          ],
+          "gain_margin": 91.24,
+          "examples": [
+            "2017-06-20 02:01:19.355161",
+            "2016-07-22 19:03:02.104327",
+            "2016-04-19 16:37:24.355207"
+          ]
+        },
+        {
+          "group": 784,
+          "latents": [
+            1317
+          ],
+          "gain_margin": 87.86,
+          "examples": [
+            "2017-06-06 17:17:54.042018",
+            "2017-03-06 16:14:26.201376",
+            "2017-05-08 03:06:24.198172"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,400 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7251154993124123,
+  "test_error": 0.27488450068758774,
+  "course_metric": "auroc",
+  "course_score": 0.7251154993124121,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 88.891765832901,
+  "learner_params": null,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 869,
+      "n_groups": 863,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 619,
+      "n_groups_unused": 88,
+      "n_removed": 621,
+      "var_share_removed": 0.3963,
+      "var_share_sae_error": 0.0055,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            508,
+            1718
+          ],
+          "gain_margin": 395.41,
+          "examples": [
+            "1970-01-01 00:00:01.405516503",
+            "1970-01-01 00:00:01.405536132",
+            "1970-01-01 00:00:01.405471735"
+          ]
+        },
+        {
+          "group": 177,
+          "latents": [
+            1738
+          ],
+          "gain_margin": 123.65,
+          "examples": [
+            "1970-01-01 00:00:01.296176307",
+            "1970-01-01 00:00:01.296124884",
+            "1970-01-01 00:00:01.296266771"
+          ]
+        },
+        {
+          "group": 164,
+          "latents": [
+            1145
+          ],
+          "gain_margin": 101.2,
+          "examples": [
+            "1970-01-01 00:00:01.385909991",
+            "1970-01-01 00:00:01.410999109",
+            "1970-01-01 00:00:01.369089969"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            1060,
+            1180
+          ],
+          "gain_margin": 93.93,
+          "examples": [
+            "1970-01-01 00:00:01.400097974",
+            "1970-01-01 00:00:01.400099279",
+            "1970-01-01 00:00:01.400046979"
+          ]
+        },
+        {
+          "group": 279,
+          "latents": [
+            1729
+          ],
+          "gain_margin": 91.51,
+          "examples": [
+            "1970-01-01 00:00:01.342806167",
+            "1970-01-01 00:00:01.349480997",
+            "1970-01-01 00:00:01.342902841"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 871,
+      "n_groups": 854,
+      "n_multi_groups": 16,
+      "n_groups_dropped": 612,
+      "n_groups_unused": 93,
+      "n_removed": 621,
+      "var_share_removed": 0.4285,
+      "var_share_sae_error": 0.0055,
+      "top": [
+        {
+          "group": 356,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 426.52,
+          "examples": [
+            "1970-01-01 00:00:01.374465540",
+            "1970-01-01 00:00:01.394265540",
+            "1970-01-01 00:00:01.431579540"
+          ]
+        },
+        {
+          "group": 847,
+          "latents": [
+            508
+          ],
+          "gain_margin": 309.24,
+          "examples": [
+            "1970-01-01 00:00:01.427011200",
+            "1970-01-01 00:00:01.423065515",
+            "1970-01-01 00:00:01.427907545"
+          ]
+        },
+        {
+          "group": 116,
+          "latents": [
+            1889
+          ],
+          "gain_margin": 214.45,
+          "examples": [
+            "1970-01-01 00:00:01.408456800",
+            "1970-01-01 00:00:01.421776800",
+            "1970-01-01 00:00:01.408330800"
+          ]
+        },
+        {
+          "group": 136,
+          "latents": [
+            1663
+          ],
+          "gain_margin": 188.61,
+          "examples": [
+            "1970-01-01 00:00:01.311552000",
+            "1970-01-01 00:00:01.356102000",
+            "1970-01-01 00:00:01.415412000"
+          ]
+        },
+        {
+          "group": 529,
+          "latents": [
+            311
+          ],
+          "gain_margin": 174.84,
+          "examples": [
+            "1970-01-01 00:00:01.360190007",
+            "1970-01-01 00:00:01.401513007",
+            "1970-01-01 00:00:01.365800237"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1271,
+      "n_groups_unused": 148,
+      "n_removed": 1271,
+      "var_share_removed": 0.342,
+      "var_share_sae_error": 0.1427,
+      "top": [
+        {
+          "group": 1367,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 2574.73,
+          "examples": [
+            "\"This is a new platform for creating your own Smartphone App for any business, online or offline and it's very user friendly.\"",
+            "\"Looking to create a e-commerce website to build upon an existing, established Facebook page.\"",
+            "\"Website Design Initiative for people who need a website for a business or to promote and reasonable prices.\""
+          ]
+        },
+        {
+          "group": 254,
+          "latents": [
+            1769
+          ],
+          "gain_margin": 537.56,
+          "examples": [
+            "\"A new take on the humble six sided dice\"",
+            "\"Prodigy is a tactical RPG with figurines, a new way to play that we will create with you. Thank you so much for your support!\"",
+            "\"Highly Detailed Anime Miniatures for Painting, Collecting, and Gaming.  This is the launch of M&K Adventures.\""
+          ]
+        },
+        {
+          "group": 78,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 449.23,
+          "examples": [
+            "\"A 28mm scale fantasy dwarven realm terrain set that is modular and can be disassembled for easy storage and transport.\"",
+            "\"A range of 28mm white metal figures for you Victorian Scifi and Steam Punk Games. \nThree Factions to choose from.\"",
+            "\"Hello!  We're St. John-Fisher Entertainment, the guys behind the web soap California Heaven, and even the Mighty Morphin Power Rangers!\""
+          ]
+        },
+        {
+          "group": 967,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 433.65,
+          "examples": [
+            "\"I am looking for Help to kick start my Career\"",
+            "\"Looking to start a graphic design company that can do anything from personal announcements to public advertisements.\"",
+            "\"Look@Me! Hopes to become a new great way to share photos with friends and connect with businesses for great discounts and deals!\""
+          ]
+        },
+        {
+          "group": 176,
+          "latents": [
+            1894
+          ],
+          "gain_margin": 330.16,
+          "examples": [
+            "\"THE BIRDER is a revenge comedy set inside the world of bird-watching.  Starring Tom Cavanagh and Fred Willard.\"",
+            "\"A new webseries featuring Dale Seever doing amazing things with Chris Gethard, Sasheer Zamata, Kelli Scarr, and Cory McAbee.\"",
+            "\"6+ Weeks, 40+ Cities, 14,000+ Miles!  Help Morning Bird Records' Abi Robins and Sean Renner embark on a career-launching adventure!\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1244,
+      "n_groups_unused": 135,
+      "n_removed": 1246,
+      "var_share_removed": 0.3873,
+      "var_share_sae_error": 0.1285,
+      "top": [
+        {
+          "group": 567,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 911.61,
+          "examples": [
+            "\"e-grievance-tackling-sweatshops-with-technology\"",
+            "\"nandibearcom-book-tracking-website\"",
+            "\"selfie-a-new-social-network\""
+          ]
+        },
+        {
+          "group": 2044,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 669.22,
+          "examples": [
+            "\"online-shopping-website-that-helps-save-you-money\"",
+            "\"our-global-economic-system-would-collapse-without\"",
+            "\"web-app-for-fashion-and-textile-designers\""
+          ]
+        },
+        {
+          "group": 187,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 391.43,
+          "examples": [
+            "\"sci-fi-poetry\"",
+            "\"glash-kids-sci-fi-adventure\"",
+            "\"milo-and-bruno-rocket-to-the-moon-a-sci-fi-picture\""
+          ]
+        },
+        {
+          "group": 1802,
+          "latents": [
+            1
+          ],
+          "gain_margin": 240.24,
+          "examples": [
+            "\"glint-new-album-help-us-finance-the-release-plan\"",
+            "\"produce-sumkalis-3rd-album-tihai\"",
+            "\"mindslip-the-new-self-titled-album\""
+          ]
+        },
+        {
+          "group": 1312,
+          "latents": [
+            441
+          ],
+          "gain_margin": 235.62,
+          "examples": [
+            "\"coffee-pod-with-yummy-snacks\"",
+            "\"skateboner-magazine-issue-3\"",
+            "\"skateboner-magazine-issue-2\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1276,
+      "n_groups_unused": 135,
+      "n_removed": 1276,
+      "var_share_removed": 0.3637,
+      "var_share_sae_error": 0.1337,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            1052,
+            1219
+          ],
+          "gain_margin": 2036.3,
+          "examples": [
+            "\"Getting Social: Marketing A Small Business On The Social Web\"",
+            "\"Online Shopping Website that helps SAVE you money!\"",
+            "\"Help a College Student Build on an Innovative New Website\""
+          ]
+        },
+        {
+          "group": 910,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 712.15,
+          "examples": [
+            "\"J.P. Yantha- Just Gettin' Started- EP (Canceled)\"",
+            "\"Random bag of almost as awesome (Canceled)\"",
+            "\"Skateboard graphic Art Collaboration (Canceled)\""
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            23
+          ],
+          "gain_margin": 399.84,
+          "examples": [
+            "\"leaning how to sew costums better (Canceled)\"",
+            "\"Random bag of almost as awesome (Canceled)\"",
+            "\"iPad case + Floor Stand (Canceled)\""
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1,
+            886
+          ],
+          "gain_margin": 355.73,
+          "examples": [
+            "\"Noah's 1st Album Happened Because Of Me!\"",
+            "\"New Album\"",
+            "\"Town Bizness Bringing Back R&B to Tha' Bay Album Launch\""
+          ]
+        },
+        {
+          "group": 1980,
+          "latents": [
+            732
+          ],
+          "gain_margin": 319.05,
+          "examples": [
+            "\"Dance World Cup - Romania 2015 (Canceled)\"",
+            "\"The Alley 99 Show S1 Ep1 \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"Chicke",
+            "\"SpongeBall Z: The Animated Series - Season 1 (Canceled)\""
+          ]
+        }
+      ]
+    }
+  }
+}

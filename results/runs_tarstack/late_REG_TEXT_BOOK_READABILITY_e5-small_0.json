@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8697579442164851,
+  "test_error": 0.8697579442164851,
+  "course_metric": "r2",
+  "course_score": 0.7909500008679553,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 8.340059280395508,
+  "learner_params": null,
+  "diagnostics": {}
+}

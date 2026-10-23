@@ -1,0 +1,551 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.19715317953689795,
+  "test_error": 0.19715317953689795,
+  "course_metric": "r2",
+  "course_score": 0.8005521161030004,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 115.56079268455505,
+  "learner_params": null,
+  "diagnostics": {
+    "address": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2013,
+      "n_groups": 1999,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 1043,
+      "n_groups_unused": 480,
+      "n_removed": 775,
+      "var_share_removed": 0.3208,
+      "var_share_sae_error": 0.0287,
+      "top": [
+        {
+          "group": 1981,
+          "latents": [
+            318
+          ],
+          "gain_margin": 2245.88,
+          "examples": [
+            "HM Eleganza, 31, Museum Road, Off MG Road, Church Street, Bangalore",
+            "HM Eleganza, 31, Museum Road, Off MG Road, Church Street, Bangalore",
+            "HM Eleganza, 31, Museum Road, Off MG Road, Church Street, Bangalore"
+          ]
+        },
+        {
+          "group": 327,
+          "latents": [
+            1713
+          ],
+          "gain_margin": 649.06,
+          "examples": [
+            "70, Prem Chambers, Jyothi Nivas Collage Road, Koramangala 5th Block, Bangalore",
+            "756, Shri Krishna Temple Road, Next to HDFC Bank, Indiranagar, Bangalore",
+            "475, Shri Krishna Temple Road, Stage 1, Indiranagar, Bangalore"
+          ]
+        },
+        {
+          "group": 13,
+          "latents": [
+            305,
+            423
+          ],
+          "gain_margin": 505.5,
+          "examples": [
+            "A/5, Ground Floor, KHB Colony, 5th Block, Koramangala, Koramangala 5th Block, Bangalore",
+            "A/5, Ground Floor, KHB Colony, 5th Block, Koramangala, Koramangala 5th Block, Bangalore",
+            "5/2, Near Christ Collage, Chikka Lakshmaiah Layout, Hosur Road, Koramangala Area, BTM, Bangalore"
+          ]
+        },
+        {
+          "group": 1998,
+          "latents": [
+            753
+          ],
+          "gain_margin": 390.29,
+          "examples": [
+            "15, SG Palya Main Road, Near Srinivas theatre, Venkateshwara Layout, BTM, Bangalore",
+            "15, SG Palya Main Road, Near Srinivas theatre, Venkateshwara Layout, BTM, Bangalore",
+            "1, 4th Cross, Venkateshwara Layout, S.G Palya, D.R.C. Post, BTM, Bangalore"
+          ]
+        },
+        {
+          "group": 871,
+          "latents": [
+            822
+          ],
+          "gain_margin": 373.9,
+          "examples": [
+            "139, Jyoti Nivas College Road, Ground Floor, Terra Tree Service Apartments, 1st Cross, Koramangala 5th Block, Bangalore",
+            "88, KK Centre, Jyoti Nivas College Road, Koramangala 5th Block, Bangalore",
+            "688, 2nd,Floor, 15th cross, 100ft Ring Road, Above Lathangi Ford Showroom, JP Nagar, Bangalore"
+          ]
+        }
+      ]
+    },
+    "cuisines": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1084,
+      "n_groups": 1071,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 620,
+      "n_groups_unused": 273,
+      "n_removed": 118,
+      "var_share_removed": 0.0672,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 1060,
+          "latents": [
+            480
+          ],
+          "gain_margin": 2737.87,
+          "examples": [
+            "Burger, American, Beverages, Desserts, Italian, Salad, Ice Cream, Finger Food",
+            "Burger, American, Beverages, Desserts, Italian, Salad, Ice Cream, Finger Food",
+            "American, Tex-Mex, Burger, BBQ, Mexican"
+          ]
+        },
+        {
+          "group": 1068,
+          "latents": [
+            318
+          ],
+          "gain_margin": 2457.27,
+          "examples": [
+            "Italian, Salad, Healthy Food, Cafe, Asian, Desserts, Pizza",
+            "Italian, Salad, Healthy Food, Cafe, Asian, Desserts, Pizza",
+            "Italian, Salad, Healthy Food, Cafe, Asian, Desserts, Pizza"
+          ]
+        },
+        {
+          "group": 518,
+          "latents": [
+            943
+          ],
+          "gain_margin": 908.77,
+          "examples": [
+            "Modern Indian, European, Asian",
+            "Asian, Burger, Pizza, Chinese, Finger Food",
+            "Asian, Burger, Pizza, Chinese, Finger Food"
+          ]
+        },
+        {
+          "group": 449,
+          "latents": [
+            1449
+          ],
+          "gain_margin": 688.37,
+          "examples": [
+            "European, Mediterranean, Asian, North Indian, South Indian, Momos",
+            "European, North Indian, Mediterranean, Asian, Salad",
+            "European, North Indian, Mediterranean, Asian, Salad"
+          ]
+        },
+        {
+          "group": 680,
+          "latents": [
+            1471
+          ],
+          "gain_margin": 572.15,
+          "examples": [
+            "North Indian, Chinese, Rajasthani",
+            "North Indian, Chinese",
+            "North Indian, Chinese"
+          ]
+        }
+      ]
+    },
+    "dish_liked": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1514,
+      "n_groups": 1510,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1011,
+      "n_groups_unused": 548,
+      "n_removed": 344,
+      "var_share_removed": 0.1284,
+      "var_share_sae_error": 0.0033,
+      "top": [
+        {
+          "group": 84,
+          "latents": [
+            1973
+          ],
+          "gain_margin": 9936.15,
+          "examples": [
+            "Beer, Lasagne, Cocktails, Pizza, Churros, Chicken Pepper Fry, Chicken Tikka",
+            "Beer, Cocktails, Noodles, Buffalo Wings, Chilli Chicken, Pizza, Chicken Tikka",
+            "Beer, Cocktails, Noodles, Buffalo Wings, Chilli Chicken, Pizza, Chicken Tikka"
+          ]
+        },
+        {
+          "group": 182,
+          "latents": [
+            1838
+          ],
+          "gain_margin": 5800.84,
+          "examples": [
+            "Pizza, Pasta, Garlic Bread, Nachos, Penne Alfredo, Mozzarella Sticks, Salad",
+            "Pizza, Pasta, Garlic Bread, Nachos, Penne Alfredo, Mozzarella Sticks, Salad",
+            "Pizza, Pasta, Garlic Bread, Nachos, Penne Alfredo, Mozzarella Sticks, Salad"
+          ]
+        },
+        {
+          "group": 1454,
+          "latents": [
+            318
+          ],
+          "gain_margin": 5220.07,
+          "examples": [
+            "Pasta, Breakfast Buffet, Lasagne, Salads, Chocolate Cake, Chicken Soup, Seafood Salad",
+            "Khara Bun, Mousse, Rich Chocolate Cake, Veg Puff, Chocolate Truffle, Banana Walnut Cake, Fruit Cake",
+            "Ice Cream Strawberry, Tiramisu, Chocolate Icecreams, Chocolava, Hot Chocolate Fudge, Ferrero Rocher, Coffee Craze"
+          ]
+        },
+        {
+          "group": 961,
+          "latents": [
+            472
+          ],
+          "gain_margin": 2641.89,
+          "examples": [
+            "Salads, Salad, Sushi, Kung Pao Chicken, Bento Box, Nasi Goreng, Baked Yogurt",
+            "Salad, Mocktails, Chocolava, Pesto Pasta, Momos, Jasmine Rice, Tom Yum Soup",
+            "Salad, Mocktails, Chocolava, Pesto Pasta, Momos, Jasmine Rice, Tom Yum Soup"
+          ]
+        },
+        {
+          "group": 369,
+          "latents": [
+            1595
+          ],
+          "gain_margin": 2481.12,
+          "examples": [
+            "Chocolate Truffle Cake, Eggless Cake, Cup Cake, Chocolate Dreamcake, Photo Cake, Fruit Cake, Litchi Cake",
+            "Sea Food, Craft Beer, Cocktails, Tempura Prawns, Dahi Ke Kebab, Tandoori Platter, Mocktails",
+            "Sea Food, Craft Beer, Cocktails, Tempura Prawns, Dahi Ke Kebab, Tandoori Platter, Mocktails"
+          ]
+        }
+      ]
+    },
+    "menu_item": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1013,
+      "n_groups": 1013,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 822,
+      "n_groups_unused": 400,
+      "n_removed": 550,
+      "var_share_removed": 0.3109,
+      "var_share_sae_error": 0.0052,
+      "top": [
+        {
+          "group": 682,
+          "latents": [
+            111
+          ],
+          "gain_margin": 526.5,
+          "examples": [
+            "['Punjabi Reddi Ke Chole Kulcha', 'Makhani Paneer Biryani', 'Classic Fried Rice', 'Margarita Classic', 'Paneer Tikka Masala', 'Subz Tarkari', 'Sinful Moment', '",
+            "['Honey Butter Waffle', 'Belgian Dark Waffle', 'Chocolate Overload Waffle', 'White Chocolate Oreo Waffle', 'Red Velvet Waffle', 'Maple Butter Waffle', 'Eclair D",
+            "['Honey Butter Waffle', 'Belgian Dark Waffle', 'Chocolate Overload Waffle', 'White Chocolate Oreo Waffle', 'Red Velvet Waffle', 'Maple Butter Waffle', 'Eclair D"
+          ]
+        },
+        {
+          "group": 1012,
+          "latents": [
+            318
+          ],
+          "gain_margin": 525.51,
+          "examples": [
+            "['Chicken A La Kiev', 'Pan Seared Sea Bass Fillet with Lemon Butter Sauce', 'Chicken House Ceasar Salad', 'Chocolate Nutella Pancakes', 'Banana Honey Pancakes',",
+            "['Green Goddess in Three Cheese Pizza [Medium]', 'Alfredo Pasta', 'Arrabiata Pasta', 'Start with Mac N Cheese', 'Pepper Chicken Steak', 'Chicken Lasagne', 'Pepp",
+            "['Classic Organic Chickpea Hummus', 'Moroccan Briouats', 'Vegetarian Falafel and Hummus', 'Classic Chicken', 'Smoked Bacon Sphaghetti AOP', 'Baked Lemon Cheesec"
+          ]
+        },
+        {
+          "group": 994,
+          "latents": [
+            298
+          ],
+          "gain_margin": 314.59,
+          "examples": [
+            "['Hyderabad Chicken Dum Biryani', 'Hyderabad Special Biryani', 'Paneer Punjabi', 'Baby Corn Golden Fry', 'Mix Non Veg Noodles', 'Veg Biryani with Veg Manchurian",
+            "['Veg Regular Biryani', 'Paneer Regular Biryani', 'Hyderabad Chicken Dum Regular Biryani', 'Hyderabad Special Regular Biryani', 'Hyderabad Mutton Regular Biryan",
+            "['Ghee Rice', 'Veg Biryani', 'Paneer Biryani', 'Hyderabadi Chicken Dum Biryani', 'Hyderabadi Special Biryani', 'Hyderabad Mutton Biryani', 'Veg Biryani with Veg"
+          ]
+        },
+        {
+          "group": 627,
+          "latents": [
+            776
+          ],
+          "gain_margin": 293.56,
+          "examples": [
+            "['Some Like It Hot Big 10\"', 'Paneer Mayhem Big 10\"', 'Paneer Tikka Big 10\"', 'All-Veggies Madness Big 10\"', 'Crowded House Big 10\"', 'Fantastic Four Big 10\"', ",
+            "['Some Like It Hot Big 10\"', 'Paneer Mayhem Big 10\"', 'Paneer Tikka Big 10\"', 'All-Veggies Madness Big 10\"', 'Crowded House Big 10\"', 'Fantastic Four Big 10\"', ",
+            "['Some Like It Hot Big 10\"', 'Paneer Mayhem Big 10\"', 'Paneer Tikka Big 10\"', 'All-Veggies Madness Big 10\"', 'Crowded House Big 10\"', 'Fantastic Four Big 10\"', "
+          ]
+        },
+        {
+          "group": 504,
+          "latents": [
+            1222
+          ],
+          "gain_margin": 212.2,
+          "examples": [
+            "['Non Veg Maki Platter [16 Pieces]', 'Scottish Salmon Sushi [5 Pieces]', 'Crispy Spicy Avocado', 'California Maki [8 Pieces]', 'Dyna Maki [8 Pieces]', 'Veg Maki",
+            "['Scottish Salmon Sushi [5 Pieces]', 'Crispy Spicy Avocado', 'California Maki [8 Pieces]', 'Dyna Maki [8 Pieces]', 'Garlic Fried Rice', 'Veg Maki Platter [16 Pi",
+            "['Veg Pizza', 'Barbecue Chicken Pizza', 'Veg Arrabiata Pasta', 'Chicken Alfredo Pasta', 'Tomato Mozarella and Basil Sandwich in Panini Bread', 'Roasted Chicken "
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2044,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1006,
+      "n_groups_unused": 433,
+      "n_removed": 881,
+      "var_share_removed": 0.4108,
+      "var_share_sae_error": 0.0281,
+      "top": [
+        {
+          "group": 2042,
+          "latents": [
+            318
+          ],
+          "gain_margin": 1075.98,
+          "examples": [
+            "Sidewalk Cafe & Bar - The Paul Bangalore",
+            "Sidewalk Cafe & Bar - The Paul Bangalore",
+            "Sidewalk Cafe & Bar - The Paul Bangalore"
+          ]
+        },
+        {
+          "group": 1021,
+          "latents": [
+            753
+          ],
+          "gain_margin": 931.98,
+          "examples": [
+            "Ganesh Food Joint",
+            "Ganesh Food Joint",
+            "Ganesh Food Joint"
+          ]
+        },
+        {
+          "group": 405,
+          "latents": [
+            1449
+          ],
+          "gain_margin": 505.62,
+          "examples": [
+            "Polo Club - The Oberoi",
+            "Ebony",
+            "Ebony"
+          ]
+        },
+        {
+          "group": 751,
+          "latents": [
+            1269
+          ],
+          "gain_margin": 311.25,
+          "examples": [
+            "Barbeque Nation",
+            "Barbeque Nation",
+            "Barbeque Nation"
+          ]
+        },
+        {
+          "group": 1997,
+          "latents": [
+            422
+          ],
+          "gain_margin": 234.82,
+          "examples": [
+            "TOKI Taco House",
+            "Galito's",
+            "Galito's"
+          ]
+        }
+      ]
+    },
+    "phone": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1520,
+      "n_groups": 1450,
+      "n_multi_groups": 54,
+      "n_groups_dropped": 818,
+      "n_groups_unused": 498,
+      "n_removed": 321,
+      "var_share_removed": 0.0957,
+      "var_share_sae_error": 0.0068,
+      "top": [
+        {
+          "group": 83,
+          "latents": [
+            103,
+            318
+          ],
+          "gain_margin": 1166.26,
+          "examples": [
+            "080 49652428",
+            "080 49652428",
+            "080 49652812"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            754,
+            979
+          ],
+          "gain_margin": 497.22,
+          "examples": [
+            "080 43008120\n080 43008130",
+            "080 40992981\n080 40992982",
+            "080 40992981\r\n080 40992982"
+          ]
+        },
+        {
+          "group": 55,
+          "latents": [
+            1516,
+            1879
+          ],
+          "gain_margin": 462.55,
+          "examples": [
+            "+91 7090098900",
+            "+91 7090098900",
+            "+91 9066899084"
+          ]
+        },
+        {
+          "group": 1112,
+          "latents": [
+            1080
+          ],
+          "gain_margin": 270.84,
+          "examples": [
+            "080 49653510",
+            "080 49653410",
+            "080 49653211"
+          ]
+        },
+        {
+          "group": 816,
+          "latents": [
+            538
+          ],
+          "gain_margin": 252.52,
+          "examples": [
+            "080 28029504",
+            "080 42112381",
+            "080 42112381"
+          ]
+        }
+      ]
+    },
+    "reviews_list": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1931,
+      "n_groups": 1930,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1217,
+      "n_groups_unused": 655,
+      "n_removed": 699,
+      "var_share_removed": 0.1485,
+      "var_share_sae_error": 0.0348,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            318,
+            1595
+          ],
+          "gain_margin": 21559.65,
+          "examples": [
+            "[('Rated 4.0', 'RATED\\n  Mind-blowing experience! Who knew there would be a vegetarian version of sushi SPICY TOFU AVOCADO MAKI and it could taste so good (alth",
+            "[('Rated 4.0', 'RATED\\n  Mind-blowing experience! Who knew there would be a vegetarian version of sushi SPICY TOFU AVOCADO MAKI and it could taste so good (alth",
+            "[('Rated 4.0', 'RATED\\n  Had been here for dinner. Tried the cheese platter(a must for cheese lovers), vegetable kibbeh, basil and orange tonic water and carame"
+          ]
+        },
+        {
+          "group": 1360,
+          "latents": [
+            753
+          ],
+          "gain_margin": 4499.46,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  ... Just now I tasted food.... Not at all good in taste.... though I have mentioned spl. Instructions they didn't paid attention to it.",
+            "[('Rated 1.0', \"RATED\\n  ... Just now I tasted food.... Not at all good in taste.... though I have mentioned spl. Instructions they didn't paid attention to it.",
+            "[('Rated 1.0', \"RATED\\n  ... Just now I tasted food.... Not at all good in taste.... though I have mentioned spl. Instructions they didn't paid attention to it."
+          ]
+        },
+        {
+          "group": 1927,
+          "latents": [
+            757
+          ],
+          "gain_margin": 3652.15,
+          "examples": [
+            "[('Rated 5.0', 'RATED\\n  The raw papaya salad\\nThe grilled fish\\nAnd the waterchessnut for the desserts\\nThese dish?s are a must try at this place\\nIt lives up ",
+            "[('Rated 5.0', \"RATED\\n  Slightly sad writing this review as I got to know that they're closing down.\\n\\nRun by a really sweet couple from Goa the food is made ",
+            "[('Rated 5.0', 'RATED\\n  Got a quick seating the minute we reached had ordered soft crabs and meals in bowls the quantity is sufficient for one . Whatever we or"
+          ]
+        },
+        {
+          "group": 1922,
+          "latents": [
+            445
+          ],
+          "gain_margin": 2994.4,
+          "examples": [
+            "[('Rated 3.0', 'RATED\\n  The pizza was cold on delivery'), ('Rated 1.0', \"RATED\\n  Worst pizza restaurant in the whole world! Oily tasteless SQUARE SHAPED UNCUT",
+            "[('Rated 2.0', \"RATED\\n  The pizzas were good and loved the white sauce pizza but I don't see a mention of what crust we are getting. For first timer, atleast w",
+            "[('Rated 1.0', \"RATED\\n  I can't believe the food was so horrible! I ate little bit only because I was hungry. The vada in the vada pav was good, the chutneys w"
+          ]
+        },
+        {
+          "group": 836,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 2550.64,
+          "examples": [
+            "[('Rated 1.0', \"RATED\\n  This is not open yet. I don't know why it's already showing as open.,......... Please check for the date of opening. Very disappointed ",
+            "[('Rated 1.0', 'RATED\\n  bad food')]",
+            "[('Rated 1.0', 'RATED\\n  bad food')]"
+          ]
+        }
+      ]
+    }
+  }
+}

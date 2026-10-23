@@ -1,0 +1,249 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9187206698523581,
+  "test_error": 0.08127933014764188,
+  "course_metric": "auroc",
+  "course_score": 0.9187206698523582,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 45.882368326187134,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2034,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1513,
+      "n_groups_unused": 512,
+      "n_removed": 1514,
+      "var_share_removed": 0.3678,
+      "var_share_sae_error": 0.0592,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            386,
+            1912
+          ],
+          "gain_margin": 5566.75,
+          "examples": [
+            "Apply using below link directly#URL_af5a5359031a8a3cc7e8470a968b29cd570f6ae4618d7a0c71c85c549a7db225#The Director of PeriAnesthesia is responsible for directing",
+            "Apply using below link#URL_b66ae4730a22cf471a98321a5a330d421abb861523113f6f797ab5a4c3dc9e65#Available positions Nationwide for OR, PACU, CVORAmerican Traveler s",
+            "Apply using below link#URL_0243c9ffa14e848cbe0f7ddece5deea7c4633fb782960f66e5240a57b802e9aa#The Operating Room Director is responsible for directing the operati"
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 4683.25,
+          "examples": [
+            "Find more jobs at #URL_4708e598004bb0a85bf09f9eecc0a8f1fdc0f496e68deb05ee2432ff63e13767#Apply with below link#URL_6f8cb24d580e88d19d1863709df52806cee08a83aa8f48",
+            "2022Job Title: Production Manager Heavy Duty DieselRole: Engineering or RelatedRelocation Available: YesIndustry: ManufacturingLocation: TennesseeTown / City: M",
+            "Apply using below link#URL_ff6a6560a6c8ffc9abc8638514eca2d0076d78dad46770ded91d352ed994fcff#Work alongside the greatest healer of all time.St. Francis Health is"
+          ]
+        },
+        {
+          "group": 999,
+          "latents": [
+            1514
+          ],
+          "gain_margin": 2921.17,
+          "examples": [
+            "Experienced, reliable team members are needed for our Data Entry Clerk / Administrative Assistant needed! We are currently searching for candidates with previou",
+            "Experienced, reliable team members are needed for our Data Entry Clerk / Administrative Assistant needed! We are currently searching for candidates with previou",
+            "A active and dynamic recruitment company, seeking a Assistant Accountant. We are looking for communicative and motivated employees for immediate start. Only exc"
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            480
+          ],
+          "gain_margin": 2229.76,
+          "examples": [
+            "PART TIMERS Required For Cash Pay Jobs.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get biggest cas",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 2033,
+          "latents": [
+            315
+          ],
+          "gain_margin": 841.02,
+          "examples": [
+            "PART-TIME WORK FROM YOUR PLACEFlexible schedule, $65 per hr Guaranteed pay.No experience is required &amp; training given.Please send an email to get in touch.#",
+            "Administrative AssistantEssential Duties and Responsibilities include the following.\u00a0Other duties may be assigned to meet business needs.\u00a0* Administrative Suppo",
+            "Make money from home . Earn up to $100 a day posting ads on the internet &amp; taking inbound calls. Please call me @ #PHONE_3ab7393b91c85a9f1aa761c4b4d2ece49e6"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 335,
+      "n_groups": 313,
+      "n_multi_groups": 13,
+      "n_groups_dropped": 268,
+      "n_groups_unused": 26,
+      "n_removed": 289,
+      "var_share_removed": 0.759,
+      "var_share_sae_error": 0.0048,
+      "top": [
+        {
+          "group": 67,
+          "latents": [
+            1809
+          ],
+          "gain_margin": 192.16,
+          "examples": [
+            "20-3075",
+            "1234-12345",
+            "20-25"
+          ]
+        },
+        {
+          "group": 266,
+          "latents": [
+            1278
+          ],
+          "gain_margin": 166.99,
+          "examples": [
+            "18720-21840",
+            "20-3075",
+            "2000000-2263000"
+          ]
+        },
+        {
+          "group": 122,
+          "latents": [
+            833
+          ],
+          "gain_margin": 119.74,
+          "examples": [
+            "25-30",
+            "25-30",
+            "18720-21840"
+          ]
+        },
+        {
+          "group": 65,
+          "latents": [
+            1974
+          ],
+          "gain_margin": 75.11,
+          "examples": [
+            "20-3075",
+            "1234-12345",
+            "20-25"
+          ]
+        },
+        {
+          "group": 80,
+          "latents": [
+            1288
+          ],
+          "gain_margin": 69.69,
+          "examples": [
+            "21-63000",
+            "21-63000",
+            "21-63000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1977,
+      "n_groups": 1971,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1540,
+      "n_groups_unused": 455,
+      "n_removed": 1542,
+      "var_share_removed": 0.4559,
+      "var_share_sae_error": 0.0253,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            227,
+            315,
+            480
+          ],
+          "gain_margin": 4710.75,
+          "examples": [
+            "PART TIMERS Required For Cash Pay Jobs.",
+            "Cruise Staff Wanted *URGENT*",
+            "Cruise Staff Wanted *URGENT*"
+          ]
+        },
+        {
+          "group": 120,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 1784.53,
+          "examples": [
+            "RN, SURGERY UNIT DIRECTOR  ",
+            "Well Paid Cash Jobs To Start Immediately. ",
+            "Cash Job Opportunity To Immediate Start."
+          ]
+        },
+        {
+          "group": 1968,
+          "latents": [
+            960
+          ],
+          "gain_margin": 1433.85,
+          "examples": [
+            "Earn Money Working From Home",
+            "Remote Admin Clerk",
+            "Front Desk"
+          ]
+        },
+        {
+          "group": 244,
+          "latents": [
+            1912
+          ],
+          "gain_margin": 931.64,
+          "examples": [
+            "Ambulatory Surgery and Endoscopy RN Operations Manager  ",
+            "RN, SURGERY UNIT DIRECTOR  ",
+            "Medical Surgical RN "
+          ]
+        },
+        {
+          "group": 1965,
+          "latents": [
+            1
+          ],
+          "gain_margin": 560.01,
+          "examples": [
+            "Urgently Required J2EE Developer for  Bahrain",
+            "work from home",
+            "Immediate Opening : J2EE Developer for Bahrain "
+          ]
+        }
+      ]
+    }
+  }
+}

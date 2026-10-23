@@ -1,0 +1,702 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.239910428982622,
+  "test_error": 0.239910428982622,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9810511039465615,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 231.7575454711914,
+  "learner_params": null,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1732,
+      "n_groups": 1728,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1284,
+      "n_groups_unused": 69,
+      "n_removed": 1288,
+      "var_share_removed": 0.6311,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 268,
+          "latents": [
+            1422
+          ],
+          "gain_margin": 154.47,
+          "examples": [
+            "KROA",
+            "KROA",
+            "KROA"
+          ]
+        },
+        {
+          "group": 1254,
+          "latents": [
+            151
+          ],
+          "gain_margin": 94.83,
+          "examples": [
+            "KLOU",
+            "KLOU",
+            "KLOU"
+          ]
+        },
+        {
+          "group": 1130,
+          "latents": [
+            816
+          ],
+          "gain_margin": 84.56,
+          "examples": [
+            "KEHO",
+            "KEHO",
+            "KEHO"
+          ]
+        },
+        {
+          "group": 389,
+          "latents": [
+            1663
+          ],
+          "gain_margin": 79.34,
+          "examples": [
+            "KFME",
+            "KFME",
+            "KFME"
+          ]
+        },
+        {
+          "group": 988,
+          "latents": [
+            565
+          ],
+          "gain_margin": 70.58,
+          "examples": [
+            "KIAG",
+            "KIAG",
+            "KIAG"
+          ]
+        }
+      ]
+    },
+    "City": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1898,
+      "n_groups": 1898,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1242,
+      "n_groups_unused": 74,
+      "n_removed": 1242,
+      "var_share_removed": 0.5707,
+      "var_share_sae_error": 0.0045,
+      "top": [
+        {
+          "group": 1620,
+          "latents": [
+            429
+          ],
+          "gain_margin": 179.96,
+          "examples": [
+            "Remlap",
+            "Revere",
+            "Stacy"
+          ]
+        },
+        {
+          "group": 865,
+          "latents": [
+            877
+          ],
+          "gain_margin": 159.57,
+          "examples": [
+            "Eagle Creek",
+            "Eagle Lake",
+            "Eagle"
+          ]
+        },
+        {
+          "group": 172,
+          "latents": [
+            1925
+          ],
+          "gain_margin": 132.46,
+          "examples": [
+            "Decatur",
+            "Decatur",
+            "Decatur"
+          ]
+        },
+        {
+          "group": 1853,
+          "latents": [
+            26
+          ],
+          "gain_margin": 115.54,
+          "examples": [
+            "Londonderry",
+            "Londonderry",
+            "London"
+          ]
+        },
+        {
+          "group": 790,
+          "latents": [
+            1677
+          ],
+          "gain_margin": 107.64,
+          "examples": [
+            "Lawndale",
+            "Lawndale",
+            "East Greenbush"
+          ]
+        }
+      ]
+    },
+    "County": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1495,
+      "n_groups": 1495,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1123,
+      "n_groups_unused": 49,
+      "n_removed": 1123,
+      "var_share_removed": 0.583,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 25,
+          "latents": [
+            2007
+          ],
+          "gain_margin": 178.85,
+          "examples": [
+            "Tuscaloosa",
+            "Tuscaloosa",
+            "Tuscaloosa"
+          ]
+        },
+        {
+          "group": 321,
+          "latents": [
+            1925
+          ],
+          "gain_margin": 169.76,
+          "examples": [
+            "Macon",
+            "Macon",
+            "Champaign"
+          ]
+        },
+        {
+          "group": 1482,
+          "latents": [
+            1054
+          ],
+          "gain_margin": 131.5,
+          "examples": [
+            "Fulton",
+            "Fulton",
+            "Fulton"
+          ]
+        },
+        {
+          "group": 1057,
+          "latents": [
+            35
+          ],
+          "gain_margin": 127.43,
+          "examples": [
+            "Reeves",
+            "Appanoose",
+            "Appanoose"
+          ]
+        },
+        {
+          "group": 166,
+          "latents": [
+            1828
+          ],
+          "gain_margin": 109.68,
+          "examples": [
+            "Medina",
+            "Brazoria",
+            "Brazoria"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1632,
+      "n_groups": 1612,
+      "n_multi_groups": 18,
+      "n_groups_dropped": 1055,
+      "n_groups_unused": 176,
+      "n_removed": 1061,
+      "var_share_removed": 0.5021,
+      "var_share_sae_error": 0.0211,
+      "top": [
+        {
+          "group": 667,
+          "latents": [
+            1435
+          ],
+          "gain_margin": 8864.86,
+          "examples": [
+            "Right hand shoulder closed and right lane closed due to accident on I-95 Southbound at Exits 58A 58B VA-620 Woods Edge Rd.",
+            "Two lanes blocked due to accident on I-65 Northbound between Exit 71 TN-253 Concord Rd and Exits 74A 74B TN-254 Old Hickory Blvd.",
+            "2 left lane blocked due to accident on I-75 Northbound between Exit 229 CR-6 Moccasin Wallow Rd and Exits 240 240A 240B FL-674 College Ave."
+          ]
+        },
+        {
+          "group": 841,
+          "latents": [
+            1054
+          ],
+          "gain_margin": 7104.7,
+          "examples": [
+            "Left lane blocked due to accident on I-65 Southbound at Exit 247 IN-231.",
+            "Lane blocked due to accident on I-65 Southbound at MM277.7.",
+            "Right lane blocked due to accident on I-65 Northbound between Exit 41 IN-250 and Exits 50A 50B US-50 Tipton St."
+          ]
+        },
+        {
+          "group": 539,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 5260.87,
+          "examples": [
+            "Left lane closed and left hand shoulder closed due to accident on I-664 Hampton Roads Bltwy Northbound near 35th St.",
+            "Center lane closed due to accident on I-465 Southbound at Exit 40 Shadeland Ave.",
+            "Left lane closed due to accident on I-664 Hampton Roads Bltwy Southbound at I-64."
+          ]
+        },
+        {
+          "group": 1135,
+          "latents": [
+            732
+          ],
+          "gain_margin": 4379.44,
+          "examples": [
+            "Right hand shoulder blocked due to accident on I-215 Northbound at Ethanac Rd.",
+            "Accident on I-205 Westbound at Naglee Rd.",
+            "Left hand shoulder blocked due to accident on I-275 Northbound after Ford Rd."
+          ]
+        },
+        {
+          "group": 1608,
+          "latents": [
+            219
+          ],
+          "gain_margin": 4358.6,
+          "examples": [
+            "Right hand shoulder closed due to accident on I-695 clockwise at Exit 1 Quarantine Rd.",
+            "Right hand shoulder blocked due to accident on I-20 Westbound at Exits 67 67A 67B 68 I-285.",
+            "Entry ramp to I-880 Southbound from The Alameda Westbound shoulder blocked due to accident."
+          ]
+        }
+      ]
+    },
+    "End_Time": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 360,
+      "n_groups": 314,
+      "n_multi_groups": 31,
+      "n_groups_dropped": 196,
+      "n_groups_unused": 10,
+      "n_removed": 222,
+      "var_share_removed": 0.5337,
+      "var_share_sae_error": 0.0028,
+      "top": [
+        {
+          "group": 95,
+          "latents": [
+            539
+          ],
+          "gain_margin": 984.97,
+          "examples": [
+            "2017-11-30 04:45:27",
+            "2017-11-30 09:11:13",
+            "2017-01-30 23:20:29"
+          ]
+        },
+        {
+          "group": 66,
+          "latents": [
+            1791
+          ],
+          "gain_margin": 861.93,
+          "examples": [
+            "2017-10-30 19:24:55",
+            "2017-10-16 23:30:25",
+            "2017-11-10 19:30:30"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            591,
+            890
+          ],
+          "gain_margin": 724.31,
+          "examples": [
+            "2019-05-01 07:07:00",
+            "2019-05-22 11:00:43",
+            "2019-05-15 07:49:00"
+          ]
+        },
+        {
+          "group": 171,
+          "latents": [
+            956
+          ],
+          "gain_margin": 716.27,
+          "examples": [
+            "2019-10-02 09:45:46",
+            "2019-07-03 11:45:03",
+            "2019-01-04 09:10:39"
+          ]
+        },
+        {
+          "group": 17,
+          "latents": [
+            219,
+            382
+          ],
+          "gain_margin": 631.27,
+          "examples": [
+            "2020-06-12 09:08:06",
+            "2020-06-27 11:08:43",
+            "2020-06-23 09:09:21"
+          ]
+        }
+      ]
+    },
+    "Start_Time": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 405,
+      "n_groups": 363,
+      "n_multi_groups": 33,
+      "n_groups_dropped": 233,
+      "n_groups_unused": 16,
+      "n_removed": 257,
+      "var_share_removed": 0.5086,
+      "var_share_sae_error": 0.0027,
+      "top": [
+        {
+          "group": 32,
+          "latents": [
+            217,
+            1850
+          ],
+          "gain_margin": 999.33,
+          "examples": [
+            "2016-10-20 14:41:41",
+            "2017-11-17 15:37:44",
+            "2017-02-26 15:35:48"
+          ]
+        },
+        {
+          "group": 216,
+          "latents": [
+            1340
+          ],
+          "gain_margin": 933.5,
+          "examples": [
+            "2019-09-30 09:32:48",
+            "2016-08-29 08:22:29",
+            "2016-07-30 14:54:29"
+          ]
+        },
+        {
+          "group": 21,
+          "latents": [
+            124,
+            1130
+          ],
+          "gain_margin": 877.22,
+          "examples": [
+            "2023-02-23 16:22:00",
+            "2023-02-27 07:22:00",
+            "2023-02-02 07:48:00"
+          ]
+        },
+        {
+          "group": 184,
+          "latents": [
+            732
+          ],
+          "gain_margin": 755.87,
+          "examples": [
+            "2020-09-25 13:16:51",
+            "2020-05-12 11:36:18",
+            "2020-03-26 15:46:51"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            232,
+            746
+          ],
+          "gain_margin": 600.85,
+          "examples": [
+            "2022-06-06 10:08:00",
+            "2022-07-20 02:05:00",
+            "2022-06-01 07:29:30"
+          ]
+        }
+      ]
+    },
+    "Street": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1928,
+      "n_groups": 1918,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1197,
+      "n_groups_unused": 96,
+      "n_removed": 1198,
+      "var_share_removed": 0.5243,
+      "var_share_sae_error": 0.0195,
+      "top": [
+        {
+          "group": 28,
+          "latents": [
+            2026
+          ],
+          "gain_margin": 2780.15,
+          "examples": [
+            "I-205 Bus Loop E",
+            "I-265",
+            "I-85 Bus S"
+          ]
+        },
+        {
+          "group": 1908,
+          "latents": [
+            682
+          ],
+          "gain_margin": 2077.95,
+          "examples": [
+            "I-210",
+            "I-210",
+            "I-435"
+          ]
+        },
+        {
+          "group": 1912,
+          "latents": [
+            197
+          ],
+          "gain_margin": 889.25,
+          "examples": [
+            "I-279 S",
+            "I-287 S",
+            "I-275 S"
+          ]
+        },
+        {
+          "group": 764,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 860.91,
+          "examples": [
+            "I-5",
+            "I-5",
+            "I-5"
+          ]
+        },
+        {
+          "group": 946,
+          "latents": [
+            609
+          ],
+          "gain_margin": 632.92,
+          "examples": [
+            "I-20",
+            "I-20",
+            " S Interstate 25"
+          ]
+        }
+      ]
+    },
+    "Weather_Timestamp": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 386,
+      "n_groups": 338,
+      "n_multi_groups": 37,
+      "n_groups_dropped": 221,
+      "n_groups_unused": 9,
+      "n_removed": 240,
+      "var_share_removed": 0.3628,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 176,
+          "latents": [
+            686
+          ],
+          "gain_margin": 953.24,
+          "examples": [
+            "2017-01-30 09:50:00",
+            "2017-10-30 10:56:00",
+            "2016-09-30 09:02:00"
+          ]
+        },
+        {
+          "group": 45,
+          "latents": [
+            287,
+            1835
+          ],
+          "gain_margin": 807.98,
+          "examples": [
+            "2021-10-13 13:54:00",
+            "2020-11-13 13:51:00",
+            "2021-08-13 13:54:00"
+          ]
+        },
+        {
+          "group": 105,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 785.03,
+          "examples": [
+            "2020-05-08 06:24:00",
+            "2020-05-18 08:44:00",
+            "2020-05-27 07:42:00"
+          ]
+        },
+        {
+          "group": 211,
+          "latents": [
+            752
+          ],
+          "gain_margin": 730.53,
+          "examples": [
+            "2016-02-11 08:53:00",
+            "2017-03-14 08:53:00",
+            "2017-02-08 08:51:00"
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            539
+          ],
+          "gain_margin": 602.45,
+          "examples": [
+            "2018-02-25 14:00:00",
+            "2018-02-08 10:54:00",
+            "2018-02-12 07:50:00"
+          ]
+        }
+      ]
+    },
+    "Zipcode": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1225,
+      "n_groups": 1174,
+      "n_multi_groups": 49,
+      "n_groups_dropped": 698,
+      "n_groups_unused": 51,
+      "n_removed": 730,
+      "var_share_removed": 0.3813,
+      "var_share_sae_error": 0.0063,
+      "top": [
+        {
+          "group": 967,
+          "latents": [
+            679
+          ],
+          "gain_margin": 1904.1,
+          "examples": [
+            "27101",
+            "27101",
+            "27107"
+          ]
+        },
+        {
+          "group": 595,
+          "latents": [
+            918
+          ],
+          "gain_margin": 1007.44,
+          "examples": [
+            "85711-6600",
+            "84119-1300",
+            "84337-9332"
+          ]
+        },
+        {
+          "group": 334,
+          "latents": [
+            828
+          ],
+          "gain_margin": 915.59,
+          "examples": [
+            "97220-1667",
+            "17870-9714",
+            "33009-2130"
+          ]
+        },
+        {
+          "group": 224,
+          "latents": [
+            1575
+          ],
+          "gain_margin": 875.83,
+          "examples": [
+            "38572-2858",
+            "32808-7614",
+            "32807-2918"
+          ]
+        },
+        {
+          "group": 196,
+          "latents": [
+            1665
+          ],
+          "gain_margin": 687.21,
+          "examples": [
+            "56001-4693",
+            "56003-4191",
+            "34491-6301"
+          ]
+        }
+      ]
+    }
+  }
+}

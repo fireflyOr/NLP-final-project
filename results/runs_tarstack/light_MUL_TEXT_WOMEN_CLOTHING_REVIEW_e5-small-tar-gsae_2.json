@@ -1,0 +1,175 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7336122108156671,
+  "test_error": 0.7336122108156671,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.904086150235899,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 66.50268411636353,
+  "learner_params": null,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1818,
+      "n_groups": 1811,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 982,
+      "n_groups_unused": 54,
+      "n_removed": 982,
+      "var_share_removed": 0.0844,
+      "var_share_sae_error": 0.0348,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            531,
+            1002
+          ],
+          "gain_margin": 13461.82,
+          "examples": [
+            "I had to review this because i purchased before any reviews were up and now that i've received this dress i'm appalled by all the positive reviews!!! this dress",
+            "This shirt is way too flowy and the pink color is extremely washed out- will definitely be returning!",
+            "These pants looked worn, washed & old looking when i received them! the quality is super thin cotton as if it's been washed a million times & is about to fall a"
+          ]
+        },
+        {
+          "group": 1808,
+          "latents": [
+            83
+          ],
+          "gain_margin": 13037.19,
+          "examples": [
+            "I liked the quality of the top and the design. but when i got a top that fit well across the chest, it was shorter than i usually like my tops, so i will be ret",
+            "I received this jumpsuit today in size medium. i am normally a size 4-6. overall, the jumpsuit fit. i am 5' 8.5\" tall and the length was fine if i wore flats. t",
+            "The lace on this top is pretty, and i liked the way it was styled in the product photos, but did nothing for me on. between the loose sleeves and the boxy cut o"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            828,
+            2038
+          ],
+          "gain_margin": 11428.58,
+          "examples": [
+            "These jeans are amazing! i just got them from retailer the other day and i have worn them almost every day since! i have washed them once. the tag says to turn ",
+            "I bought this tunic is blue. it is now one of my favorite tops to wear with skinny jeans or even leggings. i have always love rayon. this top did not disappoint",
+            "Love, love, love this shirt! much like last year's bordeaux shirt in this style, it's very soft, very flattering, and very comfortable. fits tts, and the fabric"
+          ]
+        },
+        {
+          "group": 1806,
+          "latents": [
+            698
+          ],
+          "gain_margin": 10765.51,
+          "examples": [
+            "Why do designers keep making crop tops??!! i can't imagine this would be flattering on anyone, especially someone average height and well endowed on top. i look",
+            "Saw this on line and decided to \"splurge\" for the holidays. arrived today and is going right back. runs very small especially in the waist. trim is a cheap ribb",
+            "I had high hopes for this sweater and when i found it on sale online, i jumped at the opportunity. i am 5'11\", slender and always wear a small in retailer tops."
+          ]
+        },
+        {
+          "group": 1801,
+          "latents": [
+            437
+          ],
+          "gain_margin": 4960.37,
+          "examples": [
+            "This is literally the most unflattering thing i have ever tried on from retailer. the sleeves are so weird and ugly. they get really fat at the top, like a dolm",
+            "This jumpsuit looked so great on the model, and looked so hideous on me. i'm 5'4\" and in great shape, and this jumpsuit looked absolutely ridiculous....not to m",
+            "After reading the previous reviews i thought sizing down would be a great idea. as soon as i pulled it out of the bag i knew that the xs/s was still wayyy too b"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1548,
+      "n_groups": 1542,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 999,
+      "n_groups_unused": 55,
+      "n_removed": 1001,
+      "var_share_removed": 0.2563,
+      "var_share_sae_error": 0.013,
+      "top": [
+        {
+          "group": 22,
+          "latents": [
+            106,
+            437
+          ],
+          "gain_margin": 13266.78,
+          "examples": [
+            "Looks cheap",
+            "Huge arm holes",
+            "Has no shape"
+          ]
+        },
+        {
+          "group": 1535,
+          "latents": [
+            828
+          ],
+          "gain_margin": 6756.67,
+          "examples": [
+            "Flattering and comfy - my perfect jean!",
+            "Perfect, comfy, feminine summer dress!",
+            "Super chic skirt..perfect for fall!"
+          ]
+        },
+        {
+          "group": 1541,
+          "latents": [
+            59
+          ],
+          "gain_margin": 3355.84,
+          "examples": [
+            "I loved this blouse - except for the sizing",
+            "Lovely but shrinks a lot",
+            "Great for shorter torsos ... not so much on me"
+          ]
+        },
+        {
+          "group": 10,
+          "latents": [
+            83,
+            539
+          ],
+          "gain_margin": 2451.35,
+          "examples": [
+            "Nice quality but too short for my tall frame",
+            "Nice top but too long in back",
+            "Lovely, but needs better sizing"
+          ]
+        },
+        {
+          "group": 280,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 2426.54,
+          "examples": [
+            "So disappointing!",
+            "So disappointed.",
+            "Soooo disappointed!"
+          ]
+        }
+      ]
+    }
+  }
+}

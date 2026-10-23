@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13870.850320354639,
+  "test_error": 13870.850320354639,
+  "course_metric": "r2",
+  "course_score": 0.756362268429523,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.1500518321991,
+  "learner_params": null,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2034,
+      "n_groups": 2023,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1273,
+      "n_groups_unused": 379,
+      "n_removed": 1275,
+      "var_share_removed": 0.5027,
+      "var_share_sae_error": 0.0236,
+      "top": [
+        {
+          "group": 212,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 762.42,
+          "examples": [
+            "Corbo, R",
+            "Corbo, R",
+            "Corbo, R"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            1439,
+            1672
+          ],
+          "gain_margin": 740.85,
+          "examples": [
+            "Wong, C*",
+            "Wong, B*",
+            "Grant, K K*"
+          ]
+        },
+        {
+          "group": 170,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 518.57,
+          "examples": [
+            "Connelly, T",
+            "Connelly, T",
+            "Connelly, T"
+          ]
+        },
+        {
+          "group": 1814,
+          "latents": [
+            1503
+          ],
+          "gain_margin": 491.59,
+          "examples": [
+            "Ford, G",
+            "Ford, L*",
+            "Ford, L"
+          ]
+        },
+        {
+          "group": 990,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 435.06,
+          "examples": [
+            "Aujla, K",
+            "Aujla, K",
+            "Aujla, K"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 988,
+      "n_groups": 987,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 667,
+      "n_groups_unused": 238,
+      "n_removed": 668,
+      "var_share_removed": 0.1977,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 413,
+          "latents": [
+            911
+          ],
+          "gain_margin": 9069.33,
+          "examples": [
+            "Chief Of Internal Audit",
+            "Chief Of Internal Audit",
+            "A/Chief Manager Ems"
+          ]
+        },
+        {
+          "group": 127,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 5960.17,
+          "examples": [
+            "Deputy General Manager",
+            "Deputy General Manager",
+            "Deputy General Manager"
+          ]
+        },
+        {
+          "group": 871,
+          "latents": [
+            305
+          ],
+          "gain_margin": 4910.89,
+          "examples": [
+            "Chief Technology Officer",
+            "Chief Information Officer (IT)",
+            "Chief Communications Officer"
+          ]
+        },
+        {
+          "group": 755,
+          "latents": [
+            204
+          ],
+          "gain_margin": 3555.92,
+          "examples": [
+            "Technical Specialist",
+            "Technical Specialist",
+            "Technical Specialist"
+          ]
+        },
+        {
+          "group": 213,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 2313.9,
+          "examples": [
+            "Manager Capital Maintenance",
+            "Manager Capital Maintenance",
+            "MANAGER CAPITAL MAINTENANCE"
+          ]
+        }
+      ]
+    }
+  }
+}

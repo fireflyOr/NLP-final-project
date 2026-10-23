@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-pls",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7835936830231268,
+  "test_error": 0.7835936830231268,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9816972722220608,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 243.15370225906372,
+  "learner_params": null,
+  "diagnostics": {}
+}

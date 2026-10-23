@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.0013960893486324,
+  "test_error": 1.0013960893486324,
+  "course_metric": "r2",
+  "course_score": 0.3630480120149544,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 30.0944082736969,
+  "learner_params": null,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2044,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1624,
+      "n_groups_unused": 716,
+      "n_removed": 1625,
+      "var_share_removed": 0.4388,
+      "var_share_sae_error": 0.0504,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            1233,
+            1439
+          ],
+          "gain_margin": 9607.09,
+          "examples": [
+            "The Legend of Zelda",
+            "Far Cry 2",
+            "Far Cry 2"
+          ]
+        },
+        {
+          "group": 189,
+          "latents": [
+            1885
+          ],
+          "gain_margin": 5852.3,
+          "examples": [
+            "Mario Kart Wii",
+            "Mario Party 6",
+            "Mario Party 10"
+          ]
+        },
+        {
+          "group": 135,
+          "latents": [
+            1800
+          ],
+          "gain_margin": 4395.08,
+          "examples": [
+            "Billy's Boot Camp: Wii de Enjoy Diet!",
+            "Jinsei Game Wii",
+            "Yoga Wii"
+          ]
+        },
+        {
+          "group": 1014,
+          "latents": [
+            1751
+          ],
+          "gain_margin": 3178.27,
+          "examples": [
+            "Mr Bean's Wacky World of Wii",
+            "BioShock The Collection",
+            "BioShock The Collection"
+          ]
+        },
+        {
+          "group": 1112,
+          "latents": [
+            472
+          ],
+          "gain_margin": 2924.37,
+          "examples": [
+            "Super Smash Bros. for Wii U and 3DS",
+            "The Elder Scrolls Online",
+            "Super Smash Bros. Melee"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 977,
+      "n_groups": 977,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 921,
+      "n_groups_unused": 312,
+      "n_removed": 921,
+      "var_share_removed": 0.7186,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 639,
+          "latents": [
+            111
+          ],
+          "gain_margin": 1985.08,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 638,
+          "latents": [
+            998
+          ],
+          "gain_margin": 1196.47,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 654,
+          "latents": [
+            472
+          ],
+          "gain_margin": 1032.63,
+          "examples": [
+            "Microsoft Game Studios",
+            "Microsoft Game Studios",
+            "Microsoft Game Studios"
+          ]
+        },
+        {
+          "group": 477,
+          "latents": [
+            957
+          ],
+          "gain_margin": 623.08,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 42,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 477.29,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

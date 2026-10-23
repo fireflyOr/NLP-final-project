@@ -1,0 +1,397 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.22894782737765157,
+  "test_error": 0.22894782737765157,
+  "course_metric": "r2",
+  "course_score": 0.5058789907779693,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 47.96876311302185,
+  "learner_params": null,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1662,
+      "n_groups": 1662,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1115,
+      "n_groups_unused": 425,
+      "n_removed": 1015,
+      "var_share_removed": 0.5719,
+      "var_share_sae_error": 0.0031,
+      "top": [
+        {
+          "group": 383,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1151.65,
+          "examples": [
+            "S Meenakshi Ammal",
+            "Manohar Pandey",
+            "Saradindu Bandyopadhyay"
+          ]
+        },
+        {
+          "group": 1658,
+          "latents": [
+            305
+          ],
+          "gain_margin": 732.02,
+          "examples": [
+            "Andrew Minteer",
+            "Sony Interactive Entertainment, Santa Monica Studios",
+            "Sony Interactive Entertainment, Santa Monica Studios"
+          ]
+        },
+        {
+          "group": 830,
+          "latents": [
+            477
+          ],
+          "gain_margin": 547.46,
+          "examples": [
+            "Ritu Arora",
+            "Supratim Sarkar",
+            "R. S. Salaria"
+          ]
+        },
+        {
+          "group": 246,
+          "latents": [
+            1523
+          ],
+          "gain_margin": 393.75,
+          "examples": [
+            "Bhaskar Chattopadhyay",
+            "Bharanidharan",
+            "R.P. Sinha"
+          ]
+        },
+        {
+          "group": 222,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 321.7,
+          "examples": [
+            "Lawrence Weinstein",
+            "Dice Media",
+            "Eric Matthes"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 683,
+      "n_groups": 659,
+      "n_multi_groups": 21,
+      "n_groups_dropped": 462,
+      "n_groups_unused": 136,
+      "n_removed": 375,
+      "var_share_removed": 0.3587,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 561,
+          "latents": [
+            204
+          ],
+          "gain_margin": 694.2,
+          "examples": [
+            "Flexibound,\u2013 27 Sep 2011",
+            "Flexibound,\u2013 21 Oct 2014",
+            "Flexibound,\u2013 1 Dec 2015"
+          ]
+        },
+        {
+          "group": 64,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 516.01,
+          "examples": [
+            "Hardcover,\u2013 11 Jun 2009",
+            "Hardcover,\u2013 16 Jun 2005",
+            "Hardcover,\u2013 20 May 1993"
+          ]
+        },
+        {
+          "group": 539,
+          "latents": [
+            305
+          ],
+          "gain_margin": 425.02,
+          "examples": [
+            "Hardcover,\u2013 Deckle Edge, 18 Oct 2011",
+            "Hardcover,\u2013 Deckle Edge, 7 Mar 2017",
+            "Hardcover,\u2013 Box set, 2 Aug 2009"
+          ]
+        },
+        {
+          "group": 651,
+          "latents": [
+            911
+          ],
+          "gain_margin": 359.69,
+          "examples": [
+            "Hardcover,\u2013 Illustrated, Import",
+            "Hardcover,\u2013 Import, 31 Dec 2008",
+            "Hardcover,\u2013 Import, 1 Jan 1964"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            878,
+            1546
+          ],
+          "gain_margin": 339.78,
+          "examples": [
+            "(Kannada),Paperback,\u2013 2014",
+            "Paperback,\u2013 2019",
+            "Paperback,\u2013 2019"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 695,
+      "n_groups": 695,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 568,
+      "n_groups_unused": 88,
+      "n_removed": 499,
+      "var_share_removed": 0.545,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 99,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 616.71,
+          "examples": [
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        },
+        {
+          "group": 495,
+          "latents": [
+            867
+          ],
+          "gain_margin": 309.28,
+          "examples": [
+            "Software Testing",
+            "Calculus",
+            "Python Programming"
+          ]
+        },
+        {
+          "group": 346,
+          "latents": [
+            1226
+          ],
+          "gain_margin": 172.43,
+          "examples": [
+            "Children's Language Learning (Books)",
+            "Children's Language Learning (Books)",
+            "Children's Language Learning (Books)"
+          ]
+        },
+        {
+          "group": 161,
+          "latents": [
+            1432
+          ],
+          "gain_margin": 163.42,
+          "examples": [
+            "API & Operating Environments",
+            "Computer Databases (Books)",
+            "Computer Databases (Books)"
+          ]
+        },
+        {
+          "group": 645,
+          "latents": [
+            529
+          ],
+          "gain_margin": 142.26,
+          "examples": [
+            "Photography Textbooks",
+            "Photography Textbooks",
+            "Photography Textbooks"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1727,
+      "n_groups": 1727,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1204,
+      "n_groups_unused": 498,
+      "n_removed": 1054,
+      "var_share_removed": 0.5303,
+      "var_share_sae_error": 0.0199,
+      "top": [
+        {
+          "group": 1723,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2605.95,
+          "examples": [
+            "A New York Times, Wall Street Journal, Publishers Weekly, and USA Today bestseller\n\n\"Newport is making a bid to be the Marie Kondo of technology: someone with a",
+            "Arguably the most influential, imaginative, and provocative designer of his generation, Alexander McQueen both challenged and expanded fashion conventions to ex",
+            "A priceless examination of the filmmaker's craft, from the renowned director of Sweet Smell of Success\nAfter more than twenty years in the film industry as a sc"
+          ]
+        },
+        {
+          "group": 239,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 2117.97,
+          "examples": [
+            "A single betrayal can cost you everything... 1998. Twenty-two-year-old Mina is moving to the US from Bangalore to begin a new life with her husband. Then there\u2019",
+            "Six months have passed since Prisha was pushed to death by the person she loved the most, Saveer. But she doesn't believes that it was him till she stumbles upo",
+            "They say love happens only once, is it so? They say love is blind, is it so? They say love thrives in missing each other. The question is \u2018how much?\u2019 Ankita, an"
+          ]
+        },
+        {
+          "group": 1726,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1685.03,
+          "examples": [
+            "Are you intent on capturing the perfect sunset? A budding photojournalist? Or ready to take your holiday snaps to the next level? The Complete Guide to Digital ",
+            "Are you intent on capturing the perfect sunset? A budding photojournalist? Or ready to take your holiday snaps to the next level? The Complete Guide to Digital ",
+            "Running is America\u2019s most popular participatory sport, yet more than half of those who identify as runners get injured every year. Falling prey to injuries from"
+          ]
+        },
+        {
+          "group": 862,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1487.99,
+          "examples": [
+            "The Data Warehouse ETL Toolkit: Practical Techniques for Extracting, Cleaning, Conforming and Delivering Data has been authored by Ralph Kimball and Joe Caserta",
+            "The new edition of bestselling CCNA Cert Library by Wendell Odom is a comprehensive review and practice package for the latest CCNA exams. The two books contain",
+            "CCENT/CCNA ICND1 Official Certification Guide is a comprehensive self-study tool for professionals preparing for the new ICND1 exam. Complete coverage of all ex"
+          ]
+        },
+        {
+          "group": 1314,
+          "latents": [
+            529
+          ],
+          "gain_margin": 531.62,
+          "examples": [
+            "A revised edition of the classic drawing book that has sold more than 1.7 million copies in the United States alone. Translated into more than seventeen languag",
+            "The multiple stresses of contemporary life\u2014whether from excessive sports play, overwork, or overuse of technology\u2014are increasingly taking a toll on the body. Sy",
+            "Following in the footsteps of the all-time best-selling The Big Book of Logos, this deluxe, full-color volume is packed with 2,500 superior new logo designs, cu"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1815,
+      "n_groups": 1815,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1277,
+      "n_groups_unused": 469,
+      "n_removed": 1169,
+      "var_share_removed": 0.627,
+      "var_share_sae_error": 0.0197,
+      "top": [
+        {
+          "group": 1488,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1825.89,
+          "examples": [
+            "Daredevil by Frank Miller & Klaus Jason Omnibus (New Printing): '2016/03/15",
+            "The Art of God of War",
+            "The Art of God of War"
+          ]
+        },
+        {
+          "group": 450,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1778.53,
+          "examples": [
+            "Private: No. 1 Suspect: (Private 4)",
+            "The Last Mrs Parrish",
+            "The Boy is Back"
+          ]
+        },
+        {
+          "group": 1814,
+          "latents": [
+            204
+          ],
+          "gain_margin": 730.22,
+          "examples": [
+            "On Film-making: An Introduction to the Craft of the Director",
+            "Wabi Sabi: The Japanese Art of Impermanence",
+            "Manga Crash Course: Drawing Manga Characters and Scenes from Start to Finish"
+          ]
+        },
+        {
+          "group": 452,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 454.34,
+          "examples": [
+            "Complete Screenwriting Course: A complete guide to writing, developing and marketing a script for TV or film (Teach Yourself)",
+            "Writing That Works, 3rd Edition: How to Communicate Effectively in Business",
+            "Understanding Comics"
+          ]
+        },
+        {
+          "group": 112,
+          "latents": [
+            1881
+          ],
+          "gain_margin": 416.26,
+          "examples": [
+            "Cambridge International AS and A Level IT Coursebook with CD-ROM (Cambridge International Examinations)",
+            "Alfred's Basic Chord Approach to Electronic Keyboards, Lesson Book 1: A Beginning Method for All Instruments With Automatic Rhythms & Chords (Alfred's Basic Pia",
+            "Alfred's Basic Chord Approach to Electronic Keyboards, Lesson Book 1: A Beginning Method for All Instruments With Automatic Rhythms & Chords (Alfred's Basic Pia"
+          ]
+        }
+      ]
+    }
+  }
+}

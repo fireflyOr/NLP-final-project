@@ -1,0 +1,471 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8285104403808295,
+  "test_error": 0.8285104403808295,
+  "course_metric": "r2",
+  "course_score": 0.8103078614642906,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 58.5632107257843,
+  "learner_params": null,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 443,
+      "n_groups": 443,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 351,
+      "n_groups_unused": 107,
+      "n_removed": 351,
+      "var_share_removed": 0.389,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 86,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 598.08,
+          "examples": [
+            "The Nursery, No. 107, November, 1875, Vol. XVIII.\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 107, November, 1875, Vol. XVIII.\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 107, November, 1875, Vol. XVIII.\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 322,
+          "latents": [
+            396
+          ],
+          "gain_margin": 379.0,
+          "examples": [
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm",
+            "Fairy Tales By The Brothers Grimm"
+          ]
+        },
+        {
+          "group": 360,
+          "latents": [
+            349
+          ],
+          "gain_margin": 240.41,
+          "examples": [
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 313,
+          "latents": [
+            455
+          ],
+          "gain_margin": 215.03,
+          "examples": [
+            "The Nursery, July 1873, Vol. XIV. No. 1",
+            "The Nursery, July 1873, Vol. XIV. No. 1",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers"
+          ]
+        },
+        {
+          "group": 200,
+          "latents": [
+            813
+          ],
+          "gain_margin": 135.94,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1299,
+      "n_groups": 1299,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1058,
+      "n_groups_unused": 452,
+      "n_removed": 1058,
+      "var_share_removed": 0.4336,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 469,
+          "latents": [
+            911
+          ],
+          "gain_margin": 305.79,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1015,
+          "latents": [
+            477
+          ],
+          "gain_margin": 200.45,
+          "examples": [
+            "Freddie's Papa",
+            "African Storybook and Paul Walugo",
+            "Aunt Nellie"
+          ]
+        },
+        {
+          "group": 98,
+          "latents": [
+            1946
+          ],
+          "gain_margin": 170.0,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1148,
+          "latents": [
+            77
+          ],
+          "gain_margin": 151.05,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1298,
+          "latents": [
+            349
+          ],
+          "gain_margin": 126.22,
+          "examples": [
+            "Grace's Papa",
+            "Freddie's Papa",
+            "Uncle Charles's Nephew"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 97,
+      "n_groups": 93,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 86,
+      "n_groups_unused": 17,
+      "n_removed": 90,
+      "var_share_removed": 0.3337,
+      "var_share_sae_error": 0.0036,
+      "top": [
+        {
+          "group": 85,
+          "latents": [
+            1153
+          ],
+          "gain_margin": 1.23,
+          "examples": [
+            "discoloured",
+            "colourful",
+            "coloured, favourites"
+          ]
+        },
+        {
+          "group": 38,
+          "latents": [
+            999
+          ],
+          "gain_margin": 0.85,
+          "examples": [
+            "endeavours",
+            "labour, neighbours",
+            "labour, neighbours"
+          ]
+        },
+        {
+          "group": 75,
+          "latents": [
+            707
+          ],
+          "gain_margin": 0.79,
+          "examples": [
+            "discoloured",
+            "ploughed",
+            "reconnoitred"
+          ]
+        },
+        {
+          "group": 22,
+          "latents": [
+            1292
+          ],
+          "gain_margin": 0.33,
+          "examples": [
+            "neighbouring",
+            "neighbouring, traveller",
+            "endeavours"
+          ]
+        },
+        {
+          "group": 91,
+          "latents": [
+            99
+          ],
+          "gain_margin": 0.13,
+          "examples": [
+            "sulphur, sulphur",
+            "kilometres, metres, metres",
+            "metre, metres"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1166,
+      "n_groups": 1166,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 937,
+      "n_groups_unused": 564,
+      "n_removed": 937,
+      "var_share_removed": 0.0601,
+      "var_share_sae_error": 0.0082,
+      "top": [
+        {
+          "group": 1162,
+          "latents": [
+            294
+          ],
+          "gain_margin": 2379.27,
+          "examples": [
+            "Social networks can tell us something about the people in them. When somebody is in a difficult situation, they can use a little help from their friends. Who ha",
+            "Now, what strange novelties worthy of note I observed during the time of my abode there, I will relate unto you. The first is, that they are not begotten of wom",
+            "Some of the girls sell their text-books when they're through with them, but I intend to keep mine. Then after I've graduated I shall have my whole education in "
+          ]
+        },
+        {
+          "group": 285,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 2112.87,
+          "examples": [
+            "I am very fond of babies. One reason of it, I think, is, that they cannot hurt me with their little hands. They pull my ears, but not so hard as to give me pain",
+            "Lion said to Hyena, \"Can't we even find peace in our dens? You throw dust into our eyes!\" Hyena answered, \"King, I did not mean to disrespect you! I am only run",
+            "A few months later, Meseret wanted to build a new hut for himself. He thought, \"I'll burn down my old hut and build a big new one.\" Meseret began to carry every"
+          ]
+        },
+        {
+          "group": 1147,
+          "latents": [
+            200
+          ],
+          "gain_margin": 1669.64,
+          "examples": [
+            "From September 26, 1882, to September 1, 1883, night and day uninterruptedly, a watch was kept, in which the officers took part, so that the observations might ",
+            "As to surface-slope its measurement\u2014from nearly 600 trials\u2014was found to be such a delicate operation that the result would be of doubtful utility. This would af",
+            "Nowadays, many of us think about corn grains as food for chickens, pigs, and other farm animals, but corn has many other uses. In the food industry, corn starch"
+          ]
+        },
+        {
+          "group": 549,
+          "latents": [
+            911
+          ],
+          "gain_margin": 1481.88,
+          "examples": [
+            "On January 28, 2013, thousands of scientists all over the world held their breath. The European Community was about to announce which among 26 competing researc",
+            "Aluminum is derived from the oxide alumina, which is the principal constituent of common clay. Lavoissier, a celebrated French chemist, first suggested the exis",
+            "In 1943 and 1944 the government assembled a combat unit of Japanese Americans for the European theater. It became the 442d Regimental Combat Team and gained fam"
+          ]
+        },
+        {
+          "group": 286,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 1479.77,
+          "examples": [
+            "In law, human rights is the idea that all people should have rights:\nAll human beings are born free and equal in dignity and rights.\n\u2014Article 1 of the United Na",
+            "On January 28, 2013, thousands of scientists all over the world held their breath. The European Community was about to announce which among 26 competing researc",
+            "The Iron Curtain formed the imaginary boundary dividing Europe into two separate areas from the end of World War II in 1945 until the end of the Cold War in 199"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1698,
+      "n_groups": 1698,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1362,
+      "n_groups_unused": 680,
+      "n_removed": 1362,
+      "var_share_removed": 0.4059,
+      "var_share_sae_error": 0.0212,
+      "top": [
+        {
+          "group": 422,
+          "latents": [
+            1436
+          ],
+          "gain_margin": 258.94,
+          "examples": [
+            "THE WHITE CAT",
+            "TELLING A STORY",
+            "A Story that Never Ends"
+          ]
+        },
+        {
+          "group": 788,
+          "latents": [
+            477
+          ],
+          "gain_margin": 231.46,
+          "examples": [
+            "The Dream of the Oak Tree",
+            "NELLIE'S LITTLE BROTHER",
+            "HOW MY BOYS HELPED THEIR MOTHER"
+          ]
+        },
+        {
+          "group": 1696,
+          "latents": [
+            349
+          ],
+          "gain_margin": 217.08,
+          "examples": [
+            "TINY HARE AND THE WIND BALL",
+            "THE WOLF\nAND\nThe Seven Young Goslings.",
+            "Arion and the Dolphin"
+          ]
+        },
+        {
+          "group": 253,
+          "latents": [
+            911
+          ],
+          "gain_margin": 164.76,
+          "examples": [
+            "The Evolution of Bacteria Can Produce Chimeric Creatures: The Case of Azotobacter vinelandii",
+            "Ozone_layer",
+            "Network Science: From Chemistry to Digital Society"
+          ]
+        },
+        {
+          "group": 1692,
+          "latents": [
+            688
+          ],
+          "gain_margin": 160.06,
+          "examples": [
+            "The Nightingale and the Rose",
+            "THE SHEEP FOLLOW THE SHEPHERD",
+            "HOW THE SHEEP WERE SAVED"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 993,
+      "n_groups": 992,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 757,
+      "n_groups_unused": 329,
+      "n_removed": 757,
+      "var_share_removed": 0.2642,
+      "var_share_sae_error": 0.0045,
+      "top": [
+        {
+          "group": 978,
+          "latents": [
+            349
+          ],
+          "gain_margin": 788.96,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#WINDBALL",
+            "http://www.gutenberg.org/files/40757/40757-h/40757-h.htm#Page_168",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#BREADBOY"
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 654.91,
+          "examples": [
+            "http://www.gutenberg.org/files/40756/40756-h/40756-h.htm#Page_132",
+            "http://www.gutenberg.org/files/40755/40755-h/40755-h.htm#Page_125",
+            "http://www.gutenberg.org/files/24941/24941-h/24941-h.htm#Page_105"
+          ]
+        },
+        {
+          "group": 922,
+          "latents": [
+            911
+          ],
+          "gain_margin": 389.54,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Brain_implant",
+            "https://en.wikipedia.org/wiki/Exoplanet",
+            "https://en.wikipedia.org/wiki/Armed_neutrality"
+          ]
+        },
+        {
+          "group": 466,
+          "latents": [
+            477
+          ],
+          "gain_margin": 343.59,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_316",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_182",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_269"
+          ]
+        },
+        {
+          "group": 446,
+          "latents": [
+            688
+          ],
+          "gain_margin": 329.17,
+          "examples": [
+            "http://www.gutenberg.org/files/24941/24941-h/24941-h.htm#Page_122",
+            "https://www.commonlit.org/texts/the-sheep-and-the-pig",
+            "http://www.gutenberg.org/files/20748/20748-h/20748-h.htm#bears"
+          ]
+        }
+      ]
+    }
+  }
+}

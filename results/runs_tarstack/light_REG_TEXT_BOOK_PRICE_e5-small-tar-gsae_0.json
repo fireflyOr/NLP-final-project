@@ -1,0 +1,398 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2359541940279361,
+  "test_error": 0.2359541940279361,
+  "course_metric": "r2",
+  "course_score": 0.5069033996585623,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 47.866161823272705,
+  "learner_params": null,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1625,
+      "n_groups": 1625,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1095,
+      "n_groups_unused": 393,
+      "n_removed": 1095,
+      "var_share_removed": 0.4503,
+      "var_share_sae_error": 0.0029,
+      "top": [
+        {
+          "group": 336,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 852.22,
+          "examples": [
+            "Ramkrishna Gopal Bhandrakar, S.R. Bhandarkar",
+            "Manohar Pandey",
+            "Meena Kandasamy"
+          ]
+        },
+        {
+          "group": 1623,
+          "latents": [
+            477
+          ],
+          "gain_margin": 740.44,
+          "examples": [
+            "Parvati Sharma",
+            "Parvati Sharma",
+            "Nikita Singh"
+          ]
+        },
+        {
+          "group": 1265,
+          "latents": [
+            305
+          ],
+          "gain_margin": 658.34,
+          "examples": [
+            "Mike Perez",
+            "David L. Cannon",
+            "Catrin Brown, Mike Ford"
+          ]
+        },
+        {
+          "group": 1621,
+          "latents": [
+            396
+          ],
+          "gain_margin": 475.45,
+          "examples": [
+            "Sadhu Singh",
+            "Nikhil Sharma Shantanu Gupta",
+            "R.P. Sinha"
+          ]
+        },
+        {
+          "group": 1624,
+          "latents": [
+            204
+          ],
+          "gain_margin": 392.05,
+          "examples": [
+            "Osamu Tezuka",
+            "Osamu Tezuka",
+            "Max Euwe"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 728,
+      "n_groups": 687,
+      "n_multi_groups": 29,
+      "n_groups_dropped": 502,
+      "n_groups_unused": 145,
+      "n_removed": 523,
+      "var_share_removed": 0.442,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 26,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 734.44,
+          "examples": [
+            "Hardcover,\u2013 Illustrated, 14 Jun 2015",
+            "Hardcover,\u2013 Facsimile, 31 May 2011",
+            "Hardcover,\u2013 30 Jun 2008"
+          ]
+        },
+        {
+          "group": 381,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 334.68,
+          "examples": [
+            "Hardcover,\u2013 11 Jan 2018",
+            "Hardcover,\u2013 30 Jan 2018",
+            "Hardcover,\u2013 6 Jan 2012"
+          ]
+        },
+        {
+          "group": 439,
+          "latents": [
+            472
+          ],
+          "gain_margin": 282.02,
+          "examples": [
+            "Hardcover,\u2013 19 Feb 2008",
+            "Hardcover,\u2013 20 Feb 2017",
+            "Hardcover,\u2013 20 Feb 2017"
+          ]
+        },
+        {
+          "group": 24,
+          "latents": [
+            688,
+            1492,
+            1546
+          ],
+          "gain_margin": 265.01,
+          "examples": [
+            "Paperback,\u2013 1 Apr 2019",
+            "Paperback,\u2013 1 Apr 2019",
+            "Paperback,\u2013 1 Apr 2019"
+          ]
+        },
+        {
+          "group": 148,
+          "latents": [
+            1061
+          ],
+          "gain_margin": 263.03,
+          "examples": [
+            "Product Bundle,\u2013 26 Aug 2016",
+            "Flexibound,\u2013 21 Oct 2014",
+            "Hardcover,\u2013 Facsimile, 31 May 2011"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 732,
+      "n_groups": 732,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 594,
+      "n_groups_unused": 102,
+      "n_removed": 594,
+      "var_share_removed": 0.5698,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 145,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 743.83,
+          "examples": [
+            "Words, Language & Grammar Reference",
+            "Essays (Books)",
+            "Essays (Books)"
+          ]
+        },
+        {
+          "group": 351,
+          "latents": [
+            867
+          ],
+          "gain_margin": 505.39,
+          "examples": [
+            "Software Testing",
+            "Software Testing",
+            "Biotechnology Engineering Textbooks"
+          ]
+        },
+        {
+          "group": 381,
+          "latents": [
+            620
+          ],
+          "gain_margin": 314.81,
+          "examples": [
+            "Children's Language Learning (Books)",
+            "Children's Language Learning (Books)",
+            "Children's Language Learning (Books)"
+          ]
+        },
+        {
+          "group": 577,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 236.34,
+          "examples": [
+            "Design Pattern Programming",
+            "Design Pattern Programming",
+            "Design Pattern Programming"
+          ]
+        },
+        {
+          "group": 75,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 190.27,
+          "examples": [
+            "Design",
+            "Design",
+            "Design"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1738,
+      "n_groups": 1738,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1264,
+      "n_groups_unused": 517,
+      "n_removed": 1264,
+      "var_share_removed": 0.4226,
+      "var_share_sae_error": 0.0184,
+      "top": [
+        {
+          "group": 1530,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2395.29,
+          "examples": [
+            "Poker champion turned business consultant Annie Duke teaches you how to get comfortable with uncertainty and make better decisions as a result.\n\nIn Super Bowl X",
+            "(Piano Method). The great Baroque master composer Johann Sebastian Bach (1685-1750) wrote music for every combination of instruments and voices. His simplest an",
+            "Winner of the Pulitzer Prize\n\nA metaphorical fugue on minds and machines in the spirit of Lewis Carroll\n\nDouglas Hofstadter's book is concerned directly with th"
+          ]
+        },
+        {
+          "group": 107,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 2288.35,
+          "examples": [
+            "What does an idea look like? And where do they come from? Grant Snider's illustrations will motivate you to explore these questions, inspire you to come up with",
+            "This kit will be a must-have for millions of dedicated fans of Game of Thrones, HBO's global television phenomenon. It includes a 4\u201d replica of Jon Snow's sword",
+            "\"You\u2019ll initially find it hard to believe that these pictures are real\u2014but they are. These are the most beautiful photographs of the world\u2019s most beautiful bird"
+          ]
+        },
+        {
+          "group": 546,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1484.59,
+          "examples": [
+            "Six months have passed since Prisha was pushed to death by the person she loved the most, Saveer. But she doesn't believes that it was him till she stumbles upo",
+            "In every angel a demon hides, And in every demon, an angel strides. Neel is a self-proclaimed demon, a slave to his desires, putting at stake even the purest of",
+            "Soulmate is not just a love story but a life-changing story. It talks about every phase of life from teenage to adulthood. This book describes a small town girl"
+          ]
+        },
+        {
+          "group": 1737,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1478.78,
+          "examples": [
+            "Modernist aesthetics in architecture, art, and product design are familiar to many. In soaring glass structures or minimalist canvases, we recognize a time of v",
+            "Even among the most elite performers, certain athletes stand out as a cut above the rest, able to outperform in clutch, game-deciding moments. These athletes pr",
+            "The ultimate survival guide, How to Write a Movie in 21 Days takes the aspiring screenwriter the shortest distance from blank page to complete script.\nViki King"
+          ]
+        },
+        {
+          "group": 1732,
+          "latents": [
+            529
+          ],
+          "gain_margin": 850.38,
+          "examples": [
+            "Coming to cinemas in November 2019, under the title LE MANS '66\n____________________\n\nIn the 1960s Enzo Ferrari emerged as the dominant force in sports cars in ",
+            "A one-of-a-kind miniature replica of the Hogwarts School of Witchcraft and Wizardry for fans and collectors of Harry Potter and J. K. Rowling's Wizarding World.",
+            "The bestselling guide to branding, updated with emerging trends and technologies Designing Brand Identity provides in-depth guidance for the entire branding tea"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1776,
+      "n_groups": 1776,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1254,
+      "n_groups_unused": 536,
+      "n_removed": 1254,
+      "var_share_removed": 0.4668,
+      "var_share_sae_error": 0.0182,
+      "top": [
+        {
+          "group": 442,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1755.8,
+          "examples": [
+            "Key Words 3c: Let me write",
+            "The Malhotra Bride",
+            "Tantri The Mantri 6 : Wicked Wiles"
+          ]
+        },
+        {
+          "group": 1352,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1471.71,
+          "examples": [
+            "100 Of The Most Beautiful Piano Solos Ever",
+            "The Art of God of War",
+            "The Art of God of War"
+          ]
+        },
+        {
+          "group": 1775,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1113.33,
+          "examples": [
+            "One Piece: East Blue 7-8-9, Vol. 3 (Omnibus Edition) (One Piece (Omnibus Edition))",
+            "One Piece: East Blue 7-8-9, Vol. 3 (Omnibus Edition) (One Piece (Omnibus Edition))",
+            "Uzumaki Naruto: Illustrations"
+          ]
+        },
+        {
+          "group": 1774,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 833.84,
+          "examples": [
+            "250 Stencil Designs from India (Dover Pictorial Archive)",
+            "Fifty Cars that Changed the World: Design Museum Fifty",
+            "CAD/CAM: Concepts and Applications"
+          ]
+        },
+        {
+          "group": 1769,
+          "latents": [
+            663
+          ],
+          "gain_margin": 433.82,
+          "examples": [
+            "The Longest Night: A collection of poetry from a life half lived",
+            "SAT Power Vocab: A Complete Guide to Vocabulary Skills and Strategies for the SAT (College Test Preparation)",
+            "Endure: Mind, Body and the Curiously Elastic Limits of Human Performance"
+          ]
+        }
+      ]
+    }
+  }
+}

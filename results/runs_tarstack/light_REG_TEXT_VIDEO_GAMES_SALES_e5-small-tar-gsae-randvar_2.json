@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.4053940273172478,
+  "test_error": 1.4053940273172478,
+  "course_metric": "r2",
+  "course_score": 0.3146261339550629,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 29.93987798690796,
+  "learner_params": null,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2042,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1616,
+      "n_groups_unused": 786,
+      "n_removed": 1345,
+      "var_share_removed": 0.5179,
+      "var_share_sae_error": 0.0462,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            1233,
+            1439
+          ],
+          "gain_margin": 9474.41,
+          "examples": [
+            "Super Mario 64",
+            "Call of Duty 2",
+            "Call of Duty 2"
+          ]
+        },
+        {
+          "group": 1930,
+          "latents": [
+            244
+          ],
+          "gain_margin": 3796.21,
+          "examples": [
+            "Billy's Boot Camp: Wii de Enjoy Diet!",
+            "Big Brain Academy: Wii Degree",
+            "Wii Sports Resort"
+          ]
+        },
+        {
+          "group": 678,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 2923.3,
+          "examples": [
+            "Grand Theft Auto 2",
+            "Grand Theft Auto V",
+            "Grand Theft Auto V"
+          ]
+        },
+        {
+          "group": 692,
+          "latents": [
+            1810
+          ],
+          "gain_margin": 2916.63,
+          "examples": [
+            "Super Mario Strikers",
+            "Luigi's Mansion",
+            "New Super Mario Bros. U"
+          ]
+        },
+        {
+          "group": 254,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 2422.35,
+          "examples": [
+            "Nintendo Land",
+            "Nintendogs + cats",
+            "Mario Pinball Land"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1028,
+      "n_groups": 1028,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 962,
+      "n_groups_unused": 349,
+      "n_removed": 815,
+      "var_share_removed": 0.7141,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 870,
+          "latents": [
+            139
+          ],
+          "gain_margin": 1362.01,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 925,
+          "latents": [
+            168
+          ],
+          "gain_margin": 1274.7,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 652,
+          "latents": [
+            346
+          ],
+          "gain_margin": 1024.94,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 936,
+          "latents": [
+            559
+          ],
+          "gain_margin": 748.48,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 429,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 461.87,
+          "examples": [
+            "Sony Computer Entertainment",
+            "Sony Computer Entertainment",
+            "Sony Computer Entertainment"
+          ]
+        }
+      ]
+    }
+  }
+}

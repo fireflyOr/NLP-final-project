@@ -1,0 +1,400 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.380226145839865,
+  "test_error": 1.380226145839865,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8052083598554983,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 159.35734796524048,
+  "learner_params": null,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 416,
+      "n_groups": 414,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 393,
+      "n_groups_unused": 0,
+      "n_removed": 292,
+      "var_share_removed": 0.5373,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 214,
+          "latents": [
+            1712
+          ],
+          "gain_margin": 4371.89,
+          "examples": [
+            "1-3 yrs",
+            "1-3 yrs",
+            "1-3 yrs"
+          ]
+        },
+        {
+          "group": 317,
+          "latents": [
+            83
+          ],
+          "gain_margin": 4035.6,
+          "examples": [
+            "11-15 yrs",
+            "11-15 yrs",
+            "11-15 yrs"
+          ]
+        },
+        {
+          "group": 124,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 2887.44,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 311,
+          "latents": [
+            208
+          ],
+          "gain_margin": 2807.39,
+          "examples": [
+            "0-5 yrs",
+            "0-5 yrs",
+            "0-5 yrs"
+          ]
+        },
+        {
+          "group": 395,
+          "latents": [
+            715
+          ],
+          "gain_margin": 2654.43,
+          "examples": [
+            "0-5 yrs",
+            "0-5 yrs",
+            "0-5 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2009,
+      "n_groups": 2009,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1262,
+      "n_groups_unused": 18,
+      "n_removed": 831,
+      "var_share_removed": 0.391,
+      "var_share_sae_error": 0.0354,
+      "top": [
+        {
+          "group": 2005,
+          "latents": [
+            59
+          ],
+          "gain_margin": 8842.85,
+          "examples": [
+            "Head - Strategy & Customer Acquisition - Telecom/ Media/ FMCG/ Online (10-12 yrs)  - Shaping ...",
+            "Head - Risk Analytics - NBFC (8-15 yrs)  Hiring with the leading Nbfc based in Mumbai for the ...",
+            "Head - Risk Analytics - NBFC (8-15 yrs)  Hiring with the leading Nbfc based in Mumbai for the ..."
+          ]
+        },
+        {
+          "group": 1991,
+          "latents": [
+            208
+          ],
+          "gain_margin": 8464.03,
+          "examples": [
+            "0-1 years practical experience in SEO, WordPress and web design support;Very good English communication ...",
+            "Experience 1 - 4Yrs ( AR Calling );Shift- Night shift (US Shift);Immediate Joiners ...",
+            "Good written and verbal communication skills;Work from home full/ part time,  virtual opportunities & ..."
+          ]
+        },
+        {
+          "group": 1182,
+          "latents": [
+            83
+          ],
+          "gain_margin": 4364.11,
+          "examples": [
+            "- Experience in managing fraud analytics with knowledge across customer lifecycle is must;- Candidate ...",
+            "- Experience in managing fraud analytics with knowledge across customer lifecycle is must;- Candidate ...",
+            "- Experience in managing fraud analytics with knowledge across customer lifecycle is must;- Candidate ..."
+          ]
+        },
+        {
+          "group": 1632,
+          "latents": [
+            232
+          ],
+          "gain_margin": 2180.44,
+          "examples": [
+            "The candidates should be:;(Fresher) with minimum 70\\%, ...",
+            "Experience : fresher or 1 to 3 yrs experience in Documentation;Walk-in on 22.10.2018 (Monday) and 24.10.2 ...",
+            "- Fresher or 1-2 years of curation experience;Registration is must to attend the interview; Note : ..."
+          ]
+        },
+        {
+          "group": 1971,
+          "latents": [
+            431
+          ],
+          "gain_margin": 1296.65,
+          "examples": [
+            "Work with experienced international medical writers with relevant experience ranging from 5 to 20 years ...",
+            "10 to 16 years experience in Global Shared Services;  Qualification:   MBA / Graduate / CA ...",
+            "- 20+ years of relevant experience in at least 2 of the 4 verticals;- Willingness to travel;- MBA ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1954,
+      "n_groups": 1946,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 1068,
+      "n_groups_unused": 24,
+      "n_removed": 652,
+      "var_share_removed": 0.2352,
+      "var_share_sae_error": 0.0256,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            208,
+            1100
+          ],
+          "gain_margin": 21900.15,
+          "examples": [
+            "KPO / Process Associates / Medical Billing Process / Night Shift",
+            "Immediate Job Openings for Freshers / Medical Billing Associate",
+            "Top KPO, BPO Firms Hiring Freshers & Experienced for Non-voice Process"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            83,
+            227
+          ],
+          "gain_margin": 13121.75,
+          "examples": [
+            "Director - Strategy & Algorithms - High Frequency Trading",
+            "Director - Strategy & Algorithms - High Frequency Trading",
+            "Principal Architect - EIA Analytics Platform Architecture"
+          ]
+        },
+        {
+          "group": 1418,
+          "latents": [
+            431
+          ],
+          "gain_margin": 4456.67,
+          "examples": [
+            "Vice President - Demand Planning/global Resource Planning - APAC & ME",
+            "Vice President/ AVP - Chief Controls Office - Front Office Controls",
+            "Vice President/head - Credit Risk Analytics - BFSI"
+          ]
+        },
+        {
+          "group": 1926,
+          "latents": [
+            148
+          ],
+          "gain_margin": 2121.82,
+          "examples": [
+            "Back Office Executive",
+            "Back Office Executive - HTML",
+            "Back Office Operation Executive"
+          ]
+        },
+        {
+          "group": 954,
+          "latents": [
+            751
+          ],
+          "gain_margin": 1418.37,
+          "examples": [
+            "Cognizant - Walk-in Interview for Fresher / Experienced (0 -12 Yrs.)",
+            "Opening for CA Freshers @ Ahmedabad/udaipur/baroda",
+            "Pharma,dentist,biotechnology,microbiology,nurse,physiotherapist"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1987,
+      "n_groups": 1969,
+      "n_multi_groups": 15,
+      "n_groups_dropped": 991,
+      "n_groups_unused": 23,
+      "n_removed": 855,
+      "var_share_removed": 0.2415,
+      "var_share_sae_error": 0.0313,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            15,
+            83
+          ],
+          "gain_margin": 8755.38,
+          "examples": [
+            "canada, australia, information technology, it management, systems manager...",
+            "High Frequency Trading, Trading Head",
+            "Marketing, Consumer Insights, Strategy, Market Intelligence, Marketing Head..."
+          ]
+        },
+        {
+          "group": 1919,
+          "latents": [
+            208
+          ],
+          "gain_margin": 7865.14,
+          "examples": [
+            "execution, non voice process, backend operations, bpo, kpo...",
+            "data entry operation, typing, excel, notepad, freelancing, content writing,...",
+            "data entry operation, typing, excel, notepad, freelancing, content writing,..."
+          ]
+        },
+        {
+          "group": 1944,
+          "latents": [
+            751
+          ],
+          "gain_margin": 4105.8,
+          "examples": [
+            "Fresher, US Health Claim, Operations, KPO, USHC, Backend, Non voice...",
+            "field work, fresher, undergraduate, Cis, GIS, Metering, Survey, Data",
+            "field work, fresher, undergraduate, Cis, GIS, Metering, Survey, Data"
+          ]
+        },
+        {
+          "group": 1165,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 3302.83,
+          "examples": [
+            "Advanced Excel, MIS, Mail",
+            "Advanced Excel",
+            "credentialing, Provider credentialing, Provider Enrollment..."
+          ]
+        },
+        {
+          "group": 1925,
+          "latents": [
+            148
+          ],
+          "gain_margin": 1586.67,
+          "examples": [
+            "Executive Secretary, Secretarial Activities, MIS Reporting...",
+            "international bpo, international call center, MIS Reporting, mis executive,...",
+            "Sales Executive Activities, Bd, IT Sales, New Business, Telecalling..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 847,
+      "n_groups": 844,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 758,
+      "n_groups_unused": 11,
+      "n_removed": 731,
+      "var_share_removed": 0.7455,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 151,
+          "latents": [
+            1575
+          ],
+          "gain_margin": 1259.94,
+          "examples": [
+            "Gurgaon(Sohna Road), Delhi NCR(Patparganj)",
+            "Madurai, Malappuram, Mandi, Manesar, Mamandur, Mangalore, Mathura, Meerut, Moga",
+            "Nagar, Nagpur, Nasik, Neemrana, Nizamabad, Varanasi, Vijayawada, Vasai, Vadodara"
+          ]
+        },
+        {
+          "group": 811,
+          "latents": [
+            535
+          ],
+          "gain_margin": 713.54,
+          "examples": [
+            "Udaipur, Ajmer, Kota, Sangrur, Aurangabad, Muzaffarpur, Puri, Ambala, Ludhiana",
+            "Agra, Amritsar, Anand, Belgaum, Cuttack, Dehradun, Indore, Kota, Port Blair",
+            "pauri, pithoragarh, rudraprayag, uttarkashi, chatra, deogar, dumka, garhwa, godda"
+          ]
+        },
+        {
+          "group": 830,
+          "latents": [
+            208
+          ],
+          "gain_margin": 612.99,
+          "examples": [
+            "Bengaluru, Bhavnagar, Bhubaneshwar, Bhuj, Port Blair, Coimbatore, Cuttack, Dehradun, Durgapur",
+            "Asansol, Dibrugarh, Durgapur, Guwahati, Siliguri",
+            "Agartala, Adilabad, Agra, Ahmednagar, Aizawl, Ajmer, Aligarh, Allahabad, Alwar"
+          ]
+        },
+        {
+          "group": 239,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 450.97,
+          "examples": [
+            "Tezpur, Tarapur, Thane, Thanjavur, Thrissur, Tirunelveli, Tirupati, Trichy, Trivandrum",
+            "Madurai, Malappuram, Mandi, Manesar, Mamandur, Mangalore, Mathura, Meerut, Moga",
+            "jaunpur, azamgarh, pratapgarh, pilibhit, sambhal, chandauli, shamli, bulandshahr, farrukhabad"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            15,
+            1267
+          ],
+          "gain_margin": 201.46,
+          "examples": [
+            "Australia, Canada",
+            "Australia, Canada",
+            "Australia, Canada"
+          ]
+        }
+      ]
+    }
+  }
+}

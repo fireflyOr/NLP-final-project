@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "late-fusion",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5574545366250012,
+  "test_error": 0.5574545366250012,
+  "course_metric": "r2",
+  "course_score": 0.41825771621372,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 11.962295532226562,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -1,0 +1,179 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7304564124140401,
+  "test_error": 0.7304564124140401,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9044346722529923,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 67.16119933128357,
+  "learner_params": null,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1828,
+      "n_groups": 1819,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 980,
+      "n_groups_unused": 55,
+      "n_removed": 981,
+      "var_share_removed": 0.0761,
+      "var_share_sae_error": 0.0332,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            83,
+            698
+          ],
+          "gain_margin": 26903.86,
+          "examples": [
+            "I wanted to love this sweater but the fit is off slightly. i ordered my regular size xs and the chest/shoulder area fits nice but the waist comes very tight and",
+            "I wanted to like this top, as the fabric was nice and thick, but found that it dipped too low beneath the armpits, which would be ok if your lats are in perfect",
+            "This could have been an amazing chemise but it is too short even for bed- perhaps it could be used for a tank. i am 5'3 but do have a long torso. it did not ful"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            828,
+            1677,
+            2038
+          ],
+          "gain_margin": 14575.25,
+          "examples": [
+            "Absolutely stunning design with the eyelet lace top!  it's a very romantic, comfortable top that has a flattering fit. i'm so glad that it has lining so i don't",
+            "I was on a mission at retailer to find a versatile and comfortable jacket/cardigan. this is perfection. the detail and pattern in the wool make it unique and th",
+            "I fell in love with this online and i'm so thrilled that it's even more beautiful in person. it is a stunning, very dark teal velvet with the most gorgeous embr"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            148,
+            437,
+            1002
+          ],
+          "gain_margin": 14345.21,
+          "examples": [
+            "The material is horrible, it's heavy and cheap. the skirt does not \"flow\" as it appears in the photo. instead the bottom part of the skirt just stands out like ",
+            "Material is awful. not soft at all. colors are much darker than shows online. it is actually very short not at all as it looks on the model. it went back.",
+            "It looks like you are wearing cargo shorts. really unflattering. avoid buying this skirt"
+          ]
+        },
+        {
+          "group": 908,
+          "latents": [
+            1381
+          ],
+          "gain_margin": 4439.76,
+          "examples": [
+            "I loved the shirt until i washed it! awful fabric quality. cheaply made.",
+            "I am sooooooo massively disappointed in this purchase. i thought i had found the perfect pant in this style. both more comfortable and more flattering than simi",
+            "This shirt was great for one wear. after just one wash (followed instructions to dry clean) it lost all shape and now hangs like a bed sheet. terrible waste of "
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1061,
+            1553
+          ],
+          "gain_margin": 1300.3,
+          "examples": [
+            "This is such an incredible jacket. total show stopper and well worth the investment.",
+            "Best jeans ever. i have 2 pairs now. after getting my first pair last year, i knew i would be needing another. most comfortable, form fitting and flattering jea",
+            "Don't try this on, if you don't plan to buy it. it feels amazing!!! i bought the black and it is a lovely charcoal color and matches so much."
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1577,
+      "n_groups": 1567,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 1010,
+      "n_groups_unused": 65,
+      "n_removed": 1013,
+      "var_share_removed": 0.257,
+      "var_share_sae_error": 0.0129,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            106,
+            437
+          ],
+          "gain_margin": 12258.6,
+          "examples": [
+            "Very thin material",
+            "Ugly design",
+            "Terrible fit"
+          ]
+        },
+        {
+          "group": 777,
+          "latents": [
+            698
+          ],
+          "gain_margin": 7650.55,
+          "examples": [
+            "Eh...",
+            "Not so sure about it",
+            "Maybe...."
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            828,
+            2017
+          ],
+          "gain_margin": 4825.88,
+          "examples": [
+            "Flattering and comfy - my perfect jean!",
+            "Flattering, even on my curvy figure",
+            "I love this jumpsuit"
+          ]
+        },
+        {
+          "group": 1542,
+          "latents": [
+            396
+          ],
+          "gain_margin": 3073.52,
+          "examples": [
+            "Poorly constructed and unflattering",
+            "Cheap fabric and terrible fit",
+            "So unflattering....nothing like picture"
+          ]
+        },
+        {
+          "group": 1563,
+          "latents": [
+            59
+          ],
+          "gain_margin": 2810.16,
+          "examples": [
+            "Could have been great but just ok",
+            "Great price (on sale) but sheds too much!",
+            "Great features but too boxy"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,6 @@
 {
   "model": "light",
+  "learner": "light",
   "dataset": "REG_TEXT_BABIES_PRICES",
   "encoder": "e5-small-tar-gsae-xf",
   "fold": 2,
@@ -13,7 +14,8 @@
   "n_text_features": 120,
   "n_train": 3390,
   "n_test": 1695,
-  "runtime_s": 543.7173080444336,
+  "runtime_s": 399.5995171070099,
+  "learner_params": null,
   "diagnostics": {
     "colors": {
       "rule": "xfit",

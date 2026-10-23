@@ -1,0 +1,176 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.748549240094838,
+  "test_error": 0.748549240094838,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9003931821509245,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 66.23794269561768,
+  "learner_params": null,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1818,
+      "n_groups": 1811,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 942,
+      "n_groups_unused": 66,
+      "n_removed": 943,
+      "var_share_removed": 0.2392,
+      "var_share_sae_error": 0.0348,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            83,
+            227
+          ],
+          "gain_margin": 14976.49,
+          "examples": [
+            "I love the style of this top, and the longer length would be great with leggings and fitted shorts. it's somewhat fitted on the top yet it's a-line shape gives ",
+            "I ordered this in the blue, it's a beautiful shade of blue. love the lace up detail in the back, but the size small was just short and very wide. i understand i",
+            "I liked the quality of the top and the design. but when i got a top that fit well across the chest, it was shorter than i usually like my tops, so i will be ret"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            828,
+            2038
+          ],
+          "gain_margin": 13680.35,
+          "examples": [
+            "This is the perfect warm cozy boho sweater. the blue trim really stands out and brightens up the grey. this sweater will look cute over any outfit, or with jean",
+            "This is a terrific top!  the supima cotton is super-soft; the black, a deep black.  i love that antho is listening, and that it's made in the usa!  the lines an",
+            "I love this sweater! i ordered the xs petite. it fits perfectly! it is soft. i hate itchy sweaters. the \"peach\" color is actually more pink, but i love the colo"
+          ]
+        },
+        {
+          "group": 1805,
+          "latents": [
+            698
+          ],
+          "gain_margin": 12609.61,
+          "examples": [
+            "I wanted to love this shirt, but was very disappointed. i had read other reviews and still ordered, but wish i would have listened. the shirt looks nothing like",
+            "Although i am small (size xs on top, 27 waist) this dress is not flattering if have any fat on your body....i would not recommend it.",
+            "I'm 5'5 and 130lbs and i was swimming in the small. the arms are very boxy, the sleeves too long, and and it just wasn't a flattering fit at all. the color and "
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            437,
+            864,
+            1002
+          ],
+          "gain_margin": 10634.82,
+          "examples": [
+            "These pants looked worn, washed & old looking when i received them! the quality is super thin cotton as if it's been washed a million times & is about to fall a",
+            "This has such awful proportions. i'm 5'0 and 100 lbs, ordered xxs petite (in the neutral color). the seam at the bust literally hits in the middle of my bust!! ",
+            "The back of the shirt has a tag stitched in with red thread that goes through to the outside of the shirt. it is very visible and looks terrible - especially si"
+          ]
+        },
+        {
+          "group": 1787,
+          "latents": [
+            106
+          ],
+          "gain_margin": 2924.54,
+          "examples": [
+            "Awful color, horribly wrinkled and just a mess...so disappointed",
+            "This is another one of those darned swing tops. i can't even with this trend. this shirt has such a nice print/color palette going on but it's ruined by the swi",
+            "Poor quality, material looks much thinner and cheaper than pictured."
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1551,
+      "n_groups": 1547,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 988,
+      "n_groups_unused": 71,
+      "n_removed": 988,
+      "var_share_removed": 0.398,
+      "var_share_sae_error": 0.013,
+      "top": [
+        {
+          "group": 1532,
+          "latents": [
+            698
+          ],
+          "gain_margin": 9157.25,
+          "examples": [
+            "Unless you are twiggy, this is shape less",
+            "Not for every body type",
+            "Beautiful sweater but extremely itchy"
+          ]
+        },
+        {
+          "group": 1074,
+          "latents": [
+            437
+          ],
+          "gain_margin": 6119.27,
+          "examples": [
+            "Very thin material",
+            "Bizarre seams at waist",
+            "Hideous looking"
+          ]
+        },
+        {
+          "group": 1545,
+          "latents": [
+            106
+          ],
+          "gain_margin": 5861.95,
+          "examples": [
+            "Not good quality",
+            "Not as described",
+            "Not as described"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            153,
+            828
+          ],
+          "gain_margin": 5329.87,
+          "examples": [
+            "Flattering and comfy - my perfect jean!",
+            "Feminine and flattering, love this dress!!",
+            "I'm in love with this dress! (the blue green one)"
+          ]
+        },
+        {
+          "group": 1541,
+          "latents": [
+            396
+          ],
+          "gain_margin": 3101.69,
+          "examples": [
+            "This dress is awful!!!!!!!",
+            "Poorly constructed and unflattering",
+            "Cheap fabric and terrible fit"
+          ]
+        }
+      ]
+    }
+  }
+}

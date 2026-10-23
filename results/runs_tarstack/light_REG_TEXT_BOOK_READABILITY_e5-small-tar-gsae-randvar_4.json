@@ -1,0 +1,471 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8204859689386184,
+  "test_error": 0.8204859689386184,
+  "course_metric": "r2",
+  "course_score": 0.8135122165235652,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 58.98854446411133,
+  "learner_params": null,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 430,
+      "n_groups": 429,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 349,
+      "n_groups_unused": 105,
+      "n_removed": 176,
+      "var_share_removed": 0.3066,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 292,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 511.22,
+          "examples": [
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People",
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People",
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People"
+          ]
+        },
+        {
+          "group": 333,
+          "latents": [
+            396
+          ],
+          "gain_margin": 476.84,
+          "examples": [
+            "The Nursery, No. 109, January, 1876, Vol. XIX.\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 109, January, 1876, Vol. XIX.\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 109, January, 1876, Vol. XIX.\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 78,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 180.96,
+          "examples": [
+            "The Nursery, July 1877, XXII. No. 1\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, July 1877, XXII. No. 1\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, July 1877, XXII. No. 1\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 336,
+          "latents": [
+            813
+          ],
+          "gain_margin": 164.04,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 314,
+          "latents": [
+            477
+          ],
+          "gain_margin": 74.2,
+          "examples": [
+            "African Storybook Level 1",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1290,
+      "n_groups": 1290,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1048,
+      "n_groups_unused": 446,
+      "n_removed": 915,
+      "var_share_removed": 0.5127,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 1106,
+          "latents": [
+            911
+          ],
+          "gain_margin": 227.53,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 372,
+          "latents": [
+            477
+          ],
+          "gain_margin": 130.65,
+          "examples": [
+            "African Storybook and Paul Walugo",
+            "Little Zebra Books",
+            "Ghanaian folktale"
+          ]
+        },
+        {
+          "group": 312,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 119.95,
+          "examples": [
+            "an editorial article published Oct. 15, (28,) 1914, in the Mir, the organ of the Nationalists, and signed by A. Bouroff, ex-Minister and ex-Vice President of th",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 266,
+          "latents": [
+            1672
+          ],
+          "gain_margin": 103.64,
+          "examples": [
+            "Gerald Breckenridge",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1078,
+          "latents": [
+            402
+          ],
+          "gain_margin": 95.38,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 94,
+      "n_groups": 92,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 86,
+      "n_groups_unused": 17,
+      "n_removed": 80,
+      "var_share_removed": 0.3322,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 88,
+          "latents": [
+            943
+          ],
+          "gain_margin": 1.12,
+          "examples": [
+            "marvellous, defences, accoutrements",
+            "kilometres, centimetre",
+            "organised, rumours"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            2015
+          ],
+          "gain_margin": 0.63,
+          "examples": [
+            "kilogrammes",
+            "honour",
+            "favoured"
+          ]
+        },
+        {
+          "group": 26,
+          "latents": [
+            1467
+          ],
+          "gain_margin": 0.24,
+          "examples": [
+            "cosy",
+            "favourite, favourite",
+            "favourite"
+          ]
+        },
+        {
+          "group": 45,
+          "latents": [
+            825
+          ],
+          "gain_margin": 0.22,
+          "examples": [
+            "travelling",
+            "travelling",
+            "travelling"
+          ]
+        },
+        {
+          "group": 52,
+          "latents": [
+            310
+          ],
+          "gain_margin": 0.16,
+          "examples": [
+            "millimetres",
+            "practise",
+            "practise"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1239,
+      "n_groups": 1239,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 978,
+      "n_groups_unused": 581,
+      "n_removed": 262,
+      "var_share_removed": 0.1216,
+      "var_share_sae_error": 0.0089,
+      "top": [
+        {
+          "group": 1219,
+          "latents": [
+            204
+          ],
+          "gain_margin": 4390.21,
+          "examples": [
+            "An idea of the unpreparedness of European diplomacy in the face of the sudden Balkan war can be had by simply glancing at the records of the British House of Co",
+            "As Socrates did not write down any of his teachings, secondary sources provide the only information on his life and thought. The sometimes contradictory nature ",
+            "Mr. Beck makes out a case from the viewpoint of the accusing party\u2014of course, nobody will doubt the legal abilities of Mr. Beck\u2014but before the Supreme Court of "
+          ]
+        },
+        {
+          "group": 1223,
+          "latents": [
+            200
+          ],
+          "gain_margin": 2260.14,
+          "examples": [
+            "Our relations with Turkey have been strained for some months. But after the negotiations of Bucharest some agreement was reached regarding the refugees. Those i",
+            "At the age of eighty-two years, and full of honor, after a life actively devoted to scientific work of the highest and most accurate kind, which has contributed",
+            "In zeal for education Quebec was therefore not behind Boston. But the spirit was different. Quebec believed that safety lay in control by the Church, and this c"
+          ]
+        },
+        {
+          "group": 519,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 1533.76,
+          "examples": [
+            "Chicken and Millipede were friends. But they were always competing with each other. One day they decided to play football to see who was the best player. They w",
+            "Bon is on a summer break! He asks Ma to play. But she is busy. She tells Bon to ask his Pa. Bon finds his Pa. \"Pa! Want to play ball?\" Pa says no. He is going t",
+            "There were once three bears who lived together in a little house in the middle of a wood. One of them was a Little, Small, Wee Bear; one was a Middle-Sized Bear"
+          ]
+        },
+        {
+          "group": 1186,
+          "latents": [
+            298
+          ],
+          "gain_margin": 984.61,
+          "examples": [
+            "So they let down the bars, and the dog, and the cat, and the rooster, and the duck, and the little white pig with the curly tail, and the little boy, and the li",
+            "The clever Rabbit was awake inside his hutch. He was thinking, \"I want to explore the outside world.\" The other rabbits were dozing. The door to their hutch ope",
+            "Hare used to sit all day doing nothing and when Hyena came home after work, Hare would always ask him for nuts from his farm. But Hyena didn't like this very mu"
+          ]
+        },
+        {
+          "group": 1226,
+          "latents": [
+            779
+          ],
+          "gain_margin": 975.54,
+          "examples": [
+            "A great many centuries ago, when the earth was even more beautiful than it is now, there grew in one of the many valleys a dainty little fern leaf. All around t",
+            "It is not often (out of a fairy tale) that wishes to change the whole current of one's life are granted so promptly as that wish of mine was.\nThe next morning's",
+            "Mr. D. had promised to give his wife a beautiful rattan rocking-chair as a Christmas present. It was his employment to sell these articles. In due time, Mrs. D."
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1638,
+      "n_groups": 1638,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1307,
+      "n_groups_unused": 639,
+      "n_removed": 1088,
+      "var_share_removed": 0.5387,
+      "var_share_sae_error": 0.0194,
+      "top": [
+        {
+          "group": 1636,
+          "latents": [
+            477
+          ],
+          "gain_margin": 375.78,
+          "examples": [
+            "DOWN THE RIVER AFTER THE BOY",
+            "HOW MY BOYS HELPED THEIR MOTHER",
+            "The boy and the jackal"
+          ]
+        },
+        {
+          "group": 1629,
+          "latents": [
+            867
+          ],
+          "gain_margin": 273.38,
+          "examples": [
+            "The Chemical Composition of Rice, Maize, and Barley",
+            "Algae",
+            "Republic"
+          ]
+        },
+        {
+          "group": 1633,
+          "latents": [
+            419
+          ],
+          "gain_margin": 262.77,
+          "examples": [
+            "Columbian_Exchange",
+            "Assyria",
+            "Hearing_aid"
+          ]
+        },
+        {
+          "group": 1635,
+          "latents": [
+            349
+          ],
+          "gain_margin": 252.46,
+          "examples": [
+            "My Father's Dragon",
+            "THE LITTLE SAILOR",
+            "NELLIE'S LITTLE BROTHER"
+          ]
+        },
+        {
+          "group": 569,
+          "latents": [
+            967
+          ],
+          "gain_margin": 186.76,
+          "examples": [
+            "IN CANADA WITH A LYNX",
+            "The Animals and the Mirror",
+            "Four lambs and\na fox"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 909,
+      "n_groups": 905,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 709,
+      "n_groups_unused": 296,
+      "n_removed": 363,
+      "var_share_removed": 0.2692,
+      "var_share_sae_error": 0.0042,
+      "top": [
+        {
+          "group": 875,
+          "latents": [
+            477
+          ],
+          "gain_margin": 816.14,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_302",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_110",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_316"
+          ]
+        },
+        {
+          "group": 106,
+          "latents": [
+            1874
+          ],
+          "gain_margin": 324.26,
+          "examples": [
+            "http://www.gutenberg.org/files/24941/24941-h/24941-h.htm#Page_103",
+            "http://www.gutenberg.org/files/24941/24941-h/24941-h.htm#Page_97",
+            "http://www.gutenberg.org/files/24941/24941-h/24941-h.htm#Page_105"
+          ]
+        },
+        {
+          "group": 428,
+          "latents": [
+            1672
+          ],
+          "gain_margin": 284.39,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Dynasty",
+            "https://en.wikipedia.org/wiki/Aurora",
+            "https://en.wikipedia.org/wiki/Free_market"
+          ]
+        },
+        {
+          "group": 109,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 256.78,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Software_development",
+            "https://en.wikipedia.org/wiki/Software_engineering",
+            "https://en.wikipedia.org/wiki/Mercantilism"
+          ]
+        },
+        {
+          "group": 206,
+          "latents": [
+            1782
+          ],
+          "gain_margin": 224.03,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Bronze_Age",
+            "https://en.wikipedia.org/wiki/Oil_refinery",
+            "https://en.wikipedia.org/wiki/Civil_engineering"
+          ]
+        }
+      ]
+    }
+  }
+}

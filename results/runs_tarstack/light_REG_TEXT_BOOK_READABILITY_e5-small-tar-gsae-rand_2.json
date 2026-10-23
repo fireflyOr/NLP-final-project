@@ -1,0 +1,471 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8822862826873161,
+  "test_error": 0.8822862826873161,
+  "course_metric": "r2",
+  "course_score": 0.7971417515319561,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 58.252872705459595,
+  "learner_params": null,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 436,
+      "n_groups": 435,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 358,
+      "n_groups_unused": 98,
+      "n_removed": 359,
+      "var_share_removed": 0.6935,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 344,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 433.39,
+          "examples": [
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers"
+          ]
+        },
+        {
+          "group": 329,
+          "latents": [
+            477
+          ],
+          "gain_margin": 391.56,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 326,
+          "latents": [
+            813
+          ],
+          "gain_margin": 201.97,
+          "examples": [
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, May 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, June 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 67,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 199.05,
+          "examples": [
+            "The Orange Fairy Book",
+            "The Nursery, July 1877, XXII. No. 1\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, July 1877, XXII. No. 1\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 347,
+          "latents": [
+            298
+          ],
+          "gain_margin": 103.34,
+          "examples": [
+            "African Storybook Level 3",
+            "African Storybook Level 3",
+            "African Storybook Level 3"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1288,
+      "n_groups": 1288,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1050,
+      "n_groups_unused": 481,
+      "n_removed": 1050,
+      "var_share_removed": 0.6762,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 1012,
+          "latents": [
+            911
+          ],
+          "gain_margin": 271.48,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 319,
+          "latents": [
+            1672
+          ],
+          "gain_margin": 188.22,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1011,
+          "latents": [
+            477
+          ],
+          "gain_margin": 114.52,
+          "examples": [
+            "LITTLE CHICK",
+            "Haitham Hajjo and Asya Rolls",
+            "Little Zebra Books"
+          ]
+        },
+        {
+          "group": 137,
+          "latents": [
+            1844
+          ],
+          "gain_margin": 114.44,
+          "examples": [
+            "an editorial article published Oct. 15, (28,) 1914, in the Mir, the organ of the Nationalists, and signed by A. Bouroff, ex-Minister and ex-Vice President of th",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 636,
+          "latents": [
+            688
+          ],
+          "gain_margin": 107.23,
+          "examples": [
+            "Mamma",
+            "Mamma",
+            "Birdie's Mamma"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 117,
+      "n_groups": 112,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 107,
+      "n_groups_unused": 29,
+      "n_removed": 112,
+      "var_share_removed": 0.528,
+      "var_share_sae_error": 0.0069,
+      "top": [
+        {
+          "group": 45,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 0.76,
+          "examples": [
+            "metres, metres",
+            "sulphide, sulphides, sulphide, sulphide, sulphide, sulphate",
+            "metres, metres, metres"
+          ]
+        },
+        {
+          "group": 87,
+          "latents": [
+            144
+          ],
+          "gain_margin": 0.48,
+          "examples": [
+            "armour, travelled",
+            "labourer",
+            "travelled"
+          ]
+        },
+        {
+          "group": 20,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 0.12,
+          "examples": [
+            "travelling",
+            "travelling",
+            "travelling"
+          ]
+        },
+        {
+          "group": 68,
+          "latents": [
+            245
+          ],
+          "gain_margin": 0.07,
+          "examples": [
+            "travelled",
+            "travelled",
+            "travelled"
+          ]
+        },
+        {
+          "group": 69,
+          "latents": [
+            226
+          ],
+          "gain_margin": 0.07,
+          "examples": [
+            "cypher, cypher, cyphers, cypher",
+            "neighbours, neighbouring, harbour",
+            "harbour, neighbours"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1271,
+      "n_groups": 1271,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 998,
+      "n_groups_unused": 586,
+      "n_removed": 998,
+      "var_share_removed": 0.8393,
+      "var_share_sae_error": 0.0093,
+      "top": [
+        {
+          "group": 626,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 3720.63,
+          "examples": [
+            "In another instant, however, the girl's attention was caught by the appearance of a figure which seemed to spring up suddenly out of nowhere and to stand gazing",
+            "Dotty continued to go to Mrs. Gray's every night with the milk. Sometimes Katie went with her, and then they always paused a while under the acorn-tree and play",
+            "One evening as I was lying flat on the deck of my steamboat, I heard voices approaching\u2014and there were the nephew and the uncle strolling along the bank. I laid"
+          ]
+        },
+        {
+          "group": 1257,
+          "latents": [
+            200
+          ],
+          "gain_margin": 3348.3,
+          "examples": [
+            "It is true that, to a traveller approaching the Himalayas from any part of the great plain of India, these mountains present the appearance of a single range, s",
+            "Electric lamps on the arc principle are almost as numerous as the trees in the forest, and it is somewhat fresh to come upon something that is novel. In these l",
+            "Differences obtained in the estimation of nitrogen in the above substances are frequently the source of much annoyance. The cause of these discrepancies is chie"
+          ]
+        },
+        {
+          "group": 1250,
+          "latents": [
+            298
+          ],
+          "gain_margin": 1009.41,
+          "examples": [
+            "One day Little Boy Blue's mother said to him: \"Do you want to go and visit Aunt Polly?\" \"Who is Aunt Polly?\" asked Little Boy Blue. \"Aunt Polly lives on a farm,",
+            "Did you ever hear of the boy who had a drum and a trumpet and a rocking-horse for his Christmas presents, and cried, after all, because Santa Claus had given hi",
+            "Little by little they saw that there was a high mountain in the west where the light had been, and above the mountain floated a dark blue smoke. \"Come,\" said on"
+          ]
+        },
+        {
+          "group": 610,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1002.02,
+          "examples": [
+            "The study of marine biology dates back to Aristotle (384\u2013322 BC), who made many observations of life in the sea around Lesbos, laying the foundation for many fu",
+            "A gamma camera, also called a scintillation camera or Anger camera, is a device used to image gamma radiation emitting radioisotopes, a technique known as scint",
+            "Edaphology (from Greek, edaphos, \"ground\") is one of two main divisions of soil science, the other being pedology. Edaphology is concerned with the influence of"
+          ]
+        },
+        {
+          "group": 599,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 886.05,
+          "examples": [
+            "If you asked Dora to do any thing, she would reply, \"In a minute.\" It was a bad habit she had. \"Dora, please bring me a drink of water.\"\u2014\"In a minute.\"\u2014\"Dora, g",
+            "Hare used to sit all day doing nothing and when Hyena came home after work, Hare would always ask him for nuts from his farm. But Hyena didn't like this very mu",
+            "Long time ago Hare and Hyena were great friends. They did many things together. They danced and sang together. \nOne day, Hare said, \"My friend Hyena, let us sta"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1611,
+      "n_groups": 1611,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1265,
+      "n_groups_unused": 639,
+      "n_removed": 1265,
+      "var_share_removed": 0.6398,
+      "var_share_sae_error": 0.0195,
+      "top": [
+        {
+          "group": 908,
+          "latents": [
+            477
+          ],
+          "gain_margin": 548.95,
+          "examples": [
+            "THE BLACKBIRD'S NEST",
+            "A Story of Bird Life",
+            "The Rain Bird"
+          ]
+        },
+        {
+          "group": 1570,
+          "latents": [
+            688
+          ],
+          "gain_margin": 342.0,
+          "examples": [
+            "A Special Nest",
+            "HOW THE SHEEP WERE SAVED",
+            "The Sheep and the Pig"
+          ]
+        },
+        {
+          "group": 1606,
+          "latents": [
+            410
+          ],
+          "gain_margin": 258.84,
+          "examples": [
+            "The Sheep and the Pig",
+            "The Goat and Her Kid",
+            "The Three Little Pigs"
+          ]
+        },
+        {
+          "group": 836,
+          "latents": [
+            867
+          ],
+          "gain_margin": 211.14,
+          "examples": [
+            "RECENT HYDRAULIC EXPERIMENTS.",
+            "Hydrochloric_acid",
+            "Hydroelectricity"
+          ]
+        },
+        {
+          "group": 1594,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 159.08,
+          "examples": [
+            "HUNTING FOR EASTER-EGGS",
+            "The Sheep and the Pig",
+            "SOME TRUE STORIES OP HORSES AND DONKEYS"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 887,
+      "n_groups": 886,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 694,
+      "n_groups_unused": 283,
+      "n_removed": 695,
+      "var_share_removed": 0.5094,
+      "var_share_sae_error": 0.0037,
+      "top": [
+        {
+          "group": 423,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 318.38,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_110",
+            "http://www.gutenberg.org/files/28138/28138-h/28138-h.htm#Page_110",
+            "http://www.gutenberg.org/files/28143/28143-h/28143-h.htm#Page_110"
+          ]
+        },
+        {
+          "group": 880,
+          "latents": [
+            349
+          ],
+          "gain_margin": 221.33,
+          "examples": [
+            "http://www.gutenberg.org/files/40757/40757-h/40757-h.htm#Page_168",
+            "http://www.gutenberg.org/files/28134/28134-h/28134-h.htm#Page_175",
+            "http://www.gutenberg.org/files/28134/28134-h/28134-h.htm#Page_168"
+          ]
+        },
+        {
+          "group": 247,
+          "latents": [
+            1782
+          ],
+          "gain_margin": 195.26,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Continental_crust",
+            "https://en.wikipedia.org/wiki/Industrial_Revolution",
+            "https://en.wikipedia.org/wiki/Geocentric_model"
+          ]
+        },
+        {
+          "group": 514,
+          "latents": [
+            477
+          ],
+          "gain_margin": 184.73,
+          "examples": [
+            "http://www.gutenberg.org/files/16540/16540-h/16540-h.htm#THE_BLACKBIRDS_NEST",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_304",
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#Page_110"
+          ]
+        },
+        {
+          "group": 694,
+          "latents": [
+            1376
+          ],
+          "gain_margin": 161.77,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Wi-Fi",
+            "https://en.wikipedia.org/wiki/Monsoon",
+            "https://en.wikipedia.org/wiki/Touchscreen"
+          ]
+        }
+      ]
+    }
+  }
+}

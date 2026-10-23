@@ -1,0 +1,322 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -21.179960957953924,
+  "test_error": 21.179960957953924,
+  "course_metric": "r2",
+  "course_score": 0.7309308901500021,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 38.27513861656189,
+  "learner_params": null,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 285,
+      "n_groups": 285,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 260,
+      "n_groups_unused": 18,
+      "n_removed": 260,
+      "var_share_removed": 0.8498,
+      "var_share_sae_error": 0.0001,
+      "top": [
+        {
+          "group": 38,
+          "latents": [
+            1899
+          ],
+          "gain_margin": 116.1,
+          "examples": [
+            "espresso",
+            "espresso",
+            "espresso"
+          ]
+        },
+        {
+          "group": 35,
+          "latents": [
+            1630
+          ],
+          "gain_margin": 62.11,
+          "examples": [
+            "tan / cream",
+            "tan",
+            "tan"
+          ]
+        },
+        {
+          "group": 86,
+          "latents": [
+            1249
+          ],
+          "gain_margin": 40.73,
+          "examples": [
+            "orange / tan",
+            "orange / tan",
+            "orange / tan / green / pink"
+          ]
+        },
+        {
+          "group": 166,
+          "latents": [
+            1415
+          ],
+          "gain_margin": 31.0,
+          "examples": [
+            "espresso",
+            "espresso",
+            "espresso"
+          ]
+        },
+        {
+          "group": 263,
+          "latents": [
+            924
+          ],
+          "gain_margin": 29.06,
+          "examples": [
+            "red / blue",
+            "red / blue",
+            "red / blue"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 255,
+      "n_groups": 255,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 237,
+      "n_groups_unused": 28,
+      "n_removed": 237,
+      "var_share_removed": 0.7406,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 94,
+          "latents": [
+            1333
+          ],
+          "gain_margin": 73.03,
+          "examples": [
+            "Jenny Selvalicious",
+            "Sophie Harding",
+            "Sophie Harding"
+          ]
+        },
+        {
+          "group": 132,
+          "latents": [
+            654
+          ],
+          "gain_margin": 62.76,
+          "examples": [
+            "Cleveland Artist Sylvia",
+            "Glenna Jean, Swizzle",
+            "Glenna Jean, Swizzle"
+          ]
+        },
+        {
+          "group": 176,
+          "latents": [
+            131
+          ],
+          "gain_margin": 53.56,
+          "examples": [
+            "FAO",
+            "Glenna Jean Liam",
+            "Glenna Jean Liam"
+          ]
+        },
+        {
+          "group": 88,
+          "latents": [
+            868
+          ],
+          "gain_margin": 39.53,
+          "examples": [
+            "FAO",
+            "Babyletto's",
+            "Babyletto's"
+          ]
+        },
+        {
+          "group": 100,
+          "latents": [
+            1093
+          ],
+          "gain_margin": 29.09,
+          "examples": [
+            "Babyletto's",
+            "Babyletto's",
+            "Babyletto's"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 794,
+      "n_groups": 794,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 557,
+      "n_groups_unused": 123,
+      "n_removed": 557,
+      "var_share_removed": 0.5369,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 744,
+          "latents": [
+            344
+          ],
+          "gain_margin": 1792.94,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "group": 567,
+          "latents": [
+            371
+          ],
+          "gain_margin": 1206.41,
+          "examples": [
+            "South Shore Furniture",
+            "South Shore Furniture",
+            "South Shore Furniture"
+          ]
+        },
+        {
+          "group": 227,
+          "latents": [
+            1070
+          ],
+          "gain_margin": 1089.38,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 221,
+          "latents": [
+            957
+          ],
+          "gain_margin": 662.82,
+          "examples": [
+            "Gund",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 462,
+          "latents": [
+            1455
+          ],
+          "gain_margin": 449.87,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1215,
+      "n_groups": 1209,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 828,
+      "n_groups_unused": 404,
+      "n_removed": 833,
+      "var_share_removed": 0.4817,
+      "var_share_sae_error": 0.0061,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            564,
+            1922
+          ],
+          "gain_margin": 5440.48,
+          "examples": [
+            "NoJo Jungle Babies 9-Piece Crib Bedding Set",
+            "NoJo Baby Bots 4-Piece Crib Bedding Set",
+            "Tulip Garden 4-Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 1197,
+          "latents": [
+            344
+          ],
+          "gain_margin": 2965.98,
+          "examples": [
+            "Aqua Peacock Full/Queen Bedding Set",
+            "Atlanta Falcons, Matt Ryan Biggshots Full Comforter Set",
+            "Truly Scrumptious Little Darling 3-Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 73,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 2821.87,
+          "examples": [
+            "Sumersault Doodles Bright 10-Piece Crib Bedding Set",
+            "Sumersault Colorburst 10-Piece Crib Bedding Set",
+            "Sumersault Zoo Squares 10-Piece Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 284,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 1024.15,
+          "examples": [
+            "Mickey & Friends - Minnie Mouse Small Stencils",
+            "RoomMates Mickey & Friends - Pluto Peel & Stick Giant Wall Decal",
+            "RoomMates Mickey & Friends - Minnie Mouse Peel & Stick Giant Wall Decal"
+          ]
+        },
+        {
+          "group": 1171,
+          "latents": [
+            200
+          ],
+          "gain_margin": 805.76,
+          "examples": [
+            "Protect-A-Bed Premium Twin XL Mattress Protector",
+            "Protect-A-Bed Plush Twin XL Mattress Protector",
+            "10in x 8in Framed Art Print - Fairyland II by Sophie Harding"
+          ]
+        }
+      ]
+    }
+  }
+}

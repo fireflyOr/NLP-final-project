@@ -1,0 +1,396 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.22981814599473407,
+  "test_error": 0.22981814599473407,
+  "course_metric": "r2",
+  "course_score": 0.528472505489666,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 50.34228730201721,
+  "learner_params": null,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1636,
+      "n_groups": 1636,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1113,
+      "n_groups_unused": 435,
+      "n_removed": 1113,
+      "var_share_removed": 0.4858,
+      "var_share_sae_error": 0.0033,
+      "top": [
+        {
+          "group": 1632,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1229.11,
+          "examples": [
+            "Wizards RPG Team",
+            "Russ Manning",
+            "Russ Manning"
+          ]
+        },
+        {
+          "group": 1634,
+          "latents": [
+            477
+          ],
+          "gain_margin": 927.88,
+          "examples": [
+            "Saumya Sharma",
+            "Priyanka Menon",
+            "Saina Nehwal"
+          ]
+        },
+        {
+          "group": 399,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 440.37,
+          "examples": [
+            "S. Bashir S. and Hashmi M. Saran",
+            "Charles Chaplin",
+            "Saradindu Bandyopadhyay"
+          ]
+        },
+        {
+          "group": 577,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 189.14,
+          "examples": [
+            "Christopher Maurer",
+            "Dennis Bergkamp",
+            "Mark Twain"
+          ]
+        },
+        {
+          "group": 1156,
+          "latents": [
+            529
+          ],
+          "gain_margin": 179.82,
+          "examples": [
+            "Tim Marshall",
+            "Tim S. Grover",
+            "Tim Collins"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 817,
+      "n_groups": 772,
+      "n_multi_groups": 38,
+      "n_groups_dropped": 571,
+      "n_groups_unused": 187,
+      "n_removed": 596,
+      "var_share_removed": 0.3444,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 98,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 682.5,
+          "examples": [
+            "Hardcover,\u2013 18 Apr 2016",
+            "Hardcover,\u2013 8 Apr 2014",
+            "Hardcover,\u2013 28 Jun 2016"
+          ]
+        },
+        {
+          "group": 502,
+          "latents": [
+            305
+          ],
+          "gain_margin": 634.01,
+          "examples": [
+            "Tankobon Softcover,\u2013 2016",
+            "Hardcover,\u2013 Abridged, Audiobook, Box set",
+            "Flexibound,\u2013 18 Oct 2016"
+          ]
+        },
+        {
+          "group": 263,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 336.81,
+          "examples": [
+            "Hardcover,\u2013 Abridged, Audiobook, Box set",
+            "Hardcover,\u2013 Import, Facsimile",
+            "Hardcover,\u2013 Facsimile, Import"
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            1072
+          ],
+          "gain_margin": 273.5,
+          "examples": [
+            "Hardcover,\u2013 Facsimile, Import",
+            "Hardcover,\u2013 Import, Facsimile",
+            "Hardcover,\u2013 Facsimile, 31 May 2011"
+          ]
+        },
+        {
+          "group": 253,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 215.11,
+          "examples": [
+            "Mass Market Paperback,\u2013 10 Jan 2018",
+            "Mass Market Paperback,\u2013 10 Jan 2018",
+            "Mass Market Paperback,\u2013 28 Nov 2017"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 735,
+      "n_groups": 735,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 613,
+      "n_groups_unused": 117,
+      "n_removed": 613,
+      "var_share_removed": 0.5959,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 252,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 550.25,
+          "examples": [
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        },
+        {
+          "group": 80,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 520.61,
+          "examples": [
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)"
+          ]
+        },
+        {
+          "group": 728,
+          "latents": [
+            529
+          ],
+          "gain_margin": 328.31,
+          "examples": [
+            "Sports Training & Coaching (Books)",
+            "Sports Training & Coaching (Books)",
+            "Sports Training & Coaching (Books)"
+          ]
+        },
+        {
+          "group": 309,
+          "latents": [
+            679
+          ],
+          "gain_margin": 286.77,
+          "examples": [
+            "Software Design & Engineering",
+            "Software Design & Engineering",
+            "Graphics & Visualization"
+          ]
+        },
+        {
+          "group": 364,
+          "latents": [
+            1226
+          ],
+          "gain_margin": 187.25,
+          "examples": [
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)",
+            "Language Learning & Teaching (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1736,
+      "n_groups": 1736,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1219,
+      "n_groups_unused": 498,
+      "n_removed": 1219,
+      "var_share_removed": 0.4314,
+      "var_share_sae_error": 0.0198,
+      "top": [
+        {
+          "group": 1734,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2515.31,
+          "examples": [
+            "In Stan Lee's How to Draw Comics, Stan Lee reveals his secrets for:\n \n* Costumes * Penciling, Inking & Coloring * Lettering & Word Balloons\n* Digital Advances *",
+            "(Piano Method). The great Baroque master composer Johann Sebastian Bach (1685-1750) wrote music for every combination of instruments and voices. His simplest an",
+            "The first book from the basketball superstar Kobe Bryant\u2015a lavish, deep dive inside the mind of one of the most revered athletes of all time\nIn the wake of his "
+          ]
+        },
+        {
+          "group": 930,
+          "latents": [
+            529
+          ],
+          "gain_margin": 1936.39,
+          "examples": [
+            "The multiple stresses of contemporary life\u2014whether from excessive sports play, overwork, or overuse of technology\u2014are increasingly taking a toll on the body. Sy",
+            "If you want to build as much muscle as naturally possible...be able to bench press, squat, and deadlift gargantuan amounts of weight...and maintain a ripped, be",
+            "This is a practical resource for current and aspiring strength and conditioning professionals and personal trainers. With unmatched visual demonstration of a va"
+          ]
+        },
+        {
+          "group": 761,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1661.01,
+          "examples": [
+            "A single betrayal can cost you everything... 1998. Twenty-two-year-old Mina is moving to the US from Bangalore to begin a new life with her husband. Then there\u2019",
+            "The waves still crashed against the rocks.\nThe moon still bathed the sandy beach with its light.\nAnd the piano still played on.\nBut, amidst all this, just like ",
+            "Bestselling romance writer Revati Krishna had everything that a girl could wish for \u2013 A sparkling career, a thriving fan-base and a perfect love life. However, "
+          ]
+        },
+        {
+          "group": 863,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 1326.25,
+          "examples": [
+            "Here\u0092s what started the phenomenon: the best seller, for over 15 years, that\u0092s been used by screenwriters around the world! Blake Snyder tells all in this fast,",
+            "Beginner's Guide to Digital Painting: Characters is a comprehensive guide for artists wishing to create convincing and detailed characters. It features establis",
+            "While other books give you tips on how to \u0093write funny,\u0094 this book offers a paradigm shift in understanding the mechanics and art of comedy, and the proven, pra"
+          ]
+        },
+        {
+          "group": 866,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1055.59,
+          "examples": [
+            "Explore the treasures of the Earth with this guide to rocks and minerals, including crystals, gemstones, and fossils - ideal for every rockhound and budding gem",
+            "How to Build a Better Body Fast\nWhere do you belong on the strength continuum? And where do you want to be?\nToo often, we know what we should be doing to gain s",
+            "Artist David Aja returns to the most critically acclaimed comic of 2012, as ace archer Clint Barton faces the digital doomsday of - DVR-Mageddon! Then: Cherry's"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1817,
+      "n_groups": 1817,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1273,
+      "n_groups_unused": 516,
+      "n_removed": 1273,
+      "var_share_removed": 0.4835,
+      "var_share_sae_error": 0.0189,
+      "top": [
+        {
+          "group": 1816,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1955.12,
+          "examples": [
+            "Dr. Brian Weiss Collection (Set of 5 Volumes)",
+            "J.K. Rowling's Wizarding World - A Pop-Up Gallery of Curiosities",
+            "Harry Potter: Collectible Quidditch Set"
+          ]
+        },
+        {
+          "group": 906,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 1565.4,
+          "examples": [
+            "The Complete Guide to Self-Publishing Comics: How to Create and Sell Comic Books, Manga, and Webcomics",
+            "Introducing Chaos: A Graphic Guide",
+            "The Elements of Typographic Style: 4.2: 20th Anniversary Edition"
+          ]
+        },
+        {
+          "group": 1306,
+          "latents": [
+            529
+          ],
+          "gain_margin": 1345.87,
+          "examples": [
+            "Design of Cities: Revised Edition",
+            "Tomie: Complete Deluxe Edition",
+            "Beyond Bigger Leaner Stronger (The Build Muscle, Get Lean, and Stay Healthy Series)"
+          ]
+        },
+        {
+          "group": 854,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1046.16,
+          "examples": [
+            "The Adventures Of Suppandi \u2013 1 (Tinkle)",
+            "Kommandant's Girl",
+            "Mrs McGinty\u2019s Dead (Poirot)"
+          ]
+        },
+        {
+          "group": 225,
+          "latents": [
+            1881
+          ],
+          "gain_margin": 321.53,
+          "examples": [
+            "Alfred's Basic Chord Approach to Electronic Keyboards, Lesson Book 1: A Beginning Method for All Instruments With Automatic Rhythms & Chords (Alfred's Basic Pia",
+            "Getting Started with Bluetooth Low Energy: Tools and Techniques for Low-Power Networking",
+            "Cambridge IGCSE ICT Practical Workbook"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -22.581252207469742,
+  "test_error": 22.581252207469742,
+  "course_metric": "r2",
+  "course_score": 0.8571986635438408,
+  "n_text_cols": 10,
+  "n_text_features": 301,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 26.035115480422974,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "colsample_bytree": 1.0,
+    "n_trees": 446
+  },
+  "diagnostics": {}
+}

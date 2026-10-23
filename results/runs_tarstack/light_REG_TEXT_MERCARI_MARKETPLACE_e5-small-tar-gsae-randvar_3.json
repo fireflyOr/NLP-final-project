@@ -1,0 +1,472 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5704753438701183,
+  "test_error": 0.5704753438701183,
+  "course_metric": "r2",
+  "course_score": 0.41786522593482145,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 96.44321894645691,
+  "learner_params": null,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1035,
+      "n_groups": 1035,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 836,
+      "n_groups_unused": 177,
+      "n_removed": 699,
+      "var_share_removed": 0.5062,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 1029,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3981.78,
+          "examples": [
+            "Air Jordan",
+            "Air Jordan",
+            "Air Jordan"
+          ]
+        },
+        {
+          "group": 991,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1369.46,
+          "examples": [
+            "Tory Burch",
+            "Tory Burch",
+            "Tory Burch"
+          ]
+        },
+        {
+          "group": 82,
+          "latents": [
+            1784
+          ],
+          "gain_margin": 1167.67,
+          "examples": [
+            "Celine",
+            "Celine",
+            "Kodak"
+          ]
+        },
+        {
+          "group": 16,
+          "latents": [
+            1941
+          ],
+          "gain_margin": 1024.24,
+          "examples": [
+            "Louis Vuitton",
+            "Louis Vuitton",
+            "Louis Vuitton"
+          ]
+        },
+        {
+          "group": 990,
+          "latents": [
+            111
+          ],
+          "gain_margin": 644.99,
+          "examples": [
+            "Sperrys",
+            "Sperrys",
+            "HERMES"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 831,
+      "n_groups": 831,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 725,
+      "n_groups_unused": 58,
+      "n_removed": 589,
+      "var_share_removed": 0.5927,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 743,
+          "latents": [
+            377
+          ],
+          "gain_margin": 2000.89,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 823,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1733.45,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 65,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 574.22,
+          "examples": [
+            "Computers & Tablets",
+            "Computers & Tablets",
+            "Computers & Tablets"
+          ]
+        },
+        {
+          "group": 729,
+          "latents": [
+            111
+          ],
+          "gain_margin": 472.29,
+          "examples": [
+            "Sweaters",
+            "Sweaters",
+            "Sweaters"
+          ]
+        },
+        {
+          "group": 529,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 326.79,
+          "examples": [
+            "Sweaters",
+            "Sweaters",
+            "Sweaters"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1268,
+      "n_groups": 1268,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1033,
+      "n_groups_unused": 171,
+      "n_removed": 913,
+      "var_share_removed": 0.4989,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 331,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 5143.03,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 1261,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1338.9,
+          "examples": [
+            "Laptops & Netbooks",
+            "Laptops & Netbooks",
+            "Laptops & Netbooks"
+          ]
+        },
+        {
+          "group": 912,
+          "latents": [
+            559
+          ],
+          "gain_margin": 748.78,
+          "examples": [
+            "Purse",
+            "Purse",
+            "Purse"
+          ]
+        },
+        {
+          "group": 163,
+          "latents": [
+            1922
+          ],
+          "gain_margin": 663.9,
+          "examples": [
+            "Laptops & Netbooks",
+            "Laptops & Netbooks",
+            "Laptops & Netbooks"
+          ]
+        },
+        {
+          "group": 229,
+          "latents": [
+            1865
+          ],
+          "gain_margin": 586.42,
+          "examples": [
+            "Shoulder Bag",
+            "Shoulder Bag",
+            "Shoulder Bag"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1218,
+      "n_groups": 1217,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 997,
+      "n_groups_unused": 187,
+      "n_removed": 729,
+      "var_share_removed": 0.467,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 359,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 3730.55,
+          "examples": [
+            "Sports & Outdoors/Exercise/Fitness technology",
+            "Sports & Outdoors/Exercise/Fitness technology",
+            "Sports & Outdoors/Exercise/Fitness technology"
+          ]
+        },
+        {
+          "group": 1138,
+          "latents": [
+            559
+          ],
+          "gain_margin": 2303.72,
+          "examples": [
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer"
+          ]
+        },
+        {
+          "group": 1065,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1888.66,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "group": 819,
+          "latents": [
+            778
+          ],
+          "gain_margin": 834.52,
+          "examples": [
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag",
+            "Women/Women's Handbags/Shoulder Bag"
+          ]
+        },
+        {
+          "group": 1187,
+          "latents": [
+            286
+          ],
+          "gain_margin": 668.44,
+          "examples": [
+            "Handmade/Paper Goods/Stationery",
+            "Handmade/Paper Goods/Stationery",
+            "Handmade/Paper Goods/Stationery"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 1347,
+      "n_groups_unused": 260,
+      "n_removed": 1006,
+      "var_share_removed": 0.3533,
+      "var_share_sae_error": 0.0789,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            305,
+            1529
+          ],
+          "gain_margin": 11766.34,
+          "examples": [
+            "BEAUTIFUL and flawless PINK Kate Spade handbag with original dust bag. 100% guaranteed authentic! I bought this myself but after becoming a parent I need a much",
+            "Air Jordan 12s blue (obsidian) and white Amazing condition Negotiable",
+            "NWOT Authentic Michael Kors handbag. A very beautiful and practical bag. Never carried! Inside has two pockets. Inside lining at the bottom has a couple Lil pen"
+          ]
+        },
+        {
+          "group": 1280,
+          "latents": [
+            396
+          ],
+          "gain_margin": 3845.12,
+          "examples": [
+            "NEW white Phone Grip Holder Stand with Car Mount clip ( like a Popsocket ) Works for iPhone , Samsung , lg , HTC , and android phones Rain 2 for [rm] 3 for [rm]",
+            "1 Sticker/ Decal Matte Finish Use on your laptop, car, binder, pretty much anywhere you can use a sticker! I cannot go any lower, I am paying for shipping. Howe",
+            "15 - 10X13 Poly Mailer bags (Purple) \u2795\u2795Available to add-on, just comment below:\u2795\u2795 Pic 2 - Thank you please rate stickers 10/[rm] or 30/[rm] Pic 3 - 2X3 Fragile "
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            93
+          ],
+          "gain_margin": 1508.81,
+          "examples": [
+            "20 oz yeti cup",
+            "Cute white top",
+            "Hot pink and super cute. Cup size is a C."
+          ]
+        },
+        {
+          "group": 2018,
+          "latents": [
+            344
+          ],
+          "gain_margin": 1000.11,
+          "examples": [
+            "IMEI: 357991053948609 Unlocked for Any Carrier Great Condition NO HAGGLE PRICING! This mean's we agressively price our phones to be the best in the market. WE D",
+            "Excellent working condition. Comes with glass screen protector which normally costs [rm]. Has minor wear and tear scratches on back bottom corner caused by scre",
+            "Looking to sell my iphone 6 64gb unlocked. Phone is in great condition and will work on any carrier. Battery life is great, phone was well taken care of. Imei -"
+          ]
+        },
+        {
+          "group": 2020,
+          "latents": [
+            204
+          ],
+          "gain_margin": 586.52,
+          "examples": [
+            "Brand New guess watch",
+            "Unique retro watch for those who like something different. For that person that likes unusual jewelry.",
+            "Vibrates with batteries new!"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2045,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1189,
+      "n_groups_unused": 278,
+      "n_removed": 968,
+      "var_share_removed": 0.2999,
+      "var_share_sae_error": 0.063,
+      "top": [
+        {
+          "group": 462,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 8057.03,
+          "examples": [
+            "Air Jordan Retro 7 Fireberry",
+            "Air Jordan Retro 11 72-10",
+            "Macbook Air 11\" 2013"
+          ]
+        },
+        {
+          "group": 2042,
+          "latents": [
+            396
+          ],
+          "gain_margin": 5836.8,
+          "examples": [
+            "500 Fragile Stickers Free Shipping",
+            "Vineyard vines whale sticker",
+            "Blue line Velcro patch"
+          ]
+        },
+        {
+          "group": 510,
+          "latents": [
+            892
+          ],
+          "gain_margin": 4457.09,
+          "examples": [
+            "BNWT TC HTF Shooting Star Lularoe",
+            "Lularoe Perfect T lg",
+            "BNWT Lularoe Classic T 3XL"
+          ]
+        },
+        {
+          "group": 323,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 2154.2,
+          "examples": [
+            "Floral Light Blouse",
+            "Hollister Shorts",
+            "Hollister Shorts"
+          ]
+        },
+        {
+          "group": 2011,
+          "latents": [
+            344
+          ],
+          "gain_margin": 1387.27,
+          "examples": [
+            "Galaxy s 7 Edge unlock",
+            "Apple iPad mini!",
+            "Apple iPad 3rd Generation White 32GB"
+          ]
+        }
+      ]
+    }
+  }
+}

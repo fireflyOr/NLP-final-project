@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9284900718637493,
+  "test_error": 0.07150992813625068,
+  "course_metric": "auroc",
+  "course_score": 0.9284900718637492,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 34.985541343688965,
+  "learner_params": null,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2042,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1407,
+      "n_groups_unused": 307,
+      "n_removed": 1407,
+      "var_share_removed": 0.2845,
+      "var_share_sae_error": 0.1029,
+      "top": [
+        {
+          "group": 2037,
+          "latents": [
+            227
+          ],
+          "gain_margin": 4966.52,
+          "examples": [
+            "stupid hypocrite words fox, take a hike",
+            "Mr. Trump has chosen to manufacture a problem that doesn't exist inside a private business.  He's doing this, again, to deflect attention away from the fact tha",
+            "And stupid. What is there to save? These buildings are mouldy, leaky, asbestos filled pieces of garbage."
+          ]
+        },
+        {
+          "group": 1555,
+          "latents": [
+            315
+          ],
+          "gain_margin": 4451.78,
+          "examples": [
+            "This is the ignorant liberal loon that stated the NRA is a terrorist organization.  Who votes for these idiots?",
+            "I can't remember one time that this journalist has ever been right about anything. I always take the bait. Kiszla is more worthless as a human than the words he",
+            "Flagging all posts by this poser who plays the drunk indian stereotype.\nDisgusting."
+          ]
+        },
+        {
+          "group": 1601,
+          "latents": [
+            510
+          ],
+          "gain_margin": 1654.56,
+          "examples": [
+            "Leah -\n\nYou have become stupider and naive in your middle-age. \n\nChildren?",
+            "She really is dumb. Do the math and you learn it took her two years to select the seat.",
+            "MAGA!!  \n\nObama and the Sierra Club are, collectively, idiots."
+          ]
+        },
+        {
+          "group": 204,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 1635.66,
+          "examples": [
+            "Sheer is a smart guy with a strong team. Trudope is a babbling idiot, with a bunch of idiots behind.",
+            "Another idiot troll must add less than two cents worth of inanity.",
+            "Democrats,  you cant fix stupid. This idiot wants to impeach the President  for deporting illegals, and Hillary clinton thinks America should hate the ME A, whi"
+          ]
+        },
+        {
+          "group": 1017,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 1513.89,
+          "examples": [
+            "Thank God.....\n\nI will no longer have to listen to the idiot Bullwinkle sounding grandson, along with some other voice that states that this is a four by four t",
+            "Lemmee outta this bible thumping borough! I cannot believe they don't understand what they are doing! Have we just elected smart people or stupid, mindless, god",
+            "The Jays and their fans are a bottomless pit of excrement."
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1316,
+      "n_groups": 1224,
+      "n_multi_groups": 75,
+      "n_groups_dropped": 920,
+      "n_groups_unused": 369,
+      "n_removed": 963,
+      "var_share_removed": 0.546,
+      "var_share_sae_error": 0.0187,
+      "top": [
+        {
+          "group": 594,
+          "latents": [
+            890
+          ],
+          "gain_margin": 129.69,
+          "examples": [
+            "2016-05-06 06:30:05.006200",
+            "2016-10-06 13:56:28.179481",
+            "2016-08-12 06:11:30.254561"
+          ]
+        },
+        {
+          "group": 100,
+          "latents": [
+            1542,
+            1725
+          ],
+          "gain_margin": 118.39,
+          "examples": [
+            "2016-12-28 01:41:39.669145",
+            "2017-06-04 02:41:41.087354",
+            "2017-01-12 19:41:32.416925"
+          ]
+        },
+        {
+          "group": 995,
+          "latents": [
+            43
+          ],
+          "gain_margin": 105.68,
+          "examples": [
+            "2017-08-12 18:46:30.059803",
+            "2017-10-01 17:18:00.408998",
+            "2017-05-31 12:18:00.321764"
+          ]
+        },
+        {
+          "group": 362,
+          "latents": [
+            947
+          ],
+          "gain_margin": 103.73,
+          "examples": [
+            "2017-11-10 23:14:07.334745",
+            "2017-09-07 23:00:00.748133",
+            "2017-08-13 07:30:30.958721"
+          ]
+        },
+        {
+          "group": 1077,
+          "latents": [
+            351
+          ],
+          "gain_margin": 99.22,
+          "examples": [
+            "2016-10-28 19:28:12.059174",
+            "2016-03-28 02:02:28.520481",
+            "2016-10-28 00:13:28.004244"
+          ]
+        }
+      ]
+    }
+  }
+}

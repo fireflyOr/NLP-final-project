@@ -1,0 +1,397 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2468106142326101,
+  "test_error": 0.2468106142326101,
+  "course_metric": "r2",
+  "course_score": 0.46550263496354116,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 48.605360984802246,
+  "learner_params": null,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1621,
+      "n_groups": 1621,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1098,
+      "n_groups_unused": 398,
+      "n_removed": 968,
+      "var_share_removed": 0.5604,
+      "var_share_sae_error": 0.0032,
+      "top": [
+        {
+          "group": 610,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1449.16,
+          "examples": [
+            "K. Somasundaram",
+            "Priya Kumar",
+            "S Meenakshi Ammal"
+          ]
+        },
+        {
+          "group": 1610,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 609.12,
+          "examples": [
+            "Gurmehar Kaur",
+            "Suresh Samudrala",
+            "Saurabh Sharma"
+          ]
+        },
+        {
+          "group": 1109,
+          "latents": [
+            305
+          ],
+          "gain_margin": 581.73,
+          "examples": [
+            "Jeff Gothelf",
+            "ZAG Entertainment",
+            "Wizards RPG Team"
+          ]
+        },
+        {
+          "group": 1620,
+          "latents": [
+            204
+          ],
+          "gain_margin": 279.56,
+          "examples": [
+            "Osamu Tezuka",
+            "Osamu Tezuka",
+            "Warner Bros"
+          ]
+        },
+        {
+          "group": 795,
+          "latents": [
+            477
+          ],
+          "gain_margin": 268.59,
+          "examples": [
+            "Ranjit Chaudhri",
+            "Sushmita Jamwal",
+            "Ravi Nirmal Sharma"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 875,
+      "n_groups": 830,
+      "n_multi_groups": 38,
+      "n_groups_dropped": 615,
+      "n_groups_unused": 225,
+      "n_removed": 388,
+      "var_share_removed": 0.2614,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 572,
+          "latents": [
+            305
+          ],
+          "gain_margin": 659.19,
+          "examples": [
+            "Flexibound,\u2013 27 Sep 2011",
+            "Product Bundle,\u2013 26 Aug 2016",
+            "Flexibound,\u2013 21 Oct 2014"
+          ]
+        },
+        {
+          "group": 141,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 583.09,
+          "examples": [
+            "Hardcover,\u2013 Box set, 2 Aug 2009",
+            "Product Bundle,\u2013 26 Aug 2016",
+            "Hardcover,\u2013 31 Dec 2010"
+          ]
+        },
+        {
+          "group": 15,
+          "latents": [
+            1492,
+            1546
+          ],
+          "gain_margin": 405.59,
+          "examples": [
+            "(Kannada),Paperback,\u2013 2014",
+            "Paperback,\u2013 1 Feb 2017",
+            "Paperback,\u2013 1 Feb 2017"
+          ]
+        },
+        {
+          "group": 786,
+          "latents": [
+            23
+          ],
+          "gain_margin": 400.44,
+          "examples": [
+            "Product Bundle,\u2013 26 Aug 2016",
+            "Paperback,\u2013 Box set, 15 Jun 2014",
+            "Hardcover,\u2013 29 Nov 2016"
+          ]
+        },
+        {
+          "group": 325,
+          "latents": [
+            1072
+          ],
+          "gain_margin": 229.12,
+          "examples": [
+            "Hardcover,\u2013 Facsimile, 31 May 2011",
+            "Hardcover,\u2013 18 May 2012",
+            "Hardcover,\u2013 20 May 1993"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 682,
+      "n_groups": 682,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 556,
+      "n_groups_unused": 101,
+      "n_removed": 539,
+      "var_share_removed": 0.5814,
+      "var_share_sae_error": 0.0005,
+      "top": [
+        {
+          "group": 400,
+          "latents": [
+            305
+          ],
+          "gain_margin": 739.18,
+          "examples": [
+            "Visual Arts",
+            "Digital Media & Graphic Design (Books)",
+            "Digital Media & Graphic Design (Books)"
+          ]
+        },
+        {
+          "group": 180,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 692.75,
+          "examples": [
+            "Children's Crime & Thriller (Books)",
+            "Children's Crime & Thriller (Books)",
+            "Children's Crime & Thriller (Books)"
+          ]
+        },
+        {
+          "group": 339,
+          "latents": [
+            1226
+          ],
+          "gain_margin": 302.6,
+          "examples": [
+            "Words, Language & Grammar Reference",
+            "Language, Linguistics & Writing (Books)",
+            "Language, Linguistics & Writing (Books)"
+          ]
+        },
+        {
+          "group": 84,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 242.63,
+          "examples": [
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)",
+            "Programming & Software Development (Books)"
+          ]
+        },
+        {
+          "group": 324,
+          "latents": [
+            813
+          ],
+          "gain_margin": 173.65,
+          "examples": [
+            "Children's Crime & Thriller (Books)",
+            "Children's Crime & Thriller (Books)",
+            "Children's Crime & Thriller (Books)"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1698,
+      "n_groups": 1698,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1214,
+      "n_groups_unused": 481,
+      "n_removed": 1067,
+      "var_share_removed": 0.5001,
+      "var_share_sae_error": 0.0181,
+      "top": [
+        {
+          "group": 1260,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3456.2,
+          "examples": [
+            "The first book from the basketball superstar Kobe Bryant\u2015a lavish, deep dive inside the mind of one of the most revered athletes of all time\nIn the wake of his ",
+            "Make sure to check out the other installments in this unparalleled collection of historical information on The Legend of Zelda franchise with the New York Times",
+            "Draw 50 Cars, Trucks, and Motorcycles shows artists of all levels how to draw with ease by following simple step-by-step examples. Celebrated author Lee J. Ames"
+          ]
+        },
+        {
+          "group": 210,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 1698.81,
+          "examples": [
+            "Frank Miller's Sin City has set the gold standard for crime comics, both for Miller's unflinching stories and for his visceral, powerfully charged art. To honor",
+            "The fourth edition of the authoritative guide to producing, directing, shooting, editing, and distributing your video or film.\n\nWidely acknowledged as the \u201cbibl",
+            "An out-of-print collector's item since 1986, the definitive account of the development of Disney animation explains what made Disney's style unique and features"
+          ]
+        },
+        {
+          "group": 105,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1655.95,
+          "examples": [
+            "Six months have passed since Prisha was pushed to death by the person she loved the most, Saveer. But she doesn't believes that it was him till she stumbles upo",
+            "Bestselling romance writer Revati Krishna had everything that a girl could wish for \u2013 A sparkling career, a thriving fan-base and a perfect love life. However, ",
+            "The small and peaceful hill town of Ramsar wakes up to mysterious break-ins on two consecutive days. While the first one takes place at the local doctor's clini"
+          ]
+        },
+        {
+          "group": 1695,
+          "latents": [
+            942
+          ],
+          "gain_margin": 940.53,
+          "examples": [
+            "Learn how to program in Python while making and breaking ciphers\u2014algorithms used to create and send secret messages! \n\nAfter a crash course in Python programmin",
+            "With Hands-On Recommendation Systems with Python, learn the tools and techniques required in building various kinds of powerful recommendation systems (collabor",
+            "Actor, performer, musician, entrepreneur, winemaker, athlete, writer, curious adventurer - Maynard James Keenan is the embodiment of the archetypal artist. Best"
+          ]
+        },
+        {
+          "group": 1688,
+          "latents": [
+            529
+          ],
+          "gain_margin": 695.82,
+          "examples": [
+            "If you want to build as much muscle as naturally possible...be able to bench press, squat, and deadlift gargantuan amounts of weight...and maintain a ripped, be",
+            "Legendary trainer Tim Grover\u2019s internationally acclaimed training program used by the pros, including Michael Jordan and Kobe Bryant\u2014now completely revised, upd",
+            "For more than two decades, legendary trainer Tim Grover has taken the greats\u2014Michael Jordan, Kobe Bryant, Dwyane Wade, and hundreds of relentless competitors in"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1767,
+      "n_groups": 1767,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1207,
+      "n_groups_unused": 477,
+      "n_removed": 1088,
+      "var_share_removed": 0.5472,
+      "var_share_sae_error": 0.0177,
+      "top": [
+        {
+          "group": 1136,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1827.07,
+          "examples": [
+            "The Max Muscle Plan",
+            "The Total Fitness Manual: Transform Your Body in Just 12 Weeks (Golds Gym)",
+            "Running Your First Ultra: Customizable Training Plans for Your First 50K to 100-mile Race"
+          ]
+        },
+        {
+          "group": 1521,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1547.27,
+          "examples": [
+            "Kommandant's Girl",
+            "Murder In Paharganj",
+            "Death In The Afternoon"
+          ]
+        },
+        {
+          "group": 1766,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1201.41,
+          "examples": [
+            "Digital Cinematography: Fundamentals, Tools, Techniques, and Workflows",
+            "The Legend of Zelda: Art & Artifacts",
+            "Batman by Scott Snyder & Greg Capullo Box Set"
+          ]
+        },
+        {
+          "group": 109,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 806.42,
+          "examples": [
+            "The Complete Guide to Self-Publishing Comics: How to Create and Sell Comic Books, Manga, and Webcomics",
+            "The Complete Guide to Self-Publishing Comics: How to Create and Sell Comic Books, Manga, and Webcomics",
+            "Coraline Graphic Novel"
+          ]
+        },
+        {
+          "group": 1761,
+          "latents": [
+            529
+          ],
+          "gain_margin": 639.74,
+          "examples": [
+            "101 Things I Learned\u00ae in Urban Design School",
+            "House of Leaves: The Remastered Full-Color Edition",
+            "Hal Leonard Guitar Method Book 1 Second Edition"
+          ]
+        }
+      ]
+    }
+  }
+}

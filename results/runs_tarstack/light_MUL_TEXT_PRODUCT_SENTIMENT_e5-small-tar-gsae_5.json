@@ -1,0 +1,97 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.5808337165553457,
+  "test_error": 0.5808337165553457,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8973734561681125,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 16.64368987083435,
+  "learner_params": null,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1475,
+      "n_groups": 1473,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 787,
+      "n_groups_unused": 52,
+      "n_removed": 788,
+      "var_share_removed": 0.2341,
+      "var_share_sae_error": 0.0124,
+      "top": [
+        {
+          "group": 648,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 1724.03,
+          "examples": [
+            "Fuck. iPhone crapped out, will not charge at all. Says it is charging, but at 5% after all night. What are my options in Austin? #sxsw",
+            "So Annoyed with #SXSW schedule app that has bad #ui for iPad. My fingers ain't THAT fat, y'all.",
+            "Apparently mobile #sxsw GO app is not compatible w/my iPhone. Any other suggestions on good mobile aps for sxsw? thanks!"
+          ]
+        },
+        {
+          "group": 1472,
+          "latents": [
+            878
+          ],
+          "gain_margin": 1517.07,
+          "examples": [
+            "RT @mention Google maps for mobile 5.2 looks awesome.#sxsw",
+            "Google Maps mobile is going 3D in the next release, looks awesome.  #sxsw",
+            "marcelosomers: New version of Google Maps for Mobile is pretty amazing - vector based &amp; FAST! #sxsw: marcelosomers:... {link}"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            967,
+            1040
+          ],
+          "gain_margin": 1265.72,
+          "examples": [
+            "SXSW\n500 E Cesar Chavez St, Austin, Texas\n{link} #sxsw",
+            "For any friends coming to Austin for SXSW: {link} #Austin #sxsw",
+            "RT @mention At #sxsw? @mention / @mention wanna buy you a drink. 7pm at Fado on 4th. {link} Join us!"
+          ]
+        },
+        {
+          "group": 1444,
+          "latents": [
+            668
+          ],
+          "gain_margin": 1138.7,
+          "examples": [
+            "It is well known steve jobs hates #sxsw RT @mention iPhone just autocorrected &quot;sxsw&quot; to &quot;ass's&quot;.",
+            "MyPOV: #verizon wins hands down for network.  Hard to use new services like #beluga with a crappy #att #iphone network #sxsw",
+            "Looking forward to the day when @mention and @mention release native Android 3.0 tablet-optimized clients! Google Latitude sucks! #sxsw"
+          ]
+        },
+        {
+          "group": 1464,
+          "latents": [
+            227
+          ],
+          "gain_margin": 1096.33,
+          "examples": [
+            "Austin Hookers:  please do not accept apple products for the coochie.  #SXSW",
+            "Google will not launch Facebook competitor Circles @mention #sxsw today as thought, creeper half-friends the world over disappointed.",
+            "RT @mention #protip don't show your google analytics page in a #sxsw presentation"
+          ]
+        }
+      ]
+    }
+  }
+}

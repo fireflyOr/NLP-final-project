@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2354282109640775,
+  "test_error": 1.2354282109640775,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9761077689805592,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 192.85315895080566,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1413,
+      "n_groups": 1400,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 164,
+      "n_groups_unused": 0,
+      "n_removed": 19,
+      "var_share_removed": 0.0065,
+      "var_share_sae_error": 0.0257,
+      "top": [
+        {
+          "group": 27,
+          "latents": [
+            1293,
+            1693
+          ],
+          "gain_margin": 13302.17,
+          "examples": [
+            "A Rh\u00f4ne-style blend of Garnacha (Grenache), Mourv\u00e8dre, Tempranillo, Syrah and Graciano, this pretty wine is soft and dry. It has an earthy, dried herb taste, wi",
+            "This blend of Tempranillo, Malbec, Grenache and Mourv\u00e8dre offers such generosity of fruit, but manages to finish dry and clean. Tannins are grippy in the mouth,",
+            "This blend of Menc\u00eda, the local Grand Noir and Merenzao opens with raisiny, spicy, slightly baked aromas that suggest nutmeg. The palate is drawing and hard, wi"
+          ]
+        },
+        {
+          "group": 221,
+          "latents": [
+            1795
+          ],
+          "gain_margin": 10715.2,
+          "examples": [
+            "Herbal notes of blossom rise from the glass, with a smoky, flinty accent. The palate presents a honeyed aspect, promising ripe fruit and lusciousness checked by",
+            "While intense aromas of mango, honey and blossom are appealing, this unusually structured Gew\u00fcrztraminer seems at the same time quite tart and caramelized. It's",
+            "Intense aromas of sun-ripened peaches, berries and blossom abound on this exuberant, yet nimble-footed Gew\u00fcrztraminer. Dry in style, the palate is a touch herba"
+          ]
+        },
+        {
+          "group": 740,
+          "latents": [
+            694
+          ],
+          "gain_margin": 9905.63,
+          "examples": [
+            "Winemaker: Morn\u00e9 Vrey. A new addition to the CWG lineup, this selection shows great balance and magnificent control over ripeness and freshness. Aromas and flav",
+            "Landmark's Chardonnays have been getting sweeter and simpler over the years, perhaps in an attempt to appeal to the popular palate. With the 2011 Lorenzo, they ",
+            "Montagny is at the southern end of the C\u00f4te Chalonnaise before it merges into M\u00e2con. That gives this wine its warmth and ripe apple and peach fruits. It is cris"
+          ]
+        },
+        {
+          "group": 1342,
+          "latents": [
+            95
+          ],
+          "gain_margin": 7584.19,
+          "examples": [
+            "Young and strong now, this has lots of primary berry and chocolate flavors. The oak hasn't been integrated into the wine, making it feel rustic, with an emphasi",
+            "Appealing aromas of cocoa, herb, cherry and barrel spice lead to full fruit flavors. Burly slightly drying tannins give it a firm squeeze.",
+            "Quilceda makes big, muscular Cabernets, but the power is tightly controlled and never out of whack. Firm cherry fruit is edged with mixed spices from barrel agi"
+          ]
+        },
+        {
+          "group": 167,
+          "latents": [
+            1706
+          ],
+          "gain_margin": 7575.26,
+          "examples": [
+            "Strongly flavored, with jammy raspberry and cherry pie flavors accented with sweet vanilla, cinnamon spice and smoky cedar wood. A good, tasty Pinot Noir meant ",
+            "Unusually supple for Fromm, but still featuring a heavy overlay of toasty, cedary oak. If you don't mind that in your Pinot, you may like this even more, becaus",
+            "This is a dark, tannic Pinot Noir from a big vintage, hefty in dark berry fruit and a taste of leather. Affordable and widely distributed, it's a good choice fo"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 709,
+      "n_groups": 709,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 603,
+      "n_groups_unused": 0,
+      "n_removed": 527,
+      "var_share_removed": 0.6143,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 413,
+          "latents": [
+            918
+          ],
+          "gain_margin": 5400.99,
+          "examples": [
+            "Beira Interior",
+            "Beira Interior",
+            "Beira Interior"
+          ]
+        },
+        {
+          "group": 598,
+          "latents": [
+            187
+          ],
+          "gain_margin": 4554.77,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 471,
+          "latents": [
+            132
+          ],
+          "gain_margin": 4099.96,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "group": 526,
+          "latents": [
+            47
+          ],
+          "gain_margin": 4096.81,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 419,
+          "latents": [
+            180
+          ],
+          "gain_margin": 3639.35,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        }
+      ]
+    }
+  }
+}

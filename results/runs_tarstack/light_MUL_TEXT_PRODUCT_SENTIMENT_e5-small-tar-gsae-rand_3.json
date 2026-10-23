@@ -1,0 +1,96 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6271771476083113,
+  "test_error": 0.6271771476083113,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8911795988591141,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 17.21453285217285,
+  "learner_params": null,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1447,
+      "n_groups": 1447,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 733,
+      "n_groups_unused": 47,
+      "n_removed": 733,
+      "var_share_removed": 0.3532,
+      "var_share_sae_error": 0.0126,
+      "top": [
+        {
+          "group": 686,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 1365.64,
+          "examples": [
+            "In the Consumerist's &quot;Worst Company in America 2011&quot; tournament bracket - apple is pitted against microsoft in the first round #sxsw",
+            "Apple...&quot;the classiest fascist company in America&quot; Kara Swisher #sxsw",
+            "Jesus hockey mask?! I'm worse than I thought... #SXSW @mention Apple Store, SXSW {link}"
+          ]
+        },
+        {
+          "group": 547,
+          "latents": [
+            1520
+          ],
+          "gain_margin": 1216.4,
+          "examples": [
+            "RT @mention holy smokes, ipad2 replacing my flip cam as default video capture device. beautiful. elegant. apple. #sxsw",
+            "BEST newly added iPhone app goes to @mention awesome!! #SXSW 2011 here I come for one day and one amazing day it will be!!",
+            "holy smokes, ipad2 replacing my flip cam as default video capture device. beautiful. elegant. apple. #sxsw"
+          ]
+        },
+        {
+          "group": 1421,
+          "latents": [
+            668
+          ],
+          "gain_margin": 1096.7,
+          "examples": [
+            "Looking forward to the day when @mention and @mention release native Android 3.0 tablet-optimized clients! Google Latitude sucks! #sxsw",
+            "My tweets are stalled. Data sluggish. Come on AT&amp;T, Verizon is embarrassing iPhone customers who haven't switched. #SXSW #iPhone",
+            "There at not even words for how much the wireless at #SXSW sucks.  Thank goodness for my iPhone."
+          ]
+        },
+        {
+          "group": 721,
+          "latents": [
+            878
+          ],
+          "gain_margin": 1091.72,
+          "examples": [
+            "marcelosomers: New version of Google Maps for Mobile is pretty amazing - vector based &amp; FAST! #sxsw: marcelosomers:... {link}",
+            "New version of Google Maps for Mobile is pretty amazing - vector based &amp; FAST! #sxsw",
+            "Nice! RT @mention Yes! Gowalla wins best Andoid app at the Team Android Choice Awards. Thanks all! #sxsw"
+          ]
+        },
+        {
+          "group": 1446,
+          "latents": [
+            967
+          ],
+          "gain_margin": 1070.74,
+          "examples": [
+            "Expect mob scenes on W 6th St &amp; Congress {link} #sxsw #ipad2",
+            "RT @mention RT @mention @mention @mention Austin street closures during SXSW in Google Map form: {link} #sxsw #austin",
+            "Z33: Ounce of Prevention {link} [codes valid: 12:00-3:59:59p 03/14/11] #infektd #sxsw #zlf"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-pls",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.729765270962601,
+  "test_error": 0.270234729037399,
+  "course_metric": "auroc",
+  "course_score": 0.729765270962601,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 4.47824501991272,
+  "learner_params": null,
+  "diagnostics": {}
+}

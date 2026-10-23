@@ -1,0 +1,471 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5736368648683463,
+  "test_error": 0.5736368648683463,
+  "course_metric": "r2",
+  "course_score": 0.4304977314685321,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 95.99824404716492,
+  "learner_params": null,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1080,
+      "n_groups": 1080,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 862,
+      "n_groups_unused": 171,
+      "n_removed": 719,
+      "var_share_removed": 0.525,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 578,
+          "latents": [
+            305
+          ],
+          "gain_margin": 4511.39,
+          "examples": [
+            "Yeezy",
+            "Yeezy",
+            "Yeezy"
+          ]
+        },
+        {
+          "group": 1079,
+          "latents": [
+            174
+          ],
+          "gain_margin": 2974.15,
+          "examples": [
+            "Kardashian Kollection",
+            "Kardashian Kollection",
+            "lululemon athletica"
+          ]
+        },
+        {
+          "group": 982,
+          "latents": [
+            204
+          ],
+          "gain_margin": 458.47,
+          "examples": [
+            "Beats",
+            "Beats",
+            "Beats"
+          ]
+        },
+        {
+          "group": 228,
+          "latents": [
+            1713
+          ],
+          "gain_margin": 399.43,
+          "examples": [
+            "Rock Revival",
+            "Rock Revival",
+            "Rock Revival"
+          ]
+        },
+        {
+          "group": 389,
+          "latents": [
+            860
+          ],
+          "gain_margin": 277.21,
+          "examples": [
+            "Kardashian Kollection",
+            "Kardashian Kollection",
+            "Boppy"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 802,
+      "n_groups": 802,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 693,
+      "n_groups_unused": 63,
+      "n_removed": 568,
+      "var_share_removed": 0.591,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 782,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1790.7,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 174,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 683.59,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 718,
+          "latents": [
+            998
+          ],
+          "gain_margin": 673.38,
+          "examples": [
+            "Strollers",
+            "Strollers",
+            "Strollers"
+          ]
+        },
+        {
+          "group": 93,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 624.02,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 282,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 541.18,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1273,
+      "n_groups": 1273,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1032,
+      "n_groups_unused": 172,
+      "n_removed": 884,
+      "var_share_removed": 0.5272,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 602,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 3362.1,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 1258,
+          "latents": [
+            174
+          ],
+          "gain_margin": 1933.45,
+          "examples": [
+            "Hip Bag",
+            "Hip Bag",
+            "Change Purse"
+          ]
+        },
+        {
+          "group": 428,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1267.36,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 93,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 549.44,
+          "examples": [
+            "Athletic",
+            "Athletic",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 19,
+          "latents": [
+            2015
+          ],
+          "gain_margin": 532.55,
+          "examples": [
+            "Cell Phones & Smartphones",
+            "Cell Phones & Smartphones",
+            "Cell Phones & Smartphones"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1242,
+      "n_groups": 1240,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1000,
+      "n_groups_unused": 196,
+      "n_removed": 826,
+      "var_share_removed": 0.4381,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 345,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 3897.78,
+          "examples": [
+            "Men/Shoes/Athletic",
+            "Men/Shoes/Athletic",
+            "Men/Shoes/Athletic"
+          ]
+        },
+        {
+          "group": 1214,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1588.33,
+          "examples": [
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel",
+            "Women/Women's Handbags/Satchel"
+          ]
+        },
+        {
+          "group": 612,
+          "latents": [
+            620
+          ],
+          "gain_margin": 920.27,
+          "examples": [
+            "Handmade/Paper Goods/Sticker",
+            "Handmade/Paper Goods/Sticker",
+            "Handmade/Paper Goods/Sticker"
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            1641
+          ],
+          "gain_margin": 717.99,
+          "examples": [
+            "Women/Coats & Jackets/Fleece Jacket",
+            "Women/Coats & Jackets/Fleece Jacket",
+            "Women/Coats & Jackets/Fleece Jacket"
+          ]
+        },
+        {
+          "group": 142,
+          "latents": [
+            1581
+          ],
+          "gain_margin": 671.25,
+          "examples": [
+            "Electronics/Cell Phones & Accessories/Screen Protectors",
+            "Electronics/Cell Phones & Accessories/Screen Protectors",
+            "Electronics/Cell Phones & Accessories/Screen Protectors"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1248,
+      "n_groups_unused": 254,
+      "n_removed": 806,
+      "var_share_removed": 0.3078,
+      "var_share_sae_error": 0.0809,
+      "top": [
+        {
+          "group": 2042,
+          "latents": [
+            305
+          ],
+          "gain_margin": 6792.47,
+          "examples": [
+            "\u2764\ufe0fSold out\u203c\ufe0fLaces included. No Longer Available in this color & size at LL Bean in store or online!! \u2764\ufe0fUnique Rare color. WOMENS 9, Men's 7 Stamped. Excellent C",
+            "Nike What The Kobe sz 8.5 100% authentic with og box and faded out receipt. Worn only a few times, huge grails to most. Not easy to come by in this condition. N",
+            "These amazing Nike Air Max 90 provide great comfort and style. The upper of the shoe is made out of nice quality leather. Retail price for this shoe is [rm], ho"
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            396
+          ],
+          "gain_margin": 5561.22,
+          "examples": [
+            "Reggae Music Tumblr Large Glossy Stickers This listing is for the 4 stickers in the pictures. These stickers are large as you can see from the photos. They are ",
+            "These stickers are quite a bit larger than your average sticker! Price includes tracked shipping! Large 4x4 Weeknd Sticker. Permanent, Outdoor Vinyl! Can be use",
+            "15 Dessert Stickers Lot This listing is for 15 stickers from the pictures shown. Quarter in pictures show scale of stickers. No repeats. Tags: icecream cake cup"
+          ]
+        },
+        {
+          "group": 2045,
+          "latents": [
+            93
+          ],
+          "gain_margin": 1187.85,
+          "examples": [
+            "I cut the lining out of both shorts, no stains! In good condition besides cutting out the lining.",
+            "Small black and white nike shorts.",
+            "Good conditions just a little decoloration"
+          ]
+        },
+        {
+          "group": 986,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1087.58,
+          "examples": [
+            "9 large brand new shoppers from Kate Spade. Red/white",
+            "Large ultimate leggings",
+            "EUC SIZE 2 Reversible (two sweaters for the price of one) Super soft cotton Few made and no longer available Ships M-F NO TRADES OR LOWBALL OFFERS **PRICE IS FI"
+          ]
+        },
+        {
+          "group": 157,
+          "latents": [
+            1922
+          ],
+          "gain_margin": 619.04,
+          "examples": [
+            "They sold me this phone with icloud so selling just for PARTS Screen is brand new so if you have cracked screen you can get this screen and the extra parts",
+            "GENTLY used Betsey Johnson purse. I only used it a few times as an overnight bag.",
+            "This is the newest Asus Chromebook that just came out. It's brand new, still in the box and unopened. My son wanted a different laptop of Xmas so im just trying"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2043,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1174,
+      "n_groups_unused": 305,
+      "n_removed": 734,
+      "var_share_removed": 0.293,
+      "var_share_sae_error": 0.0643,
+      "top": [
+        {
+          "group": 2026,
+          "latents": [
+            305
+          ],
+          "gain_margin": 9576.06,
+          "examples": [
+            "Lululemon swiftly long sleeve 8",
+            "6 NWT Lululemon Berry Fleece Out Jacket",
+            "Lululemon Kelly Green Scuba Hoodie Sz 12"
+          ]
+        },
+        {
+          "group": 582,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 4550.88,
+          "examples": [
+            "Black fishnets",
+            "C.O Bigelow lip tint",
+            "Lip tint"
+          ]
+        },
+        {
+          "group": 2041,
+          "latents": [
+            396
+          ],
+          "gain_margin": 2052.75,
+          "examples": [
+            "Personalized Name Tumblr Sticker Pack",
+            "USB Type C Cable (2 Pack - 1 FT)",
+            "Blue Tumblr Summer Cute Sticker Lot Pack"
+          ]
+        },
+        {
+          "group": 2037,
+          "latents": [
+            344
+          ],
+          "gain_margin": 1710.06,
+          "examples": [
+            "AALopez28 hold",
+            "64GB 2nd Gen iPad",
+            "Locked 16GB iPad"
+          ]
+        },
+        {
+          "group": 502,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1249.06,
+          "examples": [
+            "10k Gold ring with real diamonds",
+            "14k .30ct tw Gold Diamond Ring 6",
+            "14k Gold Bracelet"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9183011511168625,
+  "test_error": 0.0816988488831375,
+  "course_metric": "auroc",
+  "course_score": 0.9183011511168624,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 35.87896108627319,
+  "learner_params": null,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2044,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1464,
+      "n_groups_unused": 293,
+      "n_removed": 1464,
+      "var_share_removed": 0.4952,
+      "var_share_sae_error": 0.1007,
+      "top": [
+        {
+          "group": 2042,
+          "latents": [
+            227
+          ],
+          "gain_margin": 6647.49,
+          "examples": [
+            "stupid corrupt and economically inept, liberals empowered an idiot , conservatives and canadians are going to enable a real business leader who understands the ",
+            "I suggest a match up  between the WWE players and those hairy people that pretend to be uneducated, backward fools, the ones who cosplay in totally inappropriat",
+            "Trump encouraged such  racist skinhead moronic people with his words and actions/"
+          ]
+        },
+        {
+          "group": 228,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 5413.54,
+          "examples": [
+            "Globe editors, led by Tony Keller, have become deranged.  This is so pathetic.",
+            "Kenny never learns. A career politician, a long standing bum boy for Harper. What a hypocrite suggesting that Notley is out picking fights with everyone. He sho",
+            "Just what do you expect with Salem full of incompetent,greasy democrats to stupid to to manage anything."
+          ]
+        },
+        {
+          "group": 1165,
+          "latents": [
+            315
+          ],
+          "gain_margin": 2737.14,
+          "examples": [
+            "I truly believe there are many more people who are happy to see Carrington be able to bounce back after making mistakes than the few idiots who continue to cruc",
+            "Is it not completely obvious to everyone that this woman is mentally ill?  I mean she needs to seek qualified help, maybe spend a little time in a mental ward u",
+            "Wow, judging kids by who they vote for\u2026.calling them idiots like you know any better\u2026I would knock you into tomorrow if I could."
+          ]
+        },
+        {
+          "group": 497,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 1850.53,
+          "examples": [
+            "You're psycho.",
+            "They're trying to 'play stupid' and i hope no one falls for it.",
+            "You sound like an ass."
+          ]
+        },
+        {
+          "group": 1307,
+          "latents": [
+            510
+          ],
+          "gain_margin": 842.91,
+          "examples": [
+            "An idiot that Trump and Breitbart have made very comfortable. Him and all the other idiots painting swastikas.",
+            "I'm waxing nostalgic for former Presidents Nixon, Harding, Johnson, Pierce, Buchanan and GW Bush with this current idiot/jerk \"President\" in the White House.",
+            "The truth is the Chump and his team of idiots have the ball in their court but haven't learned how to dribble the dam\ud83d\udc79 Thing"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1524,
+      "n_groups": 1426,
+      "n_multi_groups": 88,
+      "n_groups_dropped": 1045,
+      "n_groups_unused": 377,
+      "n_removed": 1094,
+      "var_share_removed": 0.6363,
+      "var_share_sae_error": 0.022,
+      "top": [
+        {
+          "group": 306,
+          "latents": [
+            1858
+          ],
+          "gain_margin": 153.58,
+          "examples": [
+            "2016-10-08 01:00:35.954786",
+            "2016-10-15 01:49:16.959186",
+            "2017-06-11 01:58:49.233418"
+          ]
+        },
+        {
+          "group": 231,
+          "latents": [
+            1862
+          ],
+          "gain_margin": 139.46,
+          "examples": [
+            "2015-10-06 17:47:50.830195",
+            "2017-10-23 13:42:11.859895",
+            "2017-01-09 13:52:50.434405"
+          ]
+        },
+        {
+          "group": 53,
+          "latents": [
+            55,
+            98,
+            325
+          ],
+          "gain_margin": 133.82,
+          "examples": [
+            "2016-06-28 00:18:19.728036",
+            "2016-05-09 20:00:18.722771",
+            "2017-07-11 19:14:09.727689"
+          ]
+        },
+        {
+          "group": 1315,
+          "latents": [
+            226
+          ],
+          "gain_margin": 112.97,
+          "examples": [
+            "2017-06-08 19:00:25.357134",
+            "2016-09-07 04:30:25.775491",
+            "2016-07-21 21:27:25.614582"
+          ]
+        },
+        {
+          "group": 45,
+          "latents": [
+            1019,
+            1082,
+            1968,
+            2011
+          ],
+          "gain_margin": 109.58,
+          "examples": [
+            "2017-08-15 12:16:50.658671",
+            "2017-01-06 14:55:50.904912",
+            "2017-10-12 01:55:50.833847"
+          ]
+        }
+      ]
+    }
+  }
+}

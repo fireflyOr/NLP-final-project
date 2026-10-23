@@ -1,0 +1,96 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6201789376288378,
+  "test_error": 0.6201789376288378,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9055837616780262,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 16.928945064544678,
+  "learner_params": null,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1430,
+      "n_groups": 1430,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 738,
+      "n_groups_unused": 52,
+      "n_removed": 738,
+      "var_share_removed": 0.1989,
+      "var_share_sae_error": 0.0119,
+      "top": [
+        {
+          "group": 1413,
+          "latents": [
+            668
+          ],
+          "gain_margin": 1600.46,
+          "examples": [
+            "My tweets are stalled. Data sluggish. Come on AT&amp;T, Verizon is embarrassing iPhone customers who haven't switched. #SXSW #iPhone",
+            "MyPOV: #verizon wins hands down for network.  Hard to use new services like #beluga with a crappy #att #iphone network #sxsw",
+            "Cant handle #SxSW traffic? RT @mention Dear @mention your own app for iPhone has sucked all day. #crashing"
+          ]
+        },
+        {
+          "group": 1412,
+          "latents": [
+            227
+          ],
+          "gain_margin": 1227.95,
+          "examples": [
+            "@mention lost its way by caring too much about its business.  - tim o'reilly #SXSW",
+            "Google will not launch Facebook competitor Circles @mention #sxsw today as thought, creeper half-friends the world over disappointed.",
+            "Social Is Too Important For #Google To Screw Up With A Big Launch Circus {link} #socialmedia #sxsw"
+          ]
+        },
+        {
+          "group": 333,
+          "latents": [
+            1565
+          ],
+          "gain_margin": 939.52,
+          "examples": [
+            "Aaron P of @mention apps don't feel like the web. So much you can do in the browser. IPad is neither the web nor print. #newsapps #sxsw",
+            "It's a model for one, not for all. RT @mention #sxsw &quot;apple comes up with cool tech no one's ever heard of cuz they don't go to conferences&quot;",
+            "Just got my hand on the ipad 2 at #sxsw. Mixed feelings on the magnetic cover, but overall, a great improvemnt."
+          ]
+        },
+        {
+          "group": 690,
+          "latents": [
+            918
+          ],
+          "gain_margin": 898.46,
+          "examples": [
+            "Z7: Lead Don't Follow {link} [codes valid: 4:00-7:59:59p 03/11/11] #infektd #sxsw #zlf",
+            "Google Circles will not launch at #SXSW - {link}",
+            "Grrr..plancast stuff exported to Google calendar in San Diego/pacific time did not shift to central tme #wack #sxsw"
+          ]
+        },
+        {
+          "group": 356,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 778.21,
+          "examples": [
+            "I think an iPad is eminent. Typing thoughtful notes on a phone not working,  mac book to big, handwriting is ridic. #sxsw day 2 conquered.",
+            "iPad design malady: iPad Elbow - I hate the iPad's back button with the heat of a million suns. #tapworthy #sxsw",
+            "Nice that @mention iPhone app is behaving today. Crashes yesterday were ridiculous. #sxsw"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13158.049578856542,
+  "test_error": 13158.049578856542,
+  "course_metric": "r2",
+  "course_score": 0.7494836608609214,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 49.346861839294434,
+  "learner_params": null,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2035,
+      "n_groups": 2024,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1244,
+      "n_groups_unused": 368,
+      "n_removed": 1168,
+      "var_share_removed": 0.5225,
+      "var_share_sae_error": 0.0258,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            204,
+            1439
+          ],
+          "gain_margin": 1344.38,
+          "examples": [
+            "Stratton, N*",
+            "Goldsmith, S*",
+            "Underwood, C*"
+          ]
+        },
+        {
+          "group": 40,
+          "latents": [
+            1996
+          ],
+          "gain_margin": 777.35,
+          "examples": [
+            "Gandha, A K",
+            "Gandha, A K",
+            "Gandha, A K"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            813,
+            1492
+          ],
+          "gain_margin": 507.94,
+          "examples": [
+            "Scully, J",
+            "Ruz Hernandez, R",
+            "Price, E"
+          ]
+        },
+        {
+          "group": 107,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 507.28,
+          "examples": [
+            "Kellner, B W",
+            "Kellner, B W",
+            "Kellner, B W"
+          ]
+        },
+        {
+          "group": 1700,
+          "latents": [
+            365
+          ],
+          "gain_margin": 270.58,
+          "examples": [
+            "Huntley, J E",
+            "Huntley, J E",
+            "Huntley, J E"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 975,
+      "n_groups": 973,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 656,
+      "n_groups_unused": 267,
+      "n_removed": 329,
+      "var_share_removed": 0.1624,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 813,
+          "latents": [
+            204
+          ],
+          "gain_margin": 7948.98,
+          "examples": [
+            "Technical Director",
+            "Technical Director",
+            "Technical Director"
+          ]
+        },
+        {
+          "group": 233,
+          "latents": [
+            911
+          ],
+          "gain_margin": 5639.21,
+          "examples": [
+            "Branch Head Engineering",
+            "Branch Head Engineering",
+            "Branch Head Engineering"
+          ]
+        },
+        {
+          "group": 68,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 4398.04,
+          "examples": [
+            "DEPUTY GENERAL MANAGER, ACT",
+            "Deputy General Manager",
+            "DEPUTY GENERAL MANAGER"
+          ]
+        },
+        {
+          "group": 876,
+          "latents": [
+            323
+          ],
+          "gain_margin": 3920.69,
+          "examples": [
+            "Director Social Policy",
+            "Director Social Policy",
+            "Director Social Policy"
+          ]
+        },
+        {
+          "group": 109,
+          "latents": [
+            1617
+          ],
+          "gain_margin": 3234.14,
+          "examples": [
+            "Paralegal",
+            "Paralegal",
+            "Solicitor IIl"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6550879509657638,
+  "test_error": 0.6550879509657638,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9099967303573413,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 27.588244915008545,
+  "learner_params": null,
+  "diagnostics": {}
+}

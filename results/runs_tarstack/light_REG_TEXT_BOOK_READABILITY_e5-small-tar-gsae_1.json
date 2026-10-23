@@ -1,0 +1,471 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8553124419385424,
+  "test_error": 0.8553124419385424,
+  "course_metric": "r2",
+  "course_score": 0.8116942176191289,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 58.636974573135376,
+  "learner_params": null,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 432,
+      "n_groups": 432,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 362,
+      "n_groups_unused": 102,
+      "n_removed": 362,
+      "var_share_removed": 0.3991,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 313,
+          "latents": [
+            349
+          ],
+          "gain_margin": 359.92,
+          "examples": [
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, No. 169, January, 1881, Vol. XXIX\nA Monthly Magazine for Youngest Readers"
+          ]
+        },
+        {
+          "group": 287,
+          "latents": [
+            813
+          ],
+          "gain_margin": 294.65,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 370,
+          "latents": [
+            477
+          ],
+          "gain_margin": 200.48,
+          "examples": [
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 179,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 179.19,
+          "examples": [
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers",
+            "The Nursery, No. 165. September, 1880, Vol. 28\nA Monthly Magazine For Youngest Readers"
+          ]
+        },
+        {
+          "group": 318,
+          "latents": [
+            1551
+          ],
+          "gain_margin": 123.44,
+          "examples": [
+            "Scientific American Supplement, No. 384",
+            "Scientific American Supplement, No. 384",
+            "Scientific American Supplement, No. 384"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1291,
+      "n_groups": 1290,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1016,
+      "n_groups_unused": 454,
+      "n_removed": 1017,
+      "var_share_removed": 0.4077,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 1282,
+          "latents": [
+            477
+          ],
+          "gain_margin": 232.5,
+          "examples": [
+            "African Storybook and Paul Walugo",
+            "Kaka Gana Abba",
+            "Freddie's Papa"
+          ]
+        },
+        {
+          "group": 1280,
+          "latents": [
+            911
+          ],
+          "gain_margin": 200.48,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 304,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 129.82,
+          "examples": [
+            "an editorial article published Oct. 15, (28,) 1914, in the Mir, the organ of the Nationalists, and signed by A. Bouroff, ex-Minister and ex-Vice President of th",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 410,
+          "latents": [
+            801
+          ],
+          "gain_margin": 77.84,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1134,
+          "latents": [
+            771
+          ],
+          "gain_margin": 73.86,
+          "examples": [
+            "Chas. T Porter",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF).",
+            "The Ukuqonda Institute with the participation of the Department of Basic Education of South Africa (DBE) with funding from the Sasol Inzalo Foundation(SaIF)."
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 97,
+      "n_groups": 95,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 85,
+      "n_groups_unused": 27,
+      "n_removed": 87,
+      "var_share_removed": 0.3955,
+      "var_share_sae_error": 0.0039,
+      "top": [
+        {
+          "group": 83,
+          "latents": [
+            70
+          ],
+          "gain_margin": 3.22,
+          "examples": [
+            "traveller",
+            "traveller",
+            "traveller, travelled"
+          ]
+        },
+        {
+          "group": 49,
+          "latents": [
+            606
+          ],
+          "gain_margin": 0.77,
+          "examples": [
+            "pyjamas",
+            "ploughed",
+            "ploughing"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            1821
+          ],
+          "gain_margin": 0.74,
+          "examples": [
+            "labourer, neighbour, neighbour",
+            "labour, neighbours",
+            "plough, ploughing, ploughed, plough, ploughed"
+          ]
+        },
+        {
+          "group": 51,
+          "latents": [
+            832
+          ],
+          "gain_margin": 0.72,
+          "examples": [
+            "neighbour, honour",
+            "favour",
+            "favour"
+          ]
+        },
+        {
+          "group": 56,
+          "latents": [
+            962
+          ],
+          "gain_margin": 0.51,
+          "examples": [
+            "coloured",
+            "colour, coloured",
+            "analogue"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1194,
+      "n_groups": 1194,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 944,
+      "n_groups_unused": 531,
+      "n_removed": 944,
+      "var_share_removed": 0.0752,
+      "var_share_sae_error": 0.009,
+      "top": [
+        {
+          "group": 594,
+          "latents": [
+            779
+          ],
+          "gain_margin": 3041.28,
+          "examples": [
+            "It was more than six hundred years ago that a little peasant baby was born in the small village of Vespignano, not far from the beautiful city of Florence, in I",
+            "Italian painters received their names in peculiar ways. This man's father was a tailor; and the artist was named after his father's profession. He was in fact \"",
+            "It is not often (out of a fairy tale) that wishes to change the whole current of one's life are granted so promptly as that wish of mine was.\nThe next morning's"
+          ]
+        },
+        {
+          "group": 1175,
+          "latents": [
+            477
+          ],
+          "gain_margin": 2063.61,
+          "examples": [
+            "One day, he called his sons and said, \"I am old and will die soon. But before I die, I want to see you in your own homes. You have one month to each make your o",
+            "The parents gave a small pot as a gift to their daughter. Natabo loved that little pot. She loved to play with it. One day, by accident, the boys broke Natabo's",
+            "Tired as they were, they did not have time to go to sleep before they heard a bear calling \"Ugh! Ugh!\" in the woods. They sprang up and ran out of the woods, an"
+          ]
+        },
+        {
+          "group": 1150,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 1412.78,
+          "examples": [
+            "The oldest hyena said, \"Let the strongest hyena stand on the ground and then let the rest of us stand on each other's backs. We will climb on one another's back",
+            "The little pig said, \"Ready! I have been and come back again, and got a nice potful for dinner.\"\nThe wolf felt very angry at this, but thought that he would be ",
+            "At this point, Hyena burst into laughter and began rolling on the ground. She said, \"That is a striking truth!\" Goat took advantage of this and ran, back toward"
+          ]
+        },
+        {
+          "group": 591,
+          "latents": [
+            867
+          ],
+          "gain_margin": 1235.05,
+          "examples": [
+            "Artificial photosynthesis is a chemical process that replicates the natural process of photosynthesis, a process that converts sunlight, water, and carbon dioxi",
+            "Fossil fuels are fuels formed by natural processes such as anaerobic decomposition of buried dead organisms, containing energy originating in ancient photosynth",
+            "Temperature-programmed reduction (TPR) is a technique for the characterization of solid materials and is often used in the field of heterogeneous catalysis to f"
+          ]
+        },
+        {
+          "group": 1018,
+          "latents": [
+            911
+          ],
+          "gain_margin": 1203.11,
+          "examples": [
+            "About 600 B.C., the Greek cities of Ionia were the intellectual and cultural leaders of Greece and the number one sea-traders of the Mediterranean. Miletus, the",
+            "An acropolis (Greek: from akros or akron, \"highest\", \"topmost\", \"outermost\" and polis, \"city\"; plural in English: acropoles, acropoleis or acropolises) is a set",
+            "Evolution is change in the heritable traits of biological populations over successive generations. Evolutionary processes give rise to biodiversity at every lev"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1676,
+      "n_groups": 1676,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1336,
+      "n_groups_unused": 697,
+      "n_removed": 1336,
+      "var_share_removed": 0.4043,
+      "var_share_sae_error": 0.02,
+      "top": [
+        {
+          "group": 1674,
+          "latents": [
+            779
+          ],
+          "gain_margin": 608.8,
+          "examples": [
+            "THE OLD MAN AND THE NERVOUS COW.",
+            "The tree wife",
+            "Uncle Wiggily in the Woods"
+          ]
+        },
+        {
+          "group": 1675,
+          "latents": [
+            349
+          ],
+          "gain_margin": 584.31,
+          "examples": [
+            "Sly Jackal tricks the silly Donkey",
+            "TINY HARE AND THE WIND BALL",
+            "The King and the Hard Bread"
+          ]
+        },
+        {
+          "group": 444,
+          "latents": [
+            477
+          ],
+          "gain_margin": 269.3,
+          "examples": [
+            "THE BLACKBIRD'S NEST",
+            "THE YOUNG FISHERMAN",
+            "HOW MY BOYS HELPED THEIR MOTHER"
+          ]
+        },
+        {
+          "group": 602,
+          "latents": [
+            911
+          ],
+          "gain_margin": 268.57,
+          "examples": [
+            "Environmental_science",
+            "Ozone_layer",
+            "Armed_neutrality"
+          ]
+        },
+        {
+          "group": 207,
+          "latents": [
+            1874
+          ],
+          "gain_margin": 139.91,
+          "examples": [
+            "EMMA AND HER DOLL",
+            "The sticky doll",
+            "Grandma's bananas"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 924,
+      "n_groups": 921,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 731,
+      "n_groups_unused": 318,
+      "n_removed": 733,
+      "var_share_removed": 0.2661,
+      "var_share_sae_error": 0.0043,
+      "top": [
+        {
+          "group": 750,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 372.47,
+          "examples": [
+            "https://www.commonlit.org/texts/the-story-of-the-lazy-boy-a-kachari-folktale",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/at-home-23-text.pdf",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/two-miles-below-23-text.pdf"
+          ]
+        },
+        {
+          "group": 84,
+          "latents": [
+            1782
+          ],
+          "gain_margin": 365.0,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Oil_refinery",
+            "https://en.wikipedia.org/wiki/Geocentric_model",
+            "https://en.wikipedia.org/wiki/Great_Migration_(African_American)"
+          ]
+        },
+        {
+          "group": 193,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 272.21,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Android_(operating_system)",
+            "https://en.wikipedia.org/wiki/Software_development",
+            "https://en.wikipedia.org/wiki/Internet_Protocol"
+          ]
+        },
+        {
+          "group": 341,
+          "latents": [
+            688
+          ],
+          "gain_margin": 252.45,
+          "examples": [
+            "https://www.africanstorybook.org/#",
+            "https://www.africanstorybook.org/#",
+            "https://www.africanstorybook.org/#"
+          ]
+        },
+        {
+          "group": 457,
+          "latents": [
+            349
+          ],
+          "gain_margin": 204.15,
+          "examples": [
+            "http://www.gutenberg.org/files/28134/28134-h/28134-h.htm#Page_168",
+            "http://www.gutenberg.org/files/40757/40757-h/40757-h.htm#Page_178",
+            "http://www.gutenberg.org/files/25545/25545-h/25545-h.htm#Page_64"
+          ]
+        }
+      ]
+    }
+  }
+}

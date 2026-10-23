@@ -1,0 +1,479 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7201163996164133,
+  "test_error": 0.7201163996164133,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8995361024090723,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 182.27397227287292,
+  "learner_params": null,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2042,
+      "n_groups": 2041,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1068,
+      "n_groups_unused": 11,
+      "n_removed": 1068,
+      "var_share_removed": 0.3121,
+      "var_share_sae_error": 0.0722,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            750,
+            1271
+          ],
+          "gain_margin": 1732.55,
+          "examples": [
+            "143 Nam Ky Khoi Nghia Street, Xuan Hoa Ward, Ho Chi Minh City, 700000, Vietnam",
+            "285 Datong Road, Siming, Xiamen, China Mainland",
+            "520 Trung Nu Vuong Street, Hoa Thuan Tay Ward, Hai Chau District, Da Nang, 550000, Vietnam"
+          ]
+        },
+        {
+          "group": 508,
+          "latents": [
+            1774
+          ],
+          "gain_margin": 538.36,
+          "examples": [
+            "Na San Jao Market, Tonpo Road, Talat, Muaeng Surat Thani, Surat Thani, 84000, Thailand",
+            "5/2 Tonpo Road, Talat, Mueang Surat Thani, Surat Thani, 84000, Thailand",
+            "21 Koh Kaew Village, Mittraphap Road, Pak Chong, Nakhon Ratchasima, 30130, Thailand"
+          ]
+        },
+        {
+          "group": 361,
+          "latents": [
+            1745
+          ],
+          "gain_margin": 294.43,
+          "examples": [
+            "Shangri-La Hotel, Lobby Level, 22 Orange Grove Road, 258350, Singapore",
+            "35F Lotte Hotel, 30 Eulji-ro, Jung-gu, Seoul, 04533, South Korea",
+            "37F Lotte Hotel, 30 Eulji-ro, Jung-gu, Seoul, 04533, South Korea"
+          ]
+        },
+        {
+          "group": 1287,
+          "latents": [
+            363
+          ],
+          "gain_margin": 288.84,
+          "examples": [
+            "5F, Central: The Original Store, 1266 Charoenkrung Road, Bang Rak, Bangkok, 10500, Thailand",
+            "9F Aman Nai Lert Bangkok, 1 Soi Somkid, Lumphini, Pathum Wan, Bangkok, 10330, Thailand",
+            "7F, The Ritz-Carlton, Bangkok, 189 Witthayu Road, Lumphini, Pathum Wan, Bangkok, 10330, Thailand"
+          ]
+        },
+        {
+          "group": 1372,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 211.93,
+          "examples": [
+            "Shanghaiallee 15, Hamburg, 20457, Germany",
+            "Margaretenstra\u00dfe 58, Hamburg, 20357, Germany",
+            "Getreidegasse 50, Salzburg, 5020, Austria"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1110,
+      "n_groups": 1109,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 952,
+      "n_groups_unused": 32,
+      "n_removed": 953,
+      "var_share_removed": 0.4738,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 483,
+          "latents": [
+            950
+          ],
+          "gain_margin": 2586.23,
+          "examples": [
+            "Creative, Classic Cuisine",
+            "Creative, Classic Cuisine",
+            "Japanese Contemporary, Creative"
+          ]
+        },
+        {
+          "group": 607,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 2146.51,
+          "examples": [
+            "Ramen",
+            "Ramen",
+            "Ramen"
+          ]
+        },
+        {
+          "group": 1098,
+          "latents": [
+            249
+          ],
+          "gain_margin": 921.92,
+          "examples": [
+            "Creative, Scandinavian",
+            "Creative, Austrian",
+            "Creative, European Contemporary"
+          ]
+        },
+        {
+          "group": 613,
+          "latents": [
+            750
+          ],
+          "gain_margin": 835.9,
+          "examples": [
+            "Asian, Ramen",
+            "Street Food, Thai",
+            "Southern Thai, Thai"
+          ]
+        },
+        {
+          "group": 1088,
+          "latents": [
+            238
+          ],
+          "gain_margin": 554.52,
+          "examples": [
+            "Ramen",
+            "Ramen",
+            "Ramen"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2039,
+      "n_groups": 2033,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 946,
+      "n_groups_unused": 27,
+      "n_removed": 946,
+      "var_share_removed": 0.1326,
+      "var_share_sae_error": 0.0815,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            950,
+            1502
+          ],
+          "gain_margin": 12360.56,
+          "examples": [
+            "This truly luxurious and elegant fine dining restaurant is part of the exclusive Grand Hotel Heiligendamm, which lies in a beautiful location on the Baltic Sea ",
+            "Contemporary design and classical elegance merge harmoniously in this dining space, which dates back to 1885 and is part of the Anantara Grand Hotel Krasnapolsk",
+            "Tony Hohlefeld and his kitchen team steer clear of showmanship and unnecessary frills in their bid to bring technical precision and original ideas to the table."
+          ]
+        },
+        {
+          "group": 1791,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 7698.25,
+          "examples": [
+            "For over 50 years, this family-run eatery has been serving bowls of noodles to those seeking comforting nourishment. The fresh buckwheat noodles, one of its bes",
+            "Founded in 1948, the family-owned Tanglin is now run by the second generation and the two-storey establishment is well known for its nasi lemak. This delicious ",
+            "The not-so-secret secret to the longevity and success of Yangyang Memil Makguksu is that its noodles are made with 100% buckwheat and that they are made to orde"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            2,
+            946
+          ],
+          "gain_margin": 4615.75,
+          "examples": [
+            "Hideki Ishikawa\u2019s guiding principle is \u2018mui-shizen\u2019: serve cuisine that is true to nature, free from artifice. Flavours are light, respecting each ingredient. S",
+            "Gilles Goujon, sometimes nicknamed the \"innkeeper of the Corbi\u00e8res\", is credited with putting the tiny village of Fontjoncouse ((in the Aude d\u00e9partement) on the",
+            "This restaurant, known simply as \"Crissier\" by its regulars, boasts a star-studded history. The success of the restaurant, which was first awarded three stars i"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            81,
+            1751
+          ],
+          "gain_margin": 4416.42,
+          "examples": [
+            "Found on the first floor of a small shopping centre called Reina Mercedes (in the modern neighbourhood of Valdepasillas) and under the name Dr\u00f3mo, which has bee",
+            "By adhering to the motto \u201cSentir Ja\u00e9n\u201d (Feel Ja\u00e9n), clearly visible in the diminutive kitchen, this culinary jewel located next to the San Ildefonso basilica co",
+            "Discover the secrets hidden in the Casa-Palacio Mazarrasa (1756), a mecca for foodies that certainly makes an impression and continues to evolve! The culinary e"
+          ]
+        },
+        {
+          "group": 2018,
+          "latents": [
+            249
+          ],
+          "gain_margin": 2087.62,
+          "examples": [
+            "Here in the centre of the village, this duo, whose enthusiasm is infectious, have set up shop in a half-timbered building that sports the Basque Country's chara",
+            "Fabian Obergfell took over as head chef at M\u00fchle in May 2025. After stints in some top kitchens, most recently as sous-chef at 2-Star Ophelia, in Konstanz, this",
+            "Overlooking the Plage de la Concurrence, the sign on the front of the restaurant says it all: \"Christopher Coutanceau, chef and fisherman.\" Fishing here is a li"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 618,
+      "n_groups": 602,
+      "n_multi_groups": 13,
+      "n_groups_dropped": 537,
+      "n_groups_unused": 10,
+      "n_removed": 552,
+      "var_share_removed": 0.5418,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 444,
+          "latents": [
+            950
+          ],
+          "gain_margin": 2100.69,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 530,
+          "latents": [
+            249
+          ],
+          "gain_margin": 1092.09,
+          "examples": [
+            "Air conditioning,Bring your own bottle,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 90,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 945.08,
+          "examples": [
+            "Air conditioning,Counter dining,Interesting wine list",
+            "Air conditioning,Counter dining,Interesting wine list",
+            "Air conditioning,Counter dining,Interesting wine list"
+          ]
+        },
+        {
+          "group": 555,
+          "latents": [
+            166
+          ],
+          "gain_margin": 714.41,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 280,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 668.65,
+          "examples": [
+            "Cash only,Terrace",
+            "Cash only,Terrace",
+            "Cash only"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1940,
+      "n_groups": 1940,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1458,
+      "n_groups_unused": 29,
+      "n_removed": 1458,
+      "var_share_removed": 0.6721,
+      "var_share_sae_error": 0.0118,
+      "top": [
+        {
+          "group": 855,
+          "latents": [
+            829
+          ],
+          "gain_margin": 186.48,
+          "examples": [
+            "San Quirico d'Orcia, Italy",
+            "San Quirico d'Orcia, Italy",
+            "Flims, Switzerland"
+          ]
+        },
+        {
+          "group": 1696,
+          "latents": [
+            698
+          ],
+          "gain_margin": 173.05,
+          "examples": [
+            "Shanghai, China Mainland",
+            "Shanghai, China Mainland",
+            "Shanghai, China Mainland"
+          ]
+        },
+        {
+          "group": 1610,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 172.86,
+          "examples": [
+            "Yangzhou, China Mainland",
+            "Yangzhou, China Mainland",
+            "Yangzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 760,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 139.23,
+          "examples": [
+            "Linkoping, Sweden",
+            "Heidelberg, Germany",
+            "Heidelberg, Germany"
+          ]
+        },
+        {
+          "group": 1679,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 134.06,
+          "examples": [
+            "Bagnoles-de-l'Orne, France",
+            "Bagnolo, Italy",
+            "San Casciano dei Bagni, Italy"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2041,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1033,
+      "n_groups_unused": 6,
+      "n_removed": 1035,
+      "var_share_removed": 0.3101,
+      "var_share_sae_error": 0.0934,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            750,
+            1271,
+            1774
+          ],
+          "gain_margin": 2145.53,
+          "examples": [
+            "Goh Thew Chik Hainan Chicken Rice",
+            "Baan Chik Pork Noodles",
+            "Rongjia Noodles Soup with Yellow Croaker (Jingan)"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            950,
+            1406,
+            1814
+          ],
+          "gain_margin": 1497.97,
+          "examples": [
+            "Paolo Teverini",
+            "Palmier by Guillaume Galliot",
+            "IDAM by Alain Ducasse"
+          ]
+        },
+        {
+          "group": 455,
+          "latents": [
+            1861
+          ],
+          "gain_margin": 185.92,
+          "examples": [
+            "Xin Rong Ji (West Nanjing Road)",
+            "Gong De Lin (West Nanjing Road)",
+            "Yue Ji (Binjiang)"
+          ]
+        },
+        {
+          "group": 971,
+          "latents": [
+            1204
+          ],
+          "gain_margin": 167.57,
+          "examples": [
+            "Poetry\u2027Wine (Dongsanhuan Middle Road)",
+            "Mara",
+            "A Pong Mae Sunee"
+          ]
+        },
+        {
+          "group": 1006,
+          "latents": [
+            517
+          ],
+          "gain_margin": 156.91,
+          "examples": [
+            "Tai Woo",
+            "Taian",
+            "Taian Table"
+          ]
+        }
+      ]
+    }
+  }
+}

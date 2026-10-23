@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "late-fusion",
+  "fold": 3,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.735136844335843,
+  "test_error": 0.26486315566415697,
+  "course_metric": "auroc",
+  "course_score": 0.735136844335843,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 10.87750792503357,
+  "learner_params": null,
+  "diagnostics": {}
+}

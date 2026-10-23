@@ -1,0 +1,476 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7215459749223486,
+  "test_error": 0.7215459749223486,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8937040226572561,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 193.59800100326538,
+  "learner_params": null,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2027,
+      "n_groups": 2025,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1044,
+      "n_groups_unused": 13,
+      "n_removed": 1044,
+      "var_share_removed": 0.3939,
+      "var_share_sae_error": 0.064,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            950,
+            1502
+          ],
+          "gain_margin": 688.8,
+          "examples": [
+            "Hendrik Baelskaai 21, Oostende, 8400, Belgium",
+            "Spinhuisplein 1, Zwolle, 8011 ZZ, Netherlands",
+            "Amalienpassage 89, Munich, 80799, Germany"
+          ]
+        },
+        {
+          "group": 1010,
+          "latents": [
+            750
+          ],
+          "gain_margin": 676.52,
+          "examples": [
+            "165-167 Nui Thanh Street, Hoa Cuong Bac Ward, Hai Chau District, Da Nang, 550000, Vietnam",
+            "145 Huynh Thuc Khang Street, Binh Hien Ward, Hai Chau District, Da Nang, 550000, Vietnam",
+            "534 Vinh Khanh Street, Ward 8, District 4, Ho Chi Minh City, 754000, Vietnam"
+          ]
+        },
+        {
+          "group": 502,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 422.11,
+          "examples": [
+            "66 Binjiang East Road, Jinjiang, Chengdu, China Mainland",
+            "92 Zhijiang Road, Xihu, Hangzhou, China Mainland",
+            "125 Bei Huan Shuang Nei Road, Jinjiang, Quanzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 988,
+          "latents": [
+            990
+          ],
+          "gain_margin": 325.0,
+          "examples": [
+            "178 Hedong Road, Gongshu, Hangzhou, China Mainland",
+            "168 Zhuangqiao Road, Wujiang, Suzhou, China Mainland",
+            "4A Jiangtaiwa, Xinghuo East Road, Chaoyang, Beijing, China Mainland"
+          ]
+        },
+        {
+          "group": 1547,
+          "latents": [
+            1068
+          ],
+          "gain_margin": 284.6,
+          "examples": [
+            "H\u00f4tel Ha(a)\u00eftza, 1 avenue Louis-Gaume, Pyla-sur-Mer, 33115, France",
+            "Goodwood Park Hotel, 22 Scotts Road, 228221, Singapore",
+            "Lower Level 1, Kowloon Shangri-La Hotel, 64 Mody Road, Tsim Sha Tsui, Hong Kong, Hong Kong SAR China"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1152,
+      "n_groups": 1147,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 979,
+      "n_groups_unused": 24,
+      "n_removed": 983,
+      "var_share_removed": 0.8251,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 990,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 2347.93,
+          "examples": [
+            "Chiu Chow",
+            "Chiu Chow",
+            "Chiu Chow"
+          ]
+        },
+        {
+          "group": 1127,
+          "latents": [
+            164
+          ],
+          "gain_margin": 638.29,
+          "examples": [
+            "Modern Cuisine, Asian Contemporary",
+            "Modern Cuisine, Contemporary",
+            "Modern Cuisine, Contemporary"
+          ]
+        },
+        {
+          "group": 978,
+          "latents": [
+            1444
+          ],
+          "gain_margin": 609.86,
+          "examples": [
+            "Creative, Japanese",
+            "Creative, Japanese",
+            "Japanese, Creative"
+          ]
+        },
+        {
+          "group": 507,
+          "latents": [
+            871
+          ],
+          "gain_margin": 556.04,
+          "examples": [
+            "Country cooking, Turkish",
+            "Cuisine from Abruzzo, Seasonal Cuisine",
+            "Corsican, Country cooking"
+          ]
+        },
+        {
+          "group": 1066,
+          "latents": [
+            249
+          ],
+          "gain_margin": 554.14,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2035,
+      "n_groups": 2032,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 959,
+      "n_groups_unused": 33,
+      "n_removed": 959,
+      "var_share_removed": 0.2496,
+      "var_share_sae_error": 0.0761,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            249,
+            688
+          ],
+          "gain_margin": 10915.21,
+          "examples": [
+            "Gilles Goujon, sometimes nicknamed the \"innkeeper of the Corbi\u00e8res\", is credited with putting the tiny village of Fontjoncouse ((in the Aude d\u00e9partement) on the",
+            "This restaurant\u2019s 40-year-old history began with talented owner-chef Fabrizio Mellino\u2019s grandfather, who ran a small business selling eggs from his own hens. Fr",
+            "The Tourteaux brothers, Ga\u00ebl and Micka\u00ebl, are inseparable. Not only did they attend the same hotel school in Nice (and sit exams in the same room) and both trai"
+          ]
+        },
+        {
+          "group": 1012,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 6004.7,
+          "examples": [
+            "In addition to a jaw-dropping view over the lake, hence the restaurant\u2019s name, we were enchanted by the high-flying repertory of Danny Khezzar served at the Hot",
+            "Cyril Moulin crafts intelligent cuisine that is both bold and polished. Big-boned sauces and playful fresh nuances set the culinary scene. For example, he may p",
+            "The Dolder Grand (formerly \"Curhaus\", dating back to 1899), one of the city's most exclusive hotels, boasts an idyllic location above Zurich, providing a magnif"
+          ]
+        },
+        {
+          "group": 387,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 5465.26,
+          "examples": [
+            "Quietly nestled in Gaegeum-dong, Damiok specializes in Pyeongyang cold buckwheat noodles. As its name suggests, the establishment focuses on presenting refreshi",
+            "Oreno Ramen blends its broth just before serving, creating a frothy soup that pleasantly coats the palate. The paitan, made by boiling a whole chicken, is a mil",
+            "This shop may lack a snazzy decor, and nobody gets a table to themselves, but there are always queues eager to be cooked for by the self-proclaimed \"noodle king"
+          ]
+        },
+        {
+          "group": 2027,
+          "latents": [
+            302
+          ],
+          "gain_margin": 2450.74,
+          "examples": [
+            "A family-run restaurant well situated along the main street running through this small town, where the focus is on sourcing the freshest possible ingredients fr",
+            "Queues for the array of pan-fried buns boasting a crisp base and juicy filling stretch down the street. In addition to the typical pork variety, try the version",
+            "This popular stall is always busy, even at off-peak times. There are different noodles to choose from, and these are topped with tasty fish balls, pork balls an"
+          ]
+        },
+        {
+          "group": 2031,
+          "latents": [
+            494
+          ],
+          "gain_margin": 2214.05,
+          "examples": [
+            "Emile van der Staak's vision comes to life in this urban restaurant, where you can see the impressive team at work in the open kitchen. His botanical gastronomy",
+            "Andr\u00e9 van Alten is a fine example of a chef who continually reinvents himself while remaining grounded in his core principles. The unwavering quality of the ing",
+            "The name Peter Knogl goes hand in hand with French haute cuisine, which he produces here in the flagship restaurant of the over-300-year-old Grand Hotel Les Tro"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 658,
+      "n_groups": 644,
+      "n_multi_groups": 14,
+      "n_groups_dropped": 560,
+      "n_groups_unused": 5,
+      "n_removed": 573,
+      "var_share_removed": 0.7152,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 565,
+          "latents": [
+            249
+          ],
+          "gain_margin": 893.81,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 196,
+          "latents": [
+            494
+          ],
+          "gain_margin": 768.5,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 396,
+          "latents": [
+            845
+          ],
+          "gain_margin": 707.04,
+          "examples": [
+            "Air conditioning,Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 380,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 668.27,
+          "examples": [
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Valet parking,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 433,
+          "latents": [
+            950
+          ],
+          "gain_margin": 426.0,
+          "examples": [
+            "Air conditioning,Car park,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1894,
+      "n_groups": 1894,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1391,
+      "n_groups_unused": 32,
+      "n_removed": 1391,
+      "var_share_removed": 0.6497,
+      "var_share_sae_error": 0.0099,
+      "top": [
+        {
+          "group": 289,
+          "latents": [
+            1800
+          ],
+          "gain_margin": 132.34,
+          "examples": [
+            "Nara, Japan",
+            "Nara, Japan",
+            "Nara, Japan"
+          ]
+        },
+        {
+          "group": 1045,
+          "latents": [
+            623
+          ],
+          "gain_margin": 124.96,
+          "examples": [
+            "Stans, Switzerland",
+            "Polesine Parmense, Italy",
+            "Locate di Triulzi, Italy"
+          ]
+        },
+        {
+          "group": 143,
+          "latents": [
+            1733
+          ],
+          "gain_margin": 109.0,
+          "examples": [
+            "Dole, France",
+            "Dole, France",
+            "Dole, France"
+          ]
+        },
+        {
+          "group": 1814,
+          "latents": [
+            655
+          ],
+          "gain_margin": 106.88,
+          "examples": [
+            "Daverdisse, Belgium",
+            "San Anselmo, CA, USA",
+            "Tournus, France"
+          ]
+        },
+        {
+          "group": 1508,
+          "latents": [
+            266
+          ],
+          "gain_margin": 99.95,
+          "examples": [
+            "Cavite, The Philippines",
+            "Hsinchu County, Taiwan",
+            "Hsinchu County, Taiwan"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2042,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1021,
+      "n_groups_unused": 9,
+      "n_removed": 1021,
+      "var_share_removed": 0.3471,
+      "var_share_sae_error": 0.0877,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            750,
+            1271
+          ],
+          "gain_margin": 2102.83,
+          "examples": [
+            "Lao Shih Kuan Noodles",
+            "Baan Chik Pork Noodles",
+            "Tiong Bahru Hainanese Boneless Chicken Rice"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            950,
+            1502,
+            1814
+          ],
+          "gain_margin": 523.42,
+          "examples": [
+            "Nerua Guggenheim Bilbao",
+            "ESTERRE by Alain Ducasse",
+            "Fields by Ren\u00e9 Mathieu"
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            75
+          ],
+          "gain_margin": 177.27,
+          "examples": [
+            "The Inn at Pound Ridge",
+            "Apropos Restaurant at The Abbey Inn",
+            "Restaurant M\u00fchle"
+          ]
+        },
+        {
+          "group": 43,
+          "latents": [
+            2020
+          ],
+          "gain_margin": 154.23,
+          "examples": [
+            "Sartoria by Paulo Airaudo",
+            "Amelia by Paulo Airaudo",
+            "Bel\u00e9n by Paulo Airaudo"
+          ]
+        },
+        {
+          "group": 1615,
+          "latents": [
+            114
+          ],
+          "gain_margin": 148.32,
+          "examples": [
+            "Marcelle - Domaine de Verchant",
+            "Colette - Domaine de la Plagnette",
+            "Le Montaigu - Domaine de la Bretesche"
+          ]
+        }
+      ]
+    }
+  }
+}

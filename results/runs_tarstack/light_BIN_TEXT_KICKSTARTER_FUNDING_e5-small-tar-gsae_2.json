@@ -1,0 +1,397 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7390887271640991,
+  "test_error": 0.2609112728359009,
+  "course_metric": "auroc",
+  "course_score": 0.7390887271640991,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 87.38983511924744,
+  "learner_params": null,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 854,
+      "n_groups": 845,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 632,
+      "n_groups_unused": 88,
+      "n_removed": 640,
+      "var_share_removed": 0.4702,
+      "var_share_sae_error": 0.0058,
+      "top": [
+        {
+          "group": 766,
+          "latents": [
+            508
+          ],
+          "gain_margin": 183.85,
+          "examples": [
+            "1970-01-01 00:00:01.405141392",
+            "1970-01-01 00:00:01.405284790",
+            "1970-01-01 00:00:01.405143524"
+          ]
+        },
+        {
+          "group": 744,
+          "latents": [
+            68
+          ],
+          "gain_margin": 181.89,
+          "examples": [
+            "1970-01-01 00:00:01.374004030",
+            "1970-01-01 00:00:01.374540029",
+            "1970-01-01 00:00:01.373904276"
+          ]
+        },
+        {
+          "group": 463,
+          "latents": [
+            1240
+          ],
+          "gain_margin": 124.74,
+          "examples": [
+            "1970-01-01 00:00:01.401454520",
+            "1970-01-01 00:00:01.405245345",
+            "1970-01-01 00:00:01.402974945"
+          ]
+        },
+        {
+          "group": 621,
+          "latents": [
+            487
+          ],
+          "gain_margin": 107.48,
+          "examples": [
+            "1970-01-01 00:00:01.428082014",
+            "1970-01-01 00:00:01.426209717",
+            "1970-01-01 00:00:01.426201809"
+          ]
+        },
+        {
+          "group": 52,
+          "latents": [
+            1981
+          ],
+          "gain_margin": 105.4,
+          "examples": [
+            "1970-01-01 00:00:01.405711027",
+            "1970-01-01 00:00:01.375816027",
+            "1970-01-01 00:00:01.401674127"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 844,
+      "n_groups": 822,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 575,
+      "n_groups_unused": 98,
+      "n_removed": 583,
+      "var_share_removed": 0.3775,
+      "var_share_sae_error": 0.0062,
+      "top": [
+        {
+          "group": 645,
+          "latents": [
+            1738
+          ],
+          "gain_margin": 324.89,
+          "examples": [
+            "1970-01-01 00:00:01.364312628",
+            "1970-01-01 00:00:01.366334523",
+            "1970-01-01 00:00:01.366232558"
+          ]
+        },
+        {
+          "group": 706,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 203.24,
+          "examples": [
+            "1970-01-01 00:00:01.401249540",
+            "1970-01-01 00:00:01.400089560",
+            "1970-01-01 00:00:01.358744340"
+          ]
+        },
+        {
+          "group": 164,
+          "latents": [
+            1731
+          ],
+          "gain_margin": 191.91,
+          "examples": [
+            "1970-01-01 00:00:01.407005600",
+            "1970-01-01 00:00:01.343851200",
+            "1970-01-01 00:00:01.421114400"
+          ]
+        },
+        {
+          "group": 684,
+          "latents": [
+            487
+          ],
+          "gain_margin": 179.82,
+          "examples": [
+            "1970-01-01 00:00:01.405107548",
+            "1970-01-01 00:00:01.405116612",
+            "1970-01-01 00:00:01.405110200"
+          ]
+        },
+        {
+          "group": 445,
+          "latents": [
+            1148
+          ],
+          "gain_margin": 177.48,
+          "examples": [
+            "1970-01-01 00:00:01.411675610",
+            "1970-01-01 00:00:01.298680630",
+            "1970-01-01 00:00:01.416969615"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2044,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1270,
+      "n_groups_unused": 152,
+      "n_removed": 1271,
+      "var_share_removed": 0.3433,
+      "var_share_sae_error": 0.1363,
+      "top": [
+        {
+          "group": 1016,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 2002.67,
+          "examples": [
+            "\"Creating a website that brings opportunity and sustainability to developing villages by enabling them to sell their local products.\"",
+            "\"Social Media Platform for the Marijuana Industry to create professionalism and a stable lasting market.\"",
+            "\"A unique coffee shop and social business concept, with all profits supporting innovative programs in local communities.\""
+          ]
+        },
+        {
+          "group": 1015,
+          "latents": [
+            803
+          ],
+          "gain_margin": 537.7,
+          "examples": [
+            "\"An experimental Super8 horror short with surrealistic visuals punctuating a terrifying ghost story.\"",
+            "\"DUST is a post-apocalyptic short film based on the upcoming novel THE DISTANCE, by bestselling sci-fi / horror author, Jeremy Robinson.\"",
+            "\"A 2D horror stealth game in which you must fight off insanity by closing your eyes.\""
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 385.14,
+          "examples": [
+            "\"Laser cut acrylic sculptures with personal engraving.\"",
+            "\"performance-driven stainless steel tools for prying, turning and opening things while organizing cluttered pockets.\"",
+            "\"Shot Glass. Carved from a solid bar of 6AL-4V military grade Titanium. Also 303 medical grade Stainless and 7075 Super Duty Aluminum.\""
+          ]
+        },
+        {
+          "group": 992,
+          "latents": [
+            965
+          ],
+          "gain_margin": 383.89,
+          "examples": [
+            "\"Pens made of Olive Wood Imported from Bethlehem / Jerusalem. The Olive tree is known as the Immortal tree and can be 200 years old.\"",
+            "\"Now more than ever the Constitution is so very important.  This handmade pen shows your feelings with out ever saying a word. The pen.\"",
+            "\"The world's most precision titanium pen. \nDesigned with a perfect fusion of roller pen & stylus.\nCould be customized logo, inkan.\""
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            118
+          ],
+          "gain_margin": 355.26,
+          "examples": [
+            "\"Limited first run Arduino shield compatible six-digit clock using rare and eclectic IN-17 Nixie Tubes.\"",
+            "\"The Oscilloscope Clock II is the next scope clock project using a new pc board, OSC5.3, to supply higher voltages to drive bigger crts.\"",
+            "\"The BZB Solderless Breadboard is a Modular Electronics Exploration Station with built in Arduino compatability.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2041,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1245,
+      "n_groups_unused": 128,
+      "n_removed": 1247,
+      "var_share_removed": 0.3853,
+      "var_share_sae_error": 0.1227,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            1052,
+            1467
+          ],
+          "gain_margin": 1047.42,
+          "examples": [
+            "\"android-app-to-compare-prices-across-supermarkets\"",
+            "\"action-sports-clothing-company\"",
+            "\"the-app-that-is-going-to-change-online-buying-fore\""
+          ]
+        },
+        {
+          "group": 2040,
+          "latents": [
+            803
+          ],
+          "gain_margin": 878.39,
+          "examples": [
+            "\"halcyon-story-a-feature-length-documentary\"",
+            "\"bent-knee-presents-shiny-eyed-babies\"",
+            "\"bluemometer-a-waterproof-thermometer-for-ios-and-a\""
+          ]
+        },
+        {
+          "group": 577,
+          "latents": [
+            1395
+          ],
+          "gain_margin": 375.15,
+          "examples": [
+            "\"high-heavens-the-board-game-where-gods-battle-in-t\"",
+            "\"cards-the-attackening-an-epic-duel-game-for-2-4-pe\"",
+            "\"warage-an-exciting-roleplaying-card-game-with-deck\""
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 222.66,
+          "examples": [
+            "\"flizzit-an-ecofriendly-website-that-buys-used-elec\"",
+            "\"cyberremarkscom-social-media-website\"",
+            "\"jobberfly-online-speed-business-networking\""
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 185.99,
+          "examples": [
+            "\"tales-from-the-black-vault-a-lovecraft-radio-drama\"",
+            "\"astronaut-moon-mars-and-beyond-the-nasa-mmo-online-0\"",
+            "\"3-day-egyptian-maker-space-expanding-the-maker-mov\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2044,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1229,
+      "n_groups_unused": 141,
+      "n_removed": 1229,
+      "var_share_removed": 0.3394,
+      "var_share_sae_error": 0.1268,
+      "top": [
+        {
+          "group": 791,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 1658.68,
+          "examples": [
+            "\"An APP to teach & plan your financial future\"",
+            "\"THE APP THAT IS GOING TO CHANGE ONLINE BUYING FOREVER\"",
+            "\"copyrights-app , copyrights-app.com (Canceled)\""
+          ]
+        },
+        {
+          "group": 249,
+          "latents": [
+            1469
+          ],
+          "gain_margin": 648.38,
+          "examples": [
+            "\"APEXvj TURBO: Supercharged Music Visualization (Canceled)\"",
+            "\"Droplit \u2013 The Simple Smart Home Solution (Canceled)\"",
+            "\"MakeVR: 3D Modeling and Printing for Everyone (Canceled)\""
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            803
+          ],
+          "gain_margin": 525.58,
+          "examples": [
+            "\"Spool Spinner:  Axially Spiraled Wire / Twisted Bifilar\"",
+            "\"Hogg Maulies pre-release their new album \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"",
+            "\"Spooler Mini - A 3D Printing Material Winding Solution\""
+          ]
+        },
+        {
+          "group": 2035,
+          "latents": [
+            23
+          ],
+          "gain_margin": 462.12,
+          "examples": [
+            "\"FCQuarterly (Canceled)\"",
+            "\"DWEL (Dark with Extra Light) (Canceled)\"",
+            "\"Pass the Jug (Canceled)\""
+          ]
+        },
+        {
+          "group": 850,
+          "latents": [
+            1395
+          ],
+          "gain_margin": 399.92,
+          "examples": [
+            "\"DECA - A Handcrafted Deck Box Designed for Card Gaming\"",
+            "\"Bicycle\u00ae Amazing Adventurers - Steampunk Playing Cards Deck\"",
+            "\"Hands in the Sea \u2013 A two player card driven wargame\""
+          ]
+        }
+      ]
+    }
+  }
+}

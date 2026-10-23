@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "late-fusion",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -15632.254535099877,
+  "test_error": 15632.254535099877,
+  "course_metric": "r2",
+  "course_score": 0.6360602452089432,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 18.769179582595825,
+  "learner_params": null,
+  "diagnostics": {}
+}

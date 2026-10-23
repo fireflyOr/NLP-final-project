@@ -1,0 +1,471 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8764657418168129,
+  "test_error": 0.8764657418168129,
+  "course_metric": "r2",
+  "course_score": 0.8044280832238185,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 58.283668994903564,
+  "learner_params": null,
+  "diagnostics": {
+    "Anthology": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 459,
+      "n_groups": 458,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 373,
+      "n_groups_unused": 103,
+      "n_removed": 374,
+      "var_share_removed": 0.3785,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 298,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 323.95,
+          "examples": [
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People",
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People",
+            "The Nursery, May 1873, Vol. XIII.\nA Monthly Magazine for Youngest People"
+          ]
+        },
+        {
+          "group": 320,
+          "latents": [
+            477
+          ],
+          "gain_margin": 121.18,
+          "examples": [
+            "The Nursery, No. 109, January, 1876, Vol. XIX.\nA Monthly Magazine for Youngest Readers",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I",
+            "Boys and Girls Bookshelf; a Practical Plan of Character Building, Volume I"
+          ]
+        },
+        {
+          "group": 268,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 97.21,
+          "examples": [
+            "A Primary Reader\nOld-time Stories, Fairy Tales and Myths Retold by Children",
+            "A Primary Reader\nOld-time Stories, Fairy Tales and Myths Retold by Children",
+            "A Primary Reader\nOld-time Stories, Fairy Tales and Myths Retold by Children"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            813
+          ],
+          "gain_margin": 82.34,
+          "examples": [
+            "The Lady With The Dog and Other Stories",
+            "The Lady With The Dog and Other Stories",
+            "The Lady With The Dog and Other Stories"
+          ]
+        },
+        {
+          "group": 348,
+          "latents": [
+            349
+          ],
+          "gain_margin": 76.73,
+          "examples": [
+            "The Nursery, June 1877, Vol. XXI. No. 6\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, June 1877, Vol. XXI. No. 6\nA Monthly Magazine for Youngest Readers",
+            "The Nursery, June 1877, Vol. XXI. No. 6\nA Monthly Magazine for Youngest Readers"
+          ]
+        }
+      ]
+    },
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1260,
+      "n_groups": 1260,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1029,
+      "n_groups_unused": 432,
+      "n_removed": 1029,
+      "var_share_removed": 0.3828,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 1258,
+          "latents": [
+            477
+          ],
+          "gain_margin": 217.11,
+          "examples": [
+            "Freddie's Papa",
+            "LITTLE CHICK",
+            "Aunt Nellie"
+          ]
+        },
+        {
+          "group": 1252,
+          "latents": [
+            200
+          ],
+          "gain_margin": 173.74,
+          "examples": [
+            "The New York Daily Greek Atlantis, in its issue of Nov. 21, 1914, reports as follows the statement of three Rumanian leaders to a Greek paper in Constantinople.",
+            "Alejandro Cabezas-Cruz, Agust\u00edn Estrada-Pe\u00f1a, James J. Vald\u00e9s, and Jos\u00e9 de la Fuente",
+            "Juan M. Lima-Ojeda, Rainer Rupprecht, Thomas C. Baghai\n\n"
+          ]
+        },
+        {
+          "group": 642,
+          "latents": [
+            801
+          ],
+          "gain_margin": 126.91,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 1218,
+          "latents": [
+            324
+          ],
+          "gain_margin": 123.37,
+          "examples": [
+            "wikipedia",
+            "wikipedia",
+            "wikipedia"
+          ]
+        },
+        {
+          "group": 627,
+          "latents": [
+            349
+          ],
+          "gain_margin": 121.82,
+          "examples": [
+            "D.K., The Garden",
+            "Freddie's Papa",
+            "Clarence's Papa"
+          ]
+        }
+      ]
+    },
+    "British Words": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 111,
+      "n_groups": 110,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 99,
+      "n_groups_unused": 19,
+      "n_removed": 100,
+      "var_share_removed": 0.4035,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 37,
+          "latents": [
+            1231
+          ],
+          "gain_margin": 3.91,
+          "examples": [
+            "mould, mould",
+            "endeavour, mould, laboured",
+            "mouldy"
+          ]
+        },
+        {
+          "group": 51,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 2.25,
+          "examples": [
+            "favourite",
+            "favourite",
+            "favourite"
+          ]
+        },
+        {
+          "group": 42,
+          "latents": [
+            626
+          ],
+          "gain_margin": 1.94,
+          "examples": [
+            "woolly",
+            "woolly",
+            "woollen"
+          ]
+        },
+        {
+          "group": 36,
+          "latents": [
+            1093
+          ],
+          "gain_margin": 1.78,
+          "examples": [
+            "micrometres, millilitre, sulphide",
+            "kilogrammes, kilogrammes",
+            "centimetre, centimetres, kilometres"
+          ]
+        },
+        {
+          "group": 79,
+          "latents": [
+            1068
+          ],
+          "gain_margin": 0.53,
+          "examples": [
+            "tranquilly",
+            "honour",
+            "honour"
+          ]
+        }
+      ]
+    },
+    "Excerpt": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1291,
+      "n_groups": 1290,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1028,
+      "n_groups_unused": 585,
+      "n_removed": 1028,
+      "var_share_removed": 0.0663,
+      "var_share_sae_error": 0.0087,
+      "top": [
+        {
+          "group": 1265,
+          "latents": [
+            200
+          ],
+          "gain_margin": 3473.07,
+          "examples": [
+            "People may not wish for their medical records to be revealed to others. This may be because they have concern that it might affect their insurance coverage or e",
+            "Innovation is defined simply as a \"new idea, device, or method\". However, innovation is often also viewed as the application of better solutions that meet new r",
+            "A microcontroller (abbreviated MCU or \u00b5C) is a computer system on a chip that does a job. It contains an integrated processor, memory (a small amount of RAM, pr"
+          ]
+        },
+        {
+          "group": 1279,
+          "latents": [
+            349
+          ],
+          "gain_margin": 1541.96,
+          "examples": [
+            "The king of the north once said to himself, \"I am master of the country of ice and snow, but what is that if I cannot be ruler of the land of sunshine and flowe",
+            "Boy Blue's father then went to the men who were making hay, and said, \"Men, men, have you seen my Boy Blue?\" But the men answered, \"No, no: we have not seen Boy",
+            "Dear Mr. Santa Claus\u2014Please, sir, could you not bring me a team of goats next Christmas? I do want them so much! Other little boys no bigger than I am have a pa"
+          ]
+        },
+        {
+          "group": 158,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 1401.04,
+          "examples": [
+            "Today is the big day! After 9 months of waiting, Thabi's mother is going to hospital to have her baby. She will be back in 3 days. Can you read the date and day",
+            "Chicken and Millipede were friends. But they were always competing with each other. One day they decided to play football to see who was the best player. They w",
+            "\"Where are you going?\" the snake asked Berhe. \"I am crossing the river,\" replied Berhe. The snake asked, \"Please let me cross the river with you because I can't"
+          ]
+        },
+        {
+          "group": 157,
+          "latents": [
+            1727
+          ],
+          "gain_margin": 1179.39,
+          "examples": [
+            "The light-year is a unit of length used to express astronomical distances and measures about 9.46 trillion kilometres (9.46 x 1012 km) or 5.88 trillion miles (5",
+            "The continental crust is the layer of igneous, sedimentary, and metamorphic rocks that forms the continents and the areas of shallow seabed close to their shore",
+            "Coral reefs are diverse underwater ecosystems held together by calcium carbonate structures secreted by corals. Coral reefs are built by colonies of tiny animal"
+          ]
+        },
+        {
+          "group": 1288,
+          "latents": [
+            688
+          ],
+          "gain_margin": 1165.29,
+          "examples": [
+            "Cat and Dog walk. They walk in their village. Then they see an egg. The egg is in the grass. The egg is alone in the grass. The egg is all alone. Cat and Dog wa",
+            "Winter is approaching. A bird decides to build a nest. She gathers little twigs and builds her nest carefully. After a lot of care and hard work, the nest is re",
+            "For Dog it is too cold. Cat gives Dog underwear. One pair of underwear is dirty. One pair of underwear is clean. Dog takes the clean underwear. But it is still "
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1631,
+      "n_groups": 1631,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1308,
+      "n_groups_unused": 662,
+      "n_removed": 1308,
+      "var_share_removed": 0.3577,
+      "var_share_sae_error": 0.0197,
+      "top": [
+        {
+          "group": 1628,
+          "latents": [
+            349
+          ],
+          "gain_margin": 451.66,
+          "examples": [
+            "TINY HARE AND THE WIND BALL",
+            "Sly Jackal tricks the silly Donkey",
+            "Peck's Uncle Ike and The Red Headed"
+          ]
+        },
+        {
+          "group": 1627,
+          "latents": [
+            51
+          ],
+          "gain_margin": 387.44,
+          "examples": [
+            "Speech_recognition",
+            "Nucleic_acid",
+            "Respiratory_system"
+          ]
+        },
+        {
+          "group": 1293,
+          "latents": [
+            911
+          ],
+          "gain_margin": 383.31,
+          "examples": [
+            "Acropolis",
+            "Treaty_of_Versailles",
+            "Plague_of_Athens"
+          ]
+        },
+        {
+          "group": 1629,
+          "latents": [
+            867
+          ],
+          "gain_margin": 308.01,
+          "examples": [
+            "ON THE FLUID DENSITY OF CERTAIN METALS.",
+            "Converting Sunlight Into Fuel Using a Unique Miniature System",
+            "Continental_crust"
+          ]
+        },
+        {
+          "group": 1344,
+          "latents": [
+            688
+          ],
+          "gain_margin": 264.89,
+          "examples": [
+            "THE SWALLOWS' NEST",
+            "IDA'S MOUSE",
+            "THE LITTLE BEAR\u2019S STORY"
+          ]
+        }
+      ]
+    },
+    "URL": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 859,
+      "n_groups": 853,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 673,
+      "n_groups_unused": 275,
+      "n_removed": 678,
+      "var_share_removed": 0.2218,
+      "var_share_sae_error": 0.0035,
+      "top": [
+        {
+          "group": 414,
+          "latents": [
+            200
+          ],
+          "gain_margin": 467.93,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Acropolis",
+            "https://en.wikipedia.org/wiki/Edaphology",
+            "https://en.wikipedia.org/wiki/Mercury_(planet)"
+          ]
+        },
+        {
+          "group": 847,
+          "latents": [
+            349
+          ],
+          "gain_margin": 442.22,
+          "examples": [
+            "http://www.gutenberg.org/files/25359/25359-h/25359-h.htm#WINDBALL",
+            "http://www.gutenberg.org/files/28134/28134-h/28134-h.htm#Page_175",
+            "http://www.gutenberg.org/files/28131/28131-h/28131-h.htm#Page_71"
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            870
+          ],
+          "gain_margin": 344.46,
+          "examples": [
+            "https://en.wikipedia.org/wiki/Artificial_cardiac_pacemaker",
+            "https://en.wikipedia.org/wiki/Limited_government",
+            "https://en.wikipedia.org/wiki/Genetically_modified_organism"
+          ]
+        },
+        {
+          "group": 834,
+          "latents": [
+            477
+          ],
+          "gain_margin": 163.5,
+          "examples": [
+            "http://www.gutenberg.org/files/14170/14170-h/14170-h.htm#THE_STOLEN_BIRDS_NEST",
+            "https://freekidsbooks.org/wp-content/uploads/2019/11/FKB-Kids-Stories-Sharks.pdf",
+            "http://static.ehe.osu.edu/sites/beyond/penguins/downloads/feature-stories/at-home-23-text.pdf"
+          ]
+        },
+        {
+          "group": 710,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 147.72,
+          "examples": [
+            "http://www.gutenberg.org/files/14170/14170-h/14170-h.htm#THE_STOLEN_BIRDS_NEST",
+            "https://www.commonlit.org/texts/the-sheep-and-the-pig",
+            "http://www.gutenberg.org/files/15928/15928-h/15928-h.htm#THE_HEN_WHO_HELPED_HERSELF"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7062691901031491,
+  "test_error": 0.29373080989685085,
+  "course_metric": "auroc",
+  "course_score": 0.7062691901031491,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 88.99249315261841,
+  "learner_params": null,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 865,
+      "n_groups": 854,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 598,
+      "n_groups_unused": 91,
+      "n_removed": 489,
+      "var_share_removed": 0.4208,
+      "var_share_sae_error": 0.006,
+      "top": [
+        {
+          "group": 212,
+          "latents": [
+            1347
+          ],
+          "gain_margin": 181.79,
+          "examples": [
+            "1970-01-01 00:00:01.284514385",
+            "1970-01-01 00:00:01.353358211",
+            "1970-01-01 00:00:01.353364735"
+          ]
+        },
+        {
+          "group": 237,
+          "latents": [
+            1413
+          ],
+          "gain_margin": 163.84,
+          "examples": [
+            "1970-01-01 00:00:01.400100238",
+            "1970-01-01 00:00:01.421062398",
+            "1970-01-01 00:00:01.399917648"
+          ]
+        },
+        {
+          "group": 498,
+          "latents": [
+            467
+          ],
+          "gain_margin": 150.4,
+          "examples": [
+            "1970-01-01 00:00:01.404501304",
+            "1970-01-01 00:00:01.404266509",
+            "1970-01-01 00:00:01.404500123"
+          ]
+        },
+        {
+          "group": 659,
+          "latents": [
+            831
+          ],
+          "gain_margin": 123.9,
+          "examples": [
+            "1970-01-01 00:00:01.360919192",
+            "1970-01-01 00:00:01.403619193",
+            "1970-01-01 00:00:01.330819195"
+          ]
+        },
+        {
+          "group": 807,
+          "latents": [
+            508
+          ],
+          "gain_margin": 122.12,
+          "examples": [
+            "1970-01-01 00:00:01.405462712",
+            "1970-01-01 00:00:01.405032734",
+            "1970-01-01 00:00:01.405265373"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 830,
+      "n_groups": 812,
+      "n_multi_groups": 18,
+      "n_groups_dropped": 554,
+      "n_groups_unused": 87,
+      "n_removed": 399,
+      "var_share_removed": 0.3395,
+      "var_share_sae_error": 0.0054,
+      "top": [
+        {
+          "group": 215,
+          "latents": [
+            1145
+          ],
+          "gain_margin": 242.67,
+          "examples": [
+            "1970-01-01 00:00:01.431972000",
+            "1970-01-01 00:00:01.409202000",
+            "1970-01-01 00:00:01.352502000"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            943,
+            1772
+          ],
+          "gain_margin": 226.22,
+          "examples": [
+            "1970-01-01 00:00:01.342119629",
+            "1970-01-01 00:00:01.342113902",
+            "1970-01-01 00:00:01.342399683"
+          ]
+        },
+        {
+          "group": 791,
+          "latents": [
+            508
+          ],
+          "gain_margin": 189.88,
+          "examples": [
+            "1970-01-01 00:00:01.427307194",
+            "1970-01-01 00:00:01.427904823",
+            "1970-01-01 00:00:01.426133212"
+          ]
+        },
+        {
+          "group": 548,
+          "latents": [
+            385
+          ],
+          "gain_margin": 170.24,
+          "examples": [
+            "1970-01-01 00:00:01.432840220",
+            "1970-01-01 00:00:01.409202000",
+            "1970-01-01 00:00:01.415720220"
+          ]
+        },
+        {
+          "group": 398,
+          "latents": [
+            707
+          ],
+          "gain_margin": 155.03,
+          "examples": [
+            "1970-01-01 00:00:01.408874340",
+            "1970-01-01 00:00:01.408787424",
+            "1970-01-01 00:00:01.408942740"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2045,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1227,
+      "n_groups_unused": 158,
+      "n_removed": 1005,
+      "var_share_removed": 0.3614,
+      "var_share_sae_error": 0.1449,
+      "top": [
+        {
+          "group": 1911,
+          "latents": [
+            844
+          ],
+          "gain_margin": 469.96,
+          "examples": [
+            "\"The IceMule is the world's most portable high-performance cooler.  Because wherever you go, your cooler should go.\"",
+            "\"The COOLEST is a portable party disguised as a cooler, bringing blended drinks, music and fun to any outdoor occasion.\"",
+            "\"NIMBUS is a small, bright & portable lamp that can be used almost everywhere you can imagine. Powered from USB, Micro USB, AC adapter.\""
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            250
+          ],
+          "gain_margin": 463.99,
+          "examples": [
+            "\"A three-day exhibition at the Truman Brewery, London, showcasing the work of Fine Art Graduates from the Arts University Bournemouth.\"",
+            "\"A feature length documentary about Manchester's strangest comedian Frank Sidebottom and his creator, Chris Sievey. ADD ON REWARDS!\"",
+            "\"Benjamin Wayne has always had a fascination with Batman. When his parents died, he believed fate chose him to become the \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\""
+          ]
+        },
+        {
+          "group": 1889,
+          "latents": [
+            67
+          ],
+          "gain_margin": 304.2,
+          "examples": [
+            "\"Project\"",
+            "\"1\"",
+            "\"app\""
+          ]
+        },
+        {
+          "group": 405,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 275.14,
+          "examples": [
+            "\"I am looking to launch Odyssey Skateboards and make available, a distinct line of hand screen printed skateboard decks.\"",
+            "\"A Tarot deck of the 22 Major Arcana inspired by the William Butler Yeats poem, The Stolen Child.\"",
+            "\"\u00a9 Dynasty Chess \u2013 T.U.S.B.G. is an innovative version of chess with a unique matrix board and new strategic moves.\""
+          ]
+        },
+        {
+          "group": 2016,
+          "latents": [
+            978
+          ],
+          "gain_margin": 264.15,
+          "examples": [
+            "\"This app will allow users to notify friends & followers from all social media platforms of you're most recent posts with one click\"",
+            "\"I'm creating a Graffiti drawing application for Facebook that allows users to draw in collaboration graffiti artwork.\"",
+            "\"Software to simulate the critical care environment, in order to help real doctors, students and ultimately real patients.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1313,
+      "n_groups_unused": 130,
+      "n_removed": 1198,
+      "var_share_removed": 0.4456,
+      "var_share_sae_error": 0.1275,
+      "top": [
+        {
+          "group": 2006,
+          "latents": [
+            250
+          ],
+          "gain_margin": 496.95,
+          "examples": [
+            "\"the-efeet-collection-taking-a-stand-against-boring\"",
+            "\"war-of-omens-a-digital-deck-builder-ccg-hybrid\"",
+            "\"the-last-of-the-pagan-babies-a-feature-documentary\""
+          ]
+        },
+        {
+          "group": 236,
+          "latents": [
+            1754
+          ],
+          "gain_margin": 281.34,
+          "examples": [
+            "\"hugo-and-max-canine-couture-coupler-plus-lead\"",
+            "\"max-adventure\"",
+            "\"sword-of-fargoal-2-classic-dungeon-crawler-adventu\""
+          ]
+        },
+        {
+          "group": 1981,
+          "latents": [
+            978
+          ],
+          "gain_margin": 260.32,
+          "examples": [
+            "\"services-out-display-outages-appsoftware\"",
+            "\"infoactive-drop-live-data-into-interactive-infogra\"",
+            "\"feeling-inspired-app\""
+          ]
+        },
+        {
+          "group": 440,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 241.95,
+          "examples": [
+            "\"the-fingerboard-deck-a-new-way-to-play-skate\"",
+            "\"the-lincoln-deck-mid-1800s-style-abe-inspired-usa\"",
+            "\"stolen-child-tarot-a-major-arcana-deck\""
+          ]
+        },
+        {
+          "group": 1895,
+          "latents": [
+            77
+          ],
+          "gain_margin": 239.25,
+          "examples": [
+            "\"new-song-dollars-and-sense\"",
+            "\"deco-a-new-web-series\"",
+            "\"new-music-video-project\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1237,
+      "n_groups_unused": 136,
+      "n_removed": 1022,
+      "var_share_removed": 0.3764,
+      "var_share_sae_error": 0.1356,
+      "top": [
+        {
+          "group": 1927,
+          "latents": [
+            732
+          ],
+          "gain_margin": 981.14,
+          "examples": [
+            "\"Frank & Footer Animated Web Series (8 episodes) (Canceled)\"",
+            "\"CNC Coil Winding Machine (Canceled)\"",
+            "\"L3D Bulb - (Filament LED) (Canceled)\""
+          ]
+        },
+        {
+          "group": 2034,
+          "latents": [
+            23
+          ],
+          "gain_margin": 450.01,
+          "examples": [
+            "\"The Game Pad Start Up (Canceled)\"",
+            "\"The Reprap Printed Belt System. (Canceled)\"",
+            "\"There & Back: A Photo Journal (Canceled)\""
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            454
+          ],
+          "gain_margin": 426.72,
+          "examples": [
+            "\"HUNT FOR ME (Canceled)\"",
+            "\"Geeftz for Christmas (Canceled)\"",
+            "\"The Wicked Grille (Canceled)\""
+          ]
+        },
+        {
+          "group": 2013,
+          "latents": [
+            510
+          ],
+          "gain_margin": 423.08,
+          "examples": [
+            "\"Deck100 \u2014 100 cards to replace dice & enhance your RPG\"",
+            "\"XStylus - Ergonomic Touch Pen for Nintendo DS Lite\"",
+            "\"Railroads, a boutique wooden board game\""
+          ]
+        },
+        {
+          "group": 1950,
+          "latents": [
+            250
+          ],
+          "gain_margin": 348.0,
+          "examples": [
+            "\"Dream with Me--A documentary about one year in America's Public Schools\"",
+            "\"From A Number to A Name-A Documentary\"",
+            "\"The Documentary to end Captivity for Whales and Dolphins\""
+          ]
+        }
+      ]
+    }
+  }
+}

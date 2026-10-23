@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.24080413102273143,
+  "test_error": 0.24080413102273143,
+  "course_metric": "r2",
+  "course_score": 0.49120156252978997,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 15.021286010742188,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.3516112515054348,
+  "test_error": 0.3516112515054348,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9056238875647866,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 10.570679187774658,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -1,0 +1,398 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7125448550841402,
+  "test_error": 0.2874551449158598,
+  "course_metric": "auroc",
+  "course_score": 0.7125448550841402,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 89.23015332221985,
+  "learner_params": null,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 917,
+      "n_groups": 899,
+      "n_multi_groups": 17,
+      "n_groups_dropped": 655,
+      "n_groups_unused": 94,
+      "n_removed": 665,
+      "var_share_removed": 0.576,
+      "var_share_sae_error": 0.0055,
+      "top": [
+        {
+          "group": 788,
+          "latents": [
+            508
+          ],
+          "gain_margin": 264.29,
+          "examples": [
+            "1970-01-01 00:00:01.427614023",
+            "1970-01-01 00:00:01.427132002",
+            "1970-01-01 00:00:01.427475123"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            28,
+            434
+          ],
+          "gain_margin": 154.31,
+          "examples": [
+            "1970-01-01 00:00:01.276044423",
+            "1970-01-01 00:00:01.407424222",
+            "1970-01-01 00:00:01.424465429"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            467,
+            732
+          ],
+          "gain_margin": 120.36,
+          "examples": [
+            "1970-01-01 00:00:01.404085215",
+            "1970-01-01 00:00:01.404752106",
+            "1970-01-01 00:00:01.404122966"
+          ]
+        },
+        {
+          "group": 419,
+          "latents": [
+            1199
+          ],
+          "gain_margin": 105.89,
+          "examples": [
+            "1970-01-01 00:00:01.407786123",
+            "1970-01-01 00:00:01.407099237",
+            "1970-01-01 00:00:01.407284225"
+          ]
+        },
+        {
+          "group": 390,
+          "latents": [
+            1295
+          ],
+          "gain_margin": 98.26,
+          "examples": [
+            "1970-01-01 00:00:01.405400507",
+            "1970-01-01 00:00:01.405583790",
+            "1970-01-01 00:00:01.405105835"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 885,
+      "n_groups": 868,
+      "n_multi_groups": 15,
+      "n_groups_dropped": 631,
+      "n_groups_unused": 108,
+      "n_removed": 644,
+      "var_share_removed": 0.6438,
+      "var_share_sae_error": 0.0059,
+      "top": [
+        {
+          "group": 59,
+          "latents": [
+            1722
+          ],
+          "gain_margin": 414.8,
+          "examples": [
+            "1970-01-01 00:00:01.359565200",
+            "1970-01-01 00:00:01.343581200",
+            "1970-01-01 00:00:01.357585200"
+          ]
+        },
+        {
+          "group": 846,
+          "latents": [
+            792
+          ],
+          "gain_margin": 258.83,
+          "examples": [
+            "1970-01-01 00:00:01.431175171",
+            "1970-01-01 00:00:01.431375720",
+            "1970-01-01 00:00:01.431710277"
+          ]
+        },
+        {
+          "group": 374,
+          "latents": [
+            1603
+          ],
+          "gain_margin": 246.65,
+          "examples": [
+            "1970-01-01 00:00:01.431791365",
+            "1970-01-01 00:00:01.431981235",
+            "1970-01-01 00:00:01.431710965"
+          ]
+        },
+        {
+          "group": 123,
+          "latents": [
+            1787
+          ],
+          "gain_margin": 222.28,
+          "examples": [
+            "1970-01-01 00:00:01.313764140",
+            "1970-01-01 00:00:01.352437140",
+            "1970-01-01 00:00:01.342065540"
+          ]
+        },
+        {
+          "group": 859,
+          "latents": [
+            508
+          ],
+          "gain_margin": 137.26,
+          "examples": [
+            "1970-01-01 00:00:01.408071381",
+            "1970-01-01 00:00:01.408765023",
+            "1970-01-01 00:00:01.408135745"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2045,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1227,
+      "n_groups_unused": 140,
+      "n_removed": 1228,
+      "var_share_removed": 0.4266,
+      "var_share_sae_error": 0.1478,
+      "top": [
+        {
+          "group": 2042,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 1870.28,
+          "examples": [
+            "\"Sharing your own content? Selling products on EBay? We want to create Social Media Optimized links to make your shared links beautiful\"",
+            "\"The collaborative social networking platform designed to enable professionals across all industries to showcase their ideas and work.\"",
+            "\"An app for iOS and Android that will allow you to create and maintain your own website from the palm of your hand.\""
+          ]
+        },
+        {
+          "group": 507,
+          "latents": [
+            1536
+          ],
+          "gain_margin": 591.26,
+          "examples": [
+            "\"An MDF base to keep your Catan board: Flat, Organized, Movable, Dry, Safe, and Snug. Durable, Cheap, Convenient, and it Works!\"",
+            "\"FIBERwave is a full scale carbon fiber pavilion designed and built by students in the College of Architecture at IIT.\"",
+            "\"Creation of a prototype comprising of a spherically curved thermotropic liquid crystal film that can be embedded in a contact lens.\""
+          ]
+        },
+        {
+          "group": 2035,
+          "latents": [
+            510
+          ],
+          "gain_margin": 416.15,
+          "examples": [
+            "\"StoneCrabs is thrilled to bring to the UK the first English production of Philipp L\u00f6hle\u2019s play Das Ding (The Thing).\"",
+            "\"The Bicycle Mayhem Deck. Printed by the United States Playing Card Company.\"",
+            "\"Three Ladies is a weekly sketch comedy series featuring the talents of Ellen Etten, Ryan Lonergan, and Cassandra Smith. The web series \""
+          ]
+        },
+        {
+          "group": 2021,
+          "latents": [
+            250
+          ],
+          "gain_margin": 389.39,
+          "examples": [
+            "\"Attempting to enrich The Rollins Story, documentarians and alumni, Cecil Mack & JD Casto are building a living time capsule.\"",
+            "\"Documentary film maker K.C. Dorney retraces Hannibal's 216BC journey on foot from Sagunto Spain to Torino Italy.\"",
+            "\"Get ready for gaming nostalgia wrapped in a wine barrel of all things (just think of the talking point). BAM! 60 games at your fingers.\""
+          ]
+        },
+        {
+          "group": 1869,
+          "latents": [
+            886
+          ],
+          "gain_margin": 380.54,
+          "examples": [
+            "\"Mount Joy is recording their first full length album and needs your help to make it happen.\"",
+            "\"Hannah Smith is releasing her first full-length album. Get involved by pre-ordering your copy of the record and other goodies here!\"",
+            "\"Klastic's first full length album.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1240,
+      "n_groups_unused": 128,
+      "n_removed": 1240,
+      "var_share_removed": 0.472,
+      "var_share_sae_error": 0.1315,
+      "top": [
+        {
+          "group": 233,
+          "latents": [
+            1467
+          ],
+          "gain_margin": 576.32,
+          "examples": [
+            "\"financeer\"",
+            "\"sportswide\"",
+            "\"manager\""
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            402
+          ],
+          "gain_margin": 320.31,
+          "examples": [
+            "\"online-parcel-delivery-service\"",
+            "\"looking-to-start-an-online-business-drawing-self-p\"",
+            "\"connecting-the-web\""
+          ]
+        },
+        {
+          "group": 1498,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 309.06,
+          "examples": [
+            "\"hedgehawgs-food-truck-keep-austin-healthy\"",
+            "\"heaven-if-you-dont-have-a-prayer-read-this-book-as\"",
+            "\"surviving-the-apocalypse\""
+          ]
+        },
+        {
+          "group": 1696,
+          "latents": [
+            803
+          ],
+          "gain_margin": 306.19,
+          "examples": [
+            "\"convertable-axis-bracket-cab-the-ultimate-cheese-p\"",
+            "\"2014-world-cup-geometric-poster-bracket\"",
+            "\"a-leather-belt-to-last-a-lifetimetwo-if-you-count\""
+          ]
+        },
+        {
+          "group": 108,
+          "latents": [
+            1897
+          ],
+          "gain_margin": 281.05,
+          "examples": [
+            "\"blue-moon-box-a-monthly-science-subscription-kit-f\"",
+            "\"bluecup-your-coffee-with-a-nespresso-machine\"",
+            "\"wake-welcome-to-the-dawn-of-bedroom-robotics\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2046,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1269,
+      "n_groups_unused": 141,
+      "n_removed": 1269,
+      "var_share_removed": 0.4416,
+      "var_share_sae_error": 0.1385,
+      "top": [
+        {
+          "group": 555,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 1444.61,
+          "examples": [
+            "\"LEVEL - web app to answer business questions for money.\"",
+            "\"Instant Reply Text Messaging Application (Canceled)\"",
+            "\"Building Business Connections & Networks for Entrepreneurs\""
+          ]
+        },
+        {
+          "group": 1832,
+          "latents": [
+            38
+          ],
+          "gain_margin": 717.49,
+          "examples": [
+            "\"Rider Down --  tracking and analysis system (Canceled)\"",
+            "\"Kelsey's Full Length Original Debut Album (Canceled)\"",
+            "\"DaruZen - a powerful presentation software (Canceled)\""
+          ]
+        },
+        {
+          "group": 2032,
+          "latents": [
+            23
+          ],
+          "gain_margin": 444.98,
+          "examples": [
+            "\"Anterviews LIVE! (Canceled)\"",
+            "\"Bound Premium Playing Cards (Canceled)\"",
+            "\"Violin recital (Canceled)\""
+          ]
+        },
+        {
+          "group": 1012,
+          "latents": [
+            1467
+          ],
+          "gain_margin": 396.11,
+          "examples": [
+            "\"Artists & Athletes Clothing Co.\"",
+            "\"Kami Apparel Co\"",
+            "\"Sports Bar\""
+          ]
+        },
+        {
+          "group": 2016,
+          "latents": [
+            1137
+          ],
+          "gain_margin": 349.35,
+          "examples": [
+            "\"Help me build a computer! (Canceled)\"",
+            "\"Paper Airplane (Canceled)\"",
+            "\"Short attention span reader (Canceled)\""
+          ]
+        }
+      ]
+    }
+  }
+}

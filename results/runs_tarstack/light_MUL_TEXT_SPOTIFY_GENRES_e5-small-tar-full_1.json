@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-tar-full",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.5249343579400456,
+  "test_error": 3.5249343579400456,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8921027092270669,
+  "n_text_cols": 3,
+  "n_text_features": 1152,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 194.86115884780884,
+  "learner_params": null,
+  "diagnostics": {}
+}

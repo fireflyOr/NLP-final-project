@@ -1,0 +1,322 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -17.31581134283683,
+  "test_error": 17.31581134283683,
+  "course_metric": "r2",
+  "course_score": 0.8403345441142281,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 37.08675956726074,
+  "learner_params": null,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 283,
+      "n_groups": 282,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 266,
+      "n_groups_unused": 27,
+      "n_removed": 267,
+      "var_share_removed": 0.9374,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 268,
+          "latents": [
+            12
+          ],
+          "gain_margin": 39.15,
+          "examples": [
+            "cream / blue / red",
+            "orange / cream",
+            "cream / blue / pink"
+          ]
+        },
+        {
+          "group": 277,
+          "latents": [
+            459
+          ],
+          "gain_margin": 9.23,
+          "examples": [
+            "orange / black / pink",
+            "green / black / pink",
+            "orange / black / purple"
+          ]
+        },
+        {
+          "group": 274,
+          "latents": [
+            724
+          ],
+          "gain_margin": 9.16,
+          "examples": [
+            "orange / cream / purple",
+            "orange / cream",
+            "orange / cream / pink"
+          ]
+        },
+        {
+          "group": 165,
+          "latents": [
+            528
+          ],
+          "gain_margin": 7.16,
+          "examples": [
+            "cream / blue / red",
+            "blue / cream",
+            "cream / green"
+          ]
+        },
+        {
+          "group": 240,
+          "latents": [
+            1415
+          ],
+          "gain_margin": 7.08,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 250,
+      "n_groups": 250,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 231,
+      "n_groups_unused": 32,
+      "n_removed": 231,
+      "var_share_removed": 0.7035,
+      "var_share_sae_error": 0.0023,
+      "top": [
+        {
+          "group": 220,
+          "latents": [
+            1147
+          ],
+          "gain_margin": 122.69,
+          "examples": [
+            "JoJo Designs",
+            "JoJo Designs",
+            "JoJo Designs"
+          ]
+        },
+        {
+          "group": 234,
+          "latents": [
+            396
+          ],
+          "gain_margin": 41.41,
+          "examples": [
+            "Minene",
+            "Minene",
+            "Minene"
+          ]
+        },
+        {
+          "group": 77,
+          "latents": [
+            991
+          ],
+          "gain_margin": 26.63,
+          "examples": [
+            "Pixar's Cars",
+            "Disney's The Princess",
+            "Tomorrowland Slumberbag."
+          ]
+        },
+        {
+          "group": 134,
+          "latents": [
+            1203
+          ],
+          "gain_margin": 26.5,
+          "examples": [
+            "Bat Signal",
+            "Bat Signal",
+            "Kate Mawdsley"
+          ]
+        },
+        {
+          "group": 230,
+          "latents": [
+            778
+          ],
+          "gain_margin": 24.28,
+          "examples": [
+            "Colgate, The Crib",
+            "Peru",
+            "Peru"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 768,
+      "n_groups": 768,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 569,
+      "n_groups_unused": 96,
+      "n_removed": 569,
+      "var_share_removed": 0.4189,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 676,
+          "latents": [
+            360
+          ],
+          "gain_margin": 1984.78,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 101,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 1379.2,
+          "examples": [
+            "Snuggleberry Baby",
+            "Snuggleberry Baby",
+            "Snuggleberry Baby"
+          ]
+        },
+        {
+          "group": 586,
+          "latents": [
+            593
+          ],
+          "gain_margin": 1376.95,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 766,
+          "latents": [
+            324
+          ],
+          "gain_margin": 1292.42,
+          "examples": [
+            "Snuggleberry Baby",
+            "Snuggleberry Baby",
+            "Snuggleberry Baby"
+          ]
+        },
+        {
+          "group": 200,
+          "latents": [
+            1786
+          ],
+          "gain_margin": 832.65,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1216,
+      "n_groups": 1214,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 789,
+      "n_groups_unused": 376,
+      "n_removed": 790,
+      "var_share_removed": 0.2159,
+      "var_share_sae_error": 0.0065,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            108,
+            200
+          ],
+          "gain_margin": 6101.33,
+          "examples": [
+            "Tranquil Woods 5-Piece Bedding Set",
+            "Petit Tresor Nuit 4 Piece Bed Set",
+            "Manam Kids Retro Ball Rug - Size 2.8 x 4.8"
+          ]
+        },
+        {
+          "group": 73,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 4448.11,
+          "examples": [
+            "Dallas Cowboys, Tony Romo Biggshots Full Comforter Set",
+            "Atlanta Falcons, Matt Ryan Biggshots Queen Comforter Set",
+            "Gallery Modern Chrome 6 Light Orb Chandelier"
+          ]
+        },
+        {
+          "group": 1208,
+          "latents": [
+            651
+          ],
+          "gain_margin": 1477.77,
+          "examples": [
+            "Wildkin Nap Mat - Olive Kids Under Construction",
+            "Manam Kids Brocade Yellow Rug - Size 2.8 x 4.8",
+            "Manam Kids Brocade Pink Rug - Size 2.8 x 4.8"
+          ]
+        },
+        {
+          "group": 318,
+          "latents": [
+            1708
+          ],
+          "gain_margin": 1031.65,
+          "examples": [
+            "Gallery Modern Chrome 6 Light Orb Chandelier",
+            "Gallery Venetian Style All Crystal 5 Light Chandelier with Pink Shades",
+            "Gallery Venetian Style All Crystal 5 Light Chandelier with Pink Crystal Hearts"
+          ]
+        },
+        {
+          "group": 601,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 908.37,
+          "examples": [
+            "Carter's Pink Elephant Security Blanket",
+            "Carter's Yellow Giraffe Security Blanket",
+            "Carter's Grey Owl Security Blanket with Plush"
+          ]
+        }
+      ]
+    }
+  }
+}

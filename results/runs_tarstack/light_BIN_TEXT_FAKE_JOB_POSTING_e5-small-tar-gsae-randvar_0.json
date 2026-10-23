@@ -1,0 +1,249 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8763071335204748,
+  "test_error": 0.12369286647952515,
+  "course_metric": "auroc",
+  "course_score": 0.8763071335204748,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 45.59164333343506,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2041,
+      "n_groups": 2040,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1430,
+      "n_groups_unused": 339,
+      "n_removed": 1228,
+      "var_share_removed": 0.4756,
+      "var_share_sae_error": 0.0768,
+      "top": [
+        {
+          "group": 1868,
+          "latents": [
+            315
+          ],
+          "gain_margin": 3235.25,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 2038,
+          "latents": [
+            294
+          ],
+          "gain_margin": 2662.4,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 2034,
+          "latents": [
+            480
+          ],
+          "gain_margin": 2630.94,
+          "examples": [
+            "We're looking for self-motivated individuals who are interested in working from home by performing online data entry work, and other types of work from home dut",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 2536.11,
+          "examples": [
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 1262,
+          "latents": [
+            1079
+          ],
+          "gain_margin": 938.86,
+          "examples": [
+            "Cash Job Opportunity To Immediate Start. No Experience Required And Never Any Fees. Work Anytime 1 To 2 Hrs Daily In Free Time. Earn Easily $400 To $500 Extra P",
+            "Immediate Staff Needed For Cash Positions.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra Pe",
+            "ReGenesis Counseling &amp; Assessment Center-Arlington has an\u00a0immediate\u00a0openings for Medical Assistant/Receptionist. \u00a0We are looking for\u00a0 energetic, compassiona"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 284,
+      "n_groups": 271,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 229,
+      "n_groups_unused": 29,
+      "n_removed": 254,
+      "var_share_removed": 0.811,
+      "var_share_sae_error": 0.0037,
+      "top": [
+        {
+          "group": 254,
+          "latents": [
+            1079
+          ],
+          "gain_margin": 133.31,
+          "examples": [
+            "20-25",
+            "20-25",
+            "15-25"
+          ]
+        },
+        {
+          "group": 84,
+          "latents": [
+            1159
+          ],
+          "gain_margin": 72.89,
+          "examples": [
+            "13-20",
+            "17-20",
+            "17-20"
+          ]
+        },
+        {
+          "group": 185,
+          "latents": [
+            294
+          ],
+          "gain_margin": 46.36,
+          "examples": [
+            "2000-5000",
+            "1000-3000",
+            "1000-2000"
+          ]
+        },
+        {
+          "group": 33,
+          "latents": [
+            1877
+          ],
+          "gain_margin": 40.64,
+          "examples": [
+            "1000-3000",
+            "3000-6000",
+            "3000-6000"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            1936
+          ],
+          "gain_margin": 27.49,
+          "examples": [
+            "28000-28000",
+            "28000-30000",
+            "28000-30000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1984,
+      "n_groups": 1978,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1522,
+      "n_groups_unused": 389,
+      "n_removed": 1324,
+      "var_share_removed": 0.578,
+      "var_share_sae_error": 0.0271,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            294,
+            315,
+            386,
+            480
+          ],
+          "gain_margin": 5556.2,
+          "examples": [
+            "Part-Time Administrative/Data Entry I",
+            " Payroll Data Entry Clerk Position - Earn $100-$200 Daily ",
+            "Data Entry Admin/Clerical Positions - Work From Home"
+          ]
+        },
+        {
+          "group": 1960,
+          "latents": [
+            227
+          ],
+          "gain_margin": 295.29,
+          "examples": [
+            "Cruise Staff Wanted *URGENT*",
+            "Cruise Staff Wanted *URGENT*",
+            "Clerical Assistant"
+          ]
+        },
+        {
+          "group": 715,
+          "latents": [
+            1059
+          ],
+          "gain_margin": 167.87,
+          "examples": [
+            "Money Hungry Sales Professionals (B2B) Needed",
+            "Cruise Staff Wanted *URGENT*",
+            "Cruise Staff Wanted *URGENT*"
+          ]
+        },
+        {
+          "group": 245,
+          "latents": [
+            1912
+          ],
+          "gain_margin": 149.36,
+          "examples": [
+            "Jobs for Specialist Endocrinologist in Dubai, UAE",
+            "Fine Dining Restaurant Managers",
+            "Inspector Engineer"
+          ]
+        },
+        {
+          "group": 1828,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 125.85,
+          "examples": [
+            "Data Entry, Clerical Admin, Administrative Assistant, Customer Service, Accounting, payroll Clerk, Book keeping",
+            " Payroll Data Entry Clerk Position - Earn $100-$200 Daily ",
+            "Part Time & Full Time Jobs, Cash In Hands."
+          ]
+        }
+      ]
+    }
+  }
+}

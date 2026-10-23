@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -3966.231275376341,
+  "test_error": 3966.231275376341,
+  "course_metric": "r2",
+  "course_score": 0.9808238034832423,
+  "n_text_cols": 4,
+  "n_text_features": 121,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 24.141324758529663,
+  "learner_params": {
+    "learning_rate": 0.1,
+    "max_depth": 6,
+    "colsample_bytree": 0.6,
+    "n_trees": 372
+  },
+  "diagnostics": {}
+}

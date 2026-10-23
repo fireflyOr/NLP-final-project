@@ -1,0 +1,249 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 4,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9053145156106027,
+  "test_error": 0.09468548438939728,
+  "course_metric": "auroc",
+  "course_score": 0.9053145156106027,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8483,
+  "n_test": 4242,
+  "runtime_s": 46.10414242744446,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2037,
+      "n_groups": 2034,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1430,
+      "n_groups_unused": 336,
+      "n_removed": 1430,
+      "var_share_removed": 0.4289,
+      "var_share_sae_error": 0.0739,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            315,
+            480
+          ],
+          "gain_margin": 7371.26,
+          "examples": [
+            "URGENT Job Full Time &amp; Part Time, Cash Pay.You can do it all from home, in your free time, at your own place.Spend 30 minutes or 1 hours a day &amp; Get big",
+            "Looking for customer service reps who want to work from homemake 80 - 100 dollars a day posting ads on the internet and taking calls. (NO START UP FEES. NO MONE",
+            "Part Time Cash Jobs To Immediate Starts.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra Per "
+          ]
+        },
+        {
+          "group": 2026,
+          "latents": [
+            294
+          ],
+          "gain_margin": 2077.7,
+          "examples": [
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 1735.66,
+          "examples": [
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        },
+        {
+          "group": 204,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 437.07,
+          "examples": [
+            "Responsible for all food production including that used for restaurants, banquetfunctions and other outlets. Develop menus, food purchase specifications andreci",
+            "Offering CASH Positions, Immediate Start.Work as many or little hrs as u like, No cost.You can earn $300 to $400 extra a day.No experience required for this job",
+            "CASH Paying Vacancies (Apply Today)Work as many or little hrs as u like, No cost.You can earn $300 to $400 extra a day.No experience required for this job.Join "
+          ]
+        },
+        {
+          "group": 1181,
+          "latents": [
+            68
+          ],
+          "gain_margin": 319.73,
+          "examples": [
+            "Job Responsibilities;The Project Engineer is responsible for everyday project activities, quality control and project delivery, overseeing all phases of the pro",
+            "We have several openings available in this area earning $1000.00-$2500.00 per week.\u00a0We are seeking only honest, self-motivated people with a desire to work in t",
+            "The Data Entry Clerk is responsible for verifying and accurately entering information in the computer during her/his assigned duty times. The Data Entry Clerk w"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 308,
+      "n_groups": 288,
+      "n_multi_groups": 12,
+      "n_groups_dropped": 240,
+      "n_groups_unused": 37,
+      "n_removed": 258,
+      "var_share_removed": 0.7806,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 98,
+          "latents": [
+            1440
+          ],
+          "gain_margin": 113.68,
+          "examples": [
+            "20-25",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "group": 99,
+          "latents": [
+            1327
+          ],
+          "gain_margin": 100.81,
+          "examples": [
+            "17-20",
+            "13-20",
+            "Oct-20"
+          ]
+        },
+        {
+          "group": 285,
+          "latents": [
+            480
+          ],
+          "gain_margin": 88.06,
+          "examples": [
+            "22-61000",
+            "55386-66731",
+            "30000-65000"
+          ]
+        },
+        {
+          "group": 163,
+          "latents": [
+            100
+          ],
+          "gain_margin": 83.43,
+          "examples": [
+            "20-3075",
+            "100-200",
+            "13-20"
+          ]
+        },
+        {
+          "group": 259,
+          "latents": [
+            624
+          ],
+          "gain_margin": 52.6,
+          "examples": [
+            "145600-187200",
+            "156000-187200",
+            "18720-18720"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1987,
+      "n_groups": 1975,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 1494,
+      "n_groups_unused": 420,
+      "n_removed": 1499,
+      "var_share_removed": 0.4876,
+      "var_share_sae_error": 0.0272,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            227,
+            294,
+            480
+          ],
+          "gain_margin": 4435.93,
+          "examples": [
+            "CASH JOBS, Part Time Workers Needed.",
+            "URGENT Job Full Time & Part Time, Cash Pay.",
+            "Part Time Cash Jobs To Immediate Starts."
+          ]
+        },
+        {
+          "group": 1974,
+          "latents": [
+            315
+          ],
+          "gain_margin": 731.03,
+          "examples": [
+            "Payroll Processor Entry Clerk Position - $50/Hr",
+            "Accounting Clerk/ $23",
+            "Administrative Assistant - $19.35 Per Hr"
+          ]
+        },
+        {
+          "group": 1890,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 389.44,
+          "examples": [
+            "Weekly PART TIME Cash Job, Staff Required.",
+            "Part Time & Full Time Jobs, Cash In Hands.",
+            "Cash In Hand Jobs To Begin This Week."
+          ]
+        },
+        {
+          "group": 587,
+          "latents": [
+            1189
+          ],
+          "gain_margin": 341.23,
+          "examples": [
+            "Cash In Hand Jobs To Begin This Week.",
+            "Production Manager Heavy Duty Diesel  2022",
+            "Casual Cleaners - Saturdays"
+          ]
+        },
+        {
+          "group": 165,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 340.51,
+          "examples": [
+            "Staff Required For Part-Time Cash Positions.",
+            "ICU RN  ",
+            "Cooks & Cashiers"
+          ]
+        }
+      ]
+    }
+  }
+}

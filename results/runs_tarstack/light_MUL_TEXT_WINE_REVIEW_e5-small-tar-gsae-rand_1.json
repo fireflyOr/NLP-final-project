@@ -1,0 +1,175 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2279579013856012,
+  "test_error": 1.2279579013856012,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9751629403346393,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 187.27727508544922,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1372,
+      "n_groups": 1357,
+      "n_multi_groups": 14,
+      "n_groups_dropped": 168,
+      "n_groups_unused": 0,
+      "n_removed": 169,
+      "var_share_removed": 0.0843,
+      "var_share_sae_error": 0.024,
+      "top": [
+        {
+          "group": 3,
+          "latents": [
+            694,
+            934
+          ],
+          "gain_margin": 15864.95,
+          "examples": [
+            "From a quartet of cool, coastal vineyard sites, including Platt, a single-vineyard designate for the producer, this is a crisp expression of honeycomb and green",
+            "Generously oaked, with cr\u00e8me caramel and butterscotch from the barrels, this Chard also features very ripe underlying fruit flavors of golden mango and pineappl",
+            "Bob's is the producer's estate vineyard, acquired in 2014, a foggy site near the Petaluma Gap. Here, it allows for fleshy flavors of pear, brioche and honey, of"
+          ]
+        },
+        {
+          "group": 1207,
+          "latents": [
+            15
+          ],
+          "gain_margin": 10895.57,
+          "examples": [
+            "Ripe fruit, augmented with a little earthiness, some barnyard scents, and then layers of dark spice and smoke.",
+            "Dry and herbal, with tobacco, thyme and cedar flavors, and an island of wild blackberries floating in the middle. The considerable tannins make the wine astring",
+            "Keenan has a good track record with Merlot, and here's a lovely one. It's softly approachable despite firm tannins, with flavors of cherries, blackberries and c"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            494,
+            1795
+          ],
+          "gain_margin": 9306.08,
+          "examples": [
+            "Aromas recall white spring flower, citrus and a hint of herb. The fresh palate offers nectarine and lemon zest alongside brisk acidity that leaves a clean finis",
+            "Fragrant and floral, this bright wine would pair well with fried seafood or baked Mediterranean fish. Honey and peach blossom notes lead to a crisp, easy mouthf",
+            "Heady freesia and tangerine zest perfume this fresh, lemony Gr\u00fcner Veltliner. The palate highlights bright grapefruit and lemon flavors nuanced with pollen and "
+          ]
+        },
+        {
+          "group": 1309,
+          "latents": [
+            611
+          ],
+          "gain_margin": 7840.05,
+          "examples": [
+            "This wine exudes classic aspects of the appellation, combining power with graceful elegance and finesse, though that finesse is more tightly wound in this vinta",
+            "Made in an exotic style that will divide purists into opposing camps. It's dark, rich and almost heavy, with the weight of a Grenache. Yet it's utterly deliciou",
+            "Powerfully rich wine, with jammy fruit flavors to go with its strawberry fruits. The wine is driven by its ripe fruit, the acidity coming through the sweetness "
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            88,
+            150,
+            1777
+          ],
+          "gain_margin": 7779.56,
+          "examples": [
+            "This base Barolo from the Antinori estate in Piedmont delivers a blast of bold flavors such as chocolate fudge, mature blackberry, spice and sweet fruit preserv",
+            "Aromas of leather, stewed prune, underbrush and a whiff of game lead the nose. The solid, straightforward palate offers Marasca cherry, sage and a licorice note",
+            "This opens with aromas of violet, ripe berry, orange zest, toasted oak and a whiff of Mediterranean scrub. The structured palate offers mature cherry, white pep"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 722,
+      "n_groups": 722,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 609,
+      "n_groups_unused": 0,
+      "n_removed": 609,
+      "var_share_removed": 0.7637,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 161,
+          "latents": [
+            737
+          ],
+          "gain_margin": 4361.58,
+          "examples": [
+            "Alenquer",
+            "Alenquer",
+            "D\u00e3o"
+          ]
+        },
+        {
+          "group": 336,
+          "latents": [
+            191
+          ],
+          "gain_margin": 4274.81,
+          "examples": [
+            "Champagne",
+            "Champagne",
+            "Champagne"
+          ]
+        },
+        {
+          "group": 609,
+          "latents": [
+            293
+          ],
+          "gain_margin": 3361.04,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 194,
+          "latents": [
+            1269
+          ],
+          "gain_margin": 2572.99,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 375,
+          "latents": [
+            27
+          ],
+          "gain_margin": 2528.96,
+          "examples": [
+            "Obidos",
+            "Campanha",
+            "Douro"
+          ]
+        }
+      ]
+    }
+  }
+}

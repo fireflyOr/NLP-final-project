@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -13122.387357472424,
+  "test_error": 13122.387357472424,
+  "course_metric": "r2",
+  "course_score": 0.7643408490173744,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.00296998023987,
+  "learner_params": null,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2038,
+      "n_groups": 2030,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1290,
+      "n_groups_unused": 404,
+      "n_removed": 1291,
+      "var_share_removed": 0.6015,
+      "var_share_sae_error": 0.026,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            911
+          ],
+          "gain_margin": 1320.58,
+          "examples": [
+            "Green, M D",
+            "Ballard, E A*",
+            "Kenny, E"
+          ]
+        },
+        {
+          "group": 2029,
+          "latents": [
+            23
+          ],
+          "gain_margin": 540.78,
+          "examples": [
+            "Potter, V*",
+            "Kapoor, S*",
+            "Blagojevic, G*"
+          ]
+        },
+        {
+          "group": 1462,
+          "latents": [
+            1003
+          ],
+          "gain_margin": 363.61,
+          "examples": [
+            "Nikolai, A J",
+            "Nikolai, A J",
+            "Heinz, D J"
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 316.43,
+          "examples": [
+            "Schwab, T",
+            "Schwab, T",
+            "Brown, K L"
+          ]
+        },
+        {
+          "group": 631,
+          "latents": [
+            1306
+          ],
+          "gain_margin": 295.37,
+          "examples": [
+            "Lai, C",
+            "Lai, C",
+            "Lai, J"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1037,
+      "n_groups": 1036,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 718,
+      "n_groups_unused": 259,
+      "n_removed": 719,
+      "var_share_removed": 0.5492,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 912,
+          "latents": [
+            305
+          ],
+          "gain_margin": 6461.21,
+          "examples": [
+            "SENIOR MANAGER, INFORMATION TECHNOLOGY",
+            "Manager City-Wide Plan",
+            "Manager Technology Planning"
+          ]
+        },
+        {
+          "group": 955,
+          "latents": [
+            323
+          ],
+          "gain_margin": 6302.25,
+          "examples": [
+            "Director IT Infrastructure",
+            "Director, Access To Information",
+            "Director, Access To Information"
+          ]
+        },
+        {
+          "group": 914,
+          "latents": [
+            911
+          ],
+          "gain_margin": 5333.47,
+          "examples": [
+            "Senior Branch Head Engineering",
+            "Senior Branch Head Engineering",
+            "Senior Branch Head Engineering"
+          ]
+        },
+        {
+          "group": 986,
+          "latents": [
+            204
+          ],
+          "gain_margin": 4351.85,
+          "examples": [
+            "Director Planning",
+            "A/Director Planning",
+            "A/Director Planning"
+          ]
+        },
+        {
+          "group": 241,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 2759.06,
+          "examples": [
+            "Foi Case Manager",
+            "FOI Case Manager",
+            "Deputy Chief Election Officer (T)"
+          ]
+        }
+      ]
+    }
+  }
+}

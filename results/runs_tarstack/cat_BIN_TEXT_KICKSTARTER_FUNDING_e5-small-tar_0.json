@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7262026165864296,
+  "test_error": 0.2737973834135704,
+  "course_metric": "auroc",
+  "course_score": 0.7262026165864296,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 22.919268131256104,
+  "learner_params": null,
+  "diagnostics": {}
+}

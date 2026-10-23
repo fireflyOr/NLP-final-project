@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "e5-small",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -20.71949914226001,
+  "test_error": 20.71949914226001,
+  "course_metric": "r2",
+  "course_score": 0.8784842284549037,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 35.23227143287659,
+  "learner_params": null,
+  "diagnostics": {}
+}

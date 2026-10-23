@@ -1,0 +1,474 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7044569871822856,
+  "test_error": 0.7044569871822856,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9047173769931701,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 183.8393862247467,
+  "learner_params": null,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2040,
+      "n_groups": 2038,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1092,
+      "n_groups_unused": 9,
+      "n_removed": 1093,
+      "var_share_removed": 0.4088,
+      "var_share_sae_error": 0.0661,
+      "top": [
+        {
+          "group": 508,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 693.38,
+          "examples": [
+            "66 Binjiang East Road, Jinjiang, Chengdu, China Mainland",
+            "194 Yixinqiao South Street, Jinjiang, Chengdu, China Mainland",
+            "1 East Kangshi Street, Jinjiang, Chengdu, China Mainland"
+          ]
+        },
+        {
+          "group": 1819,
+          "latents": [
+            180
+          ],
+          "gain_margin": 367.27,
+          "examples": [
+            "Embassy Suites Hotel, 192 Haywood St., Asheville, NC, 28801, USA",
+            "The St. Regis Hotel, Level 1U, 29 Tanglin Road, 247911, Singapore",
+            "Inside Vallie Hotel, 85-3 Zhijiang Road, Xihu, Hangzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 2011,
+          "latents": [
+            363
+          ],
+          "gain_margin": 305.89,
+          "examples": [
+            "5F, StarWorld Hotel, Avenida da Amizade, Macau, Macau",
+            "11F, VIE Hotel Bangkok - MGallery Collection, 117/39-40 Phayathai Road, Thanon Phetchaburi, Ratchathewi, Bangkok, 10400, Thailand",
+            "6F, Cordis Hotel, 555 Shanghai Street, Mong Kok, Hong Kong, Hong Kong SAR China"
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            750
+          ],
+          "gain_margin": 244.91,
+          "examples": [
+            "55, Lorong Stewart, George Town, 10300, Malaysia",
+            "319 Jalan Burma, George Town, 10350, Malaysia",
+            "300 Lebuh Pantai, George Town, 10300, Malaysia"
+          ]
+        },
+        {
+          "group": 1366,
+          "latents": [
+            1591
+          ],
+          "gain_margin": 210.8,
+          "examples": [
+            "68 Tongren Road, Jingan, Shanghai, China Mainland",
+            "107 Sinan Road, Huangpu, Shanghai, China Mainland",
+            "L7-05, 1000Trees, 600 Moganshan Road, Putuo, Shanghai, China Mainland"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1132,
+      "n_groups": 1131,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 988,
+      "n_groups_unused": 30,
+      "n_removed": 989,
+      "var_share_removed": 0.8157,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 361,
+          "latents": [
+            950
+          ],
+          "gain_margin": 2027.03,
+          "examples": [
+            "Japanese, Creative",
+            "Japanese, Creative",
+            "Japanese, Creative"
+          ]
+        },
+        {
+          "group": 462,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 1808.91,
+          "examples": [
+            "Ramen",
+            "Ramen",
+            "Ramen"
+          ]
+        },
+        {
+          "group": 1118,
+          "latents": [
+            249
+          ],
+          "gain_margin": 1354.98,
+          "examples": [
+            "Creative, Innovative",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1093,
+          "latents": [
+            164
+          ],
+          "gain_margin": 691.46,
+          "examples": [
+            "Modern Cuisine, Creative",
+            "Modern Cuisine, Creative",
+            "Modern Cuisine, Creative"
+          ]
+        },
+        {
+          "group": 362,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 477.85,
+          "examples": [
+            "Creative, Japanese Contemporary",
+            "Creative, Japanese",
+            "Japanese Contemporary, Creative"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2038,
+      "n_groups": 2033,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 950,
+      "n_groups_unused": 22,
+      "n_removed": 951,
+      "var_share_removed": 0.4109,
+      "var_share_sae_error": 0.0828,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            249,
+            950,
+            1502
+          ],
+          "gain_margin": 17006.8,
+          "examples": [
+            "A meal by Gert De Mangeleer and sommelier Joachim Bouden is in a class of its own, starting with the swish Botanic Sanctuary Hotel, which immerses you in a worl",
+            "Emile van der Staak's vision comes to life in this urban restaurant, where you can see the impressive team at work in the open kitchen. His botanical gastronomy",
+            "2027 will mark forty years of business: a story made up of aromas, flavours and traditions, the story of the Portinari family, who have carved their name among "
+          ]
+        },
+        {
+          "group": 990,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 5420.5,
+          "examples": [
+            "Trained in Huaiyang cuisine, the owner applies the same level of care to preparing his noodles. Suzhou-style noodles work magic with Nanjing-style marinated mea",
+            "On a quiet street in the Leather District, this friendly Chinese restaurant specializes in Lanzhou-style hand-pulled noodles. A constant whack and thud rings ou",
+            "A family vibe sets the scene in this shop serving healthy home-style cooking. Their signature chicken soup is made daily with freshly slaughtered free-range chi"
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            74
+          ],
+          "gain_margin": 2592.19,
+          "examples": [
+            "On the banks of the Mun River, next to a 100-year-old bridge, sits Chomjan, popular with locals and non-locals enjoying penetrating sunsets, a fresh river breez",
+            "The owner opened this joint in early 2000s to serve signature dishes from his hometown of Ningbo, especially seafood \u2013 his close connections with fishermen back",
+            "Honouring Phuket town classics beneath the leafy canopy of an old mayom tree, this humble eatery focus on quality. From the short menu, we recommend the local f"
+          ]
+        },
+        {
+          "group": 2031,
+          "latents": [
+            219
+          ],
+          "gain_margin": 1711.13,
+          "examples": [
+            "In contrast to the huge Emirates Palace hotel in which its located, this Indian restaurant occupies a surprisingly small and intimate space. Its eponymous chef ",
+            "The hotel\u2019s restaurant has been completely revamped and moved to the 31st floor, commanding breathtaking views. Now helmed by a native Thai chef with extensive ",
+            "Housed in Jinricksha Station, a former rickshaw depot circa 1903, Born boasts a modern dining room adorned by glowing double arches, high glass ceiling and an e"
+          ]
+        },
+        {
+          "group": 2026,
+          "latents": [
+            166
+          ],
+          "gain_margin": 1116.57,
+          "examples": [
+            "Kei for Kei Kobayashi, a chef born in Nagano, Japan, who trained with the likes of Gilles Goujon and Alain Ducasse. His father was a cook in a traditional kaise",
+            "The Kavaliersbau (squire's lodge) of Hohenheim Castle, in a quiet location outside the city, is a haven for the discerning foodie. This is thanks in no small pa",
+            "The name is a nod to T\u014dya, a famous volcanic lake in the Shikotsu-T\u014dya National Park on Japan's northern island of Hokkaido. Globe-trotting chef-owner, Lo\u00efc Vil"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 684,
+      "n_groups": 672,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 587,
+      "n_groups_unused": 8,
+      "n_removed": 598,
+      "var_share_removed": 0.8362,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 208,
+          "latents": [
+            1626
+          ],
+          "gain_margin": 1892.88,
+          "examples": [
+            "Air conditioning,Interesting wine list,Notable sake list,Shoes must be removed",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list"
+          ]
+        },
+        {
+          "group": 315,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1387.19,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 514,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 759.78,
+          "examples": [
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list"
+          ]
+        },
+        {
+          "group": 373,
+          "latents": [
+            166
+          ],
+          "gain_margin": 749.75,
+          "examples": [
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Interesting wine list,Notable sake list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 635,
+          "latents": [
+            106
+          ],
+          "gain_margin": 374.24,
+          "examples": [
+            "Air conditioning,Car park,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list,Wheelchair access",
+            "Air conditioning,Counter dining,Interesting wine list,Notable sake list"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1927,
+      "n_groups": 1927,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1482,
+      "n_groups_unused": 24,
+      "n_removed": 1482,
+      "var_share_removed": 0.6743,
+      "var_share_sae_error": 0.01,
+      "top": [
+        {
+          "group": 458,
+          "latents": [
+            1591
+          ],
+          "gain_margin": 128.53,
+          "examples": [
+            "Shanghai, China Mainland",
+            "Shanghai, China Mainland",
+            "Shanghai, China Mainland"
+          ]
+        },
+        {
+          "group": 1423,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 125.12,
+          "examples": [
+            "Quanzhou, China Mainland",
+            "Quanzhou, China Mainland",
+            "Quanzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 695,
+          "latents": [
+            810
+          ],
+          "gain_margin": 90.36,
+          "examples": [
+            "Cagliari, Italy",
+            "Cagliari, Italy",
+            "Cagliari, Italy"
+          ]
+        },
+        {
+          "group": 1204,
+          "latents": [
+            483
+          ],
+          "gain_margin": 85.71,
+          "examples": [
+            "Le Havre, France",
+            "Joigny, France",
+            "Rougemont, Switzerland"
+          ]
+        },
+        {
+          "group": 180,
+          "latents": [
+            1923
+          ],
+          "gain_margin": 84.67,
+          "examples": [
+            "Noordwijk aan Zee, Netherlands",
+            "Noordwijk aan Zee, Netherlands",
+            "Noordwijk aan Zee, Netherlands"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2045,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1019,
+      "n_groups_unused": 6,
+      "n_removed": 1019,
+      "var_share_removed": 0.3693,
+      "var_share_sae_error": 0.0932,
+      "top": [
+        {
+          "group": 1110,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 1267.49,
+          "examples": [
+            "Lao Shih Kuan Noodles",
+            "Rung Rueang Tung Pork Noodle",
+            "Lai Foong Lala Noodles"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            1502,
+            1814
+          ],
+          "gain_margin": 629.42,
+          "examples": [
+            "G\u00dcTSCH by Markus Neff",
+            "ESTERRE by Alain Ducasse",
+            "Eyckerhof by Nicolas Mylle"
+          ]
+        },
+        {
+          "group": 1006,
+          "latents": [
+            1249
+          ],
+          "gain_margin": 342.2,
+          "examples": [
+            "Ph\u1edf Cu\u1ed1n Chinh Th\u1eafng",
+            "Yung Khao",
+            "Klang Na Pla Khao"
+          ]
+        },
+        {
+          "group": 2044,
+          "latents": [
+            750
+          ],
+          "gain_margin": 233.8,
+          "examples": [
+            "BingSheng Private Kitchen (Tianhe East Road)",
+            "Baan Landai (Phra Pok Klao Road)",
+            "Hing Kee Bakuteh (121 Jalan Kepong)"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            2038
+          ],
+          "gain_margin": 164.14,
+          "examples": [
+            "HYGGE Brasserie & Bar",
+            "Bistro Berto",
+            "Alpenblick - Bistro"
+          ]
+        }
+      ]
+    }
+  }
+}

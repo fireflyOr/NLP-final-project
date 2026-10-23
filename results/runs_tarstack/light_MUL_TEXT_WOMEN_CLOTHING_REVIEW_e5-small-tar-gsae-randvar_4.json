@@ -1,0 +1,175 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7137243131303258,
+  "test_error": 0.7137243131303258,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9095076187503166,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 66.38085675239563,
+  "learner_params": null,
+  "diagnostics": {
+    "Review Text": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1826,
+      "n_groups": 1819,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 908,
+      "n_groups_unused": 56,
+      "n_removed": 464,
+      "var_share_removed": 0.055,
+      "var_share_sae_error": 0.0371,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            83,
+            698
+          ],
+          "gain_margin": 26293.42,
+          "examples": [
+            "I wanted to love this sweater but the fit is off slightly. i ordered my regular size xs and the chest/shoulder area fits nice but the waist comes very tight and",
+            "I wanted to like this top, as the fabric was nice and thick, but found that it dipped too low beneath the armpits, which would be ok if your lats are in perfect",
+            "The model looks awesome in this cute top, but on me it looked boxy but was too tight around the chest and was too short (for reference, i'm 5'7,\" 140 lbs., and "
+          ]
+        },
+        {
+          "group": 906,
+          "latents": [
+            828
+          ],
+          "gain_margin": 9960.03,
+          "examples": [
+            "I bought the blue/green color. it was absolutely beautiful...i paired it with a green sweater jacket for inside and took the sweater off as it warmed up. very c",
+            "I paired this beauty with the beacheress necklace and the result was stunning. the colorway in this top just makes my summer tan pop! i am 5'3\"/36b/108 lbs and ",
+            "It's hard to tell how jeans will fit when shopping online. i was very pleasantly surprised. they are super soft, very high quality and look even better in perso"
+          ]
+        },
+        {
+          "group": 1814,
+          "latents": [
+            437
+          ],
+          "gain_margin": 7820.68,
+          "examples": [
+            "This shirt has absolutely no shape. look carefully at the model and you we discover she is cleverly positioned to hide the sheer boxy-ness of this shirt. the pr",
+            "I'm 5 ft 7 125 lbs true size 4 and these pants made me look like i had boy parts. super disappointed!",
+            "The dress is not the beautiful color in the picture...it is a very yellowish cream. the fabric is thick and does not\r\nhang pretty. very disappointed. had to ret"
+          ]
+        },
+        {
+          "group": 1818,
+          "latents": [
+            106
+          ],
+          "gain_margin": 5626.68,
+          "examples": [
+            "This vest looked so cute online but it's a disaster. the quilting is so bulky that the drawstring doesn't work properly and it just hangs. itlooks like somethin",
+            "This is the worst shirt i have ever tried on from retailer. it is basically a big shaggy box from the front, and from the side it looks like a tent. it is also ",
+            "The color is nice and the material is what you might find used by a high school drama club with a low budget - a very cheap polyester. on top of that - it is un"
+          ]
+        },
+        {
+          "group": 451,
+          "latents": [
+            1677
+          ],
+          "gain_margin": 4099.04,
+          "examples": [
+            "It's exactly how it appears in the pictures-awesome shirt",
+            "I saw this top at my local retailer and instantly fell in love. i didn't even try it on first because i just \"knew\". when i finally got home and tried it on, it",
+            "I love this sweatshirt! new favorite! it has a comfy meant to be oversized fit... love the little inspirational quote... and it's the kind of sweatshirt you wan"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1629,
+      "n_groups": 1623,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1021,
+      "n_groups_unused": 59,
+      "n_removed": 626,
+      "var_share_removed": 0.2353,
+      "var_share_sae_error": 0.0143,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            106,
+            437
+          ],
+          "gain_margin": 15036.19,
+          "examples": [
+            "Huge jacket, wash color is not as pictured",
+            "Fabric looks cheap",
+            "Very thin"
+          ]
+        },
+        {
+          "group": 1614,
+          "latents": [
+            396
+          ],
+          "gain_margin": 4865.41,
+          "examples": [
+            "Poor quality, unflattering fit",
+            "Horrible quality, no structure",
+            "Very unflattering dress"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            59,
+            539
+          ],
+          "gain_margin": 4636.59,
+          "examples": [
+            "Very nice skirt but too small",
+            "Nice but 5% spandex makes it a bit clingy",
+            "Nice but sleeves and body have volume"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            153,
+            2017
+          ],
+          "gain_margin": 4255.67,
+          "examples": [
+            "Fabulously comfortable and stylish",
+            "Warm & stylish",
+            "Wonderful & comfy"
+          ]
+        },
+        {
+          "group": 1620,
+          "latents": [
+            828
+          ],
+          "gain_margin": 3549.62,
+          "examples": [
+            "Flattering and comfy - my perfect jean!",
+            "Chic and feminine sweater, i love it!",
+            "Perfect fall sweater!"
+          ]
+        }
+      ]
+    }
+  }
+}

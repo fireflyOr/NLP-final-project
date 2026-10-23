@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_ROTTEN_TOMATOES",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.7736676197422342,
+  "test_error": 0.7736676197422342,
+  "course_metric": "r2",
+  "course_score": 0.548073344430831,
+  "n_text_cols": 13,
+  "n_text_features": 391,
+  "n_train": 4772,
+  "n_test": 2386,
+  "runtime_s": 21.750693321228027,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": -1,
+    "colsample_bytree": 1.0,
+    "n_trees": 288
+  },
+  "diagnostics": {}
+}

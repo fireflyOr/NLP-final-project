@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.152034194430363,
+  "test_error": 1.152034194430363,
+  "course_metric": "r2",
+  "course_score": 0.35185665869200766,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 30.440845727920532,
+  "learner_params": null,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2044,
+      "n_groups": 2043,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1637,
+      "n_groups_unused": 703,
+      "n_removed": 1637,
+      "var_share_removed": 0.4577,
+      "var_share_sae_error": 0.0532,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            1439
+          ],
+          "gain_margin": 14742.34,
+          "examples": [
+            "Super Mario Bros.",
+            "Mario Bros.",
+            "Mario Bros."
+          ]
+        },
+        {
+          "group": 502,
+          "latents": [
+            1885
+          ],
+          "gain_margin": 4523.11,
+          "examples": [
+            "Donkey Kong Barrel Blast",
+            "Super Mario Kart",
+            "Mario Kart 7"
+          ]
+        },
+        {
+          "group": 420,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 4220.82,
+          "examples": [
+            "Grand Theft Auto: Liberty City Stories",
+            "Beautiful Katamari",
+            "Pok\u00e9mon Colosseum"
+          ]
+        },
+        {
+          "group": 1019,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 2463.73,
+          "examples": [
+            "Call of Duty: Finest Hour",
+            "Call of Duty: Finest Hour",
+            "Assassin's Creed: Rogue"
+          ]
+        },
+        {
+          "group": 679,
+          "latents": [
+            1085
+          ],
+          "gain_margin": 1367.46,
+          "examples": [
+            "Dr. Mario",
+            "Mario Tennis: Power Tour",
+            "Mario Golf: Toadstool Tour"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1013,
+      "n_groups": 1013,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 940,
+      "n_groups_unused": 335,
+      "n_removed": 940,
+      "var_share_removed": 0.6623,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 839,
+          "latents": [
+            99
+          ],
+          "gain_margin": 1064.71,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 747,
+          "latents": [
+            168
+          ],
+          "gain_margin": 903.23,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 114,
+          "latents": [
+            1844
+          ],
+          "gain_margin": 868.56,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 338,
+          "latents": [
+            778
+          ],
+          "gain_margin": 743.52,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 24,
+          "latents": [
+            1996
+          ],
+          "gain_margin": 674.14,
+          "examples": [
+            "Westwood Studios",
+            "Palcom",
+            "Microsoft Game Studios"
+          ]
+        }
+      ]
+    }
+  }
+}

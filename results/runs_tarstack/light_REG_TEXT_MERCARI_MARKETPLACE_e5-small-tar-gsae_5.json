@@ -1,0 +1,474 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5630018979831259,
+  "test_error": 0.5630018979831259,
+  "course_metric": "r2",
+  "course_score": 0.4276273026323927,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 91.23885178565979,
+  "learner_params": null,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1049,
+      "n_groups": 1049,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 833,
+      "n_groups_unused": 150,
+      "n_removed": 833,
+      "var_share_removed": 0.4995,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 1046,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3710.47,
+          "examples": [
+            "Air Jordan",
+            "Air Jordan",
+            "Air Jordan"
+          ]
+        },
+        {
+          "group": 253,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 2334.18,
+          "examples": [
+            "Tory Burch",
+            "Tory Burch",
+            "Tory Burch"
+          ]
+        },
+        {
+          "group": 229,
+          "latents": [
+            1784
+          ],
+          "gain_margin": 772.11,
+          "examples": [
+            "Michael Kors",
+            "Michael Kors",
+            "Michael Kors"
+          ]
+        },
+        {
+          "group": 399,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 768.39,
+          "examples": [
+            "Kendra Scott",
+            "Kendra Scott",
+            "Kendra Scott"
+          ]
+        },
+        {
+          "group": 788,
+          "latents": [
+            980
+          ],
+          "gain_margin": 620.81,
+          "examples": [
+            "ASOS",
+            "ASOS",
+            "ASUS"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 797,
+      "n_groups": 797,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 697,
+      "n_groups_unused": 54,
+      "n_removed": 697,
+      "var_share_removed": 0.6382,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 110,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 1054.69,
+          "examples": [
+            "Women's Handbags",
+            "Women's Handbags",
+            "Women's Handbags"
+          ]
+        },
+        {
+          "group": 216,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 986.97,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "group": 651,
+          "latents": [
+            1096
+          ],
+          "gain_margin": 747.41,
+          "examples": [
+            "Footwear",
+            "Shoes",
+            "Shoes"
+          ]
+        },
+        {
+          "group": 358,
+          "latents": [
+            778
+          ],
+          "gain_margin": 521.03,
+          "examples": [
+            "Bags and Purses",
+            "Bags and Purses",
+            "Bags and Purses"
+          ]
+        },
+        {
+          "group": 440,
+          "latents": [
+            959
+          ],
+          "gain_margin": 466.98,
+          "examples": [
+            "Footwear",
+            "Outdoors",
+            "Outdoors"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1282,
+      "n_groups": 1282,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1030,
+      "n_groups_unused": 164,
+      "n_removed": 1030,
+      "var_share_removed": 0.4931,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 1254,
+          "latents": [
+            1205
+          ],
+          "gain_margin": 2721.23,
+          "examples": [
+            "Highchairs & Booster Seats",
+            "Keyboards",
+            "Home Speakers & Subwoofers"
+          ]
+        },
+        {
+          "group": 342,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1814.42,
+          "examples": [
+            "Backpacks & Carriers",
+            "Backpacks & Carriers",
+            "Backpacks & Carriers"
+          ]
+        },
+        {
+          "group": 114,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 1314.38,
+          "examples": [
+            "Electronics",
+            "Electronics",
+            "Electronics"
+          ]
+        },
+        {
+          "group": 1222,
+          "latents": [
+            174
+          ],
+          "gain_margin": 936.3,
+          "examples": [
+            "Halter",
+            "Halter",
+            "Halter"
+          ]
+        },
+        {
+          "group": 1275,
+          "latents": [
+            305
+          ],
+          "gain_margin": 886.99,
+          "examples": [
+            "Home Speakers & Subwoofers",
+            "Digital Cameras",
+            "Digital Cameras"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1229,
+      "n_groups": 1227,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 995,
+      "n_groups_unused": 168,
+      "n_removed": 996,
+      "var_share_removed": 0.461,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 215,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 3795.72,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "group": 1201,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2495.99,
+          "examples": [
+            "Electronics/Cameras & Photography/Digital Cameras",
+            "Electronics/Cameras & Photography/Digital Cameras",
+            "Electronics/Cameras & Photography/Digital Cameras"
+          ]
+        },
+        {
+          "group": 1062,
+          "latents": [
+            892
+          ],
+          "gain_margin": 2187.79,
+          "examples": [
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer"
+          ]
+        },
+        {
+          "group": 1098,
+          "latents": [
+            559
+          ],
+          "gain_margin": 1020.15,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "group": 474,
+          "latents": [
+            980
+          ],
+          "gain_margin": 771.33,
+          "examples": [
+            "Handmade/Bags and Purses/Tote",
+            "Handmade/Bags and Purses/Tote",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2045,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1304,
+      "n_groups_unused": 215,
+      "n_removed": 1304,
+      "var_share_removed": 0.311,
+      "var_share_sae_error": 0.0868,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            1529
+          ],
+          "gain_margin": 12002.12,
+          "examples": [
+            "\u25cf|\u25cf|\u25cfNEW ITEM ADDED This is an introduction price\u25cf|\u25cf|\u25cf PRICE GOES UP ON SUNDAY\u25a0|\u25a0|Actual Picture of Bag AVAILABLE COLORS Black & Brown This is an AMAZING Tote B",
+            "Coach Kyra Poppy Floral Swingpack/Crossbody Good used condition! 100% Authentic - Rare [rm] Retail *Only used twice - small flaws can be seen in picture 4 (smal",
+            "XL Carly Plaid Unicorn! Black background with red, navy blue, white Plaid! Rare hard to find! So adorable and comfortable! Brand new with tags Pet free smoke fr"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            125,
+            1499
+          ],
+          "gain_margin": 5546.58,
+          "examples": [
+            "Gun belly button ring Brand new never used Free shipping Ladies this is the last one until I can order more which will be about 2 weeks",
+            "Eyebrow mold things to shape your eyebrows. 3 of them total Free ship",
+            "Fun and colourful tank top. Really soft material. Pet and smoke free home."
+          ]
+        },
+        {
+          "group": 2043,
+          "latents": [
+            396
+          ],
+          "gain_margin": 766.5,
+          "examples": [
+            "SUPERIOR QUALITY Very Strong & Durable Tear, Water & Dirt Resistant (25) Yellow Daisies Self Sealing Poly Mailers NOT Bubble Padded Polymailers Envelopes for Sh",
+            "Set of 2faux non piercing nose rings it can be either silver, gold, copper, or black. If you have any other colors in mind then let me know(: They are 18 gauge ",
+            "Adjustable backless wireless strapless stick on bra Push-up Self adhesive sticker Reusable Amazing results Color: black (Also available in nude) Size: B cup fit"
+          ]
+        },
+        {
+          "group": 61,
+          "latents": [
+            1941
+          ],
+          "gain_margin": 424.39,
+          "examples": [
+            "Designer: Gucci Model: San Marino Style: Loafers Color: black Material: leather Features: GG logo MSRP: [rm] SZ: 10G",
+            "She was barely even played with and never slept with. She sat in the bottom of a Toybox for the last 2 years. She is Snuggle & Glow Dora. She still lights up. S",
+            "Bought for a wedding the. Worn for play shoes. All rhinestones are intact. There are creases on the inner heels from stepping on the backs when trying to put th"
+          ]
+        },
+        {
+          "group": 2006,
+          "latents": [
+            344
+          ],
+          "gain_margin": 365.98,
+          "examples": [
+            "New in box aqua blue solo HD beats by dre headphones. I got these as a promotional item for pinnacle vodka but I never use them. They are brand new and come wit",
+            "For sprint cracked screen few scratches on side still a Sold phone just need some work",
+            "No iCloud lock, photo is black listed so it only works on Wifi. It cost[rm] to get it flashed which will remove the black list or less depending on who you know"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2042,
+      "n_groups": 2040,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1179,
+      "n_groups_unused": 262,
+      "n_removed": 1179,
+      "var_share_removed": 0.2926,
+      "var_share_sae_error": 0.0659,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            892
+          ],
+          "gain_margin": 12648.01,
+          "examples": [
+            "Lululemon Run: Full Tilt pullover 6",
+            "48HR SALE\u2661Large Tory Burch Ella Tote",
+            "Lululemon Runderful Half Zip NWT!"
+          ]
+        },
+        {
+          "group": 656,
+          "latents": [
+            1499
+          ],
+          "gain_margin": 6969.09,
+          "examples": [
+            "Tank top",
+            "Tank Top",
+            "CAbi tank top"
+          ]
+        },
+        {
+          "group": 693,
+          "latents": [
+            1581
+          ],
+          "gain_margin": 1447.24,
+          "examples": [
+            "iPhone 7 Lightning to 3.5mm AUX Adapter",
+            "New Apple Ear Pods IPHONE 7 ONLY",
+            "Lotus Flower earrings **FREE SHIPPING**"
+          ]
+        },
+        {
+          "group": 232,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1364.81,
+          "examples": [
+            "NIB Tory Burch Flats",
+            "For @ carly",
+            "TORY BURCH MINNIE TRAVEL BALLET FLATS 8"
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            344
+          ],
+          "gain_margin": 439.23,
+          "examples": [
+            "Locked iPad",
+            "beats by dr dre solo 2",
+            "Solo beats by dre headphones (free ship)"
+          ]
+        }
+      ]
+    }
+  }
+}

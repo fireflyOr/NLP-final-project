@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -12886.569633646646,
+  "test_error": 12886.569633646646,
+  "course_metric": "r2",
+  "course_score": 0.7787872381909913,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 87.3378553390503,
+  "learner_params": null,
+  "diagnostics": {}
+}

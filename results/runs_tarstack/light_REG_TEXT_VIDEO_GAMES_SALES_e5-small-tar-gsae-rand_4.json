@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.2085648321495408,
+  "test_error": 1.2085648321495408,
+  "course_metric": "r2",
+  "course_score": 0.33825724666420276,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 30.1240816116333,
+  "learner_params": null,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2045,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1635,
+      "n_groups_unused": 754,
+      "n_removed": 1636,
+      "var_share_removed": 0.7715,
+      "var_share_sae_error": 0.0531,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            1233
+          ],
+          "gain_margin": 12241.37,
+          "examples": [
+            "Super Mario 64",
+            "Super Mario 64",
+            "Super Mario Bros."
+          ]
+        },
+        {
+          "group": 430,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 4699.74,
+          "examples": [
+            "Pokemon HeartGold/Pokemon SoulSilver",
+            "Pokemon Super Mystery Dungeon",
+            "Pokemon Rumble World"
+          ]
+        },
+        {
+          "group": 632,
+          "latents": [
+            935
+          ],
+          "gain_margin": 3981.91,
+          "examples": [
+            "Nintendo World Cup",
+            "Mario Golf: Advance Tour",
+            "Mario Golf: World Tour"
+          ]
+        },
+        {
+          "group": 1988,
+          "latents": [
+            492
+          ],
+          "gain_margin": 3636.26,
+          "examples": [
+            "Wii Sports Club",
+            "G1 Jockey Wii",
+            "Billy's Boot Camp: Wii de Enjoy Diet!"
+          ]
+        },
+        {
+          "group": 1004,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 2420.33,
+          "examples": [
+            "Halo 2 Multiplayer Map Pack",
+            "Halo: Reach",
+            "The Walking Dead: Season Two"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1005,
+      "n_groups": 1005,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 944,
+      "n_groups_unused": 327,
+      "n_removed": 944,
+      "var_share_removed": 0.8466,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 961,
+          "latents": [
+            168
+          ],
+          "gain_margin": 1258.12,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 493,
+          "latents": [
+            778
+          ],
+          "gain_margin": 797.43,
+          "examples": [
+            "Hasbro Interactive",
+            "Hasbro Interactive",
+            "Hasbro Interactive"
+          ]
+        },
+        {
+          "group": 256,
+          "latents": [
+            759
+          ],
+          "gain_margin": 776.6,
+          "examples": [
+            "Epic Games",
+            "Enjoy Gaming ltd.",
+            "Hello Games"
+          ]
+        },
+        {
+          "group": 958,
+          "latents": [
+            305
+          ],
+          "gain_margin": 711.38,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 684,
+          "latents": [
+            200
+          ],
+          "gain_margin": 441.47,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

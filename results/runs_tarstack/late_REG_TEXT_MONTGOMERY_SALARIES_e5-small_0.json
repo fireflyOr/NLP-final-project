@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_MONTGOMERY_SALARIES",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -4952.185203830329,
+  "test_error": 4952.185203830329,
+  "course_metric": "r2",
+  "course_score": 0.9710819635534991,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 6152,
+  "n_test": 3076,
+  "runtime_s": 16.877822875976562,
+  "learner_params": null,
+  "diagnostics": {}
+}

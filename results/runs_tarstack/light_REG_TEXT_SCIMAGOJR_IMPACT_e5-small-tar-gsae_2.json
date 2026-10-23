@@ -1,0 +1,781 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -21.17316642836461,
+  "test_error": 21.17316642836461,
+  "course_metric": "r2",
+  "course_score": 0.8674127393962078,
+  "n_text_cols": 10,
+  "n_text_features": 300,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 145.0746603012085,
+  "learner_params": null,
+  "diagnostics": {
+    "Areas": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 827,
+      "n_groups": 817,
+      "n_multi_groups": 8,
+      "n_groups_dropped": 656,
+      "n_groups_unused": 245,
+      "n_removed": 661,
+      "var_share_removed": 0.486,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 755,
+          "latents": [
+            448
+          ],
+          "gain_margin": 474.19,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience",
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience",
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience"
+          ]
+        },
+        {
+          "group": 577,
+          "latents": [
+            324
+          ],
+          "gain_margin": 444.74,
+          "examples": [
+            "Immunology and Microbiology; Neuroscience",
+            "Immunology and Microbiology",
+            "Immunology and Microbiology"
+          ]
+        },
+        {
+          "group": 350,
+          "latents": [
+            911
+          ],
+          "gain_margin": 342.51,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience",
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience",
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience"
+          ]
+        },
+        {
+          "group": 560,
+          "latents": [
+            564
+          ],
+          "gain_margin": 322.23,
+          "examples": [
+            "Computer Science; Neuroscience",
+            "Computer Science; Neuroscience",
+            "Immunology and Microbiology; Neuroscience"
+          ]
+        },
+        {
+          "group": 365,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 281.22,
+          "examples": [
+            "Immunology and Microbiology; Neuroscience",
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience",
+            "Biochemistry, Genetics and Molecular Biology; Neuroscience"
+          ]
+        }
+      ]
+    },
+    "Categories": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 978,
+      "n_groups": 956,
+      "n_multi_groups": 20,
+      "n_groups_dropped": 695,
+      "n_groups_unused": 349,
+      "n_removed": 704,
+      "var_share_removed": 0.2489,
+      "var_share_sae_error": 0.0029,
+      "top": [
+        {
+          "group": 5,
+          "latents": [
+            448,
+            911
+          ],
+          "gain_margin": 4520.69,
+          "examples": [
+            "Molecular Biology (Q1); Molecular Medicine (Q1)",
+            "Molecular Biology (Q1); Molecular Medicine (Q1)",
+            "Cell Biology (Q1); Molecular Biology (Q1); Physiology (Q1)"
+          ]
+        },
+        {
+          "group": 454,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 3128.32,
+          "examples": [
+            "Cell Biology (Q1); Cellular and Molecular Neuroscience (Q1); Molecular Biology (Q1); Molecular Medicine (Q1); Pharmacology (Q1)",
+            "Cellular and Molecular Neuroscience (Q1); Immunology (Q1); Neurology (Q1); Neuroscience (miscellaneous) (Q1)",
+            "Cellular and Molecular Neuroscience (Q1); Molecular Biology (Q1); Neurology (clinical) (Q1)"
+          ]
+        },
+        {
+          "group": 9,
+          "latents": [
+            529,
+            1339
+          ],
+          "gain_margin": 2820.87,
+          "examples": [
+            "Cellular and Molecular Neuroscience (Q1); Cognitive Neuroscience (Q1); Neurology (clinical) (Q1)",
+            "Biochemistry (Q1); Cellular and Molecular Neuroscience (Q1)",
+            "Gastroenterology (Q1); Radiology, Nuclear Medicine and Imaging (Q1)"
+          ]
+        },
+        {
+          "group": 717,
+          "latents": [
+            769
+          ],
+          "gain_margin": 1209.46,
+          "examples": [
+            "Biochemistry, Genetics and Molecular Biology (miscellaneous) (Q1); History and Philosophy of Science (Q1); Neuroscience (miscellaneous) (Q1)",
+            "Biochemistry, Genetics and Molecular Biology (miscellaneous) (Q1); Medicine (miscellaneous) (Q1); Pharmacology, Toxicology and Pharmaceutics (miscellaneous) (Q1",
+            "Earth and Planetary Sciences (miscellaneous) (Q1); Ecology, Evolution, Behavior and Systematics (Q1); Environmental Science (miscellaneous) (Q1)"
+          ]
+        },
+        {
+          "group": 865,
+          "latents": [
+            1034
+          ],
+          "gain_margin": 1127.45,
+          "examples": [
+            "Endocrinology, Diabetes and Metabolism (Q1); Histology (Q1); Physiology (Q1)",
+            "Endocrinology, Diabetes and Metabolism (Q1); Histology (Q1); Physiology (Q1)",
+            "Cancer Research (Q1); Immunology (Q1); Immunology and Allergy (Q1); Molecular Medicine (Q1); Oncology (Q1); Pharmacology (Q1)"
+          ]
+        }
+      ]
+    },
+    "Citations / Doc  (2years)": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 654,
+      "n_groups": 608,
+      "n_multi_groups": 43,
+      "n_groups_dropped": 468,
+      "n_groups_unused": 222,
+      "n_removed": 494,
+      "var_share_removed": 0.4062,
+      "var_share_sae_error": 0.0002,
+      "top": [
+        {
+          "group": 288,
+          "latents": [
+            1080
+          ],
+          "gain_margin": 2113.0,
+          "examples": [
+            "10,15",
+            "10,15",
+            "10,51"
+          ]
+        },
+        {
+          "group": 519,
+          "latents": [
+            679
+          ],
+          "gain_margin": 2107.7,
+          "examples": [
+            "22,00",
+            "6,00",
+            "8,00"
+          ]
+        },
+        {
+          "group": 514,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 1088.17,
+          "examples": [
+            "12,76",
+            "13,76",
+            "5,76"
+          ]
+        },
+        {
+          "group": 473,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1050.01,
+          "examples": [
+            "9,93",
+            "9,94",
+            "8,94"
+          ]
+        },
+        {
+          "group": 60,
+          "latents": [
+            1557
+          ],
+          "gain_margin": 824.34,
+          "examples": [
+            "12,14",
+            "12,10",
+            "12,23"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 494,
+      "n_groups": 494,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 462,
+      "n_groups_unused": 98,
+      "n_removed": 462,
+      "var_share_removed": 0.6225,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 139,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 1163.25,
+          "examples": [
+            "Germany",
+            "Germany",
+            "Germany"
+          ]
+        },
+        {
+          "group": 480,
+          "latents": [
+            323
+          ],
+          "gain_margin": 548.23,
+          "examples": [
+            "United Kingdom",
+            "United Kingdom",
+            "United Kingdom"
+          ]
+        },
+        {
+          "group": 312,
+          "latents": [
+            1523
+          ],
+          "gain_margin": 336.93,
+          "examples": [
+            "Nepal",
+            "Ethiopia",
+            "Ethiopia"
+          ]
+        },
+        {
+          "group": 304,
+          "latents": [
+            178
+          ],
+          "gain_margin": 310.58,
+          "examples": [
+            "United States",
+            "United States",
+            "United States"
+          ]
+        },
+        {
+          "group": 428,
+          "latents": [
+            732
+          ],
+          "gain_margin": 264.47,
+          "examples": [
+            "United States",
+            "United States",
+            "United States"
+          ]
+        }
+      ]
+    },
+    "Coverage": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 664,
+      "n_groups": 636,
+      "n_multi_groups": 25,
+      "n_groups_dropped": 472,
+      "n_groups_unused": 224,
+      "n_removed": 485,
+      "var_share_removed": 0.1355,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 258,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 3805.05,
+          "examples": [
+            "1929-2025",
+            "1933-2025",
+            "1931-2025"
+          ]
+        },
+        {
+          "group": 224,
+          "latents": [
+            1135
+          ],
+          "gain_margin": 3203.14,
+          "examples": [
+            "1966-2025",
+            "1966-2025",
+            "1966-2025"
+          ]
+        },
+        {
+          "group": 160,
+          "latents": [
+            1647
+          ],
+          "gain_margin": 2181.01,
+          "examples": [
+            "1959-1961, 1963-2025",
+            "1936-1937, 1958, 1961-2025",
+            "1961-2025"
+          ]
+        },
+        {
+          "group": 230,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1467.66,
+          "examples": [
+            "1879-2025",
+            "1891-2025",
+            "1894-2025"
+          ]
+        },
+        {
+          "group": 273,
+          "latents": [
+            204
+          ],
+          "gain_margin": 1296.63,
+          "examples": [
+            "1935-2025",
+            "1924-2025",
+            "1924-2025"
+          ]
+        }
+      ]
+    },
+    "Issn": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1295,
+      "n_groups": 1249,
+      "n_multi_groups": 42,
+      "n_groups_dropped": 926,
+      "n_groups_unused": 525,
+      "n_removed": 948,
+      "var_share_removed": 0.2192,
+      "var_share_sae_error": 0.0108,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            911,
+            1072,
+            1135
+          ],
+          "gain_margin": 5746.26,
+          "examples": [
+            "15320979, 01475185",
+            "15324265, 01900692",
+            "15363694, 01634356"
+          ]
+        },
+        {
+          "group": 34,
+          "latents": [
+            813,
+            1492,
+            1546
+          ],
+          "gain_margin": 1504.8,
+          "examples": [
+            "18238343",
+            "18022308",
+            "24223719, 20112173"
+          ]
+        },
+        {
+          "group": 309,
+          "latents": [
+            1787
+          ],
+          "gain_margin": 949.93,
+          "examples": [
+            "15206505, 10601538",
+            "02650517, 14692104",
+            "15316998, 10689508"
+          ]
+        },
+        {
+          "group": 604,
+          "latents": [
+            1547
+          ],
+          "gain_margin": 795.64,
+          "examples": [
+            "24223719, 20112173",
+            "25899791, 26663473",
+            "26395274, 20965168"
+          ]
+        },
+        {
+          "group": 130,
+          "latents": [
+            452,
+            1737
+          ],
+          "gain_margin": 682.99,
+          "examples": [
+            "20401116, 20401124",
+            "1300011X, 13036173",
+            "12301302"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1587,
+      "n_groups": 1586,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1373,
+      "n_groups_unused": 717,
+      "n_removed": 1373,
+      "var_share_removed": 0.3303,
+      "var_share_sae_error": 0.006,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            1135,
+            1209
+          ],
+          "gain_margin": 1848.9,
+          "examples": [
+            "American Diabetes Association Inc.",
+            "Royal Society of Chemistry",
+            "Royal Society of Chemistry"
+          ]
+        },
+        {
+          "group": 774,
+          "latents": [
+            911
+          ],
+          "gain_margin": 1164.4,
+          "examples": [
+            "Elsevier Inc.",
+            "Elsevier Inc.",
+            "Elsevier Inc."
+          ]
+        },
+        {
+          "group": 1568,
+          "latents": [
+            448
+          ],
+          "gain_margin": 1058.03,
+          "examples": [
+            "American Society for Cell Biology",
+            "American Society for Microbiology",
+            "American Society for Microbiology"
+          ]
+        },
+        {
+          "group": 379,
+          "latents": [
+            1787
+          ],
+          "gain_margin": 606.49,
+          "examples": [
+            "Lippincott Williams and Wilkins Ltd.",
+            "Lippincott Williams and Wilkins Ltd.",
+            "Lippincott Williams and Wilkins Ltd."
+          ]
+        },
+        {
+          "group": 1016,
+          "latents": [
+            51
+          ],
+          "gain_margin": 317.18,
+          "examples": [
+            "American Speech-Language-Hearing Association (ASHA)",
+            "Revista de Neurologia",
+            "Kon. Ned. Mij. ter Bevordering der Pharmacie (KNMP)"
+          ]
+        }
+      ]
+    },
+    "Ref  / Doc ": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 973,
+      "n_groups": 939,
+      "n_multi_groups": 31,
+      "n_groups_dropped": 703,
+      "n_groups_unused": 222,
+      "n_removed": 721,
+      "var_share_removed": 0.3851,
+      "var_share_sae_error": 0.0026,
+      "top": [
+        {
+          "group": 50,
+          "latents": [
+            1135,
+            1209
+          ],
+          "gain_margin": 661.97,
+          "examples": [
+            "71,66",
+            "71,96",
+            "89,57"
+          ]
+        },
+        {
+          "group": 425,
+          "latents": [
+            943
+          ],
+          "gain_margin": 325.59,
+          "examples": [
+            "71,96",
+            "71,95",
+            "71,93"
+          ]
+        },
+        {
+          "group": 291,
+          "latents": [
+            1785
+          ],
+          "gain_margin": 233.15,
+          "examples": [
+            "52,94",
+            "52,94",
+            "52,23"
+          ]
+        },
+        {
+          "group": 198,
+          "latents": [
+            1787
+          ],
+          "gain_margin": 186.57,
+          "examples": [
+            "91,12",
+            "91,67",
+            "91,03"
+          ]
+        },
+        {
+          "group": 334,
+          "latents": [
+            1494
+          ],
+          "gain_margin": 137.72,
+          "examples": [
+            "0,04",
+            "0,16",
+            "0,16"
+          ]
+        }
+      ]
+    },
+    "SJR": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 792,
+      "n_groups": 772,
+      "n_multi_groups": 20,
+      "n_groups_dropped": 589,
+      "n_groups_unused": 313,
+      "n_removed": 598,
+      "var_share_removed": 0.3236,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 600,
+          "latents": [
+            529
+          ],
+          "gain_margin": 3342.93,
+          "examples": [
+            "2,920",
+            "2,920",
+            "2,901"
+          ]
+        },
+        {
+          "group": 420,
+          "latents": [
+            448
+          ],
+          "gain_margin": 3086.45,
+          "examples": [
+            "13,877",
+            "7,305",
+            "30,506"
+          ]
+        },
+        {
+          "group": 8,
+          "latents": [
+            1982
+          ],
+          "gain_margin": 2035.97,
+          "examples": [
+            "3,177",
+            "3,100",
+            "3,168"
+          ]
+        },
+        {
+          "group": 543,
+          "latents": [
+            77
+          ],
+          "gain_margin": 1921.17,
+          "examples": [
+            "11,989",
+            "16,428",
+            "13,877"
+          ]
+        },
+        {
+          "group": 80,
+          "latents": [
+            1442
+          ],
+          "gain_margin": 1383.11,
+          "examples": [
+            "19,006",
+            "19,076",
+            "19,072"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1963,
+      "n_groups": 1956,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1531,
+      "n_groups_unused": 833,
+      "n_removed": 1531,
+      "var_share_removed": 0.273,
+      "var_share_sae_error": 0.0358,
+      "top": [
+        {
+          "group": 587,
+          "latents": [
+            911
+          ],
+          "gain_margin": 2104.72,
+          "examples": [
+            "Molecular Neurodegeneration",
+            "Molecules and Cells",
+            "Human Physiology"
+          ]
+        },
+        {
+          "group": 1949,
+          "latents": [
+            448
+          ],
+          "gain_margin": 865.61,
+          "examples": [
+            "Human Genomics",
+            "Cell Proliferation",
+            "Proteomics"
+          ]
+        },
+        {
+          "group": 783,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 546.05,
+          "examples": [
+            "Wiley Interdisciplinary Reviews: Nanomedicine and Nanobiotechnology",
+            "Wiley Interdisciplinary Reviews: Computational Statistics",
+            "Journal of Diabetes Nursing"
+          ]
+        },
+        {
+          "group": 1936,
+          "latents": [
+            305
+          ],
+          "gain_margin": 293.9,
+          "examples": [
+            "Reliability: Theory and Applications",
+            "Theory of Stochastic Processes",
+            "Fuzzy Optimization and Decision Making"
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            396,
+            530
+          ],
+          "gain_margin": 277.03,
+          "examples": [
+            "Ricerche di Storia dell Arte",
+            "Journal of Acquired Immune Deficiency Syndromes (1999)",
+            "Krakowskie Studia z Historii Panstwa i Prawa"
+          ]
+        }
+      ]
+    }
+  }
+}

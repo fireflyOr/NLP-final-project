@@ -1,0 +1,246 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.22251168155205,
+  "test_error": 3.22251168155205,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9053125440150227,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1305.943410873413,
+  "learner_params": null,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1909,
+      "n_groups": 1906,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 295,
+      "n_groups_unused": 0,
+      "n_removed": 178,
+      "var_share_removed": 0.0327,
+      "var_share_sae_error": 0.0389,
+      "top": [
+        {
+          "group": 381,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 4767.75,
+          "examples": [
+            "Abra Sua Cabe\u00e7a",
+            "De Cabe\u00e7a Pra Baixo",
+            "Minha Cabe\u00e7a"
+          ]
+        },
+        {
+          "group": 945,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 4329.96,
+          "examples": [
+            "Indios y Vaqueros",
+            "Mirando las nubes",
+            "Mirando las nubes"
+          ]
+        },
+        {
+          "group": 1078,
+          "latents": [
+            1402
+          ],
+          "gain_margin": 3108.53,
+          "examples": [
+            "Marky Ramone & Tequila Baby Ao Vivo",
+            "Galy Galiano 30 A\u00f1os",
+            "Serie 3X4 (Los Angeles Negros, Altemar Dutra, Carlos Lico)"
+          ]
+        },
+        {
+          "group": 499,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 3011.68,
+          "examples": [
+            "\u5149\u5e74\u4e4b\u5916 (\u96fb\u5f71 \u300aPassengers\u300b \u4e2d\u570b\u5340\u4e3b\u984c\u66f2)",
+            "\u99ac\u62c9\u7f8e\u7684\u661f\u671f\u4e8c",
+            "\u99ac\u62c9\u7f8e\u7684\u661f\u671f\u4e8c"
+          ]
+        },
+        {
+          "group": 949,
+          "latents": [
+            516
+          ],
+          "gain_margin": 2777.12,
+          "examples": [
+            "Lunas rotas",
+            "Voz Que Sana",
+            "Humanos"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1910,
+      "n_groups": 1910,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 87,
+      "n_groups_unused": 0,
+      "n_removed": 51,
+      "var_share_removed": 0.0108,
+      "var_share_sae_error": 0.0342,
+      "top": [
+        {
+          "group": 977,
+          "latents": [
+            1162
+          ],
+          "gain_margin": 5738.73,
+          "examples": [
+            "Carlos Gardel",
+            "Carlos Gardel",
+            "Carlos Gardel"
+          ]
+        },
+        {
+          "group": 220,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 4558.43,
+          "examples": [
+            "Luccas Carlos;Gee Rocha",
+            "Anuel AA;Romeo Santos",
+            "Projota;Dado Villa-Lobos"
+          ]
+        },
+        {
+          "group": 1846,
+          "latents": [
+            718
+          ],
+          "gain_margin": 4355.15,
+          "examples": [
+            "Feng Ze",
+            "Hins Cheung",
+            "Hins Cheung"
+          ]
+        },
+        {
+          "group": 200,
+          "latents": [
+            1689
+          ],
+          "gain_margin": 3840.19,
+          "examples": [
+            "Wooli;Trivecta;Scott Stapp",
+            "Seven Lions;Myon;Shane 54;Tove Lo",
+            "The Alchemist;Boldy James"
+          ]
+        },
+        {
+          "group": 427,
+          "latents": [
+            1838
+          ],
+          "gain_margin": 3113.87,
+          "examples": [
+            "Jo\u00e3o Penca E Seus Miquinhos Amestrados",
+            "Andr\u00e9 e Felipe;Rebeca Carvalho",
+            "So Preto Sem Preconceito"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1917,
+      "n_groups": 1913,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 385,
+      "n_groups_unused": 0,
+      "n_removed": 255,
+      "var_share_removed": 0.043,
+      "var_share_sae_error": 0.0459,
+      "top": [
+        {
+          "group": 364,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 5766.08,
+          "examples": [
+            "Favela Vive",
+            "Brasil",
+            "Favela Sorrir"
+          ]
+        },
+        {
+          "group": 477,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 4928.1,
+          "examples": [
+            "Indios y Vaqueros",
+            "Me Gustan las Navidades",
+            "Sucio Y Lento"
+          ]
+        },
+        {
+          "group": 471,
+          "latents": [
+            1402
+          ],
+          "gain_margin": 3893.22,
+          "examples": [
+            "Voc\u00ea S\u00f3 Me Faz Fel\u00edz",
+            "Antonios Stimme",
+            "Ser Perfeito"
+          ]
+        },
+        {
+          "group": 920,
+          "latents": [
+            577
+          ],
+          "gain_margin": 3672.54,
+          "examples": [
+            "Jigar Da Tukda",
+            "Son\u00edfera ilha",
+            "Ratno Da Haal Sunai"
+          ]
+        },
+        {
+          "group": 1900,
+          "latents": [
+            322
+          ],
+          "gain_margin": 3023.1,
+          "examples": [
+            "Teus Altares",
+            "Oliveira Verdadeira",
+            "Homem primata"
+          ]
+        }
+      ]
+    }
+  }
+}

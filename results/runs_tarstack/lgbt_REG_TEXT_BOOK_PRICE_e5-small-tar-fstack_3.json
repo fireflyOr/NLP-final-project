@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.22971835312995317,
+  "test_error": 0.22971835312995317,
+  "course_metric": "r2",
+  "course_score": 0.5198003187450835,
+  "n_text_cols": 5,
+  "n_text_features": 151,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 14.506043910980225,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": -1,
+    "colsample_bytree": 0.6,
+    "n_trees": 352
+  },
+  "diagnostics": {}
+}

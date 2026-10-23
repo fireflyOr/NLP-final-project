@@ -1,0 +1,472 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5497602905828408,
+  "test_error": 0.5497602905828408,
+  "course_metric": "r2",
+  "course_score": 0.43420584323580014,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 95.93057656288147,
+  "learner_params": null,
+  "diagnostics": {
+    "brand_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1067,
+      "n_groups": 1067,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 861,
+      "n_groups_unused": 197,
+      "n_removed": 861,
+      "var_share_removed": 0.5119,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 937,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3750.17,
+          "examples": [
+            "Tory Burch",
+            "Tory Burch",
+            "Tory Burch"
+          ]
+        },
+        {
+          "group": 1056,
+          "latents": [
+            204
+          ],
+          "gain_margin": 2618.22,
+          "examples": [
+            "Nikon",
+            "Nikon",
+            "Nikon"
+          ]
+        },
+        {
+          "group": 1040,
+          "latents": [
+            892
+          ],
+          "gain_margin": 948.03,
+          "examples": [
+            "David Yurman",
+            "Pampered Chef",
+            "Pampered Chef"
+          ]
+        },
+        {
+          "group": 79,
+          "latents": [
+            1865
+          ],
+          "gain_margin": 697.48,
+          "examples": [
+            "HTC",
+            "Fitbit",
+            "Fitbit"
+          ]
+        },
+        {
+          "group": 838,
+          "latents": [
+            111
+          ],
+          "gain_margin": 573.97,
+          "examples": [
+            "lululemon athletica",
+            "lululemon athletica",
+            "lululemon athletica"
+          ]
+        }
+      ]
+    },
+    "cat2": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 761,
+      "n_groups": 761,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 667,
+      "n_groups_unused": 54,
+      "n_removed": 667,
+      "var_share_removed": 0.5704,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 198,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 2052.77,
+          "examples": [
+            "Strollers",
+            "Strollers",
+            "Strollers"
+          ]
+        },
+        {
+          "group": 729,
+          "latents": [
+            305
+          ],
+          "gain_margin": 920.87,
+          "examples": [
+            "Cameras & Photography",
+            "Cameras & Photography",
+            "Cameras & Photography"
+          ]
+        },
+        {
+          "group": 126,
+          "latents": [
+            1790
+          ],
+          "gain_margin": 593.25,
+          "examples": [
+            "Footwear",
+            "Footwear",
+            "Cameras & Photography"
+          ]
+        },
+        {
+          "group": 715,
+          "latents": [
+            341
+          ],
+          "gain_margin": 483.85,
+          "examples": [
+            "Golf",
+            "Car Audio, Video & GPS",
+            "Car Audio, Video & GPS"
+          ]
+        },
+        {
+          "group": 170,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 422.2,
+          "examples": [
+            "Shoes",
+            "Shoes",
+            "Shoes"
+          ]
+        }
+      ]
+    },
+    "cat3": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1264,
+      "n_groups": 1264,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1035,
+      "n_groups_unused": 181,
+      "n_removed": 1035,
+      "var_share_removed": 0.4632,
+      "var_share_sae_error": 0.0018,
+      "top": [
+        {
+          "group": 1263,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2588.24,
+          "examples": [
+            "Microphones & Accessories",
+            "Microphones & Accessories",
+            "Desktops & All-In-Ones"
+          ]
+        },
+        {
+          "group": 576,
+          "latents": [
+            892
+          ],
+          "gain_margin": 1753.34,
+          "examples": [
+            "Shoulder Bag",
+            "Shoulder Bag",
+            "Shoulder Bag"
+          ]
+        },
+        {
+          "group": 168,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1634.29,
+          "examples": [
+            "Swings, Jumpers & Bouncers",
+            "Tennis & Racquets",
+            "Athletic"
+          ]
+        },
+        {
+          "group": 284,
+          "latents": [
+            1655
+          ],
+          "gain_margin": 1170.63,
+          "examples": [
+            "DVD & Blu-ray Players",
+            "Blu-Ray",
+            "Blu-Ray"
+          ]
+        },
+        {
+          "group": 625,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 1058.02,
+          "examples": [
+            "Jean Jacket",
+            "Jean Jacket",
+            "Jean Jacket"
+          ]
+        }
+      ]
+    },
+    "category_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1205,
+      "n_groups": 1202,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 962,
+      "n_groups_unused": 166,
+      "n_removed": 962,
+      "var_share_removed": 0.4154,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 1197,
+          "latents": [
+            305
+          ],
+          "gain_margin": 3817.06,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "group": 311,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 2577.54,
+          "examples": [
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody",
+            "Women/Women's Handbags/Messenger & Crossbody"
+          ]
+        },
+        {
+          "group": 480,
+          "latents": [
+            892
+          ],
+          "gain_margin": 954.51,
+          "examples": [
+            "Women/Coats & Jackets/Fleece Jacket",
+            "Women/Coats & Jackets/Fleece Jacket",
+            "Women/Coats & Jackets/Fleece Jacket"
+          ]
+        },
+        {
+          "group": 878,
+          "latents": [
+            559
+          ],
+          "gain_margin": 903.43,
+          "examples": [
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer",
+            "Women/Coats & Jackets/Puffer"
+          ]
+        },
+        {
+          "group": 710,
+          "latents": [
+            980
+          ],
+          "gain_margin": 769.28,
+          "examples": [
+            "Women/Coats & Jackets/Poncho",
+            "Vintage & Collectibles/Serving/Casserole",
+            "Women/Coats & Jackets/Fleece Jacket"
+          ]
+        }
+      ]
+    },
+    "item_description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2044,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1305,
+      "n_groups_unused": 281,
+      "n_removed": 1306,
+      "var_share_removed": 0.3144,
+      "var_share_sae_error": 0.0797,
+      "top": [
+        {
+          "group": 1134,
+          "latents": [
+            305
+          ],
+          "gain_margin": 8794.72,
+          "examples": [
+            "Air Jordan 11 (xi) size 9.5 black varsity red/white color way. These are brand new in box. Box was shipped previously and is NOT MINT, but shoes are perfect and",
+            "NWT Retails [rm] Comes with 2017 inserts In 2018 you can purchase 2018 inserts from Kate Spade",
+            "Kate Spade Cameron Street Candace Teal Satchel. Slightly used. Mint condition. Comes with dust bag. Wallet is sold separately. Bundle option available with disc"
+          ]
+        },
+        {
+          "group": 2014,
+          "latents": [
+            125
+          ],
+          "gain_margin": 4436.62,
+          "examples": [
+            "This listing is for any phrase 3\" height decal. I can make any size you need! See my other listings for additional sizes.",
+            "One little pen mark other than that in super great condition it can be folded over to be smaller or unzipped to be bigger",
+            "Drawstring under armour shorts."
+          ]
+        },
+        {
+          "group": 895,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1904.81,
+          "examples": [
+            "Stunning Dooney & Bourke Handbag 4\" W 11\"-L 7\"-H Priced to Sell Fast",
+            "Great condition authentic Dooney and Bourke handbag. Primary colors are brown and light brown. No signs of wear on the outside. On inside there are normal signs",
+            "The north face moondoggy reversible 550 down coat. Black & green. Euc, no flaws that I saw, he only wore it for a cpl months and now he's grown out of it and I'"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            753,
+            1581
+          ],
+          "gain_margin": 1252.05,
+          "examples": [
+            "3\"Heavy Duty spring Assisted knife. you will love this unique blade. Spring assisted, this stainless steel blade is three inches long. The handle has been desig",
+            "45 Pc Cursive Thank You Stickers 1 Roll Packaging Tape Standard shipping",
+            "2 x usb cable saver USB Data Charger Cable Saver Protector for iPhone 5c 5s 6 6s Plus iPad Protective Features: Covers the sensitive area where the charging cab"
+          ]
+        },
+        {
+          "group": 930,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 923.35,
+          "examples": [
+            "Original Xbox controller Pelican Xbox controller Both work.",
+            "About 7 months old has not been used very much at all comes with perfect working great condition drill with battery battery lasts literally forever does not com",
+            "Both in like new condition. These are offbrand but work perfectly fine. The remote also has motion plus built into it. These also work on the Wii U!"
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2042,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1174,
+      "n_groups_unused": 297,
+      "n_removed": 1175,
+      "var_share_removed": 0.2579,
+      "var_share_sae_error": 0.0607,
+      "top": [
+        {
+          "group": 1409,
+          "latents": [
+            305
+          ],
+          "gain_margin": 7452.14,
+          "examples": [
+            "Micheal kors authentic purse",
+            "Tory Burch small kerrington tote parfait",
+            "Michael Kors Jet Set (100% Authentic)"
+          ]
+        },
+        {
+          "group": 297,
+          "latents": [
+            1499
+          ],
+          "gain_margin": 6516.21,
+          "examples": [
+            "Washi Tape FREE SHIPPING",
+            "Adorable cat stickers",
+            "Free shipping Pokemon go vinyl decal"
+          ]
+        },
+        {
+          "group": 2041,
+          "latents": [
+            204
+          ],
+          "gain_margin": 3617.14,
+          "examples": [
+            "Rae Dunn Gobble Oval",
+            "Bumbo multi chair",
+            "Rae Dunn Christmas ovals"
+          ]
+        },
+        {
+          "group": 994,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 1690.14,
+          "examples": [
+            "KYLIE BROWN SUGAR, LOVE BITE, DOLCE K",
+            "Tory Burch A line stripe espadrille flat",
+            "Tory Burch Jelly Sandal"
+          ]
+        },
+        {
+          "group": 104,
+          "latents": [
+            1877
+          ],
+          "gain_margin": 890.37,
+          "examples": [
+            "Lily Grace Sticker",
+            "10 VS PINK STICKERS NEW",
+            "Doctor Who \"Bad Wolf\" Pin Button 1.25\"!"
+          ]
+        }
+      ]
+    }
+  }
+}

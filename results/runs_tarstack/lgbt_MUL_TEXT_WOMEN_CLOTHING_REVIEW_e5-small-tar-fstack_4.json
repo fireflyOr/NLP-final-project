@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6522710670912412,
+  "test_error": 0.6522710670912412,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9130528920659406,
+  "n_text_cols": 2,
+  "n_text_features": 65,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 24.573745012283325,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "colsample_bytree": 0.6,
+    "n_trees": 145
+  },
+  "diagnostics": {}
+}

@@ -1,0 +1,480 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7345544728448047,
+  "test_error": 0.7345544728448047,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8981101335364896,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 191.21654772758484,
+  "learner_params": null,
+  "diagnostics": {
+    "Address": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2031,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1039,
+      "n_groups_unused": 17,
+      "n_removed": 887,
+      "var_share_removed": 0.2933,
+      "var_share_sae_error": 0.0681,
+      "top": [
+        {
+          "group": 14,
+          "latents": [
+            750,
+            1271
+          ],
+          "gain_margin": 1798.89,
+          "examples": [
+            "65 Siming East Road, Siming, Xiamen, China Mainland",
+            "224-103 Lvling Road, Siming, Xiamen, China Mainland",
+            "3-102 Dayuan Road, Siming, Xiamen, China Mainland"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1502,
+            1652,
+            1904
+          ],
+          "gain_margin": 709.39,
+          "examples": [
+            "GF, MGM Macau, Avenida Dr. Sun Yat Sen, NAPE, Macau, Macau",
+            "Josef von Eichendorff-Str. 5, Salzburg, 5020, Austria",
+            "Am Olympiapark 1, Munich, 80809, Germany"
+          ]
+        },
+        {
+          "group": 2015,
+          "latents": [
+            219
+          ],
+          "gain_margin": 336.59,
+          "examples": [
+            "Mercure ICON Hotel, #01-08, 8 Club Street, 069472, Singapore",
+            "Four Seasons Hotel Gresham Palace, Sz\u00e9chenyi Istv\u00e1n t\u00e9r 5, Budapest, 1051, Hungary",
+            "8F, Four Seasons Hotel at Hangzhou Center, 493 Zhongshan North Road, Gongshu, Hangzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 498,
+          "latents": [
+            1745
+          ],
+          "gain_margin": 213.41,
+          "examples": [
+            "The Radical Asheville, Tapestry Collection by Hilton, 95 Roberts St., Asheville, NC, 28801, USA",
+            "Hilton West Palm Beach, 600 Okeechobee Blvd., West Palm Beach, FL, 33401, USA",
+            "35F Lotte Hotel, 30 Eulji-ro, Jung-gu, Seoul, 04533, South Korea"
+          ]
+        },
+        {
+          "group": 338,
+          "latents": [
+            1861
+          ],
+          "gain_margin": 196.68,
+          "examples": [
+            "149 Dong Street, Licheng, Quanzhou, China Mainland",
+            "242 Yinghua Street, Xiaogang Bay, Haizhu, Guangzhou, China Mainland",
+            "Shop 103, 172 Zhoumen Street, Liwan, Guangzhou, China Mainland"
+          ]
+        }
+      ]
+    },
+    "Cuisine": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1165,
+      "n_groups": 1163,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1011,
+      "n_groups_unused": 36,
+      "n_removed": 856,
+      "var_share_removed": 0.5617,
+      "var_share_sae_error": 0.0018,
+      "top": [
+        {
+          "group": 221,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 2303.59,
+          "examples": [
+            "Dwaeji-gukbap",
+            "Dwaeji-gukbap",
+            "Seolleongtang"
+          ]
+        },
+        {
+          "group": 917,
+          "latents": [
+            249
+          ],
+          "gain_margin": 2004.74,
+          "examples": [
+            "Creative, Austrian",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1152,
+          "latents": [
+            563
+          ],
+          "gain_margin": 1434.73,
+          "examples": [
+            "Street Food, Pa Thong Ko",
+            "Malaysian, Californian",
+            "Noodles and Congee"
+          ]
+        },
+        {
+          "group": 527,
+          "latents": [
+            1502
+          ],
+          "gain_margin": 942.79,
+          "examples": [
+            "Creative, Scandinavian",
+            "Creative, Innovative",
+            "Creative, Innovative"
+          ]
+        },
+        {
+          "group": 1143,
+          "latents": [
+            950
+          ],
+          "gain_margin": 771.4,
+          "examples": [
+            "Campanian, Creative",
+            "Creative, Classic Cuisine",
+            "Creative, Classic Cuisine"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2042,
+      "n_groups": 2036,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 946,
+      "n_groups_unused": 29,
+      "n_removed": 554,
+      "var_share_removed": 0.1922,
+      "var_share_sae_error": 0.0845,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            764,
+            950,
+            1502
+          ],
+          "gain_margin": 21310.57,
+          "examples": [
+            "Once you have made your way up the driveway, you are welcomed by the hostess with a drink. You then walk through the neat kitchen garden and, finally, enter the",
+            "2027 will mark forty years of business: a story made up of aromas, flavours and traditions, the story of the Portinari family, who have carved their name among ",
+            "A meal by Gert De Mangeleer and sommelier Joachim Bouden is in a class of its own, starting with the swish Botanic Sanctuary Hotel, which immerses you in a worl"
+          ]
+        },
+        {
+          "group": 888,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 6604.44,
+          "examples": [
+            "The owner-chef, who used to work in a famous restaurant, uses traditional techniques to make noodle soups and assorted toppings, each boasting a substantially d",
+            "Queues form daily in front of this popular restaurant. The earthen wall made by a plasterer and counter seating with wooden trays are typical of neighbourhood J",
+            "Late Mr Yang\u2019s first Taiwanese shop opened in 1958 has morphed into a multinational chain with branches all over the world. Although famous for its good service"
+          ]
+        },
+        {
+          "group": 2024,
+          "latents": [
+            378
+          ],
+          "gain_margin": 2989.9,
+          "examples": [
+            "This gem of a place serves fresh seafood with Thai flavours, featuring house-made curry and chilli paste. Order in advance or call to check availability. Try th",
+            "This no-frills shop may not be eye candy, but its Thai street food is enough to make food lovers return again and again, overlooking its lack of ambience. With ",
+            "Soft, crispy, non-oily roti emerge from a huge charcoal pan. At this 70-year-old Halal breakfast spot, they're shaped, fried and served in the blink of an eye a"
+          ]
+        },
+        {
+          "group": 2031,
+          "latents": [
+            885
+          ],
+          "gain_margin": 2437.55,
+          "examples": [
+            "This wildly popular Chinatown spot is still packed to the gills most days, and for good reason: the made-to-order dim sum and Cantonese fare remain consistently",
+            "This family bistro overflows in good humour, as Jelle in the kitchen and Magali in the dining room are still regularly helped out by the restaurant\u2019s founders, ",
+            "\"Briemm\" is a contraction of Brice and Emmanuelle, who have partnered up (in business and in life) to found this dinky eatery in a lovely stone-built house, whi"
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            219
+          ],
+          "gain_margin": 1738.83,
+          "examples": [
+            "Located within the Suites del Lago hotel (Lago Resort Menorca), where award-winning chef Juli\u00e1n M\u00e1rmol conjures up exquisite Japanese-Menorcan cuisine. The terr",
+            "Housed within the Chapter Hotel and designed by South African designer Tristan Du Plessis, this restaurant is conceived as a nighttime place with a dark atmosph",
+            "Housed within the enchanting Byblos Art Hotel, Amist\u00e0 reflects the colorful, dreamlike world of the villa itself, where the historical and the contemporary coex"
+          ]
+        }
+      ]
+    },
+    "FacilitiesAndServices": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 677,
+      "n_groups": 664,
+      "n_multi_groups": 13,
+      "n_groups_dropped": 600,
+      "n_groups_unused": 13,
+      "n_removed": 462,
+      "var_share_removed": 0.6152,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 510,
+          "latents": [
+            950
+          ],
+          "gain_margin": 1440.92,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Valet parking,Wheelchair access"
+          ]
+        },
+        {
+          "group": 632,
+          "latents": [
+            521
+          ],
+          "gain_margin": 1141.42,
+          "examples": [
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 600,
+          "latents": [
+            249
+          ],
+          "gain_margin": 826.79,
+          "examples": [
+            "Air conditioning,Great view,Interesting wine list",
+            "Air conditioning,Great view,Interesting wine list",
+            "Air conditioning,Great view,Interesting wine list"
+          ]
+        },
+        {
+          "group": 177,
+          "latents": [
+            1360
+          ],
+          "gain_margin": 665.94,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        },
+        {
+          "group": 282,
+          "latents": [
+            1257
+          ],
+          "gain_margin": 614.17,
+          "examples": [
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Valet parking,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access",
+            "Air conditioning,Car park,Garden or park,Great view,Interesting wine list,Wheelchair access"
+          ]
+        }
+      ]
+    },
+    "Location": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1933,
+      "n_groups": 1933,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1433,
+      "n_groups_unused": 29,
+      "n_removed": 1483,
+      "var_share_removed": 0.6809,
+      "var_share_sae_error": 0.0109,
+      "top": [
+        {
+          "group": 1838,
+          "latents": [
+            950
+          ],
+          "gain_margin": 161.8,
+          "examples": [
+            "Villeneuve-le-Comte, France",
+            "Ja\u00e9n, Spain",
+            "Ja\u00e9n, Spain"
+          ]
+        },
+        {
+          "group": 939,
+          "latents": [
+            1412
+          ],
+          "gain_margin": 145.4,
+          "examples": [
+            "Suzhou, China Mainland",
+            "Suzhou, China Mainland",
+            "Suzhou, China Mainland"
+          ]
+        },
+        {
+          "group": 960,
+          "latents": [
+            1147
+          ],
+          "gain_margin": 120.68,
+          "examples": [
+            "Baudour, Belgium",
+            "Baudour, Belgium",
+            "Lochristi, Belgium"
+          ]
+        },
+        {
+          "group": 735,
+          "latents": [
+            1512
+          ],
+          "gain_margin": 120.56,
+          "examples": [
+            "Chiang Mai, Thailand",
+            "Chiang Mai, Thailand",
+            "Chiang Mai, Thailand"
+          ]
+        },
+        {
+          "group": 379,
+          "latents": [
+            1545
+          ],
+          "gain_margin": 110.13,
+          "examples": [
+            "Levizzano Rangone, Italy",
+            "Pagazzano, Italy",
+            "Bettolle, Italy"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2043,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 996,
+      "n_groups_unused": 4,
+      "n_removed": 841,
+      "var_share_removed": 0.304,
+      "var_share_sae_error": 0.0951,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            750,
+            1271,
+            1641
+          ],
+          "gain_margin": 1833.98,
+          "examples": [
+            "Xing Yun Hainanese Boneless Chicken Rice",
+            "Zhi Wei Xian Zion Road Big Prawn Noodle",
+            "Lai Foong Lala Noodles"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            249,
+            1502,
+            1814
+          ],
+          "gain_margin": 746.09,
+          "examples": [
+            "Leos by Stephan Brandl",
+            "Thierry Schwartz - Table Naturelle",
+            "Martin G\u00f6schel"
+          ]
+        },
+        {
+          "group": 1738,
+          "latents": [
+            1406
+          ],
+          "gain_margin": 258.48,
+          "examples": [
+            "Henri Restaurant",
+            "Albert 1er",
+            "Alain Ducasse at Morpheus"
+          ]
+        },
+        {
+          "group": 103,
+          "latents": [
+            1914
+          ],
+          "gain_margin": 224.35,
+          "examples": [
+            "Au C\u0153ur d'Artichaut",
+            "Le Castellane - Ch\u00e2teau Le Prieur\u00e9",
+            "Anne-Sophie Pic at Le Normandie"
+          ]
+        },
+        {
+          "group": 2041,
+          "latents": [
+            473
+          ],
+          "gain_margin": 209.87,
+          "examples": [
+            "Member",
+            "\u00d1",
+            "O"
+          ]
+        }
+      ]
+    }
+  }
+}

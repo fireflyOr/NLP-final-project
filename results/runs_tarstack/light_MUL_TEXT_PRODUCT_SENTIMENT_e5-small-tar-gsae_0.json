@@ -1,0 +1,96 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.553170562845834,
+  "test_error": 0.553170562845834,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8765565646594049,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 17.159574508666992,
+  "learner_params": null,
+  "diagnostics": {
+    "Product_Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1441,
+      "n_groups": 1441,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 732,
+      "n_groups_unused": 53,
+      "n_removed": 732,
+      "var_share_removed": 0.2084,
+      "var_share_sae_error": 0.0123,
+      "top": [
+        {
+          "group": 1439,
+          "latents": [
+            668
+          ],
+          "gain_margin": 1356.31,
+          "examples": [
+            "My tweets are stalled. Data sluggish. Come on AT&amp;T, Verizon is embarrassing iPhone customers who haven't switched. #SXSW #iPhone",
+            "There at not even words for how much the wireless at #SXSW sucks.  Thank goodness for my iPhone.",
+            "Tech Check podcast -- South By Southwest, Android passes BlackBerry, a big Twitter fail -- {link} #sxsw #cnn"
+          ]
+        },
+        {
+          "group": 1437,
+          "latents": [
+            878
+          ],
+          "gain_margin": 1183.56,
+          "examples": [
+            "RT @mention Google maps for mobile 5.2 looks awesome.#sxsw",
+            "amazing the amount of app updates on my ipad today for the kick off of #sxsw",
+            "AWESOME!! ipad 2 jailbreak!! {link} Grateful Dead #fab5 #sxsw"
+          ]
+        },
+        {
+          "group": 1425,
+          "latents": [
+            1002
+          ],
+          "gain_margin": 1111.11,
+          "examples": [
+            "So Annoyed with #SXSW schedule app that has bad #ui for iPad. My fingers ain't THAT fat, y'all.",
+            "This double buzzing issue with iPhone iOS 4.3 is getting annoying. In other news, an iPhone may fly across the room at #GR2L2 #SXSW",
+            "My tweets are stalled. Data sluggish. Come on AT&amp;T, Verizon is embarrassing iPhone customers who haven't switched. #SXSW #iPhone"
+          ]
+        },
+        {
+          "group": 229,
+          "latents": [
+            1565
+          ],
+          "gain_margin": 1094.74,
+          "examples": [
+            "It's not all Apple love here at #sxsw. Heard quite a bit of grumbling about holding back features on iPad 1 so people would have to buy v2.",
+            "kinda jealous of the ubiquity of ipad's here...#sxsw",
+            "iPad design malady: iPad Elbow - I hate the iPad's back button with the heat of a million suns. #tapworthy #sxsw"
+          ]
+        },
+        {
+          "group": 716,
+          "latents": [
+            1520
+          ],
+          "gain_margin": 883.76,
+          "examples": [
+            "BEST newly added iPhone app goes to @mention awesome!! #SXSW 2011 here I come for one day and one amazing day it will be!!",
+            "Apple setting up a temporary store at #SXSW to sell the #iPad2. Crazy? Brilliant? Convenient? {link}  #apple #news #SXSWi",
+            "More #SXSW Awesomeness! Apple is opening up a temporary store in downtown Austin for #SXSW and the iPad 2 launch {link}"
+          ]
+        }
+      ]
+    }
+  }
+}

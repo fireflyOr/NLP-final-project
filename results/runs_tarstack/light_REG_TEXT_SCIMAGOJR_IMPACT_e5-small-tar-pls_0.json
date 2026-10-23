@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "e5-small-tar-pls",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -21.383999209651037,
+  "test_error": 21.383999209651037,
+  "course_metric": "r2",
+  "course_score": 0.8442168510146018,
+  "n_text_cols": 10,
+  "n_text_features": 300,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 7.329506158828735,
+  "learner_params": null,
+  "diagnostics": {}
+}

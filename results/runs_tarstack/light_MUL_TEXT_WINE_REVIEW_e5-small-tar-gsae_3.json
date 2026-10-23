@@ -1,0 +1,173 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2749123814268692,
+  "test_error": 1.2749123814268692,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9734797590631048,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 194.2342700958252,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1445,
+      "n_groups": 1431,
+      "n_multi_groups": 14,
+      "n_groups_dropped": 204,
+      "n_groups_unused": 0,
+      "n_removed": 204,
+      "var_share_removed": 0.0093,
+      "var_share_sae_error": 0.0256,
+      "top": [
+        {
+          "group": 613,
+          "latents": [
+            1795
+          ],
+          "gain_margin": 12381.56,
+          "examples": [
+            "Fragrant and floral, this bright wine would pair well with fried seafood or baked Mediterranean fish. Honey and peach blossom notes lead to a crisp, easy mouthf",
+            "Dusty mineral complexities juxtapose luscious melon, peach and Mandarin orange flavors in this dry-style blend of Gew\u00fcrztraminer and Riesling. Perfumed on the n",
+            "Nutty and pomaceous on the nose, this blend of Riesling, Grenache Blanc and Gew\u00fcrztraminer has a slightly sweet, slinky palate that makes it easy to imbibe."
+          ]
+        },
+        {
+          "group": 1,
+          "latents": [
+            20,
+            1444
+          ],
+          "gain_margin": 9389.08,
+          "examples": [
+            "This is a powerful wine, although it wears its density easily. There is a streak of acidity that gives the wine its juicy, attractive character. Black fruits an",
+            "This highly perfumed wine comes from a small Gamay appellation that is in fact in the M\u00e2con region. With some tight tannins and rich black fruits, it is a ripe,",
+            "A weighty wine that has black fruits, solid tannins and richness. It has a dense layer of spice and fruit that has acidity as well as juiciness. Worth aging for"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            694,
+            821
+          ],
+          "gain_margin": 8625.92,
+          "examples": [
+            "It's all about oak in this Chardonnnay. Not much going on beyond the obvious attempt at flattery with buttered toast and vanilla flavors. Maybe a little peach a",
+            "This wine shows everything that Chardonnay lovers want. It's enormously rich and ripe in mango, pineapple, orange and peach flavors, enriched with sweet new oak",
+            "This smooth and supple Chardonnay from northeast Italy boasts steadfast intensity and pretty aromas of citrus blossom, peach, honey and a touch of fresh vanilla"
+          ]
+        },
+        {
+          "group": 1405,
+          "latents": [
+            88
+          ],
+          "gain_margin": 8368.17,
+          "examples": [
+            "Vigna La Rosa is always among Fontanafredda's best performing wines and this vintage will appeal to those who enjoy a riper, fuller style of Barolo. There are m",
+            "You'll love that extra fruity richness that this beautiful Barolo from the warm 2007 vintage proudly puts on display. Black fruit and plum is backed by licorice",
+            "Albino Rocca's Barbaresco Ronchi boasts lovely violet and sage aromas sprinkled with coffee and espresso notes. The palate shows creamy red fruit layered with c"
+          ]
+        },
+        {
+          "group": 1395,
+          "latents": [
+            15
+          ],
+          "gain_margin": 8290.84,
+          "examples": [
+            "This wine from the pioneering producer deep in the Santa Maria Valley shows sweet cedar, chopped herbs, mocha, licorice, cherry and red berry juice on the nose.",
+            "This wine's aromas suggest woodspice, herb, parsley, cherry and smoke. Its cherry and coffee flavors are light in style and cut short on the finish.",
+            "Fresh smoke from your grandpa's pipe swirls with aromas of cherry pie and cinnamon-vanilla cream on this wine named after the year Mission San Luis Obispo de To"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 732,
+      "n_groups": 732,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 611,
+      "n_groups_unused": 0,
+      "n_removed": 611,
+      "var_share_removed": 0.5318,
+      "var_share_sae_error": 0.0018,
+      "top": [
+        {
+          "group": 177,
+          "latents": [
+            1606
+          ],
+          "gain_margin": 3942.26,
+          "examples": [
+            "Italy Other",
+            "Tuscany",
+            "Tuscany"
+          ]
+        },
+        {
+          "group": 409,
+          "latents": [
+            166
+          ],
+          "gain_margin": 3112.42,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 261,
+          "latents": [
+            1280
+          ],
+          "gain_margin": 2563.87,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 516,
+          "latents": [
+            87
+          ],
+          "gain_margin": 2553.12,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 347,
+          "latents": [
+            918
+          ],
+          "gain_margin": 2440.16,
+          "examples": [
+            "Beira Interior",
+            "Beira Interior",
+            "Alentejo"
+          ]
+        }
+      ]
+    }
+  }
+}

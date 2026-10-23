@@ -1,0 +1,175 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9185513632685741,
+  "test_error": 0.08144863673142588,
+  "course_metric": "auroc",
+  "course_score": 0.9185513632685742,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 32.66565823554993,
+  "learner_params": null,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2044,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1451,
+      "n_groups_unused": 287,
+      "n_removed": 1275,
+      "var_share_removed": 0.3037,
+      "var_share_sae_error": 0.1027,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            227,
+            315
+          ],
+          "gain_margin": 11041.29,
+          "examples": [
+            "you are the stupid one loser, they are not trying to bring peace to the terrorist in Afghanistan, they are trying to eliminate them for the sake of the world!",
+            "LOL at all the low-info that voted for this stupid game show host.\n\n\nYou. Got. Conned.",
+            "His dumb ads to stupid to realize that colorado was part of Mexico for a long time so some  Hispanic can trace their roots to back then.i doubt your redkneck tr"
+          ]
+        },
+        {
+          "group": 62,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 1937.4,
+          "examples": [
+            "obama is a fool",
+            "Obama was a fool",
+            "Trump is an idiot."
+          ]
+        },
+        {
+          "group": 508,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 1644.83,
+          "examples": [
+            "Remember how this orange clown wrote a series of Tweets telling Obama to stay out of Syria, and not attack Assad.  Now, he's attacking Assad. ... But I am sure ",
+            "Surprise surprise, John Elway is a spineless coward who is terrified of calling out his White Supremacist clown in the White House. Hopefully more Broncos conti",
+            "I don't believe a thing this guy says - who the heck takes his pregnant wife hiking in Afghanistan?  \n\nBut as long as he doesn't get any of my hard earned tax d"
+          ]
+        },
+        {
+          "group": 249,
+          "latents": [
+            1869
+          ],
+          "gain_margin": 1323.3,
+          "examples": [
+            "Mr. Sessions is clearly upset that his friendship with Mr. Trump is causing him so much embarrassment. Clearly he forgot the biblical injunction against lying d",
+            "There is bribe written all over this. We were told when EWEB initially bribed the city for permission to foul this buffer lane that eventual hyper-development w",
+            "the SWAMP  is getting worried.  The more Trump is despised more scum(Weinstein, Oreilly, clinton)  floats to the top,"
+          ]
+        },
+        {
+          "group": 1635,
+          "latents": [
+            510
+          ],
+          "gain_margin": 983.85,
+          "examples": [
+            "Dumb and Dumber !\nKeep voting for the (D)onkeys and NOTHING will ever change.",
+            "LOL at all the low-info that voted for this stupid game show host.\n\n\nYou. Got. Conned.",
+            "wtf are you talking about are you really that stupid?"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 681,
+      "n_groups": 619,
+      "n_multi_groups": 55,
+      "n_groups_dropped": 437,
+      "n_groups_unused": 152,
+      "n_removed": 413,
+      "var_share_removed": 0.534,
+      "var_share_sae_error": 0.0172,
+      "top": [
+        {
+          "group": 106,
+          "latents": [
+            1392
+          ],
+          "gain_margin": 172.33,
+          "examples": [
+            "2017-09-27 04:22:04.444332",
+            "2017-09-22 04:36:04.121650",
+            "2017-08-04 23:50:04.360119"
+          ]
+        },
+        {
+          "group": 354,
+          "latents": [
+            846
+          ],
+          "gain_margin": 125.69,
+          "examples": [
+            "2017-10-11 21:32:00.239250",
+            "2017-10-11 23:57:30.548183",
+            "2017-10-11 02:46:25.848418"
+          ]
+        },
+        {
+          "group": 113,
+          "latents": [
+            942,
+            1757
+          ],
+          "gain_margin": 117.07,
+          "examples": [
+            "2017-10-23 14:32:12.877250",
+            "2017-02-16 20:06:07.877382",
+            "2017-01-26 01:45:45.874602"
+          ]
+        },
+        {
+          "group": 68,
+          "latents": [
+            296,
+            954,
+            1579
+          ],
+          "gain_margin": 96.76,
+          "examples": [
+            "2017-09-18 14:55:06.752518",
+            "2017-02-18 22:04:47.993018",
+            "2017-08-11 23:37:57.201818"
+          ]
+        },
+        {
+          "group": 485,
+          "latents": [
+            402
+          ],
+          "gain_margin": 95.99,
+          "examples": [
+            "2017-06-30 16:00:53.022980",
+            "2017-06-23 13:00:30.540518",
+            "2016-06-23 16:45:00.062991"
+          ]
+        }
+      ]
+    }
+  }
+}

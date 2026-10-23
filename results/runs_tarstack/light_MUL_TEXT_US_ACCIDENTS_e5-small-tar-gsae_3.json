@@ -1,0 +1,706 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.26194714755870424,
+  "test_error": 0.26194714755870424,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9767249388731625,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 243.96847462654114,
+  "learner_params": null,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1679,
+      "n_groups": 1679,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1254,
+      "n_groups_unused": 68,
+      "n_removed": 1254,
+      "var_share_removed": 0.6338,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 16,
+          "latents": [
+            1996
+          ],
+          "gain_margin": 133.29,
+          "examples": [
+            "KATL",
+            "KATL",
+            "KATL"
+          ]
+        },
+        {
+          "group": 1443,
+          "latents": [
+            575
+          ],
+          "gain_margin": 105.75,
+          "examples": [
+            "KZPH",
+            "KZPH",
+            "KZPH"
+          ]
+        },
+        {
+          "group": 1419,
+          "latents": [
+            570
+          ],
+          "gain_margin": 80.22,
+          "examples": [
+            "KART",
+            "KNUQ",
+            "KNUQ"
+          ]
+        },
+        {
+          "group": 781,
+          "latents": [
+            1666
+          ],
+          "gain_margin": 70.37,
+          "examples": [
+            "KOUN",
+            "KOUN",
+            "KOUN"
+          ]
+        },
+        {
+          "group": 1589,
+          "latents": [
+            1165
+          ],
+          "gain_margin": 65.12,
+          "examples": [
+            "KADU",
+            "KAAT",
+            "KATT"
+          ]
+        }
+      ]
+    },
+    "City": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1907,
+      "n_groups": 1907,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1301,
+      "n_groups_unused": 65,
+      "n_removed": 1301,
+      "var_share_removed": 0.5956,
+      "var_share_sae_error": 0.0049,
+      "top": [
+        {
+          "group": 1657,
+          "latents": [
+            539
+          ],
+          "gain_margin": 262.06,
+          "examples": [
+            "North Hollywood",
+            "North Hollywood",
+            "North Hollywood"
+          ]
+        },
+        {
+          "group": 1534,
+          "latents": [
+            683
+          ],
+          "gain_margin": 197.57,
+          "examples": [
+            "View Park",
+            "View Park",
+            "Manlius"
+          ]
+        },
+        {
+          "group": 1706,
+          "latents": [
+            59
+          ],
+          "gain_margin": 175.12,
+          "examples": [
+            "Fairfax",
+            "Fairfax",
+            "Fairfax"
+          ]
+        },
+        {
+          "group": 1490,
+          "latents": [
+            538
+          ],
+          "gain_margin": 146.19,
+          "examples": [
+            "Posen",
+            "Posen",
+            "Louisville"
+          ]
+        },
+        {
+          "group": 568,
+          "latents": [
+            1516
+          ],
+          "gain_margin": 131.84,
+          "examples": [
+            "Lawrence",
+            "Fort Worth",
+            "Fort Worth"
+          ]
+        }
+      ]
+    },
+    "County": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1476,
+      "n_groups": 1476,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1117,
+      "n_groups_unused": 50,
+      "n_removed": 1117,
+      "var_share_removed": 0.6167,
+      "var_share_sae_error": 0.0019,
+      "top": [
+        {
+          "group": 99,
+          "latents": [
+            1925
+          ],
+          "gain_margin": 197.86,
+          "examples": [
+            "Macon",
+            "Macon",
+            "Macon"
+          ]
+        },
+        {
+          "group": 1423,
+          "latents": [
+            539
+          ],
+          "gain_margin": 151.96,
+          "examples": [
+            "Clarke",
+            "St. Clair",
+            "St. Clair"
+          ]
+        },
+        {
+          "group": 1038,
+          "latents": [
+            589
+          ],
+          "gain_margin": 140.43,
+          "examples": [
+            "Macon",
+            "Macon",
+            "Macon"
+          ]
+        },
+        {
+          "group": 953,
+          "latents": [
+            535
+          ],
+          "gain_margin": 104.98,
+          "examples": [
+            "El Paso",
+            "El Paso",
+            "El Paso"
+          ]
+        },
+        {
+          "group": 531,
+          "latents": [
+            1136
+          ],
+          "gain_margin": 78.78,
+          "examples": [
+            "Henrico",
+            "Henrico",
+            "Henrico"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1685,
+      "n_groups": 1673,
+      "n_multi_groups": 11,
+      "n_groups_dropped": 1178,
+      "n_groups_unused": 176,
+      "n_removed": 1184,
+      "var_share_removed": 0.1422,
+      "var_share_sae_error": 0.0224,
+      "top": [
+        {
+          "group": 6,
+          "latents": [
+            219,
+            430
+          ],
+          "gain_margin": 17004.72,
+          "examples": [
+            "Left hand shoulder blocked due to crash on I-680 Northbound after Toll Plaza.",
+            "Right hand shoulder blocked due to crash on I-90 Westbound between Exit 180 / OH-283 and Exit 176 / Martin Luther King Jr Dr.",
+            "Left lane blocked and left hand shoulder blocked due to crash on I-24 Eastbound at Exit 48 US-31E James Robertson Pkwy."
+          ]
+        },
+        {
+          "group": 831,
+          "latents": [
+            732
+          ],
+          "gain_margin": 7735.03,
+          "examples": [
+            "Right lane blocked due to accident on I-405 Northbound after WA-181 Valley Hwy.",
+            "#1 lane closed due to accident on I-405 Southbound at Exit 42B Inglewood Ave.",
+            "Lane closed due to accident on I-72 Westbound at Exit 46 IL-100."
+          ]
+        },
+        {
+          "group": 811,
+          "latents": [
+            1307
+          ],
+          "gain_margin": 6487.34,
+          "examples": [
+            "Left lane blocked due to accident on I-96 Westbound before Exits 1A 1B US-31 Exits 110A 110B.",
+            "Left lane blocked due to accident on I-95 Northbound between Exit 17 CT-33 Saugatuck Ave and Exit 18 Sherwood Island Connector.",
+            "Accident on I-95 Cross Bronx Expy Northbound at Exit 4B Rosedale Ave."
+          ]
+        },
+        {
+          "group": 1638,
+          "latents": [
+            816
+          ],
+          "gain_margin": 3360.22,
+          "examples": [
+            "Closed at Constitution Ave - Road closed due to accident.",
+            "Closed at Terminal Ave/Exit 7 - Road closed due to accident.",
+            "Closed between Lawrence Ave and Montrose Ave - Road closed due to accident."
+          ]
+        },
+        {
+          "group": 1010,
+          "latents": [
+            1435
+          ],
+          "gain_margin": 3261.72,
+          "examples": [
+            "Left lane blocked due to accident on I-75 Southbound between Exit 318 US-41 Wall St and Exit 317 GA-225.",
+            "Entry ramp to I-90 Eastbound from Highway 26 Westbound closed due to accident semi and barrier involved and fuel spillage.",
+            "Right lane closed due to accident on I-495 Capital Beltway Southbound at George Washington Memorial Pkwy."
+          ]
+        }
+      ]
+    },
+    "End_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 526,
+      "n_groups": 472,
+      "n_multi_groups": 44,
+      "n_groups_dropped": 306,
+      "n_groups_unused": 22,
+      "n_removed": 334,
+      "var_share_removed": 0.2191,
+      "var_share_sae_error": 0.0032,
+      "top": [
+        {
+          "group": 351,
+          "latents": [
+            1340
+          ],
+          "gain_margin": 1127.68,
+          "examples": [
+            "2019-10-14 10:19:24",
+            "2019-10-15 18:18:17",
+            "2019-07-05 17:10:27"
+          ]
+        },
+        {
+          "group": 252,
+          "latents": [
+            752
+          ],
+          "gain_margin": 693.9,
+          "examples": [
+            "2017-11-02 08:00:00",
+            "2017-02-06 08:00:09",
+            "2017-09-01 12:10:00"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            80,
+            1050
+          ],
+          "gain_margin": 658.21,
+          "examples": [
+            "2020-05-08 07:45:51",
+            "2020-05-06 16:52:09",
+            "2020-05-08 19:49:16"
+          ]
+        },
+        {
+          "group": 50,
+          "latents": [
+            1973
+          ],
+          "gain_margin": 574.05,
+          "examples": [
+            "2020-07-03 20:27:37",
+            "2020-01-09 18:31:07",
+            "2020-01-05 20:58:37"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            967,
+            1130,
+            1991
+          ],
+          "gain_margin": 572.55,
+          "examples": [
+            "2022-12-14 09:00:00",
+            "2022-11-10 13:01:00",
+            "2022-09-13 11:30:00"
+          ]
+        }
+      ]
+    },
+    "Start_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 590,
+      "n_groups": 524,
+      "n_multi_groups": 49,
+      "n_groups_dropped": 343,
+      "n_groups_unused": 29,
+      "n_removed": 382,
+      "var_share_removed": 0.2393,
+      "var_share_sae_error": 0.0032,
+      "top": [
+        {
+          "group": 26,
+          "latents": [
+            199,
+            1130
+          ],
+          "gain_margin": 1547.1,
+          "examples": [
+            "2022-10-06 02:55:00",
+            "2022-10-10 18:34:00",
+            "2022-10-14 08:04:00"
+          ]
+        },
+        {
+          "group": 18,
+          "latents": [
+            219,
+            220,
+            430,
+            1050
+          ],
+          "gain_margin": 1233.61,
+          "examples": [
+            "2020-06-15 06:55:45",
+            "2020-06-02 16:02:05",
+            "2020-06-05 08:08:04"
+          ]
+        },
+        {
+          "group": 353,
+          "latents": [
+            330
+          ],
+          "gain_margin": 1185.55,
+          "examples": [
+            "2019-03-22 14:40:40",
+            "2019-01-22 16:38:42",
+            "2020-02-27 17:40:48"
+          ]
+        },
+        {
+          "group": 416,
+          "latents": [
+            1340
+          ],
+          "gain_margin": 1060.49,
+          "examples": [
+            "2019-04-30 04:10:04",
+            "2019-04-04 11:12:03",
+            "2019-04-17 17:05:54"
+          ]
+        },
+        {
+          "group": 516,
+          "latents": [
+            752
+          ],
+          "gain_margin": 728.59,
+          "examples": [
+            "2017-11-08 23:00:30",
+            "2016-09-22 12:30:00",
+            "2017-12-12 06:00:08"
+          ]
+        }
+      ]
+    },
+    "Street": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1924,
+      "n_groups": 1919,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 1206,
+      "n_groups_unused": 101,
+      "n_removed": 1207,
+      "var_share_removed": 0.3247,
+      "var_share_sae_error": 0.0201,
+      "top": [
+        {
+          "group": 1913,
+          "latents": [
+            473
+          ],
+          "gain_margin": 2639.23,
+          "examples": [
+            "I-85 Bus S",
+            "I-69 E",
+            "I-69 E"
+          ]
+        },
+        {
+          "group": 562,
+          "latents": [
+            1609
+          ],
+          "gain_margin": 2478.3,
+          "examples": [
+            "I-385",
+            "I-110",
+            "I-280"
+          ]
+        },
+        {
+          "group": 1908,
+          "latents": [
+            89
+          ],
+          "gain_margin": 796.49,
+          "examples": [
+            "I-8 W",
+            "I-8 W",
+            "I-8 W"
+          ]
+        },
+        {
+          "group": 935,
+          "latents": [
+            972
+          ],
+          "gain_margin": 682.61,
+          "examples": [
+            "GA-400 S",
+            "I-25 S",
+            "I-25 S"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            594,
+            1341,
+            1927
+          ],
+          "gain_margin": 532.96,
+          "examples": [
+            "N Highway 183",
+            "N Highway 183",
+            "N Highway 183"
+          ]
+        }
+      ]
+    },
+    "Weather_Timestamp": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 570,
+      "n_groups": 485,
+      "n_multi_groups": 63,
+      "n_groups_dropped": 310,
+      "n_groups_unused": 16,
+      "n_removed": 356,
+      "var_share_removed": 0.2322,
+      "var_share_sae_error": 0.0023,
+      "top": [
+        {
+          "group": 76,
+          "latents": [
+            2026
+          ],
+          "gain_margin": 1211.06,
+          "examples": [
+            "2019-11-21 14:45:00",
+            "2019-12-30 15:50:00",
+            "2019-11-15 20:51:00"
+          ]
+        },
+        {
+          "group": 424,
+          "latents": [
+            1118
+          ],
+          "gain_margin": 701.99,
+          "examples": [
+            "2020-04-01 18:53:00",
+            "2020-04-25 01:53:00",
+            "2020-04-29 04:53:00"
+          ]
+        },
+        {
+          "group": 319,
+          "latents": [
+            686
+          ],
+          "gain_margin": 636.5,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 133,
+          "latents": [
+            1701
+          ],
+          "gain_margin": 578.33,
+          "examples": [
+            "2020-05-20 08:06:00",
+            "2020-05-29 08:58:00",
+            "2020-05-08 06:50:00"
+          ]
+        },
+        {
+          "group": 328,
+          "latents": [
+            752
+          ],
+          "gain_margin": 491.7,
+          "examples": [
+            "2017-08-08 12:54:00",
+            "2017-08-17 17:55:00",
+            "2017-08-12 13:54:00"
+          ]
+        }
+      ]
+    },
+    "Zipcode": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1432,
+      "n_groups": 1390,
+      "n_multi_groups": 38,
+      "n_groups_dropped": 861,
+      "n_groups_unused": 79,
+      "n_removed": 882,
+      "var_share_removed": 0.2409,
+      "var_share_sae_error": 0.0074,
+      "top": [
+        {
+          "group": 442,
+          "latents": [
+            430
+          ],
+          "gain_margin": 2116.24,
+          "examples": [
+            "28083",
+            "24084",
+            "24084"
+          ]
+        },
+        {
+          "group": 191,
+          "latents": [
+            1575
+          ],
+          "gain_margin": 1244.78,
+          "examples": [
+            "28078-5090",
+            "28078-9005",
+            "29860-9115"
+          ]
+        },
+        {
+          "group": 396,
+          "latents": [
+            1665
+          ],
+          "gain_margin": 829.16,
+          "examples": [
+            "29693-5426",
+            "11234-2408",
+            "56347-4995"
+          ]
+        },
+        {
+          "group": 880,
+          "latents": [
+            780
+          ],
+          "gain_margin": 740.7,
+          "examples": [
+            "34442-2371",
+            "28209-1604",
+            "14075-2746"
+          ]
+        },
+        {
+          "group": 440,
+          "latents": [
+            828
+          ],
+          "gain_margin": 735.55,
+          "examples": [
+            "28205-6946",
+            "17878-9391",
+            "27523-9314"
+          ]
+        }
+      ]
+    }
+  }
+}

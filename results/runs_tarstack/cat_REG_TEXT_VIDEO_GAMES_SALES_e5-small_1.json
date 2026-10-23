@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.9421563497875534,
+  "test_error": 0.9421563497875534,
+  "course_metric": "r2",
+  "course_score": 0.4361794846300998,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 13.313018321990967,
+  "learner_params": null,
+  "diagnostics": {}
+}

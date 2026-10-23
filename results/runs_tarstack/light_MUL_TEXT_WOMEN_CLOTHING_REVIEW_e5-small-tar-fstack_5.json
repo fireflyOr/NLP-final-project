@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WOMEN_CLOTHING_REVIEW",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.7421728700915372,
+  "test_error": 0.7421728700915372,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9029866389234622,
+  "n_text_cols": 2,
+  "n_text_features": 65,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 10.028950691223145,
+  "learner_params": null,
+  "diagnostics": {}
+}

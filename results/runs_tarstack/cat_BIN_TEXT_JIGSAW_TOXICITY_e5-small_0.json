@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small",
+  "fold": 0,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.8143277821476802,
+  "test_error": 0.1856722178523198,
+  "course_metric": "auroc",
+  "course_score": 0.8143277821476802,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 9.239776611328125,
+  "learner_params": null,
+  "diagnostics": {}
+}

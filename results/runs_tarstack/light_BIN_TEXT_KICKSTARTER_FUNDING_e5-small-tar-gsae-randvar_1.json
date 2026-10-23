@@ -1,0 +1,396 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 1,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7116056299062836,
+  "test_error": 0.2883943700937164,
+  "course_metric": "auroc",
+  "course_score": 0.7116056299062835,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 89.05969142913818,
+  "learner_params": null,
+  "diagnostics": {
+    "created_at": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 878,
+      "n_groups": 867,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 647,
+      "n_groups_unused": 75,
+      "n_removed": 594,
+      "var_share_removed": 0.5103,
+      "var_share_sae_error": 0.0056,
+      "top": [
+        {
+          "group": 582,
+          "latents": [
+            508
+          ],
+          "gain_margin": 145.76,
+          "examples": [
+            "1970-01-01 00:00:01.405061450",
+            "1970-01-01 00:00:01.405928122",
+            "1970-01-01 00:00:01.405061614"
+          ]
+        },
+        {
+          "group": 364,
+          "latents": [
+            635
+          ],
+          "gain_margin": 143.53,
+          "examples": [
+            "1970-01-01 00:00:01.360203556",
+            "1970-01-01 00:00:01.360193361",
+            "1970-01-01 00:00:01.360765217"
+          ]
+        },
+        {
+          "group": 461,
+          "latents": [
+            649
+          ],
+          "gain_margin": 142.86,
+          "examples": [
+            "1970-01-01 00:00:01.400446507",
+            "1970-01-01 00:00:01.338656583",
+            "1970-01-01 00:00:01.397656530"
+          ]
+        },
+        {
+          "group": 182,
+          "latents": [
+            1644
+          ],
+          "gain_margin": 113.63,
+          "examples": [
+            "1970-01-01 00:00:01.375469460",
+            "1970-01-01 00:00:01.424646990",
+            "1970-01-01 00:00:01.414624466"
+          ]
+        },
+        {
+          "group": 796,
+          "latents": [
+            109
+          ],
+          "gain_margin": 76.68,
+          "examples": [
+            "1970-01-01 00:00:01.424003514",
+            "1970-01-01 00:00:01.423760021",
+            "1970-01-01 00:00:01.423724408"
+          ]
+        }
+      ]
+    },
+    "deadline": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 866,
+      "n_groups": 847,
+      "n_multi_groups": 19,
+      "n_groups_dropped": 602,
+      "n_groups_unused": 108,
+      "n_removed": 466,
+      "var_share_removed": 0.3904,
+      "var_share_sae_error": 0.0057,
+      "top": [
+        {
+          "group": 125,
+          "latents": [
+            1663
+          ],
+          "gain_margin": 185.51,
+          "examples": [
+            "1970-01-01 00:00:01.276657200",
+            "1970-01-01 00:00:01.294207200",
+            "1970-01-01 00:00:01.410667200"
+          ]
+        },
+        {
+          "group": 800,
+          "latents": [
+            256
+          ],
+          "gain_margin": 180.39,
+          "examples": [
+            "1970-01-01 00:00:01.350144117",
+            "1970-01-01 00:00:01.350333227",
+            "1970-01-01 00:00:01.350314607"
+          ]
+        },
+        {
+          "group": 305,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 177.63,
+          "examples": [
+            "1970-01-01 00:00:01.369018800",
+            "1970-01-01 00:00:01.369033200",
+            "1970-01-01 00:00:01.366519413"
+          ]
+        },
+        {
+          "group": 486,
+          "latents": [
+            554
+          ],
+          "gain_margin": 171.01,
+          "examples": [
+            "1970-01-01 00:00:01.393131540",
+            "1970-01-01 00:00:01.397631540",
+            "1970-01-01 00:00:01.431141540"
+          ]
+        },
+        {
+          "group": 215,
+          "latents": [
+            1501
+          ],
+          "gain_margin": 168.39,
+          "examples": [
+            "1970-01-01 00:00:01.394172000",
+            "1970-01-01 00:00:01.409112000",
+            "1970-01-01 00:00:01.333674000"
+          ]
+        }
+      ]
+    },
+    "desc": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2041,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1233,
+      "n_groups_unused": 137,
+      "n_removed": 1058,
+      "var_share_removed": 0.3756,
+      "var_share_sae_error": 0.1458,
+      "top": [
+        {
+          "group": 2032,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 2497.85,
+          "examples": [
+            "\"An independent clothing brand looking to encompass inspirational and motivating messages. Using clothing as a platform to impact others\"",
+            "\"I am trying to bring first a series of Natural Bodybuilding and workout t-shirts and then sports nutrition items to the market.\"",
+            "\"A social commerce online platform that discovers the most exclusive, cutting edge independent brands on todays market.\""
+          ]
+        },
+        {
+          "group": 145,
+          "latents": [
+            1769
+          ],
+          "gain_margin": 1100.37,
+          "examples": [
+            "\"Our 4th Renaissance Miniatures terrain KS!  A collection of pre-painted, modular Castle & Siege Engine kits for 28mm tabletop gamers.\"",
+            "\"A 28mm scale fantasy dwarven realm terrain set that is modular and can be disassembled for easy storage and transport.\"",
+            "\"This project will produce six 32mm fantasy miniatures for our Freeblades game.\""
+          ]
+        },
+        {
+          "group": 2012,
+          "latents": [
+            978
+          ],
+          "gain_margin": 387.9,
+          "examples": [
+            "\"9 integrated and enterprise-level business applications for small and medium sized businesses over the cloud.\"",
+            "\"This app will allow users to notify friends & followers from all social media platforms of you're most recent posts with one click\"",
+            "\"An app that allows businesses to find exactly the staff they are looking for and that allows job hunters to have a searchable profile\""
+          ]
+        },
+        {
+          "group": 2028,
+          "latents": [
+            315
+          ],
+          "gain_margin": 375.53,
+          "examples": [
+            "\"Me and the Trinity is set to record their sophomore album to be entitled PARALLELS. With your help, we can make this happen!\"",
+            "\"Help Youth Owned Records record and release teen band Creal's debut album.\"",
+            "\"Help Kirsten on her way with recording her d\u00e9but album and get rewards for your donations!\""
+          ]
+        },
+        {
+          "group": 1014,
+          "latents": [
+            803
+          ],
+          "gain_margin": 341.57,
+          "examples": [
+            "\"Crush is a short film about one woman's quest to find the perfect chair.\"",
+            "\"BlindSide is a survival/horror adventure game with no graphics at all. Navigate a 3D world using only your ears and what's between them\"",
+            "\"Stand apart in a pair of classic denim inspired by USA 1920s to 80s from 100% Japanese ring-spun selvedge denim for both men and women.\""
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1266,
+      "n_groups_unused": 154,
+      "n_removed": 1127,
+      "var_share_removed": 0.4121,
+      "var_share_sae_error": 0.1325,
+      "top": [
+        {
+          "group": 2041,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 978.13,
+          "examples": [
+            "\"travel-to-canada\"",
+            "\"social-media-website\"",
+            "\"the-online-platform-for-students-and-graduates\""
+          ]
+        },
+        {
+          "group": 983,
+          "latents": [
+            803
+          ],
+          "gain_margin": 749.85,
+          "examples": [
+            "\"emory-student-film-tick-tock-the-last-minutes-of-a\"",
+            "\"the-last-knife-sharpener-documentary-2014\"",
+            "\"we-are-leather-women-a-photographic-documentary\""
+          ]
+        },
+        {
+          "group": 1000,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 505.08,
+          "examples": [
+            "\"obtainn-the-first-personal-online-learning-portal\"",
+            "\"jumbawumba-your-internet-easy-personal-secure\"",
+            "\"sorba-media-lending-a-designer-to-small-businesses\""
+          ]
+        },
+        {
+          "group": 900,
+          "latents": [
+            1302
+          ],
+          "gain_margin": 293.29,
+          "examples": [
+            "\"yrg-pro-professional-grade-midi-guitar\"",
+            "\"tailors-of-atlas-premium-denim-for-premium-size-du\"",
+            "\"perfect-burpee-the-perfect-workout-mat-for-athlete\""
+          ]
+        },
+        {
+          "group": 2012,
+          "latents": [
+            539
+          ],
+          "gain_margin": 219.94,
+          "examples": [
+            "\"wear-a-wearable-personal-assistive-hearing-device\"",
+            "\"headphones-with-removable-headband\"",
+            "\"capacitive-touch-headphones-design-meets-function\""
+          ]
+        }
+      ]
+    },
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 2048,
+      "n_groups": 2042,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1228,
+      "n_groups_unused": 158,
+      "n_removed": 1022,
+      "var_share_removed": 0.3866,
+      "var_share_sae_error": 0.1374,
+      "top": [
+        {
+          "group": 837,
+          "latents": [
+            1052
+          ],
+          "gain_margin": 2420.51,
+          "examples": [
+            "\"Social Media Website (Canceled)\"",
+            "\"THE online platform for students and graduates\"",
+            "\"GERIELLE SNACKS Restaurant (Canceled)\""
+          ]
+        },
+        {
+          "group": 2017,
+          "latents": [
+            23
+          ],
+          "gain_margin": 600.51,
+          "examples": [
+            "\"Midnight at the Midway (Canceled)\"",
+            "\"Little Shop of Candles! (Canceled)\"",
+            "\"CANCELED - BAC LED Stairwell - CANCELED\""
+          ]
+        },
+        {
+          "group": 2012,
+          "latents": [
+            732
+          ],
+          "gain_margin": 524.46,
+          "examples": [
+            "\"Around the World All Electric Car Drive (Canceled)\"",
+            "\"T-Shirts and Tanks for Hardstyle Team Podcast (Canceled)\"",
+            "\"THE DIRT: Northern California Motocross Magazine. (Canceled)\""
+          ]
+        },
+        {
+          "group": 744,
+          "latents": [
+            1395
+          ],
+          "gain_margin": 469.33,
+          "examples": [
+            "\"Studio Skate: Handpainted Decks\"",
+            "\"Contemporary Techniques for the Bassoon\"",
+            "\"Afro-Brazilian Percussion Workshops in Seoul\""
+          ]
+        },
+        {
+          "group": 2039,
+          "latents": [
+            315
+          ],
+          "gain_margin": 412.42,
+          "examples": [
+            "\"Duo Scorpio's First Recording\"",
+            "\"the Woodshed Prophets' debut record\"",
+            "\"Brooks West - Songs About You - A New Record!\""
+          ]
+        }
+      ]
+    }
+  }
+}

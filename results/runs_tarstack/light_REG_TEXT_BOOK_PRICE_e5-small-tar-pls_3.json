@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-pls",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.23970567390828812,
+  "test_error": 0.23970567390828812,
+  "course_metric": "r2",
+  "course_score": 0.47713796690974686,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 1.5545954704284668,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -1,0 +1,173 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.369592888352706,
+  "test_error": 1.369592888352706,
+  "course_metric": "r2",
+  "course_score": 0.3399354726649024,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 30.60475778579712,
+  "learner_params": null,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2045,
+      "n_groups": 2042,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1633,
+      "n_groups_unused": 728,
+      "n_removed": 1633,
+      "var_share_removed": 0.4581,
+      "var_share_sae_error": 0.0554,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            305,
+            1233,
+            1847
+          ],
+          "gain_margin": 17289.16,
+          "examples": [
+            "Super Mario Land",
+            "Super Mario Bros. 2",
+            "Super Mario 64"
+          ]
+        },
+        {
+          "group": 212,
+          "latents": [
+            1810
+          ],
+          "gain_margin": 8307.53,
+          "examples": [
+            "Super Smash Bros.",
+            "Super Smash Bros. for Wii U and 3DS",
+            "Nintendogs"
+          ]
+        },
+        {
+          "group": 914,
+          "latents": [
+            1328
+          ],
+          "gain_margin": 3460.77,
+          "examples": [
+            "Rogue Ops",
+            "Spy Hunter 2",
+            "Spy Hunter 2"
+          ]
+        },
+        {
+          "group": 971,
+          "latents": [
+            1416
+          ],
+          "gain_margin": 2903.56,
+          "examples": [
+            "Billy's Boot Camp: Wii de Enjoy Diet!",
+            "Transformers: The Game (XBox 360, PS2, PS3, Wii & PC Versions)",
+            "Transformers: The Game (XBox 360, PS2, PS3, Wii & PC Versions)"
+          ]
+        },
+        {
+          "group": 1410,
+          "latents": [
+            1086
+          ],
+          "gain_margin": 985.78,
+          "examples": [
+            "Forza Motorsport 3: Ultimate Edition",
+            "Forza Motorsport 5",
+            "Forza Motorsport 2"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1035,
+      "n_groups": 1035,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 966,
+      "n_groups_unused": 326,
+      "n_removed": 966,
+      "var_share_removed": 0.664,
+      "var_share_sae_error": 0.0008,
+      "top": [
+        {
+          "group": 740,
+          "latents": [
+            29
+          ],
+          "gain_margin": 2903.59,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 899,
+          "latents": [
+            99
+          ],
+          "gain_margin": 1328.97,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 804,
+          "latents": [
+            168
+          ],
+          "gain_margin": 1271.95,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 219,
+          "latents": [
+            1751
+          ],
+          "gain_margin": 879.12,
+          "examples": [
+            "Gathering of Developers",
+            "Gathering of Developers",
+            "Gathering of Developers"
+          ]
+        },
+        {
+          "group": 680,
+          "latents": [
+            200
+          ],
+          "gain_margin": 825.65,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

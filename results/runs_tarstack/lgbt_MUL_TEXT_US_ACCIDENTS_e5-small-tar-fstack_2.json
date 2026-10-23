@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.17167624985194047,
+  "test_error": 0.17167624985194047,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9851208007450949,
+  "n_text_cols": 9,
+  "n_text_features": 274,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 42.06061577796936,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "colsample_bytree": 0.6,
+    "n_trees": 104
+  },
+  "diagnostics": {}
+}

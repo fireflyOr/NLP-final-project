@@ -1,0 +1,176 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9354678191931751,
+  "test_error": 0.06453218080682488,
+  "course_metric": "auroc",
+  "course_score": 0.9354678191931751,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 35.39613604545593,
+  "learner_params": null,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2046,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1433,
+      "n_groups_unused": 280,
+      "n_removed": 1433,
+      "var_share_removed": 0.3022,
+      "var_share_sae_error": 0.1077,
+      "top": [
+        {
+          "group": 1021,
+          "latents": [
+            227
+          ],
+          "gain_margin": 6189.9,
+          "examples": [
+            "Don't let facts get in the way of a privileged trump voter's absurd, racist & childish rant.  They are only emulating their stupid dufus president after all.",
+            "The Mickey rourke look alike is ugly as sin and idiotic like trump!",
+            "I am reminded much of the Yahoo's in Gulliver's Travels. They elected the biggest idiot amongst them and made them King supreme. Regardless the detrimental impa"
+          ]
+        },
+        {
+          "group": 1158,
+          "latents": [
+            315
+          ],
+          "gain_margin": 2696.32,
+          "examples": [
+            "says who? see loser you are the perfect example of an arrogant left wing idiot who thinks they can decide for us all what is worth hearing and not, take your st",
+            "This is old news and undoubtedlt he bought them off to keep quite. Just another GOP bible thumping hypocrite.",
+            "Flagging all posts by this poser who plays the drunk indian stereotype.\nDisgusting."
+          ]
+        },
+        {
+          "group": 1020,
+          "latents": [
+            1241
+          ],
+          "gain_margin": 2449.78,
+          "examples": [
+            "She is such an IDIOT",
+            "Frederica is one dumb Black Woman who has no business being in congress. She belongs back in the hood or in Africa with the rest of the apes and monkeys. Her me",
+            "every country should cancel their meetings with this damn bully"
+          ]
+        },
+        {
+          "group": 977,
+          "latents": [
+            510
+          ],
+          "gain_margin": 1566.8,
+          "examples": [
+            "She is such an IDIOT",
+            "what a jackass.",
+            "wow and this jackass is a police officer? Really? wow sad, but scary really...."
+          ]
+        },
+        {
+          "group": 271,
+          "latents": [
+            1219
+          ],
+          "gain_margin": 1201.06,
+          "examples": [
+            "There is only one compelling argument against \"vote by mail.\"  It would increase voter turn-out and counter efforts at voter suppression.  Since all polling dat",
+            "Yes I am.\n\nThere's a very good reason to not elect judges, it makes them independent and not susceptible to political pressure or will.\n\nElected leaders often a",
+            "A valid point.   Canadian milk (and other agricultural)  products command a good price because of their high quality attributes that result in part due to suppl"
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1380,
+      "n_groups": 1274,
+      "n_multi_groups": 91,
+      "n_groups_dropped": 964,
+      "n_groups_unused": 350,
+      "n_removed": 1024,
+      "var_share_removed": 0.5617,
+      "var_share_sae_error": 0.0189,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            809,
+            873,
+            1260
+          ],
+          "gain_margin": 149.1,
+          "examples": [
+            "2017-01-20 16:10:13.623975",
+            "2017-01-24 17:32:21.487149",
+            "2017-01-15 19:35:22.773871"
+          ]
+        },
+        {
+          "group": 947,
+          "latents": [
+            542
+          ],
+          "gain_margin": 104.77,
+          "examples": [
+            "2016-03-09 19:01:08.810041",
+            "2017-06-15 15:56:04.050200",
+            "2017-02-10 08:30:32.001457"
+          ]
+        },
+        {
+          "group": 595,
+          "latents": [
+            1342
+          ],
+          "gain_margin": 89.84,
+          "examples": [
+            "2017-10-03 03:06:13.080752",
+            "2017-10-21 13:03:20.010384",
+            "2017-01-03 14:48:20.161662"
+          ]
+        },
+        {
+          "group": 154,
+          "latents": [
+            55,
+            615
+          ],
+          "gain_margin": 85.08,
+          "examples": [
+            "2017-10-30 02:28:01.724049",
+            "2017-10-16 17:32:29.724201",
+            "2017-06-15 13:32:17.724004"
+          ]
+        },
+        {
+          "group": 25,
+          "latents": [
+            441,
+            551,
+            1972
+          ],
+          "gain_margin": 78.76,
+          "examples": [
+            "2016-12-03 05:03:40.880235",
+            "2016-05-28 03:25:00.700157",
+            "2017-08-29 03:31:03.584265"
+          ]
+        }
+      ]
+    }
+  }
+}

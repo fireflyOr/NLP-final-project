@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_ROTTEN_TOMATOES",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8383890373223357,
+  "test_error": 0.8383890373223357,
+  "course_metric": "r2",
+  "course_score": 0.4824295879107551,
+  "n_text_cols": 13,
+  "n_text_features": 391,
+  "n_train": 4772,
+  "n_test": 2386,
+  "runtime_s": 6.841864585876465,
+  "learner_params": null,
+  "diagnostics": {}
+}

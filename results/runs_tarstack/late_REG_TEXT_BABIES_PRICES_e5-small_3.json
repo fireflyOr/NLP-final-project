@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "late-fusion",
+  "fold": 3,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -24.719556872408834,
+  "test_error": 24.719556872408834,
+  "course_metric": "r2",
+  "course_score": 0.7265275152176531,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 9.558607339859009,
+  "learner_params": null,
+  "diagnostics": {}
+}

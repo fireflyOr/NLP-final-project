@@ -1,0 +1,1007 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_ROTTEN_TOMATOES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8377347453661598,
+  "test_error": 0.8377347453661598,
+  "course_metric": "r2",
+  "course_score": 0.5046830140538461,
+  "n_text_cols": 13,
+  "n_text_features": 390,
+  "n_train": 4772,
+  "n_test": 2386,
+  "runtime_s": 159.0805230140686,
+  "learner_params": null,
+  "diagnostics": {
+    "Actors": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1987,
+      "n_groups": 1985,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1343,
+      "n_groups_unused": 328,
+      "n_removed": 1343,
+      "var_share_removed": 0.4183,
+      "var_share_sae_error": 0.0371,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            878,
+            1492
+          ],
+          "gain_margin": 2727.08,
+          "examples": [
+            "Justin Long,Emmy Rossum,Kayla Servi",
+            "Brittany Murphy,Thora Birch,Tammy Blanchard",
+            "Rob Schneider,Kristin Carey,Challen Cates"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            111,
+            1847
+          ],
+          "gain_margin": 725.15,
+          "examples": [
+            "Marlon Brando,Karl Malden,Pina Pellicer",
+            "John Wayne,Richard Widmark,Laurence Harvey",
+            "Humphrey Bogart,Claude Rains,Mich\u00e8le Morgan"
+          ]
+        },
+        {
+          "group": 1934,
+          "latents": [
+            323
+          ],
+          "gain_margin": 141.71,
+          "examples": [
+            "Jamie Bell,Andy Serkis,Daniel Craig",
+            "Jude Law,Ed Harris,Joseph Fiennes",
+            "Mark Wahlberg,Dwayne Johnson,Anthony Mackie"
+          ]
+        },
+        {
+          "group": 1984,
+          "latents": [
+            23
+          ],
+          "gain_margin": 135.44,
+          "examples": [
+            "Harrison Ford,Sean Bean,Anne Archer",
+            "Dustin Hoffman,Anne Bancroft,Katharine Ross",
+            "Woody Allen,Gene Wilder,Louise Lasser"
+          ]
+        },
+        {
+          "group": 831,
+          "latents": [
+            926
+          ],
+          "gain_margin": 121.13,
+          "examples": [
+            "Billy Crystal,Jack Palance,Daniel Stern",
+            "Dean Cain,Richard Riehle,Bill Oberst Jr.",
+            "Lucille Billingsley,Zella Graham,Cal Harberts"
+          ]
+        }
+      ]
+    },
+    "Cast": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2007,
+      "n_groups": 2006,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1358,
+      "n_groups_unused": 306,
+      "n_removed": 1358,
+      "var_share_removed": 0.3883,
+      "var_share_sae_error": 0.0453,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            878,
+            1251
+          ],
+          "gain_margin": 3304.74,
+          "examples": [
+            "Darlene Vogel,Shane Fraser,Alan Picardi,Samantha Phillips,Mark DeCarlo,Kerrie Clark,Peter Jurasik,Stoney Jackson,Stephen Kay,Kevin McThespian,Patrick Kilpatrick",
+            "Jill Larson,Anne Ramsay,Michelle Ang,Brett Gentile,Jeremy DeCarlos,Ryan Cutrona,Tonya Bludsworth,Anne Bedian,Randell Haynes,Jeffrey Woodard,Julianne Taylor,Dave",
+            "Josh Henderson,Jenna Dewan Tatum,Lauren Storm,Derek Lee Nixon,Jesse Heiman,Anthony Gaskins,Abraham Taylor,Jaci Twiss,Danny Bonaduce,Tom Arnold,Sara Jade Woodhou"
+          ]
+        },
+        {
+          "group": 2005,
+          "latents": [
+            111
+          ],
+          "gain_margin": 1020.8,
+          "examples": [
+            "Jim Henson,Frank Oz,Jerry Nelson,Richard Hunt,Dave Goelz,Charles Durning,Austin Pendleton,Edgar Bergen,Milton Berle,Mel Brooks,James Coburn,Dom DeLuise,Elliott ",
+            "Leslie Howard,Bette Davis,Genevieve Tobin,Dick Foran,Humphrey Bogart,Joe Sawyer,Porter Hall,Charley Grapewin,Paul Harvey,Eddie Acuff,Adrian Morris,Nina Campana,",
+            "William Powell,Myrna Loy,Luise Rainer,Frank Morgan,Fanny Brice,Virginia Bruce,Reginald Owen,Ray Bolger,Ernest Cossart,Joseph Cawthorn,Nat Pendleton,Harriet Hoct"
+          ]
+        },
+        {
+          "group": 1148,
+          "latents": [
+            204
+          ],
+          "gain_margin": 702.19,
+          "examples": [
+            "Audrey Hepburn,Peter Finch,Edith Evans,Peggy Ashcroft,Dean Jagger,Mildred Dunnock,Beatrice Straight,Patricia Collinge,Rosalie Crutchley,Ruth White,Barbara O'Nei",
+            "Wes Anderson,Olivier Assayas,Peter Bogdanovich,Arnaud Desplechin,David Fincher,James Gray,Alfred Hitchcock,Kiyoshi Kurosawa,Richard Linklater,Paul Schrader,Mart",
+            "Cate Blanchett,Geoffrey Rush,Christopher Eccleston,Joseph Fiennes,Richard Attenborough,Fanny Ardant,Eric Cantona,Vincent Cassel,Kathy Burke,Edward Hardwicke,Emi"
+          ]
+        },
+        {
+          "group": 566,
+          "latents": [
+            1599
+          ],
+          "gain_margin": 213.9,
+          "examples": [
+            "Frank P. DeLarzelere III",
+            "Winston Hibler,Volmer S\u00f8rensen",
+            "Iva Radivojevic"
+          ]
+        },
+        {
+          "group": 201,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 209.26,
+          "examples": [
+            "Hallee Hirsh,Theresa Russell,Shiloh Fernandez,Mandy Musgrave,Jaime Gomez,Will Rothhaar,Carson Kressley,Emily Baldoni,Pamela Dunlap,Nicholas Downs,Ryan Gourley,M",
+            "Sam Neill,Rossano Brazzi,Don Gordon,Lisa Harrow,Barnaby Holm,Mason Adams,Robert Arden,Leueen Willoughby,Marc Boyle,Milos Kirek,Tommy Duggan,Louis Mahoney,Richar",
+            "Albert Finney,Diane Venora,Edward James Olmos,Gregory Hines,Tom Noonan,Dick O'Neill,Dehl Berti,Peter Michael Goetz,Sam Gray,Ralph Bell,Max M. Brown,Anne Marie P"
+          ]
+        }
+      ]
+    },
+    "Country": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 267,
+      "n_groups": 252,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 237,
+      "n_groups_unused": 23,
+      "n_removed": 252,
+      "var_share_removed": 0.8699,
+      "var_share_sae_error": 0.0013,
+      "top": [
+        {
+          "group": 11,
+          "latents": [
+            2012
+          ],
+          "gain_margin": 69.97,
+          "examples": [
+            "UK,USA,Luxembourg",
+            "USA,Luxembourg",
+            "UK,Russia,Ireland,Luxembourg,USA"
+          ]
+        },
+        {
+          "group": 63,
+          "latents": [
+            1171
+          ],
+          "gain_margin": 51.61,
+          "examples": [
+            "Nepal,USA",
+            "USA,Albania",
+            "USA,Botswana"
+          ]
+        },
+        {
+          "group": 180,
+          "latents": [
+            1531
+          ],
+          "gain_margin": 20.17,
+          "examples": [
+            "Nepal,USA",
+            "Thailand,USA,Hong Kong",
+            "Thailand,Hong Kong,USA"
+          ]
+        },
+        {
+          "group": 119,
+          "latents": [
+            1315
+          ],
+          "gain_margin": 9.58,
+          "examples": [
+            "Germany,Belgium,Luxembourg,Ireland,USA",
+            "West Germany,USA",
+            "Luxembourg,Belgium,Spain,USA"
+          ]
+        },
+        {
+          "group": 21,
+          "latents": [
+            1855
+          ],
+          "gain_margin": 8.12,
+          "examples": [
+            "Philippines,USA",
+            "Thailand,Hong Kong,USA",
+            "Thailand,USA,Hong Kong"
+          ]
+        }
+      ]
+    },
+    "Creator": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1919,
+      "n_groups": 1917,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1304,
+      "n_groups_unused": 338,
+      "n_removed": 1304,
+      "var_share_removed": 0.4612,
+      "var_share_sae_error": 0.0252,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            93,
+            878
+          ],
+          "gain_margin": 562.15,
+          "examples": [
+            "Joel Souza,Jim Valdez",
+            "Chris Morgan,Gary Scott Thompson",
+            "Chris Morgan,Gary Scott Thompson"
+          ]
+        },
+        {
+          "group": 1916,
+          "latents": [
+            111
+          ],
+          "gain_margin": 393.93,
+          "examples": [
+            "Mary Shelley,William Hurlbut",
+            "Herman J. Mankiewicz,Orson Welles",
+            "Bertram Millhauser,Arthur Conan Doyle"
+          ]
+        },
+        {
+          "group": 1543,
+          "latents": [
+            204
+          ],
+          "gain_margin": 261.2,
+          "examples": [
+            "Ernest Hemingway,Jules Furthman",
+            "Sherwood King,Orson Welles",
+            "Ernest Hemingway,Seymour Bennett"
+          ]
+        },
+        {
+          "group": 1903,
+          "latents": [
+            323
+          ],
+          "gain_margin": 195.24,
+          "examples": [
+            "Wes Anderson,Roman Coppola",
+            "Wes Anderson,Roman Coppola",
+            "Wes Anderson,Owen Wilson"
+          ]
+        },
+        {
+          "group": 237,
+          "latents": [
+            1598
+          ],
+          "gain_margin": 147.33,
+          "examples": [
+            "Tom Brady,Tom Brady",
+            "Steven Blush,Steven Blush",
+            "James Still"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2026,
+      "n_groups": 2022,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1378,
+      "n_groups_unused": 302,
+      "n_removed": 1378,
+      "var_share_removed": 0.4646,
+      "var_share_sae_error": 0.0595,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            878,
+            1251,
+            1492
+          ],
+          "gain_margin": 2367.15,
+          "examples": [
+            "A group of rodeo trick-riders recruits a young girl to join them.",
+            "An 18-year-old college freshman is seduced by a handsome vampire lover who introduce her to a dark world of carnal desires.",
+            "Morgan and his friends are on a hunting trip on a remote Canadian island when they are attacked by a swarm of giant wasps. Looking for help, Morgan stumbles acr"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            23,
+            111,
+            204
+          ],
+          "gain_margin": 1855.01,
+          "examples": [
+            "During the Napoleonic Wars, a brash British captain pushes his ship and crew to their limits in pursuit of a formidable French war vessel around South America.",
+            "During WWII, American expatriate Harry Morgan helps transport a Free French Resistance leader and his beautiful wife to Martinique while romancing a sexy lounge",
+            "A dramatization of the Battle of Isandlwana, where the British Army met its match against the Zulu nation."
+          ]
+        },
+        {
+          "group": 504,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 372.59,
+          "examples": [
+            "A policeman white blood cell, with the help of a cold pill, must stop a deadly virus from destroying the human they live in, Frank.",
+            "A seeming good Samaritan (Debra Winger) hires a private detective (Nolte) to prove a teen sitting in prison on a murder charge is innocent. His investigation di",
+            "An intruder breaks into the home of an unsuspecting family in order to make a home made murder film."
+          ]
+        },
+        {
+          "group": 1859,
+          "latents": [
+            410
+          ],
+          "gain_margin": 212.81,
+          "examples": [
+            "The story of a terminally ill teenage girl who falls for a boy who likes to attend funerals and their encounters with the ghost of a Japanese kamikaze pilot fro",
+            "A group of martial arts students are en route to an island that supposedly is home to the ghosts of martial artists who have lost their honor. A Hitler lookalik",
+            "After losing his son, a grieving father stumbles upon a network of people that collect souls of the deceased, preparing them for their journey out of Purgatory."
+          ]
+        },
+        {
+          "group": 1009,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 138.4,
+          "examples": [
+            "While sorting the affairs of his late Uncle, a man accidentally stumbles across a series of dark secrets connected to an ancient horror waiting to be freed.",
+            "An examination into the nature of 1960's-70's horror films, the involved artists, and how they reflected contemporary society.",
+            "The staff of a Korean War field hospital use humor and hijinks to keep their sanity in the face of the horror of war."
+          ]
+        }
+      ]
+    },
+    "Director": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1858,
+      "n_groups": 1858,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1202,
+      "n_groups_unused": 330,
+      "n_removed": 1202,
+      "var_share_removed": 0.4427,
+      "var_share_sae_error": 0.0067,
+      "top": [
+        {
+          "group": 1852,
+          "latents": [
+            305
+          ],
+          "gain_margin": 600.63,
+          "examples": [
+            "George Lucas",
+            "George Lucas",
+            "George Lucas"
+          ]
+        },
+        {
+          "group": 1856,
+          "latents": [
+            204
+          ],
+          "gain_margin": 417.53,
+          "examples": [
+            "Alfred Hitchcock",
+            "Alfred Hitchcock",
+            "Alfred Hitchcock"
+          ]
+        },
+        {
+          "group": 1832,
+          "latents": [
+            111
+          ],
+          "gain_margin": 214.83,
+          "examples": [
+            "Michael Curtiz,John Wayne",
+            "George Sherman,John Wayne",
+            "Genndy Tartakovsky"
+          ]
+        },
+        {
+          "group": 1644,
+          "latents": [
+            75
+          ],
+          "gain_margin": 210.04,
+          "examples": [
+            "York Alec Shackleton",
+            "Lars von Trier",
+            "Stanley Kubrick"
+          ]
+        },
+        {
+          "group": 1550,
+          "latents": [
+            323
+          ],
+          "gain_margin": 195.68,
+          "examples": [
+            "Sam Raimi",
+            "Sam Raimi",
+            "Sam Raimi"
+          ]
+        }
+      ]
+    },
+    "Filming Locations": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1499,
+      "n_groups": 1499,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1266,
+      "n_groups_unused": 343,
+      "n_removed": 1266,
+      "var_share_removed": 0.5829,
+      "var_share_sae_error": 0.0036,
+      "top": [
+        {
+          "group": 1496,
+          "latents": [
+            878
+          ],
+          "gain_margin": 350.78,
+          "examples": [
+            "The Manhattan Housing Co-Op, 784 Thurlow St., Vancouver, British Columbia, Canada",
+            "Britannia Beach, British Columbia, Canada",
+            "Britannia Beach, British Columbia, Canada"
+          ]
+        },
+        {
+          "group": 443,
+          "latents": [
+            1251
+          ],
+          "gain_margin": 306.47,
+          "examples": [
+            "Puerto Rico",
+            "Utah, USA",
+            "Utah, USA"
+          ]
+        },
+        {
+          "group": 1498,
+          "latents": [
+            93
+          ],
+          "gain_margin": 125.51,
+          "examples": [
+            "Alpine, Texas, USA",
+            "Alpine, Texas, USA",
+            "Aspen, Colorado, USA"
+          ]
+        },
+        {
+          "group": 1497,
+          "latents": [
+            23
+          ],
+          "gain_margin": 115.06,
+          "examples": [
+            "Bodleian Library, Broad Street, Oxford, Oxfordshire, England, UK",
+            "Backlot, Metro-Goldwyn-Mayer Studios - 10202 W. Washington Blvd., Culver City, California, USA",
+            "Backlot, Metro-Goldwyn-Mayer Studios - 10202 W. Washington Blvd., Culver City, California, USA"
+          ]
+        },
+        {
+          "group": 1482,
+          "latents": [
+            212
+          ],
+          "gain_margin": 78.84,
+          "examples": [
+            "Belt Parkway, Brooklyn, New York City, New York, USA",
+            "Staffordshire, England, UK",
+            "CTV Services, Tunisia"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 644,
+      "n_groups": 638,
+      "n_multi_groups": 5,
+      "n_groups_dropped": 546,
+      "n_groups_unused": 118,
+      "n_removed": 550,
+      "var_share_removed": 0.4428,
+      "var_share_sae_error": 0.0003,
+      "top": [
+        {
+          "group": 95,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 1169.82,
+          "examples": [
+            "Horror",
+            "Horror",
+            "Horror"
+          ]
+        },
+        {
+          "group": 567,
+          "latents": [
+            878
+          ],
+          "gain_margin": 1093.33,
+          "examples": [
+            "Comedy,Family,Horror",
+            "Horror",
+            "Horror"
+          ]
+        },
+        {
+          "group": 556,
+          "latents": [
+            688
+          ],
+          "gain_margin": 1069.31,
+          "examples": [
+            "Adventure,Comedy,Horror",
+            "Comedy,Horror",
+            "Comedy,Horror"
+          ]
+        },
+        {
+          "group": 505,
+          "latents": [
+            204
+          ],
+          "gain_margin": 576.69,
+          "examples": [
+            "War,Drama",
+            "Drama,War",
+            "Drama,War"
+          ]
+        },
+        {
+          "group": 459,
+          "latents": [
+            305
+          ],
+          "gain_margin": 528.0,
+          "examples": [
+            "Documentary,History,News",
+            "Documentary,History,News",
+            "Documentary,History"
+          ]
+        }
+      ]
+    },
+    "Language": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 242,
+      "n_groups": 236,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 226,
+      "n_groups_unused": 16,
+      "n_removed": 231,
+      "var_share_removed": 0.8786,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 75,
+          "latents": [
+            1290
+          ],
+          "gain_margin": 32.74,
+          "examples": [
+            "English",
+            "English",
+            "English"
+          ]
+        },
+        {
+          "group": 150,
+          "latents": [
+            182
+          ],
+          "gain_margin": 14.82,
+          "examples": [
+            "English,Basque",
+            "English,Romanian",
+            "English,Romanian"
+          ]
+        },
+        {
+          "group": 105,
+          "latents": [
+            881
+          ],
+          "gain_margin": 4.6,
+          "examples": [
+            "English,Klingon",
+            "English,Klingon",
+            "English,Klingon"
+          ]
+        },
+        {
+          "group": 221,
+          "latents": [
+            360
+          ],
+          "gain_margin": 3.03,
+          "examples": [
+            "English,Arabic,German",
+            "English,Hebrew,Arabic,German",
+            "Hebrew,Arabic,German,English"
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            1720,
+            1940
+          ],
+          "gain_margin": 1.22,
+          "examples": [
+            "English,American Sign Language,Spanish",
+            "Spanish,English",
+            "Spanish,English"
+          ]
+        }
+      ]
+    },
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2021,
+      "n_groups": 2019,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1375,
+      "n_groups_unused": 280,
+      "n_removed": 1375,
+      "var_share_removed": 0.4879,
+      "var_share_sae_error": 0.0459,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            878,
+            1719
+          ],
+          "gain_margin": 945.91,
+          "examples": [
+            "Halloween H20: 20 Years Later",
+            "Girl 27",
+            "Earth Girls Are Easy"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            111,
+            1847
+          ],
+          "gain_margin": 634.82,
+          "examples": [
+            "The Story of Robin Hood and His Merrie Men",
+            "Memoirs of an Invisible Man",
+            "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe"
+          ]
+        },
+        {
+          "group": 978,
+          "latents": [
+            1543
+          ],
+          "gain_margin": 373.16,
+          "examples": [
+            "Halloween: The Curse of Michael Myers",
+            "Shadow of the Vampire",
+            "Night of the Comet"
+          ]
+        },
+        {
+          "group": 2015,
+          "latents": [
+            813
+          ],
+          "gain_margin": 242.66,
+          "examples": [
+            "The Walking Dead",
+            "The Dead Next Door",
+            "Diary of the Dead"
+          ]
+        },
+        {
+          "group": 2018,
+          "latents": [
+            23
+          ],
+          "gain_margin": 217.77,
+          "examples": [
+            "A Knight's Tale",
+            "To Kill a Mockingbird",
+            "The Hobbit: The Desolation of Smaug"
+          ]
+        }
+      ]
+    },
+    "RatingCount": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1327,
+      "n_groups": 1299,
+      "n_multi_groups": 26,
+      "n_groups_dropped": 959,
+      "n_groups_unused": 307,
+      "n_removed": 976,
+      "var_share_removed": 0.3213,
+      "var_share_sae_error": 0.0042,
+      "top": [
+        {
+          "group": 1272,
+          "latents": [
+            414
+          ],
+          "gain_margin": 705.32,
+          "examples": [
+            "260,844",
+            "236,599",
+            "236,117"
+          ]
+        },
+        {
+          "group": 147,
+          "latents": [
+            1941
+          ],
+          "gain_margin": 580.9,
+          "examples": [
+            "316,939",
+            "239,219",
+            "260,844"
+          ]
+        },
+        {
+          "group": 156,
+          "latents": [
+            1847
+          ],
+          "gain_margin": 505.8,
+          "examples": [
+            "294,740",
+            "115,414",
+            "236,599"
+          ]
+        },
+        {
+          "group": 1076,
+          "latents": [
+            1033
+          ],
+          "gain_margin": 484.71,
+          "examples": [
+            "724",
+            "724",
+            "990"
+          ]
+        },
+        {
+          "group": 215,
+          "latents": [
+            1529
+          ],
+          "gain_margin": 480.95,
+          "examples": [
+            "789,146",
+            "467,402",
+            "482,730"
+          ]
+        }
+      ]
+    },
+    "Release Date": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 567,
+      "n_groups": 534,
+      "n_multi_groups": 29,
+      "n_groups_dropped": 401,
+      "n_groups_unused": 77,
+      "n_removed": 423,
+      "var_share_removed": 0.3781,
+      "var_share_sae_error": 0.0014,
+      "top": [
+        {
+          "group": 320,
+          "latents": [
+            204
+          ],
+          "gain_margin": 530.94,
+          "examples": [
+            "8 April 1943 (Mexico)",
+            "2 March 1942 (UK)",
+            "14 February 1944 (Sweden)"
+          ]
+        },
+        {
+          "group": 283,
+          "latents": [
+            654
+          ],
+          "gain_margin": 412.39,
+          "examples": [
+            "19 August 1943 (Australia)",
+            "27 August 1943 (USA)",
+            "11 August 1943 (USA)"
+          ]
+        },
+        {
+          "group": 89,
+          "latents": [
+            1719
+          ],
+          "gain_margin": 238.42,
+          "examples": [
+            "9 September 1986 (Canada)",
+            "14 September 2015 (Canada)",
+            "12 September 2015 (Canada)"
+          ]
+        },
+        {
+          "group": 339,
+          "latents": [
+            414
+          ],
+          "gain_margin": 205.62,
+          "examples": [
+            "2 March 1942 (UK)",
+            "2 October 1944 (Brazil)",
+            "6 March 1942 (USA)"
+          ]
+        },
+        {
+          "group": 381,
+          "latents": [
+            412
+          ],
+          "gain_margin": 162.25,
+          "examples": [
+            "January 1966 (USA)",
+            "June 1965 (USA)",
+            "1973 (USA)"
+          ]
+        }
+      ]
+    },
+    "ReviewCount": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1082,
+      "n_groups": 1055,
+      "n_multi_groups": 26,
+      "n_groups_dropped": 821,
+      "n_groups_unused": 280,
+      "n_removed": 839,
+      "var_share_removed": 0.2363,
+      "var_share_sae_error": 0.0028,
+      "top": [
+        {
+          "group": 806,
+          "latents": [
+            1069
+          ],
+          "gain_margin": 473.71,
+          "examples": [
+            "3 user",
+            "3 user",
+            "3 user"
+          ]
+        },
+        {
+          "group": 844,
+          "latents": [
+            377
+          ],
+          "gain_margin": 332.6,
+          "examples": [
+            "646 user,585 critic",
+            "594 user,200 critic",
+            "396 user,540 critic"
+          ]
+        },
+        {
+          "group": 102,
+          "latents": [
+            1891
+          ],
+          "gain_margin": 276.14,
+          "examples": [
+            "655 user,583 critic",
+            "646 user,585 critic",
+            "655 user,503 critic"
+          ]
+        },
+        {
+          "group": 964,
+          "latents": [
+            821
+          ],
+          "gain_margin": 248.89,
+          "examples": [
+            "14 user",
+            "29 user",
+            "16 critic"
+          ]
+        },
+        {
+          "group": 360,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 239.19,
+          "examples": [
+            "1 user,10 critic",
+            "1 user,10 critic",
+            "1 user,6 critic"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.5805418115061245,
+  "test_error": 1.5805418115061245,
+  "course_metric": "r2",
+  "course_score": 0.21970030931053086,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 29.736258268356323,
+  "learner_params": null,
+  "diagnostics": {
+    "Name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2046,
+      "n_groups": 2045,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1646,
+      "n_groups_unused": 727,
+      "n_removed": 1646,
+      "var_share_removed": 0.7777,
+      "var_share_sae_error": 0.0524,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            305,
+            1439
+          ],
+          "gain_margin": 10953.15,
+          "examples": [
+            "Final Fantasy",
+            "Super Mario Bros.",
+            "Super Mario Bros. 3"
+          ]
+        },
+        {
+          "group": 1021,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 8713.5,
+          "examples": [
+            "Mario Kart 8",
+            "Pokemon Box: Ruby & Sapphire",
+            "Pokemon Pinball: Ruby & Sapphire"
+          ]
+        },
+        {
+          "group": 439,
+          "latents": [
+            1810
+          ],
+          "gain_margin": 4795.93,
+          "examples": [
+            "Tennis",
+            "Mario Tennis Open",
+            "Hot Shots Tennis"
+          ]
+        },
+        {
+          "group": 516,
+          "latents": [
+            1556
+          ],
+          "gain_margin": 4091.06,
+          "examples": [
+            "Yowamushi Pedal",
+            "Minecraft: Story Mode",
+            "Minecraft: Story Mode"
+          ]
+        },
+        {
+          "group": 1226,
+          "latents": [
+            472
+          ],
+          "gain_margin": 3369.37,
+          "examples": [
+            "Dragon Quest Heroes: The World's Tree Woe and the Blight Below",
+            "Super Mario All-Stars: Limited Edition",
+            "Puzzle & Dragons Z + Super Mario Bros. Edition"
+          ]
+        }
+      ]
+    },
+    "Publisher": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1029,
+      "n_groups": 1029,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 957,
+      "n_groups_unused": 332,
+      "n_removed": 957,
+      "var_share_removed": 0.8429,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 871,
+          "latents": [
+            324
+          ],
+          "gain_margin": 1707.5,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 420,
+          "latents": [
+            305
+          ],
+          "gain_margin": 1025.37,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 917,
+          "latents": [
+            472
+          ],
+          "gain_margin": 643.32,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 1002,
+          "latents": [
+            168
+          ],
+          "gain_margin": 614.62,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        },
+        {
+          "group": 543,
+          "latents": [
+            200
+          ],
+          "gain_margin": 553.11,
+          "examples": [
+            "Nintendo",
+            "Nintendo",
+            "Nintendo"
+          ]
+        }
+      ]
+    }
+  }
+}

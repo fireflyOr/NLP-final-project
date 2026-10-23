@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.24162082640657395,
+  "test_error": 0.24162082640657395,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9666099841882971,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 23.872780561447144,
+  "learner_params": null,
+  "diagnostics": {}
+}

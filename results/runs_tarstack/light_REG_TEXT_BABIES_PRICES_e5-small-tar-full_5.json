@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-full",
+  "fold": 5,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -17.506777778262464,
+  "test_error": 17.506777778262464,
+  "course_metric": "r2",
+  "course_score": 0.8161659438340384,
+  "n_text_cols": 4,
+  "n_text_features": 1536,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 2.3853085041046143,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -1,0 +1,321 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae-randvar",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -26.717302350162512,
+  "test_error": 26.717302350162512,
+  "course_metric": "r2",
+  "course_score": 0.6910129281574633,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 37.82167291641235,
+  "learner_params": null,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 283,
+      "n_groups": 280,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 256,
+      "n_groups_unused": 11,
+      "n_removed": 258,
+      "var_share_removed": 0.8262,
+      "var_share_sae_error": 0.0001,
+      "top": [
+        {
+          "group": 192,
+          "latents": [
+            619
+          ],
+          "gain_margin": 31.15,
+          "examples": [
+            "orange / tan",
+            "orange / tan",
+            "red / tan"
+          ]
+        },
+        {
+          "group": 256,
+          "latents": [
+            358
+          ],
+          "gain_margin": 24.93,
+          "examples": [
+            "green / black",
+            "green / black",
+            "green / black"
+          ]
+        },
+        {
+          "group": 266,
+          "latents": [
+            224
+          ],
+          "gain_margin": 21.61,
+          "examples": [
+            "red / gray",
+            "red / gray",
+            "black / gray"
+          ]
+        },
+        {
+          "group": 238,
+          "latents": [
+            1147
+          ],
+          "gain_margin": 20.8,
+          "examples": [
+            "gold / pink",
+            "tan / cream / pink",
+            "orange / cream / pink"
+          ]
+        },
+        {
+          "group": 113,
+          "latents": [
+            785
+          ],
+          "gain_margin": 10.86,
+          "examples": [
+            "tan / green",
+            "tan / pink",
+            "tan / blue"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 254,
+      "n_groups": 254,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 230,
+      "n_groups_unused": 28,
+      "n_removed": 209,
+      "var_share_removed": 0.6109,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 238,
+          "latents": [
+            377
+          ],
+          "gain_margin": 74.13,
+          "examples": [
+            "Glenna Jean, Rhythm",
+            "Glenna Jean Echo",
+            "Glenna Jean Echo"
+          ]
+        },
+        {
+          "group": 250,
+          "latents": [
+            314
+          ],
+          "gain_margin": 69.93,
+          "examples": [
+            "Doc McStuffins",
+            "Babies'R'Us,",
+            "Babies'R'Us,"
+          ]
+        },
+        {
+          "group": 12,
+          "latents": [
+            1993
+          ],
+          "gain_margin": 62.01,
+          "examples": [
+            "Delta Children's Products.",
+            "Delta Children's Products.",
+            "Pam Grace Creations"
+          ]
+        },
+        {
+          "group": 202,
+          "latents": [
+            396
+          ],
+          "gain_margin": 48.98,
+          "examples": [
+            "Doc McStuffins",
+            "Sleeping Partners.",
+            "Sleeping Partners."
+          ]
+        },
+        {
+          "group": 180,
+          "latents": [
+            925
+          ],
+          "gain_margin": 42.82,
+          "examples": [
+            "Swarovski&Acirc;&reg; The",
+            "Kidsline.",
+            "Kids Line"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 754,
+      "n_groups": 754,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 553,
+      "n_groups_unused": 99,
+      "n_removed": 467,
+      "var_share_removed": 0.4332,
+      "var_share_sae_error": 0.0009,
+      "top": [
+        {
+          "group": 750,
+          "latents": [
+            324
+          ],
+          "gain_margin": 2545.63,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "group": 624,
+          "latents": [
+            360
+          ],
+          "gain_margin": 1782.2,
+          "examples": [
+            "Snuggleberry Baby",
+            "Snuggleberry Baby",
+            "Snuggleberry Baby"
+          ]
+        },
+        {
+          "group": 218,
+          "latents": [
+            1267
+          ],
+          "gain_margin": 803.34,
+          "examples": [
+            "South Shore Furniture",
+            "South Shore Furniture",
+            "South Shore Furniture"
+          ]
+        },
+        {
+          "group": 191,
+          "latents": [
+            1708
+          ],
+          "gain_margin": 796.37,
+          "examples": [
+            "Biggshots",
+            "Biggshots",
+            "Biggshots"
+          ]
+        },
+        {
+          "group": 637,
+          "latents": [
+            108
+          ],
+          "gain_margin": 663.52,
+          "examples": [
+            "Environmental Graphics",
+            "Environmental Graphics",
+            "Environmental Graphics"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random_var",
+      "sae": "2048/k32",
+      "n_eligible": 1245,
+      "n_groups": 1244,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 809,
+      "n_groups_unused": 386,
+      "n_removed": 610,
+      "var_share_removed": 0.2759,
+      "var_share_sae_error": 0.0066,
+      "top": [
+        {
+          "group": 26,
+          "latents": [
+            1952
+          ],
+          "gain_margin": 5310.49,
+          "examples": [
+            "Arizona Cardinals, Larry Fitzgerald Biggshots Full Comforter Set",
+            "Arizona Cardinals, Larry Fitzgerald Biggshots Twin Comforter Twin",
+            "Tadpoles 1 Bulb Shaded Chandelier - Black"
+          ]
+        },
+        {
+          "group": 1240,
+          "latents": [
+            108
+          ],
+          "gain_margin": 3972.6,
+          "examples": [
+            "Tranquil Woods 5-Piece Bedding Set",
+            "Trend Lab Maya 4-Piece Toddler Bedding Set - Pink",
+            "Fleeting Flora 4-Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 376,
+          "latents": [
+            651
+          ],
+          "gain_margin": 2613.02,
+          "examples": [
+            "KidKraft Airplane Toddler Bedding 4 Piece Set",
+            "Levtex Baby Baby Ely 5 Piece Crib Bedding Set - Pink",
+            "Desert Dreams 4-Piece Mini Crib Bedding Set"
+          ]
+        },
+        {
+          "group": 310,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 772.3,
+          "examples": [
+            "Carter's Pink Elephant Security Blanket",
+            "Koala Baby Grey Elephant Plush Security Blanket",
+            "Carter's Changing Pad Cover - Apple Green"
+          ]
+        },
+        {
+          "group": 1236,
+          "latents": [
+            324
+          ],
+          "gain_margin": 765.07,
+          "examples": [
+            "One Decor 3\" Wide Shelf",
+            "Gallery Wrought Iron & Crystal 4 Light Floral Swag Plug In White Chandelier",
+            "Gallery Wrought Iron and Crystal 4 Light Floral Chandelier"
+          ]
+        }
+      ]
+    }
+  }
+}

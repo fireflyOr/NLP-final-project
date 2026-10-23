@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.5632356052357876,
+  "test_error": 1.5632356052357876,
+  "course_metric": "r2",
+  "course_score": 0.23669460311007418,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 17.67672324180603,
+  "learner_params": null,
+  "diagnostics": {}
+}

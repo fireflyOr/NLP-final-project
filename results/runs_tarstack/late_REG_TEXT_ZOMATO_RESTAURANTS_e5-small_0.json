@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.21312316466934245,
+  "test_error": 0.21312316466934245,
+  "course_metric": "r2",
+  "course_score": 0.7644497833737098,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 36.24124884605408,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -1,0 +1,399 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3884046632888392,
+  "test_error": 1.3884046632888392,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.7994389810218167,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 158.62821102142334,
+  "learner_params": null,
+  "diagnostics": {
+    "experience": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 368,
+      "n_groups": 362,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 338,
+      "n_groups_unused": 1,
+      "n_removed": 344,
+      "var_share_removed": 0.9339,
+      "var_share_sae_error": 0.0001,
+      "top": [
+        {
+          "group": 304,
+          "latents": [
+            83
+          ],
+          "gain_margin": 5175.76,
+          "examples": [
+            "12-18 yrs",
+            "12-18 yrs",
+            "12-18 yrs"
+          ]
+        },
+        {
+          "group": 174,
+          "latents": [
+            1519
+          ],
+          "gain_margin": 3961.85,
+          "examples": [
+            "0-1 yrs",
+            "0-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "group": 104,
+          "latents": [
+            1007
+          ],
+          "gain_margin": 3266.89,
+          "examples": [
+            "0-0 yrs",
+            "0-0 yrs",
+            "0-0 yrs"
+          ]
+        },
+        {
+          "group": 134,
+          "latents": [
+            751
+          ],
+          "gain_margin": 2717.27,
+          "examples": [
+            "1-1 yrs",
+            "1-1 yrs",
+            "0-1 yrs"
+          ]
+        },
+        {
+          "group": 270,
+          "latents": [
+            222
+          ],
+          "gain_margin": 1259.17,
+          "examples": [
+            "11-13 yrs",
+            "11-13 yrs",
+            "11-13 yrs"
+          ]
+        }
+      ]
+    },
+    "job_description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1984,
+      "n_groups": 1983,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1219,
+      "n_groups_unused": 17,
+      "n_removed": 1219,
+      "var_share_removed": 0.5047,
+      "var_share_sae_error": 0.034,
+      "top": [
+        {
+          "group": 679,
+          "latents": [
+            1308
+          ],
+          "gain_margin": 8149.36,
+          "examples": [
+            "- Masters degree in finance, economics, statistics, or other quantitative field;- Minimum 10 to 15 years ...",
+            "- 9-15 years of related experience;Experience with ERP systems a plus (eg;Skill required :;- Perform Ad ...",
+            "- Leads representation in regional events to support business development as ..."
+          ]
+        },
+        {
+          "group": 1978,
+          "latents": [
+            208
+          ],
+          "gain_margin": 7283.62,
+          "examples": [
+            "AR Callers with 1-3 yrs of experience looking for dayshift can also apply;Only 5 days working;Should ...",
+            "Years of experience: 0-2 years;Work from home full/ part time,  virtual opportunities & more ...",
+            "Prior chat and E-mail skills; both require good written communication skills too;Graduate as minimum ..."
+          ]
+        },
+        {
+          "group": 1982,
+          "latents": [
+            83
+          ],
+          "gain_margin": 5887.59,
+          "examples": [
+            "- Experience in retail domain with knowledge across customer lifecycle is must;- Candidate should have ...",
+            "- Experience in retail domain with knowledge across customer lifecycle is must;- Candidate should have ...",
+            "- Experience in retail domain with knowledge across customer lifecycle is must;- Candidate should have ..."
+          ]
+        },
+        {
+          "group": 1119,
+          "latents": [
+            329
+          ],
+          "gain_margin": 1994.62,
+          "examples": [
+            "- Fresher graduates or <2 year of experience in a similar role involving data correction / entry / ...",
+            "Experience 1 - 4Yrs ( AR Calling );Shift- Night shift (US Shift);Immediate Joiners ...",
+            "Should be excellent in communication;Minimum qualification: undergrad/Grad;Urgent requirement of Voice ..."
+          ]
+        },
+        {
+          "group": 1938,
+          "latents": [
+            431
+          ],
+          "gain_margin": 1516.84,
+          "examples": [
+            "Our 22,000 colleagues across 14 global centers deliver an unrivaled consumer experience for our clients ...",
+            "Every day, from more than 40 countries and across 6 continents, our staff delivers next generation ...",
+            "General Manager - Quantity Survey - Real Estate (15-20 yrs)  - Pre construction Quantity Survey ..."
+          ]
+        }
+      ]
+    },
+    "job_desig": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1946,
+      "n_groups": 1940,
+      "n_multi_groups": 6,
+      "n_groups_dropped": 1114,
+      "n_groups_unused": 33,
+      "n_removed": 1115,
+      "var_share_removed": 0.2847,
+      "var_share_sae_error": 0.0248,
+      "top": [
+        {
+          "group": 5,
+          "latents": [
+            208,
+            1100
+          ],
+          "gain_margin": 20144.02,
+          "examples": [
+            "Part time jobs / Home Typing Jobs/data Entry Operator/ work from home",
+            "Data Entry Operator, Back Office Associate",
+            "BPO non Voice Process jobs in Chennai"
+          ]
+        },
+        {
+          "group": 4,
+          "latents": [
+            83,
+            227
+          ],
+          "gain_margin": 13571.16,
+          "examples": [
+            "Head - Consumer Insights Marketing - Cement Firm",
+            "Head - Consumer Insights Marketing - Cement Firm",
+            "Head - Consumer Insights Marketing - Cement Firm"
+          ]
+        },
+        {
+          "group": 882,
+          "latents": [
+            1007
+          ],
+          "gain_margin": 5696.56,
+          "examples": [
+            "International Medical Billing Process Associate in Ahmedabad(night)",
+            "International Medical Billing Process in Ahmedabad Loc(night Shift)",
+            "Hiring 4 Associate/ Analyst/ Insurance Process/ NON Voice/ SAL 3.5lpa"
+          ]
+        },
+        {
+          "group": 1933,
+          "latents": [
+            431
+          ],
+          "gain_margin": 3279.81,
+          "examples": [
+            "Vice President- Analytics- Demand Planning/scm- APAC & ME- Ecommerce",
+            "Assistant Vice President - Insurance Analytics - P&C Domain - Sas/r",
+            "Assistant Vice President - Insurance Analytics - P&C Domain - Sas/r"
+          ]
+        },
+        {
+          "group": 1802,
+          "latents": [
+            148
+          ],
+          "gain_margin": 780.44,
+          "examples": [
+            "Charge Entry & Payment Posting - Contact HR Pavithra",
+            "Genpact Mega Walk-in ||27th Oct",
+            "Walk in Drive for US Healthcare Domain || 31 Oct"
+          ]
+        }
+      ]
+    },
+    "key_skills": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1988,
+      "n_groups": 1977,
+      "n_multi_groups": 10,
+      "n_groups_dropped": 1005,
+      "n_groups_unused": 23,
+      "n_removed": 1006,
+      "var_share_removed": 0.3736,
+      "var_share_sae_error": 0.0301,
+      "top": [
+        {
+          "group": 1899,
+          "latents": [
+            208
+          ],
+          "gain_margin": 9193.45,
+          "examples": [
+            "sourcing, recruitment, placement, call, calling, serarching, job portal...",
+            "BPO, Call Center, Domestic BPO, Voice Process, International BPO...",
+            "BPO, Call Center, Domestic BPO, Voice Process, International BPO..."
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            232,
+            535
+          ],
+          "gain_margin": 6572.07,
+          "examples": [
+            "Fresher, US Health Claim, Operations, KPO, USHC, Backend, Non voice...",
+            "Fresher, graduates, KPO, BPO, ites, Non Voice Process, bpo process...",
+            "kpo, us shift, semi voice, us healthcare, night shift, fresher, biology..."
+          ]
+        },
+        {
+          "group": 1891,
+          "latents": [
+            83
+          ],
+          "gain_margin": 6188.01,
+          "examples": [
+            "High Frequency Trading, Trading Head",
+            "Analytics, SAS, banking, insurance, Analytics Head",
+            "Analytics, SAS, banking, insurance, Analytics Head"
+          ]
+        },
+        {
+          "group": 333,
+          "latents": [
+            1677
+          ],
+          "gain_margin": 1770.21,
+          "examples": [
+            "offline, online, internet, part time, home base, work from home, freelancer...",
+            "offline, online, internet, part time, home base, work from home, freelancer...",
+            "offline, online, part time, home base, work from home, freelancer..."
+          ]
+        },
+        {
+          "group": 1914,
+          "latents": [
+            15
+          ],
+          "gain_margin": 1390.57,
+          "examples": [
+            "Marketing, Consumer Insights, Strategy, Market Intelligence, Marketing Head...",
+            "Business Head Services, General Manager Services Sales...",
+            "head marketing, Sportswear Apparel company, P&L..."
+          ]
+        }
+      ]
+    },
+    "location": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 827,
+      "n_groups": 823,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 750,
+      "n_groups_unused": 12,
+      "n_removed": 753,
+      "var_share_removed": 0.6836,
+      "var_share_sae_error": 0.0028,
+      "top": [
+        {
+          "group": 796,
+          "latents": [
+            535
+          ],
+          "gain_margin": 1398.05,
+          "examples": [
+            "hazaribagh, gumla, khunti, koderma, pakur, palamu, ramgarh, chaibasa, sahebganj",
+            "Baddi, Bahraich, Banswara, Banur, Baramati, Barnala, Bareilly, Barmer, Bellary",
+            "Baddi, Bahraich, Banswara, Banur, Baramati, Barnala, Bareilly, Barmer, Bellary"
+          ]
+        },
+        {
+          "group": 500,
+          "latents": [
+            1100
+          ],
+          "gain_margin": 674.12,
+          "examples": [
+            "hazaribagh, gumla, khunti, koderma, pakur, palamu, ramgarh, chaibasa, sahebganj",
+            "Tezpur, Tarapur, Thane, Thanjavur, Thrissur, Tirunelveli, Tirupati, Trichy, Trivandrum",
+            "Faizabad, Faridabad, Faridkot, Firozpur, Dadra and Nagar Haveli, Dahej, Dalhousie, Dehradun, Dharmasala"
+          ]
+        },
+        {
+          "group": 806,
+          "latents": [
+            329
+          ],
+          "gain_margin": 662.1,
+          "examples": [
+            "Bengaluru, Bhavnagar, Bhubaneshwar, Bhuj, Port Blair, Coimbatore, Cuttack, Dehradun, Durgapur",
+            "Roorkee, Pantnagar, Satna",
+            "jehanabad, katihar, khagaria, kishangang, lakhisarai, madhepura, madhubani, nalanda, nawada"
+          ]
+        },
+        {
+          "group": 90,
+          "latents": [
+            1763
+          ],
+          "gain_margin": 538.89,
+          "examples": [
+            "Ajmer, Alwar, Bhilwara, Jaipur, Jodhpur, Udaipur",
+            "Ajmer, Jaipur, Jodhpur",
+            "Ahmedabad, Vapi, Rajkot"
+          ]
+        },
+        {
+          "group": 642,
+          "latents": [
+            1579
+          ],
+          "gain_margin": 217.4,
+          "examples": [
+            "Delhi NCR, Chandigarh, Delhi, Ghaziabad, Gurgaon, Jaipur, Lucknow, Noida",
+            "Delhi NCR, Chandigarh, Delhi, Ghaziabad, Gurgaon, Jaipur, Lucknow, Noida",
+            "Delhi NCR, Noida(Sector-2 Noida)"
+          ]
+        }
+      ]
+    }
+  }
+}

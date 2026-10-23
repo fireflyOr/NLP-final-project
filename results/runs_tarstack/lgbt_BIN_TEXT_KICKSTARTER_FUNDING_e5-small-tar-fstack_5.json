@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "BIN_TEXT_KICKSTARTER_FUNDING",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.7325722776633639,
+  "test_error": 0.26742772233663614,
+  "course_metric": "auroc",
+  "course_score": 0.7325722776633639,
+  "n_text_cols": 5,
+  "n_text_features": 151,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 16.207366943359375,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": -1,
+    "colsample_bytree": 0.3,
+    "n_trees": 182
+  },
+  "diagnostics": {}
+}

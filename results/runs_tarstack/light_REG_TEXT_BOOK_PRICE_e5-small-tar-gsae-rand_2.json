@@ -1,0 +1,396 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.24001447050789723,
+  "test_error": 0.24001447050789723,
+  "course_metric": "r2",
+  "course_score": 0.45162365983799047,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 49.22896862030029,
+  "learner_params": null,
+  "diagnostics": {
+    "Author": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1678,
+      "n_groups": 1678,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1120,
+      "n_groups_unused": 418,
+      "n_removed": 1120,
+      "var_share_removed": 0.5984,
+      "var_share_sae_error": 0.003,
+      "top": [
+        {
+          "group": 215,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1088.05,
+          "examples": [
+            "P. Sainath",
+            "P. Sainath",
+            "P. Sainath"
+          ]
+        },
+        {
+          "group": 857,
+          "latents": [
+            305
+          ],
+          "gain_margin": 886.51,
+          "examples": [
+            "Wizards RPG Team",
+            "Brian Weiss",
+            "Brian Weiss"
+          ]
+        },
+        {
+          "group": 1638,
+          "latents": [
+            477
+          ],
+          "gain_margin": 610.15,
+          "examples": [
+            "Rituparna Sarkar",
+            "Chaturvedi Badrinath",
+            "Vivaksh Singh"
+          ]
+        },
+        {
+          "group": 1675,
+          "latents": [
+            396
+          ],
+          "gain_margin": 375.96,
+          "examples": [
+            "Nikhil Sharma Shantanu Gupta",
+            "Raghu Srinivasan",
+            "Raghu Srinivasan"
+          ]
+        },
+        {
+          "group": 1677,
+          "latents": [
+            204
+          ],
+          "gain_margin": 230.49,
+          "examples": [
+            "Warner Bros",
+            "Warner Bros",
+            "George Michell, Gethin Rees"
+          ]
+        }
+      ]
+    },
+    "Edition": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 685,
+      "n_groups": 655,
+      "n_multi_groups": 23,
+      "n_groups_dropped": 450,
+      "n_groups_unused": 108,
+      "n_removed": 465,
+      "var_share_removed": 0.5359,
+      "var_share_sae_error": 0.0015,
+      "top": [
+        {
+          "group": 541,
+          "latents": [
+            204
+          ],
+          "gain_margin": 692.54,
+          "examples": [
+            "Flexibound,\u2013 27 Sep 2011",
+            "Hardcover,\u2013 Box set, 7 Nov 2013",
+            "Hardcover,\u2013 29 Mar 2012"
+          ]
+        },
+        {
+          "group": 173,
+          "latents": [
+            1546
+          ],
+          "gain_margin": 440.79,
+          "examples": [
+            "(Kannada),Paperback,\u2013 2014",
+            "Mass Market Paperback,\u2013 10 Jan 2018",
+            "Paperback,\u2013 2018"
+          ]
+        },
+        {
+          "group": 524,
+          "latents": [
+            305
+          ],
+          "gain_margin": 400.83,
+          "examples": [
+            "Hardcover,\u2013 Deckle Edge, 18 Oct 2011",
+            "Hardcover,\u2013 Deckle Edge, 7 Mar 2017",
+            "Hardcover,\u2013 Box set, 7 Nov 2013"
+          ]
+        },
+        {
+          "group": 540,
+          "latents": [
+            1072
+          ],
+          "gain_margin": 340.71,
+          "examples": [
+            "Hardcover,\u2013 16 Jun 2005",
+            "Hardcover,\u2013 11 Jun 2009",
+            "Hardcover,\u2013 16 Sep 2008"
+          ]
+        },
+        {
+          "group": 528,
+          "latents": [
+            354
+          ],
+          "gain_margin": 215.89,
+          "examples": [
+            "Hardcover,\u2013 Illustrated, Import",
+            "Hardcover,\u2013 16 Jun 2005",
+            "Hardcover,\u2013 20 May 1993"
+          ]
+        }
+      ]
+    },
+    "Genre": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 716,
+      "n_groups": 716,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 580,
+      "n_groups_unused": 110,
+      "n_removed": 580,
+      "var_share_removed": 0.6416,
+      "var_share_sae_error": 0.0005,
+      "top": [
+        {
+          "group": 245,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1150.47,
+          "examples": [
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)",
+            "Crime, Thriller & Mystery (Books)"
+          ]
+        },
+        {
+          "group": 555,
+          "latents": [
+            942
+          ],
+          "gain_margin": 462.97,
+          "examples": [
+            "IGCSE",
+            "IGCSE",
+            "IGCSE"
+          ]
+        },
+        {
+          "group": 194,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 308.12,
+          "examples": [
+            "Object-Oriented Software Design",
+            "Interface Design Programming",
+            "Visual C++ Programming"
+          ]
+        },
+        {
+          "group": 678,
+          "latents": [
+            305
+          ],
+          "gain_margin": 293.01,
+          "examples": [
+            "Visual Arts",
+            "Visual Arts",
+            "Graphics & Visualization"
+          ]
+        },
+        {
+          "group": 368,
+          "latents": [
+            515
+          ],
+          "gain_margin": 250.6,
+          "examples": [
+            "English Literature",
+            "English Literature",
+            "Literature"
+          ]
+        }
+      ]
+    },
+    "Synopsis": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1705,
+      "n_groups": 1705,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1222,
+      "n_groups_unused": 439,
+      "n_removed": 1222,
+      "var_share_removed": 0.7096,
+      "var_share_sae_error": 0.0185,
+      "top": [
+        {
+          "group": 851,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2361.12,
+          "examples": [
+            "This beautiful origami art book is a collection of the best contemporary pieces from some of the worlds most renowned papercraft artists.\n\nThanks to pioneering ",
+            "In Stan Lee's How to Draw Comics, Stan Lee reveals his secrets for:\n \n* Costumes * Penciling, Inking & Coloring * Lettering & Word Balloons\n* Digital Advances *",
+            "In Stan Lee's How to Draw Comics, Stan Lee reveals his secrets for:\n \n* Costumes * Penciling, Inking & Coloring * Lettering & Word Balloons\n* Digital Advances *"
+          ]
+        },
+        {
+          "group": 190,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 2010.86,
+          "examples": [
+            "Following in the footsteps of the all-time best-selling The Big Book of Logos, this deluxe, full-color volume is packed with 2,500 superior new logo designs, cu",
+            "Beginner's Guide to Digital Painting: Characters is a comprehensive guide for artists wishing to create convincing and detailed characters. It features establis",
+            "America's preeminent makeup artist shares his secrets, explaining not only the basics of makeup application and technique but also how to use the fundamentals t"
+          ]
+        },
+        {
+          "group": 850,
+          "latents": [
+            1209
+          ],
+          "gain_margin": 1688.36,
+          "examples": [
+            "Discover for yourself the magic of \"Strength Training Anatomy\", one of the best-selling strength training books ever published! Get an intricate look at strengt",
+            "American favourite cat is back with this new edition of three-in-one comic strips\u2014containing: Garfield rounds out (#16), Garfield chews the fat (#17)and Garfiel",
+            "The Data Warehouse ETL Toolkit: Practical Techniques for Extracting, Cleaning, Conforming and Delivering Data has been authored by Ralph Kimball and Joe Caserta"
+          ]
+        },
+        {
+          "group": 849,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1158.01,
+          "examples": [
+            "Six months have passed since Prisha was pushed to death by the person she loved the most, Saveer. But she doesn't believes that it was him till she stumbles upo",
+            "'You're asking me to hold your hand. And now you're turning away from me. You are saying something but I can't hear you. It's too windy. You're crying now. Now ",
+            "On the day Yamini accidentally finds herself behind the door of her parents' bedroom, she witnesses the monster that her father is and her life is changed irrev"
+          ]
+        },
+        {
+          "group": 1703,
+          "latents": [
+            204
+          ],
+          "gain_margin": 949.75,
+          "examples": [
+            "Discover the methods and skillful tricks of master news writer, Rene J. Cappon, to create your own compelling and clear writing style. Designed to help writers ",
+            "Screenplay: The Foundations Of Screenwriting offers a step-by-step guide about screenwriting, from the concept to a finished script, and is written by the maste",
+            "The fourth edition of the authoritative guide to producing, directing, shooting, editing, and distributing your video or film.\n\nWidely acknowledged as the \u201cbibl"
+          ]
+        }
+      ]
+    },
+    "Title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1828,
+      "n_groups": 1828,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1271,
+      "n_groups_unused": 466,
+      "n_removed": 1271,
+      "var_share_removed": 0.6398,
+      "var_share_sae_error": 0.0189,
+      "top": [
+        {
+          "group": 1827,
+          "latents": [
+            305
+          ],
+          "gain_margin": 2344.8,
+          "examples": [
+            "Frederick Noad: Solo Guitar Playing Volume 1 - Fourth Edition (Book/CD)",
+            "Creative Selection: Inside Apple's Design Process During the Golden Age of Steve Jobs",
+            "Daredevil by Frank Miller & Klaus Jason Omnibus (New Printing): '2016/03/15"
+          ]
+        },
+        {
+          "group": 1826,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 1440.75,
+          "examples": [
+            "Right From The Start... She Stole His Heart",
+            "Where She Went (If I Stay)",
+            "Helen"
+          ]
+        },
+        {
+          "group": 309,
+          "latents": [
+            1819
+          ],
+          "gain_margin": 927.91,
+          "examples": [
+            "Fashion Designer\u2032s Handbook for Adobe Illustrator",
+            "Complete Screenwriting Course: A complete guide to writing, developing and marketing a script for TV or film (Teach Yourself)",
+            "National Geographic Ultimate Field Guide to Photography: Revised and Expanded (Photography Field Guides)"
+          ]
+        },
+        {
+          "group": 1825,
+          "latents": [
+            1233
+          ],
+          "gain_margin": 721.34,
+          "examples": [
+            "The Ultimate Hiker's Gear Guide, Second Edition: Tools and Techniques to Hit the Trail",
+            "Shooter's Bible: The World's Standard Firearms Reference Book",
+            "Production-Ready Microservices: Building Standardized Systems Across an Engineering Organization"
+          ]
+        },
+        {
+          "group": 959,
+          "latents": [
+            751
+          ],
+          "gain_margin": 451.49,
+          "examples": [
+            "Scholastic Study Smart 01 - Grammar Builder",
+            "Learn with Phonics Book - 4",
+            "Scholastic Success with Grammar Grade - 2"
+          ]
+        }
+      ]
+    }
+  }
+}

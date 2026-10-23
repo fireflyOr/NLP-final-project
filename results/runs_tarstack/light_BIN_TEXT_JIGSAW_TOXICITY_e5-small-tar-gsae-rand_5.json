@@ -1,0 +1,175 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9172107899937693,
+  "test_error": 0.08278921000623074,
+  "course_metric": "auroc",
+  "course_score": 0.9172107899937694,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 37.6348032951355,
+  "learner_params": null,
+  "diagnostics": {
+    "comment_text": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2047,
+      "n_groups": 2044,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 1412,
+      "n_groups_unused": 273,
+      "n_removed": 1412,
+      "var_share_removed": 0.5932,
+      "var_share_sae_error": 0.1081,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            227,
+            1869
+          ],
+          "gain_margin": 9545.9,
+          "examples": [
+            "To the Chinese Trudeau is a useful idiot.",
+            "This is a really, really stupid man.",
+            "Two stupids don't make a right"
+          ]
+        },
+        {
+          "group": 1727,
+          "latents": [
+            510
+          ],
+          "gain_margin": 2113.94,
+          "examples": [
+            "Because it's 2017 and we have an idiot leading the country.",
+            "She is such an IDIOT",
+            "trump needs to ignore idiot posts like yours"
+          ]
+        },
+        {
+          "group": 1018,
+          "latents": [
+            480
+          ],
+          "gain_margin": 898.03,
+          "examples": [
+            "Being the second largest arms supplier to the middle east takes what would just be plain old Canadian smugness to a level of human interaction best described as",
+            "Hillary Clinton's speaking style? The myriads of lies? The voice of a cackling crow? The person who attempted to destroy her sexual predator husband's victims?",
+            "We don't have a gun problem. We have a scumbag problem."
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            1052,
+            1121,
+            1219
+          ],
+          "gain_margin": 864.08,
+          "examples": [
+            "Even if corporate and unions' donations to political parties in BC are banned, unions will continue to exert significant control over the BC NDP... contrary to ",
+            "Definitely NO to your suggestion of a capital gains tax on personal homes.\nThere are many problems with that and it's not likely to improve the housing supply o",
+            "is the established landlord pledging these other two dozen properties as additional collateral, if yes, I agree with you to a point, if the established landlord"
+          ]
+        },
+        {
+          "group": 677,
+          "latents": [
+            1132
+          ],
+          "gain_margin": 689.26,
+          "examples": [
+            "Two stupids don't make a right",
+            "She is such an IDIOT",
+            "Too bad there's no vaccine for stupid."
+          ]
+        }
+      ]
+    },
+    "created_date": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1514,
+      "n_groups": 1406,
+      "n_multi_groups": 94,
+      "n_groups_dropped": 1069,
+      "n_groups_unused": 387,
+      "n_removed": 1127,
+      "var_share_removed": 0.662,
+      "var_share_sae_error": 0.0189,
+      "top": [
+        {
+          "group": 1208,
+          "latents": [
+            989
+          ],
+          "gain_margin": 138.88,
+          "examples": [
+            "2017-02-22 05:08:24.730873",
+            "2016-11-18 22:03:51.406395",
+            "2017-05-31 13:30:49.730837"
+          ]
+        },
+        {
+          "group": 96,
+          "latents": [
+            888,
+            1599
+          ],
+          "gain_margin": 124.82,
+          "examples": [
+            "2017-07-19 13:47:39.561914",
+            "2017-11-07 18:39:10.624979",
+            "2017-08-11 18:10:36.232240"
+          ]
+        },
+        {
+          "group": 132,
+          "latents": [
+            1918
+          ],
+          "gain_margin": 121.26,
+          "examples": [
+            "2017-10-26 22:23:26.748037",
+            "2017-10-21 17:27:26.812465",
+            "2016-07-26 00:28:26.832676"
+          ]
+        },
+        {
+          "group": 201,
+          "latents": [
+            1742
+          ],
+          "gain_margin": 109.85,
+          "examples": [
+            "2017-09-16 08:00:20.591842",
+            "2016-08-11 17:59:30.594321",
+            "2017-02-03 19:13:15.592642"
+          ]
+        },
+        {
+          "group": 1140,
+          "latents": [
+            472
+          ],
+          "gain_margin": 103.9,
+          "examples": [
+            "2017-08-23 23:00:45.182994",
+            "2017-09-11 12:17:14.191199",
+            "2017-09-18 13:44:59.123926"
+          ]
+        }
+      ]
+    }
+  }
+}

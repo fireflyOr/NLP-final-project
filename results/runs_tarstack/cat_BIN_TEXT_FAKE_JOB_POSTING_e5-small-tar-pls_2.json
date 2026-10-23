@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-pls",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9194669101309698,
+  "test_error": 0.08053308986903018,
+  "course_metric": "auroc",
+  "course_score": 0.9194669101309697,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 6.971535921096802,
+  "learner_params": null,
+  "diagnostics": {}
+}

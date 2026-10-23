@@ -1,0 +1,698 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.27545887337127506,
+  "test_error": 0.27545887337127506,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.979100567145165,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 238.01995730400085,
+  "learner_params": null,
+  "diagnostics": {
+    "Airport_Code": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1700,
+      "n_groups": 1697,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 1261,
+      "n_groups_unused": 53,
+      "n_removed": 1262,
+      "var_share_removed": 0.5914,
+      "var_share_sae_error": 0.0016,
+      "top": [
+        {
+          "group": 1461,
+          "latents": [
+            827
+          ],
+          "gain_margin": 192.07,
+          "examples": [
+            "KFTY",
+            "KFTY",
+            "KFTY"
+          ]
+        },
+        {
+          "group": 1677,
+          "latents": [
+            454
+          ],
+          "gain_margin": 188.3,
+          "examples": [
+            "KSRC",
+            "KSDF",
+            "KSDF"
+          ]
+        },
+        {
+          "group": 1535,
+          "latents": [
+            18
+          ],
+          "gain_margin": 147.74,
+          "examples": [
+            "KBKL",
+            "KBKL",
+            "KBKL"
+          ]
+        },
+        {
+          "group": 686,
+          "latents": [
+            793
+          ],
+          "gain_margin": 133.61,
+          "examples": [
+            "KHNR",
+            "KHNB",
+            "KHWD"
+          ]
+        },
+        {
+          "group": 688,
+          "latents": [
+            449
+          ],
+          "gain_margin": 88.88,
+          "examples": [
+            "KPBI",
+            "KPBI",
+            "KPBI"
+          ]
+        }
+      ]
+    },
+    "City": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1901,
+      "n_groups": 1900,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1297,
+      "n_groups_unused": 78,
+      "n_removed": 1297,
+      "var_share_removed": 0.5865,
+      "var_share_sae_error": 0.005,
+      "top": [
+        {
+          "group": 1880,
+          "latents": [
+            591
+          ],
+          "gain_margin": 349.77,
+          "examples": [
+            "Utica",
+            "North Chicago",
+            "North Chicago"
+          ]
+        },
+        {
+          "group": 31,
+          "latents": [
+            2006
+          ],
+          "gain_margin": 150.49,
+          "examples": [
+            "Fair Oaks",
+            "Fair Oaks",
+            "Fair Oaks"
+          ]
+        },
+        {
+          "group": 46,
+          "latents": [
+            2004
+          ],
+          "gain_margin": 135.74,
+          "examples": [
+            "Towson",
+            "Cleveland",
+            "Cleveland"
+          ]
+        },
+        {
+          "group": 556,
+          "latents": [
+            991
+          ],
+          "gain_margin": 130.84,
+          "examples": [
+            "Show Low",
+            "Nottingham",
+            "Nottingham"
+          ]
+        },
+        {
+          "group": 1857,
+          "latents": [
+            219
+          ],
+          "gain_margin": 120.35,
+          "examples": [
+            "Owings",
+            "Cleveland",
+            "Cleveland"
+          ]
+        }
+      ]
+    },
+    "County": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1532,
+      "n_groups": 1532,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 1162,
+      "n_groups_unused": 71,
+      "n_removed": 1162,
+      "var_share_removed": 0.5746,
+      "var_share_sae_error": 0.0012,
+      "top": [
+        {
+          "group": 1328,
+          "latents": [
+            589
+          ],
+          "gain_margin": 305.06,
+          "examples": [
+            "Fulton",
+            "Fulton",
+            "Fulton"
+          ]
+        },
+        {
+          "group": 723,
+          "latents": [
+            842
+          ],
+          "gain_margin": 207.08,
+          "examples": [
+            "Lorain",
+            "Cleveland",
+            "Cleveland"
+          ]
+        },
+        {
+          "group": 50,
+          "latents": [
+            1903
+          ],
+          "gain_margin": 176.59,
+          "examples": [
+            "Cook",
+            "Cook",
+            "Cook"
+          ]
+        },
+        {
+          "group": 523,
+          "latents": [
+            1708
+          ],
+          "gain_margin": 155.67,
+          "examples": [
+            "Bartow",
+            "Bartow",
+            "Bartow"
+          ]
+        },
+        {
+          "group": 316,
+          "latents": [
+            1307
+          ],
+          "gain_margin": 122.4,
+          "examples": [
+            "San Diego",
+            "San Diego",
+            "San Diego"
+          ]
+        }
+      ]
+    },
+    "Description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1577,
+      "n_groups": 1559,
+      "n_multi_groups": 18,
+      "n_groups_dropped": 1010,
+      "n_groups_unused": 139,
+      "n_removed": 1018,
+      "var_share_removed": 0.1066,
+      "var_share_sae_error": 0.0179,
+      "top": [
+        {
+          "group": 1550,
+          "latents": [
+            539
+          ],
+          "gain_margin": 11462.01,
+          "examples": [
+            "Accident on I-590 Eastbound from Exit 1 County Hwy-98 Winton Rd to Exits 2 2A 2B NY-31 Monroe Ave.",
+            "Left lane closed due to accident on I-278 Verrazano-Narrows Bridge Upper Level Eastbound before Exit 16 Belt Pkwy Exit 3.",
+            "Left lane blocked due to accident on I-26 Eastbound after Exit 125 Old Sandy Run Rd."
+          ]
+        },
+        {
+          "group": 729,
+          "latents": [
+            1435
+          ],
+          "gain_margin": 8633.71,
+          "examples": [
+            "I-95 Northbound is congested from Exit 46 to Exit 8 on I-91 North because of Motor Vehicle Accident (2 Vehicle) between Exits 6 and 8 on i-91. The 2 right lanes",
+            "Restrictions due to accident on I-520 Bobby Jones Expy Eastbound at Exit 16 GA-28 Sand Bar Ferry Rd.",
+            "2 left lane blocked due to accident on I-75 Northbound between Exit 229 CR-6 Moccasin Wallow Rd and Exits 240 240A 240B FL-674 College Ave."
+          ]
+        },
+        {
+          "group": 193,
+          "latents": [
+            1492
+          ],
+          "gain_margin": 6163.98,
+          "examples": [
+            "Left lane blocked due to accident on I-24 Westbound between Exits 78A 78B TN-96 Old Fort Pkwy and Exit 76 Medical Center Pkwy.",
+            "Two lanes blocked due to accident on I-20 Westbound at GA-280 Hamilton E Holmes Dr.",
+            "Two lanes blocked due to accident on I-85 Northbound at Exit 61 GA-74 Senoia Rd."
+          ]
+        },
+        {
+          "group": 723,
+          "latents": [
+            1129
+          ],
+          "gain_margin": 4920.54,
+          "examples": [
+            "Accident on I-44 Eastbound at Exit 129 63rd St.",
+            "Restrictions due to accident on I-80 Eastbound after Exit 50 / Nevada Pacific Pkwy.",
+            "Main roadway closed due to accident on I-495 Express Lanes Southbound from US-50 Arlington Blvd to VA-236 Little River Tpke."
+          ]
+        },
+        {
+          "group": 700,
+          "latents": [
+            1099
+          ],
+          "gain_margin": 3435.63,
+          "examples": [
+            "Slow traffic and restrictions due to accident on I-95 Southbound at Exit 6 Chestnut St.",
+            "Accident on I-93 Northbound at Exit 6 MA-37 Granite St.",
+            "Left lane closed due to accident on I-84 Westbound at Exits 57 58 CT-15."
+          ]
+        }
+      ]
+    },
+    "End_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 412,
+      "n_groups": 376,
+      "n_multi_groups": 28,
+      "n_groups_dropped": 247,
+      "n_groups_unused": 13,
+      "n_removed": 267,
+      "var_share_removed": 0.3645,
+      "var_share_sae_error": 0.0024,
+      "top": [
+        {
+          "group": 219,
+          "latents": [
+            820
+          ],
+          "gain_margin": 1409.52,
+          "examples": [
+            "2018-12-24 16:26:42",
+            "2018-12-21 10:15:18",
+            "2018-12-28 09:59:24"
+          ]
+        },
+        {
+          "group": 189,
+          "latents": [
+            1516
+          ],
+          "gain_margin": 1189.9,
+          "examples": [
+            "2019-10-15 20:10:14",
+            "2019-10-27 10:14:20",
+            "2019-10-28 21:21:12"
+          ]
+        },
+        {
+          "group": 310,
+          "latents": [
+            752
+          ],
+          "gain_margin": 940.05,
+          "examples": [
+            "2017-11-17 00:54:09",
+            "2017-11-01 21:08:46",
+            "2017-11-13 08:30:06"
+          ]
+        },
+        {
+          "group": 331,
+          "latents": [
+            232
+          ],
+          "gain_margin": 750.78,
+          "examples": [
+            "2022-06-30 08:42:50",
+            "2022-06-12 20:35:08",
+            "2022-07-07 06:03:06"
+          ]
+        },
+        {
+          "group": 132,
+          "latents": [
+            1175
+          ],
+          "gain_margin": 703.51,
+          "examples": [
+            "2020-05-28 17:31:34",
+            "2020-05-23 10:10:07",
+            "2020-05-27 22:15:35"
+          ]
+        }
+      ]
+    },
+    "Start_Time": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 438,
+      "n_groups": 392,
+      "n_multi_groups": 40,
+      "n_groups_dropped": 262,
+      "n_groups_unused": 10,
+      "n_removed": 285,
+      "var_share_removed": 0.2966,
+      "var_share_sae_error": 0.0022,
+      "top": [
+        {
+          "group": 193,
+          "latents": [
+            1130
+          ],
+          "gain_margin": 2928.81,
+          "examples": [
+            "2023-02-28 06:48:00",
+            "2022-02-24 02:46:00",
+            "2023-02-02 07:28:00"
+          ]
+        },
+        {
+          "group": 285,
+          "latents": [
+            591
+          ],
+          "gain_margin": 981.49,
+          "examples": [
+            "2018-05-06 19:20:42",
+            "2018-05-27 14:32:43",
+            "2018-05-05 14:49:28"
+          ]
+        },
+        {
+          "group": 369,
+          "latents": [
+            752
+          ],
+          "gain_margin": 741.79,
+          "examples": [
+            "2016-11-30 09:04:50",
+            "2017-05-08 08:00:50",
+            "2016-04-04 14:09:00"
+          ]
+        },
+        {
+          "group": 179,
+          "latents": [
+            1050
+          ],
+          "gain_margin": 655.49,
+          "examples": [
+            "2022-07-01 07:27:10",
+            "2022-07-08 22:33:53",
+            "2022-07-07 04:04:10"
+          ]
+        },
+        {
+          "group": 14,
+          "latents": [
+            1277,
+            1429
+          ],
+          "gain_margin": 634.88,
+          "examples": [
+            "2020-02-23 10:20:00",
+            "2020-02-23 12:35:00",
+            "2020-02-09 12:25:00"
+          ]
+        }
+      ]
+    },
+    "Street": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1917,
+      "n_groups": 1907,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1170,
+      "n_groups_unused": 91,
+      "n_removed": 1171,
+      "var_share_removed": 0.2808,
+      "var_share_sae_error": 0.0181,
+      "top": [
+        {
+          "group": 944,
+          "latents": [
+            1129
+          ],
+          "gain_margin": 2733.36,
+          "examples": [
+            "I-480N W",
+            "I-283 S",
+            "I-376 E"
+          ]
+        },
+        {
+          "group": 1883,
+          "latents": [
+            545
+          ],
+          "gain_margin": 1338.87,
+          "examples": [
+            "I-85 Bus N",
+            "I-84 E",
+            "I-84 E"
+          ]
+        },
+        {
+          "group": 140,
+          "latents": [
+            1969
+          ],
+          "gain_margin": 979.83,
+          "examples": [
+            "I-238 S",
+            "I-405 S",
+            "I-405 S"
+          ]
+        },
+        {
+          "group": 1875,
+          "latents": [
+            1409
+          ],
+          "gain_margin": 815.41,
+          "examples": [
+            "I-95 Express Ln",
+            "I-95 Express Ln",
+            "I-78 Express Lane"
+          ]
+        },
+        {
+          "group": 1878,
+          "latents": [
+            89
+          ],
+          "gain_margin": 614.47,
+          "examples": [
+            "I-83 N",
+            "I-83 N",
+            "I-83 N"
+          ]
+        }
+      ]
+    },
+    "Weather_Timestamp": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 412,
+      "n_groups": 365,
+      "n_multi_groups": 35,
+      "n_groups_dropped": 252,
+      "n_groups_unused": 1,
+      "n_removed": 284,
+      "var_share_removed": 0.3163,
+      "var_share_sae_error": 0.0017,
+      "top": [
+        {
+          "group": 295,
+          "latents": [
+            752
+          ],
+          "gain_margin": 1290.22,
+          "examples": [
+            "2016-08-21 19:54:00",
+            "2016-08-24 04:54:00",
+            "2016-06-23 11:54:00"
+          ]
+        },
+        {
+          "group": 278,
+          "latents": [
+            686
+          ],
+          "gain_margin": 862.65,
+          "examples": [
+            "Unknown Value",
+            "Unknown Value",
+            "Unknown Value"
+          ]
+        },
+        {
+          "group": 326,
+          "latents": [
+            1201
+          ],
+          "gain_margin": 647.64,
+          "examples": [
+            "2020-05-20 17:51:00",
+            "2020-05-21 17:54:00",
+            "2020-06-02 17:58:00"
+          ]
+        },
+        {
+          "group": 38,
+          "latents": [
+            837,
+            874
+          ],
+          "gain_margin": 557.84,
+          "examples": [
+            "2019-06-01 12:56:00",
+            "2019-06-12 10:50:00",
+            "2018-04-24 06:59:00"
+          ]
+        },
+        {
+          "group": 274,
+          "latents": [
+            539
+          ],
+          "gain_margin": 422.84,
+          "examples": [
+            "2018-01-24 05:51:00",
+            "2018-01-25 21:51:00",
+            "2018-01-10 21:51:00"
+          ]
+        }
+      ]
+    },
+    "Zipcode": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1276,
+      "n_groups": 1225,
+      "n_multi_groups": 48,
+      "n_groups_dropped": 702,
+      "n_groups_unused": 68,
+      "n_removed": 721,
+      "var_share_removed": 0.2194,
+      "var_share_sae_error": 0.0064,
+      "top": [
+        {
+          "group": 740,
+          "latents": [
+            918
+          ],
+          "gain_margin": 1966.52,
+          "examples": [
+            "85928-6040",
+            "85253-5936",
+            "85746-1077"
+          ]
+        },
+        {
+          "group": 912,
+          "latents": [
+            828
+          ],
+          "gain_margin": 1005.16,
+          "examples": [
+            "17067-1769",
+            "27587-7235",
+            "27529-4748"
+          ]
+        },
+        {
+          "group": 571,
+          "latents": [
+            620
+          ],
+          "gain_margin": 782.17,
+          "examples": [
+            "85737-9335",
+            "85737-9301",
+            "85746-1077"
+          ]
+        },
+        {
+          "group": 367,
+          "latents": [
+            801
+          ],
+          "gain_margin": 506.7,
+          "examples": [
+            "22660-1825",
+            "21666-2137",
+            "14604-1616"
+          ]
+        },
+        {
+          "group": 1203,
+          "latents": [
+            780
+          ],
+          "gain_margin": 473.0,
+          "examples": [
+            "23059-4747",
+            "23832-2545",
+            "29585-4830"
+          ]
+        }
+      ]
+    }
+  }
+}

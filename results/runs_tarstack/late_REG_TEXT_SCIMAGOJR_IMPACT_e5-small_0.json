@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_SCIMAGOJR_IMPACT",
+  "encoder": "late-fusion",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -21.948917032090645,
+  "test_error": 21.948917032090645,
+  "course_metric": "r2",
+  "course_score": 0.8358772396445315,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 18.196547508239746,
+  "learner_params": null,
+  "diagnostics": {}
+}

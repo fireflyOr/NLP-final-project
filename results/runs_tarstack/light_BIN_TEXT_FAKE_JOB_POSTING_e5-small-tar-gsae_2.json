@@ -1,0 +1,249 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "BIN_TEXT_FAKE_JOB_POSTING",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 2,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9135041892557911,
+  "test_error": 0.08649581074420887,
+  "course_metric": "auroc",
+  "course_score": 0.913504189255791,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 8484,
+  "n_test": 4241,
+  "runtime_s": 45.37648034095764,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 2043,
+      "n_groups": 2042,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 1429,
+      "n_groups_unused": 372,
+      "n_removed": 1429,
+      "var_share_removed": 0.4397,
+      "var_share_sae_error": 0.0738,
+      "top": [
+        {
+          "group": 1020,
+          "latents": [
+            315
+          ],
+          "gain_margin": 2889.19,
+          "examples": [
+            "URGENT Part Timers &amp; Full Timers Required.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $350 To $400 Extr",
+            "Part Time Workers Wanted, Urgent Jobs.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra Per Da",
+            "Weekend Cash Jobs Part time &amp; Full time.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra "
+          ]
+        },
+        {
+          "group": 1173,
+          "latents": [
+            480
+          ],
+          "gain_margin": 2818.33,
+          "examples": [
+            "Offering CASH Positions, Immediate Start.Work as many or little hrs as u like, No cost.You can earn $300 to $400 extra a day.No experience required for this job",
+            "We're looking for self-motivated individuals who are interested in working from home by performing online data entry work, and other types of work from home dut",
+            "We're looking for self-motivated individuals who are interested in working from home by performing online data entry work, and other types of work from home dut"
+          ]
+        },
+        {
+          "group": 618,
+          "latents": [
+            1530
+          ],
+          "gain_margin": 2816.17,
+          "examples": [
+            "Senior Engineering Product ManagerAs a member of the Service Provider Engineering team, you will be responsible for managing the development of broadband DSL pr",
+            "Find more jobs at #URL_4708e598004bb0a85bf09f9eecc0a8f1fdc0f496e68deb05ee2432ff63e13767#Apply with below link#URL_6f8cb24d580e88d19d1863709df52806cee08a83aa8f48",
+            "Corporate overviewAker Solutions is a global provider of products, systems and services to the oil and gas industry. Our engineering, design and technology brin"
+          ]
+        },
+        {
+          "group": 1007,
+          "latents": [
+            1055
+          ],
+          "gain_margin": 1731.51,
+          "examples": [
+            "St. Ermin's Hotel2 Caxton Street Westminster,\u00a0London SW1H 0QWUNITED KINGDOM+44 70538 25547St. Ermins Hotel \u00a0urgently needs the services of devoted and Hard work",
+            "Our company is seeking Receptionist/ Administrative Assistant to monitor multi-line phones, greet visitors, and assist with various clerical duties as needed. M",
+            "Weekend Cash Jobs Part time &amp; Full time.No Experience Required And Never Any Fees.Work Anytime 1 To 2 Hrs Daily In Free Time.Earn Easily $400 To $500 Extra "
+          ]
+        },
+        {
+          "group": 2030,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 915.05,
+          "examples": [
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time",
+            "We are seeking individuals to be connected with companies who are hiring employees directly to work from their homes. You will find both full-time and part-time"
+          ]
+        }
+      ]
+    },
+    "salary_range": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 312,
+      "n_groups": 300,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 247,
+      "n_groups_unused": 33,
+      "n_removed": 256,
+      "var_share_removed": 0.5717,
+      "var_share_sae_error": 0.002,
+      "top": [
+        {
+          "group": 4,
+          "latents": [
+            739,
+            1617,
+            1828
+          ],
+          "gain_margin": 244.14,
+          "examples": [
+            "3000-100000",
+            "3-Apr",
+            "0-30000"
+          ]
+        },
+        {
+          "group": 146,
+          "latents": [
+            1311
+          ],
+          "gain_margin": 142.83,
+          "examples": [
+            "2000-5000",
+            "2000-5000",
+            "4000-5000"
+          ]
+        },
+        {
+          "group": 142,
+          "latents": [
+            1440
+          ],
+          "gain_margin": 118.9,
+          "examples": [
+            "20-25",
+            "20-25",
+            "20-25"
+          ]
+        },
+        {
+          "group": 50,
+          "latents": [
+            1643
+          ],
+          "gain_margin": 85.68,
+          "examples": [
+            "750-750",
+            "750-750",
+            "43000-69000"
+          ]
+        },
+        {
+          "group": 206,
+          "latents": [
+            1103
+          ],
+          "gain_margin": 70.82,
+          "examples": [
+            "27000-34000",
+            "27000-34280",
+            "27000-32000"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1969,
+      "n_groups": 1959,
+      "n_multi_groups": 9,
+      "n_groups_dropped": 1432,
+      "n_groups_unused": 393,
+      "n_removed": 1435,
+      "var_share_removed": 0.4319,
+      "var_share_sae_error": 0.0269,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            480,
+            1055
+          ],
+          "gain_margin": 3518.4,
+          "examples": [
+            "Offering CASH Positions, Immediate Start.",
+            "Part Time Cash Jobs To Immediate Starts.",
+            "Weekly PART TIME Cash Job, Staff Required."
+          ]
+        },
+        {
+          "group": 924,
+          "latents": [
+            1514
+          ],
+          "gain_margin": 1435.21,
+          "examples": [
+            "Well Paid Cash Jobs To Start Immediately. ",
+            "Hiring Part-Time Workers (CASH PAYING)",
+            "URGENT Job Full Time & Part Time, Cash Pay."
+          ]
+        },
+        {
+          "group": 1917,
+          "latents": [
+            386
+          ],
+          "gain_margin": 499.38,
+          "examples": [
+            "Hospitalist jobs in USA",
+            "URGENT Part Timers & Full Timers Required.",
+            " Payroll Data Entry Clerk Position - Earn $100-$200 Daily "
+          ]
+        },
+        {
+          "group": 1556,
+          "latents": [
+            315
+          ],
+          "gain_margin": 494.97,
+          "examples": [
+            "Accounting Clerk/ $23",
+            "Hiring Registered Nurses: F/T, P/T & Per Diem. $38-$45/hour",
+            "Administrative Assistant/Front Desk Clerk"
+          ]
+        },
+        {
+          "group": 1467,
+          "latents": [
+            1173
+          ],
+          "gain_margin": 291.0,
+          "examples": [
+            " Payroll Data Entry Clerk Position - Earn $100-$200 Daily ",
+            "Home Based Payroll Typist/Data Entry Clerks Positions Available",
+            "Use Your Spare Time to Start Earning More"
+          ]
+        }
+      ]
+    }
+  }
+}

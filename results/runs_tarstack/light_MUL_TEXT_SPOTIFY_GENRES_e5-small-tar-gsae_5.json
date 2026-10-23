@@ -1,0 +1,248 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-tar-gsae",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -3.2436516097977197,
+  "test_error": 3.2436516097977197,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9065013943881941,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 1327.622343301773,
+  "learner_params": null,
+  "diagnostics": {
+    "album_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1917,
+      "n_groups": 1914,
+      "n_multi_groups": 3,
+      "n_groups_dropped": 333,
+      "n_groups_unused": 0,
+      "n_removed": 333,
+      "var_share_removed": 0.0361,
+      "var_share_sae_error": 0.0403,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            120,
+            1838
+          ],
+          "gain_margin": 6175.55,
+          "examples": [
+            "Deixe a Terra em Paz!",
+            "Canta Minh'Alma (Behold)",
+            "Iroirotoiro"
+          ]
+        },
+        {
+          "group": 476,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 4181.74,
+          "examples": [
+            "El Firulete",
+            "El Firulete",
+            "Mirando las nubes"
+          ]
+        },
+        {
+          "group": 739,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 4008.13,
+          "examples": [
+            "Casa de Davi, Casa de Ora\u00e7\u00e3o",
+            "Batom de Ouro",
+            "Batom de Ouro"
+          ]
+        },
+        {
+          "group": 921,
+          "latents": [
+            1402
+          ],
+          "gain_margin": 3119.79,
+          "examples": [
+            "A Mi Modo",
+            "Il Volo",
+            "Canto A Mi Idolo...Frankie Ruiz"
+          ]
+        },
+        {
+          "group": 367,
+          "latents": [
+            1428
+          ],
+          "gain_margin": 3074.59,
+          "examples": [
+            "Nirappidunga",
+            "Thunayenikkesuve - Single",
+            "Amme Ennasrayame - Single"
+          ]
+        }
+      ]
+    },
+    "artists": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1892,
+      "n_groups": 1891,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 87,
+      "n_groups_unused": 0,
+      "n_removed": 87,
+      "var_share_removed": 0.011,
+      "var_share_sae_error": 0.035,
+      "top": [
+        {
+          "group": 0,
+          "latents": [
+            516,
+            1705
+          ],
+          "gain_margin": 6993.89,
+          "examples": [
+            "Ozuna;Pedro Cap\u00f3",
+            "Samba De Dom",
+            "Desejo De Menina;Yara Tch\u00ea"
+          ]
+        },
+        {
+          "group": 818,
+          "latents": [
+            696
+          ],
+          "gain_margin": 4005.58,
+          "examples": [
+            "Andy Parsons",
+            "Brett Eldredge",
+            "Brett Eldredge"
+          ]
+        },
+        {
+          "group": 760,
+          "latents": [
+            1271
+          ],
+          "gain_margin": 3858.94,
+          "examples": [
+            "Nikolai Erdenko",
+            "Nikolai Erdenko",
+            "Nikolai Erdenko"
+          ]
+        },
+        {
+          "group": 1818,
+          "latents": [
+            529
+          ],
+          "gain_margin": 3568.66,
+          "examples": [
+            "John Archambault and David Plummer",
+            "L\u00e9a Corbelin",
+            "Pat Metheny"
+          ]
+        },
+        {
+          "group": 1888,
+          "latents": [
+            338
+          ],
+          "gain_margin": 3563.48,
+          "examples": [
+            "Gabry Ponte;LUM!X;Prezioso",
+            "Chris Jedi;Ozuna;Brytiago",
+            "Chris Jedi;J Balvin;Ozuna;Arcangel"
+          ]
+        }
+      ]
+    },
+    "track_name": {
+      "rule": "group_shadow",
+      "kind": "sae",
+      "sae": "2048/k32",
+      "n_eligible": 1947,
+      "n_groups": 1945,
+      "n_multi_groups": 2,
+      "n_groups_dropped": 440,
+      "n_groups_unused": 0,
+      "n_removed": 440,
+      "var_share_removed": 0.043,
+      "var_share_sae_error": 0.0459,
+      "top": [
+        {
+          "group": 332,
+          "latents": [
+            1705
+          ],
+          "gain_margin": 7036.73,
+          "examples": [
+            "Me Cuesta Olvidarte",
+            "Naipe de Vagabundo",
+            "Outro Algu\u00e9m"
+          ]
+        },
+        {
+          "group": 927,
+          "latents": [
+            1344
+          ],
+          "gain_margin": 4835.18,
+          "examples": [
+            "El Pibe Tigre",
+            "El \u00daltimo Color Que Cay\u00f3 del Cielo",
+            "Te Quiero Pa\u00b4Mi"
+          ]
+        },
+        {
+          "group": 797,
+          "latents": [
+            736
+          ],
+          "gain_margin": 3220.62,
+          "examples": [
+            "Sabendo Que Posso Morrer",
+            "Cores Do Universo",
+            "Palhas do Coqueiro - Ao Vivo | Ac\u00fastico"
+          ]
+        },
+        {
+          "group": 1940,
+          "latents": [
+            577
+          ],
+          "gain_margin": 3182.41,
+          "examples": [
+            "Hamari Adhuri Kahani (Title Track) [From \"Hamari Adhuri Kahani\"]",
+            "Ondra Renda (From \"Kaakha Kaakha\")",
+            "Ram Stuti - Shri Ram Chandra Kripalu Bhajman"
+          ]
+        },
+        {
+          "group": 607,
+          "latents": [
+            1428
+          ],
+          "gain_margin": 2588.68,
+          "examples": [
+            "Puhu hiljaa rakkaudesta (Speak Softly, Love)",
+            "Visiri - Enai Noki Paayum Thota",
+            "Padayatra - Live"
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "late-fusion",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.8642831654434924,
+  "test_error": 0.8642831654434924,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9792556695843454,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 171.80823016166687,
+  "learner_params": null,
+  "diagnostics": {}
+}

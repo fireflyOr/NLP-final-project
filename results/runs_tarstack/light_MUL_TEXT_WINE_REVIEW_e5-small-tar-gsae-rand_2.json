@@ -1,0 +1,176 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.2749669198079725,
+  "test_error": 1.2749669198079725,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9720457454662393,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 192.0129837989807,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1404,
+      "n_groups": 1385,
+      "n_multi_groups": 15,
+      "n_groups_dropped": 197,
+      "n_groups_unused": 0,
+      "n_removed": 197,
+      "var_share_removed": 0.0432,
+      "var_share_sae_error": 0.0245,
+      "top": [
+        {
+          "group": 2,
+          "latents": [
+            1693,
+            1792,
+            1795
+          ],
+          "gain_margin": 16897.36,
+          "examples": [
+            "This is a blend of Sauvignon Blanc, Pinot Grigio, Gew\u00fcrztraminer and Semillon. It's nicely crisp in acids, with sweet, jammy pineapple, apricot, peach, vanilla ",
+            "Made from a bunch of different varieties, including Viognier and Pinot Grigio, this white blend is off-dry, with a sweet edge to the orange and peach fruit.",
+            "Savory aromas of dried herb and mineral contrast crisp nectarine and peach in this brisk, refreshing white. It's a deft blend combining the body and weight of P"
+          ]
+        },
+        {
+          "group": 688,
+          "latents": [
+            694
+          ],
+          "gain_margin": 11910.84,
+          "examples": [
+            "Fermented in stainless steel and one neutral barrel, this aromatic and compelling wine is clean, fresh and full of delicious fruit. Meyer lemon, satsuma orange ",
+            "Just delicious. Superrich in pineapple, white peach and sweet lemon pie fruit, with cr\u00e8me br\u00fbl\u00e9e and buttered toast complexities, its opulence is balanced by cr",
+            "A very streamlined Chardonnay, this bottling from a vineyard southwest of the Sta. Rita Hills shows aromas of chalk, Meyer lemon slices, white flowers and apple"
+          ]
+        },
+        {
+          "group": 3,
+          "latents": [
+            737,
+            1444,
+            1928
+          ],
+          "gain_margin": 10695.07,
+          "examples": [
+            "Soft, sweet, smooth wine. Its age shows in a nutty character that boosts the attractive mature acidity. It is ripe, full in the mouth, well balanced for drinkin",
+            "The combination of acidity, dark fruits and a minerality give this wine both great density and a fine potential. It is firm, showing the terroir of the Douro we",
+            "There is tough concentration here that suggests a wine that needs aging; there's also fruit that hints at richness to come. A wine that has a good future."
+          ]
+        },
+        {
+          "group": 1146,
+          "latents": [
+            15
+          ],
+          "gain_margin": 9962.59,
+          "examples": [
+            "Dark chocolate, black cherry, plum and wet concrete show on the nose of this bottling from a winery recently acquired by O'Neill Vintners. There are lots of ear",
+            "Slate, plum, red fruits, and baking spices of cinnamon and clove show on the nose of this wine from a longtime vineyard east of Solvang. It's fairly light in bo",
+            "Spicy earth meets baked plum and cherry in this medium-bodied wine sourced from multiple sites, including Sangiacomo Vineyards. Mint and lavender scents emerge "
+          ]
+        },
+        {
+          "group": 5,
+          "latents": [
+            154,
+            1187
+          ],
+          "gain_margin": 9413.84,
+          "examples": [
+            "This is Steve MacRostie's vineyard, located in the far northwest of the appellation, practically in Sonoma Coast. Their '04 strikes me as a little heavy and obv",
+            "Primary, concentrated raspberry and cherry flavors pierce through the core of this rich, fruity Pinot. Subtle oak aging lends delicate vanilla, spice and nut to",
+            "This barrel selection is sourced from vines planted in 2002. It's young, fresh and delicate, showing a mix of rose water, cranberry and cherry fruit. The purity"
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 701,
+      "n_groups": 701,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 591,
+      "n_groups_unused": 0,
+      "n_removed": 591,
+      "var_share_removed": 0.7744,
+      "var_share_sae_error": 0.0006,
+      "top": [
+        {
+          "group": 521,
+          "latents": [
+            132
+          ],
+          "gain_margin": 6578.4,
+          "examples": [
+            "Beaujolais",
+            "Beaujolais",
+            "Beaujolais"
+          ]
+        },
+        {
+          "group": 601,
+          "latents": [
+            222
+          ],
+          "gain_margin": 6267.12,
+          "examples": [
+            "Achaia",
+            "Alentejano",
+            "Alentejano"
+          ]
+        },
+        {
+          "group": 375,
+          "latents": [
+            187
+          ],
+          "gain_margin": 5017.58,
+          "examples": [
+            "Bordeaux",
+            "Bordeaux",
+            "Bordeaux"
+          ]
+        },
+        {
+          "group": 518,
+          "latents": [
+            254
+          ],
+          "gain_margin": 4112.01,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 528,
+          "latents": [
+            208
+          ],
+          "gain_margin": 3091.99,
+          "examples": [
+            "Champagne",
+            "Champagne",
+            "Champagne"
+          ]
+        }
+      ]
+    }
+  }
+}

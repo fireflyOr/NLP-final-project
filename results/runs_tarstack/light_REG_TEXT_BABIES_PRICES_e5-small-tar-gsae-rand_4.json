@@ -1,0 +1,322 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -23.09231649167156,
+  "test_error": 23.09231649167156,
+  "course_metric": "r2",
+  "course_score": 0.7707809415573954,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 37.6567702293396,
+  "learner_params": null,
+  "diagnostics": {
+    "colors": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 272,
+      "n_groups": 271,
+      "n_multi_groups": 1,
+      "n_groups_dropped": 257,
+      "n_groups_unused": 17,
+      "n_removed": 258,
+      "var_share_removed": 0.8917,
+      "var_share_sae_error": 0.001,
+      "top": [
+        {
+          "group": 30,
+          "latents": [
+            1946
+          ],
+          "gain_margin": 60.55,
+          "examples": [
+            "cream / gray",
+            "cream / gray / pink",
+            "cream / green / pink"
+          ]
+        },
+        {
+          "group": 105,
+          "latents": [
+            1197
+          ],
+          "gain_margin": 48.79,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "group": 2,
+          "latents": [
+            2044
+          ],
+          "gain_margin": 19.04,
+          "examples": [
+            "mauve / cream",
+            "blue / cream",
+            "red / cream"
+          ]
+        },
+        {
+          "group": 247,
+          "latents": [
+            564
+          ],
+          "gain_margin": 5.99,
+          "examples": [
+            "cream",
+            "cream",
+            "cream"
+          ]
+        },
+        {
+          "group": 264,
+          "latents": [
+            408
+          ],
+          "gain_margin": 4.96,
+          "examples": [
+            "black / pink",
+            "black / pink",
+            "black / pink"
+          ]
+        }
+      ]
+    },
+    "company_free": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 255,
+      "n_groups": 255,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 239,
+      "n_groups_unused": 39,
+      "n_removed": 239,
+      "var_share_removed": 0.7407,
+      "var_share_sae_error": 0.0024,
+      "top": [
+        {
+          "group": 104,
+          "latents": [
+            1147
+          ],
+          "gain_margin": 98.47,
+          "examples": [
+            "Cotton Tale Designs",
+            "Cotton Tale Designs",
+            "Cotton Tale Designs"
+          ]
+        },
+        {
+          "group": 234,
+          "latents": [
+            305
+          ],
+          "gain_margin": 57.12,
+          "examples": [
+            "My Baby Sam!",
+            "My Baby Sam!",
+            "My Baby Sam."
+          ]
+        },
+        {
+          "group": 192,
+          "latents": [
+            205
+          ],
+          "gain_margin": 44.48,
+          "examples": [
+            "Pam Grace Creations",
+            "Pam Grace Creations",
+            "Pam Grace Creations"
+          ]
+        },
+        {
+          "group": 229,
+          "latents": [
+            314
+          ],
+          "gain_margin": 39.6,
+          "examples": [
+            "Carters.",
+            "Carters.",
+            "Carter's"
+          ]
+        },
+        {
+          "group": 79,
+          "latents": [
+            1787
+          ],
+          "gain_margin": 38.84,
+          "examples": [
+            "Glenna Jean, Rhythm",
+            "Glenna Jean, Diaper",
+            "Glenna Jean, Wall"
+          ]
+        }
+      ]
+    },
+    "company_struct": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 758,
+      "n_groups": 758,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 547,
+      "n_groups_unused": 103,
+      "n_removed": 547,
+      "var_share_removed": 0.4948,
+      "var_share_sae_error": 0.0004,
+      "top": [
+        {
+          "group": 664,
+          "latents": [
+            360
+          ],
+          "gain_margin": 1562.85,
+          "examples": [
+            "Gallery",
+            "Gallery",
+            "Gallery"
+          ]
+        },
+        {
+          "group": 406,
+          "latents": [
+            998
+          ],
+          "gain_margin": 1384.96,
+          "examples": [
+            "St. Croix Trading Co.",
+            "St. Croix Trading Co.",
+            "St. Croix Trading Co."
+          ]
+        },
+        {
+          "group": 509,
+          "latents": [
+            651
+          ],
+          "gain_margin": 1045.8,
+          "examples": [
+            "Dream Baby",
+            "Tech 4 Kids",
+            "Cotton Tale"
+          ]
+        },
+        {
+          "group": 88,
+          "latents": [
+            1332
+          ],
+          "gain_margin": 647.94,
+          "examples": [
+            "Manam Kids",
+            "Manam Kids",
+            "Manam Kids"
+          ]
+        },
+        {
+          "group": 661,
+          "latents": [
+            108
+          ],
+          "gain_margin": 458.24,
+          "examples": [
+            "Environmental Graphics",
+            "Environmental Graphics",
+            "Environmental Graphics"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1259,
+      "n_groups": 1254,
+      "n_multi_groups": 4,
+      "n_groups_dropped": 836,
+      "n_groups_unused": 380,
+      "n_removed": 839,
+      "var_share_removed": 0.5148,
+      "var_share_sae_error": 0.0063,
+      "top": [
+        {
+          "group": 1,
+          "latents": [
+            651,
+            1952
+          ],
+          "gain_margin": 3811.14,
+          "examples": [
+            "Desert Dreams 4-Piece Mini Crib Bedding Set",
+            "Tranquil Woods 4-Piece Mini Crib Bedding Set",
+            "Sumersault Sea Pirate  4 Piece Crib Set"
+          ]
+        },
+        {
+          "group": 306,
+          "latents": [
+            1647
+          ],
+          "gain_margin": 3299.31,
+          "examples": [
+            "Lambs & Ivy Little Princess 5 Piece Bedding Set",
+            "Aqua Peacock Full/Queen Bedding Set",
+            "Tulip Garden 4-Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 272,
+          "latents": [
+            1770
+          ],
+          "gain_margin": 3077.81,
+          "examples": [
+            "Gallery Flush Mount 3 Light Crystal Chandelier Gold",
+            "Gallery Wrought Iron & Crystal 4 Light Floral Swag Plug In White Chandelier",
+            "Gallery 3 Light Swag Plug In Chandelier with Crystals and White Shade"
+          ]
+        },
+        {
+          "group": 1248,
+          "latents": [
+            108
+          ],
+          "gain_margin": 2633.87,
+          "examples": [
+            "Petit Tresor Nuit 4 Piece Bed Set",
+            "Peanuts Snoopy 4 Piece Toddler Bedding Set",
+            "Tranquil Woods 5-Piece Bedding Set"
+          ]
+        },
+        {
+          "group": 146,
+          "latents": [
+            1895
+          ],
+          "gain_margin": 1121.36,
+          "examples": [
+            "Olive Kids Game On Sheet Set - Twin",
+            "Sweet Jojo Designs Blue and Taupe Hayden Collection 5-Piece Toddler Bedding Set",
+            "Pam Grace Creations Sophia's Garden 3-Piece Twin Bedding Set"
+          ]
+        }
+      ]
+    }
+  }
+}

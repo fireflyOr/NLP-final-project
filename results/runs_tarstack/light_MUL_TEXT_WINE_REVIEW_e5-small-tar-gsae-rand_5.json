@@ -1,0 +1,174 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_WINE_REVIEW",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.3567934847116898,
+  "test_error": 1.3567934847116898,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9729530430431168,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 187.30048155784607,
+  "learner_params": null,
+  "diagnostics": {
+    "description": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 1411,
+      "n_groups": 1395,
+      "n_multi_groups": 16,
+      "n_groups_dropped": 152,
+      "n_groups_unused": 0,
+      "n_removed": 152,
+      "var_share_removed": 0.0426,
+      "var_share_sae_error": 0.0254,
+      "top": [
+        {
+          "group": 252,
+          "latents": [
+            1795
+          ],
+          "gain_margin": 12288.1,
+          "examples": [
+            "Just a hint of citrus emanates from the glass. The very light-bodied palate remains very citrussy, taut, fresh and bright. Save this one for a hot summer day an",
+            "A tasty, sweet and sour blend of Chardonnay, Riesling, Viognier and Pinot Gris, this has bountiful fruit flavors of peach and pear. It's a big, forward, generou",
+            "Aromas of Alpine wildflower and peach blossom unfold on this refined mountain white. The balanced palate offers Anjou pear, yellow apple, mineral, tangerine and"
+          ]
+        },
+        {
+          "group": 6,
+          "latents": [
+            998,
+            1693
+          ],
+          "gain_margin": 10324.7,
+          "examples": [
+            "This spicy rosso has plum and pepper aromas that carry over onto the palate, along with a hint of licorice. It's linear, lively and fresh. Pair it with pasta to",
+            "This spicy rosso has plum and pepper aromas that carry over onto the palate, along with a hint of licorice. It's linear, lively and fresh. Pair it with pasta to",
+            "Aromas of espresso, underbrush and black-skinned fruit lead the nose. The firm palate offers dried black cherry, mature plum, clove, coffee and black pepper alo"
+          ]
+        },
+        {
+          "group": 1239,
+          "latents": [
+            15
+          ],
+          "gain_margin": 10186.63,
+          "examples": [
+            "Made by a winery outside of Gilroy, this bottling from eastern Salinas Valley fruit brings very nice aromas of blackberry extract, baking spices, gingerbread an",
+            "This is a huge wine, that's insanely rich and concentrated. It tastes like the ripest summer blackberries, still warm from the sun, mashed and drizzed with cr\u00e8m",
+            "This wine seems a bit muddled, with aromas of cranberries, dried herbs, vanilla, cashews and barrel spices struggling to get to the surface. The palate is mediu"
+          ]
+        },
+        {
+          "group": 11,
+          "latents": [
+            154,
+            1187
+          ],
+          "gain_margin": 10112.73,
+          "examples": [
+            "A to Z has kept a lid on its pricing, and offers one of the best values in Oregon Pinot Noir. Though very young, this wine is soft and forward, and benefits fro",
+            "From the western edge of Sonoma Valley, this robust, full-figured wine took on considerable power in this vintage. It exhibits elusive fruit before peeling back",
+            "Some 18 months of careful oak aging have shaped a deep, layered wine with loads of cherry and cola. The wine shows a compact, streamlined structure but there is"
+          ]
+        },
+        {
+          "group": 0,
+          "latents": [
+            694,
+            1426
+          ],
+          "gain_margin": 9156.68,
+          "examples": [
+            "This dry estate wine is voluptuous and richly floral, with well-developed stone fruit and melon flavors. Medium-bodied, it's weighty enough to be enjoyed on its",
+            "This 16\u2013acre estate is run biodynamically, producing intensely flavored, honeyed, ripe wines. This is succulent from ripe fruit, with the acidity bright and viv",
+            "With a touch of apricot fuzz and fresh-cut grass, the wine is high in acidity and clean, bright and layered."
+          ]
+        }
+      ]
+    },
+    "province": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 697,
+      "n_groups": 697,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 580,
+      "n_groups_unused": 0,
+      "n_removed": 580,
+      "var_share_removed": 0.7068,
+      "var_share_sae_error": 0.0007,
+      "top": [
+        {
+          "group": 340,
+          "latents": [
+            1293
+          ],
+          "gain_margin": 3648.31,
+          "examples": [
+            "Tuscany",
+            "Tuscany",
+            "Tuscany"
+          ]
+        },
+        {
+          "group": 470,
+          "latents": [
+            266
+          ],
+          "gain_margin": 3615.45,
+          "examples": [
+            "Central Spain",
+            "Central Spain",
+            "Central Spain"
+          ]
+        },
+        {
+          "group": 623,
+          "latents": [
+            222
+          ],
+          "gain_margin": 3265.19,
+          "examples": [
+            "Alentejano",
+            "Alentejano",
+            "Alentejano"
+          ]
+        },
+        {
+          "group": 540,
+          "latents": [
+            47
+          ],
+          "gain_margin": 2570.78,
+          "examples": [
+            "Piedmont",
+            "Piedmont",
+            "Piedmont"
+          ]
+        },
+        {
+          "group": 77,
+          "latents": [
+            1785
+          ],
+          "gain_margin": 2413.56,
+          "examples": [
+            "Tuscany",
+            "Tuscany",
+            "Tuscany"
+          ]
+        }
+      ]
+    }
+  }
+}

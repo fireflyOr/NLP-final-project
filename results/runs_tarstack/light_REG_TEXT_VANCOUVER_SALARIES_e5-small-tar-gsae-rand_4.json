@@ -1,0 +1,171 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-gsae-rand",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -12823.724297462571,
+  "test_error": 12823.724297462571,
+  "course_metric": "r2",
+  "course_score": 0.8013902726099037,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 33.57014060020447,
+  "learner_params": null,
+  "diagnostics": {
+    "name": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 2036,
+      "n_groups": 2025,
+      "n_multi_groups": 7,
+      "n_groups_dropped": 1256,
+      "n_groups_unused": 385,
+      "n_removed": 1257,
+      "var_share_removed": 0.5822,
+      "var_share_sae_error": 0.026,
+      "top": [
+        {
+          "group": 573,
+          "latents": [
+            1439
+          ],
+          "gain_margin": 706.51,
+          "examples": [
+            "Naklicki, A*",
+            "Lepard, K V*",
+            "Klein, A*"
+          ]
+        },
+        {
+          "group": 2000,
+          "latents": [
+            23
+          ],
+          "gain_margin": 539.2,
+          "examples": [
+            "Wong, C*",
+            "Peterson, D R*",
+            "Ross, A*"
+          ]
+        },
+        {
+          "group": 233,
+          "latents": [
+            1871
+          ],
+          "gain_margin": 467.81,
+          "examples": [
+            "Warn, A J.K.",
+            "Bokor, A",
+            "O'Donnell, T"
+          ]
+        },
+        {
+          "group": 1788,
+          "latents": [
+            227
+          ],
+          "gain_margin": 389.12,
+          "examples": [
+            "Turner, C E.M.",
+            "Turner, C E.M.",
+            "Turner, C E.M."
+          ]
+        },
+        {
+          "group": 1972,
+          "latents": [
+            518
+          ],
+          "gain_margin": 382.74,
+          "examples": [
+            "Baker, A",
+            "Baker, A",
+            "Baker, M"
+          ]
+        }
+      ]
+    },
+    "title": {
+      "rule": "group_shadow",
+      "kind": "random",
+      "sae": "2048/k32",
+      "n_eligible": 993,
+      "n_groups": 993,
+      "n_multi_groups": 0,
+      "n_groups_dropped": 677,
+      "n_groups_unused": 270,
+      "n_removed": 677,
+      "var_share_removed": 0.4494,
+      "var_share_sae_error": 0.0011,
+      "top": [
+        {
+          "group": 111,
+          "latents": [
+            1880
+          ],
+          "gain_margin": 8345.02,
+          "examples": [
+            "General Manager Community Services",
+            "GENERAL MANAGER COMMUNITY SERVICES",
+            "General Manager Community Services"
+          ]
+        },
+        {
+          "group": 942,
+          "latents": [
+            305
+          ],
+          "gain_margin": 5992.9,
+          "examples": [
+            "Chief Technology Officer",
+            "Chief Human Resources Officer",
+            "Chief Human Resources Officer"
+          ]
+        },
+        {
+          "group": 893,
+          "latents": [
+            564
+          ],
+          "gain_margin": 4928.57,
+          "examples": [
+            "Assoc Director Non-Market Housing Dev",
+            "Assoc Director Non-Market Housing Dev",
+            "Director Non Market Housing"
+          ]
+        },
+        {
+          "group": 946,
+          "latents": [
+            204
+          ],
+          "gain_margin": 3320.71,
+          "examples": [
+            "City Archivist",
+            "City Archivist",
+            "City Archivist"
+          ]
+        },
+        {
+          "group": 731,
+          "latents": [
+            911
+          ],
+          "gain_margin": 2982.56,
+          "examples": [
+            "A/Chief Emergency Managment",
+            "A/Chief Emergency Managment",
+            "Branch Head - Engineering"
+          ]
+        }
+      ]
+    }
+  }
+}

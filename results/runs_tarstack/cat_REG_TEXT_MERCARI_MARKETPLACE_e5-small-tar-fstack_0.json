@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-fstack",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.5575539822133802,
+  "test_error": 0.5575539822133802,
+  "course_metric": "r2",
+  "course_score": 0.4637640553195598,
+  "n_text_cols": 6,
+  "n_text_features": 181,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 27.338635683059692,
+  "learner_params": null,
+  "diagnostics": {}
+}

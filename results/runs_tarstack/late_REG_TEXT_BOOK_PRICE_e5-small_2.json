@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "REG_TEXT_BOOK_PRICE",
+  "encoder": "late-fusion",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.2401284073942989,
+  "test_error": 0.2401284073942989,
+  "course_metric": "r2",
+  "course_score": 0.451102898547205,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 3326,
+  "n_test": 1663,
+  "runtime_s": 7.369025230407715,
+  "learner_params": null,
+  "diagnostics": {}
+}

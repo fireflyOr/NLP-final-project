@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.21994858139395942,
+  "test_error": 0.21994858139395942,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9751278255715796,
+  "n_text_cols": 9,
+  "n_text_features": 270,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 138.34266471862793,
+  "learner_params": null,
+  "diagnostics": {}
+}

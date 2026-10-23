@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "MUL_TEXT_US_ACCIDENTS",
+  "encoder": "e5-small-tar-full",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.2699459529487643,
+  "test_error": 0.2699459529487643,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9841840538845709,
+  "n_text_cols": 9,
+  "n_text_features": 3456,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 37.1863739490509,
+  "learner_params": null,
+  "diagnostics": {}
+}

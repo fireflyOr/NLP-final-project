@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "late",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "late-fusion",
+  "fold": 2,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.197361966783125,
+  "test_error": 1.197361966783125,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8310472591593289,
+  "n_text_cols": 0,
+  "n_text_features": 0,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 13.299228191375732,
+  "learner_params": null,
+  "diagnostics": {}
+}
