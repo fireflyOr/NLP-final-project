@@ -29,6 +29,7 @@ SHORT = {
 MAIN = [("e5-small", "Frozen"), ("e5-small-tar", "TAR"), ("e5-small-tar-gsae", "TAR+prune"),
         ("e5-small-tar-gsae-rand", "TAR+rand"), ("e5-small-pls", "PLS"), ("e5-small-stack", "Stack")]
 VS_TAR = [("e5-small-tar-fstack", "TAR + text stacking"), ("e5-small-tar-pls", "TAR + PLS-30 (instead of PCA)"),
+          ("e5-small-tar-bn", "TAR, learned 30-d bottleneck"),
           ("e5-small-tar-full", "TAR, all 384 dims"), ("late-fusion", "Late fusion (frozen text model)"),
           ("e5-small-tar-gsae-randvar", "TAR + random pruning (variance-matched)"),
           ("e5-small-tar-gsae", "TAR + concept pruning (ours)"), ("e5-small-tar-gsae-rand", "TAR + random pruning"),
@@ -49,7 +50,7 @@ def task(ds):
 
 
 FINAL_MAIN = [("e5-small-tar", "TAR"), ("e5-small-tar-fstack", "+stack"), ("e5-small-tar-pls", "+PLS"),
-              ("e5-small-tar-full", "384-d"), ("late-fusion", "Late"), ("e5-small-tar-gsae", "+prune"),
+              ("e5-small-tar-full", "384-d"), ("e5-small-tar-bn", "BN-30"), ("late-fusion", "Late"), ("e5-small-tar-gsae", "+prune"),
               ("e5-small-tar-gsae-randvar", "+rand(var)")]
 
 
@@ -112,7 +113,7 @@ def _holm(ps):
 def learners_table(df, out):
     """Does the picture hold for other learners? Mean difference vs the same learner's Joint TAR, datasets won, p."""
     arms = [("e5-small", "Joint Frozen"), ("e5-small-tar-fstack", "TAR + text stacking"),
-            ("e5-small-tar-pls", "TAR + PLS-30")]
+            ("e5-small-tar-pls", "TAR + PLS-30"), ("e5-small-tar-bn", "TAR, learned bottleneck")]
     learners = [m for m in ("light", "lgbt", "cat") if m in set(df.model)]
     if len(learners) < 2:
         return

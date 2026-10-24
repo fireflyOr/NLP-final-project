@@ -14,7 +14,7 @@ import pandas as pd
 from pandas import DataFrame, Series
 import torch
 
-from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, PRUNE_ENCODERS, RELEVANCE_ENCODERS, STACK_ENCODERS, TAR_STACK_ENCODERS, TAR_TRANSFORM_ENCODERS, TF_IDF
+from multabench.e5.constants import E5_SMALL_V2, E5_TRANSFORMS, PRUNE_ENCODERS, RELEVANCE_ENCODERS, STACK_ENCODERS, TAR_STACK_ENCODERS, TAR_TRANSFORM_ENCODERS, BOTTLENECK_ENCODERS, TF_IDF
 from multabench.e5.e5_finetune import encode_texts_with_e5, get_vanilla_e5
 
 PCA_COMPONENTS = 30
@@ -281,6 +281,76 @@ def fit_text_encoders_xfit(x, text_features_list, device, y, is_cls, e5_train_kw
     return encs
 
 
+class BottleneckColumnEncoder:
+    """Learned compression: the column's 30 features are the bottleneck outputs of a TAR-style fine-tune."""
+
+    def __init__(self, model: Any, tokenizer: Any, col_name: str, dim: int):
+        self.model, self.tokenizer, self.col_name, self.n_components = model, tokenizer, col_name, dim
+        self.encoder = self
+        self.diag: Dict[str, Any] = {}
+
+    def encode_texts(self, texts: list[str], device) -> np.ndarray:
+        from multabench.e5.e5_finetune import bottleneck_features
+        return bottleneck_features(self.model, self.tokenizer, texts, self.col_name, device)
+
+    def transform(self, X: np.ndarray) -> np.ndarray:
+        return X
+
+
+_BN_MEMO: Dict[str, Any] = {}
+
+
+def fit_text_encoders_bottleneck(x, text_features_list, device, y, e5_train_kwargs, is_cls, dim,
+                                 e5_model_name: str = E5_SMALL_V2):
+    """TAR's recipe (same examples, same validation split, same training settings) with a `dim`-unit bottleneck
+    between the pooled embedding and the head; the bottleneck outputs replace PCA-30. One fine-tune per fold, saved
+    to MULTABENCH_TAR_DIR so every learner uses the same one."""
+    from transformers import AutoTokenizer
+    from multabench.e5.e5_finetune import finetune_e5_with_lora, load_bottleneck_model, save_bottleneck_model
+    from multabench.preprocessing.splits import split_to_val
+
+    y_lab = y if is_cls else discretize_numerical(y, n_bins=20)
+    x_tr, x_val, y_tr, y_val = split_to_val(x=x, y=y_lab, is_cls=True)
+    kwargs = e5_train_kwargs or {}
+
+    def expand(xx, yy):
+        texts, labels = [], []
+        for idx in xx.index:
+            for col in text_features_list:
+                v = xx.loc[idx, col]
+                texts.append(f"{col}: {str(v).strip() if pd.notna(v) else ''}")
+                labels.append(yy.loc[idx])
+        return texts, np.array(labels)
+
+    train_texts, train_y = expand(x_tr, y_tr)
+    val_texts, val_y = expand(x_val, y_val)
+    key = _tuned_key(train_texts, train_y, val_texts, val_y, e5_model_name, kwargs) + f"_bn{dim}"
+    tar_dir = os.getenv("MULTABENCH_TAR_DIR")
+    path = os.path.join(tar_dir, f"bn{dim}_{key}.pt") if tar_dir else None
+    lora_kw = {k: kwargs[k] for k in ("lora_rank", "text_layers") if k in kwargs}
+    if _BN_MEMO.get("key") == key:
+        model, tok = _BN_MEMO["model"]
+        print("Reusing the bottleneck fine-tune of this fold")
+    elif path and os.path.exists(path):
+        model = load_bottleneck_model(path, device, model_name=e5_model_name, **lora_kw)
+        tok = AutoTokenizer.from_pretrained(e5_model_name)
+        print(f"Restored the saved bottleneck fine-tune of this fold from {path}")
+    else:
+        tok = AutoTokenizer.from_pretrained(e5_model_name)
+        print(f"Finetuning E5 with a {dim}-unit bottleneck for {len(text_features_list)} columns "
+              f"({len(train_texts)} train examples)")
+        model, tok, _ = finetune_e5_with_lora(train_texts=train_texts, train_y=train_y, val_texts=val_texts,
+                                              val_y=val_y, device=device, tokenizer=tok, model_name=e5_model_name,
+                                              return_head=True, bottleneck=dim, **kwargs)
+        model.to(device).eval()
+        if path:
+            os.makedirs(tar_dir, exist_ok=True)
+            save_bottleneck_model(model, path)
+    _BN_MEMO.clear()
+    _BN_MEMO.update(key=key, model=(model, tok))
+    return {col: BottleneckColumnEncoder(model, tok, str(col), dim) for col in text_features_list}
+
+
 def fit_text_encoders_tuned(
     x: DataFrame,
     text_features_list: list[str],
@@ -418,6 +488,11 @@ def fit_text_encoders(
         assert y is not None, "relevance filtering needs the target"
         return fit_text_encoders_relevance(x=x, text_features_list=text_features_list, device=device, y=y,
                                            is_cls=is_cls, variant=RELEVANCE_ENCODERS[e5_model_name])
+    if e5_model_name in BOTTLENECK_ENCODERS:
+        assert y is not None, "learned compression needs the target"
+        return fit_text_encoders_bottleneck(x=x, text_features_list=text_features_list, device=device, y=y,
+                                            e5_train_kwargs=e5_train_kwargs or {}, is_cls=is_cls,
+                                            dim=BOTTLENECK_ENCODERS[e5_model_name])
     if e5_model_name in TAR_TRANSFORM_ENCODERS:
         # the fold's TAR fine-tune (shared with the e5-small-tar arm); only the reduction after it changes
         from multabench.sae import relevance as rel

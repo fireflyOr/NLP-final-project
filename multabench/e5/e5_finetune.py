@@ -129,11 +129,17 @@ class E5ForTuning(nn.Module):
         backbone: Union[BertModel, nn.Module],
         d_output: int,
         d_model: int = E5_DIM[E5_SMALL_V2],
+        bottleneck: Optional[int] = None,
     ):
         super().__init__()
         self.d_output = d_output
         self.backbone = backbone
-        self.head = nn.Linear(d_model, d_output)
+        if bottleneck:   # learned compression: pooled (d_model) -> bottleneck -> GELU -> head
+            self.bottleneck = nn.Linear(d_model, bottleneck)
+            self.head = nn.Sequential(nn.GELU(), nn.Linear(bottleneck, d_output))
+        else:
+            self.bottleneck = None
+            self.head = nn.Linear(d_model, d_output)
 
     def forward(
         self,
@@ -149,6 +155,8 @@ class E5ForTuning(nn.Module):
         # are normalized (see encode_texts_with_e5), so normalizing here too would be consistent
         # with E5's pre-training regime. Skipped for now as the impact is likely small.
         pooled = _mean_pool(last_hidden, attention_mask, l2_normalize=False)
+        if self.bottleneck is not None:
+            pooled = self.bottleneck(pooled)
         logits = self.head(pooled)
         if labels is not None:
             loss = encoder_finetune_loss(logits, labels)
@@ -263,6 +271,7 @@ def finetune_e5_with_lora(
     max_length: int = 512,
     seed: int = SEED,
     return_head: bool = False,
+    bottleneck: Optional[int] = None,
 ):
     """
     Finetune an E5 model with LoRA using Hugging Face Trainer. Uses train/val for early stopping.
@@ -301,7 +310,7 @@ def finetune_e5_with_lora(
         bias="none",
     )
     e5_model = get_peft_model(e5_model, lora_config)
-    model = E5ForTuning(backbone=e5_model, d_output=d_output_inferred, d_model=d_model)
+    model = E5ForTuning(backbone=e5_model, d_output=d_output_inferred, d_model=d_model, bottleneck=bottleneck)
     _print_trainable_params_per_layer(model)
 
     with tempfile.TemporaryDirectory(prefix="e5_finetune_") as tmpdir:
@@ -369,3 +378,42 @@ def load_lora_backbone(path: str, device, model_name: str = E5_SMALL_V2, **lora_
     set_peft_model_state_dict(backbone, torch.load(path, map_location="cpu"))
     backbone.to(device)
     return backbone.eval()
+
+
+# ---------------------------------------------------------------- learned compression (bottleneck) features
+@torch.no_grad()
+def bottleneck_features(model: "E5ForTuning", tokenizer, texts: List[str], col_name: str, device,
+                        batch_size: int = 128, max_length: int = 512) -> np.ndarray:
+    """The bottleneck layer's outputs for 'passage: col: value' texts, pooled exactly as in training (no L2 norm)."""
+    model.eval()
+    prefixed = [format_e5_passage(col_name, col_val=t) for t in texts]
+    order = np.argsort([len(t) for t in prefixed])
+    out = np.zeros((len(texts), model.bottleneck.out_features), dtype=np.float32)
+    for i in range(0, len(order), batch_size):
+        idx = order[i:i + batch_size]
+        enc = tokenizer([prefixed[j] for j in idx], padding=True, truncation=True, max_length=max_length,
+                        return_tensors="pt").to(device)
+        h = model.backbone(input_ids=enc["input_ids"], attention_mask=enc["attention_mask"]).last_hidden_state
+        out[idx] = model.bottleneck(_mean_pool(h, enc["attention_mask"], l2_normalize=False)).float().cpu().numpy()
+    return out
+
+
+def save_bottleneck_model(model: "E5ForTuning", path: str) -> None:
+    from peft import get_peft_model_state_dict
+    tmp = path + ".tmp"
+    torch.save({"lora": {k: v.detach().cpu() for k, v in get_peft_model_state_dict(model.backbone).items()},
+                "bottleneck": {k: v.detach().cpu() for k, v in model.bottleneck.state_dict().items()},
+                "head": {k: v.detach().cpu() for k, v in model.head.state_dict().items()},
+                "d_output": model.d_output, "dim": model.bottleneck.out_features}, tmp)
+    os.replace(tmp, path)
+
+
+def load_bottleneck_model(path: str, device, model_name: str = E5_SMALL_V2, **lora_kwargs) -> "E5ForTuning":
+    from peft import set_peft_model_state_dict
+    state = torch.load(path, map_location="cpu")
+    backbone = build_lora_e5(device, model_name=model_name, **lora_kwargs)
+    set_peft_model_state_dict(backbone, state["lora"])
+    model = E5ForTuning(backbone=backbone, d_output=state["d_output"], d_model=E5_DIM[model_name], bottleneck=state["dim"])
+    model.bottleneck.load_state_dict(state["bottleneck"])
+    model.head.load_state_dict(state["head"])
+    return model.to(device).eval()
