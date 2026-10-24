@@ -1,11 +1,9 @@
 \documentclass{article}
 
-% NeurIPS style: put neurips_2025.sty next to this file (from the official NeurIPS template / Overleaf).
-% Without it, a close approximation of the NeurIPS page geometry is used so the page count stays realistic.
-\IfFileExists{neurips_2025.sty}
-  {\usepackage[final]{neurips_2025}}
-  {\usepackage[letterpaper,textwidth=5.5in,textheight=9in,top=1in]{geometry}
-   \usepackage{times}\usepackage[numbers,sort&compress]{natbib}}
+% NeurIPS 2026 style. "preprint" = non-anonymous, no line numbers, footer "Preprint."
+% (not "final", whose footer would claim the paper appeared at NeurIPS 2026).
+\PassOptionsToPackage{numbers,sort&compress}{natbib}
+\usepackage[preprint]{neurips_2026}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -144,7 +142,7 @@ all eleven arm--learner comparisons with TAR.
 \caption{Arms that change what follows TAR's encoder, per learner: mean difference from that learner's Joint TAR,
 datasets improved (of 20), Wilcoxon $p$. Default-LightGBM Joint Frozen is in the main run ($-0.017$, 1/20).}
 \label{tab:learners}
-\input{tables/final/learners.tex}
+\setlength{\tabcolsep}{3.5pt}\input{tables/final/learners.tex}
 \end{table}
 
 \paragraph{Adding a text model's prediction improves on TAR.} With tuned LightGBM, TAR + stacking beats TAR by
@@ -161,7 +159,7 @@ LightGBM to these features, not in the features; we report it unchanged.
 \caption{Final run, default LightGBM: every arm vs.\ Joint TAR with the same fine-tuned encoder (per-dataset means
 over 6 folds); $p$: Wilcoxon over datasets; $p_{\text{Holm}}$: adjusted within this table.}
 \label{tab:summary}
-\input{tables/final/summary.tex}
+\setlength{\tabcolsep}{3.5pt}\input{tables/final/summary.tex}
 \end{table}
 
 \paragraph{Reweighting does not help.} PLS in place of PCA is worse than TAR with every learner ($-0.004$ to
