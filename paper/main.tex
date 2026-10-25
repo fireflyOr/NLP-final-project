@@ -36,7 +36,7 @@ text datasets of MulTaBench this selection is far better than removing random co
 (16/20 datasets, $p<0.001$), yet it does not improve on TAR, not even when the amount removed is chosen by nested
 cross-fitting. Approaches that \emph{reweight} the embedding or re-learn its compression (PLS instead of PCA, no
 compression, a 30-unit bottleneck trained on the target) do not help either. What helps is \emph{adding}: the out-of-fold predictions of a text-only model, stacked as extra columns next
-to TAR's, improve on TAR with tuned LightGBM ($+0.0035$, 16/20, Holm-adjusted $p=0.009$) and with CatBoost
+to TAR's, improve on TAR with tuned LightGBM ($+0.0035$, 16/20, Holm-adjusted $p=0.007$) and with CatBoost
 ($+0.0036$, 17/20, $p=0.004$). With default LightGBM it wins on 15/20 datasets but is not significant, because the
 default learner fails on two folds of one 114-class dataset where the other learners, given the same features, do not.
 \end{abstract}
@@ -151,7 +151,7 @@ datasets improved (of 20), Wilcoxon $p$. Default-LightGBM Joint Frozen is in the
 \end{table}
 
 \paragraph{Adding a text model's prediction improves on TAR.} With tuned LightGBM, TAR + stacking beats TAR by
-$+0.0035$ on 16/20 datasets (Holm-adjusted $p=0.009$); with CatBoost by $+0.0036$ on 17/20 ($p=0.004$;
+$+0.0035$ on 16/20 datasets (Holm-adjusted $p=0.007$); with CatBoost by $+0.0036$ on 17/20 ($p=0.004$;
 Table~\ref{tab:learners}). Both learners are themselves stronger than default LightGBM (their TAR is $+0.012$ and
 $+0.014$ higher), so the gain is not an artefact of a weak learner. With default LightGBM, stacking improves 15/20
 datasets but the mean is negative ($-0.0020$, $p=0.064$): on two folds of Spotify genres (114 classes) the default
@@ -209,7 +209,7 @@ simple (frozen E5, MLP); the gain is small ($\approx0.0035$) but appears in ever
 
 \emph{Limitations.} One encoder (E5-small) and one SAE size. A pilot with TabSTAR \citep{arazi2025tabstar} as backbone
 was infeasible on our hardware and is not reported. Late fusion trains on all training rows while the other arms set
-aside the learner's validation split. Cross-fitting was run on five datasets only. The learned bottleneck has 19 datasets with tuned LightGBM and CatBoost (the Zomato runs did not finish in time). With default LightGBM, five
+aside the learner's validation split. Cross-fitting was run on five datasets only. With default LightGBM, five
 multiclass runs collapsed to chance level (stacking on Spotify, two folds in each of two runs; one held-out pruning
 run on Wine); the evidence above points to the learner, but we did not identify the exact mechanism.
 

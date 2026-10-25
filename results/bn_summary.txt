@@ -365,6 +365,31 @@ bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 3 e5-small-tar-bn    r2 0.780
 bn_1460788_19.out:Finetuning E5 with a 30-unit bottleneck for 7 columns (56700 train examples)
 bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 4 e5-small-tar-bn    r2 0.8136 (210 text feats, 5060s)
 bn_1460788_19.out:Finetuning E5 with a 30-unit bottleneck for 7 columns (56700 train examples)
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 5 e5-small-tar-bn    r2 0.8022 (210 text feats, 6261s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_bcb1ffd38aaf113a41b0c8ec065fa3b13b101847_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 0 e5-small-tar-bn    r2 0.8370 (210 text feats, 192s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_ec35f26d2f14ee3dd6f8b82ae0acf1077854eee4_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 1 e5-small-tar-bn    r2 0.8419 (210 text feats, 193s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_ff8135f69ebcd81b7a5eb306e9f2c58439c549ca_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 2 e5-small-tar-bn    r2 0.8365 (210 text feats, 191s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_a8635ac956a32c85faa57bbf199e99b24b4abeea_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 3 e5-small-tar-bn    r2 0.8295 (210 text feats, 193s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_bfa2aa6b122502e5e571f95945692cd54c4a5b61_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 4 e5-small-tar-bn    r2 0.8582 (210 text feats, 195s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_cf78cf9721dfe1885c2fc2be1de50a9f559bae2e_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 5 e5-small-tar-bn    r2 0.8519 (210 text feats, 191s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_bcb1ffd38aaf113a41b0c8ec065fa3b13b101847_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 0 e5-small-tar-bn    r2 0.8266 (210 text feats, 164s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_ec35f26d2f14ee3dd6f8b82ae0acf1077854eee4_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 1 e5-small-tar-bn    r2 0.8297 (210 text feats, 164s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_ff8135f69ebcd81b7a5eb306e9f2c58439c549ca_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 2 e5-small-tar-bn    r2 0.8247 (210 text feats, 166s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_a8635ac956a32c85faa57bbf199e99b24b4abeea_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 3 e5-small-tar-bn    r2 0.8187 (210 text feats, 167s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_bfa2aa6b122502e5e571f95945692cd54c4a5b61_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 4 e5-small-tar-bn    r2 0.8459 (210 text feats, 160s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_cf78cf9721dfe1885c2fc2be1de50a9f559bae2e_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 5 e5-small-tar-bn    r2 0.8402 (210 text feats, 164s)
 bn_1460788_1.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16194 train examples)
 bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 0 e5-small-tar-bn    auroc 0.9257 (60 text feats, 225s)
 bn_1460788_1.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16194 train examples)

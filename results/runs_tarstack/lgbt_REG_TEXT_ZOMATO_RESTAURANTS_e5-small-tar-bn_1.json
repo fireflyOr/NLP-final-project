@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_ZOMATO_RESTAURANTS",
+  "encoder": "e5-small-tar-bn",
+  "fold": 1,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.17647564330191928,
+  "test_error": 0.17647564330191928,
+  "course_metric": "r2",
+  "course_score": 0.841865260356945,
+  "n_text_cols": 7,
+  "n_text_features": 210,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 192.55057907104492,
+  "learner_params": {
+    "learning_rate": 0.1,
+    "max_depth": -1,
+    "colsample_bytree": 0.3,
+    "n_trees": 1250
+  },
+  "diagnostics": {}
+}
