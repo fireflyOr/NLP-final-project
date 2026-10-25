@@ -1,0 +1,20 @@
+{
+  "model": "light",
+  "learner": "light",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-bn",
+  "fold": 4,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.8197284089416801,
+  "test_error": 0.8197284089416801,
+  "course_metric": "r2",
+  "course_score": 0.8138564282947569,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3149,
+  "n_test": 1575,
+  "runtime_s": 710.161728143692,
+  "learner_params": null,
+  "diagnostics": {}
+}

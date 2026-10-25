@@ -1,15 +1,24 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Arazi et~al.(2026)Arazi, Shapira, Grunblat, Ventura, Hoffer, Blayer,
+  Holzm{\"u}ller, Purucker, Varoquaux, Hutter, and Reichart]{multabench}
+A.~Arazi, E.~Shapira, S.~Grunblat, M.~Ventura, E.~Hoffer, G.~Blayer,
+  D.~Holzm{\"u}ller, L.~Purucker, G.~Varoquaux, F.~Hutter, and R.~Reichart.
+\newblock {MulTaBench}: Benchmarking multimodal tabular learning with text and
+  image.
+\newblock \emph{arXiv preprint arXiv:2605.10616}, 2026.
+
 \bibitem[Arazi et~al.(2025)Arazi, Shapira, and Reichart]{arazi2025tabstar}
 Alan Arazi, Eilam Shapira, and Roi Reichart.
-\newblock {TabSTAR}: A foundation tabular model with semantically target-aware
-  representations.
-\newblock \emph{arXiv preprint arXiv:2505.18125}, 2025.
+\newblock {TabSTAR}: A tabular foundation model for tabular data with text
+  fields.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~38, 2025.
 
 \bibitem[Bair et~al.(2006)Bair, Hastie, Paul, and
   Tibshirani]{bair2006prediction}
@@ -62,11 +71,26 @@ Edward~J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean
 \newblock {LoRA}: Low-rank adaptation of large language models.
 \newblock In \emph{International Conference on Learning Representations}, 2022.
 
+\bibitem[Ke et~al.(2017)Ke, Meng, Finley, Wang, Chen, Ma, Ye, and
+  Liu]{ke2017lightgbm}
+Guolin Ke, Qi~Meng, Thomas Finley, Taifeng Wang, Wei Chen, Weidong Ma, Qiwei
+  Ye, and Tie-Yan Liu.
+\newblock {LightGBM}: A highly efficient gradient boosting decision tree.
+\newblock In \emph{Advances in Neural Information Processing Systems}, 2017.
+
 \bibitem[Kursa and Rudnicki(2010)]{kursa2010boruta}
 Miron~B. Kursa and Witold~R. Rudnicki.
 \newblock Feature selection with the {Boruta} package.
 \newblock \emph{Journal of Statistical Software}, 36\penalty0 (11):\penalty0
   1--13, 2010.
+
+\bibitem[Prokhorenkova et~al.(2018)Prokhorenkova, Gusev, Vorobev, Dorogush, and
+  Gulin]{prokhorenkova2018catboost}
+Liudmila Prokhorenkova, Gleb Gusev, Aleksandr Vorobev, Anna~Veronika Dorogush,
+  and Andrey Gulin.
+\newblock {CatBoost}: unbiased boosting with categorical features.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~31, 2018.
 
 \bibitem[Shi et~al.(2021)Shi, Mueller, Erickson, Li, and
   Smola]{shi2021multimodal}
@@ -80,12 +104,6 @@ Carolin Strobl, Anne-Laure Boulesteix, Thomas Kneib, Thomas Augustin, and Achim
   Zeileis.
 \newblock Conditional variable importance for random forests.
 \newblock \emph{BMC Bioinformatics}, 9:\penalty0 307, 2008.
-
-\bibitem[{TODO: authors -- copy from arXiv 2605.10616}(2026)]{multabench}
-{TODO: authors -- copy from arXiv 2605.10616}.
-\newblock {MulTaBench}: Benchmarking multimodal tabular learning with text and
-  image.
-\newblock \emph{arXiv preprint arXiv:2605.10616}, 2026.
 
 \bibitem[Wang et~al.(2022)Wang, Yang, Huang, Jiao, Yang, Jiang, Majumder, and
   Wei]{wang2022e5}

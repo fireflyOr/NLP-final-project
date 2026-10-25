@@ -1,11 +1,9 @@
 \documentclass{article}
 
-% NeurIPS style: put neurips_2025.sty next to this file (from the official NeurIPS template / Overleaf).
-% Without it, a close approximation of the NeurIPS page geometry is used so the page count stays realistic.
-\IfFileExists{neurips_2025.sty}
-  {\usepackage[final]{neurips_2025}}
-  {\usepackage[letterpaper,textwidth=5.5in,textheight=9in,top=1in]{geometry}
-   \usepackage{times}\usepackage[numbers,sort&compress]{natbib}}
+% NeurIPS 2026 style. "preprint" = non-anonymous, no line numbers, footer "Preprint."
+% (not "final", whose footer would claim the paper appeared at NeurIPS 2026).
+\PassOptionsToPackage{numbers,sort&compress}{natbib}
+\usepackage[preprint]{neurips_2026}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -28,37 +26,41 @@
 \maketitle
 
 \begin{abstract}
-In text--tabular learning, each free-text column is embedded and compressed before a tree model sees it, and Joint
-TAR fine-tunes the encoder on the target so that the compression keeps target-relevant variation. We ask how the
+In the embedding baselines of the MulTaBench text--tabular benchmark, each free-text column is embedded, compressed
+with PCA, and given to a tree model together with the table; Joint TAR first fine-tunes the text encoder on the target,
+making the embeddings target-aware before compression. We ask how the
 target can be used further on top of TAR. Our first approach \emph{removes} information: a sparse autoencoder (SAE)
 splits each column's embeddings into concepts, each concept is tested against a shuffled copy of itself inside one
 model with the table and all other concepts, and the concepts that fail are subtracted before compression. On the 20
 text datasets of MulTaBench this selection is far better than removing random concepts of the same total variance
 (16/20 datasets, $p<0.001$), yet it does not improve on TAR, not even when the amount removed is chosen by nested
-cross-fitting. Approaches that \emph{reweight} the embedding (PLS instead of PCA, no compression) do not help
-either. What helps is \emph{adding}: the out-of-fold predictions of a text-only model, stacked as extra columns next
-to TAR's, improve on TAR with tuned LightGBM ($+0.0035$, 16/20, Holm-adjusted $p=0.006$) and with CatBoost
-($+0.0036$, 17/20, $p=0.003$). With default LightGBM it wins on 15/20 datasets but is not significant, because the
+cross-fitting. Approaches that \emph{reweight} the embedding or re-learn its compression (PLS instead of PCA, no
+compression, a 30-unit bottleneck trained on the target) do not help either. What helps is \emph{adding}: the out-of-fold predictions of a text-only model, stacked as extra columns next
+to TAR's, improve on TAR with tuned LightGBM ($+0.0035$, 16/20, Holm-adjusted $p=0.007$) and with CatBoost
+($+0.0036$, 17/20, $p=0.004$). With default LightGBM it wins on 15/20 datasets but is not significant, because the
 default learner fails on two folds of one 114-class dataset where the other learners, given the same features, do not.
 \end{abstract}
 
 % ------------------------------------------------------------------------------------------------------------
 \section{Introduction}
 
-Many real tables mix numbers and categories with free text: job ads, product reviews, wine descriptions. A standard
-recipe embeds each text cell with a pretrained encoder, reduces it to a few dimensions, and gives the result to a
-gradient-boosted tree model alongside the other columns \citep{shi2021multimodal,grinsztajn2022tree}. MulTaBench
-\citep{multabench} evaluates two variants: \emph{Joint Frozen} embeds with a frozen E5 encoder \citep{wang2022e5} and
-keeps 30 principal components per column; \emph{Joint TAR} first fine-tunes the encoder on the target, so that the
-principal components follow the variation that matters for the label.
+Many tabular datasets contain free-text columns next to numerical and categorical ones, such as the description of
+a job posting or the text of a product review. A standard pipeline embeds each text cell with a pretrained encoder,
+reduces it to a few dimensions, and gives the result to a gradient-boosted tree model alongside the other columns
+\citep{shi2021multimodal,grinsztajn2022tree}. Among its baselines, MulTaBench \citep{multabench} includes two such
+pipelines: \emph{Joint Frozen} embeds each text column with a frozen E5-small encoder \citep{wang2022e5} and keeps
+30 principal components per column; \emph{Joint TAR} first fine-tunes the encoder on the target, with the aim of
+making the embeddings, and therefore the components, target-aware.
 
-Both variants keep everything the text expresses and let compression decide what survives. A product description
-talks about materials, shipping and brand tone, of which only some relate to the price, and principal components
-follow variance, not relevance. This suggests removing target-irrelevant content before compressing. Sparse
-autoencoders (SAEs) make that possible, by writing an embedding as a sparse combination of learned, often
-interpretable directions \citep{bricken2023monosemanticity,cunningham2023sparse,gao2024scaling}. We use them as a
-filter, and compare removal with two other ways of using the target on top of TAR: reweighting the embedding, and
-adding a text model's prediction. Our contributions are:
+Both pipelines must compress each column to 30 dimensions, and PCA decides what survives by variance, not by
+relevance. Fine-tuning shifts the embedding toward the target, but it does not control the compression: if a frequent
+but irrelevant theme---shipping, brand tone---varies more than the price-relevant content of a product description,
+it still takes up the components. Our goal is therefore to remove target-irrelevant content \emph{before}
+compressing, so that what PCA discards is the least relevant part. Sparse autoencoders (SAEs) make this possible by
+writing an embedding as a sparse combination of learned, often interpretable directions
+\citep{bricken2023monosemanticity,cunningham2023sparse,gao2024scaling}. We use them as a filter, and compare removal
+with two other ways of using the target on top of TAR: reweighting the embedding, and adding a text model's
+prediction. Our contributions are:
 \begin{itemize}
   \item SAE concept pruning for text--tabular pipelines, with a joint shadow test of every concept and a nested
         cross-fitted variant that makes every decision on rows the encoder never saw (\S\ref{sec:method}).
@@ -105,8 +107,10 @@ TAR is fine-tuned on the other two, concepts are ranked there by variance per un
 removal fractions $\{0,10,25,50,75\}\%$ are scored on the unseen part with a LightGBM on the final inputs. The best
 fraction (0\% included) is applied to the fold's TAR.
 
-\paragraph{Reweighting.} PLS-30 \citep{wold2001pls} on TAR embeddings in place of PCA-30; and no compression (all
-384 dimensions).
+\paragraph{Reweighting and learned compression.} PLS-30 \citep{wold2001pls} on TAR embeddings in place of PCA-30;
+no compression (all 384 dimensions); and a \emph{learned} compression: TAR's fine-tuning recipe with a 30-unit linear
+bottleneck between the pooled embedding and the head (bottleneck, GELU, linear head), whose 30 outputs per column
+replace PCA-30, so that the compression itself is trained on the target.
 
 \paragraph{Adding: text stacking.} An MLP (one hidden layer of 256, dropout 0.3, early stopping) is trained on the
 concatenated frozen E5 embeddings of all text columns to predict the target. Its predictions (one logit, one
@@ -126,14 +130,14 @@ benchmark's splits (two repeats of 3-fold cross-validation; training sets capped
 the training rows. In the final run each fold's LoRA adapters are saved and restored for every arm and learner, so
 all comparisons within a fold share one fine-tune.
 
-\paragraph{Learners.} LightGBM with default settings (as in the benchmark); LightGBM tuned on its validation split
-(learning rate, depth, column subsampling; 12 configurations with early stopping); and CatBoost with the benchmark's
+\paragraph{Learners.} LightGBM \citep{ke2017lightgbm} with default settings (as in the benchmark); LightGBM tuned on its validation split
+(learning rate, depth, column subsampling; 12 configurations with early stopping); and CatBoost \citep{prokhorenkova2018catboost} with the benchmark's
 defaults. Every arm, including TAR, is evaluated with each learner.
 
 \paragraph{Controls and statistics.} Random pruning removes random eligible concepts from the same SAE, either the
 same \emph{number} as concept pruning or the same \emph{variance}. Each arm is compared with Joint TAR of the same
 learner and fold by a two-sided Wilcoxon signed-rank test over per-dataset means; $p$-values are Holm-adjusted over
-all eleven arm--learner comparisons with TAR.
+all fourteen arm--learner comparisons with TAR.
 
 % ------------------------------------------------------------------------------------------------------------
 \section{Results}\label{sec:results}
@@ -143,11 +147,11 @@ all eleven arm--learner comparisons with TAR.
 \caption{Arms that change what follows TAR's encoder, per learner: mean difference from that learner's Joint TAR,
 datasets improved (of 20), Wilcoxon $p$. Default-LightGBM Joint Frozen is in the main run ($-0.017$, 1/20).}
 \label{tab:learners}
-\input{tables/final/learners.tex}
+\setlength{\tabcolsep}{3.5pt}\input{tables/final/learners.tex}
 \end{table}
 
 \paragraph{Adding a text model's prediction improves on TAR.} With tuned LightGBM, TAR + stacking beats TAR by
-$+0.0035$ on 16/20 datasets (Holm-adjusted $p=0.006$); with CatBoost by $+0.0036$ on 17/20 ($p=0.003$;
+$+0.0035$ on 16/20 datasets (Holm-adjusted $p=0.007$); with CatBoost by $+0.0036$ on 17/20 ($p=0.004$;
 Table~\ref{tab:learners}). Both learners are themselves stronger than default LightGBM (their TAR is $+0.012$ and
 $+0.014$ higher), so the gain is not an artefact of a weak learner. With default LightGBM, stacking improves 15/20
 datasets but the mean is negative ($-0.0020$, $p=0.064$): on two folds of Spotify genres (114 classes) the default
@@ -160,12 +164,18 @@ LightGBM to these features, not in the features; we report it unchanged.
 \caption{Final run, default LightGBM: every arm vs.\ Joint TAR with the same fine-tuned encoder (per-dataset means
 over 6 folds); $p$: Wilcoxon over datasets; $p_{\text{Holm}}$: adjusted within this table.}
 \label{tab:summary}
-\input{tables/final/summary.tex}
+\setlength{\tabcolsep}{3.5pt}\input{tables/final/summary.tex}
 \end{table}
 
 \paragraph{Reweighting does not help.} PLS in place of PCA is worse than TAR with every learner ($-0.004$ to
 $-0.007$; significant after correction with tuned LightGBM and CatBoost), and keeping all 384 dimensions is
-indistinguishable from TAR ($+0.0014$, 9/20; Table~\ref{tab:summary}). Late fusion helps on multiclass datasets
+indistinguishable from TAR ($+0.0014$, 9/20; Table~\ref{tab:summary}). This last arm tests the premise of
+removal: if compressing TAR embeddings to 30 dimensions discarded much target-relevant information, keeping all 384
+would win. It does not, so after fine-tuning there is little for a better compression to recover. Learning the compression does not
+help either: the 30-unit bottleneck is worse than TAR with every learner ($-0.006$ to $-0.008$, better on 3--6
+datasets), almost entirely on binary and regression datasets (multiclass: $\le0.001$). A plausible reason is that it
+keeps only what separates the training classes---for regression, the 20 bins---and discards finer information that
+PCA on TAR's embedding retains. Late fusion helps on multiclass datasets
 (6/7) but loses on all binary and regression datasets ($-0.018$ overall): averaging a table model and a text model
 discards the interactions a joint learner can use.
 

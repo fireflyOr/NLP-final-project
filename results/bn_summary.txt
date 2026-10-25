@@ -1,0 +1,716 @@
+bn_1460788_0.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (20607 train examples)
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 2 e5-small-tar-bn    auroc 0.8987 (90 text feats, 789s)
+bn_1460788_0.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (20604 train examples)
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 3 e5-small-tar-bn    auroc 0.8788 (90 text feats, 845s)
+bn_1460788_0.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (20604 train examples)
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 4 e5-small-tar-bn    auroc 0.8997 (90 text feats, 682s)
+bn_1460788_0.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (20607 train examples)
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 5 e5-small-tar-bn    auroc 0.9105 (90 text feats, 791s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_1109e90b5e8c3ea56b5c824919becf673a06e98c_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 0 e5-small-tar-bn    auroc 0.8459 (90 text feats, 33s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_29475c5357e63caad1edf4a8de897797c4a719e7_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 1 e5-small-tar-bn    auroc 0.9003 (90 text feats, 33s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_14865d51c4a090df70625261bcba26b064db580b_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 2 e5-small-tar-bn    auroc 0.8960 (90 text feats, 37s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_329520d054203653d19cb59952bde618a186aad0_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 3 e5-small-tar-bn    auroc 0.8886 (90 text feats, 32s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_26e04d82cf2ae973a9e8538feae4bbeccaea66ae_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 4 e5-small-tar-bn    auroc 0.9001 (90 text feats, 32s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_0a39b7f6f3e8a16944bb6c8874e66df103ebec2a_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 5 e5-small-tar-bn    auroc 0.9110 (90 text feats, 35s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_1109e90b5e8c3ea56b5c824919becf673a06e98c_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 0 e5-small-tar-bn    auroc 0.8726 (90 text feats, 38s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_29475c5357e63caad1edf4a8de897797c4a719e7_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 1 e5-small-tar-bn    auroc 0.9212 (90 text feats, 35s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_14865d51c4a090df70625261bcba26b064db580b_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 2 e5-small-tar-bn    auroc 0.8905 (90 text feats, 35s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_329520d054203653d19cb59952bde618a186aad0_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 3 e5-small-tar-bn    auroc 0.9037 (90 text feats, 36s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_26e04d82cf2ae973a9e8538feae4bbeccaea66ae_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 4 e5-small-tar-bn    auroc 0.8831 (90 text feats, 36s)
+bn_1460788_0.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/0/bn30_0a39b7f6f3e8a16944bb6c8874e66df103ebec2a_bn30.pt
+bn_1460788_0.out:BIN_TEXT_FAKE_JOB_POSTING fold 5 e5-small-tar-bn    auroc 0.9140 (90 text feats, 36s)
+bn_1460788_10.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (10984 train examples)
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 0 e5-small-tar-bn    r2 0.8292 (120 text feats, 141s)
+bn_1460788_10.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (10984 train examples)
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 1 e5-small-tar-bn    r2 0.8401 (120 text feats, 134s)
+bn_1460788_10.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (10984 train examples)
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 2 e5-small-tar-bn    r2 0.7348 (120 text feats, 137s)
+bn_1460788_10.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (10984 train examples)
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 3 e5-small-tar-bn    r2 0.7472 (120 text feats, 142s)
+bn_1460788_10.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (10984 train examples)
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 4 e5-small-tar-bn    r2 0.8202 (120 text feats, 144s)
+bn_1460788_10.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (10984 train examples)
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 5 e5-small-tar-bn    r2 0.8201 (120 text feats, 145s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_d045c305b1375a8459231c638b9ea8d99ee76382_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 0 e5-small-tar-bn    r2 0.8443 (120 text feats, 16s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_49bdddaf1c45a0fdb7373b95d3e2d0dd508a5ba5_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 1 e5-small-tar-bn    r2 0.8420 (120 text feats, 8s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_ee00827568d4eccfc599278cbe6b60e331830d9d_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 2 e5-small-tar-bn    r2 0.7414 (120 text feats, 13s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_e149cdbd6ff3c8f165a0d3f43d97b0844e77e1c8_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 3 e5-small-tar-bn    r2 0.7564 (120 text feats, 9s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_c758e48d93e74040190ead9a09ec24231dd9df2d_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 4 e5-small-tar-bn    r2 0.8242 (120 text feats, 12s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_d15ee7c7cd477dfe4c816eaecfd9acc2983e14db_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 5 e5-small-tar-bn    r2 0.8171 (120 text feats, 8s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_d045c305b1375a8459231c638b9ea8d99ee76382_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 0 e5-small-tar-bn    r2 0.8453 (120 text feats, 25s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_49bdddaf1c45a0fdb7373b95d3e2d0dd508a5ba5_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 1 e5-small-tar-bn    r2 0.8446 (120 text feats, 23s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_ee00827568d4eccfc599278cbe6b60e331830d9d_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 2 e5-small-tar-bn    r2 0.7435 (120 text feats, 24s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_e149cdbd6ff3c8f165a0d3f43d97b0844e77e1c8_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 3 e5-small-tar-bn    r2 0.7424 (120 text feats, 14s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_c758e48d93e74040190ead9a09ec24231dd9df2d_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 4 e5-small-tar-bn    r2 0.8378 (120 text feats, 24s)
+bn_1460788_10.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/10/bn30_d15ee7c7cd477dfe4c816eaecfd9acc2983e14db_bn30.pt
+bn_1460788_10.out:REG_TEXT_BABIES_PRICES fold 5 e5-small-tar-bn    r2 0.8340 (120 text feats, 23s)
+bn_1460788_11.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (13475 train examples)
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 0 e5-small-tar-bn    r2 0.5027 (150 text feats, 816s)
+bn_1460788_11.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (13475 train examples)
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 1 e5-small-tar-bn    r2 0.5133 (150 text feats, 886s)
+bn_1460788_11.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (13475 train examples)
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 2 e5-small-tar-bn    r2 0.5079 (150 text feats, 816s)
+bn_1460788_11.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (13475 train examples)
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 3 e5-small-tar-bn    r2 0.4887 (150 text feats, 921s)
+bn_1460788_11.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (13475 train examples)
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 4 e5-small-tar-bn    r2 0.4753 (150 text feats, 673s)
+bn_1460788_11.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (13475 train examples)
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 5 e5-small-tar-bn    r2 0.5361 (150 text feats, 1019s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_508b333931af8d770f5aa8d4c297958cedd27351_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 0 e5-small-tar-bn    r2 0.5250 (150 text feats, 16s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_bf618a9822e3490dbacc5c4f465b3eaecf2e789c_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 1 e5-small-tar-bn    r2 0.5312 (150 text feats, 16s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_991c82534f942ff01e1e6d4930ea98e166495e54_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 2 e5-small-tar-bn    r2 0.5156 (150 text feats, 15s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_b60306f8ca46cd5c24d519d54f80ea3afb7522a4_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 3 e5-small-tar-bn    r2 0.4836 (150 text feats, 14s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_5c9f37962f6b4d532b390399616df57047aba1b2_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 4 e5-small-tar-bn    r2 0.4792 (150 text feats, 21s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_fe2af7755201ef98e1edce61ed4767706eba9663_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 5 e5-small-tar-bn    r2 0.5281 (150 text feats, 17s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_508b333931af8d770f5aa8d4c297958cedd27351_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 0 e5-small-tar-bn    r2 0.5178 (150 text feats, 23s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_bf618a9822e3490dbacc5c4f465b3eaecf2e789c_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 1 e5-small-tar-bn    r2 0.5371 (150 text feats, 22s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_991c82534f942ff01e1e6d4930ea98e166495e54_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 2 e5-small-tar-bn    r2 0.5261 (150 text feats, 22s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_b60306f8ca46cd5c24d519d54f80ea3afb7522a4_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 3 e5-small-tar-bn    r2 0.5068 (150 text feats, 22s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_5c9f37962f6b4d532b390399616df57047aba1b2_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 4 e5-small-tar-bn    r2 0.4924 (150 text feats, 23s)
+bn_1460788_11.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/11/bn30_fe2af7755201ef98e1edce61ed4767706eba9663_bn30.pt
+bn_1460788_11.out:REG_TEXT_BOOK_PRICE fold 5 e5-small-tar-bn    r2 0.5438 (150 text feats, 22s)
+bn_1460788_12.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (15312 train examples)
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 0 e5-small-tar-bn    r2 0.8038 (180 text feats, 723s)
+bn_1460788_12.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (15312 train examples)
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 1 e5-small-tar-bn    r2 0.8178 (180 text feats, 534s)
+bn_1460788_12.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (15312 train examples)
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 2 e5-small-tar-bn    r2 0.7963 (180 text feats, 595s)
+bn_1460788_12.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (15312 train examples)
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 3 e5-small-tar-bn    r2 0.8106 (180 text feats, 641s)
+bn_1460788_12.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (15312 train examples)
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 4 e5-small-tar-bn    r2 0.8139 (180 text feats, 710s)
+bn_1460788_12.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (15312 train examples)
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 5 e5-small-tar-bn    r2 0.8012 (180 text feats, 590s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_f84ef6e976e395196832a5cb882104eb65731224_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 0 e5-small-tar-bn    r2 0.8101 (180 text feats, 22s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_f1b799b7aded962acdec74df997c15efbbccd029_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 1 e5-small-tar-bn    r2 0.8080 (180 text feats, 17s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_8f1a89953e2d6c3063e210559da37af51659305f_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 2 e5-small-tar-bn    r2 0.8037 (180 text feats, 19s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_b0cd4d7e8e38365332fa2564fb1b81064844a1fb_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 3 e5-small-tar-bn    r2 0.8120 (180 text feats, 18s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_8da82f18d8d80f34020fe5d8eedbce9f345d629c_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 4 e5-small-tar-bn    r2 0.8139 (180 text feats, 17s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_06a7e9e41ca2aa8d456bc45de41961bcfe4e582f_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 5 e5-small-tar-bn    r2 0.7991 (180 text feats, 18s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_f84ef6e976e395196832a5cb882104eb65731224_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 0 e5-small-tar-bn    r2 0.8131 (180 text feats, 26s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_f1b799b7aded962acdec74df997c15efbbccd029_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 1 e5-small-tar-bn    r2 0.8240 (180 text feats, 33s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_8f1a89953e2d6c3063e210559da37af51659305f_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 2 e5-small-tar-bn    r2 0.8133 (180 text feats, 37s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_b0cd4d7e8e38365332fa2564fb1b81064844a1fb_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 3 e5-small-tar-bn    r2 0.8178 (180 text feats, 36s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_8da82f18d8d80f34020fe5d8eedbce9f345d629c_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 4 e5-small-tar-bn    r2 0.8157 (180 text feats, 23s)
+bn_1460788_12.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/12/bn30_06a7e9e41ca2aa8d456bc45de41961bcfe4e582f_bn30.pt
+bn_1460788_12.out:REG_TEXT_BOOK_READABILITY fold 5 e5-small-tar-bn    r2 0.8140 (180 text feats, 25s)
+bn_1460788_13.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 0 e5-small-tar-bn    r2 0.4288 (180 text feats, 645s)
+bn_1460788_13.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 1 e5-small-tar-bn    r2 0.4496 (180 text feats, 735s)
+bn_1460788_13.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 2 e5-small-tar-bn    r2 0.4304 (180 text feats, 657s)
+bn_1460788_13.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 3 e5-small-tar-bn    r2 0.4252 (180 text feats, 748s)
+bn_1460788_13.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 4 e5-small-tar-bn    r2 0.4143 (180 text feats, 591s)
+bn_1460788_13.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 5 e5-small-tar-bn    r2 0.4398 (180 text feats, 837s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_19ffe4426116d232fc4915cba16648d341b063d1_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 0 e5-small-tar-bn    r2 0.4380 (180 text feats, 22s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_87eb3823ef7a49dee424c47de1db31575f16b561_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 1 e5-small-tar-bn    r2 0.4581 (180 text feats, 20s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_6aa90f514b0befd8f8f6ae6de0c9c5fa12066edf_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 2 e5-small-tar-bn    r2 0.4392 (180 text feats, 18s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_6b9ebafab0170b6a22622771cf587ecc411b9f16_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 3 e5-small-tar-bn    r2 0.4352 (180 text feats, 22s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_3bf71ff607f45d54b9737335ee166713c242a078_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 4 e5-small-tar-bn    r2 0.4144 (180 text feats, 19s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_5aa0311f76584e1832649efa827d4a571a45e0ff_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 5 e5-small-tar-bn    r2 0.4537 (180 text feats, 19s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_19ffe4426116d232fc4915cba16648d341b063d1_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 0 e5-small-tar-bn    r2 0.4420 (180 text feats, 29s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_87eb3823ef7a49dee424c47de1db31575f16b561_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 1 e5-small-tar-bn    r2 0.4638 (180 text feats, 20s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_6aa90f514b0befd8f8f6ae6de0c9c5fa12066edf_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 2 e5-small-tar-bn    r2 0.4400 (180 text feats, 20s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_6b9ebafab0170b6a22622771cf587ecc411b9f16_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 3 e5-small-tar-bn    r2 0.4378 (180 text feats, 29s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_3bf71ff607f45d54b9737335ee166713c242a078_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 4 e5-small-tar-bn    r2 0.4232 (180 text feats, 20s)
+bn_1460788_13.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/13/bn30_5aa0311f76584e1832649efa827d4a571a45e0ff_bn30.pt
+bn_1460788_13.out:REG_TEXT_MERCARI_MARKETPLACE fold 5 e5-small-tar-bn    r2 0.4558 (180 text feats, 28s)
+bn_1460788_14.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (19936 train examples)
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 0 e5-small-tar-bn    r2 0.9802 (120 text feats, 136s)
+bn_1460788_14.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (19936 train examples)
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 1 e5-small-tar-bn    r2 0.9797 (120 text feats, 161s)
+bn_1460788_14.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (19936 train examples)
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 2 e5-small-tar-bn    r2 0.9701 (120 text feats, 118s)
+bn_1460788_14.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (19936 train examples)
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 3 e5-small-tar-bn    r2 0.9773 (120 text feats, 125s)
+bn_1460788_14.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (19936 train examples)
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 4 e5-small-tar-bn    r2 0.9703 (120 text feats, 143s)
+bn_1460788_14.out:Finetuning E5 with a 30-unit bottleneck for 4 columns (19936 train examples)
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 5 e5-small-tar-bn    r2 0.9758 (120 text feats, 100s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_e4414ef43dc0d5d156a64210f5f6d639b9db8436_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 0 e5-small-tar-bn    r2 0.9784 (120 text feats, 22s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_3b161481e4c58debfb25be0c0e1f241349cfba23_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 1 e5-small-tar-bn    r2 0.9796 (120 text feats, 15s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_8c5fb4fdd2095018dbc0fb0ea5c529b1c6317cba_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 2 e5-small-tar-bn    r2 0.9716 (120 text feats, 18s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_8236868d858872a1b23187d328800f92c4e4bf6c_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 3 e5-small-tar-bn    r2 0.9784 (120 text feats, 17s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_b26e9504340366fcee82605d750697340261ed71_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 4 e5-small-tar-bn    r2 0.9694 (120 text feats, 18s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_edbfcb760e61febc0b30660b5f530f0d19c235e6_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 5 e5-small-tar-bn    r2 0.9749 (120 text feats, 13s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_e4414ef43dc0d5d156a64210f5f6d639b9db8436_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 0 e5-small-tar-bn    r2 0.9813 (120 text feats, 26s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_3b161481e4c58debfb25be0c0e1f241349cfba23_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 1 e5-small-tar-bn    r2 0.9825 (120 text feats, 24s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_8c5fb4fdd2095018dbc0fb0ea5c529b1c6317cba_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 2 e5-small-tar-bn    r2 0.9730 (120 text feats, 24s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_8236868d858872a1b23187d328800f92c4e4bf6c_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 3 e5-small-tar-bn    r2 0.9834 (120 text feats, 26s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_b26e9504340366fcee82605d750697340261ed71_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 4 e5-small-tar-bn    r2 0.9725 (120 text feats, 25s)
+bn_1460788_14.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/14/bn30_edbfcb760e61febc0b30660b5f530f0d19c235e6_bn30.pt
+bn_1460788_14.out:REG_TEXT_MONTGOMERY_SALARIES fold 5 e5-small-tar-bn    r2 0.9795 (120 text feats, 24s)
+bn_1460788_15.out:Finetuning E5 with a 30-unit bottleneck for 10 columns (81000 train examples)
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 0 e5-small-tar-bn    r2 0.8502 (300 text feats, 556s)
+bn_1460788_15.out:Finetuning E5 with a 30-unit bottleneck for 10 columns (81000 train examples)
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 1 e5-small-tar-bn    r2 0.8156 (300 text feats, 424s)
+bn_1460788_15.out:Finetuning E5 with a 30-unit bottleneck for 10 columns (81000 train examples)
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 2 e5-small-tar-bn    r2 0.8621 (300 text feats, 484s)
+bn_1460788_15.out:Finetuning E5 with a 30-unit bottleneck for 9 columns (72900 train examples)
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 3 e5-small-tar-bn    r2 0.8233 (270 text feats, 357s)
+bn_1460788_15.out:Finetuning E5 with a 30-unit bottleneck for 10 columns (81000 train examples)
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 4 e5-small-tar-bn    r2 0.8443 (300 text feats, 308s)
+bn_1460788_15.out:Finetuning E5 with a 30-unit bottleneck for 9 columns (72900 train examples)
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 5 e5-small-tar-bn    r2 0.8674 (270 text feats, 444s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_7f586b3674a4e0c3ebf771c50b631faf3e5bb1de_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 0 e5-small-tar-bn    r2 0.8572 (300 text feats, 39s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_2c76e0b87e7d2974a9825f6aab919be814e4e559_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 1 e5-small-tar-bn    r2 0.8241 (300 text feats, 48s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_d5a4991c27ccc69b8dda0a2cc12c59df99551955_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 2 e5-small-tar-bn    r2 0.8603 (300 text feats, 54s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_79c23cd986dd84b4142a99b415100f08504741b6_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 3 e5-small-tar-bn    r2 0.8202 (270 text feats, 43s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_0c759a7abb9623faa463910f58390e83efde6a5c_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 4 e5-small-tar-bn    r2 0.8494 (300 text feats, 28s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_3a35d23dc7f93e2aba67995781c4f7cdafe95679_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 5 e5-small-tar-bn    r2 0.8703 (270 text feats, 32s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_7f586b3674a4e0c3ebf771c50b631faf3e5bb1de_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 0 e5-small-tar-bn    r2 0.8741 (300 text feats, 52s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_2c76e0b87e7d2974a9825f6aab919be814e4e559_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 1 e5-small-tar-bn    r2 0.8115 (300 text feats, 50s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_d5a4991c27ccc69b8dda0a2cc12c59df99551955_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 2 e5-small-tar-bn    r2 0.8728 (300 text feats, 50s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_79c23cd986dd84b4142a99b415100f08504741b6_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 3 e5-small-tar-bn    r2 0.8264 (270 text feats, 49s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_0c759a7abb9623faa463910f58390e83efde6a5c_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 4 e5-small-tar-bn    r2 0.8497 (300 text feats, 50s)
+bn_1460788_15.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/15/bn30_3a35d23dc7f93e2aba67995781c4f7cdafe95679_bn30.pt
+bn_1460788_15.out:REG_TEXT_SCIMAGOJR_IMPACT fold 5 e5-small-tar-bn    r2 0.8698 (270 text feats, 38s)
+bn_1460788_16.out:Finetuning E5 with a 30-unit bottleneck for 13 columns (50258 train examples)
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 0 e5-small-tar-bn    r2 0.4840 (390 text feats, 271s)
+bn_1460788_16.out:Finetuning E5 with a 30-unit bottleneck for 13 columns (50258 train examples)
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 1 e5-small-tar-bn    r2 0.4895 (390 text feats, 256s)
+bn_1460788_16.out:Finetuning E5 with a 30-unit bottleneck for 13 columns (50258 train examples)
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 2 e5-small-tar-bn    r2 0.5222 (390 text feats, 207s)
+bn_1460788_16.out:Finetuning E5 with a 30-unit bottleneck for 13 columns (50258 train examples)
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 3 e5-small-tar-bn    r2 0.5084 (390 text feats, 240s)
+bn_1460788_16.out:Finetuning E5 with a 30-unit bottleneck for 13 columns (50258 train examples)
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 4 e5-small-tar-bn    r2 0.5102 (390 text feats, 275s)
+bn_1460788_16.out:Finetuning E5 with a 30-unit bottleneck for 13 columns (50258 train examples)
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 5 e5-small-tar-bn    r2 0.4544 (390 text feats, 378s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_d49d60d44c9eec3322971ba1fb6c1421615b33f3_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 0 e5-small-tar-bn    r2 0.4966 (390 text feats, 33s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_19fd662b6e9519ac931b517228164cb9ebef0638_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 1 e5-small-tar-bn    r2 0.4963 (390 text feats, 32s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_68cf48b20d474b66ea79a98140c937f1035d3867_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 2 e5-small-tar-bn    r2 0.5293 (390 text feats, 35s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_db68f48c1a9f8d480738e9f9225549fc919eaee4_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 3 e5-small-tar-bn    r2 0.5273 (390 text feats, 33s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_fa0a77914c38dac7a2e16fe9e319e8286b0c1a98_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 4 e5-small-tar-bn    r2 0.5239 (390 text feats, 33s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_1dc41a5c0bab53d5f6184b13aeb5d577ce80c0d3_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 5 e5-small-tar-bn    r2 0.4653 (390 text feats, 31s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_d49d60d44c9eec3322971ba1fb6c1421615b33f3_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 0 e5-small-tar-bn    r2 0.4991 (390 text feats, 37s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_19fd662b6e9519ac931b517228164cb9ebef0638_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 1 e5-small-tar-bn    r2 0.5081 (390 text feats, 46s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_68cf48b20d474b66ea79a98140c937f1035d3867_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 2 e5-small-tar-bn    r2 0.5335 (390 text feats, 46s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_db68f48c1a9f8d480738e9f9225549fc919eaee4_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 3 e5-small-tar-bn    r2 0.5359 (390 text feats, 46s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_fa0a77914c38dac7a2e16fe9e319e8286b0c1a98_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 4 e5-small-tar-bn    r2 0.5239 (390 text feats, 47s)
+bn_1460788_16.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/16/bn30_1dc41a5c0bab53d5f6184b13aeb5d577ce80c0d3_bn30.pt
+bn_1460788_16.out:REG_TEXT_ROTTEN_TOMATOES fold 5 e5-small-tar-bn    r2 0.4741 (390 text feats, 46s)
+bn_1460788_17.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 0 e5-small-tar-bn    r2 0.7549 (60 text feats, 128s)
+bn_1460788_17.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 1 e5-small-tar-bn    r2 0.7471 (60 text feats, 138s)
+bn_1460788_17.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 2 e5-small-tar-bn    r2 0.7630 (60 text feats, 107s)
+bn_1460788_17.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 3 e5-small-tar-bn    r2 0.7652 (60 text feats, 140s)
+bn_1460788_17.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 4 e5-small-tar-bn    r2 0.8075 (60 text feats, 104s)
+bn_1460788_17.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 5 e5-small-tar-bn    r2 0.7685 (60 text feats, 143s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_bf0298e1801b15abbc55144eb51f78c718770a90_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 0 e5-small-tar-bn    r2 0.7675 (60 text feats, 15s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_e8757646ea7f4a416bf78ff9ddfbe73e4a18e42e_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 1 e5-small-tar-bn    r2 0.7552 (60 text feats, 15s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_35d207fcc42b0889b1ac6a925f29682fd8276e2e_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 2 e5-small-tar-bn    r2 0.7755 (60 text feats, 13s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_c4b5b881e192a1484daa39a20cfc2b23dd614565_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 3 e5-small-tar-bn    r2 0.7760 (60 text feats, 14s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_0d7bf2c45c732bae77f046acf5fa0ee704cf653c_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 4 e5-small-tar-bn    r2 0.8193 (60 text feats, 17s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_a3b4d4e8747e573cef1e0e5c266c040f34f5067e_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 5 e5-small-tar-bn    r2 0.7796 (60 text feats, 16s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_bf0298e1801b15abbc55144eb51f78c718770a90_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 0 e5-small-tar-bn    r2 0.7682 (60 text feats, 16s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_e8757646ea7f4a416bf78ff9ddfbe73e4a18e42e_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 1 e5-small-tar-bn    r2 0.7580 (60 text feats, 16s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_35d207fcc42b0889b1ac6a925f29682fd8276e2e_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 2 e5-small-tar-bn    r2 0.7750 (60 text feats, 16s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_c4b5b881e192a1484daa39a20cfc2b23dd614565_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 3 e5-small-tar-bn    r2 0.7738 (60 text feats, 16s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_0d7bf2c45c732bae77f046acf5fa0ee704cf653c_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 4 e5-small-tar-bn    r2 0.8199 (60 text feats, 16s)
+bn_1460788_17.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/17/bn30_a3b4d4e8747e573cef1e0e5c266c040f34f5067e_bn30.pt
+bn_1460788_17.out:REG_TEXT_VANCOUVER_SALARIES fold 5 e5-small-tar-bn    r2 0.7821 (60 text feats, 16s)
+bn_1460788_18.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 0 e5-small-tar-bn    r2 0.1544 (60 text feats, 112s)
+bn_1460788_18.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 1 e5-small-tar-bn    r2 0.3104 (60 text feats, 115s)
+bn_1460788_18.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 2 e5-small-tar-bn    r2 0.4046 (60 text feats, 103s)
+bn_1460788_18.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 3 e5-small-tar-bn    r2 0.3571 (60 text feats, 101s)
+bn_1460788_18.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 4 e5-small-tar-bn    r2 0.3943 (60 text feats, 69s)
+bn_1460788_18.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 5 e5-small-tar-bn    r2 0.3272 (60 text feats, 93s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_b9e97e74adf186b3a7717cb64dc567aed010a037_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 0 e5-small-tar-bn    r2 0.2119 (60 text feats, 10s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_d92f6de224fa145aa08753aee5c30d1303230b3d_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 1 e5-small-tar-bn    r2 0.3555 (60 text feats, 8s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_f3be133790954340328dc571099ddb954ee4c8b5_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 2 e5-small-tar-bn    r2 0.3953 (60 text feats, 10s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_ca2b453104bd21c9eee4568bffd68ecf89338389_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 3 e5-small-tar-bn    r2 0.3832 (60 text feats, 9s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_30c2bc528bc0f43d3493bf007411a400a475d9a7_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 4 e5-small-tar-bn    r2 0.3246 (60 text feats, 7s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_a5f393490a5cd906514754c1aeb8688e8c7afc6e_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 5 e5-small-tar-bn    r2 0.3247 (60 text feats, 9s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_b9e97e74adf186b3a7717cb64dc567aed010a037_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 0 e5-small-tar-bn    r2 0.1713 (60 text feats, 23s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_d92f6de224fa145aa08753aee5c30d1303230b3d_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 1 e5-small-tar-bn    r2 0.4075 (60 text feats, 21s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_f3be133790954340328dc571099ddb954ee4c8b5_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 2 e5-small-tar-bn    r2 0.4458 (60 text feats, 21s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_ca2b453104bd21c9eee4568bffd68ecf89338389_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 3 e5-small-tar-bn    r2 0.3142 (60 text feats, 12s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_30c2bc528bc0f43d3493bf007411a400a475d9a7_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 4 e5-small-tar-bn    r2 0.2974 (60 text feats, 8s)
+bn_1460788_18.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/18/bn30_a5f393490a5cd906514754c1aeb8688e8c7afc6e_bn30.pt
+bn_1460788_18.out:REG_TEXT_VIDEO_GAMES_SALES fold 5 e5-small-tar-bn    r2 0.3302 (60 text feats, 21s)
+bn_1460788_19.out:Finetuning E5 with a 30-unit bottleneck for 7 columns (56700 train examples)
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 0 e5-small-tar-bn    r2 0.7917 (210 text feats, 7558s)
+bn_1460788_19.out:Finetuning E5 with a 30-unit bottleneck for 7 columns (56700 train examples)
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 1 e5-small-tar-bn    r2 0.7983 (210 text feats, 6391s)
+bn_1460788_19.out:Finetuning E5 with a 30-unit bottleneck for 7 columns (56700 train examples)
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 2 e5-small-tar-bn    r2 0.7902 (210 text feats, 6997s)
+bn_1460788_19.out:Finetuning E5 with a 30-unit bottleneck for 7 columns (56700 train examples)
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 3 e5-small-tar-bn    r2 0.7802 (210 text feats, 5353s)
+bn_1460788_19.out:Finetuning E5 with a 30-unit bottleneck for 7 columns (56700 train examples)
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 4 e5-small-tar-bn    r2 0.8136 (210 text feats, 5060s)
+bn_1460788_19.out:Finetuning E5 with a 30-unit bottleneck for 7 columns (56700 train examples)
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 5 e5-small-tar-bn    r2 0.8022 (210 text feats, 6261s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_bcb1ffd38aaf113a41b0c8ec065fa3b13b101847_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 0 e5-small-tar-bn    r2 0.8370 (210 text feats, 192s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_ec35f26d2f14ee3dd6f8b82ae0acf1077854eee4_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 1 e5-small-tar-bn    r2 0.8419 (210 text feats, 193s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_ff8135f69ebcd81b7a5eb306e9f2c58439c549ca_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 2 e5-small-tar-bn    r2 0.8365 (210 text feats, 191s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_a8635ac956a32c85faa57bbf199e99b24b4abeea_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 3 e5-small-tar-bn    r2 0.8295 (210 text feats, 193s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_bfa2aa6b122502e5e571f95945692cd54c4a5b61_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 4 e5-small-tar-bn    r2 0.8582 (210 text feats, 195s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_cf78cf9721dfe1885c2fc2be1de50a9f559bae2e_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 5 e5-small-tar-bn    r2 0.8519 (210 text feats, 191s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_bcb1ffd38aaf113a41b0c8ec065fa3b13b101847_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 0 e5-small-tar-bn    r2 0.8266 (210 text feats, 164s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_ec35f26d2f14ee3dd6f8b82ae0acf1077854eee4_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 1 e5-small-tar-bn    r2 0.8297 (210 text feats, 164s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_ff8135f69ebcd81b7a5eb306e9f2c58439c549ca_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 2 e5-small-tar-bn    r2 0.8247 (210 text feats, 166s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_a8635ac956a32c85faa57bbf199e99b24b4abeea_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 3 e5-small-tar-bn    r2 0.8187 (210 text feats, 167s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_bfa2aa6b122502e5e571f95945692cd54c4a5b61_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 4 e5-small-tar-bn    r2 0.8459 (210 text feats, 160s)
+bn_1460788_19.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/19/bn30_cf78cf9721dfe1885c2fc2be1de50a9f559bae2e_bn30.pt
+bn_1460788_19.out:REG_TEXT_ZOMATO_RESTAURANTS fold 5 e5-small-tar-bn    r2 0.8402 (210 text feats, 164s)
+bn_1460788_1.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16194 train examples)
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 0 e5-small-tar-bn    auroc 0.9257 (60 text feats, 225s)
+bn_1460788_1.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16194 train examples)
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 1 e5-small-tar-bn    auroc 0.9212 (60 text feats, 401s)
+bn_1460788_1.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16194 train examples)
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 2 e5-small-tar-bn    auroc 0.9423 (60 text feats, 304s)
+bn_1460788_1.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16194 train examples)
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 3 e5-small-tar-bn    auroc 0.9311 (60 text feats, 378s)
+bn_1460788_1.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16194 train examples)
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 4 e5-small-tar-bn    auroc 0.9338 (60 text feats, 225s)
+bn_1460788_1.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16194 train examples)
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 5 e5-small-tar-bn    auroc 0.9402 (60 text feats, 286s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_fb666de1d34593d8549e75a836bba00505954475_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 0 e5-small-tar-bn    auroc 0.9282 (60 text feats, 15s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_8c02a90f811b1f02e79e684e040dbe87e972eb8b_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 1 e5-small-tar-bn    auroc 0.9241 (60 text feats, 14s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_e34d2a97b994b96da1bd24410245bb6a24e1d0d4_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 2 e5-small-tar-bn    auroc 0.9480 (60 text feats, 14s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_934e03a4854ba3c6e4042f52de84a4357b15d100_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 3 e5-small-tar-bn    auroc 0.9306 (60 text feats, 15s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_95a3b8a0479e24169a1c814cd200ef419615c9a6_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 4 e5-small-tar-bn    auroc 0.9370 (60 text feats, 15s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_3e46afca228095233bfb4e635f2978e782e57bbe_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 5 e5-small-tar-bn    auroc 0.9422 (60 text feats, 14s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_fb666de1d34593d8549e75a836bba00505954475_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 0 e5-small-tar-bn    auroc 0.9317 (60 text feats, 17s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_8c02a90f811b1f02e79e684e040dbe87e972eb8b_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 1 e5-small-tar-bn    auroc 0.9303 (60 text feats, 15s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_e34d2a97b994b96da1bd24410245bb6a24e1d0d4_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 2 e5-small-tar-bn    auroc 0.9509 (60 text feats, 15s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_934e03a4854ba3c6e4042f52de84a4357b15d100_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 3 e5-small-tar-bn    auroc 0.9395 (60 text feats, 15s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_95a3b8a0479e24169a1c814cd200ef419615c9a6_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 4 e5-small-tar-bn    auroc 0.9382 (60 text feats, 15s)
+bn_1460788_1.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/1/bn30_3e46afca228095233bfb4e635f2978e782e57bbe_bn30.pt
+bn_1460788_1.out:BIN_TEXT_JIGSAW_TOXICITY fold 5 e5-small-tar-bn    auroc 0.9441 (60 text feats, 15s)
+bn_1460788_2.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40485 train examples)
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 0 e5-small-tar-bn    auroc 0.7256 (150 text feats, 688s)
+bn_1460788_2.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40485 train examples)
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 1 e5-small-tar-bn    auroc 0.7272 (150 text feats, 637s)
+bn_1460788_2.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40485 train examples)
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 2 e5-small-tar-bn    auroc 0.7371 (150 text feats, 655s)
+bn_1460788_2.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40485 train examples)
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 3 e5-small-tar-bn    auroc 0.7420 (150 text feats, 526s)
+bn_1460788_2.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40485 train examples)
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 4 e5-small-tar-bn    auroc 0.7236 (150 text feats, 665s)
+bn_1460788_2.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40485 train examples)
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 5 e5-small-tar-bn    auroc 0.7209 (150 text feats, 520s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_9579260cb4962326ca8ae9a645f4b3e5bc455982_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 0 e5-small-tar-bn    auroc 0.7215 (150 text feats, 24s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_40759e35bba257655385e21e05c91356128e74a2_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 1 e5-small-tar-bn    auroc 0.7293 (150 text feats, 24s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_44191326a8bde28af91da22cb3db8761434b2e4c_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 2 e5-small-tar-bn    auroc 0.7430 (150 text feats, 24s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_9a6ea870791559a0f6cab5f1cf1ad4a931dbee6c_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 3 e5-small-tar-bn    auroc 0.7455 (150 text feats, 24s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_067d55406367b5ddd1103995056da2538eb78970_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 4 e5-small-tar-bn    auroc 0.7260 (150 text feats, 24s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_9bde9f05f5efd235b24c7a73e5eebffe91e152c1_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 5 e5-small-tar-bn    auroc 0.7185 (150 text feats, 23s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_9579260cb4962326ca8ae9a645f4b3e5bc455982_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 0 e5-small-tar-bn    auroc 0.7260 (150 text feats, 26s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_40759e35bba257655385e21e05c91356128e74a2_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 1 e5-small-tar-bn    auroc 0.7318 (150 text feats, 25s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_44191326a8bde28af91da22cb3db8761434b2e4c_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 2 e5-small-tar-bn    auroc 0.7449 (150 text feats, 29s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_9a6ea870791559a0f6cab5f1cf1ad4a931dbee6c_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 3 e5-small-tar-bn    auroc 0.7446 (150 text feats, 26s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_067d55406367b5ddd1103995056da2538eb78970_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 4 e5-small-tar-bn    auroc 0.7304 (150 text feats, 26s)
+bn_1460788_2.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/2/bn30_9bde9f05f5efd235b24c7a73e5eebffe91e152c1_bn30.pt
+bn_1460788_2.out:BIN_TEXT_KICKSTARTER_FUNDING fold 5 e5-small-tar-bn    auroc 0.7207 (150 text feats, 27s)
+bn_1460788_3.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40500 train examples)
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 0 e5-small-tar-bn    auroc_ovr_macro 0.8019 (150 text feats, 188s)
+bn_1460788_3.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40500 train examples)
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 1 e5-small-tar-bn    auroc_ovr_macro 0.8057 (150 text feats, 138s)
+bn_1460788_3.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40500 train examples)
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 2 e5-small-tar-bn    auroc_ovr_macro 0.8125 (150 text feats, 140s)
+bn_1460788_3.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40500 train examples)
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 3 e5-small-tar-bn    auroc_ovr_macro 0.8028 (150 text feats, 183s)
+bn_1460788_3.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40500 train examples)
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 4 e5-small-tar-bn    auroc_ovr_macro 0.8043 (150 text feats, 197s)
+bn_1460788_3.out:Finetuning E5 with a 30-unit bottleneck for 5 columns (40500 train examples)
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 5 e5-small-tar-bn    auroc_ovr_macro 0.8064 (150 text feats, 212s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_a1a8202e128cb97db3ec808d55b8c49fe255413a_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 0 e5-small-tar-bn    auroc_ovr_macro 0.8213 (150 text feats, 27s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_34fcfc978eeec34fbd7cbc6cdd70497e4929b3b6_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 1 e5-small-tar-bn    auroc_ovr_macro 0.8236 (150 text feats, 25s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_d3316173c0aa2154eb58ea748e5796e319ce0604_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 2 e5-small-tar-bn    auroc_ovr_macro 0.8306 (150 text feats, 26s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_2145e7b68bbdf134cdb50b813133fb1ba84f12ca_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 3 e5-small-tar-bn    auroc_ovr_macro 0.8230 (150 text feats, 27s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_0540ed2b83b219dc1b44e159952ae648231bff3d_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 4 e5-small-tar-bn    auroc_ovr_macro 0.8231 (150 text feats, 25s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_6302569072352b4d3e8c6186a1674169c9c3e533_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 5 e5-small-tar-bn    auroc_ovr_macro 0.8243 (150 text feats, 26s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_a1a8202e128cb97db3ec808d55b8c49fe255413a_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 0 e5-small-tar-bn    auroc_ovr_macro 0.8245 (150 text feats, 34s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_34fcfc978eeec34fbd7cbc6cdd70497e4929b3b6_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 1 e5-small-tar-bn    auroc_ovr_macro 0.8234 (150 text feats, 30s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_d3316173c0aa2154eb58ea748e5796e319ce0604_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 2 e5-small-tar-bn    auroc_ovr_macro 0.8335 (150 text feats, 32s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_2145e7b68bbdf134cdb50b813133fb1ba84f12ca_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 3 e5-small-tar-bn    auroc_ovr_macro 0.8266 (150 text feats, 32s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_0540ed2b83b219dc1b44e159952ae648231bff3d_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 4 e5-small-tar-bn    auroc_ovr_macro 0.8263 (150 text feats, 33s)
+bn_1460788_3.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/3/bn30_6302569072352b4d3e8c6186a1674169c9c3e533_bn30.pt
+bn_1460788_3.out:MUL_TEXT_DATA_SCIENTIST_SALARY fold 5 e5-small-tar-bn    auroc_ovr_macro 0.8273 (150 text feats, 33s)
+bn_1460788_4.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 0 e5-small-tar-bn    auroc_ovr_macro 0.8960 (180 text feats, 1092s)
+bn_1460788_4.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9070 (180 text feats, 1151s)
+bn_1460788_4.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9014 (180 text feats, 762s)
+bn_1460788_4.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9051 (180 text feats, 926s)
+bn_1460788_4.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9029 (180 text feats, 815s)
+bn_1460788_4.out:Finetuning E5 with a 30-unit bottleneck for 6 columns (48600 train examples)
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9077 (180 text feats, 824s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_3d603449a0c4cd43975575da6410728bf17c1ba6_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9100 (180 text feats, 35s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_555ef08968f27d54e08b13b509838f538d9ff59a_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9131 (180 text feats, 37s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_e1d67f7f535f98eac45ee86c58b0456acdcfb63a_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9071 (180 text feats, 37s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_bf16474c5f325481685e521664869d0e6f2b1319_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9118 (180 text feats, 38s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_bbebd6790d7f23451d25c9b1dda7b48b5efc5f05_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9098 (180 text feats, 37s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_81663ded5aaacf3062ff7f119c456bfd6ab29aa2_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9100 (180 text feats, 37s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_3d603449a0c4cd43975575da6410728bf17c1ba6_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9141 (180 text feats, 45s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_555ef08968f27d54e08b13b509838f538d9ff59a_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9191 (180 text feats, 55s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_e1d67f7f535f98eac45ee86c58b0456acdcfb63a_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9125 (180 text feats, 46s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_bf16474c5f325481685e521664869d0e6f2b1319_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9144 (180 text feats, 50s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_bbebd6790d7f23451d25c9b1dda7b48b5efc5f05_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9151 (180 text feats, 47s)
+bn_1460788_4.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/4/bn30_81663ded5aaacf3062ff7f119c456bfd6ab29aa2_bn30.pt
+bn_1460788_4.out:MUL_TEXT_MICHELIN_RESTAURANTS fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9150 (180 text feats, 48s)
+bn_1460788_5.out:Finetuning E5 with a 30-unit bottleneck for 1 columns (2750 train examples)
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 0 e5-small-tar-bn    auroc_ovr_macro 0.8971 (30 text feats, 83s)
+bn_1460788_5.out:Finetuning E5 with a 30-unit bottleneck for 1 columns (2750 train examples)
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 1 e5-small-tar-bn    auroc_ovr_macro 0.8972 (30 text feats, 63s)
+bn_1460788_5.out:Finetuning E5 with a 30-unit bottleneck for 1 columns (2750 train examples)
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 2 e5-small-tar-bn    auroc_ovr_macro 0.8851 (30 text feats, 69s)
+bn_1460788_5.out:Finetuning E5 with a 30-unit bottleneck for 1 columns (2750 train examples)
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 3 e5-small-tar-bn    auroc_ovr_macro 0.8803 (30 text feats, 76s)
+bn_1460788_5.out:Finetuning E5 with a 30-unit bottleneck for 1 columns (2750 train examples)
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 4 e5-small-tar-bn    auroc_ovr_macro 0.8951 (30 text feats, 83s)
+bn_1460788_5.out:Finetuning E5 with a 30-unit bottleneck for 1 columns (2750 train examples)
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 5 e5-small-tar-bn    auroc_ovr_macro 0.8893 (30 text feats, 75s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_ae2a446b4018fcb2216d1691ed6eb452c7707929_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9085 (30 text feats, 7s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_57c52af4228e88a768bd2c685d4932a667e3007f_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9113 (30 text feats, 7s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_d0f964fc6b7bed0302bcaf8f56614e8909d7ee16_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 2 e5-small-tar-bn    auroc_ovr_macro 0.8948 (30 text feats, 7s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_0e3001066a9eeb57b5c35949dc1e94bdae544503_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9017 (30 text feats, 7s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_4f1b6bb9a3854c3680873bcd86050b8b3ae1a26c_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 4 e5-small-tar-bn    auroc_ovr_macro 0.8954 (30 text feats, 7s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_2273dc769599b7f668ad1592c994030974385f13_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 5 e5-small-tar-bn    auroc_ovr_macro 0.8996 (30 text feats, 7s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_ae2a446b4018fcb2216d1691ed6eb452c7707929_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9182 (30 text feats, 7s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_57c52af4228e88a768bd2c685d4932a667e3007f_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9179 (30 text feats, 6s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_d0f964fc6b7bed0302bcaf8f56614e8909d7ee16_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9078 (30 text feats, 5s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_0e3001066a9eeb57b5c35949dc1e94bdae544503_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9153 (30 text feats, 6s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_4f1b6bb9a3854c3680873bcd86050b8b3ae1a26c_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 4 e5-small-tar-bn    auroc_ovr_macro 0.8969 (30 text feats, 6s)
+bn_1460788_5.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/5/bn30_2273dc769599b7f668ad1592c994030974385f13_bn30.pt
+bn_1460788_5.out:MUL_TEXT_PRODUCT_SENTIMENT fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9117 (30 text feats, 6s)
+bn_1460788_6.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (24300 train examples)
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9024 (90 text feats, 305s)
+bn_1460788_6.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (24300 train examples)
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9047 (90 text feats, 283s)
+bn_1460788_6.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (24300 train examples)
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9009 (90 text feats, 304s)
+bn_1460788_6.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (24300 train examples)
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9058 (90 text feats, 289s)
+bn_1460788_6.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (24300 train examples)
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9061 (90 text feats, 284s)
+bn_1460788_6.out:Finetuning E5 with a 30-unit bottleneck for 3 columns (24300 train examples)
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9065 (90 text feats, 287s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_7919af9ec29b08e5518eccc6729b741ef44efef1_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9432 (90 text feats, 272s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_29100134cf73294a983519759994f04ebde4c829_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9434 (90 text feats, 271s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_01f113a078297c272c6a98d3f2b0979771aec448_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9413 (90 text feats, 281s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_30f0bfa31f2220d024cd5871bfd876950df3a86a_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9445 (90 text feats, 267s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_2e8c395203c4545720185dd3d3d924425d44b298_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9466 (90 text feats, 275s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_cdcadee4be9946c3e92a0e4217f94cb8d499e8b6_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9464 (90 text feats, 271s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_7919af9ec29b08e5518eccc6729b741ef44efef1_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9615 (90 text feats, 873s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_29100134cf73294a983519759994f04ebde4c829_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9614 (90 text feats, 761s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_01f113a078297c272c6a98d3f2b0979771aec448_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9622 (90 text feats, 919s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_30f0bfa31f2220d024cd5871bfd876950df3a86a_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9632 (90 text feats, 867s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_2e8c395203c4545720185dd3d3d924425d44b298_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9634 (90 text feats, 882s)
+bn_1460788_6.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/6/bn30_cdcadee4be9946c3e92a0e4217f94cb8d499e8b6_bn30.pt
+bn_1460788_6.out:MUL_TEXT_SPOTIFY_GENRES fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9634 (90 text feats, 1069s)
+bn_1460788_7.out:Finetuning E5 with a 30-unit bottleneck for 9 columns (72900 train examples)
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9778 (270 text feats, 250s)
+bn_1460788_7.out:Finetuning E5 with a 30-unit bottleneck for 9 columns (72900 train examples)
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9836 (270 text feats, 479s)
+bn_1460788_7.out:Finetuning E5 with a 30-unit bottleneck for 9 columns (72900 train examples)
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9820 (270 text feats, 269s)
+bn_1460788_7.out:Finetuning E5 with a 30-unit bottleneck for 9 columns (72900 train examples)
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9781 (270 text feats, 410s)
+bn_1460788_7.out:Finetuning E5 with a 30-unit bottleneck for 9 columns (72900 train examples)
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9644 (270 text feats, 526s)
+bn_1460788_7.out:Finetuning E5 with a 30-unit bottleneck for 9 columns (72900 train examples)
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9790 (270 text feats, 404s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_b41ac1192169411c887cce498361e09ef032f91b_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9811 (270 text feats, 51s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_1ce294fa388ba332da16faa4ea1ff3f8e58d4313_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9833 (270 text feats, 47s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_45b20547d51a77cc4d78f8bea067eb5e37070e3a_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9835 (270 text feats, 50s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_5e47907e2450a1596cfa494a397adead406f2312_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9791 (270 text feats, 50s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_d19a7f403fc15a7a7be6976959bac83f59163bbf_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9676 (270 text feats, 50s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_55213296706a1d47ea400502bafa86ff07c7e246_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9806 (270 text feats, 49s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_b41ac1192169411c887cce498361e09ef032f91b_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9799 (270 text feats, 103s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_1ce294fa388ba332da16faa4ea1ff3f8e58d4313_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9844 (270 text feats, 88s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_45b20547d51a77cc4d78f8bea067eb5e37070e3a_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9832 (270 text feats, 101s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_5e47907e2450a1596cfa494a397adead406f2312_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9815 (270 text feats, 88s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_d19a7f403fc15a7a7be6976959bac83f59163bbf_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9696 (270 text feats, 96s)
+bn_1460788_7.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/7/bn30_55213296706a1d47ea400502bafa86ff07c7e246_bn30.pt
+bn_1460788_7.out:MUL_TEXT_US_ACCIDENTS fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9791 (270 text feats, 91s)
+bn_1460788_8.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9744 (60 text feats, 443s)
+bn_1460788_8.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9732 (60 text feats, 454s)
+bn_1460788_8.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9715 (60 text feats, 446s)
+bn_1460788_8.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9723 (60 text feats, 469s)
+bn_1460788_8.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9745 (60 text feats, 457s)
+bn_1460788_8.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9730 (60 text feats, 453s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_c3b567bb48848292fb7a3a4023541e124b1f0937_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9789 (60 text feats, 65s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_30ef21bebb477153c0b2cdf0df0792162e8e055b_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9795 (60 text feats, 60s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_4d941dc3341661d05a3b1c0d6ec7cce855e39a4f_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9779 (60 text feats, 58s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_cfeee766ce1d09f428cd6bef40f0f63130159b18_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9776 (60 text feats, 58s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_f159b80216109dac20ccd2c2ca7d9b9a67b9b451_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9790 (60 text feats, 58s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_6a22bd96a88acd701958b01e4027590a2df87031_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9778 (60 text feats, 58s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_c3b567bb48848292fb7a3a4023541e124b1f0937_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9797 (60 text feats, 245s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_30ef21bebb477153c0b2cdf0df0792162e8e055b_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9811 (60 text feats, 220s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_4d941dc3341661d05a3b1c0d6ec7cce855e39a4f_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9799 (60 text feats, 227s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_cfeee766ce1d09f428cd6bef40f0f63130159b18_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9805 (60 text feats, 205s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_f159b80216109dac20ccd2c2ca7d9b9a67b9b451_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9810 (60 text feats, 230s)
+bn_1460788_8.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/8/bn30_6a22bd96a88acd701958b01e4027590a2df87031_bn30.pt
+bn_1460788_8.out:MUL_TEXT_WINE_REVIEW fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9801 (60 text feats, 235s)
+bn_1460788_9.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9046 (60 text feats, 234s)
+bn_1460788_9.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9012 (60 text feats, 248s)
+bn_1460788_9.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9071 (60 text feats, 261s)
+bn_1460788_9.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9063 (60 text feats, 175s)
+bn_1460788_9.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9076 (60 text feats, 250s)
+bn_1460788_9.out:Finetuning E5 with a 30-unit bottleneck for 2 columns (16200 train examples)
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9047 (60 text feats, 226s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_67c2cbb2dcf3a23abf95bf8ac46ebf51d65a6f75_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9084 (60 text feats, 19s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_bf4277fde0d56125c2fcafb91427338dc606093b_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9052 (60 text feats, 17s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_c1358f9a473f67826f49856a3c1ec52865046e6a_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9118 (60 text feats, 18s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_9c40143996af7b3158cd7a511b2dd6c34f8fdf3b_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9091 (60 text feats, 18s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_94cb7b61df4be0d55f25813bb90ff46097344f2e_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9115 (60 text feats, 17s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_1ef1457f839c07e92381a9660bdd02d9470e9039_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9076 (60 text feats, 17s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_67c2cbb2dcf3a23abf95bf8ac46ebf51d65a6f75_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 0 e5-small-tar-bn    auroc_ovr_macro 0.9090 (60 text feats, 26s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_bf4277fde0d56125c2fcafb91427338dc606093b_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 1 e5-small-tar-bn    auroc_ovr_macro 0.9097 (60 text feats, 24s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_c1358f9a473f67826f49856a3c1ec52865046e6a_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 2 e5-small-tar-bn    auroc_ovr_macro 0.9130 (60 text feats, 24s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_9c40143996af7b3158cd7a511b2dd6c34f8fdf3b_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 3 e5-small-tar-bn    auroc_ovr_macro 0.9122 (60 text feats, 25s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_94cb7b61df4be0d55f25813bb90ff46097344f2e_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 4 e5-small-tar-bn    auroc_ovr_macro 0.9130 (60 text feats, 23s)
+bn_1460788_9.out:Restored the saved bottleneck fine-tune of this fold from tar_ckpt/9/bn30_1ef1457f839c07e92381a9660bdd02d9470e9039_bn30.pt
+bn_1460788_9.out:MUL_TEXT_WOMEN_CLOTHING_REVIEW fold 5 e5-small-tar-bn    auroc_ovr_macro 0.9100 (60 text feats, 24s)

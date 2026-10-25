@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_BABIES_PRICES",
+  "encoder": "e5-small-tar-bn",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -24.342077664146995,
+  "test_error": 24.342077664146995,
+  "course_metric": "r2",
+  "course_score": 0.743510030635103,
+  "n_text_cols": 4,
+  "n_text_features": 120,
+  "n_train": 3390,
+  "n_test": 1695,
+  "runtime_s": 23.605058431625366,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -557,6 +557,60 @@ def test_tuned_lightgbm(fake_e5, task):
     assert np.isfinite(m.predict(x.iloc[1000:])).all()
 
 
+@pytest.fixture()
+def tiny_e5(monkeypatch, tmp_path):
+    """A real (tiny, random) 12-layer BERT with E5's width, so LoRA, Trainer and the bottleneck run for real on CPU."""
+    import transformers
+    from transformers import BertConfig, BertModel, BertTokenizerFast
+    import multabench.e5.e5_finetune as ef
+    import multabench.baselines.preprocessing.text_embeddings as te
+    vocab = ["[PAD]", "[UNK]", "[CLS]", "[SEP]", "[MASK]", "passage", ":", "review", "title", "price"] + WORDS + \
+            [f"item{i}" for i in range(1500)]
+    (tmp_path / "vocab.txt").write_text("\n".join(vocab))
+    tok = BertTokenizerFast(vocab_file=str(tmp_path / "vocab.txt"))
+    cfg = BertConfig(vocab_size=len(vocab), hidden_size=384, num_hidden_layers=12, num_attention_heads=4,
+                     intermediate_size=64, max_position_embeddings=512)
+    torch.manual_seed(0)
+    base = BertModel(cfg).state_dict()
+    def fresh(device, model_name=None):
+        m = BertModel(cfg)
+        m.load_state_dict(base)          # "pretrained" weights are fixed, as for the real E5
+        return m.to(device), tok
+    monkeypatch.setattr(ef, "_load_fresh_e5", fresh)
+    monkeypatch.setattr(transformers.AutoTokenizer, "from_pretrained", staticmethod(lambda *a, **k: tok))
+    monkeypatch.setenv("CUDA_VISIBLE_DEVICES", "")
+    monkeypatch.setenv("MULTABENCH_DYNAMIC_PADDING", "1")
+    te._BN_MEMO.clear()
+    return tok
+
+
+@pytest.mark.parametrize("task", ["bin", "reg"])
+def test_learned_compression_bottleneck(tiny_e5, monkeypatch, tmp_path, task):
+    import multabench.baselines.preprocessing.text_embeddings as te
+    from multabench.baselines.lgbm import LightGBM
+    from multabench.datasets.objects import SupervisedTask
+    from multabench.e5.constants import TEXT_ENCODERS
+    monkeypatch.setenv("MULTABENCH_TAR_DIR", str(tmp_path / "ckpt"))
+    x, y = _toy_task(task, n=400)
+    problem = SupervisedTask.BINARY if task == "bin" else SupervisedTask.REGRESSION
+    kw = {"epochs": 1, "batch_size": 32, "dataloader_num_workers": 0}
+    feats = []
+    for run in range(2):                 # second run = a new process: must restore, not re-train
+        te._BN_MEMO.clear()
+        m = LightGBM(problem_type=problem, device=torch.device("cpu"), verbose=False, tune_e5=True,
+                     e5_train_kwargs=kw, e5_model_name=TEXT_ENCODERS["e5-small-tar-bn"].encoder_name)
+        m.fit(x.iloc[:300], y.iloc[:300])
+        enc = m.text_transformers["review"]
+        assert enc.n_components == 30
+        f = enc.encode_texts(x["review"].iloc[300:].tolist(), torch.device("cpu"))
+        assert f.shape == (100, 30) and np.isfinite(f).all()
+        feats.append(f)
+        assert np.isfinite(m.predict(x.iloc[300:])).all()
+    saved = list((tmp_path / "ckpt").glob("bn30_*.pt"))
+    assert len(saved) == 1                                   # trained once, restored the second time
+    assert np.allclose(feats[0], feats[1], atol=1e-5)        # restored model gives identical features
+
+
 # ---------------- TabSTAR + SAE pruning (phase 1 mocked: tiny random TabSTAR, no download) ----------------
 
 @pytest.fixture()

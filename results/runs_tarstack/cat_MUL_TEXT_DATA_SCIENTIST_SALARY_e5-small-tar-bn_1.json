@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar-bn",
+  "fold": 1,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.219296751174186,
+  "test_error": 1.219296751174186,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8234498780511572,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 29.921761989593506,
+  "learner_params": null,
+  "diagnostics": {}
+}

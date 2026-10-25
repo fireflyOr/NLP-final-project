@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "MUL_TEXT_MICHELIN_RESTAURANTS",
+  "encoder": "e5-small-tar-bn",
+  "fold": 5,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.6047314036131154,
+  "test_error": 0.6047314036131154,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9149666909305065,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 48.37380576133728,
+  "learner_params": null,
+  "diagnostics": {}
+}
