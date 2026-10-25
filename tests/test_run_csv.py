@@ -75,3 +75,16 @@ def test_cli_with_holdout(fake_e5, fake_tar, tmp_path, monkeypatch):
           "--drop-cols", "row_id", "--out", str(tmp_path / "pred.csv")])
     pred = pd.read_csv(tmp_path / "pred.csv")
     assert len(pred) == round(0.2 * (len(df) - 1)) and "predicted_label" in pred and "row_id" not in pred
+
+
+def test_cli_compare_shares_one_finetune(fake_e5, fake_tar, tmp_path, monkeypatch, capsys):
+    import run_csv
+    train, test = _frame("reg")
+    train.to_csv(tmp_path / "train.csv", index=False)
+    test.to_csv(tmp_path / "test.csv", index=False)
+    monkeypatch.setattr(run_csv, "fit_predict", lambda *a, **k: fit_predict(*a, **k, device=torch.device("cpu")))
+    main(["--train", str(tmp_path / "train.csv"), "--test", str(tmp_path / "test.csv"), "--target", "target",
+          "--compare", "--out", str(tmp_path / "pred.csv")])
+    printed = capsys.readouterr().out
+    assert "e5-small-tar (Joint TAR baseline): r2" in printed and "e5-small-tar-fstack (" in printed
+    assert len(fake_tar) == 1                                 # the baseline and the method share one fine-tune
