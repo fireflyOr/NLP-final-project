@@ -140,6 +140,8 @@ def main(argv=None):
     a.add_argument("--learner", default="lgbt", choices=list(LEARNERS), help="; ".join(f"{k}: {v}" for k, v in LEARNERS.items()))
     a.add_argument("--encoder", default="e5-small-tar-fstack", choices=list(ENCODERS),
                    help="; ".join(f"{k}: {v}" for k, v in ENCODERS.items()))
+    a.add_argument("--compare", action="store_true",
+                   help="also run the Joint TAR baseline on the same fine-tuned E5 and print both scores")
     a.add_argument("--drop-cols", nargs="*", default=[], help="columns to ignore, e.g. row ids")
     a.add_argument("--e5-batch-size", type=int, default=256, help="fine-tuning batch size (lower it on GPU out-of-memory)")
     a.add_argument("--seed", type=int, default=0, help="seed of the --test-size split")
@@ -168,12 +170,17 @@ def main(argv=None):
     else:
         a.error("give --test or --test-size")
 
-    out, metric = fit_predict(train, test, args.target, task=args.task, learner=args.learner, encoder=args.encoder,
-                              e5_batch_size=args.e5_batch_size)
+    encoders = ["e5-small-tar", args.encoder] if args.compare and args.encoder != "e5-small-tar" else [args.encoder]
+    scores = {}
+    for enc in encoders:            # in one process the fine-tuned E5 is shared, so only the step after it differs
+        out, metric = fit_predict(train, test, args.target, task=args.task, learner=args.learner, encoder=enc,
+                                  e5_batch_size=args.e5_batch_size)
+        scores[enc] = metric
     out.to_csv(args.out, index_label="row")
-    print(f"{len(out)} predictions written to {args.out}")
-    if metric:
-        print(f"{metric['course_metric']}: {metric['course_score']:.4f}")
+    print(f"{len(out)} predictions of {args.encoder} written to {args.out}")
+    for enc, metric in scores.items():
+        if metric:
+            print(f"{enc} ({ENCODERS[enc]}): {metric['course_metric']} {metric['course_score']:.4f}")
 
 
 if __name__ == "__main__":
