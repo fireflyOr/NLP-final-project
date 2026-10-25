@@ -103,6 +103,10 @@ def fit_predict(train: pd.DataFrame, test: pd.DataFrame, target: str, task: str 
         print("warning: no free-text column detected; the model uses the table columns only")
 
     x_test = test.drop(columns=[target], errors="ignore")
+    # test rows get their own index range, so no test row can be mistaken for a training row (stacking reuses
+    # out-of-fold features only for rows matching a training row's index and text)
+    start = int(x_train.index.max()) + 1 if pd.api.types.is_integer_dtype(x_train.index) else 0
+    x_test.index = pd.RangeIndex(start, start + len(x_test))
     pred = np.asarray(model.predict(x_test.copy()))
     if task == "regression":
         out = pd.DataFrame({"prediction": pred}, index=test.index)
@@ -142,6 +146,8 @@ def main(argv=None):
                    help="; ".join(f"{k}: {v}" for k, v in ENCODERS.items()))
     a.add_argument("--compare", action="store_true",
                    help="also run the Joint TAR baseline on the same fine-tuned E5 and print both scores")
+    a.add_argument("--emb-cache", help="directory of cached frozen E5 embeddings (as written by the experiments); "
+                                       "reused and extended, so repeated runs embed each text once")
     a.add_argument("--drop-cols", nargs="*", default=[], help="columns to ignore, e.g. row ids")
     a.add_argument("--e5-batch-size", type=int, default=256, help="fine-tuning batch size (lower it on GPU out-of-memory)")
     a.add_argument("--seed", type=int, default=0, help="seed of the --test-size split")
@@ -156,6 +162,9 @@ def main(argv=None):
     except ImportError:
         pass
 
+    if args.emb_cache:
+        from sae_pilot import _install_embedding_cache
+        _install_embedding_cache(args.emb_cache)
     train = pd.read_csv(args.train).drop(columns=args.drop_cols)
     if args.target not in train.columns:
         a.error(f"target column {args.target!r} not in {args.train}")
