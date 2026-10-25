@@ -31,6 +31,31 @@ stacking), `e5-small-tar-pls`, `e5-small-tar-full`, `e5-small-tar-gsae` (concept
 / `-rand` (random controls), `e5-small-tar-gsae-xf` (cross-fitted). Learners (`--model`): `light`, `lgbt` (tuned),
 `cat`, `late` (late fusion).
 
+## Run the method on your own CSV
+
+`run_csv.py` runs the method (Joint TAR + text stacking, then tuned LightGBM) on any table with free-text columns.
+Column types are detected automatically; everything is fitted on the training rows only. A GPU is strongly recommended.
+
+```bash
+python run_csv.py --train train.csv --test test.csv --target price --out predictions.csv
+python run_csv.py --train data.csv --target label --test-size 0.2 --out predictions.csv   # hold out 20%
+```
+
+Options: `--task` (auto / binary / multiclass / regression; needed when an integer target could be classes or a
+count), `--learner` (lgbt / cat / light), `--encoder` (`e5-small-tar` and `e5-small` run the Joint TAR and Joint
+Frozen baselines for comparison), `--drop-cols` (e.g. row ids). The output has `prediction` (regression) or
+`predicted_label` and one `proba_<class>` column per class; if the test rows contain the target, AUROC or R^2 is
+printed. No trained weights are needed: the method starts from the public `intfloat/e5-small-v2` and trains everything
+on the given training rows.
+
+To check it against the experiments, export a benchmark fold and compare with the stored result:
+
+```bash
+python export_fold.py --dataset REG_TEXT_ROTTEN_TOMATOES --fold 0 --out-dir csv_check
+python run_csv.py --train csv_check/train.csv --test csv_check/test.csv --target target --out csv_check/pred.csv
+# paper run: results/runs_tarstack/lgbt_REG_TEXT_ROTTEN_TOMATOES_e5-small-tar-fstack_0.json, course_score 0.523
+```
+
 ## Results and tables
 
 All result files used in the paper are in `results/` (one JSON per dataset x fold x arm x learner).
