@@ -48,13 +48,23 @@ Frozen baselines for comparison), `--drop-cols` (e.g. row ids). The output has `
 printed. No trained weights are needed: the method starts from the public `intfloat/e5-small-v2` and trains everything
 on the given training rows.
 
-To check it against the experiments, export a benchmark fold and compare with the stored result:
+`--compare` also runs the Joint TAR baseline on the same fine-tuned E5 and prints both scores.
+
+To check it against the experiments, export a benchmark fold and rerun it with the experiment's saved fine-tune and
+frozen-embedding cache (copies, so the originals are untouched; array index 16 = Rotten Tomatoes):
 
 ```bash
 python export_fold.py --dataset REG_TEXT_ROTTEN_TOMATOES --fold 0 --out-dir csv_check
-python run_csv.py --train csv_check/train.csv --test csv_check/test.csv --target target --out csv_check/pred.csv
-# paper run: results/runs_tarstack/lgbt_REG_TEXT_ROTTEN_TOMATOES_e5-small-tar-fstack_0.json, course_score 0.523
+mkdir -p csv_check/tar && cp tar_ckpt/16/tar_*.pt csv_check/tar/ && cp -r emb_cache/REG_TEXT_ROTTEN_TOMATOES csv_check/emb
+MULTABENCH_TAR_DIR=csv_check/tar python run_csv.py --train csv_check/train.csv --test csv_check/test.csv \
+    --target target --compare --emb-cache csv_check/emb --out csv_check/pred.csv
+# reproduces results/runs_tarstack/lgbt_REG_TEXT_ROTTEN_TOMATOES_{e5-small-tar,e5-small-tar-fstack}_0.json exactly:
+# r2 0.5130 (Joint TAR) and 0.5233 (TAR + stacking), with the same tuned LightGBM settings
 ```
+
+Without the cache, the frozen embeddings are recomputed and differ in the last digits; on this fold that changes the
+tuned LightGBM's choice and the stacking score to 0.5112. Single folds are this sensitive, so compare methods over many
+datasets and folds, not on one.
 
 ## Results and tables
 
