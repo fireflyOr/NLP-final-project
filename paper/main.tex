@@ -130,8 +130,8 @@ benchmark's splits (two repeats of 3-fold cross-validation; training sets capped
 the training rows. In the final run each fold's LoRA adapters are saved and restored for every arm and learner, so
 all comparisons within a fold share one fine-tune.
 
-\paragraph{Learners.} LightGBM with default settings (as in the benchmark); LightGBM tuned on its validation split
-(learning rate, depth, column subsampling; 12 configurations with early stopping); and CatBoost with the benchmark's
+\paragraph{Learners.} LightGBM \citep{ke2017lightgbm} with default settings (as in the benchmark); LightGBM tuned on its validation split
+(learning rate, depth, column subsampling; 12 configurations with early stopping); and CatBoost \citep{prokhorenkova2018catboost} with the benchmark's
 defaults. Every arm, including TAR, is evaluated with each learner.
 
 \paragraph{Controls and statistics.} Random pruning removes random eligible concepts from the same SAE, either the
