@@ -75,7 +75,26 @@ def main_table(df, out, arms=MAIN):
     open(os.path.join(out, "main.tex"), "w").write("\n".join(lines) + "\n")
 
 
-def summary_table(df, out, base="e5-small-tar"):
+def family_pvalues(df_all, base="e5-small-tar"):
+    """Wilcoxon p of every arm-learner comparison with the same learner's TAR (Joint Frozen excluded): the family
+    the Holm correction runs over (fourteen comparisons in the final run)."""
+    ps = {}
+    for mdl in sorted(set(df_all.model)):
+        means = df_all[df_all.model == mdl].pivot_table(index="dataset", columns="encoder", values="course_score",
+                                                        aggfunc="mean")
+        if base not in means:
+            continue
+        for e in means.columns:
+            if e in (base, "e5-small"):
+                continue
+            d = (means[e] - means[base]).dropna()
+            if len(d) >= 5 and (d != 0).any():
+                ps[(mdl, e)] = wilcoxon(d).pvalue
+    keys = list(ps)
+    return dict(zip(keys, _holm([ps[k] for k in keys])))
+
+
+def summary_table(df, out, base="e5-small-tar", holm_family=None):
     wide = df.pivot_table(index=["dataset", "fold"], columns="encoder", values="course_score")
     means = df.pivot_table(index="dataset", columns="encoder", values="course_score", aggfunc="mean")
     lines = [r"\begin{tabular}{lccccc}", r"\toprule",
@@ -90,7 +109,12 @@ def summary_table(df, out, base="e5-small-tar"):
             continue
         p = wilcoxon(d_ds).pvalue if len(d_ds) >= 5 and (d_ds != 0).any() else np.nan
         rows.append([name, d_ds.mean(), f"{(d_ds > 0).sum()}/{len(d_ds)}", f"{(d_f > 0).sum()}/{(d_f < 0).sum()}", p])
-    holm = _holm([r[4] for r in rows])
+    if holm_family is None:                       # adjust within this table
+        holm = _holm([r[4] for r in rows])
+    else:                                         # adjust over the whole family of comparisons
+        model = df.model.iloc[0]
+        holm = [holm_family.get((model, e), np.nan) for e, _ in VS_TAR
+                if e in wide and base in wide and not (means[e] - means[base]).dropna().empty]
     fmt = lambda p: "--" if np.isnan(p) else ("$<$0.001" if p < 1e-3 else f"{p:.3f}")
     for (name, d, won, folds, p), ph in zip(rows, holm):
         lines.append(f"{name} & {d:+.4f} & {won} & {folds} & {fmt(p)} & {fmt(ph)}" + r" \\")
@@ -204,7 +228,7 @@ if __name__ == "__main__":
     if len(final_all):
         final = final_all[final_all.model == "light"]
         os.makedirs(os.path.join(args.out, "final"), exist_ok=True)
-        summary_table(final, os.path.join(args.out, "final"))
+        summary_table(final, os.path.join(args.out, "final"), holm_family=family_pvalues(final_all))
         main_table(final, os.path.join(args.out, "final"), arms=FINAL_MAIN)
         removal_table(final, os.path.join(args.out, "final"))
         learners_table(final_all, os.path.join(args.out, "final"))
