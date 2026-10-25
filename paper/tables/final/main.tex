@@ -1,26 +1,26 @@
-\begin{tabular}{lccccccc}
+\begin{tabular}{lcccccccc}
 \toprule
-Dataset & TAR & +stack & +PLS & 384-d & Late & +prune & +rand(var) \\
+Dataset & TAR & +stack & +PLS & 384-d & BN-30 & Late & +prune & +rand(var) \\
 \midrule
-Fake job postings (bin) & 0.909 & 0.909 & 0.908 & \textbf{0.923} & 0.906 & 0.914 & 0.903 \\
-Jigsaw toxicity (bin) & 0.932 & 0.932 & 0.924 & \textbf{0.936} & 0.881 & 0.929 & 0.927 \\
-Kickstarter (bin) & \textbf{0.734} & 0.733 & 0.729 & 0.732 & 0.726 & 0.730 & 0.714 \\
-DS salary (mul) & 0.807 & 0.809 & 0.796 & 0.800 & \textbf{0.827} & 0.803 & 0.804 \\
-Michelin (mul) & 0.903 & 0.906 & 0.894 & 0.903 & \textbf{0.910} & 0.905 & 0.903 \\
-Product sentiment (mul) & 0.890 & 0.896 & 0.878 & 0.889 & \textbf{0.910} & 0.890 & 0.889 \\
-Spotify genres (mul) & 0.904 & 0.794 & 0.904 & 0.895 & \textbf{0.944} & 0.906 & 0.905 \\
-US accidents (mul) & 0.978 & \textbf{0.979} & 0.977 & \textbf{0.980} & 0.969 & 0.979 & \textbf{0.979} \\
-Wine reviews (mul) & 0.975 & 0.977 & 0.975 & 0.974 & \textbf{0.980} & 0.974 & 0.974 \\
-Women's clothing (mul) & 0.905 & 0.905 & 0.902 & \textbf{0.907} & \textbf{0.907} & 0.905 & 0.905 \\
-Baby product prices (reg) & 0.788 & \textbf{0.806} & 0.799 & 0.802 & 0.766 & 0.793 & 0.770 \\
-Book prices (reg) & 0.512 & \textbf{0.516} & 0.499 & \textbf{0.516} & 0.465 & 0.499 & 0.484 \\
-Book readability (reg) & 0.816 & \textbf{0.817} & 0.812 & 0.810 & 0.802 & 0.812 & 0.813 \\
-Mercari (reg) & 0.442 & \textbf{0.453} & 0.439 & 0.441 & 0.422 & 0.431 & 0.419 \\
-Montgomery salaries (reg) & 0.975 & 0.975 & \textbf{0.976} & 0.973 & 0.966 & 0.975 & 0.975 \\
-Rotten Tomatoes (reg) & 0.504 & \textbf{0.516} & 0.482 & 0.510 & 0.496 & 0.494 & 0.493 \\
-SCImago impact (reg) & 0.849 & \textbf{0.850} & 0.840 & 0.844 & 0.834 & 0.847 & 0.845 \\
-Vancouver salaries (reg) & 0.767 & 0.766 & 0.774 & \textbf{0.781} & 0.649 & 0.770 & 0.764 \\
-Video game sales (reg) & 0.384 & 0.374 & \textbf{0.386} & 0.370 & 0.297 & 0.361 & 0.300 \\
-Zomato (reg) & 0.801 & 0.819 & 0.807 & \textbf{0.820} & 0.757 & 0.804 & 0.798 \\
+Fake job postings (bin) & 0.909 & 0.909 & 0.908 & \textbf{0.923} & 0.895 & 0.906 & 0.914 & 0.903 \\
+Jigsaw toxicity (bin) & 0.932 & 0.932 & 0.924 & \textbf{0.936} & 0.932 & 0.881 & 0.929 & 0.927 \\
+Kickstarter (bin) & \textbf{0.734} & 0.733 & 0.729 & 0.732 & 0.729 & 0.726 & 0.730 & 0.714 \\
+DS salary (mul) & 0.807 & 0.809 & 0.796 & 0.800 & 0.806 & \textbf{0.827} & 0.803 & 0.804 \\
+Michelin (mul) & 0.903 & 0.906 & 0.894 & 0.903 & 0.903 & \textbf{0.910} & 0.905 & 0.903 \\
+Product sentiment (mul) & 0.890 & 0.896 & 0.878 & 0.889 & 0.891 & \textbf{0.910} & 0.890 & 0.889 \\
+Spotify genres (mul) & 0.904 & 0.794 & 0.904 & 0.895 & 0.904 & \textbf{0.944} & 0.906 & 0.905 \\
+US accidents (mul) & 0.978 & \textbf{0.979} & 0.977 & \textbf{0.980} & 0.977 & 0.969 & 0.979 & \textbf{0.979} \\
+Wine reviews (mul) & 0.975 & 0.977 & 0.975 & 0.974 & 0.973 & \textbf{0.980} & 0.974 & 0.974 \\
+Women's clothing (mul) & 0.905 & 0.905 & 0.902 & \textbf{0.907} & 0.905 & \textbf{0.907} & 0.905 & 0.905 \\
+Baby product prices (reg) & 0.788 & \textbf{0.806} & 0.799 & 0.802 & 0.799 & 0.766 & 0.793 & 0.770 \\
+Book prices (reg) & 0.512 & \textbf{0.516} & 0.499 & \textbf{0.516} & 0.504 & 0.465 & 0.499 & 0.484 \\
+Book readability (reg) & 0.816 & \textbf{0.817} & 0.812 & 0.810 & 0.807 & 0.802 & 0.812 & 0.813 \\
+Mercari (reg) & 0.442 & \textbf{0.453} & 0.439 & 0.441 & 0.431 & 0.422 & 0.431 & 0.419 \\
+Montgomery salaries (reg) & 0.975 & 0.975 & \textbf{0.976} & 0.973 & \textbf{0.976} & 0.966 & 0.975 & 0.975 \\
+Rotten Tomatoes (reg) & 0.504 & \textbf{0.516} & 0.482 & 0.510 & 0.495 & 0.496 & 0.494 & 0.493 \\
+SCImago impact (reg) & 0.849 & \textbf{0.850} & 0.840 & 0.844 & 0.844 & 0.834 & 0.847 & 0.845 \\
+Vancouver salaries (reg) & 0.767 & 0.766 & 0.774 & \textbf{0.781} & 0.768 & 0.649 & 0.770 & 0.764 \\
+Video game sales (reg) & 0.384 & 0.374 & \textbf{0.386} & 0.370 & 0.325 & 0.297 & 0.361 & 0.300 \\
+Zomato (reg) & 0.801 & 0.819 & 0.807 & \textbf{0.820} & 0.795$^\dagger$ & 0.757 & 0.804 & 0.798 \\
 \bottomrule
 \end{tabular}

@@ -4,6 +4,7 @@ Method & $\Delta$ vs.\ TAR & datasets won & folds won/lost & $p$ & $p_{\text{Hol
 \midrule
 TAR + text stacking & -0.0020 & 15/20 & 85/35 & 0.064 & 0.191 \\
 TAR + PLS-30 (instead of PCA) & -0.0038 & 6/20 & 44/76 & 0.040 & 0.160 \\
+TAR, learned 30-d bottleneck & -0.0058 & 6/20 & 39/80 & 0.015 & 0.092 \\
 TAR, all 384 dims & +0.0014 & 9/20 & 63/57 & 0.729 & 0.729 \\
 Late fusion (frozen text model) & -0.0181 & 6/20 & 39/81 & 0.030 & 0.148 \\
 TAR + random pruning (variance-matched) & -0.0106 & 2/20 & 30/90 & $<$0.001 & $<$0.001 \\

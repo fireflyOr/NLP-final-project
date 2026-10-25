@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_VIDEO_GAMES_SALES",
+  "encoder": "e5-small-tar-bn",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -1.5884306456068462,
+  "test_error": 1.5884306456068462,
+  "course_metric": "r2",
+  "course_score": 0.21189157324072072,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 9.873255491256714,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": -1,
+    "colsample_bytree": 1.0,
+    "n_trees": 112
+  },
+  "diagnostics": {}
+}

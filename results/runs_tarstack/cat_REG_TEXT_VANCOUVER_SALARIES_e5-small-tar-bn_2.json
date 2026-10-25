@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-bn",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -12822.444267304318,
+  "test_error": 12822.444267304318,
+  "course_metric": "r2",
+  "course_score": 0.7749908174334823,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 15.596038341522217,
+  "learner_params": null,
+  "diagnostics": {}
+}

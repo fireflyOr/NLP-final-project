@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "BIN_TEXT_JIGSAW_TOXICITY",
+  "encoder": "e5-small-tar-bn",
+  "fold": 5,
+  "size": "10k",
+  "metric": "roc_auc",
+  "test_score": 0.9422147370023598,
+  "test_error": 0.0577852629976402,
+  "course_metric": "auroc",
+  "course_score": 0.9422147370023599,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 14.243592977523804,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": -1,
+    "colsample_bytree": 0.3,
+    "n_trees": 71
+  },
+  "diagnostics": {}
+}

@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_BOOK_READABILITY",
+  "encoder": "e5-small-tar-bn",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.846469517238732,
+  "test_error": 0.846469517238732,
+  "course_metric": "r2",
+  "course_score": 0.8132776677484855,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 3150,
+  "n_test": 1574,
+  "runtime_s": 37.37937903404236,
+  "learner_params": null,
+  "diagnostics": {}
+}

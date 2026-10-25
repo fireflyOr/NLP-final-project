@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_MERCARI_MARKETPLACE",
+  "encoder": "e5-small-tar-bn",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.547340753818326,
+  "test_error": 0.547340753818326,
+  "course_metric": "r2",
+  "course_score": 0.43917509015641865,
+  "n_text_cols": 6,
+  "n_text_features": 180,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 18.0213623046875,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "colsample_bytree": 0.3,
+    "n_trees": 413
+  },
+  "diagnostics": {}
+}

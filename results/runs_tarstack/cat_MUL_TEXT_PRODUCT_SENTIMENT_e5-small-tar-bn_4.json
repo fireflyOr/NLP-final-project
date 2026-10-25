@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "MUL_TEXT_PRODUCT_SENTIMENT",
+  "encoder": "e5-small-tar-bn",
+  "fold": 4,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -0.37827783459679404,
+  "test_error": 0.37827783459679404,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.8968795852768623,
+  "n_text_cols": 1,
+  "n_text_features": 30,
+  "n_train": 3394,
+  "n_test": 1697,
+  "runtime_s": 5.618067026138306,
+  "learner_params": null,
+  "diagnostics": {}
+}

@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "MUL_TEXT_DATA_SCIENTIST_SALARY",
+  "encoder": "e5-small-tar-bn",
+  "fold": 0,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -1.236917557209608,
+  "test_error": 1.236917557209608,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.821301749403445,
+  "n_text_cols": 5,
+  "n_text_features": 150,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 27.375239849090576,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "colsample_bytree": 0.3,
+    "n_trees": 123
+  },
+  "diagnostics": {}
+}

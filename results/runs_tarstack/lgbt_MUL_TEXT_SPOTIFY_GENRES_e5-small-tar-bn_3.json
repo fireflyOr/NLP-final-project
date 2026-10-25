@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "MUL_TEXT_SPOTIFY_GENRES",
+  "encoder": "e5-small-tar-bn",
+  "fold": 3,
+  "size": "10k",
+  "metric": "log_loss",
+  "test_score": -2.3263055894818607,
+  "test_error": 2.3263055894818607,
+  "course_metric": "auroc_ovr_macro",
+  "course_score": 0.9444959272399708,
+  "n_text_cols": 3,
+  "n_text_features": 90,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 267.11916995048523,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": 6,
+    "colsample_bytree": 0.3,
+    "n_trees": 139
+  },
+  "diagnostics": {}
+}

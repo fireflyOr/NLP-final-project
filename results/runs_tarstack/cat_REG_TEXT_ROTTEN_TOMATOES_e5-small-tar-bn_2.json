@@ -1,0 +1,20 @@
+{
+  "model": "cat",
+  "learner": "cat",
+  "dataset": "REG_TEXT_ROTTEN_TOMATOES",
+  "encoder": "e5-small-tar-bn",
+  "fold": 2,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -0.786054382883099,
+  "test_error": 0.786054382883099,
+  "course_metric": "r2",
+  "course_score": 0.5334864060631198,
+  "n_text_cols": 13,
+  "n_text_features": 390,
+  "n_train": 4772,
+  "n_test": 2386,
+  "runtime_s": 46.07855033874512,
+  "learner_params": null,
+  "diagnostics": {}
+}

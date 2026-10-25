@@ -1,0 +1,25 @@
+{
+  "model": "lgbt",
+  "learner": "lgbt",
+  "dataset": "REG_TEXT_VANCOUVER_SALARIES",
+  "encoder": "e5-small-tar-bn",
+  "fold": 0,
+  "size": "10k",
+  "metric": "root_mean_squared_error",
+  "test_score": -12677.071991234681,
+  "test_error": 12677.071991234681,
+  "course_metric": "r2",
+  "course_score": 0.7674636062780374,
+  "n_text_cols": 2,
+  "n_text_features": 60,
+  "n_train": 10000,
+  "n_test": 5000,
+  "runtime_s": 15.414808750152588,
+  "learner_params": {
+    "learning_rate": 0.03,
+    "max_depth": -1,
+    "colsample_bytree": 0.3,
+    "n_trees": 971
+  },
+  "diagnostics": {}
+}
