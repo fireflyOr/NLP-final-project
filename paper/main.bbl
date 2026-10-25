@@ -5,6 +5,14 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Arazi et~al.(2026)Arazi, Shapira, Grunblat, Ventura, Hoffer, Blayer,
+  Holzm{\"u}ller, Purucker, Varoquaux, Hutter, and Reichart]{multabench}
+A.~Arazi, E.~Shapira, S.~Grunblat, M.~Ventura, E.~Hoffer, G.~Blayer,
+  D.~Holzm{\"u}ller, L.~Purucker, G.~Varoquaux, F.~Hutter, and R.~Reichart.
+\newblock {MulTaBench}: Benchmarking multimodal tabular learning with text and
+  image.
+\newblock \emph{arXiv preprint arXiv:2605.10616}, 2026.
+
 \bibitem[Arazi et~al.(2025)Arazi, Shapira, and Reichart]{arazi2025tabstar}
 Alan Arazi, Eilam Shapira, and Roi Reichart.
 \newblock {TabSTAR}: A foundation tabular model with semantically target-aware
@@ -80,12 +88,6 @@ Carolin Strobl, Anne-Laure Boulesteix, Thomas Kneib, Thomas Augustin, and Achim
   Zeileis.
 \newblock Conditional variable importance for random forests.
 \newblock \emph{BMC Bioinformatics}, 9:\penalty0 307, 2008.
-
-\bibitem[{TODO: authors -- copy from arXiv 2605.10616}(2026)]{multabench}
-{TODO: authors -- copy from arXiv 2605.10616}.
-\newblock {MulTaBench}: Benchmarking multimodal tabular learning with text and
-  image.
-\newblock \emph{arXiv preprint arXiv:2605.10616}, 2026.
 
 \bibitem[Wang et~al.(2022)Wang, Yang, Huang, Jiao, Yang, Jiang, Majumder, and
   Wei]{wang2022e5}
