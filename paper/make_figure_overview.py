@@ -53,7 +53,7 @@ def main():
 
     plt.rcParams.update({"font.family": "serif", "font.serif": ["STIXGeneral", "DejaVu Serif"], "mathtext.fontset": "stix",
                          "font.size": 7, "axes.linewidth": 0.5})
-    fig, ax = plt.subplots(figsize=(5.5, 2.1))
+    fig, ax = plt.subplots(figsize=(5.5, 1.6))
     y = np.arange(len(ARMS))[::-1]
     offsets = {"lgbt": 0.2, "cat": 0.0, "light": -0.2}
     ax.axvline(0, color="#8a8a86", lw=0.8, zorder=1)
@@ -86,8 +86,7 @@ def main():
     for s in ("top", "right", "left"):
         ax.spines[s].set_visible(False)
     ax.set_ylim(-0.6, len(ARMS) - 0.4)
-    ax.legend(loc="lower center", bbox_to_anchor=(0.5, 1.0), ncol=3, frameon=False, handletextpad=0.2, columnspacing=1.5,
-              borderaxespad=0.1)
+    ax.legend(loc="upper right", frameon=False, handletextpad=0.2, borderaxespad=0.1, labelspacing=0.3)
     fig.tight_layout(pad=0.3)
     fig.subplots_adjust(left=0.30)
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
