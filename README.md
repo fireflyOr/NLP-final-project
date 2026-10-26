@@ -1,4 +1,5 @@
-# Add, Don't Remove: Where Target Supervision Helps in Text–Tabular Learning
+# NLP-final-project
+
 
 Final project, NLP course 097215 (Technion), Track 1 (algorithm). Or Davidovich.
 Paper: [`paper/main.pdf`](paper/main.pdf) (LaTeX source in `paper/`).
