@@ -37,7 +37,7 @@ check that reproduces a paper run exactly are in [`REPRODUCE.md`](REPRODUCE.md).
 ## Reproducing the paper
 
 Setup, the SLURM scripts behind every result, and the commands that rebuild the tables and figure are in
-[`REPRODUCE.md`](REPRODUCE.md). All result files are in `results/` (one JSON per dataset × fold × arm × learner).
+[`REPRODUCE.md`](REPRODUCE.md). All result files are in `results/` (one JSON per dataset × fold × arm × learner); [`results/scores_per_dataset.csv`](results/scores_per_dataset.csv) has the mean AUROC / R² of every dataset, arm and learner over the 6 folds.
 
 ## Code map (project additions)
 

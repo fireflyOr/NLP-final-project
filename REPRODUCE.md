@@ -79,6 +79,7 @@ All result files used in the paper are in `results/` (one JSON per dataset x fol
 ```bash
 uv run python paper/make_tables.py --full results/runs_full --xf results/runs_xf \
     --final results/runs_tarstack --out paper/tables
+uv run python paper/make_results_csv.py --out results/scores_per_dataset.csv
 uv run python paper/make_figure_overview.py --final results/runs_tarstack --out paper/figures/overview.pdf
 uv run python sae_pilot.py summarize --out_dir results/runs_tarstack --baselines e5-small-tar
 ```
