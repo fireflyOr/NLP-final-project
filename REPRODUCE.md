@@ -1,12 +1,14 @@
 # Reproducing the results
 
-Python 3.10, Linux, an NVIDIA GPU (CUDA 12.x driver). Dependencies are pinned in `pyproject.toml` / `uv.lock`
-to the exact versions the reported experiments ran with.
+Python 3.10, Linux, an NVIDIA GPU (CUDA 12.x driver). Dependencies are pinned in `pyproject.toml` (direct and
+transitive) to the exact versions the reported experiments ran with.
 
 ```bash
-uv sync                      # creates .venv with the locked versions (torch 2.8.0 + CUDA 12.6)
-uv run pytest tests/test_sae.py -q        # 73 tests, CPU only (~1 h)
+uv sync                      # creates .venv with the pinned versions (torch 2.8.0 + CUDA 12.6)
+uv run pytest tests/test_sae.py tests/test_run_csv.py -q   # CPU only, about an hour
 ```
+
+(`tests/test_metrics.py` is MulTaBench's own and needs `autogluon.multimodal`, which the project does not use.)
 
 Datasets are downloaded from Kaggle by `kagglehub` on first use (see `.env.example`).
 
@@ -18,6 +20,10 @@ Datasets are downloaded from Kaggle by `kagglehub` on first use (see `.env.examp
 | `xf.sbatch` | nested cross-fitted removal amount, 5 datasets | `runs_xf/` |
 | `tarstack.sbatch` | final run: every TAR-based arm, one saved TAR fine-tune per fold (`tar_ckpt/`) | `runs_tarstack/` |
 | `learners.sbatch` | same arms with tuned LightGBM, CatBoost, and late fusion (restores the saved TARs) | `runs_tarstack/` |
+| `bottleneck.sbatch` | learned compression (30-unit bottleneck), all three learners | `runs_tarstack/` |
+
+The final jobs write each fold's TAR fine-tune to `tar_ckpt/<array index>/` and cache frozen embeddings in
+`emb_cache/<dataset>/`; both stay on the machine that ran them (they are not in the repository).
 
 A single dataset/fold can be run directly, e.g.
 
@@ -27,7 +33,7 @@ uv run python sae_pilot.py run --datasets BIN_TEXT_FAKE_JOB_POSTING --folds 0 \
 ```
 
 Arms (`--encoders`): `e5-small` (Joint Frozen), `e5-small-tar` (Joint TAR), `e5-small-tar-fstack` (TAR + text
-stacking), `e5-small-tar-pls`, `e5-small-tar-full`, `e5-small-tar-gsae` (concept pruning), `e5-small-tar-gsae-randvar`
+stacking), `e5-small-tar-pls`, `e5-small-tar-full`, `e5-small-tar-bn` (learned 30-d bottleneck), `e5-small-tar-gsae` (concept pruning), `e5-small-tar-gsae-randvar`
 / `-rand` (random controls), `e5-small-tar-gsae-xf` (cross-fitted). Learners (`--model`): `light`, `lgbt` (tuned),
 `cat`, `late` (late fusion).
 
@@ -48,13 +54,23 @@ Frozen baselines for comparison), `--drop-cols` (e.g. row ids). The output has `
 printed. No trained weights are needed: the method starts from the public `intfloat/e5-small-v2` and trains everything
 on the given training rows.
 
-To check it against the experiments, export a benchmark fold and compare with the stored result:
+`--compare` also runs the Joint TAR baseline on the same fine-tuned E5 and prints both scores.
+
+To check it against the experiments, export a benchmark fold and rerun it with the experiment's saved fine-tune and
+frozen-embedding cache (copies, so the originals are untouched; array index 16 = Rotten Tomatoes):
 
 ```bash
 python export_fold.py --dataset REG_TEXT_ROTTEN_TOMATOES --fold 0 --out-dir csv_check
-python run_csv.py --train csv_check/train.csv --test csv_check/test.csv --target target --out csv_check/pred.csv
-# paper run: results/runs_tarstack/lgbt_REG_TEXT_ROTTEN_TOMATOES_e5-small-tar-fstack_0.json, course_score 0.523
+mkdir -p csv_check/tar && cp tar_ckpt/16/tar_*.pt csv_check/tar/ && cp -r emb_cache/REG_TEXT_ROTTEN_TOMATOES csv_check/emb
+MULTABENCH_TAR_DIR=csv_check/tar python run_csv.py --train csv_check/train.csv --test csv_check/test.csv \
+    --target target --compare --emb-cache csv_check/emb --out csv_check/pred.csv
+# reproduces results/runs_tarstack/lgbt_REG_TEXT_ROTTEN_TOMATOES_{e5-small-tar,e5-small-tar-fstack}_0.json exactly:
+# r2 0.5130 (Joint TAR) and 0.5233 (TAR + stacking), with the same tuned LightGBM settings
 ```
+
+Without the cache, the frozen embeddings are recomputed and differ in the last digits; on this fold that changes the
+tuned LightGBM's choice and the stacking score to 0.5112. Single folds are this sensitive, so compare methods over many
+datasets and folds, not on one.
 
 ## Results and tables
 
@@ -63,5 +79,6 @@ All result files used in the paper are in `results/` (one JSON per dataset x fol
 ```bash
 uv run python paper/make_tables.py --full results/runs_full --xf results/runs_xf \
     --final results/runs_tarstack --out paper/tables
+uv run python paper/make_figure_overview.py --final results/runs_tarstack --out paper/figures/overview.pdf
 uv run python sae_pilot.py summarize --out_dir results/runs_tarstack --baselines e5-small-tar
 ```

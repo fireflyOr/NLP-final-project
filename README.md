@@ -1,78 +1,67 @@
-# MulTaBench
+# Add, Don't Remove: Where Target Supervision Helps in Text–Tabular Learning
 
-> **Work in progress:** MulTaBench is moving towards a living leaderboard, and `master` will change
-> gradually on the way there. To reproduce the paper, use the tag
-> [`paper_version`](https://github.com/alanarazi7/MulTaBench/tree/paper_version) or the
-> [`official-paper-version`](https://github.com/alanarazi7/MulTaBench/tree/official-paper-version) branch.
+Final project, NLP course 097215 (Technion), Track 1 (algorithm). Or Davidovich.
+Paper: [`paper/main.pdf`](paper/main.pdf) (LaTeX source in `paper/`).
 
-A benchmark for multimodal tabular learning: tables whose columns include images or free text, not
-just numbers and categories. It is 20 image-tabular and 20 text-tabular curated datasets, with 40
-further datasets released alongside them, 80 in total. The benchmark evaluates tabular learners
-under a target-aware setting, where the image and text encoders are fine-tuned on the task rather
-than used frozen.
+This repository is the [MulTaBench](https://github.com/alanarazi7/MulTaBench) code at commit `cf189b7` plus the
+project's additions. MulTaBench's own README is kept as [`README_MULTABENCH.md`](README_MULTABENCH.md).
 
-**Paper**: [MulTaBench: Benchmarking Multimodal Tabular Learning with Text and Image](https://arxiv.org/abs/2605.10616) (NeurIPS 2026 Spotlight)  
-**Datasets**: [kaggle.com/chico89](https://www.kaggle.com/chico89/datasets)
+## What the project does
 
-## Getting started
+MulTaBench's Joint TAR baseline fine-tunes E5-small on the target, compresses each text column to 30 PCA components
+and gives them to a tree model with the table. We test three ways to use the target further on top of TAR:
+
+- **Remove**: SAE concept pruning. A TopK SAE splits each column's embeddings into concepts; a concept is removed
+  if a LightGBM over the table, all concepts and shuffled "shadow" copies does not use it more than its shadow.
+  Controls remove random concepts (same number, or same variance); a cross-fitted variant chooses how much to remove
+  on rows the encoder never saw.
+- **Reweight / re-learn the compression**: PLS-30 instead of PCA-30, all 384 dimensions, and a 30-unit bottleneck
+  trained into TAR's fine-tune.
+- **Add**: text stacking. Out-of-fold predictions of a text-only MLP on frozen E5 embeddings are added as extra
+  columns next to TAR's.
+
+Result: only adding helps. TAR + text stacking beats Joint TAR with tuned LightGBM (+0.0035, 16/20 datasets,
+Holm-adjusted p = 0.007) and CatBoost (+0.0036, 17/20, p = 0.004); removal and reweighting do not.
+
+## Run the method on your own data
 
 ```bash
-source init.sh && source .venv/bin/activate
-cp .env.example .env     # Hugging Face and Kaggle credentials
-
-python benchmark.py --model light --dataset_name MUL_IMAGE_PETFINDER --fold 0 --text_encoder e5-small --image_encoder dino-small
+python run_csv.py --train train.csv --test test.csv --target price --out predictions.csv
+python run_csv.py --train data.csv --target label --test-size 0.2 --compare     # also prints Joint TAR's score
 ```
 
-`benchmark.py` is the single entry point: it evaluates one model on one dataset fold and writes the
-result to `runs/<model>_<dataset>_<text_encoder>_<image_encoder>_<size>_<fold>.json` (`--output_dir` to change). `--help`
-lists the available models. `--text_encoder` picks how text columns are embedded: `tfidf`, frozen
-`e5-small` or `e5-large`, or `e5-small-tar`, E5 fine-tuned on the task with LoRA (target-aware).
-`--image_encoder` does the same for image columns: frozen `dino-small` or `dino-large`, or
-`dino-small-tar`.
+Column types are detected automatically and everything is fitted on the training rows only; no trained weights
+are needed (the method starts from the public `intfloat/e5-small-v2`). A GPU is strongly recommended. Options and a
+check that reproduces a paper run exactly are in [`REPRODUCE.md`](REPRODUCE.md).
 
-To use a benchmark split in your own code, `load_split` downloads the dataset and returns the same
-train and test rows that `benchmark.py` evaluates on:
+## Reproducing the paper
 
-```python
-from multabench import load_split
+Setup, the SLURM scripts behind every result, and the commands that rebuild the tables and figure are in
+[`REPRODUCE.md`](REPRODUCE.md). All result files are in `results/` (one JSON per dataset × fold × arm × learner).
 
-split = load_split("MUL_IMAGE_PETFINDER", fold=0, size="10k")
-split.x_train, split.y_train, split.x_test, split.y_test, split.task_type, split.image_folder
-```
+## Code map (project additions)
 
-## Datasets
+| File | What it does |
+|---|---|
+| `multabench/sae/topk_sae.py` | TopK sparse autoencoder (Gao et al., 2024) |
+| `multabench/sae/relevance.py` | concept pruning (`GroupShadowSAETransform`), random controls, cross-fitted ranking (`RankedSAEPruner`), PLS / full-dimension transforms; earlier relevance-filter variants |
+| `multabench/stack/text_stack.py` | text stacking: out-of-fold text-model predictions as extra columns |
+| `multabench/stack/late_fusion.py` | late-fusion control (table model + text model, linear meta-learner) |
+| `multabench/baselines/lgbm_tuned.py` | LightGBM tuned on the validation split (12 configurations) |
+| `multabench/baselines/preprocessing/text_embeddings.py` | wires every arm into MulTaBench's text pipeline; saves/restores each fold's TAR fine-tune so all arms share it |
+| `multabench/e5/e5_finetune.py` | TAR fine-tuning additions: bottleneck, saving/loading LoRA adapters, dynamic padding |
+| `multabench/e5/constants.py` | names of all arms (`--encoders`) |
+| `sae_pilot.py` | experiment driver: runs arms × datasets × folds, writes result JSONs, summarizes |
+| `run_csv.py`, `export_fold.py` | the method on any CSV; export a benchmark fold as CSV |
+| `paper/make_tables.py`, `paper/make_figure_overview.py` | tables and figure of the paper from `results/` |
+| `*.sbatch` | the SLURM jobs that produced the results |
+| `tests/test_sae.py`, `tests/test_run_csv.py` | tests, including leakage checks |
 
-Every dataset is hosted on the [`chico89`](https://www.kaggle.com/chico89/datasets) Kaggle account
-and downloaded on demand; the benchmark datasets are slugged `multabench-<name>` and the ones
-released alongside them `multabench-full-<name>`.
+Early pilots, not used in the paper: `train_sae.py` (an SAE trained on a generic corpus, for the frozen
+`e5-small-sae` arms), `star_prune_pilot.py` with `multabench/star/` (pruning inside TabSTAR; infeasible on our
+hardware), and the frozen-SAE / relevance-filter arms in `multabench/sae/feature_transform.py` and `relevance.py`.
 
-| What you are looking for | Where it is |
-|--------------------------|-------------|
-| Which datasets are in the benchmark | `is_benchmark_dataset` in `multabench/datasets/all_datasets.py` |
-| A dataset's Kaggle slug | `MulTaBenchDatasetID` in `multabench/datasets/all_datasets.py` |
-| Where a dataset originally comes from | `MULTABENCH_SOURCES` in `multabench/datasets/all_datasets.py` |
-| How a dataset was curated | the recipes in `multabench/benchmark/datasets/` at the [`paper_version`](https://github.com/alanarazi7/MulTaBench/tree/paper_version) tag |
-| Size, task and feature counts per dataset | `multabench/leaderboard/results/datasets_summary{,_extra}.csv` at the [`paper_version`](https://github.com/alanarazi7/MulTaBench/tree/paper_version) tag |
+## Known benchmark behavior
 
-The 40 datasets released alongside the benchmark were admitted on a weaker criterion and carry no
-tier name of their own, so their scores must not be pooled with the 40 MulTaBench datasets.
-
-## Protocol and TabArena
-
-MulTaBench follows the [TabArena](https://tabarena.ai) protocol where doing so is cheap or affects
-correctness, and deliberately keeps its own choices where full parity would multiply the compute.
-MulTaBench is not an official TabArena leaderboard.
-
-| | TabArena | MulTaBench | Status |
-|---|---|---|---|
-| Metrics | ROC AUC (binary), log loss (multiclass), RMSE (regression), via AutoGluon's scorers | Same | ✅ |
-| Leaderboard | Elo via `bencheval`, RandomForest (default) anchored at 1000, missing results imputed with RandomForest and flagged, bootstrapped confidence intervals | Normalized scores per dataset | |
-| Splits | Fixed and part of the task definition | Same: a seeded function of the data | ✅ |
-| Group and time structure | Audited per dataset; group-aware or forward-in-time splits where needed | Not audited: every dataset is split IID. Some datasets may have group or time structure, in which case IID splits can overestimate performance | |
-| Runtime | Train and inference time per 1K rows | Same | ✅ |
-| Hardware | Recorded per run | Recorded per run | ✅ |
-| Outer splits | 3 folds, repeated 1–10 times depending on dataset size | 3 folds, repeated twice for every size | |
-| Dataset size | Full size | `--size 10k` (the default, and the one the leaderboard reports) caps train and test at 10K and 5K rows; `--size full` keeps every row | |
-| Inner validation | 8-fold bagging for every model | No bagging: one fit per split, and models that need validation hold out 10% of the training rows (at most 1,000). This favors models that ensemble internally (TabPFN, TabICL, TabDPT, TabM, RandomForest) over single GBDTs and RealMLP | |
-| Hyperparameters | Default, tuned, and tuned + ensembled | Default only | |
-| Model implementations | TabArena's model registry | MulTaBench's own wrappers, which add image and text embeddings | |
+MulTaBench reads date columns from the Kaggle CSVs as strings, so some dates are treated as text columns (an open
+upstream issue). This applies identically to every arm and baseline, so the paired comparisons are unaffected.

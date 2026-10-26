@@ -10,9 +10,9 @@
 #SBATCH --output=learn_%A_%a.out
 # Same arms with other learners (CatBoost; LightGBM tuned on its validation split) and late fusion.
 # Restores each fold's TAR from tar_ckpt/ (written by tarstack.sbatch), so all learners see the same fine-tune.
-# Submit with:  sbatch --dependency=aftercorresponding:<tarstack job id> learners.sbatch
-# All 20 MulTaBench text datasets x 6 folds, LightGBM. One array task per dataset; finished runs are skipped,
-# so resubmitting resumes. Order matters: e5-small-tar first, then its pruned arms reuse the same fine-tuned E5.
+# Submit after tarstack.sbatch:  sbatch --dependency=afterany:<tarstack job id> learners.sbatch
+# All 20 MulTaBench text datasets x 6 folds. One array task per dataset; finished runs are skipped, so
+# resubmitting resumes.
 set -euo pipefail
 cd "$SLURM_SUBMIT_DIR"
 export MULTABENCH_TAR_DIR=tar_ckpt/${SLURM_ARRAY_TASK_ID} MULTABENCH_DYNAMIC_PADDING=1 OMP_NUM_THREADS=$SLURM_CPUS_PER_TASK PYTHONUNBUFFERED=1
