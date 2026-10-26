@@ -615,6 +615,7 @@ def test_learned_compression_bottleneck(tiny_e5, monkeypatch, tmp_path, task):
 
 @pytest.fixture()
 def tiny_tabstar(monkeypatch, tmp_path):
+    pytest.importorskip("tabstar", reason="TabSTAR pilot only; tabstar is not a project dependency")
     import transformers
     from transformers import BertConfig, BertModel, BertTokenizerFast
     import tabstar.arch.arch as arch
